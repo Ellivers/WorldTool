@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:item",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:poppy",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "min": 1,
+                                "max": 20
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{flowerForest:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

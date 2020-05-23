@@ -1,0 +1,19 @@
+tag @s remove ticking
+execute if entity @s[tag=!cmd_block_fill,tag=!cloning_wt,tag=!cmdlist_search,tag=!cmdlist,tag=!hollow,tag=!random1,tag=!random2,tag=!measuring,tag=!brushing,tag=!wt_destroy,tag=!foliage_ing,tag=!checkered] run function worldtool:fill
+execute if entity @s[tag=cloning_wt,tag=!from_cmd] run function worldtool:load_clone
+execute if entity @s[tag=cloning_wt,tag=from_cmd] run function worldtool:cmd/load_clone2
+execute if entity @s[tag=hollow] run function worldtool:hollow/hollow
+execute if entity @s[tag=random1,tag=!from_cmd] run function worldtool:random/1
+execute if entity @s[tag=random1,tag=from_cmd] run function worldtool:cmd/random/1
+execute if entity @s[tag=random2,tag=!from_cmd] run function worldtool:random/2
+execute if entity @s[tag=random2,tag=from_cmd] run function worldtool:cmd/random/2
+execute if entity @s[tag=foliage_ing] run function worldtool:foliage/run
+execute if entity @s[tag=measuring] run function worldtool:measure/filtered
+execute if entity @s[tag=brushing,tag=!coloring,tag=!replacing] run function worldtool:brush/paint
+execute if entity @s[tag=coloring] run function worldtool:color
+execute if entity @s[tag=replacing] run function worldtool:brush/replace/replace
+execute if entity @s[tag=wt_destroy] run function worldtool:destroy/destroy
+execute if entity @s[tag=checkered] run function worldtool:checkered/run
+execute if entity @s[tag=cmdlist_search] run function worldtool:cmd_list/search/run
+execute if entity @s[tag=cmdlist] run function worldtool:cmd_list/read/run
+execute if entity @s[tag=cmd_block_fill] run function worldtool:cmd_block_fill/run

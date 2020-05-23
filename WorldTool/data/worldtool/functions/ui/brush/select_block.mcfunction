@@ -1,0 +1,6 @@
+execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_ID = @p wt_ID run kill @s
+summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["check_block","brush"]}
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=check_block,sort=nearest,limit=1] wt_ID = @s wt_ID
+
+tellraw @s [{"text":"\n\n\n\n\n[Select a block]  ","color":"aqua","hoverEvent":{"action":"show_text","value":"Select a block to use the brush with"},"clickEvent":{"action":"suggest_command","value":"/execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_ID = @p wt_ID at @s run summon falling_block ~ ~ ~ {Time:1,Tags:[switch_block_brush],BlockState:{Name:\"NAME_HERE\"}}"}},{"text":"[Pick block]  ","color":"green","hoverEvent":{"action":"show_text","value":"Choose an existing block to use"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/set/start_grab"}},{"text":"(Air)  ","color":"reset","hoverEvent":{"action":"show_text","value":"Air/Water"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/set/set_block.air"}},{"text":"[Cancel]","color":"reset","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
+function worldtool:ui/anti_feedback_chat_message/load

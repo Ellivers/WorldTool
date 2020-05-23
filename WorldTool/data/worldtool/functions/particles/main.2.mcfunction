@@ -1,0 +1,2 @@
+execute if entity @s[tag=show_rot] positioned ~ ~1.8 ~ run particle minecraft:dust 0 0 1 1 ^ ^ ^0.6 0 0 0 1 2 force
+execute unless entity @s[tag=!pos1,tag=!pos2] at @a[tag=in_menu] if score @p wt_ID = @s wt_ID at @s run function worldtool:particles/mark_selection/load

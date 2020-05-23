@@ -1,0 +1,11 @@
+- Added sphere brush
+- Added the function Command block list, for easily copying commands inside a chain of command blocks
+- Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
+- Added a help button
+- Reduced particles
+- Increased selection box particle visibility (render distance)
+- Fixed bubble collumns not counting as water
+- Added a message when you don't have a brush selected
+- Selecting a block with no brush selected now no longer deletes the item
+- Fixed not being able to increment Z rotation past -90 degrees
+- Performance improvements

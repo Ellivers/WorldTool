@@ -1,0 +1,2 @@
+execute as @a[tag=grabbing_block,tag=!grabbing_block_replace] at @s run function worldtool:ui/brush/set/grab_block
+execute as @a[tag=grabbing_block,tag=grabbing_block_replace] at @s run function worldtool:ui/brush/set/grab_block_replace
