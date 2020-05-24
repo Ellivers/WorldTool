@@ -1,9 +1,14 @@
 - Added sphere brush
+- Added circle brush
+- Brushes can now store block data
 - Added the function Command block list, for easily copying commands inside a chain of command blocks
 - Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
+- Buttons that open another menu are now marked with '...'
 - Added a help button
+- To improve accessability, the observer buddy no longer matches your Y rotation
 - Reduced particles
 - Increased selection box particle visibility (render distance)
+- Added error messages for having incorrect amounts of positions when opening the menu
 - Fixed bubble collumns not counting as water
 - Added a message when you don't have a brush selected
 - Selecting a block with no brush selected now no longer deletes the item

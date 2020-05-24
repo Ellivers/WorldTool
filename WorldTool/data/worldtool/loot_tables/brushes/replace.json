@@ -10,7 +10,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{Name:\"minecraft:stone\"},ReplaceBlock:{Name:\"minecraft:stone\"},Brush:\"Replace\",BrushSettings:{Replace:\"normal\"},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Replace\",BrushSettings:{Replace:\"normal\"},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
                 },
                 {
                     "function": "minecraft:copy_nbt",
@@ -22,8 +22,13 @@
                             "op": "replace"
                         },
                         {
-                            "source": "SelectedItem.tag.ReplaceBlock",
-                            "target": "ReplaceBlock",
+                            "source": "SelectedItem.tag.ReplaceBlock.BlockState",
+                            "target": "ReplaceBlock.BlockState",
+                            "op": "replace"
+                        },
+                        {
+                            "source": "SelectedItem.tag.ReplaceBlock.BlockData",
+                            "target": "ReplaceBlock.BlockData",
                             "op": "replace"
                         },
                         {
@@ -42,10 +47,10 @@
                         {"text":"Selected brush: Replace","color":"yellow","italic":false},
                         "",
                         {"text":"Selected block:","color":"white","italic":false},
-                        {"nbt":"SelectedItem.tag.Block.Name","entity":"@s","color":"light_purple","italic":false},
+                        {"nbt":"SelectedItem.tag.Block.BlockState.Name","entity":"@s","color":"light_purple","italic":false},
                         "",
                         {"text":"Replacing block:","color":"white","italic":false},
-                        {"nbt":"SelectedItem.tag.ReplaceBlock.Name","entity":"@s","color":"gold","italic":false},
+                        {"nbt":"SelectedItem.tag.ReplaceBlock.BlockState.Name","entity":"@s","color":"gold","italic":false},
                         ""
                     ]
                 }

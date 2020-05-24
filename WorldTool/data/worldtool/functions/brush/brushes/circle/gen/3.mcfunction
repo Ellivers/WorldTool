@@ -4,4 +4,4 @@ execute if score #Z worldtool matches 1 run setblock ~ ~ ~ minecraft:structure_b
 
 clone ~1 ~ ~ ~1 ~ ~ 2 1 13
 setblock ~1 ~ ~ minecraft:redstone_block
-execute if score #X worldtool matches 1 run clone 2 1 13 2 1 13 ~1 ~ ~ 
+execute if score #X worldtool matches 1 run clone 2 1 13 2 1 13 ~1 ~ ~
