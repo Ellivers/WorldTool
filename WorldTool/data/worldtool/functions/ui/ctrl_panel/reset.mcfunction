@@ -44,3 +44,6 @@ kill @e[type=minecraft:area_effect_cloud,tag=randompoint]
 execute in minecraft:overworld run forceload remove 0 0
 execute in minecraft:the_end run forceload remove 0 0
 execute in minecraft:the_nether run forceload remove 0 0
+
+tellraw @a {"text": "\n\n\n\n\n\nWorldTool has been uninstalled","color":"green"}
+function worldtool:ui/anti_feedback_chat_message/load

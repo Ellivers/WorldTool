@@ -21,6 +21,10 @@ scoreboard players operation $drawingposX worldtool = $pos1x worldtool
 scoreboard players set $blocksplaced worldtool 0
 scoreboard players set #blockschecked worldtool 0
 
+kill @e[type=minecraft:area_effect_cloud,tag=brushpos1]
+kill @e[type=minecraft:area_effect_cloud,tag=brushpos2]
+kill @e[type=minecraft:area_effect_cloud,tag=setblock_source]
+
 #Summon different "wt_drawer" AECs depending on which brush the player is using
 execute at @a[predicate=worldtool:brushes/paint] if score @s wt_ID = @p wt_ID at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","replacefill_reversed"]}
 execute at @a[nbt={SelectedItem:{tag:{Brush:"Place",BrushSettings:{PlaceReplaceBlocks:1b}}}}] if score @s wt_ID = @p wt_ID at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer"]}

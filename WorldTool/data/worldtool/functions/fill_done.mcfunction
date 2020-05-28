@@ -10,6 +10,3 @@ execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer] if score @s wt_ID 
 execute as @e[type=minecraft:area_effect_cloud,tag=randompoint,tag=dostuff] if score @s wt_ID = @p wt_ID run tag @s remove dostuff
 kill @e[type=minecraft:area_effect_cloud,tag=wt_drawer]
 kill @e[type=minecraft:area_effect_cloud,tag=clonepos]
-kill @e[type=minecraft:area_effect_cloud,tag=brushpos1]
-kill @e[type=minecraft:area_effect_cloud,tag=brushpos2]
-kill @e[type=minecraft:area_effect_cloud,tag=setblock_source]

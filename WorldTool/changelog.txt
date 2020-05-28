@@ -3,6 +3,7 @@
 - Brushes can now store block data
 - Added the function Command block list, for easily copying commands inside a chain of command blocks
 - Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
+- Added the [Options] menu, for changing settings and more
 - Buttons that open another menu are now marked with '...'
 - Added a help button
 - To improve accessability, the observer buddy no longer matches your Y rotation

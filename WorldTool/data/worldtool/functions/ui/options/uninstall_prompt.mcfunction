@@ -1,0 +1,2 @@
+tellraw @s [{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo you want to uninstall WorldTool?"},{"text": "\n\n[No]  ","color":"aqua","hoverEvent": {"action": "show_text","value": "No"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "[Yes]","color":"red","hoverEvent": {"action": "show_text","value": "Yes"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/ctrl_panel/reset"}}]
+function worldtool:ui/anti_feedback_chat_message/load

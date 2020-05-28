@@ -5,7 +5,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{Block:{Name:\"minecraft:air\"}}"
+                "nbt": "{Block:{BlockState:{Name:\"minecraft:air\"}}}"
             }
         }
     }

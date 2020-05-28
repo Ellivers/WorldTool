@@ -1,0 +1,2 @@
+tellraw @s ["",{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\nOptions","bold": true,"color":"gold"},{"text": "\n\n\n[Settings...]","color":"dark_green","hoverEvent": {"action": "show_text","value": "Settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}}]
+function worldtool:ui/anti_feedback_chat_message/load
