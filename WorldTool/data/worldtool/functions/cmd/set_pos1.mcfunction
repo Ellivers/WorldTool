@@ -1,5 +1,3 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["cmdpos1marker"]}
-execute unless entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run function worldtool:cmd/pos1_set
-execute if score $STOPPOS1 worldtool matches 0 run schedule function worldtool:cmd/set_pos1 1t
-schedule function worldtool:cmd/stop_it_please/pos1 1t
-scoreboard players set $STOPPOS1 worldtool 1
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=cmdpos1marker] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["cmdpos1marker"]}
+execute if entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run schedule function worldtool:cmd/set_pos1 1t replace
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] as @e[type=minecraft:area_effect_cloud,tag=cmdpos1marker] at @s run function worldtool:cmd/pos1_set

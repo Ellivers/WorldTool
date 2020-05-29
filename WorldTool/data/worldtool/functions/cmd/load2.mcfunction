@@ -17,8 +17,6 @@ scoreboard players operation $drawingposY worldtool = $pos1y worldtool
 scoreboard players operation $drawingposZ worldtool = $pos1z worldtool
 scoreboard players operation $drawingposX worldtool = $pos1x worldtool
 
-tellraw @a [{"text": "1X: "},{"score": {"name": "$pos1x","objective": "worldtool"}},{"text": " 2X: "},{"score": {"name": "$pos2x","objective": "worldtool"}}]
-
 scoreboard players set $blocksplaced worldtool 0
 scoreboard players set #blockschecked worldtool 0
 scoreboard players set $widthX worldtool 1

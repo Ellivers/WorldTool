@@ -1,4 +1,3 @@
-say hai
 scoreboard players add #blockschecked worldtool 1
 
 execute if entity @s[tag=wt_replace_foliage] if block ~ ~1 ~ #worldtool:plants run setblock ~ ~1 ~ minecraft:air

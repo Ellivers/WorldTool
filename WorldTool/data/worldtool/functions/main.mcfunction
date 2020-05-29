@@ -8,4 +8,4 @@ execute as @a at @s if score @s wt_click matches 1.. anchored eyes positioned ^ 
 #Check for a block while in menus
 execute as @e[type=minecraft:area_effect_cloud,tag=check_block] at @s run function worldtool:check_block
 #So yeah, the paricle effects for the rotation selection have to be put in this file
-execute as @e[tag=wt_particles] at @s run function worldtool:particles/main
+execute if score $particles worldtool matches 1.. as @e[tag=wt_particles] at @s run function worldtool:particles/main

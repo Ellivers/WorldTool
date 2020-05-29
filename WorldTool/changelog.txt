@@ -1,6 +1,7 @@
 - Added sphere brush
 - Added circle brush
 - Brushes can now store block data
+- Fixed command functionality
 - Added the function Command block list, for easily copying commands inside a chain of command blocks
 - Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
 - Added the [Options] menu, for changing settings and more
