@@ -1,4 +1,7 @@
 execute at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:load_clone.settempscore
+execute at @a[tag=mirrorX] if score @s wt_ID = @p wt_ID run tag @s add mirrorX
+execute at @a[tag=mirrorY] if score @s wt_ID = @p wt_ID run tag @s add mirrorY
+execute at @a[tag=mirrorZ] if score @s wt_ID = @p wt_ID run tag @s add mirrorZ
 scoreboard players operation @s rotX = $temp rotX
 scoreboard players operation @s rotY = $temp rotY
 scoreboard players operation @s rotZ = $temp rotZ

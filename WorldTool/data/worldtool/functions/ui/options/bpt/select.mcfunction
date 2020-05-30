@@ -1,7 +1,7 @@
 tellraw @s [{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n[Back]","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "\nSettings/Blocks per tick","bold": true,"color":"green"}]
 
 execute if score $blocksPerTick worldtool matches 4000 run tag @s add blocksPerTick_default
-execute if score $clonedBlocksPerTick worldtool matches 2600 run tag @s add clonedBlocksPerTick_default
+execute if score $clonedBlocksPerTick worldtool matches 2100 run tag @s add clonedBlocksPerTick_default
 execute if score $destroyedBlocksPerTick worldtool matches 3700 run tag @s add destroyedBlocksPerTick_default
 execute if score $randomizedBlocksPerTick worldtool matches 3900 run tag @s add randomizedBlocksPerTick_default
 execute if score $checkeredBlocksPerTick worldtool matches 3400 run tag @s add checkeredBlocksPerTick_default

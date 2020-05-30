@@ -1,0 +1,2 @@
+execute if entity @s[tag=desert] if block ~ ~ ~ #worldtool:sand if block ~ ~1 ~ #worldtool:air_blocks positioned ~ ~1 ~ run function worldtool:foliage/place1
+execute if entity @s[tag=underwater] if block ~ ~1 ~ minecraft:water unless block ~ ~ ~ #worldtool:air_blocks positioned ~ ~1 ~ run function worldtool:foliage/place1

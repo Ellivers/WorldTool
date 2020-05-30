@@ -15,3 +15,7 @@ tag @s remove measuredY
 tag @s remove foliage_ing
 tag @s remove cmdlist
 tag @s remove cmd_block_fill
+tag @s remove inner_block
+tag @s remove mirrorX
+tag @s remove mirrorY
+tag @s remove mirrorZ

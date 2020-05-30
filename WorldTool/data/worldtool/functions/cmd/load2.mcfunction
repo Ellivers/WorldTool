@@ -3,7 +3,7 @@ execute store result score $pos1y worldtool run data get entity @s Pos[1]
 execute store result score $pos1z worldtool run data get entity @s Pos[2]
 
 execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
-execute unless score $clonedBlocksPerTick worldtool matches 2..2600 run scoreboard players set $clonedBlocksPerTick worldtool 2600
+execute unless score $clonedBlocksPerTick worldtool matches 2..2100 run scoreboard players set $clonedBlocksPerTick worldtool 2100
 execute unless score $destroyedBlocksPerTick worldtool matches 2..3700 run scoreboard players set $destroyedBlocksPerTick worldtool 3700
 execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run scoreboard players set $checkeredBlocksPerTick worldtool 3400
 execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900

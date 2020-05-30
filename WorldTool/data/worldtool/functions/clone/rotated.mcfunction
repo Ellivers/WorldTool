@@ -9,7 +9,7 @@ execute if entity @s[tag=moveclone,tag=filtered_reversed] at @s unless blocks 2 
 
 execute at @e[type=minecraft:area_effect_cloud,tag=clonepos] run function worldtool:clone/check_place
 
-#If #blockschecked's worldtool score isn't more than a certain number (default: 2600) move the x, y and z coordinates
+#If #blockschecked's worldtool score isn't more than a certain number (default: 2100) move the x, y and z coordinates
 execute if score $drawingposX worldtool < $pos2x worldtool unless score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run function worldtool:clone/rotated/x
 execute if score $drawingposX worldtool > $pos2x worldtool unless score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run function worldtool:clone/rotated/-x
 
@@ -19,5 +19,5 @@ execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY
 execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY worldtool = $pos2y worldtool if score $drawingposZ worldtool < $pos2z worldtool unless score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run function worldtool:clone/rotated/z
 execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY worldtool = $pos2y worldtool if score $drawingposZ worldtool > $pos2z worldtool unless score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run function worldtool:clone/rotated/-z
 
-#Schedules a function if #blockschecked's worldtool score is more or equals to a certain number (default: 2600) (check the function for explanation of why it's here)
+#Schedules a function if #blockschecked's worldtool score is more or equals to a certain number (default: 2100) (check the function for explanation of why it's here)
 execute if score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run schedule function worldtool:load2_fill 1t

@@ -12,3 +12,6 @@ execute if entity @s[tag=!taiga] run tellraw @p {"text":"[Taiga]","color":"dark_
 
 execute if entity @s[tag=desert] run tellraw @p {"text":"[Desert]","color":"gray","hoverEvent":{"action":"show_text","value":"Cactus, dead bush"}}
 execute if entity @s[tag=!desert] run tellraw @p {"text":"[Desert]","color":"yellow","hoverEvent":{"action":"show_text","value":"Cactus, dead bush"},"clickEvent":{"action":"run_command","value":"/execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/foliage/select_biome/desert"}}
+
+execute if entity @s[tag=underwater] run tellraw @p {"text":"[Underwater]","color":"gray","hoverEvent":{"action":"show_text","value":"Seagrass, tall seagrass, kelp"}}
+execute if entity @s[tag=!underwater] run tellraw @p {"text":"[Underwater]","color":"blue","hoverEvent":{"action":"show_text","value":"Seagrass, tall seagrass, kelp"},"clickEvent":{"action":"run_command","value":"/execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/foliage/select_biome/underwater"}}

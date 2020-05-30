@@ -17,6 +17,11 @@ tag @s remove randomizing
 tag @s remove placing_filtered
 tag @s remove hollowing
 tag @s remove checkered_select
+tag @s remove fun_menu
+tag @s remove wt_inner
+tag @s remove mirrorX
+tag @s remove mirrorY
+tag @s remove mirrorZ
 
 function worldtool:ui/summon_check_block/1
 function worldtool:ui/anti_feedback_chat_message/load

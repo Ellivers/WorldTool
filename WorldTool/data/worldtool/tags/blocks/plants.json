@@ -7,6 +7,10 @@
         "minecraft:large_fern",
         "minecraft:sweet_berry_bush",
         "minecraft:dead_bush",
-        "minecraft:cactus"
+        "minecraft:cactus",
+        "minecraft:seagrass",
+        "minecraft:kelp_plant",
+        "minecraft:kelp",
+        "minecraft:tall_seagrass"
     ]
 }

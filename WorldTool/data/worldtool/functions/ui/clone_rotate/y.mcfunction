@@ -1,3 +1,5 @@
+function worldtool:ui/clone_rotate/mirror_off
+
 execute if entity @s[tag=!rotating] if score @s rotY matches 0 run function worldtool:ui/clone_rotate/y90
 
 execute if entity @s[tag=!rotating] if score @s rotY matches 90 run function worldtool:ui/clone_rotate/y180
