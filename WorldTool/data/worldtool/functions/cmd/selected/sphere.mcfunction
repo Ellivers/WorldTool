@@ -12,8 +12,8 @@ tag @s remove measuredX
 tag @s remove measuredY
 tag @s remove wt_destroy
 tag @s remove keep
+tag @s remove checkered
 tag @s remove measuring
 tag @s remove foliage_ing
-tag @s add checkered
-tag @s remove sphere
-tag @s remove brush_cmd
+tag @s add sphere
+tag @s add brush_cmd

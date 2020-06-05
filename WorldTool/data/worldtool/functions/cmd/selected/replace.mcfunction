@@ -8,3 +8,5 @@ tag @s remove measuring
 tag @s remove measuredX
 tag @s remove measuredY
 tag @s remove foliage_ing
+tag @s remove sphere
+tag @s remove brush_cmd

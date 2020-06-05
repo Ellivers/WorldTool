@@ -9,8 +9,8 @@
 - Added underwater source biome for greenery
 - Fixed command functionality
 - Buttons that open another menu are now marked with '...'
-- Added a help button
-- To improve accessability, the observer buddy no longer matches your Y rotation
+- Added a help button in the main menu
+- The observer buddy no longer matches your Y rotation, to make it more user friendly
 - Reduced particles
 - Increased selection box particle visibility (render distance)
 - Added error messages for having incorrect amounts of positions when opening the menu

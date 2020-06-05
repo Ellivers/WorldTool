@@ -7,7 +7,7 @@ execute if entity @s[tag=moveclone,tag=!filtered,tag=!filtered_reversed] at @s r
 execute if entity @s[tag=moveclone,tag=filtered] at @s if blocks 2 1 13 2 1 13 ~ ~ ~ all run clone ~ ~ ~ ~ ~ ~ 0 1 13 replace move
 execute if entity @s[tag=moveclone,tag=filtered_reversed] at @s unless blocks 2 1 13 2 1 13 ~ ~ ~ all run clone ~ ~ ~ ~ ~ ~ 0 1 13 replace move
 
-execute at @e[type=minecraft:area_effect_cloud,tag=clonepos] run function worldtool:clone/check_place
+execute at @e[type=minecraft:area_effect_cloud,tag=clonepos] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:clone/check_place
 
 #If #blockschecked's worldtool score isn't more than a certain number (default: 2100) move the x, y and z coordinates
 execute if score $drawingposX worldtool < $pos2x worldtool unless score #blockschecked worldtool >= $clonedBlocksPerTick worldtool run function worldtool:clone/rotated/x
