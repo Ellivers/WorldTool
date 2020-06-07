@@ -25,6 +25,7 @@ execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run score
 execute unless score $greeneryBlocksPerTick worldtool matches 2..1400 run scoreboard players set $greeneryBlocksPerTick worldtool 1400
 
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
+execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 
 #Forceload for access to storing blocks at 0 0
 execute in minecraft:overworld run forceload add 0 0

@@ -1,3 +1,4 @@
+tag @s add rotating_clone
 tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n"}
 
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run tag @s add found
@@ -19,4 +20,7 @@ tellraw @s [{"text": "\n[Mirror X]  ","color":"yellow","hoverEvent": {"action": 
 tellraw @s {"text":"[Done...]","color":"aqua","hoverEvent":{"action":"show_text","value":"Go back to the clone menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone/select_clone"}}
 schedule function worldtool:ui/clone_rotate/remove_tag 1t
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run tag @s remove found
+
+execute if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display observer rotation origin particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"reset","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
+
 function worldtool:ui/anti_feedback_chat_message/load

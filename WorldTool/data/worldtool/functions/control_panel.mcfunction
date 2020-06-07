@@ -1,1 +1,0 @@
-function worldtool:ui/ctrl_panel/select

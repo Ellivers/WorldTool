@@ -19,3 +19,4 @@ tag @s remove inner_block
 tag @s remove mirrorX
 tag @s remove mirrorY
 tag @s remove mirrorZ
+tag @s remove no_output

@@ -1,4 +1,5 @@
 tag @s remove placing_fill
+tag @s remove rotating_clone
 tellraw @s "\n\n\n\n\n\n\n\n\n"
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID if entity @s[tag=keep] run tellraw @p {"text":"Keep has been set to true\n\n\n","color":"green","italic":true}

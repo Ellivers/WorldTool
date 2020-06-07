@@ -13,7 +13,7 @@ execute store result score @s pos2x run data get entity @e[type=minecraft:area_e
 execute store result score @s pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load,limit=1] Pos[1]
 execute store result score @s pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load,limit=1] Pos[2]
 
-#"outl_nx" stands for "outline_negative x"
+# "outl_nx" stands for "outline_negative_x"
 execute if score @s rotX > @s pos2x run tag @s add outl_nX
 execute if score @s rotX < @s pos2x run tag @s add outl_pX
 execute if score @s rotY > @s pos2y run tag @s add outl_nY
