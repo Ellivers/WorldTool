@@ -2,7 +2,7 @@ execute at @s positioned ~ ~ ~ as @e[type=minecraft:area_effect_cloud,tag=pos1] 
 summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["pos1"]}
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=pos1,sort=nearest,limit=1] wt_ID = @s wt_ID
 
-execute if score $forceLoadPositions worldtool matches 1.. run forceload add ~ ~
+execute if score $forceLoadPositions worldtool matches 1.. store success score @e[type=minecraft:area_effect_cloud,tag=pos1,sort=nearest,limit=1] worldtool run forceload add ~ ~
 
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1,sort=nearest,limit=1] run function worldtool:ray/pos
 
