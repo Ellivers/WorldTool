@@ -36,4 +36,4 @@ execute in minecraft:the_nether run forceload add 0 0
 scoreboard players set $20w12a+ worldtool 0
 schedule function worldtool:check_1.16 1s
 
-execute if score $particles worldtool matches 1.. run function worldtool:particles/main
+function worldtool:particles/main
