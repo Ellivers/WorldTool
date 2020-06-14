@@ -1,6 +1,7 @@
 - Added sphere brush
 - Added circle brush
 - Added hollow, for outlining an area with blocks
+- Added outline, for placing blocks in the corners of the selection
 - Brushes can now store block data
 - Clone now has mirror functionality
 - Added the function Command block list, for easily copying commands inside a chain of command blocks
@@ -8,6 +9,7 @@
 - Added the [Options] menu, for changing settings and more
 - Added underwater source biome for greenery
 - Fixed command functionality
+- Changed the 'Filled X blocks' message to 'Placed X blocks'
 - Buttons that open another menu are now marked with '...'
 - Added a help button in the main menu
 - The observer buddy no longer matches your Y rotation, to make it more user friendly

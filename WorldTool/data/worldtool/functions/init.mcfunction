@@ -22,6 +22,7 @@ execute unless score $clonedBlocksPerTick worldtool matches 2..2100 run scoreboa
 execute unless score $destroyedBlocksPerTick worldtool matches 2..3700 run scoreboard players set $destroyedBlocksPerTick worldtool 3700
 execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900
 execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run scoreboard players set $checkeredBlocksPerTick worldtool 3400
+execute unless score $outlinedBlocksPerTick worldtool matches 2..3300 run scoreboard players set $checkeredBlocksPerTick worldtool 3300
 execute unless score $greeneryBlocksPerTick worldtool matches 2..1400 run scoreboard players set $greeneryBlocksPerTick worldtool 1400
 
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
@@ -34,3 +35,5 @@ execute in minecraft:the_nether run forceload add 0 0
 
 scoreboard players set $20w12a+ worldtool 0
 schedule function worldtool:check_1.16 1s
+
+execute if score $particles worldtool matches 1.. run function worldtool:particles/main

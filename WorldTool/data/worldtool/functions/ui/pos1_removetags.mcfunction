@@ -20,3 +20,4 @@ tag @s remove mirrorX
 tag @s remove mirrorY
 tag @s remove mirrorZ
 tag @s remove no_output
+tag @s remove filling_outline

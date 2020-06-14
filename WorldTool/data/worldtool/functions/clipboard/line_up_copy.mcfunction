@@ -12,13 +12,13 @@ execute as @e[type=minecraft:area_effect_cloud,tag=clipboard_marker1] if score @
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=clipboard_pos1,tag=placing,limit=1] wt_ID = @s wt_ID
 tag @e[type=minecraft:area_effect_cloud,tag=clipboard_pos1,tag=placing,limit=1] remove placing
 
-scoreboard players operation #tempDifferenceX worldtool = #tempPos1X worldtool
-scoreboard players operation #tempDifferenceY worldtool = #tempPos1Y worldtool
-scoreboard players operation #tempDifferenceZ worldtool = #tempPos1Z worldtool
+scoreboard players operation #tempDifferenceX worldtool = #tempPos2X worldtool
+scoreboard players operation #tempDifferenceY worldtool = #tempPos2Y worldtool
+scoreboard players operation #tempDifferenceZ worldtool = #tempPos2Z worldtool
 
-scoreboard players operation #tempDifferenceX worldtool -= #tempPos2X worldtool
-scoreboard players operation #tempDifferenceY worldtool -= #tempPos2Y worldtool
-scoreboard players operation #tempDifferenceZ worldtool -= #tempPos2Z worldtool
+scoreboard players operation #tempDifferenceX worldtool -= #tempPos1X worldtool
+scoreboard players operation #tempDifferenceY worldtool -= #tempPos1Y worldtool
+scoreboard players operation #tempDifferenceZ worldtool -= #tempPos1Z worldtool
 
 execute as @e[type=minecraft:area_effect_cloud,tag=clipboard_pos1] if score @s wt_ID = @p wt_ID run function worldtool:clipboard/line_up.pos1
 
