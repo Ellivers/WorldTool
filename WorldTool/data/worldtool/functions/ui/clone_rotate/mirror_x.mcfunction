@@ -1,5 +1,7 @@
 tag @s add rotating
 tag @s add mirrorX
+tag @s remove mirrorY
+tag @s remove mirrorZ
 
 scoreboard players set @s rotX 0
 scoreboard players set @s rotY 0

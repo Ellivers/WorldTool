@@ -12,6 +12,6 @@ execute unless block ~ ~ ~ #worldtool:air_blocks at @a[tag=c_replacing_fill1] if
 execute unless block ~ ~ ~ #worldtool:air_blocks at @a[tag=c_replacing_fill2] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/checkered/replace/start_replace
 execute unless block ~ ~ ~ #worldtool:air_blocks at @a[tag=block_select_outline] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/fill_outline/start
 
-#Two brush things, separated from the others cuz these use falling blocks instead
+#Two brush things, separated from the others because these use falling blocks instead
 execute if entity @s[tag=brush] if entity @e[type=minecraft:falling_block,tag=switch_block_brush,distance=...2] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/brush/set/set_block
 execute if entity @s[tag=replacebrushc] if entity @e[type=minecraft:falling_block,tag=switch_block_brush,distance=...2] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/brush/select_replace/selected

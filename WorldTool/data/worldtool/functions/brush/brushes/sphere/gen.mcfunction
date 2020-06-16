@@ -3,6 +3,7 @@ execute unless entity @s[tag=cmdpos1] run tag @s remove scheduled_sphere
 
 execute if predicate worldtool:brush/hollow run tag @s add brush_hollow
 
+execute if score @s wt_brush_size matches 1 run clone 0 1 13 0 1 13 ~ ~ ~
 execute if score @s wt_brush_size matches 3 run function worldtool:brush/brushes/sphere/gen/3
 execute if score @s wt_brush_size matches 5 run function worldtool:brush/brushes/sphere/gen/5
 execute if score @s wt_brush_size matches 7 run function worldtool:brush/brushes/sphere/gen/7

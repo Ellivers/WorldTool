@@ -10,6 +10,7 @@ execute if predicate worldtool:brush/axis/x run scoreboard players set #X worldt
 execute if predicate worldtool:brush/axis/y run scoreboard players set #Y worldtool 1
 execute if predicate worldtool:brush/axis/z run scoreboard players set #Z worldtool 1
 
+execute if score @s wt_brush_size matches 1 run clone 0 1 13 0 1 13 ~ ~ ~
 execute if score @s wt_brush_size matches 3 run function worldtool:brush/brushes/circle/gen/3
 execute if score @s wt_brush_size matches 5 run function worldtool:brush/brushes/circle/gen/5
 execute if score @s wt_brush_size matches 7 run function worldtool:brush/brushes/circle/gen/7

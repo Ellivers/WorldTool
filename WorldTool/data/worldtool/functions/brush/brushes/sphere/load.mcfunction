@@ -1,6 +1,3 @@
-setblock 2 1 13 minecraft:jigsaw
-execute if score @s wt_brush_size matches 1 run clone 0 1 13 0 1 13 ~ ~ ~
-
 #Sets the block at 0 1 13 to the block you're using with your brush
 execute unless entity @s[predicate=!worldtool:brush/air,predicate=!worldtool:brush/water] run tag @s add brush_paint_air
 #execute unless entity @s[tag=brush_replace] run setblock 2 1 13 air

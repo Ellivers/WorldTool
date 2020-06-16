@@ -12,6 +12,6 @@ tellraw @s [{"text":"[-X]  ","color":"gold","hoverEvent": {"action": "show_text"
 
 tellraw @s {"text": "\n[Done]","color":"green","hoverEvent": {"action": "show_text","value": "Done"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/cancel"}}
 
-execute if entity @e[tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"reset","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
+execute if entity @e[tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"white","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
 
 function worldtool:ui/anti_feedback_chat_message/load
