@@ -28,4 +28,6 @@ tag @s remove flower_forest
 tag @s remove underwater
 tag @s remove sphere
 tag @s remove brush_cmd
+tag @s remove inner_block
+tag @s remove filling_outline
 scoreboard players reset @s wt_chance
