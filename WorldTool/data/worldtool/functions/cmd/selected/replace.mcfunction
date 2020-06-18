@@ -7,7 +7,6 @@ tag @s remove filtered_reversed
 tag @s remove measuring
 tag @s remove measuredX
 tag @s remove measuredY
-tag @s remove foliage_ing
 tag @s remove sphere
 tag @s remove brush_cmd
 tag @s remove filling_outline

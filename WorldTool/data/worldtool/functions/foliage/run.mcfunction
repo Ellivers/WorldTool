@@ -1,7 +1,7 @@
 scoreboard players add #blockschecked worldtool 1
 
 execute if entity @s[tag=wt_replace_foliage] if block ~ ~1 ~ #worldtool:plants run setblock ~ ~1 ~ minecraft:air
-execute unless score #blockschecked worldtool >= $greeneryBlocksPerTick worldtool if entity @s[tag=!desert,tag=!underwater] if block ~ ~ ~ #worldtool:plantable if block ~ ~1 ~ #worldtool:air_blocks positioned ~ ~1 ~ run function worldtool:foliage/place1
+execute unless score #blockschecked worldtool >= $greeneryBlocksPerTick worldtool if entity @s[tag=!desert,tag=!underwater] if block ~ ~ ~ #worldtool:plantable positioned ~ ~1 ~ run function worldtool:foliage/place1
 execute unless score #blockschecked worldtool >= $greeneryBlocksPerTick worldtool unless entity @s[tag=!desert,tag=!underwater] run function worldtool:foliage/check_special
 
 #If #blockschecked's worldtool score isn't more than a certain number (default: 1600) move the x, y and z coordinates

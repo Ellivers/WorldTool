@@ -8,6 +8,7 @@
 - Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
 - Added the [Options] menu, for changing settings and more
 - Added underwater source biome for greenery
+- Added a place brush option to toggle between placing in and on the selected block
 - Fixed command functionality
 - Changed the 'Filled X blocks' message to 'Placed X blocks'
 - Buttons that open another menu are now marked with '...'

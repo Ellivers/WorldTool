@@ -23,7 +23,7 @@ execute unless score $destroyedBlocksPerTick worldtool matches 2..3700 run score
 execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900
 execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run scoreboard players set $checkeredBlocksPerTick worldtool 3400
 execute unless score $outlinedBlocksPerTick worldtool matches 2..3200 run scoreboard players set $outlinedBlocksPerTick worldtool 3200
-execute unless score $greeneryBlocksPerTick worldtool matches 2..1400 run scoreboard players set $greeneryBlocksPerTick worldtool 1400
+execute unless score $greeneryBlocksPerTick worldtool matches 2..1200 run scoreboard players set $greeneryBlocksPerTick worldtool 1200
 
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1

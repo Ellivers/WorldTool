@@ -1,7 +1,3 @@
-# Biomes / Flower tables
-execute if entity @s[tag=flower_forest] run function worldtool:foliage/plant_tables/flower_forest
-execute if entity @s[tag=plains] run function worldtool:foliage/plant_tables/plains
-execute if entity @s[tag=taiga] run function worldtool:foliage/plant_tables/taiga
-execute if entity @s[tag=desert] run function worldtool:foliage/plant_tables/desert
-execute if entity @s[tag=sunflower_plains] run function worldtool:foliage/plant_tables/sunflower_plains
-execute if entity @s[tag=underwater] run function worldtool:foliage/plant_tables/underwater
+execute if entity @s[tag=!replacefill,tag=!replacefill_reversed] if block ~ ~ ~ #worldtool:air_blocks run function worldtool:foliage/place3
+execute if entity @s[tag=replacefill] if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:foliage/place3
+execute if entity @s[tag=replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:foliage/place3

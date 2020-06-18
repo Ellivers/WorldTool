@@ -1,6 +1,4 @@
 tag @s remove rotated
-tag @s remove replacefill
-tag @s remove replacefill_reversed
 tag @s remove cloning_wt
 tag @s remove hollow
 tag @s remove moveclone
