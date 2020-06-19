@@ -1,8 +1,10 @@
 tag @s remove brush_tick
 tag @s remove grabbing_block
+tellraw @s "\n\n\n\n\n\n\n\n\n\n\n"
+tellraw @s ["                                                                            ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 
 execute unless score @s wt_brush_size matches 1..39 run scoreboard players set @s wt_brush_size 1
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n"},{"text":"Brush size: ","color":"dark_aqua"},{"text":"< ","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Decrease brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_decrease"}},{"score":{"name":"@s","objective":"wt_brush_size"}},{"text":" >","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Increase brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_increase"}}]
+tellraw @s ["",{"text":"Brush size: ","color":"dark_aqua"},{"text":"< ","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Decrease brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_decrease"}},{"score":{"name":"@s","objective":"wt_brush_size"}},{"text":" >","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Increase brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_increase"}}]
 
 execute if predicate worldtool:tool_states/all unless data entity @s SelectedItem.tag.Brush run tellraw @s {"text":"\n\nPlease select a brush.","color":"gold","italic":true}
 execute if predicate worldtool:brushes/paint run tellraw @s [{"text":"\n\n"},{"text":"Current brush: Paint","color":"yellow","bold":true}]
