@@ -34,6 +34,7 @@ execute in minecraft:the_end run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
 
 scoreboard players set $20w12a+ worldtool 0
-schedule function worldtool:check_1.16 1s
+schedule function worldtool:init/check_1.16 1s
 
+schedule function worldtool:init/set_base 2t
 function worldtool:particles/main

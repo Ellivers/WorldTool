@@ -35,4 +35,4 @@ tag @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] remo
 
 execute if entity @s[tag=cloning_wt] run function worldtool:cmd/load_clone1
 execute if entity @s[tag=random1] as @e[type=minecraft:area_effect_cloud,tag=cmdrnd1] at @s run function worldtool:cmd/start_random_1
-execute if entity @s[tag=!cloning_wt,tag=!random1] run schedule function worldtool:load2_fill 1t
+execute if entity @s[tag=!cloning_wt,tag=!random1] run schedule function worldtool:load_function/load2_fill 1t

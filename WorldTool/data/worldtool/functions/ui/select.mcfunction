@@ -12,16 +12,7 @@ tellraw @s[tag=!wt_outline_selection] ["",{"text":"[Outline selection: Off]","co
 execute if entity @s[tag=wt_outline_selection] run function worldtool:ui/outline/load1
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/select.pos1
 execute as @e[type=minecraft:area_effect_cloud,tag=randompoint,tag=dostuff] if score @s wt_ID = @p wt_ID run tag @s remove dostuff
-tag @s remove grabbing_block
-tag @s remove randomizing
-tag @s remove placing_filtered
-tag @s remove hollowing
-tag @s remove checkered_select
-tag @s remove fun_menu
-tag @s remove wt_inner
-tag @s remove mirrorX
-tag @s remove mirrorY
-tag @s remove mirrorZ
+function worldtool:ui/player_removetags
 
 function worldtool:ui/summon_check_block/1
 

@@ -5,4 +5,3 @@ execute if entity @s[tag=placing_filtered_reversed] as @e[type=minecraft:area_ef
 tag @s remove placing_filtered
 tag @s remove placing_filtered_reversed
 function worldtool:ui/clone/select_clone
-function worldtool:ui/anti_feedback_chat_message/load

@@ -1,6 +1,5 @@
 #Sets the block at 0 1 13 to the block you're using with your brush
 execute unless entity @s[predicate=!worldtool:brush/air,predicate=!worldtool:brush/water] run tag @s add brush_paint_air
-#execute unless entity @s[tag=brush_replace] run setblock 2 1 13 air
 setblock 0 1 13 air
 execute if predicate worldtool:brush/water run setblock 0 1 13 water
 execute unless entity @s[tag=brush_paint_air] run summon falling_block 0 1 13 {Time:-34,Motion:[0d,-10d,0d],Tags:[sphere_block]}

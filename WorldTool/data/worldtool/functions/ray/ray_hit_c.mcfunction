@@ -1,7 +1,7 @@
 kill @e[type=minecraft:area_effect_cloud,tag=clonepos]
 summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["clonepos"]}
 
-execute at @s as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer"]}
+execute at @s as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking"]}
 
 execute as @e[type=minecraft:area_effect_cloud,tag=clonepos,limit=1] run function worldtool:ray/pos
 
@@ -16,4 +16,4 @@ execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_I
 
 tellraw @s [{"text":"Set clone destination to "},{"score":{"name":"#posXt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posYt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posZt","objective":"worldtool"}}]
 tag @s remove in_menu
-execute as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s[distance=..200] wt_ID = @p wt_ID run function worldtool:load_fill
+execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s[distance=..200] wt_ID = @p wt_ID run function worldtool:load_function/load_fill

@@ -1,3 +1,4 @@
+execute at @s[tag=moving_clone] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s add moveclone
 tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\nPlace the cloning destination in the same corner as the first position of the cloned blocks     ","color":"aqua"},{"text":"[Cancel]  ","color":"red","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
 tag @s remove setpos2
 tag @s remove placing_fill

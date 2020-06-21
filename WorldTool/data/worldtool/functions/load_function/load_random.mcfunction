@@ -5,7 +5,7 @@ execute store result score $pos1y worldtool run data get entity @s Pos[1]
 execute store result score $pos1z worldtool run data get entity @s Pos[2]
 execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
 
-execute at @a if score @p wt_ID = @s wt_ID as @e[type=minecraft:area_effect_cloud,tag=randomcorner2] if score @s wt_ID = @p wt_ID run function worldtool:load_random.rndpos2
+execute at @a if score @p wt_ID = @s wt_ID as @e[type=minecraft:area_effect_cloud,tag=randomcorner2] if score @s wt_ID = @p wt_ID run function worldtool:load_function/load_random.rndpos2
 
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool
 scoreboard players operation $drawingposZ worldtool = $pos1z worldtool

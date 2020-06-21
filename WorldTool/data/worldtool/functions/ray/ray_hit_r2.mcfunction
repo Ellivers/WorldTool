@@ -6,4 +6,4 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=randomcorne
 execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner2,sort=nearest,limit=1] run function worldtool:ray/pos
 
 tellraw @s [{"text":"Set randomizer origin position 2 to "},{"score":{"name":"#posXt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posYt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posZt","objective":"worldtool"}},"\nLoading..."]
-function worldtool:load_random_check
+function worldtool:load_function/load_random_check

@@ -9,27 +9,7 @@ tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 tag @s remove in_menu
 tag @s remove placing_fill
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/pos1_removetags
-tag @s remove randomizing
-tag @s remove hollowing
-tag @s remove measure_filter
-tag @s remove placing_filtered
-tag @s remove placing_filtered_reversed
-tag @s remove replacing_fill1
-tag @s remove replacing_fill2
-tag @s remove grabbing_block
-tag @s remove grabbing_block_replace
-tag @s remove switch_block_brush
-tag @s remove replacebrush
-tag @s remove replacebrush_reversed
-tag @s remove fun_menu
-tag @s remove wt_inner
-tag @s remove placing_hollow_inner
-tag @s remove mirrorX
-tag @s remove mirrorY
-tag @s remove mirrorZ
-tag @s remove rotating_clone
-tag @s remove menu_nudge
-tag @s remove block_select_outline
+function worldtool:ui/player_removetags
 
 #For some reason this tag isn't in worldtool:ui/pos1_removetags
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove rotated

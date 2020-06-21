@@ -45,4 +45,4 @@ execute at @a[predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/re
 execute at @a[predicate=worldtool:brushes/color] if score @s wt_ID = @p wt_ID at @s as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:color
 execute at @a[predicate=worldtool:brushes/replace] if score @s wt_ID = @p wt_ID at @s as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:brush/replace/replace
 execute at @a[predicate=worldtool:brushes/sphere] if score @s wt_ID = @p wt_ID at @s as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:brush/replace/replace
-#schedule function worldtool:load2_fill 1t
+#schedule function worldtool:load_function/load2_fill 1t

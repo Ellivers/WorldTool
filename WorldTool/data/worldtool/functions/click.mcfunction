@@ -27,5 +27,5 @@ execute unless entity @s[tag=!setpos1,tag=!setpos2] run tellraw @s [{"text":"[Se
 execute unless entity @s[tag=!setpos1,tag=!setpos2] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run tellraw @p [{"text":"[Use...]  ","color":"green","hoverEvent":{"action":"show_text","value":"Use the tool's various functions"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/check"}},{"text": "[Options...]","color":"blue","hoverEvent": {"action": "show_text","value": "Options for the selected area and WorldTool settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/select"}}]
 scoreboard players reset @s wt_click
 scoreboard players reset $raycast worldtool
-execute if entity @s[tag=holding_wttool] unless entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:raycast
-execute if entity @s[tag=holding_wttool] if entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:raycast.b4b
+execute if entity @s[tag=holding_wttool] unless entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast
+execute if entity @s[tag=holding_wttool] if entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast.b4b

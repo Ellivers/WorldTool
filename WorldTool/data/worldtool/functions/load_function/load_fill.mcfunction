@@ -13,7 +13,7 @@ execute unless score $outlinedBlocksPerTick worldtool matches 2..3200 run scoreb
 execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900
 execute unless score $greeneryBlocksPerTick worldtool matches 2..1200 run scoreboard players set $greeneryBlocksPerTick worldtool 1200
 
-execute at @a if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run function worldtool:load_fill.pos2
+execute at @a if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run function worldtool:load_function/load_fill.pos2
 
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool
 scoreboard players operation $drawingposZ worldtool = $pos1z worldtool
@@ -36,6 +36,6 @@ execute if entity @s[tag=!cloning_wt] run kill @e[type=minecraft:area_effect_clo
 execute if entity @s[tag=!cloning_wt] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking"]}
 data modify entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s Tags[]
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] wt_ID = @s wt_ID
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_fill.wtd
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_function/load_fill.wtd
 
-schedule function worldtool:load2_fill 1t
+schedule function worldtool:load_function/load2_fill 1t

@@ -1,24 +1,4 @@
-- Added sphere brush
-- Added circle brush
-- Added hollow, for outlining an area with blocks
-- Added outline, for placing blocks in the corners of a selection
-- Brushes can now store block data
-- Clone now has mirror functionality
-- Added the function Command block list, for easily copying commands inside a chain of command blocks
-- Added the [Fun] drop-down menu in More, for some not-that-useful things I decide to make
-- Added the [Options] menu, for changing settings and more
-- Added underwater source biome for greenery
-- Added a place brush option to toggle between placing in and on the selected block
-- Fixed command functionality
-- Changed the 'Filled X blocks' message to 'Placed X blocks'
-- Buttons that open another menu are now marked with '...'
-- Added a help button in the main menu and the brush menu
-- The observer buddy no longer matches your Y rotation, to make it more user friendly
-- Reduced particles
-- Increased selection box particle visibility (render distance)
-- Added error messages for having incorrect amounts of positions when opening the menu
-- Fixed bubble collumns not counting as water
-- Added a message when you don't have a brush selected
-- Selecting a block with no brush selected now no longer deletes the item
-- Fixed not being able to increment Z rotation past -90 degrees
-- Performance improvements
+- Fixed circle sizes 23 and 25 not working
+- Fixed sphere size 13 with Hollow enabled not working properly
+- Fixed bubble columns not counting as water
+- Fixed some multiplayer issues
