@@ -1,0 +1,3 @@
+execute if entity @s[tag=backbuttonplzthx] run tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",{"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back to the main menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/check"}}]
+execute if entity @s[tag=!backbuttonplzthx] run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+tag @s remove backbuttonplzthx

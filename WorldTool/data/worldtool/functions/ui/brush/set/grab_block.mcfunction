@@ -1,5 +1,6 @@
 tag @s remove grabbing_block
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\nPicked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
+function worldtool:ui/clear_chat
+tellraw @s [{"text":"Picked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
 
 execute if predicate worldtool:brushes/paint run loot spawn ~ ~ ~ loot worldtool:brushes/paint
 execute if predicate worldtool:brushes/place run loot spawn ~ ~ ~ loot worldtool:brushes/place

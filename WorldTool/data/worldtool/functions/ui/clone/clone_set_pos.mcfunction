@@ -1,4 +1,3 @@
-tellraw @s {"text":"\n\n\n\n\n\n\n\n\n"}
 tag @s add settingclonepos
 execute if entity @s[tag=atsetpos,tag=settingclonepos] run tag @s remove settingclonepos
 execute if entity @s[tag=atsetpos,tag=!settingclonepos] run tag @s remove atsetpos

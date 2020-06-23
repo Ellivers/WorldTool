@@ -1,4 +1,6 @@
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\nPlace the cloning destination in the same corner as the first position of the cloned blocks     ","color":"aqua"},{"text":"[Cancel]  ","color":"red","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
+tag @s add backbuttonplzthx
+function worldtool:ui/clear_chat
+tellraw @s [{"text":"Place the cloning destination in the same corner as the first position of the cloned blocks     ","color":"aqua"},{"text":"[Cancel]  ","color":"red","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
 tag @s remove setpos2
 tag @s remove placing_fill
 replaceitem entity @s weapon.mainhand minecraft:air

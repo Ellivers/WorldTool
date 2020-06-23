@@ -1,5 +1,8 @@
 function worldtool:ui/summon_check_block/primary
 
+tag @s add backbuttonplzthx
+function worldtool:ui/clear_chat
+
 tag @s remove placing_fill
 tag @s add block_select_outline
 

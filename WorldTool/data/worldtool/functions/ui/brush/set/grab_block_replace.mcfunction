@@ -1,6 +1,7 @@
 tag @s remove grabbing_block
 tag @s remove grabbing_block_replace
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\nPicked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
+function worldtool:ui/clear_chat
+tellraw @s [{"text":"Picked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
 
 loot spawn ~ ~ ~ loot worldtool:brushes/replace
 

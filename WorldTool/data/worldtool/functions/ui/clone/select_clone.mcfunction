@@ -1,6 +1,7 @@
 tag @s remove placing_fill
 tag @s remove rotating_clone
-tellraw @s "\n\n\n\n\n\n\n\n\n"
+tag @s add backbuttonplzthx
+function worldtool:ui/clear_chat
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X\n\n\n","color":"gold","bold":true}

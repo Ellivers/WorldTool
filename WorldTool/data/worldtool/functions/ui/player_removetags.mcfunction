@@ -26,3 +26,4 @@ tag @s remove placing_replace_foliage
 tag @s remove placing_replace_foliage_reversed
 tag @s remove check_block_brush
 tag @s remove check_block_replacebrush
+tag @s remove brush_tick

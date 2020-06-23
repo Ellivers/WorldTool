@@ -3,7 +3,9 @@ execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_I
 #... k-k-kill... the o-observer buddy... D:
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 #Clear up the chat
-tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+
+function worldtool:ui/clear_chat
+tellraw @s "Cancelled"
 #Remove the (temporary) tags
 tag @s remove in_menu
 tag @s remove placing_fill
@@ -25,4 +27,5 @@ tag @s remove setclonepos
 tag @s remove random_1
 tag @s remove random_2
 
+tag @s add nospaceplzthx
 function worldtool:ui/anti_feedback_chat_message/load

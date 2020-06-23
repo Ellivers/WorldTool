@@ -47,4 +47,6 @@ execute in minecraft:overworld run forceload remove 0 0
 execute in minecraft:the_end run forceload remove 0 0
 execute in minecraft:the_nether run forceload remove 0 0
 
-tellraw @a {"text": "\n\n\n\n\n\nWorldTool has been uninstalled","color":"green"}
+function worldtool:ui/clear_chat
+
+tellraw @a {"text": "WorldTool has been uninstalled","color":"green"}

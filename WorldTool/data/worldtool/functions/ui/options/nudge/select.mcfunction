@@ -2,7 +2,9 @@ tag @s add in_menu
 tag @s add menu_nudge
 execute if entity @s[tag=wt_outline_selection] run function worldtool:ui/outline/load1
 
-tellraw @s ["",{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n[⬅Back]","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/select"}},{"text": "\nNudge","bold": true,"color":"light_purple"}]
+function worldtool:ui/clear_chat
+
+tellraw @s ["",{"text": "[⬅Back]","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/select"}},{"text": "\nNudge","bold": true,"color":"light_purple"}]
 
 execute if entity @s[tag=wt_outline_selection] run tellraw @s {"text": "\n[Outline selection: On]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Toggle highlighting the selected area"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/outline_toggle"}}
 execute if entity @s[tag=!wt_outline_selection] run tellraw @s {"text": "\n[Outline selection: Off]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Toggle highlighting the selected area"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/outline_toggle"}}

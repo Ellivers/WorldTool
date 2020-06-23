@@ -2,8 +2,10 @@ execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner1] if score @s wt
 tag @s remove random_1
 tag @s remove random_2
 tag @s remove placing_fill
+tag @s remove rnd_replacingfill1
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove random1
-tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+tag @s add backbuttonplzthx
+function worldtool:ui/clear_chat
 
 execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner1] if score @s wt_ID = @p wt_ID run tag @s add detected
 execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner2] if score @s wt_ID = @p wt_ID run tag @s add detected

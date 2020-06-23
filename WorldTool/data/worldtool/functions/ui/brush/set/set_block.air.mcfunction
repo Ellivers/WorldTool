@@ -1,4 +1,4 @@
-tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+function worldtool:ui/clear_chat
 
 execute if predicate worldtool:brushes/paint run loot spawn ~ ~ ~ loot worldtool:brushes/paint
 execute if predicate worldtool:brushes/place run loot spawn ~ ~ ~ loot worldtool:brushes/place

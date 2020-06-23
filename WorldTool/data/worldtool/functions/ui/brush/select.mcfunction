@@ -1,6 +1,6 @@
-tag @s remove brush_tick
-tag @s remove grabbing_block
-tellraw @s "\n\n\n\n\n\n\n\n\n\n\n"
+function worldtool:ui/player_removetags
+
+function worldtool:ui/clear_chat
 tellraw @s ["                                                                            ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 
 execute unless score @s wt_brush_size matches 1..39 run scoreboard players set @s wt_brush_size 1
