@@ -24,4 +24,5 @@ tag @s remove c_replacing_fill2
 tag @s remove checkered_select
 tag @s remove placing_replace_foliage
 tag @s remove placing_replace_foliage_reversed
-tag @s remove moving_clone
+tag @s remove check_block_brush
+tag @s remove check_block_replacebrush

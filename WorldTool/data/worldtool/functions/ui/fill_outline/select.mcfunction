@@ -1,4 +1,4 @@
-function worldtool:ui/summon_check_block/1
+function worldtool:ui/summon_check_block/primary
 
 tag @s remove placing_fill
 tag @s add block_select_outline

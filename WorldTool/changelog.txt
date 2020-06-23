@@ -1,4 +1,4 @@
-- Fixed circle sizes 23 and 25 not working
-- Fixed sphere size 13 with Hollow enabled not working properly
-- Fixed bubble columns not counting as water
-- Fixed some multiplayer issues
+- Reworked the block selection system
+- The (Air) button is now only for air, instead of being for both air and water
+- Fixed Hollow not working sometimes
+- Performance improvements
