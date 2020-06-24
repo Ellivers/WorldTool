@@ -1,1 +1,0 @@
-scoreboard players set $STOPPOS2 worldtool 0

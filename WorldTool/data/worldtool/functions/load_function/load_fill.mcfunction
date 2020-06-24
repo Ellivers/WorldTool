@@ -1,4 +1,4 @@
-execute at @a if score @s wt_ID = @p wt_ID as @p run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n"}
+execute at @a if score @s wt_ID = @p wt_ID as @p run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
 execute store result score $pos1x worldtool run data get entity @s Pos[0]
 execute store result score $pos1y worldtool run data get entity @s Pos[1]
@@ -12,7 +12,7 @@ execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run score
 execute unless score $outlinedBlocksPerTick worldtool matches 2..3200 run scoreboard players set $checkeredBlocksPerTick worldtool 3200
 execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900
 execute unless score $greeneryBlocksPerTick worldtool matches 2..1200 run scoreboard players set $greeneryBlocksPerTick worldtool 1200
-execute unless score $hollowBlocksPerTick worldtool matches 2..3500 run scoreboard players set $hollowBlocksPerTick worldtool 3500
+execute unless score $hollowBlocksPerTick worldtool matches 2..3300 run scoreboard players set $hollowBlocksPerTick worldtool 3300
 
 execute at @a if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run function worldtool:load_function/load_fill.pos2
 

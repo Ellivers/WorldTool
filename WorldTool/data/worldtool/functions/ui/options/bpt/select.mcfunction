@@ -8,7 +8,7 @@ execute if score $randomizedBlocksPerTick worldtool matches 3900 run tag @s add 
 execute if score $checkeredBlocksPerTick worldtool matches 3400 run tag @s add checkeredBlocksPerTick_default
 execute if score $outlinedBlocksPerTick worldtool matches 3200 run tag @s add outlinedBlocksPerTick_default
 execute if score $greeneryBlocksPerTick worldtool matches 1200 run tag @s add greeneryBlocksPerTick_default
-execute if score $hollowBlocksPerTick worldtool matches 3500 run tag @s add hollowBlocksPerTick_default
+execute if score $hollowBlocksPerTick worldtool matches 3300 run tag @s add hollowBlocksPerTick_default
 
 execute if score $blocksPerTick worldtool matches 2000 run tag @s add blocksPerTick_medium
 execute if score $clonedBlocksPerTick worldtool matches 2000 run tag @s add clonedBlocksPerTick_medium

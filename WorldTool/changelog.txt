@@ -1,5 +1,4 @@
 - Reworked the internal block selection system
 - The (Air) button is now only for air, instead of being for both air and water
 - Added [Back] buttons in most menus, to make them easier to navigate
-- Fixed Hollow not working sometimes
 - Performance improvements
