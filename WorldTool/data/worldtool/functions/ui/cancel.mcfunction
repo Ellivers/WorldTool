@@ -2,20 +2,21 @@
 execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_check_block
 #... k-k-kill... the o-observer buddy... D:
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
-#Clear up the chat
-
+# Kill le temp marker
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
+# Clear up the chat
 function worldtool:ui/clear_chat
 tellraw @s "Cancelled"
-#Remove the (temporary) tags
+# Remove the (temporary) tags
 tag @s remove in_menu
 tag @s remove placing_fill
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/pos1_removetags
 function worldtool:ui/player_removetags
 
-#For some reason this tag isn't in worldtool:ui/pos1_removetags
+# For some reason this tag isn't in worldtool:ui/pos1_removetags
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove rotated
 
-#Remove the other tool variants you can have and replace them with the position 1 tool
+# Remove the other tool variants you can have and replace them with the position 1 tool
 tag @s[predicate=worldtool:tool_states/3] add setclonepos
 tag @s[predicate=worldtool:tool_states/4] add random_1
 tag @s[predicate=worldtool:tool_states/5] add random_2

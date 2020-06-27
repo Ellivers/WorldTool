@@ -29,6 +29,9 @@ execute unless score $hollowBlocksPerTick worldtool matches 2..3300 run scoreboa
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 
+execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
+scoreboard players set #2 worldtool 2
+
 gamerule commandBlockOutput false
 
 #Forceload for access to storing blocks at 0 0

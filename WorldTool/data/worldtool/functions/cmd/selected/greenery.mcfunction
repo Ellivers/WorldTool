@@ -14,5 +14,6 @@ tag @s remove checkered
 tag @s remove measuring
 tag @s add foliage_ing
 tag @s remove sphere
+tag @s remove circle
 tag @s remove brush_cmd
 tag @s remove filling_outline

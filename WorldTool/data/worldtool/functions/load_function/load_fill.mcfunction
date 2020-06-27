@@ -34,9 +34,12 @@ execute at @a if score @s wt_ID = @p wt_ID run scoreboard players operation @s r
 execute at @a if score @s wt_ID = @p wt_ID run scoreboard players operation @s rotZ = @p rotZ
 
 execute if entity @s[tag=!cloning_wt] run kill @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1]
-execute if entity @s[tag=!cloning_wt] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking"]}
+execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking"]}
 data modify entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s Tags[]
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] wt_ID = @s wt_ID
+
+execute if entity @s[tag=random2] run function worldtool:load_function/switch_y_levels
+
 execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_function/load_fill.wtd
 
 schedule function worldtool:load_function/load2_fill 1t

@@ -27,6 +27,7 @@ tag @s remove sunflower_plains
 tag @s remove flower_forest
 tag @s remove underwater
 tag @s remove sphere
+tag @s remove circle
 tag @s remove brush_cmd
 tag @s remove inner_block
 tag @s remove filling_outline

@@ -6,6 +6,8 @@ scoreboard players operation @s rotX = $temp rotX
 scoreboard players operation @s rotY = $temp rotY
 scoreboard players operation @s rotZ = $temp rotZ
 
+execute unless score @s rotX matches 1.. unless score @s rotZ matches 1.. if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_function/switch_y_levels
+
 #execute if entity @s[tag=moveclone] unless entity @s[tag=!filtered,tag=!filtered_reversed] at @s run clone 2 1 13 2 1 13 0 1 13
 execute if entity @s[tag=!rotated] run function worldtool:clone/clone
 execute if entity @s[tag=rotated] run function worldtool:clone/rotated

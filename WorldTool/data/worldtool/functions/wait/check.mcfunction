@@ -1,0 +1,2 @@
+execute if entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run schedule function worldtool:wait/check 1t
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] as @a[tag=wt_waiting,limit=1] at @s run function worldtool:wait/done

@@ -1,4 +1,3 @@
-
 function worldtool:ui/clear_chat
 
 scoreboard players operation $blocksplaced worldtool = $widthX worldtool

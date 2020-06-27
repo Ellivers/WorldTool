@@ -7,4 +7,4 @@ execute as @e[type=minecraft:item,nbt={Age:0s,Item:{tag:{worldTool:1b}}}] at @s 
 execute as @a at @s if score @s wt_click matches 1.. anchored eyes positioned ^ ^-.1 ^ run function worldtool:click
 execute as @a unless entity @s[tag=!check_block_brush,tag=!check_block_replacebrush] at @s run function worldtool:block_check/player
 #Check for a block while in menus
-execute as @e[type=minecraft:area_effect_cloud,tag=check_block] at @s run function worldtool:block_check/main
+execute as @e[type=minecraft:area_effect_cloud,tag=check_block,tag=!waiting] at @s run function worldtool:block_check/main

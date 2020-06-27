@@ -1,3 +1,3 @@
 function worldtool:ui/clear_chat
-tellraw @s [{"text": "Do you want to uninstall WorldTool?"},{"text": "\n\n[No]  ","color":"aqua","hoverEvent": {"action": "show_text","value": "No"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "[Yes]","color":"red","hoverEvent": {"action": "show_text","value": "Yes"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/ctrl_panel/reset"}}]
+tellraw @s [{"text": "Do you want to uninstall WorldTool?"},{"text": "\n\n[No]  ","color":"aqua","hoverEvent": {"action": "show_text","value": "No"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "[Yes]","color":"red","hoverEvent": {"action": "show_text","value": "Yes"},"clickEvent": {"action": "run_command","value": "/function worldtool:uninstall"}}]
 function worldtool:ui/anti_feedback_chat_message/load
