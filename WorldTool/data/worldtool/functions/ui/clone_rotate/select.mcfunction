@@ -1,6 +1,6 @@
 tag @s add rotating_clone
-tag @s add backbuttonplzthx
 function worldtool:ui/clear_chat
+tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/clone/select_clone"}}
 
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run tag @s add found
 execute unless entity @e[type=minecraft:armor_stand,tag=show_rot,tag=found] run summon armor_stand ^ ^-.5 ^1.5 {Invisible:1b,Tags:["show_rot","wt_particles"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}],Pose:{Head:[0f,1f,0f]}}
@@ -18,7 +18,7 @@ tellraw @s [{"text":"\n\n[X -90]   ","color":"light_purple","hoverEvent":{"actio
 tellraw @s [{"text":"[Y -90]   ","color":"light_purple","hoverEvent":{"action":"show_text","value":"Y -90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/-y"}},{"text":"[Y +90]\n","color":"light_purple","hoverEvent":{"action":"show_text","value":"Y +90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/y"}}]
 tellraw @s [{"text":"[Z -90]   ","color":"light_purple","hoverEvent":{"action":"show_text","value":"Z -90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/-z"}},{"text":"[Z +90]\n","color":"light_purple","hoverEvent":{"action":"show_text","value":"Z +90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/z"}}]
 tellraw @s [{"text": "\n[Mirror X]  ","color":"yellow","hoverEvent": {"action": "show_text","value": "Mirror the selection on the X axis"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/clone_rotate/mirror_x"}},{"text": "[Mirror Y]  ","color":"yellow","hoverEvent": {"action": "show_text","value": "Mirror the selection on the Y axis"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/clone_rotate/mirror_y"}},{"text": "[Mirror Z]","color":"yellow","hoverEvent": {"action": "show_text","value": "Mirror the selection on the Z axis"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/clone_rotate/mirror_z"}}]
-tellraw @s [{"text": "\n[Clear rotation]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Clear the rotation/mirror you have selected"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/clone_rotate/clear_rotation"}},{"text":"\n[Done...]","color":"aqua","hoverEvent":{"action":"show_text","value":"Go back to the clone menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone/select_clone"}}]
+tellraw @s {"text": "\n[Clear rotation]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Clear the rotation/mirror you have selected"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/clone_rotate/clear_rotation"}}
 schedule function worldtool:ui/clone_rotate/remove_tag 1t
 execute as @e[type=minecraft:armor_stand,tag=show_rot,tag=found] run tag @s remove found
 

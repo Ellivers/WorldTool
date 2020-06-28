@@ -28,3 +28,4 @@ tag @s remove check_block_brush
 tag @s remove check_block_replacebrush
 tag @s remove brush_tick
 tag @s remove wt_waiting
+tag @s remove wt_TempHahaThisIsNeeded

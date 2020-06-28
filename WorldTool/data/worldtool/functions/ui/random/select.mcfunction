@@ -1,8 +1,14 @@
 execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner1] if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=randomcorner2] if score @s wt_ID = @p wt_ID run tag @p add randomizing
+
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:4b}
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b}
+execute unless entity @s[tag=!random_1,tag=!random_2] run give @s carrot_on_a_stick{worldTool:1b,Type:1b,Unbreakable:1b,Enchantments:[{}],display:{Name:'{"text":"Set position 1","italic":false}'}}
+
 tag @s remove random_1
 tag @s remove random_2
 tag @s remove placing_fill
 tag @s remove rnd_replacingfill1
+
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove random1
 tag @s add backbuttonplzthx
 function worldtool:ui/clear_chat

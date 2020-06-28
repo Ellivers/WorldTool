@@ -1,3 +1,4 @@
+# First list
 execute if entity @s[tag=cloning_wt,tag=!from_cmd] run function worldtool:load_function/load_clone
 execute if entity @s[tag=cloning_wt,tag=from_cmd] run function worldtool:cmd/load_clone2
 execute if entity @s[tag=hollow] run function worldtool:hollow/hollow
