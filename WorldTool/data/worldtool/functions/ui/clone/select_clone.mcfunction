@@ -4,6 +4,11 @@ tag @s add backbuttonplzthx
 function worldtool:ui/clear_chat
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 
+tag @s[predicate=worldtool:tool_states/3] add setclonepos
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
+give @s[tag=setclonepos] carrot_on_a_stick{worldTool:1b,Type:1b,Unbreakable:1b,Enchantments:[{}],display:{Name:'{"text":"Set position 1","italic":false}'}}
+tag @s remove setclonepos
+
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X\n\n\n","color":"gold","bold":true}
 execute if entity @s[tag=mirrorY] run tellraw @s {"text":"Current rotation: Mirror Y\n\n\n","color":"gold","bold":true}
 execute if entity @s[tag=mirrorZ] run tellraw @s {"text":"Current rotation: Mirror Z\n\n\n","color":"gold","bold":true}

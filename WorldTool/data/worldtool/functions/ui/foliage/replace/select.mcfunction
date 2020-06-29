@@ -1,4 +1,4 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_check_block
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_check_block
 
 tag @s remove placing_replace_foliage
 tag @s remove placing_replace_foliage_reversed

@@ -1,3 +1,8 @@
+# Makes some stuff unstuck
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer] at @s run function worldtool:load_function/load2_fill.tags
+
+execute if entity @s[tag=!grabbing_block] unless entity @s[predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/paint,predicate=!worldtool:brushes/replace] if entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run tellraw @s {"text": "Another process is already running","color":"red"}
+
 #The different brushes, including picking (grabing) a block
 execute if entity @s[tag=!grabbing_block] unless entity @s[predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/paint] unless entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run function worldtool:brush/brushes/paint/main
 execute if entity @s[predicate=worldtool:brushes/color,tag=!grabbing_block] unless entity @e[type=minecraft:area_effect_cloud,tag=wt_drawer] run function worldtool:brush/brushes/color/load

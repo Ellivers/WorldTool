@@ -1,4 +1,4 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=check_block] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID run kill @s
 tag @s add grabbing_block
 tag @s add grabbing_block_replace
 function worldtool:ui/clear_chat

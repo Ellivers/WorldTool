@@ -9,7 +9,7 @@ scoreboard players operation @s rotZ = $temp rotZ
 
 # Move the y position of the copyer and drawer if the first position is higher up than the second position
 # This is to attempt not breaking redstone and other blocks that need to be placed on top of solid blocks.
-execute unless score @s rotX matches 1.. unless score @s rotZ matches 1.. if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_function/switch_y_levels2
+execute if entity @s[tag=!mirrorY] unless score @s rotX matches 1.. unless score @s rotZ matches 1.. if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_function/switch_y_levels2
 
 #execute if entity @s[tag=moveclone] unless entity @s[tag=!filtered,tag=!filtered_reversed] at @s run clone 2 1 13 2 1 13 0 1 13
 # Start

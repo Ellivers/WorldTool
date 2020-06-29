@@ -1,5 +1,6 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_check_block
-
+tag @s add wt_measuring_area
+# This function measures how many blocks are in the area you selected
+tag @s add nomeasuredonemessageplzthx
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:measure/load.pos1
 execute as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run function worldtool:measure/load.pos2
 
@@ -8,4 +9,3 @@ scoreboard players set $heightY worldtool 1
 scoreboard players set $lengthZ worldtool 1
 
 function worldtool:measure/measure
-function worldtool:ui/anti_feedback_chat_message/load
