@@ -4,5 +4,5 @@ tellraw @s [{"text":"Place the cloning destination in the same corner as the fir
 tag @s remove setpos2
 tag @s remove placing_fill
 replaceitem entity @s weapon.mainhand minecraft:air
-give @s minecraft:carrot_on_a_stick{worldTool:1b,Unbreakable:1b,Enchantments:[{}],Type:3b,display:{Name:'{"text":"Select cloning destination","italic":false}'}}
+loot give @s loot worldtool:clone_destination_tool
 function worldtool:ui/anti_feedback_chat_message/load

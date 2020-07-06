@@ -23,7 +23,7 @@ tag @s[predicate=worldtool:tool_states/5] add random_2
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:4b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b}
-execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2] run give @s carrot_on_a_stick{worldTool:1b,Type:1b,Unbreakable:1b,Enchantments:[{}],display:{Name:'{"text":"Set position 1","italic":false}'}}
+execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2] run loot give @s loot worldtool:general_tool
 tag @s remove setclonepos
 tag @s remove random_1
 tag @s remove random_2

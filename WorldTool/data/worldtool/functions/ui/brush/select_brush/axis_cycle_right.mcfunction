@@ -1,4 +1,6 @@
-loot spawn ~ ~ ~ loot worldtool:brushes/circle
+execute if predicate worldtool:brushes/circle run loot spawn ~ ~ ~ loot worldtool:brushes/circle
+execute if predicate worldtool:brushes/flat_paint run loot spawn ~ ~ ~ loot worldtool:brushes/flat_paint
+execute if predicate worldtool:brushes/flat_place run loot spawn ~ ~ ~ loot worldtool:brushes/flat_place
 
 execute if predicate worldtool:brush/axis/z run data modify entity @e[type=minecraft:item,sort=nearest,limit=1] Item.tag.BrushSettings.Axis set value "Auto"
 execute if predicate worldtool:brush/axis/z run tag @s add anti_toggle_loop

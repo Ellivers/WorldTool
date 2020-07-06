@@ -1,3 +1,4 @@
+execute as @e[type=minecraft:area_effect_cloud,tag=setblock_source] if score @s wt_ID = @p wt_ID run kill @s
 #Sets the block at 0 1 13 to the block you're using with your brush
 execute unless entity @s[predicate=!worldtool:brush/air,predicate=!worldtool:brush/water] run tag @s add brush_paint_air
 #execute unless entity @s[tag=brush_replace] run setblock 2 1 13 air
@@ -10,4 +11,5 @@ summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTi
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=setblock_source,sort=nearest,limit=1] wt_ID = @s wt_ID
 tag @s remove brush_paint_air
 #Schedules in 2 ticks so the falling block has time to land
-schedule function worldtool:brush/brushes/paint/load_select_area 2t
+execute if entity @s[predicate=!worldtool:brushes/flat_paint,predicate=!worldtool:brushes/flat_place] run schedule function worldtool:brush/brushes/paint/load_select_area 2t
+execute unless entity @s[predicate=!worldtool:brushes/flat_paint,predicate=!worldtool:brushes/flat_place] run schedule function worldtool:brush/brushes/flat/load_tick 2t

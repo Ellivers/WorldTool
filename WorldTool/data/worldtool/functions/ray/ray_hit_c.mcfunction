@@ -4,7 +4,7 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=wt_waiting_
 execute at @s as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run function worldtool:ray/pos
 
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b} 1
-give @s minecraft:carrot_on_a_stick{worldTool:1b,Type:1b,Unbreakable:1b,Enchantments:[{}],display:{Name:'{"text":"Set position 1","italic":false}'}}
+loot give @s loot worldtool:general_tool
 tag @s remove setclonepos
 
 tellraw @s [{"text":"Set clone destination to "},{"score":{"name":"#posXt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posYt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posZt","objective":"worldtool"}}]

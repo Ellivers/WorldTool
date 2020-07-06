@@ -32,6 +32,6 @@ execute if score @s wt_brush_size matches 25 run function worldtool:brush/brushe
 execute if score @s wt_brush_size matches 26.. run tellraw @s {"text": "The brush size is too big for this brush","color":"red"}
 
 tag @s remove axis.auto
-tag @s remove axis.x
-tag @s remove axis.y
-tag @s remove axis.z
+execute if entity @s[tag=!cmdpos1] run tag @s remove axis.x
+execute if entity @s[tag=!cmdpos1] run tag @s remove axis.y
+execute if entity @s[tag=!cmdpos1] run tag @s remove axis.z

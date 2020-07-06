@@ -4,5 +4,5 @@ tellraw @s [{"text":"Set corner 1 of the source for random blocks     ","color":
 tag @s remove setpos2
 tag @s remove placing_fill
 replaceitem entity @s weapon.mainhand minecraft:air
-give @s minecraft:carrot_on_a_stick{worldTool:1b,Unbreakable:1b,Enchantments:[{}],Type:4b,display:{Name:'{"text":"Select random position 1","italic":false}'}}
+loot give @s loot worldtool:randompos_tools/1
 function worldtool:ui/anti_feedback_chat_message/load

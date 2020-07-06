@@ -6,7 +6,7 @@ execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt
 
 tag @s[predicate=worldtool:tool_states/3] add setclonepos
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
-give @s[tag=setclonepos] carrot_on_a_stick{worldTool:1b,Type:1b,Unbreakable:1b,Enchantments:[{}],display:{Name:'{"text":"Set position 1","italic":false}'}}
+loot give @s[tag=setclonepos] loot worldtool:general_tool
 tag @s remove setclonepos
 
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X\n\n\n","color":"gold","bold":true}
