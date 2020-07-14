@@ -4,6 +4,8 @@ execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID =
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 # Kill le temp marker
 execute as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos1] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos2] if score @s wt_ID = @p wt_ID run kill @s
 # Clear up the chat
 function worldtool:ui/clear_chat
 tellraw @s "Cancelled"

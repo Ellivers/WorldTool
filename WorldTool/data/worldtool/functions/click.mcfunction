@@ -30,6 +30,6 @@ scoreboard players reset @s wt_click
 
 scoreboard players operation #tempMaxRayDistance worldtool = $raycastingMaxDistance worldtool
 scoreboard players operation #tempMaxRayDistance worldtool *= #2 worldtool
-scoreboard players reset $raycast worldtool
+scoreboard players reset @s wt_raycast
 execute if entity @s[tag=holding_wttool] unless entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast
 execute if entity @s[tag=holding_wttool] if entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast.b4b

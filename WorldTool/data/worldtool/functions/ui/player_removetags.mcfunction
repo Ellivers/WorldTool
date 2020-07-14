@@ -29,3 +29,9 @@ tag @s remove check_block_replacebrush
 tag @s remove brush_tick
 tag @s remove wt_waiting
 tag @s remove wt_TempHahaThisIsNeeded
+tag @s remove wt_dont_move_pos1
+tag @s remove wt_dont_move_pos2
+tag @s remove destroy_select
+tag @s remove d_replacing_fill1
+tag @s remove d_replacing_fill2
+tag @s remove wt_clone_preview

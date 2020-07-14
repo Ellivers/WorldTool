@@ -9,6 +9,9 @@ clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
 loot give @s[tag=setclonepos] loot worldtool:general_tool
 tag @s remove setclonepos
 
+tag @s[tag=!atsetpos,tag=wt_outline_selection] add wt_clone_preview
+execute if entity @s[tag=atsetpos] run function worldtool:ui/clone/remove_preview
+
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X\n\n\n","color":"gold","bold":true}
 execute if entity @s[tag=mirrorY] run tellraw @s {"text":"Current rotation: Mirror Y\n\n\n","color":"gold","bold":true}
 execute if entity @s[tag=mirrorZ] run tellraw @s {"text":"Current rotation: Mirror Z\n\n\n","color":"gold","bold":true}
@@ -18,4 +21,7 @@ execute unless score @s rotX matches 0 run tellraw @s [{"text":"Current rotation
 
 execute if entity @s[tag=!atsetpos] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/clone/select_clone.pos1_1
 execute if entity @s[tag=atsetpos] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/clone/select_clone.pos1_2
+
+execute if entity @s[tag=!atsetpos,tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"white","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
+
 function worldtool:ui/anti_feedback_chat_message/load

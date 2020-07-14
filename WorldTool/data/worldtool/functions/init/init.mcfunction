@@ -14,6 +14,7 @@ scoreboard objectives add pos2z dummy
 scoreboard objectives add pos1x dummy
 scoreboard objectives add pos1y dummy
 scoreboard objectives add pos1z dummy
+scoreboard objectives add wt_raycast dummy
 
 #Set the blocks-per-tick settings to their default values, if they're not in a supported range
 execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
@@ -31,6 +32,8 @@ execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard p
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
+
+execute unless score $clonePreviewDelay worldtool matches 0.. run scoreboard players set $clonePreviewDelay worldtool 2
 
 gamerule commandBlockOutput false
 

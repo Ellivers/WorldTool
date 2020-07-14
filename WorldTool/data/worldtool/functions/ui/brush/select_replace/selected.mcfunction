@@ -1,4 +1,4 @@
-loot spawn ~ ~ ~ loot worldtool:brushes/replace
+function worldtool:ui/brush/give_brush
 
 execute if entity @s[tag=replacebrush] run data modify entity @e[type=minecraft:item,sort=nearest,limit=1] Item.tag.BrushSettings.Replace set value "normal"
 execute if entity @s[tag=replacebrush_reversed] run data modify entity @e[type=minecraft:item,sort=nearest,limit=1] Item.tag.BrushSettings.Replace set value "exclude"

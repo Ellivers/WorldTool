@@ -1,0 +1,2 @@
+execute if score @s wt_click matches 1.. anchored eyes positioned ^ ^ ^ run function worldtool:click
+execute unless entity @s[tag=!check_block_brush,tag=!check_block_replacebrush] run function worldtool:block_check/player

@@ -15,9 +15,10 @@ execute if entity @s[tag=wt_outline_selection] run function worldtool:ui/outline
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/select.pos1
 execute as @e[type=minecraft:area_effect_cloud,tag=randompoint,tag=dostuff] if score @s wt_ID = @p wt_ID run tag @s remove dostuff
 function worldtool:ui/player_removetags
+function worldtool:ui/clone/remove_preview
 
 function worldtool:ui/summon_check_block/primary
 
-execute if entity @e[tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"white","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
+execute if entity @s[tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"white","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/options/particles_toggle"}}]
 
 function worldtool:ui/anti_feedback_chat_message/load
