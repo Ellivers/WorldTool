@@ -1,3 +1,6 @@
+# Called by worldtool:ui/check
+# The main menu
+
 tag @s add in_menu
 tag @s add placing_fill
 

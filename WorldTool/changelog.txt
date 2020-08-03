@@ -1,5 +1,17 @@
+- Added two new brushes - flat place and flat paint
+- Destroy now is its own menu
 - Reworked the internal block selection system
-- Added circle command functionality
+- Added a clone preview box to show how the selection is cloned
 - Added [Back] buttons in most menus, to make them easier to navigate
+- You can now choose which positions to move in the nudge menu
+- Added circle command functionality
 - The (Air) button is now only for air, instead of being for both air and water
+- You now get a warning for having a very big area selected
+- You now have to wait to run something while another process is running
+- Added a setting for forceloading positions set with commands
+- Changed the uninstall function to worldtool:uninstall
+- Changed spheres with sizes 5, 7 and 11
+- You can now change the maximum raycasting distance
+- Changed the ID system a bit
+- Fixed some issues with the brush tool now working
 - Performance improvements

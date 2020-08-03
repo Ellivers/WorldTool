@@ -1,4 +1,5 @@
-tag @s remove wt_destroy
+# Called by wordltool:ui/checkered/select
+# Displays the menu for checkered
 
 execute if entity @s[tag=keep] run tellraw @p {"text":"Keep is on","color":"green","italic":true}
 

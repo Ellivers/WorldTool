@@ -1,4 +1,4 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_check_block
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_wt_check
 
 tag @s remove placing_fill
 tag @s add backbuttonplzthx
@@ -8,4 +8,5 @@ tellraw @s [{"text":"[Checkered...]  ","color":"gold","hoverEvent":{"action":"sh
 execute if entity @s[tag=!fun_menu] run tellraw @s {"text":"[Fun ▶...]","color":"blue","hoverEvent":{"action":"show_text","value":"Random functions that were implemented for fun"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/fun/toggle"}}
 execute if entity @s[tag=fun_menu] run tellraw @s [{"text":"[Fun ▼...]","color":"blue","hoverEvent":{"action":"show_text","value":"Random functions that were implemented for fun"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/fun/toggle"}},{"text":"\n[Command block chain]","hoverEvent":{"action":"show_text","value":"Fill the selected area with a chain of chain command blocks"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/fun/cmd_block_fill"}}]
 tellraw @s [{"text":"[Cancel]","color":"white","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
+function worldtool:ui/player_removetags
 function worldtool:ui/anti_feedback_chat_message/load

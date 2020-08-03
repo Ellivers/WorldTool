@@ -1,4 +1,5 @@
-#Universal function for placing a block! This means that everything (except the brush) supports keep!
+# Called by most processes
+# Universal function for placing a block! This means that everything (except the brush) supports keep!
 
 execute if entity @s[tag=keep] if block ~ ~ ~ #worldtool:air_blocks run scoreboard players add $blocksplaced worldtool 1
 execute if entity @s[tag=!keep] run scoreboard players add $blocksplaced worldtool 1

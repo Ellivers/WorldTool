@@ -10,6 +10,7 @@ loot give @s[tag=setclonepos] loot worldtool:general_tool
 tag @s remove setclonepos
 
 tag @s[tag=!atsetpos,tag=wt_outline_selection] add wt_clone_preview
+execute if entity @s[tag=!atsetpos,tag=wt_outline_selection] run function worldtool:particles/clone_preview/delay
 execute if entity @s[tag=atsetpos] run function worldtool:ui/clone/remove_preview
 
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X\n\n\n","color":"gold","bold":true}

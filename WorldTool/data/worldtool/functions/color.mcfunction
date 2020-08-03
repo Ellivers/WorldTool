@@ -1,6 +1,5 @@
 scoreboard players add #blockschecked worldtool 1
 
-#Different options for fill, and stuff that isn't labeled as fill but still uses the same file :D
 execute if block ~ ~ ~ #worldtool:colorable run function worldtool:brush/brushes/color/main
 
 #If #blockschecked's worldtool score isn't more than a certain number (default: 4000) move the x, y and z coordinates

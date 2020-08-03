@@ -1,5 +1,6 @@
-#This function is for removing the "Executed 12 commands from blahblahblah" message
-#It even remembers if you had the sendCommandFeedback message on before
+# Called by most ui functions
+# This function is for removing the "Executed 12 commands from blahblahblah" message
+# It remembers if you had the sendCommandFeedback message on before
 
 execute unless entity @s[tag=nospaceplzthx] run tellraw @s "\n"
 tag @s remove nospaceplzthx

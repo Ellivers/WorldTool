@@ -1,6 +1,5 @@
 scoreboard players add #blockschecked worldtool 1
 
-#Different options for fill, and stuff that isn't labeled as fill but still uses the same file :D
 execute if entity @s[tag=!replacefill,tag=!replacefill_reversed] run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy
 execute if entity @s[tag=replacefill] if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy
 execute if entity @s[tag=replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy

@@ -1,2 +1,2 @@
-execute unless score @s worldtool matches 0 run forceload remove ~ ~
+execute if score @s worldtool matches 1.. run forceload remove ~ ~
 kill @s

@@ -32,3 +32,4 @@ tag @s remove brush_cmd
 tag @s remove inner_block
 tag @s remove filling_outline
 scoreboard players reset @s wt_chance
+tag @s remove wt_no_drops

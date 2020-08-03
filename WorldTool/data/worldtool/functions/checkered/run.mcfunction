@@ -1,6 +1,5 @@
 scoreboard players add #blockschecked worldtool 1
 
-#Different options for fill, and stuff that isn't labeled as fill but still uses the same file :D
 execute if score $checkered worldtool matches 0 if entity @s[tag=!replacefill,tag=!replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:block_place/place_block
 execute if score $checkered worldtool matches 0 if entity @s[tag=replacefill] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:block_place/place_block
 execute if score $checkered worldtool matches 0 if entity @s[tag=replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:block_place/place_block

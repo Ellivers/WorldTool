@@ -15,6 +15,16 @@ scoreboard objectives add pos1x dummy
 scoreboard objectives add pos1y dummy
 scoreboard objectives add pos1z dummy
 scoreboard objectives add wt_raycast dummy
+scoreboard objectives add wt_differenceX dummy
+scoreboard objectives add wt_differenceY dummy
+scoreboard objectives add wt_differenceZ dummy
+scoreboard objectives add wt_temp_diffX dummy
+scoreboard objectives add wt_temp_diffY dummy
+scoreboard objectives add wt_temp_diffZ dummy
+scoreboard objectives add wt_temp_prevposX dummy
+scoreboard objectives add wt_temp_prevposY dummy
+scoreboard objectives add wt_temp_prevposZ dummy
+scoreboard objectives add wt_drop_coas dropped:minecraft.carrot_on_a_stick
 
 #Set the blocks-per-tick settings to their default values, if they're not in a supported range
 execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
@@ -29,6 +39,7 @@ execute unless score $hollowBlocksPerTick worldtool matches 2..3300 run scoreboa
 
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
+execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboard players set $forceLoadCmdPositions worldtool 0
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
@@ -39,11 +50,8 @@ gamerule commandBlockOutput false
 
 #Forceload for access to storing blocks at 0 0
 execute in minecraft:overworld run forceload add 0 0
-execute in minecraft:the_end run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
-
-scoreboard players set $20w12a+ worldtool 0
-schedule function worldtool:init/check_1.16 1s
+execute in minecraft:the_end run forceload add 0 0
 
 schedule function worldtool:init/set_base 2t
 function worldtool:particles/main

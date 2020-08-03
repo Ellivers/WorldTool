@@ -1,5 +1,10 @@
-execute unless score @s wt_ID matches -2147483648.. unless score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUIDMost 0.0000000001
-execute unless score @s wt_ID matches -2147483648.. if score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUID[0]
+# Called by worldtool:player_tick
+
+#execute unless score @s wt_ID matches -2147483648.. unless score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUIDMost 0.0000000001
+#execute unless score @s wt_ID matches -2147483648.. if score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUID[0]
+# If the player doesn't have an ID, give one
+execute unless score @s wt_ID matches -2147483648.. run function worldtool:assign_id
+
 tag @s remove holding_wttool
 tag @s remove setpos2
 tag @s remove setpos1
