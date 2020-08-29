@@ -1,3 +1,4 @@
+# Called by worldtool:block_check/main
 execute at @a[tag=placing_fill] if score @s wt_ID = @p wt_ID as @p run function worldtool:load_function/start_check1
 execute at @a[tag=replacing_fill2] if score @s wt_ID = @p wt_ID as @p run function worldtool:load_function/start_check1
 execute at @a[tag=hollowing] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/hollow/start_hollow

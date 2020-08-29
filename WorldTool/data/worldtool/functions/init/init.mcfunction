@@ -1,5 +1,7 @@
-#BUILD THE HELICOPTER
-#AND OFF TO THE RESCUE
+# Called by #minecraft:load
+
+# BUILD THE HELICOPTER
+# AND OFF TO THE RESCUE
 scoreboard objectives add worldtool dummy
 scoreboard objectives add wt_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add wt_ID dummy
@@ -26,7 +28,7 @@ scoreboard objectives add wt_temp_prevposY dummy
 scoreboard objectives add wt_temp_prevposZ dummy
 scoreboard objectives add wt_drop_coas dropped:minecraft.carrot_on_a_stick
 
-#Set the blocks-per-tick settings to their default values, if they're not in a supported range
+# Set the blocks-per-tick settings to their default values, if they're not in a supported range
 execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
 execute unless score $clonedBlocksPerTick worldtool matches 2..2100 run scoreboard players set $clonedBlocksPerTick worldtool 2100
 #execute unless score $coloredBlocksPerTick worldtool matches 2..2500 run scoreboard players set $coloredBlocksPerTick worldtool 2500
@@ -48,7 +50,14 @@ execute unless score $clonePreviewDelay worldtool matches 0.. run scoreboard pla
 
 gamerule commandBlockOutput false
 
-#Forceload for access to storing blocks at 0 0
+scoreboard players set $addons worldtool 0
+scoreboard players set $brushAddons worldtool 0
+scoreboard players set $processAddons worldtool 0
+scoreboard players set $settingAddons worldtool 0
+scoreboard players set $optionAddons worldtool 0
+function #worldtool:addon_init
+
+# Forceload for access to storing blocks at 0 0
 execute in minecraft:overworld run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
 execute in minecraft:the_end run forceload add 0 0

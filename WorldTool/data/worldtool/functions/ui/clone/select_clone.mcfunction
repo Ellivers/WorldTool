@@ -3,6 +3,7 @@ tag @s remove rotating_clone
 tag @s add backbuttonplzthx
 function worldtool:ui/clear_chat
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
 
 tag @s[predicate=worldtool:tool_states/3] add setclonepos
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}

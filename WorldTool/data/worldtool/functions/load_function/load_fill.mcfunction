@@ -1,4 +1,4 @@
-# Clear the chat (as the player which this entity belongs to)
+# Clear the chat (as the player that this entity belongs to)
 execute at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/clear_chat
 
 # Get the positions of this entity (AKA pos1)

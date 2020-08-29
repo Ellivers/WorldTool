@@ -1,3 +1,6 @@
+# Called by worldtool:brush/brushes/circle/gen
+# Detects which axis the circle should be on (from inside a block)
+
 execute if block ~ ~.5 ~ #worldtool:air_blocks run scoreboard players set #Y worldtool 1
 execute if block ~ ~-.5 ~ #worldtool:air_blocks run scoreboard players set #Y worldtool 1
 

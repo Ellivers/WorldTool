@@ -1,3 +1,4 @@
+# Called by worldtool:ray/raycast_done
 tag @s add random_2
 execute at @s as @e[type=minecraft:area_effect_cloud,tag=randomcorner2] if score @s wt_ID = @p wt_ID run kill @s
 summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["randomcorner2"]}

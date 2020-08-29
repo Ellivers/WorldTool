@@ -36,11 +36,23 @@ execute unless entity @s[tag=!mirrorX, tag=!y_90,tag=!y_180, tag=!z_-90,tag=!z_1
 execute unless entity @s[tag=!mirrorY, tag=!x_90,tag=!x_180, tag=!z_90,tag=!z_180] run function worldtool:particles/clone_preview/position/rotate/negate_y
 execute unless entity @s[tag=!mirrorZ, tag=!x_-90,tag=!x_180, tag=!y_-90,tag=!y_180] run function worldtool:particles/clone_preview/position/rotate/negate_z
 
-#tellraw @a [{"text": "X: "},{"score": {"name": "@s","objective": "wt_differenceX"}},{"text": " Y: "},{"score": {"name": "@s","objective": "wt_differenceY"}},{"text": " Z: "},{"score": {"name": "@s","objective": "wt_differenceZ"}}]
+tag @s remove check_clone_overlap
 
-execute store result entity @s Pos[0] double 1 run scoreboard players get @s rotX
-execute store result entity @s Pos[1] double 1 run scoreboard players get @s rotY
-execute store result entity @s Pos[2] double 1 run scoreboard players get @s rotZ
+function worldtool:clone/check_overlap/check
+
+execute store result score @s rotX run data get entity @s Pos[0]
+execute store result score @s rotY run data get entity @s Pos[1]
+execute store result score @s rotZ run data get entity @s Pos[2]
+
+function worldtool:clone/check_overlap/check
+
+execute if entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/clone/overlap_warning
+execute unless entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/clone/start.check4
+
+
+tag @s remove wt_overlappingX
+tag @s remove wt_overlappingY
+tag @s remove wt_overlappingZ
 
 #tag @s remove mirrorX
 #tag @s remove mirrorY

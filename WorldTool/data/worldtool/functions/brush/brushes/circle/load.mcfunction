@@ -1,4 +1,6 @@
-#Sets the block at 0 1 13 to the block you're using with your brush
+# Called by worldtool:brush/use
+# Sets the block at 0 1 13 to the block you're using with your brush
+
 execute unless entity @s[predicate=!worldtool:brush/air,predicate=!worldtool:brush/water] run tag @s add brush_paint_air
 setblock 0 1 13 air
 execute if predicate worldtool:brush/water run setblock 0 1 13 water

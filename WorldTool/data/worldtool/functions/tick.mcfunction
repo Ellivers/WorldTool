@@ -1,3 +1,4 @@
+# Called by #minecraft:tick
 # If a process is done
 execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY worldtool = $pos2y worldtool if score $drawingposZ worldtool = $pos2z worldtool as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,tag=!ticking] run function worldtool:aligned_done
 
