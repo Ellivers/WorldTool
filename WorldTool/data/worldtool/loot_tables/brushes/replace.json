@@ -1,5 +1,5 @@
 {
-    "type": "minecraft:item",
+    "type": "minecraft:command",
     "pools": [
       {
         "rolls": 1,
@@ -10,7 +10,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Replace\",BrushSettings:{Replace:\"normal\"},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Replace\",BrushSettings:{Replace:\"normal\",Flat:0b,Axis:\"Auto\"},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
                 },
                 {
                     "function": "minecraft:copy_nbt",

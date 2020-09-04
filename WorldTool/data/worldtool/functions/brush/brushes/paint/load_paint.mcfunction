@@ -28,14 +28,14 @@ kill @e[type=minecraft:area_effect_cloud,tag=brushpos2]
 kill @e[type=minecraft:area_effect_cloud,tag=setblock_source]
 
 #Summon different "wt_drawer" AECs depending on which brush the player is using
-execute as @a[tag=wt_brushload] unless entity @s[predicate=!worldtool:brushes/paint,predicate=!worldtool:brushes/flat_paint] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","replacefill_reversed"]}
-execute as @a[tag=wt_brushload,predicate=worldtool:brush/overwrite_blocks] unless entity @s[predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/flat_place] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer"]}
-execute as @a[tag=wt_brushload,predicate=!worldtool:brush/overwrite_blocks] unless entity @s[predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/flat_place] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","keep"]}
+execute as @a[tag=wt_brushload] if predicate worldtool:brushes/paint run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","replacefill_reversed"]}
+execute as @a[tag=wt_brushload,predicate=worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer"]}
+execute as @a[tag=wt_brushload,predicate=!worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","keep"]}
 
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/sphere] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer"]}
 
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,nbt={SelectedItem:{tag:{BrushSettings:{Replace:"normal"}}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer"]}
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,nbt={SelectedItem:{tag:{BrushSettings:{Replace:"exclude"}}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","replacing","wt_drawer"]}
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_normal] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer"]}
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_exclude] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","replacing","wt_drawer"]}
 
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/color] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","coloring","wt_drawer"]}
 

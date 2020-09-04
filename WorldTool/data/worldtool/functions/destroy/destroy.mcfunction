@@ -3,7 +3,7 @@ scoreboard players add #blockschecked worldtool 1
 execute if entity @s[tag=!replacefill,tag=!replacefill_reversed] run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy
 execute if entity @s[tag=replacefill] if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy
 execute if entity @s[tag=replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run setblock ~ ~ ~ minecraft:spruce_sign{Text1:'{"text": "destroy-ReplaceHere"}'} destroy
-execute if entity @s[tag=wt_no_drops] run kill @e[type=minecraft:item,distance=..2]
+execute if entity @s[tag=wt_no_drops] run kill @e[type=minecraft:item,distance=..2,nbt=!{OnGround:1b}]
 
 #execute if entity @s[tag=!replacefill,tag=!replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:block_place/place_block
 #execute unless entity @s[tag=!replacefill,tag=!replacefill_reversed] if block ~ ~ ~ minecraft:structure_void run function worldtool:block_place/place_block

@@ -1,5 +1,5 @@
 function worldtool:ui/clear_chat
-function worldtool:ui/brush/give_brush
+function worldtool:ui/brush/give_brush.brushes
 execute if predicate worldtool:tool_states/all unless data entity @s SelectedItem.tag.Brush run loot spawn ~ ~ ~ loot worldtool:brushes/none
 
 setblock ~2 255 ~ oak_sign{Text1:'{"nbt":"BlockState.Name","entity":"@e[type=minecraft:falling_block,tag=switch_block_brush,limit=1]","color":"light_purple","italic":false}'}

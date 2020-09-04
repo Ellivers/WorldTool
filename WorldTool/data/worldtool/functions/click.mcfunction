@@ -29,8 +29,8 @@ execute if predicate worldtool:tool_states/4 run tag @s add random_1
 execute if predicate worldtool:tool_states/5 run tag @s add random_2
 execute if predicate worldtool:tool_states/6 run tag @s add wt_brush
 
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run tellraw @s [{"text":"[Set position 1 at player]  ","color":"yellow","hoverEvent":{"action":"show_text","value":"Set position 1 at youself"},"clickEvent":{"action":"run_command","value":"/function worldtool:ray/ray_hit1"}},{"text":"[Set position 2 at player]","hoverEvent":{"action":"show_text","value":"Set position 2 at youself"},"clickEvent":{"action":"run_command","value":"/function worldtool:ray/ray_hit2"}}]
-execute unless entity @s[tag=!setpos1,tag=!setpos2] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID run tellraw @p [{"text":"[Use...]  ","color":"green","hoverEvent":{"action":"show_text","value":"Use the tool's various functions"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/check"}},{"text": "[Options...]","color":"blue","hoverEvent": {"action": "show_text","value": "Options for the selected area and WorldTool settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/select"}}]
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool_ui/set_positions
+execute unless entity @s[tag=!setpos1,tag=!setpos2] as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=pos2] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/general_tool_ui/menus
 scoreboard players reset @s wt_click
 
 scoreboard players operation #tempMaxRayDistance worldtool = $raycastingMaxDistance worldtool

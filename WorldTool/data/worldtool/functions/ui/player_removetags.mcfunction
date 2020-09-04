@@ -35,3 +35,5 @@ tag @s remove destroy_select
 tag @s remove d_replacing_fill1
 tag @s remove d_replacing_fill2
 tag @s remove wt_clone_preview
+tag @s remove check_brush_structure
+tag @s remove check_brush_structure_offset

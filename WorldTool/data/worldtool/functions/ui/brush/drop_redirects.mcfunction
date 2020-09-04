@@ -1,0 +1,2 @@
+execute if entity @s[tag=!wt_brush_drop_redirect.structure_offset] run function worldtool:ui/brush/select
+execute if entity @s[tag=wt_brush_drop_redirect.structure_offset] run function worldtool:ui/brush/select_brush/settings/structure_offset_menu

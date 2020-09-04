@@ -2,7 +2,7 @@ tag @s remove grabbing_block
 function worldtool:ui/clear_chat
 tellraw @s [{"text":"Picked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
 
-function worldtool:ui/brush/give_brush
+function worldtool:ui/brush/give_brush.brushes
 execute unless data entity @s SelectedItem.tag.Brush run loot spawn ~ ~ ~ loot worldtool:brushes/none
 
 setblock ~2 255 ~ oak_sign{Text1:'{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]","color":"light_purple","italic":false}'}

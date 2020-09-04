@@ -5,7 +5,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{Brush:\"Flat - Paint\"}"
+                "nbt": "{BrushSettings:{Replace:\"normal\"}}"
             }
         }
     }

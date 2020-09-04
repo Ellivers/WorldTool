@@ -1,4 +1,5 @@
 # Called by worldtool:block_check/main
+# Checks the secondary block (at x-1)
 execute at @a[tag=measure_filter] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/measure/start
 execute at @a[tag=replacing_fill1] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/replace/select_replace2
 execute at @a[tag=placing_hollow_inner] if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/hollow/inner_block/selected

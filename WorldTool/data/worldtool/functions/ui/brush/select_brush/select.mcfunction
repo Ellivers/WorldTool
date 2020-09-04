@@ -19,14 +19,11 @@ execute if predicate worldtool:brushes/sphere run tellraw @p [{"text":"[Sphere]"
 execute unless predicate worldtool:brushes/circle run tellraw @p [{"text":"[Circle]","color":"green","hoverEvent":{"action":"show_text","value":"Place a circle"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select_brush/circle"}}]
 execute if predicate worldtool:brushes/circle run tellraw @p [{"text":"[Circle]","color":"gray"}]
 
-execute unless predicate worldtool:brushes/flat_paint run tellraw @p [{"text":"[Flat - Paint]","color":"green","hoverEvent":{"action":"show_text","value":"Paint existing blocks in a flat square shape"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select_brush/flat_paint"}}]
-execute if predicate worldtool:brushes/flat_paint run tellraw @p [{"text":"[Flat - Paint]","color":"gray"}]
-
-execute unless predicate worldtool:brushes/flat_place run tellraw @p [{"text":"[Flat - Place]","color":"green","hoverEvent":{"action":"show_text","value":"Place blocks in a flat square shape"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select_brush/flat_place"}}]
-execute if predicate worldtool:brushes/flat_place run tellraw @p [{"text":"[Flat - Place]","color":"gray"}]
+execute unless predicate worldtool:brushes/structure run tellraw @p [{"text":"[Structure]","color":"green","hoverEvent":{"action":"show_text","value":"Load a structure"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select_brush/structure"}}]
+execute if predicate worldtool:brushes/structure run tellraw @p [{"text":"[Structure]","color":"gray"}]
 
 execute if score $brushAddons worldtool matches 1.. run tellraw @p {"text": "\nAddon brushes:\n","color":"light_purple"}
 function #worldtool:brush_list
 
-tellraw @s {"text":"\n\n[⬅Back]","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main selection screen"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select"}}
+tellraw @s {"text":"\n\n[⬅Back]","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main brush menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select"}}
 function worldtool:ui/anti_feedback_chat_message/load

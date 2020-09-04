@@ -3,7 +3,7 @@ tag @s remove grabbing_block_replace
 function worldtool:ui/clear_chat
 tellraw @s [{"text":"Picked block "},{"nbt":"inBlockState.Name","entity":"@e[type=minecraft:arrow,tag=switch_block_brush,limit=1]"}]
 
-function worldtool:ui/brush/give_brush
+function worldtool:ui/brush/give_brush.brushes
 
 execute if entity @s[tag=replacebrush] run data modify entity @e[type=minecraft:item,sort=nearest,limit=1] Item.tag.BrushSettings.Replace set value "normal"
 execute if entity @s[tag=replacebrush_reversed] run data modify entity @e[type=minecraft:item,sort=nearest,limit=1] Item.tag.BrushSettings.Replace set value "exclude"

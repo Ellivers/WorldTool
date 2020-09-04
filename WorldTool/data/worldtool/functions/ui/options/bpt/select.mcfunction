@@ -1,5 +1,5 @@
 function worldtool:ui/clear_chat
-tellraw @s ["",{"text": "[⬅Back]","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "\nSettings/Blocks per tick","bold": true,"color":"green"}]
+tellraw @s ["",{"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "Settings/Blocks per tick","bold": true,"color":"green"}]
 
 execute if score $blocksPerTick worldtool matches 4000 run tag @s add blocksPerTick_default
 execute if score $clonedBlocksPerTick worldtool matches 2100 run tag @s add clonedBlocksPerTick_default

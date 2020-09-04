@@ -1,8 +1,9 @@
-- Added two new brushes - flat place and flat paint
+- Added a new brush for placing structures
 - Destroy now is its own menu
 - Reworked the internal block selection system
 - Added a clone preview box to show how the selection is cloned
 - Added [Back] buttons in most menus, to make them easier to navigate
+- Your current block is now displayed when selecting a new brush block
 - You can now choose which positions to move in the nudge menu
 - Added circle command functionality
 - The (Air) button is now only for air, instead of being for both air and water

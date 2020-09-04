@@ -1,6 +1,6 @@
 function worldtool:ui/clear_chat
 
-function worldtool:ui/brush/give_brush
+function worldtool:ui/brush/give_brush.brushes
 execute if predicate worldtool:tool_states/all unless data entity @s SelectedItem.tag.Brush run loot spawn ~ ~ ~ loot worldtool:brushes/none
 
 execute as @e[type=minecraft:item,sort=nearest,limit=1] run function worldtool:ui/brush/set/set_block.air.item
