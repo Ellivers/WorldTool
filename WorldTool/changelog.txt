@@ -12,6 +12,7 @@
 - You now get a warning for having a very big area selected
 - You now have to wait to run something while another process is running
 - Added a setting for forceloading positions set with commands
+- Fixed some forceloaded chunks not being unmarked correctly
 - Changed the uninstall function to worldtool:uninstall
 - Changed the structure of spheres with sizes 5, 7 and 11
 - You can now change the maximum raycasting distance

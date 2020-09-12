@@ -4,7 +4,7 @@ WorldTool is a world-editing data pack with similar functionality to WorldEdit a
 
 Here you can download non-full releases (experimental versions) to try out.
 
-__Keep in mind that multiplayer support has not been tested yet.__
+__This pack is multiplayer compatible, but it may not be as stable as in singleplayer.__
 
 Usage:
 Type `/function worldtool:give` to give yourself both tools; the general tool and the brush.

@@ -3,6 +3,7 @@
 
 tag @s add in_menu
 tag @s add placing_fill
+tag @s remove fun_menu
 
 scoreboard players set @s rotX 0
 scoreboard players set @s rotY 0

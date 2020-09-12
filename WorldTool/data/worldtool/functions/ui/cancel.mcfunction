@@ -12,6 +12,7 @@ tellraw @s "Cancelled"
 # Remove the (temporary) tags
 tag @s remove in_menu
 tag @s remove placing_fill
+tag @s remove fun_menu
 execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/pos1_removetags
 function worldtool:ui/player_removetags
 
