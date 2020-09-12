@@ -6,6 +6,7 @@ execute at @s as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if s
 
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b} 1
 loot give @s loot worldtool:general_tool
+execute at @s run playsound minecraft:entity.item.pickup master @s
 tag @s remove setclonepos
 
 tellraw @s [{"text":"Set clone destination to "},{"score":{"name":"#posXt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posYt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posZt","objective":"worldtool"}}]

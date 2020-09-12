@@ -38,7 +38,7 @@ tellraw @s "\n"
 tellraw @s [{"text": "General blocks per tick - ","color":"aqua"},{"score": {"name": "$blocksPerTick","objective": "worldtool"},"color":"green"}]
 tellraw @s [{"text": "Cloned blocks per tick - ","color":"aqua"},{"score": {"name": "$clonedBlocksPerTick","objective": "worldtool"},"color":"green"}]
 tellraw @s [{"text": "Destroyed blocks per tick - ","color":"aqua"},{"score": {"name": "$destroyedBlocksPerTick","objective": "worldtool"},"color":"green"}]
-tellraw @s [{"text": "Destroyed blocks per tick - ","color":"aqua"},{"score": {"name": "$randomizedBlocksPerTick","objective": "worldtool"},"color":"green"}]
+tellraw @s [{"text": "Randomized blocks per tick - ","color":"aqua"},{"score": {"name": "$randomizedBlocksPerTick","objective": "worldtool"},"color":"green"}]
 tellraw @s [{"text": "Checkered blocks per tick - ","color":"aqua"},{"score": {"name": "$checkeredBlocksPerTick","objective": "worldtool"},"color":"green"}]
 tellraw @s [{"text": "Outlined blocks per tick - ","color":"aqua"},{"score": {"name": "$outlinedBlocksPerTick","objective": "worldtool"},"color":"green"}]
 tellraw @s [{"text": "Greenery blocks per tick - ","color":"aqua"},{"score": {"name": "$greeneryBlocksPerTick","objective": "worldtool"},"color":"green"}]

@@ -12,4 +12,4 @@ data modify block ~ ~ ~ mirror set from entity @s SelectedItem.tag.BrushSettings
 setblock ~ ~1 ~ minecraft:redstone_block
 
 # If the structure failed to load, throw an error
-execute if block ~ ~ ~ minecraft:structure_block{metadata:"WorldTool Structure Brush",name:"worldtool:none"} run tellraw @s {"text": "Error: invalid structure","color": "red"}
+execute if block ~ ~ ~ minecraft:structure_block{metadata:"WorldTool Structure Brush",sizeX:0,sizeY:0,sizeZ:0} run tellraw @s {"text": "Error: invalid structure","color": "red"}

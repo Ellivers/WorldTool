@@ -8,4 +8,5 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=randomcorne
 execute as @e[type=minecraft:area_effect_cloud,tag=randomcorner1,sort=nearest,limit=1] run function worldtool:ray/pos
 
 tellraw @s [{"text":"Set randomizer origin position 1 to "},{"score":{"name":"#posXt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posYt","objective":"worldtool"}},{"text":" "},{"score":{"name":"#posZt","objective":"worldtool"}}]
+execute at @s run playsound minecraft:entity.item.pickup master @s
 function worldtool:ui/random/setcorner1

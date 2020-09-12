@@ -10,7 +10,7 @@ tag @s remove grabbing_block_replace
 tag @s remove switch_block_brush
 tag @s remove replacebrush
 tag @s remove replacebrush_reversed
-#tag @s remove fun_menu
+tag @s remove fun_menu
 tag @s remove wt_inner
 tag @s remove placing_hollow_inner
 tag @s remove mirrorX
@@ -37,3 +37,6 @@ tag @s remove d_replacing_fill2
 tag @s remove wt_clone_preview
 tag @s remove check_brush_structure
 tag @s remove check_brush_structure_offset
+tag @s remove pick_primary_block
+tag @s remove pick_secondary_block
+tag @s remove measure_filter_reversed

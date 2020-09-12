@@ -2,17 +2,20 @@
 - Destroy now is its own menu
 - Reworked the internal block selection system
 - Added a clone preview box to show how the selection is cloned
-- Added [Back] buttons in most menus, to make them easier to navigate
+- Added [Back] buttons in most menus, making them easier to navigate
 - Your current block is now displayed when selecting a new brush block
+- Added [Pick block] buttons for the main tool menu
 - You can now choose which positions to move in the nudge menu
 - Added circle command functionality
 - The (Air) button is now only for air, instead of being for both air and water
+- UI fixes and tweaks
 - You now get a warning for having a very big area selected
 - You now have to wait to run something while another process is running
 - Added a setting for forceloading positions set with commands
 - Changed the uninstall function to worldtool:uninstall
-- Changed spheres with sizes 5, 7 and 11
+- Changed the structure of spheres with sizes 5, 7 and 11
 - You can now change the maximum raycasting distance
 - Changed the ID system a bit
 - Fixed some issues with the brush tool now working
+- Fixed randomized blocks being displayed as destroyed blocks in the [Blocks per tick] menu
 - Performance improvements
