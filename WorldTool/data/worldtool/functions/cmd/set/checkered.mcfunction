@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=cmdpos1] run function worldtool:cmd/selected/checkered
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1] run function worldtool:cmd/selected/checkered

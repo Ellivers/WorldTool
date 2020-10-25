@@ -1,3 +1,5 @@
+#define tag worldtool
+
 # Called by clickEvent from worldtool:ui/options/settings
 # Removes everything added by WorldTool
 
@@ -40,21 +42,23 @@ execute as @a run function worldtool:ui/player_removetags
 tag @a remove fun_menu
 
 # Remove entities summoned by WorldTool
-execute as @e[type=minecraft:area_effect_cloud] unless entity @s[tag=!pos1,tag=!pos2,tag=!cmdpos1,tag=!cmdpos2] at @s run function worldtool:ray/del_pos
-#kill @e[type=minecraft:area_effect_cloud,tag=pos1]
-#kill @e[type=minecraft:area_effect_cloud,tag=pos2]
-kill @e[type=minecraft:area_effect_cloud,tag=clonepos]
-kill @e[type=minecraft:area_effect_cloud,tag=wt_drawer]
-kill @e[type=minecraft:area_effect_cloud,tag=wt_check]
-kill @e[type=minecraft:area_effect_cloud,tag=randomcorner1]
-kill @e[type=minecraft:area_effect_cloud,tag=randomcorner2]
-#kill @e[type=minecraft:area_effect_cloud,tag=cmdpos1]
-#kill @e[type=minecraft:area_effect_cloud,tag=cmdpos2]
-kill @e[type=minecraft:area_effect_cloud,tag=cmdclonedest]
-kill @e[type=minecraft:area_effect_cloud,tag=cmdrnd1]
-kill @e[type=minecraft:area_effect_cloud,tag=cmdrnd2]
-kill @e[type=minecraft:area_effect_cloud,tag=randompoint]
-kill @e[type=minecraft:armor_stand,tag=show_rot]
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool] unless entity @s[tag=!pos1,tag=!pos2,tag=!cmdpos1,tag=!cmdpos2] at @s run function worldtool:ray/del_pos
+kill @e[type=minecraft:area_effect_cloud,tag=worldtool]
+kill @e[type=minecraft:armor_stand]
+ #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1]
+ #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=clonepos]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner1]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2]
+ #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1]
+ #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos2]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdclonedest]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd1]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd2]
+#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint]
+#kill @e[type=minecraft:armor_stand,tag=show_rot]
 
 function worldtool:ui/clear_chat
 

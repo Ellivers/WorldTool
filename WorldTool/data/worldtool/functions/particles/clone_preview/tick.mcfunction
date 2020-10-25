@@ -1,2 +1,2 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos1,tag=wt_particles] at @s run function worldtool:particles/clone_preview/pos1/load
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos2,tag=wt_particles] at @s run function worldtool:particles/clone_preview/pos2/load
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos1,tag=wt_particles] at @s run function worldtool:particles/clone_preview/pos1/load
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,tag=wt_particles] at @s run function worldtool:particles/clone_preview/pos2/load

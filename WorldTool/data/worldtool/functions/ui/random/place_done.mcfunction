@@ -1,6 +1,5 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove random1
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer] if score @s wt_ID = @p wt_ID run kill @s
+scoreboard players set $functionRunning worldtool 0
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove random1
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer] if score @s wt_ID = @p wt_ID run kill @s
 
-clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b} 1
-loot give @s loot worldtool:general_tool
-execute at @s positioned ~ ~ ~ run function worldtool:ui/random/select
+execute at @s run function worldtool:ui/random/select

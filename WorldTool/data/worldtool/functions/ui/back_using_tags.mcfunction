@@ -1,4 +1,4 @@
-#execute as @e[type=minecraft:area_effect_cloud,tag=waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
+#execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
 #tag @s remove wt_waiting
 tag @s remove grabbing_block
 tag @s remove pick_primary_block

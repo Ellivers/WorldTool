@@ -1,11 +1,11 @@
 # Move back the stored block to be replaced (/not replaced) and remove the block checker
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_wt_check
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_wt_check
 #... k-k-kill... the o-observer buddy... D:
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 # Kill le temp marker
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos1] if score @s wt_ID = @p wt_ID run kill @s
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_clone_preview_pos2] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos1] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2] if score @s wt_ID = @p wt_ID run kill @s
 # Clear up the chat
 function worldtool:ui/clear_chat
 tellraw @s "Cancelled"
@@ -13,11 +13,11 @@ tellraw @s "Cancelled"
 tag @s remove in_menu
 tag @s remove placing_fill
 tag @s remove fun_menu
-execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/pos1_removetags
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/pos1_removetags
 function worldtool:ui/player_removetags
 
 # For some reason this tag isn't in worldtool:ui/pos1_removetags
-execute as @e[type=minecraft:area_effect_cloud,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove rotated
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove rotated
 
 # Remove the other tool variants you can have and replace them with the position 1 tool
 tag @s[predicate=worldtool:tool_states/3] add setclonepos

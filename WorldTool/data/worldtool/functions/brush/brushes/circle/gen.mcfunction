@@ -1,7 +1,7 @@
 # Called by worldtool:brush/brushes/circle/tick
 # Makes a circle with the specified size (diameter) and axis
 
-kill @e[type=minecraft:area_effect_cloud,tag=scheduled_circle]
+kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=scheduled_circle]
 tag @s remove scheduled_circle
 
 #execute if predicate worldtool:brush/axis/auto run tag @s add axis.auto

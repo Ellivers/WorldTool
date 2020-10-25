@@ -1,1 +1,1 @@
-scoreboard players set @e[type=area_effect_cloud,tag=cmdpos1] wt_chance 5
+scoreboard players set @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1] wt_chance 5

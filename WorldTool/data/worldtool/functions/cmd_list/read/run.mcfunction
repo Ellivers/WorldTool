@@ -14,4 +14,4 @@ execute unless score #cmdblockschecked worldtool matches 99999.. if block ~ ~ ~ 
 execute unless score #cmdblockschecked worldtool matches 99999.. if block ~ ~ ~ minecraft:chain_command_block[facing=south] run function worldtool:cmd_list/read/z
 
 #Schedules a function if #blockschecked's worldtool score is more or equals to a certain number (default: 4000) (check the function for explanation of why it's here)
-execute unless block ~ ~ ~ #worldtool:cmd_block_chain_start if score #blockschecked worldtool >= $blocksPerTick worldtool run schedule function worldtool:load_function/load2_fill 1t
+execute unless block ~ ~ ~ #worldtool:cmd_block_chain_start if score #blockschecked worldtool >= $blocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

@@ -1,4 +1,4 @@
-kill @e[type=minecraft:area_effect_cloud,tag=scheduled_sphere]
+kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=scheduled_sphere]
 execute unless entity @s[tag=cmdpos1] run tag @s remove scheduled_sphere
 
 execute if predicate worldtool:brush/hollow run tag @s add brush_hollow

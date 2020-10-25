@@ -3,7 +3,7 @@ function worldtool:ui/clear_chat
 tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/clone/select_clone"}}
 
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run tag @s add found
-execute unless entity @e[type=minecraft:armor_stand,tag=show_rot,tag=found] run summon armor_stand ^ ^-.5 ^1.5 {Invisible:1b,Tags:["show_rot","wt_particles"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}],Pose:{Head:[0f,1f,0f]}}
+execute unless entity @e[type=minecraft:armor_stand,tag=show_rot,tag=found] run summon minecraft:armor_stand ^ ^-.5 ^1.5 {Invisible:1b,Tags:["show_rot","wt_particles","worldtool"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}],Pose:{Head:[0f,1f,0f]}}
 scoreboard players operation @e[type=minecraft:armor_stand,tag=show_rot,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run function worldtool:ui/clone_rotate/show_set_rot
 

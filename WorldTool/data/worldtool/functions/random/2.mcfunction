@@ -1,6 +1,6 @@
 scoreboard players add #blockschecked worldtool 1
 
-execute at @e[type=minecraft:area_effect_cloud,tag=randompoint,tag=dostuff,sort=random,limit=1] run clone ~ ~ ~ ~ ~ ~ 0 1 13
+execute at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,tag=dostuff,sort=random,limit=1] run clone ~ ~ ~ ~ ~ ~ 0 1 13
 
 execute if entity @s[tag=!replacefill,tag=!replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:block_place/place_block
 execute if entity @s[tag=replacefill] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all if blocks 2 1 13 2 1 13 ~ ~ ~ all run function worldtool:block_place/place_block
@@ -17,4 +17,4 @@ execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposZ
 execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposZ worldtool = $pos2z worldtool if score $drawingposY worldtool > $pos2y worldtool unless score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run function worldtool:random/2/-y
 
 #Schedules a function if #blockschecked's worldtool score is more or equals to a certain number (default: 4000) (check the function for explanation of why it's here)
-execute if score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run schedule function worldtool:load_function/load2_fill 1t
+execute if score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

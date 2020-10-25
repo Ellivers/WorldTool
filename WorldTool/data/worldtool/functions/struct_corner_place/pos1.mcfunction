@@ -8,9 +8,9 @@ tag @s remove outl_pZ
 execute store result score @s pos1x run data get entity @s Pos[0]
 execute store result score @s pos1y run data get entity @s Pos[1]
 execute store result score @s pos1z run data get entity @s Pos[2]
-execute store result score @s pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=pos2,tag=wt_struct_corn,limit=1] Pos[0]
-execute store result score @s pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=pos2,tag=wt_struct_corn,limit=1] Pos[1]
-execute store result score @s pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=pos2,tag=wt_struct_corn,limit=1] Pos[2]
+execute store result score @s pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[0]
+execute store result score @s pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[1]
+execute store result score @s pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[2]
 
 # "outl_nx" stands for "outline_negative_x"
 execute if score @s pos1x > @s pos2x run tag @s add outl_nX

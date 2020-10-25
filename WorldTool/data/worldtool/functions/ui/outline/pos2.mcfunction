@@ -9,9 +9,9 @@ execute store result score @s pos1x run data get entity @s Pos[0]
 execute store result score @s pos1y run data get entity @s Pos[1]
 execute store result score @s pos1z run data get entity @s Pos[2]
 function worldtool:particles/mark_selection/pos
-execute store result score @s pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load,limit=1] Pos[0]
-execute store result score @s pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load,limit=1] Pos[1]
-execute store result score @s pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load,limit=1] Pos[2]
+execute store result score @s pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=outline_load,limit=1] Pos[0]
+execute store result score @s pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=outline_load,limit=1] Pos[1]
+execute store result score @s pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=outline_load,limit=1] Pos[2]
 
 # "outl_nx" stands for "outline_negative_x"
 execute if score @s rotX > @s pos2x run tag @s add outl_nX
@@ -33,4 +33,4 @@ execute at @s[tag=outl_nX] run tp @s ~.999 ~ ~
 execute at @s[tag=outl_nY] run tp @s ~ ~.999 ~
 execute at @s[tag=outl_nZ] run tp @s ~ ~ ~.999
 tag @s remove outline_load
-tag @e[type=minecraft:area_effect_cloud,tag=pos1,tag=outline_load] remove outline_load
+tag @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=outline_load] remove outline_load
