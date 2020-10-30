@@ -11,3 +11,6 @@ Type `/function worldtool:give` to give yourself both tools; the general tool an
 
 More information on how to use it and of all its features (not up-to-date with experimental versions):
 https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit
+
+If you have any questions, feel free to ask in my discord:
+https://discord.gg/jn8d4zb
