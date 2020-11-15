@@ -5,17 +5,17 @@
 scoreboard objectives add worldtool dummy
 scoreboard objectives add wt_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add wt_ID dummy
-scoreboard objectives add rotX dummy
-scoreboard objectives add rotY dummy
-scoreboard objectives add rotZ dummy
+scoreboard objectives add wt_rotX dummy
+scoreboard objectives add wt_rotY dummy
+scoreboard objectives add wt_rotZ dummy
 scoreboard objectives add wt_brush_size dummy
 scoreboard objectives add wt_chance dummy
-scoreboard objectives add pos2x dummy
-scoreboard objectives add pos2y dummy
-scoreboard objectives add pos2z dummy
-scoreboard objectives add pos1x dummy
-scoreboard objectives add pos1y dummy
-scoreboard objectives add pos1z dummy
+scoreboard objectives add wt_pos2x dummy
+scoreboard objectives add wt_pos2y dummy
+scoreboard objectives add wt_pos2z dummy
+scoreboard objectives add wt_pos1x dummy
+scoreboard objectives add wt_pos1y dummy
+scoreboard objectives add wt_pos1z dummy
 scoreboard objectives add wt_raycast dummy
 scoreboard objectives add wt_differenceX dummy
 scoreboard objectives add wt_differenceY dummy
@@ -27,6 +27,7 @@ scoreboard objectives add wt_temp_prevposX dummy
 scoreboard objectives add wt_temp_prevposY dummy
 scoreboard objectives add wt_temp_prevposZ dummy
 scoreboard objectives add wt_drop_coas dropped:minecraft.carrot_on_a_stick
+scoreboard objectives add wt_queue_pos dummy
 
 # Detect an older version
 execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 1.. run function worldtool:upgrade_version
@@ -48,9 +49,11 @@ execute unless score $particles worldtool matches 0..1 run scoreboard players se
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboard players set $forceLoadCmdPositions worldtool 0
 execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 0
+execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
+scoreboard players set #8 worldtool 8
 scoreboard players set #100 worldtool 100
 
 execute unless score $clonePreviewDelay worldtool matches 0.. run scoreboard players set $clonePreviewDelay worldtool 2
@@ -59,6 +62,11 @@ gamerule commandBlockOutput false
 
 bossbar add worldtool:progress "WorldTool Progress"
 bossbar set worldtool:progress color pink
+
+execute unless score #defaultWorldborderSize worldtool matches 1.. store result score #defaultWorldborderSize worldtool run worldborder get
+scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborderSize worldtool
+scoreboard players remove #minWorldborderSize worldtool 20
+scoreboard players set #displayLagWarning worldtool 1
 
 # Addon variables
 scoreboard players set $addons worldtool 0

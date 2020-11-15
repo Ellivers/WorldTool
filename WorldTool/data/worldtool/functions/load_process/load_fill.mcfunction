@@ -42,7 +42,7 @@ execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~
 data modify entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s Tags[]
 
 # When randomizing, make sure to fill from the bottom up, to try making sure blocks that need support don't pop off
-execute if entity @s[tag=random2] run function worldtool:load_process/switch_y_levels
+execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_process/switch_y_levels
 
 # Some stuff
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_process/load_fill.wtd

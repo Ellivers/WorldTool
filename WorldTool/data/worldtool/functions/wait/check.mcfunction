@@ -1,2 +1,2 @@
 execute if score $functionRunning worldtool matches 1 run schedule function worldtool:wait/check 1t
-execute unless score $functionRunning worldtool matches 1 as @a[tag=wt_waiting,limit=1] at @s run function worldtool:wait/done
+execute unless score $functionRunning worldtool matches 1 as @a[tag=wt_waiting,scores={wt_queue_pos=..1},limit=1] at @s run function worldtool:wait/done

@@ -2,6 +2,7 @@ tag @s remove in_menu
 tag @s remove menu_nudge
 tag @s remove wt_dont_move_pos1
 tag @s remove wt_dont_move_pos2
+tag @s add wt_user
 
 scoreboard players operation #ID_temp wt_ID = @s wt_ID
 scoreboard players set #pos1Found worldtool 0

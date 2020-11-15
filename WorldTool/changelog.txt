@@ -1,0 +1,5 @@
+- Added an option to show a progress bar
+- Added a togglable performance warning
+- Bug fixes
+- Performance improvements
+- Compatability improvements

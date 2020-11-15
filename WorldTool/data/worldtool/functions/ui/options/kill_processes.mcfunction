@@ -5,6 +5,7 @@
 #tellraw @s ["Killed ",{"score": {"name": "#kill_wt_drawer","objective": "worldtool"}}," entities"]
 tellraw @s "Killed running processes"
 scoreboard players set $functionRunning worldtool 0
+scoreboard players set #displayLagWarning worldtool 1
 #scoreboard players set $brushFunctionRunning worldtool 0
 #bossbar set worldtool:progress visible false
 

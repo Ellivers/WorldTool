@@ -1,32 +1,7 @@
 function worldtool:ui/clear_chat
 tellraw @s ["",{"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}},{"text": "Settings/Blocks per tick","bold": true,"color":"green"}]
 
-execute if score $blocksPerTick worldtool matches 4000 run tag @s add blocksPerTick_default
-execute if score $clonedBlocksPerTick worldtool matches 2100 run tag @s add clonedBlocksPerTick_default
-execute if score $destroyedBlocksPerTick worldtool matches 3700 run tag @s add destroyedBlocksPerTick_default
-execute if score $randomizedBlocksPerTick worldtool matches 3900 run tag @s add randomizedBlocksPerTick_default
-execute if score $checkeredBlocksPerTick worldtool matches 3400 run tag @s add checkeredBlocksPerTick_default
-execute if score $outlinedBlocksPerTick worldtool matches 3200 run tag @s add outlinedBlocksPerTick_default
-execute if score $greeneryBlocksPerTick worldtool matches 1200 run tag @s add greeneryBlocksPerTick_default
-execute if score $hollowBlocksPerTick worldtool matches 3300 run tag @s add hollowBlocksPerTick_default
-
-execute if score $blocksPerTick worldtool matches 2000 run tag @s add blocksPerTick_medium
-execute if score $clonedBlocksPerTick worldtool matches 2000 run tag @s add clonedBlocksPerTick_medium
-execute if score $destroyedBlocksPerTick worldtool matches 2000 run tag @s add destroyedBlocksPerTick_medium
-execute if score $randomizedBlocksPerTick worldtool matches 2000 run tag @s add randomizedBlocksPerTick_medium
-execute if score $checkeredBlocksPerTick worldtool matches 2000 run tag @s add checkeredBlocksPerTick_medium
-execute if score $outlinedBlocksPerTick worldtool matches 2000 run tag @s add outlinedBlocksPerTick_medium
-execute if score $greeneryBlocksPerTick worldtool matches 1200 run tag @s add greeneryBlocksPerTick_medium
-execute if score $hollowBlocksPerTick worldtool matches 2000 run tag @s add hollowBlocksPerTick_medium
-
-execute if score $blocksPerTick worldtool matches 600 run tag @s add blocksPerTick_low
-execute if score $clonedBlocksPerTick worldtool matches 600 run tag @s add clonedBlocksPerTick_low
-execute if score $destroyedBlocksPerTick worldtool matches 600 run tag @s add destroyedBlocksPerTick_low
-execute if score $randomizedBlocksPerTick worldtool matches 600 run tag @s add randomizedBlocksPerTick_low
-execute if score $checkeredBlocksPerTick worldtool matches 600 run tag @s add checkeredBlocksPerTick_low
-execute if score $outlinedBlocksPerTick worldtool matches 600 run tag @s add outlinedBlocksPerTick_low
-execute if score $greeneryBlocksPerTick worldtool matches 600 run tag @s add greeneryBlocksPerTick_low
-execute if score $hollowBlocksPerTick worldtool matches 600 run tag @s add hollowBlocksPerTick_low
+function worldtool:ui/options/bpt/get
 
 tellraw @s "\n\n"
 execute unless entity @s[tag=blocksPerTick_default,tag=clonedBlocksPerTick_default,tag=destroyedBlocksPerTick_default,tag=randomizedBlocksPerTick_default,tag=checkeredBlocksPerTick_default,tag=outlinedBlocksPerTick_default,tag=greeneryBlocksPerTick_default,tag=hollowBlocksPerTick_default] unless entity @s[tag=blocksPerTick_medium,tag=clonedBlocksPerTick_medium,tag=destroyedBlocksPerTick_medium,tag=randomizedBlocksPerTick_medium,tag=checkeredBlocksPerTick_medium,tag=outlinedBlocksPerTick_medium,tag=greeneryBlocksPerTick_medium,tag=hollowBlocksPerTick_medium] unless entity @s[tag=blocksPerTick_low,tag=clonedBlocksPerTick_low,tag=destroyedBlocksPerTick_low,tag=randomizedBlocksPerTick_low,tag=checkeredBlocksPerTick_low,tag=outlinedBlocksPerTick_low,tag=greeneryBlocksPerTick_low,tag=hollowBlocksPerTick_low] run tellraw @s [{"text": "Preset: ","color":"aqua"},{"text": "< ","color":"light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Maximum"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/bpt/max"}},{"text": "Custom","color":"gold"},{"text": " >","color":"light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Low"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/bpt/low"}}]

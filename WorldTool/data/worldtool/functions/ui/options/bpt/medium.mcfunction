@@ -7,4 +7,4 @@ scoreboard players set $outlinedBlocksPerTick worldtool 2000
 scoreboard players set $greeneryBlocksPerTick worldtool 1200
 scoreboard players set $hollowBlocksPerTick worldtool 2000
 
-function worldtool:ui/options/bpt/select
+execute unless entity @s[tag=dontgobackplzthx] run function worldtool:ui/options/bpt/select
