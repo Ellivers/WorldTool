@@ -16,13 +16,11 @@ scoreboard players operation #maxHeight worldtool = @s wt_height
 scoreboard players operation #maxRotation worldtool = @s wt_degrees
 execute if score #axisTemp worldtool matches 1..2 run scoreboard players operation #maxRotation worldtool += @s wt_rotY
 execute if score #axisTemp worldtool matches 3..6 run scoreboard players operation #maxRotation worldtool += @s wt_rotX
-execute if score @s wt_rotY matches 1.. unless score @s wt_rotX matches 1.. if score #maxRotation worldtool matches 360.. run scoreboard players remove #maxRotation worldtool 360
-execute if score @s wt_rotX matches 1.. if score #maxRotation worldtool matches 360.. run scoreboard players remove #maxRotation worldtool 360
+execute if score #maxRotation worldtool matches 360.. run scoreboard players remove #maxRotation worldtool 360
 scoreboard players operation #maxRotation worldtool *= #100 worldtool
 scoreboard players operation #maxDegrees worldtool = @s wt_degrees
 scoreboard players operation #maxDegrees worldtool *= #100 worldtool
-scoreboard players set #totalRotationX worldtool 0
-scoreboard players set #totalRotationY worldtool 0
+scoreboard players set #totalRotation worldtool 0
 scoreboard players set #stopGenerating worldtool 0
 scoreboard players set #genFunctionsRun worldtool 0
 scoreboard players set $blocksplaced worldtool 0

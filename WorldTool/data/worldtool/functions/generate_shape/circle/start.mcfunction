@@ -16,8 +16,7 @@ execute if score #maxRotation worldtool matches 360.. run scoreboard players rem
 scoreboard players operation #maxRotation worldtool *= #100 worldtool
 scoreboard players operation #maxDegrees worldtool = @s wt_degrees
 scoreboard players operation #maxDegrees worldtool *= #100 worldtool
-scoreboard players set #totalRotationX worldtool 0
-scoreboard players set #totalRotationY worldtool 0
+scoreboard players set #totalRotation worldtool 0
 scoreboard players set #stopGenerating worldtool 0
 scoreboard players set #genFunctionsRun worldtool 0
 scoreboard players set $blocksplaced worldtool 0
