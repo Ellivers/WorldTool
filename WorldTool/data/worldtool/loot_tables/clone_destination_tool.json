@@ -18,6 +18,15 @@
                         "text": "Select cloning destination",
                         "italic": false
                     }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    {
+                      "keybind": "key.use", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to set the clone destination position","color": "white"}
+                  ]
                 }
             ]
           }

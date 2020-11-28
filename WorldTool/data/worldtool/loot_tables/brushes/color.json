@@ -43,7 +43,15 @@
                         "",
                         {"text":"Selected color:","color":"white","italic":false},
                         {"nbt":"SelectedItem.tag.BrushSettings.Color","entity":"@s","color":"light_purple","italic":false},
-                        ""
+                        "",
+                        [{
+                            "keybind": "key.use", "color": "gold", "italic": false
+                        },
+                        {"text": " to use the brush","color": "white", "italic": false}],
+                        [{
+                            "keybind": "key.drop", "color": "gold", "italic": false
+                        },
+                        {"text": " to open the brush menu","color": "white", "italic": false}]
                     ]
                 }
             ]

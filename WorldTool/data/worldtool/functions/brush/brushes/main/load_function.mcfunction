@@ -11,7 +11,7 @@ execute store result score $pos1y worldtool run data get entity @s Pos[1]
 execute store result score $pos1z worldtool run data get entity @s Pos[2]
 
 #Make sure the scores for blocks per tick are in a supported range
-execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4100
+execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4100
 execute unless score $coloredBlocksPerTick worldtool matches 2..2500 run scoreboard players set $coloredBlocksPerTick worldtool 2500
 
 #Set the position 2 variables

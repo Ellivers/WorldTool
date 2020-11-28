@@ -17,4 +17,4 @@ execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY
 execute if score $drawingposX worldtool = $pos2x worldtool if score $drawingposY worldtool = $pos2y worldtool if score $drawingposZ worldtool > $pos2z worldtool unless score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run function worldtool:cmd/random/2/-z
 
 #Schedules a function if #blockschecked's worldtool score is more or equals to a certain number (check the function for explanation of why it's here)
-execute if score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t
+#execute if score #blockschecked worldtool >= $randomizedBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

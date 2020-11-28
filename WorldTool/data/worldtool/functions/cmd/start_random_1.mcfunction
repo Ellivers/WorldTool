@@ -1,7 +1,7 @@
 execute store result score $pos1x worldtool run data get entity @s Pos[0]
 execute store result score $pos1y worldtool run data get entity @s Pos[1]
 execute store result score $pos1z worldtool run data get entity @s Pos[2]
-execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
+execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4000
 
 execute store result score $pos2x worldtool run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd2,limit=1] Pos[0]
 execute store result score $pos2y worldtool run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd2,limit=1] Pos[1]

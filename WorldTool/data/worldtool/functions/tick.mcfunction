@@ -9,3 +9,5 @@ execute if score $functionRunning worldtool matches 1 if score $monitorPerforman
 execute as @a at @s run function worldtool:player_tick
 # Check for a block while in some menus
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check,tag=!waiting] at @s run function worldtool:block_check/main
+
+execute if score $functionRunning worldtool matches 1 run function worldtool:load_process/load2_fill

@@ -11,5 +11,7 @@ scoreboard players set #displayLagWarning worldtool 1
 
 execute as @e[type=minecraft:area_effect_cloud,tag=wt_drawer,tag=worldtool] at @s run function worldtool:aligned_done
 
+kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer]
+
 tag @s add nospaceplzthx
 function worldtool:ui/anti_feedback_chat_message/load

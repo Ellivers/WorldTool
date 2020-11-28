@@ -9,7 +9,7 @@ execute store result score $pos1x worldtool run data get entity @s Pos[0]
 execute store result score $pos1y worldtool run data get entity @s Pos[1]
 execute store result score $pos1z worldtool run data get entity @s Pos[2]
 # Set the blocks-per-tick setting for this function (randomize 1) to its default valu if it's not in a supported range
-execute unless score $blocksPerTick worldtool matches 2..4000 run scoreboard players set $blocksPerTick worldtool 4000
+execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4000
 
 # Get position 2
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2] if score @s wt_ID = #ID_temp wt_ID run function worldtool:load_process/load_random.rndpos2

@@ -36,7 +36,11 @@
                         "",
                         {"text":"Selected block:","color":"white","italic":false},
                         {"text":"minecraft:stone","color":"light_purple","italic":false},
-                        ""
+                        "",
+                        [{
+                            "keybind": "key.drop", "color": "gold", "italic": false
+                        },
+                        {"text": " to open the brush menu","color": "white", "italic": false}]
                     ]
                 }
             ]

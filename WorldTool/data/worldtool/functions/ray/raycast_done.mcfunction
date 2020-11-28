@@ -7,3 +7,5 @@ execute if entity @s[tag=wt_brush,tag=!grabbing_block] run function worldtool:br
 execute if entity @s[tag=wt_brush,tag=grabbing_block] run function worldtool:brush/grab_block
 execute if entity @s[tag=wt_clone_preview] run function worldtool:particles/clone_preview/position/load
 execute unless entity @s[tag=!setpos1,tag=!setpos2] if entity @s[tag=grabbing_block] run function worldtool:pick_block/pick_block
+execute if entity @s[tag=wt_generation,predicate=!worldtool:shapes/continuous_place] run function worldtool:ray/ray_hit_g
+execute if entity @s[tag=wt_generation,predicate=worldtool:shapes/continuous_place] run function worldtool:ray/ray_hit_g2

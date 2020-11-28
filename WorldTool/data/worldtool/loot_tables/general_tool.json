@@ -18,6 +18,19 @@
                         "text": "Set position 1",
                         "italic": false
                     }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    [{
+                      "keybind": "key.use", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to set a position","color": "white"}],
+                    [{
+                      "keybind": "key.drop", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to switch which position to place","color": "white"}]
+                  ]
                 }
             ]
           }

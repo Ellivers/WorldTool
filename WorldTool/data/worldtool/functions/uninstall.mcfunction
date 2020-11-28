@@ -37,6 +37,10 @@ scoreboard objectives remove wt_temp_prevposY
 scoreboard objectives remove wt_temp_prevposZ
 scoreboard objectives remove wt_drop_coas
 scoreboard objectives remove wt_queue_pos
+scoreboard objectives remove wt_diameter
+scoreboard objectives remove wt_height
+scoreboard objectives remove wt_precision
+scoreboard objectives remove wt_degrees
 
 # Remove tags added by WorldTool from players
 execute as @a run function worldtool:ui/player_removetags

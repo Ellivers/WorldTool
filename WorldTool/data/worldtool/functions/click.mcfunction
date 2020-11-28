@@ -28,6 +28,7 @@ execute if predicate worldtool:tool_states/3 run tag @s add setclonepos
 execute if predicate worldtool:tool_states/4 run tag @s add random_1
 execute if predicate worldtool:tool_states/5 run tag @s add random_2
 execute if predicate worldtool:tool_states/6 run tag @s add wt_brush
+execute if predicate worldtool:tool_states/7 run tag @s add wt_generation
 
 #define score_holder #ID_temp
 scoreboard players operation #ID_temp wt_ID = @s wt_ID

@@ -1,0 +1,66 @@
+{
+    "type": "minecraft:command",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:7b,Enchantments:[{}],Direction:\"Up\",SelectedShape:\"Circle\"}"
+                },
+                {
+                    "function": "minecraft:set_name",
+                    "name": {
+                        "text": "Generate shape",
+                        "italic": false
+                    }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    [{
+                      "keybind": "key.use", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to set a position and open the menu","color": "white"}],
+                    [{
+                      "keybind": "key.drop", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to open the menu","color": "white", "italic": false}]
+                  ]
+                },
+                {
+                  "function": "minecraft:copy_nbt",
+                  "source": "this",
+                  "ops": [
+                    {
+                      "source": "SelectedItem.tag.SelectedShape",
+                      "target": "SelectedShape",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "SelectedItem.tag.Direction",
+                      "target": "Direction",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "SelectedItem.tag.Keep",
+                      "target": "Keep",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "SelectedItem.tag.ConPlace",
+                      "target": "ConPlace",
+                      "op": "replace"
+                    }
+                  ]
+                }
+            ]
+          }
+        ]
+      }
+    ]
+}
