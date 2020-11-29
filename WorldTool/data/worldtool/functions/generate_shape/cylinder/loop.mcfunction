@@ -1,6 +1,6 @@
 # Go one in the direction the player has chosen until it reaches the desired length
 
-#scoreboard players add #genFunctionsRun worldtool 1
+scoreboard players add #genFunctionsRun worldtool 1
 
 execute store result entity @s Rotation[0] float 1 run scoreboard players get #yRot worldtool
 execute if score #axisTemp worldtool matches 3..6 store result entity @s Rotation[1] float 1 run scoreboard players get #xRot worldtool
@@ -17,6 +17,6 @@ execute if score #axisTemp worldtool matches 6 at @s run tp ^-1 ^ ^
 scoreboard players add #currentHeight worldtool 1
 #tellraw @a ["current height: ",{"score": {"name": "#currentHeight","objective": "worldtool"}}," max height: ",{"score": {"name":"#maxHeight","objective": "worldtool"}}]
 
-execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool if score #currentHeight worldtool >= #maxHeight worldtool run function worldtool:generate_shape/circle/stop.stop
+execute if score #currentHeight worldtool >= #maxHeight worldtool run function worldtool:generate_shape/circle/stop.stop
 execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #currentHeight worldtool >= #maxHeight worldtool at @s run function worldtool:generate_shape/circle/raycast
 #execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

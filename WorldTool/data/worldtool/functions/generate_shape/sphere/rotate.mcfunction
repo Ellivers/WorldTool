@@ -1,6 +1,6 @@
 # Rotate a specified amount (precision) after every circle has been drawn
 
-#scoreboard players add #genFunctionsRun worldtool 1
+scoreboard players add #genFunctionsRun worldtool 1
 
 scoreboard players set $blocksplaced worldtool 0
 scoreboard players set #totalRotation worldtool 0
@@ -23,6 +23,6 @@ scoreboard players operation #sTotalRot worldtool += #shapePrecision worldtool
 execute if score #sTotalRot worldtool > #sMaxDegrees worldtool if score #sCurrentRot worldtool > #sMaxRotation worldtool run scoreboard players set #stopGenerating worldtool 1
 #execute at @s run setblock ^ ^ ^10 emerald_block
 
-execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool if score #stopGenerating worldtool matches 1 run function worldtool:generate_shape/circle/stop.stop
+execute if score #stopGenerating worldtool matches 1 run function worldtool:generate_shape/circle/stop.stop
 execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #stopGenerating worldtool matches 1 at @s align xyz positioned ~.5 ~.5 ~.5 run function worldtool:generate_shape/circle/raycast
 #execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

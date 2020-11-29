@@ -3,7 +3,7 @@
 #tellraw @a ["current height: ",{"score": {"name": "#currentHeight","objective": "worldtool"}}," max height: ",{"score": {"name":"#maxHeight","objective": "worldtool"}}]
 #tellraw @a {"score": {"name": "#generationRay","objective": "worldtool"}}
 scoreboard players set #generationRay worldtool 0
-#scoreboard players add #genFunctionsRun worldtool 1
+scoreboard players add #genFunctionsRun worldtool 1
 scoreboard players operation #blockschecked worldtool += $blocksplaced worldtool
 scoreboard players set $blocksplaced worldtool 0
 

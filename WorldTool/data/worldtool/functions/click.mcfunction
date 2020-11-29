@@ -12,6 +12,7 @@ tag @s remove setclonepos
 tag @s remove random_1
 tag @s remove random_2
 tag @s remove wt_brush
+tag @s remove wt_generation
 tag @s[predicate=worldtool:tool_states/all] add holding_wttool
 
 #scoreboard players reset $tempholding worldtool

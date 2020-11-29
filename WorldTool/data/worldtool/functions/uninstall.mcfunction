@@ -3,8 +3,6 @@
 # Called by clickEvent from worldtool:ui/options/settings
 # Removes everything added by WorldTool
 
-function worldtool:ui/anti_feedback_chat_message/load
-
 # Remove chunks forceloaded by WorldTool
 execute in minecraft:overworld run forceload remove 0 0
 execute in minecraft:the_nether run forceload remove 0 0
