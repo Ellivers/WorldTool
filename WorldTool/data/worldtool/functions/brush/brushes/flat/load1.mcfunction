@@ -11,4 +11,5 @@ execute if entity @s[tag=axis.x] run scoreboard players set #X worldtool 1
 execute if entity @s[tag=axis.y] run scoreboard players set #Y worldtool 1
 execute if entity @s[tag=axis.z] run scoreboard players set #Z worldtool 1
 
-schedule function worldtool:brush/brushes/flat/load_tick 2t
+execute if predicate worldtool:brush/load_block run schedule function worldtool:brush/brushes/flat/load_tick 2t
+execute unless predicate worldtool:brush/load_block run function worldtool:brush/brushes/flat/load2

@@ -1,5 +1,5 @@
-execute if entity @s[tag=!keep] run tag @s add settingkeep
+execute if entity @s[tag=!keep] run tag @s add wt_toggling
 execute if entity @s[tag=!keep] run tag @s add keep
-execute if entity @s[tag=keep,tag=!settingkeep] run tag @s remove keep
-tag @s remove settingkeep
+execute if entity @s[tag=keep,tag=!wt_toggling] run tag @s remove keep
+tag @s remove wt_toggling
 execute as @p run function worldtool:ui/fill_outline/select

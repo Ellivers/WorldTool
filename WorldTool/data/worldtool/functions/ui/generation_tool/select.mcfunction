@@ -3,6 +3,7 @@
 
 function worldtool:ui/clear_chat
 tag @s remove wt_gentool_dropped
+tag @s remove wt_check_block_shge
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = @p wt_ID run tag @s add wt_be_seleected
 
@@ -36,8 +37,10 @@ execute unless predicate worldtool:shapes/keep run tellraw @s {"text": "[Keep: O
 execute if predicate worldtool:shapes/keep run tellraw @s {"text": "[Keep: On]","color": "green","hoverEvent": {"action": "show_text", "value": "Don't replace existing blocks"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/keep_toggle"}}
 execute unless predicate worldtool:shapes/continuous_place run tellraw @s {"text": "[Continuous placement: Off]","color": "light_purple","hoverEvent": {"action": "show_text", "value": "Generate the selected shape every time you right-click the tool"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cont_place_toggle"}}
 execute if predicate worldtool:shapes/continuous_place run tellraw @s {"text": "[Continuous placement: On]","color": "light_purple","hoverEvent": {"action": "show_text", "value": "Generate the selected shape every time you right-click the tool"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cont_place_toggle"}}
-execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "\n[Run!]  ","color": "green","bold": true,"hoverEvent": {"action": "show_text","value": "Run generation with the selected settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/run"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
-execute unless entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "\n[Run!]  ","color": "gray","bold": true,"hoverEvent": {"action": "show_text","value": "Set a position to continue"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
+
+tellraw @s {"text": "\n[Select new block]","color": "dark_green","hoverEvent": {"action": "show_text","value": "Select a new block to use"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/select/select_block"}}
+execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "[Run!]  ","color": "green","bold": true,"hoverEvent": {"action": "show_text","value": "Run generation with the selected settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/start"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "[Run!]  ","color": "gray","bold": true,"hoverEvent": {"action": "show_text","value": "Set a position to continue"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
 
 function worldtool:ui/anti_feedback_chat_message/load
 tag @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] remove wt_be_seleected

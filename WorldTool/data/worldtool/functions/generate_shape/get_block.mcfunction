@@ -1,6 +1,5 @@
 # Sets the block at 0 1 13 to the block you're using with your brush
-execute unless entity @s[predicate=!worldtool:brush/air] run tag @s add brush_paint_air
-#execute unless entity @s[tag=brush_replace] run setblock 2 1 13 air
+execute if entity @s[predicate=worldtool:brush/air] run tag @s add brush_paint_air
 setblock 0 1 13 air
 execute unless entity @s[tag=brush_paint_air] run summon falling_block 0 1 13 {Time:-34,Tags:["worldtool"]}
 execute unless entity @s[tag=brush_paint_air] positioned 0 1 13 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,sort=nearest,limit=1] BlockState set from entity @s SelectedItem.tag.Block.BlockState

@@ -28,8 +28,7 @@ scoreboard players set #sMaxDegrees worldtool 18000
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = @p wt_ID run kill @s
 
 scoreboard players set $functionRunning worldtool 1
-execute if score $progressBar worldtool matches 1.. run function worldtool:generate_shape/circle/get_area
-execute if score $progressBar worldtool matches 1.. run scoreboard players operation $blocksplaced worldtool *= #maxHeight worldtool
+execute if score $progressBar worldtool matches 1.. run function worldtool:generate_shape/sphere/get_volume
 
 execute unless predicate worldtool:shapes/keep run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","wt_generator"]}
 execute if predicate worldtool:shapes/keep run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","keep","wt_generator"]}

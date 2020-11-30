@@ -10,7 +10,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Structure\",BrushSettings:{BeforeBlock:0b,Structure:\"worldtool:none\",StructureRot:\"NONE\",StructureOffset:{X:0,Y:0,Z:0},StructureMirror:\"NONE\"},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Structure\",BrushSettings:{BeforeBlock:0b,Structure:\"worldtool:none\",StructureRot:\"NONE\",StructureOffset:{X:0,Y:0,Z:0},StructureMirror:\"NONE\",LoadBlock:0b},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
                 },
                 {
                     "function": "minecraft:copy_nbt",

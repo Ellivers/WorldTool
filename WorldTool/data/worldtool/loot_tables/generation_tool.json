@@ -10,7 +10,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{Unbreakable:1b,worldTool:1b,Type:7b,Enchantments:[{}],Direction:\"Up\",SelectedShape:\"Circle\"}"
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:7b,Enchantments:[{}],Direction:\"Up\",SelectedShape:\"Circle\",Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}}}"
                 },
                 {
                     "function": "minecraft:set_name",
@@ -21,13 +21,18 @@
                 },
                 {
                   "function": "minecraft:set_lore",
+                  "entity": "this",
                   "lore": [
+                    "",
+                    {"text":"Selected block:"},
+                    {"nbt":"SelectedItem.tag.Block.BlockState.Name","entity":"@s", "color": "light_purple", "italic": false},
+                    "",
                     [{
-                      "keybind": "key.use", "color": "light_purple", "italic": false
+                      "keybind": "key.use", "color": "gold", "italic": false
                     },
                     {"text": " to set a position and open the menu","color": "white"}],
                     [{
-                      "keybind": "key.drop", "color": "light_purple", "italic": false
+                      "keybind": "key.drop", "color": "gold", "italic": false
                     },
                     {"text": " to open the menu","color": "white", "italic": false}]
                   ]
@@ -54,6 +59,11 @@
                     {
                       "source": "SelectedItem.tag.ConPlace",
                       "target": "ConPlace",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "SelectedItem.tag.Block",
+                      "target": "Block",
                       "op": "replace"
                     }
                   ]
