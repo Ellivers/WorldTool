@@ -6,3 +6,4 @@ execute as @e[type=minecraft:item,sort=nearest,limit=1] run function worldtool:u
 
 replaceitem entity @s weapon.mainhand minecraft:air
 tag @s remove wt_check_block_shge
+scoreboard players set @s wt_drop_coas 1

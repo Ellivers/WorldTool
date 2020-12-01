@@ -39,3 +39,4 @@ tag @s remove check_brush_structure_offset
 tag @s remove pick_primary_block
 tag @s remove pick_secondary_block
 tag @s remove measure_filter_reversed
+tag @s remove wt_waiting_in_menu

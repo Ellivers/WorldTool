@@ -1,3 +1,4 @@
+tag @s remove wt_waiting_in_menu
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run tag @s add check_clone_overlap
 
 # Get position of position 1

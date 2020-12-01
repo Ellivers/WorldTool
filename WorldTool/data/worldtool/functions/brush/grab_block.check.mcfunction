@@ -1,5 +1,3 @@
 # Called by worldtool:brush/grab_tick
-# Checks if the arrow has the inBlockState nbt tag, otherwise it gives an error
-# Should also give an error if the arrow doesn't exist
-execute if data entity @e[type=minecraft:arrow,tag=switch_block_brush,limit=1] inBlockState run function worldtool:ui/brush/set/grab_block.success
-execute unless data entity @e[type=minecraft:arrow,tag=switch_block_brush,limit=1] inBlockState as @a[tag=grabbing_block] run function worldtool:ui/brush/set/grab_block.error
+execute unless entity @e[type=minecraft:arrow,tag=switch_block_brush,limit=1] at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brush_grab_marker,limit=1] run function worldtool:brush/grab_block_drop
+execute as @e[type=minecraft:arrow,tag=switch_block_brush,limit=1] at @s run function worldtool:ui/brush/set/grab_block.success
