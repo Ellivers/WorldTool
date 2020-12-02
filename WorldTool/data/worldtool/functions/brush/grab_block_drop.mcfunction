@@ -1,9 +1,10 @@
 # Get the loot of the block if getting it through arrow NBT doesn't work
 
-setblock ~ ~-1 ~ minecraft:shulker_box
-loot replace block ~ ~-1 ~ container.1 mine ~ ~ ~
+setblock ~ ~-2 ~ minecraft:shulker_box
+loot replace block ~ ~-2 ~ container.1 mine ~ ~ ~
 data remove storage worldtool:storage BlockGrab
-data modify storage worldtool:storage BlockGrab.Name set from block ~ ~-1 ~ Items[0].id
+data modify storage worldtool:storage BlockGrab.Name set from block ~ ~-2 ~ Items[0].id
+clone ~1 ~-2 ~ ~1 ~-2 ~ ~ ~-2 ~
 
 summon minecraft:falling_block ~ ~ ~ {Tags:["worldtool","wt_block_get_check"]}
 data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt_block_get_check,sort=nearest,limit=1] BlockState.Name set from storage worldtool:storage BlockGrab.Name

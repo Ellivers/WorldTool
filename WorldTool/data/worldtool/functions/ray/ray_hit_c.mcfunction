@@ -4,7 +4,7 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,t
 
 execute at @s as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run function worldtool:ray/pos
 
-clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b} 1
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
 loot give @s loot worldtool:general_tool
 execute at @s run playsound minecraft:entity.item.pickup master @s
 tag @s remove setclonepos
