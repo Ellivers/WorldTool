@@ -4,14 +4,14 @@ execute store result score $pos1z worldtool run data get entity @s Pos[2]
 
 scoreboard players set $functionRunning worldtool 1
 
-execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4100
-execute unless score $clonedBlocksPerTick worldtool matches 2..2100 run scoreboard players set $clonedBlocksPerTick worldtool 2100
-execute unless score $destroyedBlocksPerTick worldtool matches 2..3700 run scoreboard players set $destroyedBlocksPerTick worldtool 3700
-execute unless score $checkeredBlocksPerTick worldtool matches 2..3400 run scoreboard players set $checkeredBlocksPerTick worldtool 3400
-execute unless score $outlinedBlocksPerTick worldtool matches 2..3200 run scoreboard players set $checkeredBlocksPerTick worldtool 3200
-execute unless score $randomizedBlocksPerTick worldtool matches 2..3900 run scoreboard players set $randomizedBlocksPerTick worldtool 3900
-execute unless score $greeneryBlocksPerTick worldtool matches 2..1200 run scoreboard players set $greeneryBlocksPerTick worldtool 1200
-execute unless score $hollowBlocksPerTick worldtool matches 2..3300 run scoreboard players set $hollowBlocksPerTick worldtool 3300
+execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4000
+execute unless score $clonedBlocksPerTick worldtool matches 2.. run scoreboard players set $clonedBlocksPerTick worldtool 2100
+execute unless score $destroyedBlocksPerTick worldtool matches 2.. run scoreboard players set $destroyedBlocksPerTick worldtool 3700
+execute unless score $checkeredBlocksPerTick worldtool matches 2.. run scoreboard players set $checkeredBlocksPerTick worldtool 3400
+execute unless score $outlinedBlocksPerTick worldtool matches 2.. run scoreboard players set $checkeredBlocksPerTick worldtool 3200
+execute unless score $randomizedBlocksPerTick worldtool matches 2.. run scoreboard players set $randomizedBlocksPerTick worldtool 3900
+execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard players set $greeneryBlocksPerTick worldtool 1200
+execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 
 execute store result score $pos2x worldtool run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos2,limit=1] Pos[0]
 execute store result score $pos2y worldtool run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos2,limit=1] Pos[1]

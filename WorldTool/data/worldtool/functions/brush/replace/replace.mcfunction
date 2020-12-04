@@ -1,6 +1,5 @@
 scoreboard players add #blockschecked worldtool 1
 
-
 execute if entity @s[tag=replacefill] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all unless block ~ ~ ~ #worldtool:air_blocks if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:block_place/place_block
 execute if entity @s[tag=replacefill_reversed] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all unless block ~ ~ ~ #worldtool:air_blocks unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run function worldtool:block_place/place_block
 

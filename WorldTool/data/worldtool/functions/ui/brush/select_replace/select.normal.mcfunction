@@ -1,6 +1,6 @@
 tag @s add replacebrush
 tag @s add check_block_replacebrush
-tellraw @s "\n\n\n"
+function worldtool:ui/clear_chat
 
 execute if predicate worldtool:brush/replace_normal run tellraw @s [{"text": "Currently replacing: "},{"entity": "@s","nbt": "SelectedItem.tag.ReplaceBlock.BlockState.Name","color": "aqua"},"\n"]
 execute if predicate worldtool:brush/replace_exclude run tellraw @s [{"text": "Currently set to not replace: "},{"entity": "@s","nbt": "SelectedItem.tag.ReplaceBlock.BlockState.Name","color": "aqua"},"\n"]

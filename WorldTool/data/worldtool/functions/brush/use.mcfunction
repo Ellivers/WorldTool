@@ -4,7 +4,7 @@
 # Makes some stuff unstuck
 #execute if score $brushFunctionRunning worldtool matches 1 as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,tag=brushing] at @s run function worldtool:load_process/load2_fill.tags
 
-execute unless entity @s[predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/paint,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/structure] if score $functionRunning worldtool matches 1 run tellraw @s {"text": "Another process is currently running","color":"red"}
+execute if entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:brushes/sphere,predicate=!worldtool:brushes/structure] if score $functionRunning worldtool matches 1 run tellraw @s {"text": "Another process is currently running","color":"red"}
 
 #The different brushes, including picking (grabing) a block
 execute unless entity @s[predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/paint] unless score $functionRunning worldtool matches 1 run function worldtool:brush/use.check

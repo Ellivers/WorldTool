@@ -64,6 +64,7 @@ scoreboard players set #5 worldtool 5
 scoreboard players set #8 worldtool 8
 scoreboard players set #10 worldtool 10
 scoreboard players set #100 worldtool 100
+scoreboard players set #200 worldtool 200
 scoreboard players set #10000 worldtool 10000
 scoreboard players set #pi worldtool 31416
 

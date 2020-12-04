@@ -18,6 +18,7 @@ execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool 
 execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool matches 4 at @s run tp ^.2 ^ ^
 execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool matches 5 at @s run tp ^.2 ^ ^
 execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool matches 6 at @s run tp ^-.2 ^ ^
+scoreboard players operation #rayMaxDistance worldtool -= #circleDiff worldtool
 scoreboard players add #currentHeight worldtool 1
 #tellraw @a ["current height: ",{"score": {"name": "#currentHeight","objective": "worldtool"}}," max height: ",{"score": {"name":"#maxHeight","objective": "worldtool"}}]
 

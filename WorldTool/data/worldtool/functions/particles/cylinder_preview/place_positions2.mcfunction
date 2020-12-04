@@ -45,4 +45,4 @@ execute if entity @s[predicate=!worldtool:orientation/up,predicate=!worldtool:or
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cylinder_preview] if score @s wt_ID = #ID_temp worldtool run tag @s add wt_cylinderprev_select
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cylinder_preview] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:particles/cylinder_preview/place_positions3
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cylinder_preview] if score @s wt_ID = #ID_temp worldtool run tag @s remove wt_cylinderprev_select
-schedule function worldtool:particles/main 8t replace
+schedule function worldtool:particles/main 8t append

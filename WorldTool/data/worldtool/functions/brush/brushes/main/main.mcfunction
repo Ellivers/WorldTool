@@ -10,5 +10,6 @@ summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTi
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=setblock_source,sort=nearest,limit=1] wt_ID = @s wt_ID
 tag @s remove brush_paint_air
 # Schedules in 2 ticks so the falling block has time to land
+tag @s add wt_ticktag
 execute unless predicate worldtool:brush/flat run schedule function worldtool:brush/brushes/main/load_select_area 2t
-execute if predicate worldtool:brush/flat run function worldtool:brush/brushes/flat/load1
+execute if predicate worldtool:brush/flat run function worldtool:brush/brushes/flat/load

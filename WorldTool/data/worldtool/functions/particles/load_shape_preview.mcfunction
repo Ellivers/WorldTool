@@ -5,3 +5,4 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_shape_previe
 execute if predicate worldtool:shapes/circle run function worldtool:particles/circle_preview/place_positions
 execute if predicate worldtool:shapes/cylinder run function worldtool:particles/cylinder_preview/place_positions
 execute if predicate worldtool:shapes/sphere run function worldtool:particles/sphere_preview/place_positions
+execute if predicate worldtool:shapes/cone run function worldtool:particles/cone_preview/place_positions

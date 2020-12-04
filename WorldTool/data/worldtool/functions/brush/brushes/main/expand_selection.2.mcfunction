@@ -1,5 +1,4 @@
-# Move both markers out 1 block
+# Move the position out 1 block
 scoreboard players add $brush_out worldtool 1
-tp @s ~1 ~1 ~1
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos2] at @a if score @s wt_ID = @p wt_ID at @s run tp ~-1 ~-1 ~-1
-function worldtool:brush/brushes/main/expand_selection
+execute if entity @s[tag=wt_expand_negative] positioned ~-1 ~-1 ~-1 run function worldtool:brush/brushes/main/expand_selection
+execute if entity @s[tag=wt_expand_positive] positioned ~1 ~1 ~1 run function worldtool:brush/brushes/main/expand_selection

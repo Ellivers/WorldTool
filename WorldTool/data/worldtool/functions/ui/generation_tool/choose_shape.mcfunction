@@ -11,4 +11,7 @@ execute if predicate worldtool:shapes/cylinder run tellraw @s {"text": "[Cylinde
 execute unless predicate worldtool:shapes/sphere run tellraw @s {"text": "[Sphere]","color": "green","hoverEvent": {"action": "show_text","value": "Sphere"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/select/sphere"}}
 execute if predicate worldtool:shapes/sphere run tellraw @s {"text": "[Sphere]","color": "gray","hoverEvent": {"action": "show_text","value": "Sphere"}}
 
+execute unless predicate worldtool:shapes/cone run tellraw @s {"text": "[Cone]","color": "green","hoverEvent": {"action": "show_text","value": "Cone"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/select/cone"}}
+execute if predicate worldtool:shapes/cone run tellraw @s {"text": "[Cone]","color": "gray","hoverEvent": {"action": "show_text","value": "Cone"}}
+
 function worldtool:ui/anti_feedback_chat_message/load
