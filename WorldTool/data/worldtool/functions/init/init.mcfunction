@@ -93,5 +93,7 @@ execute in minecraft:overworld run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
 execute in minecraft:the_end run forceload add 0 0
 
+execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[Worldtool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
+
 schedule function worldtool:init/set_base 2t
 function worldtool:particles/main

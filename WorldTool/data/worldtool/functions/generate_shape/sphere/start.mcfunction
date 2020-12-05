@@ -13,6 +13,8 @@ execute if score #maxRotation worldtool matches 360.. run scoreboard players rem
 scoreboard players operation #maxRotation worldtool *= #100 worldtool
 scoreboard players operation #maxDegrees worldtool = @s wt_degrees
 scoreboard players operation #maxDegrees worldtool *= #100 worldtool
+scoreboard players set #hollowTemp worldtool 0
+execute if predicate worldtool:shapes/hollow run scoreboard players set #hollowTemp worldtool 1
 scoreboard players set #totalRotation worldtool 0
 scoreboard players set #stopGenerating worldtool 0
 scoreboard players set #genFunctionsRun worldtool 0
@@ -32,4 +34,4 @@ execute if score $progressBar worldtool matches 1.. run function worldtool:gener
 
 execute unless predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","wt_generator"]}
 execute if predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","keep","wt_generator"]}
-execute as @e[type=minecraft:area_effect_cloud,tag=wt_circlegen,sort=nearest,limit=1] run function worldtool:generate_shape/circle/start.entity
+execute as @e[type=minecraft:area_effect_cloud,tag=wt_circlegen,sort=nearest,limit=1] at @s run function worldtool:generate_shape/circle/start.entity

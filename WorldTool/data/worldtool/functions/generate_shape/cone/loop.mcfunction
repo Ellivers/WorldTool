@@ -20,6 +20,7 @@ execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool 
 execute if score #shapeRotated worldtool matches 1 if score #axisTemp worldtool matches 6 at @s run tp ^-.2 ^ ^
 scoreboard players operation #rayMaxDistance worldtool -= #circleDiff worldtool
 scoreboard players add #currentHeight worldtool 1
+execute if score #hollowTempTemp worldtool matches 1 run scoreboard players set #hollowTemp worldtool 1
 #tellraw @a ["current height: ",{"score": {"name": "#currentHeight","objective": "worldtool"}}," max height: ",{"score": {"name":"#maxHeight","objective": "worldtool"}}]
 
 execute if score #currentHeight worldtool >= #maxHeight worldtool run function worldtool:generate_shape/circle/stop.stop

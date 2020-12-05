@@ -4,4 +4,4 @@ execute store result entity @s Rotation[0] float 1 run scoreboard players get #y
 execute if score #axisTemp worldtool matches 3..6 store result entity @s Rotation[1] float 1 run scoreboard players get #xRot worldtool
 scoreboard players operation #currentRotX worldtool = #xRot worldtool
 scoreboard players operation #currentRotY worldtool = #yRot worldtool
-execute at @s align xyz positioned ~.5 ~.5 ~.5 run function worldtool:generate_shape/circle/raycast
+execute at @s run function worldtool:generate_shape/circle/raycast

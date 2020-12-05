@@ -30,7 +30,8 @@
                     [{
                       "keybind": "key.use", "color": "gold", "italic": false
                     },
-                    {"text": " to set a position and open the menu","color": "white"}],
+                    {"text": " to set a position &","color": "white"}],
+                    {"text": "open the menu","color": "white","italic": false},
                     [{
                       "keybind": "key.drop", "color": "gold", "italic": false
                     },
@@ -54,6 +55,11 @@
                     {
                       "source": "SelectedItem.tag.Keep",
                       "target": "Keep",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "SelectedItem.tag.Hollow",
+                      "target": "Hollow",
                       "op": "replace"
                     },
                     {
