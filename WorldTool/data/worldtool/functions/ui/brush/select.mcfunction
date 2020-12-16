@@ -3,7 +3,8 @@ function worldtool:ui/player_removetags
 function worldtool:ui/clear_chat
 tellraw @s ["                                                                            ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 
-execute unless score @s wt_brush_size matches 1..39 run scoreboard players set @s wt_brush_size 1
+execute if entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:brushes/sphere] unless score @s wt_brush_size matches 1..39 run scoreboard players set @s wt_brush_size 1
+execute unless entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:brushes/sphere] unless score @s wt_brush_size matches 1..25 run scoreboard players set @s wt_brush_size 1
 tellraw @s ["",{"text":"Brush size: ","color":"dark_aqua"},{"text":"< ","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Decrease brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_decrease"}},{"score":{"name":"@s","objective":"wt_brush_size"}},{"text":" >","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":"Increase brush size"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/brush_size_increase"}}]
 
 execute if predicate worldtool:brushes/paint run tag @s add wt_brush.paint

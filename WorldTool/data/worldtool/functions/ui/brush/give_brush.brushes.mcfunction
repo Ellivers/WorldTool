@@ -5,3 +5,4 @@ execute if predicate worldtool:brushes/replace run loot spawn ~ ~ ~ loot worldto
 execute if predicate worldtool:brushes/sphere run loot spawn ~ ~ ~ loot worldtool:brushes/sphere
 execute if predicate worldtool:brushes/circle run loot spawn ~ ~ ~ loot worldtool:brushes/circle
 execute if predicate worldtool:brushes/structure run loot spawn ~ ~ ~ loot worldtool:brushes/structure
+function #worldtool:brush/give_brushes

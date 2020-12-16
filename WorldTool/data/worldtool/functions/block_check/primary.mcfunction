@@ -1,5 +1,5 @@
 # Called by worldtool:block_check/main
-# Checks the primary block (at x+1)
+# Tags for the primary block (at x+1)
 execute if entity @s[tag=placing_fill] run function worldtool:load_process/start_check1
 execute if entity @s[tag=replacing_fill2] run function worldtool:load_process/start_check1
 execute if entity @s[tag=hollowing] run function worldtool:ui/hollow/start_hollow

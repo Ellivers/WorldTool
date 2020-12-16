@@ -1,5 +1,5 @@
 # Called by worldtool:player_tick
-# Two brush things, separated from the others because these use falling blocks instead
+# Separated from the others because these use entities instead of blocks
 execute if entity @s[tag=check_block_brush] if entity @e[type=minecraft:falling_block,tag=worldtool,tag=switch_block_brush,distance=...2] run function worldtool:ui/brush/set/set_block
 execute if entity @s[tag=check_block_replacebrush] if entity @e[type=minecraft:falling_block,tag=worldtool,tag=switch_block_brush,distance=...2] run function worldtool:ui/brush/select_replace/selected
 execute if entity @s[tag=check_brush_structure] if entity @e[type=minecraft:item,tag=worldtool,tag=wt_set_structure,distance=...2] run function worldtool:ui/brush/set/structure

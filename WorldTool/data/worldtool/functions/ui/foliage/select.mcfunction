@@ -1,5 +1,5 @@
 tag @s remove placing_fill
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 execute unless score @s wt_chance matches 0..100 run scoreboard players set @s wt_chance 50
 tellraw @s ["",{"text":"Plant rate: "},{"text":"< ","color":"dark_purple","hoverEvent":{"action":"show_text","value":"Decrease"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/foliage/rate_decrease"}},{"score":{"name":"@s","objective":"wt_chance"},"color":"gold"},{"text":"%","color":"gold"},{"text":" >\n","color":"dark_purple","hoverEvent":{"action":"show_text","value":"Increase"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/foliage/rate_increase"}}]

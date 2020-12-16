@@ -5,4 +5,5 @@ scoreboard players operation $pos1x worldtool = $drawingposX worldtool
 
 scoreboard players remove $drawingposZ worldtool 1
 tp ~ ~ ~-1
-execute positioned ~ ~ ~-1 run function worldtool:checkered/switch
+execute unless score #checkeredZ worldtool matches 0 positioned ~ ~ ~-1 run function worldtool:checkered/switch
+execute if score #checkeredZ worldtool matches 0 positioned ~ ~ ~-1 run function worldtool:checkered/run

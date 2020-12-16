@@ -2,7 +2,7 @@ tag @s remove placing_fill
 tag @s remove placing_hollow_inner
 tag @s add hollowing
 
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 #🦀
 

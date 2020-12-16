@@ -55,6 +55,7 @@ execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard p
 execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboard players set $forceLoadCmdPositions worldtool 0
 execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 0
 execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
+execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
@@ -93,7 +94,7 @@ execute in minecraft:overworld run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
 execute in minecraft:the_end run forceload add 0 0
 
-execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[Worldtool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
+execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
 schedule function worldtool:init/set_base 2t
 function worldtool:particles/main

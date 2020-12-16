@@ -1,3 +1,5 @@
+# Loads the structure for a circle with size 19
+
 execute if score #X worldtool matches 1 run setblock ~ ~ ~ minecraft:structure_block{name:"worldtool:circles/circle_19_side",posX:0,posY:-9,posZ:-9,mode:LOAD}
 execute if score #Y worldtool matches 1 run setblock ~ ~ ~ minecraft:structure_block{name:"worldtool:circles/circle_19",posX:-9,posY:0,posZ:-9,mode:LOAD}
 execute if score #Z worldtool matches 1 run setblock ~ ~ ~ minecraft:structure_block{name:"worldtool:circles/circle_19_side",rotation:"CLOCKWISE_90",posX:9,posY:-9,posZ:0,mode:LOAD}

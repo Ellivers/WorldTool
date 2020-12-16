@@ -12,7 +12,7 @@ tag @s remove placing_fill
 tag @s remove rnd_replacingfill1
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s remove random1
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner1] if score @s wt_ID = @p wt_ID run tag @s add detected

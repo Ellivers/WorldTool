@@ -1,5 +1,5 @@
 # Called by worldtool:block_check/main
-# Checks the secondary block (at x-1)
+# Tags for the secondary block (at x-1)
 execute if entity @s[tag=measure_filter] run function worldtool:ui/measure/start
 execute if entity @s[tag=replacing_fill1] run function worldtool:ui/replace/select_replace2
 execute if entity @s[tag=placing_hollow_inner] run function worldtool:ui/hollow/inner_block/selected

@@ -31,7 +31,7 @@
                     },
                     {"text": " to switch which position to set","color": "white"}],
                     [{
-                    "keybind": "key.sneak", "color": "light_purple", "italic": false}, {"text": " + ","color": "white"}, {"keybind": "key.drop", "color": "light_purple", "italic": false},
+                    "translate": "key.sneak", "color": "light_purple", "italic": false}, {"text": " + ","color": "white"}, {"keybind": "key.drop", "color": "light_purple", "italic": false},
                     {"text": " to open the menu","color": "white"}]
                   ]
                 }

@@ -3,4 +3,5 @@ scoreboard players operation $pos1x worldtool = $drawingposX worldtool
 
 scoreboard players add $drawingposY worldtool 1
 tp ~ ~1 ~
-execute positioned ~ ~1 ~ run function worldtool:checkered/switch
+execute unless score #checkeredY worldtool matches 0 positioned ~ ~1 ~ run function worldtool:checkered/switch
+execute if score #checkeredY worldtool matches 0 positioned ~ ~1 ~ run function worldtool:checkered/run

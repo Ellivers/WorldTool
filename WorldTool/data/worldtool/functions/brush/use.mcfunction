@@ -10,9 +10,9 @@ execute if entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:br
 execute unless entity @s[predicate=!worldtool:brushes/place,predicate=!worldtool:brushes/paint] unless score $functionRunning worldtool matches 1 run function worldtool:brush/use.check
 execute if entity @s[predicate=worldtool:brushes/color] unless score $functionRunning worldtool matches 1 run function worldtool:brush/brushes/color/load
 execute if entity @s[predicate=worldtool:brushes/replace] unless score $functionRunning worldtool matches 1 run function worldtool:brush/brushes/replace/loadcheck
-execute if entity @s[predicate=worldtool:brushes/structure] unless score $functionRunning worldtool matches 1 run function worldtool:brush/brushes/structure/structure
+execute if entity @s[predicate=worldtool:brushes/structure] unless score $functionRunning worldtool matches 1 run function worldtool:brush/brushes/structure/load
 
 execute if entity @s[predicate=worldtool:brushes/sphere] run function worldtool:brush/brushes/sphere/loadcheck
 execute if entity @s[predicate=worldtool:brushes/circle] run function worldtool:brush/brushes/circle/loadcheck
 
-function #worldtool:brush_use/hit_block
+function #worldtool:brush/hit_block

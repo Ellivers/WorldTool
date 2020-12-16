@@ -1,7 +1,7 @@
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_wt_check
 
 tag @s remove placing_fill
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=keep] if score @s wt_ID = @p wt_ID run tellraw @p ["",{"text":"[Checkered...]  ","color":"gold","hoverEvent":{"action":"show_text","value":"Place on every other block"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/checkered/select"}},{"text":"[Greenery...]  ","color":"gray","hoverEvent":{"action":"show_text","value":"Greenery cannot be selected because Keep is on"}},{"text": "[Outline...]  ","color":"light_purple","hoverEvent": {"action": "show_text","value": "Place blocks in the corners of the selected area"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/fill_outline/select"}},{"text":"[Command block list]  ","color":"aqua","hoverEvent":{"action":"show_text","value":"List the commands of the first command block chain found"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cmd_list"}}]

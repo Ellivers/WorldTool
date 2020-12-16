@@ -2,6 +2,7 @@
 
 tag @s remove placing_fill
 tag @s remove in_menu
+execute if entity @s[tag=wt_checkered_temp] run function worldtool:load_process/checkered_load
 function worldtool:ui/player_removetags
 
 # Place the selected block(s) and remove the block marker

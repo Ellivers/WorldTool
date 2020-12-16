@@ -1,6 +1,6 @@
 tag @s remove placing_fill
 tag @s remove rotating_clone
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker] if score @s wt_ID = @p wt_ID run kill @s

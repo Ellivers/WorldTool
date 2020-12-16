@@ -1,4 +1,5 @@
-execute if entity @s[predicate=!worldtool:brushes/sphere,predicate=!worldtool:brushes/circle] unless score @s wt_brush_size matches 39.. run scoreboard players add @s wt_brush_size 2
-execute unless entity @s[predicate=!worldtool:brushes/sphere,predicate=!worldtool:brushes/circle] unless score @s wt_brush_size matches 25.. run scoreboard players add @s wt_brush_size 2
+scoreboard players add @s wt_brush_size 2
+execute if entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:brushes/sphere] if score @s wt_brush_size matches 40.. run scoreboard players set @s wt_brush_size 1
+execute unless entity @s[predicate=!worldtool:brushes/circle,predicate=!worldtool:brushes/sphere] if score @s wt_brush_size matches 26.. run scoreboard players set @s wt_brush_size 1
 
 function worldtool:ui/brush/select

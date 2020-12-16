@@ -1,6 +1,6 @@
 function worldtool:ui/summon_check_block/primary
 
-tag @s add backbuttonplzthx
+tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 
 tag @s remove placing_fill
