@@ -1,8 +1,8 @@
-scoreboard players operation #ID_temp wt_ID = @s wt_ID
+scoreboard players operation #ID_temp worldtool = @s wt_ID
 scoreboard players set #pos1Found worldtool 0
 scoreboard players set #pos2Found worldtool 0
-execute as @e[type=minecraft:area_effect_cloud,tag=pos1,tag=worldtool] if score @s wt_ID = #ID_temp wt_ID run scoreboard players set #pos1Found worldtool 1
-execute as @e[type=minecraft:area_effect_cloud,tag=pos2,tag=worldtool] if score @s wt_ID = #ID_temp wt_ID run scoreboard players set #pos2Found worldtool 1
+execute as @e[type=minecraft:area_effect_cloud,tag=pos1,tag=worldtool] if score @s wt_ID = #ID_temp worldtool run scoreboard players set #pos1Found worldtool 1
+execute as @e[type=minecraft:area_effect_cloud,tag=pos2,tag=worldtool] if score @s wt_ID = #ID_temp worldtool run scoreboard players set #pos2Found worldtool 1
 execute if score #pos1Found worldtool matches 1 run tag @s add wt_pos1found
 execute if score #pos2Found worldtool matches 1 run tag @s add wt_pos2found
 

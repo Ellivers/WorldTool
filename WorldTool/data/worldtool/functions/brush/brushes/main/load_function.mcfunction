@@ -1,5 +1,6 @@
-scoreboard players operation #ID_temp wt_ID = @s wt_ID
-execute as @a if score @s wt_ID = #ID_temp wt_ID run tag @s add wt_brushload
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add wt_brushload
+execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add wt.started_function
 
 #define score_holder $brushFunctionRunning
 scoreboard players set $brushFunctionRunning worldtool 1
@@ -15,7 +16,7 @@ execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players
 execute unless score $coloredBlocksPerTick worldtool matches 2..2500 run scoreboard players set $coloredBlocksPerTick worldtool 2500
 
 #Set the position 2 variables
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos2] if score @s wt_ID = #ID_temp wt_ID run function worldtool:brush/brushes/main/load_function.pos2
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:brush/brushes/main/load_function.pos2
 
 #Set the drawing position to position 1
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool

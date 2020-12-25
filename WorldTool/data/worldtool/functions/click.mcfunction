@@ -32,7 +32,7 @@ execute if predicate worldtool:tool_states/6 run tag @s add wt_brush
 execute if predicate worldtool:tool_states/7 run tag @s add wt_generation
 
 #define score_holder #ID_temp
-scoreboard players operation #ID_temp wt_ID = @s wt_ID
+scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool_ui/set_positions
 execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool_ui/menus
 scoreboard players reset @s wt_click

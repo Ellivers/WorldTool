@@ -1,5 +1,9 @@
+- Added generation tool for generating shapes
 - Added an option to show a progress bar
 - Added a togglable performance warning
+- You can now select the alternating axises with checkered
+- Fixed a lot of multiplayer issues
+- Added more error messages (yay!)
 - Bug fixes
 - Performance improvements
 - Compatability improvements

@@ -27,6 +27,7 @@ scoreboard players set #blockschecked worldtool 0
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = @p wt_ID run kill @s
 
+tag @s add wt.started_function
 scoreboard players set $functionRunning worldtool 1
 execute if score $progressBar worldtool matches 1.. run function worldtool:generate_shape/circle/get_area
 

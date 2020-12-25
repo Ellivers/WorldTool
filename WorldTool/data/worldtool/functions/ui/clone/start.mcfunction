@@ -14,5 +14,5 @@ tag @s remove wt_TempHahaThisIsNeeded
 tag @s remove wt_waiting
 tag @s remove in_menu
 tag @s remove wt_clone_preview
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s[distance=0..] wt_ID = @p wt_ID at @s run function worldtool:load_process/load_fill
+function worldtool:load_process/load_check
 function worldtool:ui/anti_feedback_chat_message/load

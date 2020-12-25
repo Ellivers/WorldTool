@@ -4,5 +4,5 @@ tag @s add grabbing_block
 function worldtool:ui/clear_chat
 tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/back_using_tags"}}
 
-tellraw @s [{"text":"Select a block to pick","color":"aqua"},{"text":"\n[Cancel]","color":"red","hoverEvent":{"action":"show_text","value":"Cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
+tellraw @s [{"text":"Select a block to pick","color":"aqua"},{"text":"\n[Cancel]","color":"red","hoverEvent":{"action":"show_text","value":"Close all menus and cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
 function worldtool:ui/anti_feedback_chat_message/load
