@@ -3,6 +3,8 @@
 # Called by clickEvent from worldtool:ui/options/settings
 # Removes everything added by WorldTool
 
+data remove storage worldtool:storage {}
+
 # Remove chunks forceloaded by WorldTool
 execute in minecraft:overworld run forceload remove 0 0
 execute in minecraft:the_nether run forceload remove 0 0

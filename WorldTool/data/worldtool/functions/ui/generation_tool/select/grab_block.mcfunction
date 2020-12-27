@@ -14,3 +14,5 @@ kill @e[type=minecraft:arrow,tag=switch_block_brush,limit=1]
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID run kill @s
 replaceitem entity @s weapon.mainhand minecraft:air
 scoreboard players set @s wt_drop_coas 1
+tag @s add wt_tick_gentool_menu
+schedule function worldtool:ui/generation_tool/tick_menu 1t

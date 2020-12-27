@@ -1,5 +1,5 @@
 function worldtool:ui/clear_chat
-tellraw @s {"text":"Select a new brush:\n\n\n","color":"light_purple","bold":true}
+tellraw @s {"text":"Select a new brush:\n\n","color":"light_purple","bold":true}
 
 execute unless predicate worldtool:brushes/paint run tellraw @p [{"text":"[Paint]","color":"green","hoverEvent":{"action":"show_text","value":"Paint existing blocks with a block of your choice"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select_brush/paint"}}]
 execute if predicate worldtool:brushes/paint run tellraw @p [{"text":"[Paint]","color":"gray"}]
@@ -25,5 +25,5 @@ execute if predicate worldtool:brushes/structure run tellraw @p [{"text":"[Struc
 execute if score $brushAddons worldtool matches 1.. run tellraw @p {"text": "\nAddon brushes:\n","color":"light_purple"}
 function #worldtool:brush_list
 
-tellraw @s {"text":"\n\n[⬅Back]","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main brush menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select"}}
+tellraw @s {"text":"\n[⬅Back]","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main brush menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/brush/select"}}
 function worldtool:ui/anti_feedback_chat_message/load

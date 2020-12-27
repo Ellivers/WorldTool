@@ -3,6 +3,8 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 
+loot replace entity @s weapon.mainhand loot worldtool:general_tool
+
 # Clone the block to 0 254 13
 clone ~ ~ ~ ~ ~ ~ 0 254 13
 # Depending on what block the wt_check marker is looking for, move the block to the correct spot
@@ -14,4 +16,4 @@ execute at @s run playsound minecraft:entity.item.pickup master @s
 
 tag @s remove pick_primary_block
 tag @s remove pick_secondary_block
-tag @s remove grabbing_block
+tag @s remove wt_pick_block_tool

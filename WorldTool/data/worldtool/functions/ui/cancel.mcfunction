@@ -23,13 +23,16 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score 
 tag @s[predicate=worldtool:tool_states/3] add setclonepos
 tag @s[predicate=worldtool:tool_states/4] add random_1
 tag @s[predicate=worldtool:tool_states/5] add random_2
+tag @s[predicate=worldtool:tool_states/8] add wt_pick_block_tool
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:4b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b}
-execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2] run loot give @s loot worldtool:general_tool
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:8b}
+execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2,tag=!wt_pick_block_tool] run loot give @s loot worldtool:general_tool
 tag @s remove setclonepos
 tag @s remove random_1
 tag @s remove random_2
+tag @s remove wt_pick_block_tool
 
 tag @s add nospaceplzthx
 function worldtool:ui/anti_feedback_chat_message/load

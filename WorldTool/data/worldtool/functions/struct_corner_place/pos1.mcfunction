@@ -1,4 +1,4 @@
-tag @s add wt_struct_corn
+tag @s add wt_struct_corn1
 tag @s remove outl_nX
 tag @s remove outl_pX
 tag @s remove outl_nY
@@ -8,9 +8,9 @@ tag @s remove outl_pZ
 execute store result score @s wt_pos1x run data get entity @s Pos[0]
 execute store result score @s wt_pos1y run data get entity @s Pos[1]
 execute store result score @s wt_pos1z run data get entity @s Pos[2]
-execute store result score @s wt_pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[0]
-execute store result score @s wt_pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[1]
-execute store result score @s wt_pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_struct_corn,limit=1] Pos[2]
+execute store result score @s wt_pos2x run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_struct_corn2,limit=1] Pos[0]
+execute store result score @s wt_pos2y run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_struct_corn2,limit=1] Pos[1]
+execute store result score @s wt_pos2z run data get entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_struct_corn2,limit=1] Pos[2]
 
 # "outl_nx" stands for "outline_negative_x"
 execute if score @s wt_pos1x > @s wt_pos2x run tag @s add outl_nX

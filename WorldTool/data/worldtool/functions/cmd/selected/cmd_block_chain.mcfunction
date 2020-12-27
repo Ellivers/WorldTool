@@ -12,10 +12,10 @@ tag @s remove wt_destroy
 tag @s remove keep
 tag @s remove checkered
 tag @s remove measuring
-tag @s add foliage_ing
+tag @s remove foliage_ing
 tag @s remove sphere
 tag @s remove circle
 tag @s remove brush_cmd
 tag @s remove filling_outline
 tag @s remove wt_struct_corner_place
-tag @s remove cmd_block_fill
+tag @s add cmd_block_fill

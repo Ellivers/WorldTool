@@ -1,5 +1,8 @@
 function worldtool:ui/player_removetags
 
+tag @s remove check_block_brush
+tag @s remove check_brush_structure
+
 function worldtool:ui/clear_chat
 tellraw @s ["                                                                            ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 

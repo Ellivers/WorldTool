@@ -3,7 +3,4 @@ execute if entity @s[tag=wt_expand_negative] run summon minecraft:area_effect_cl
 execute if entity @s[tag=wt_expand_positive] run scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos1,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute if entity @s[tag=wt_expand_negative] run scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos2,sort=nearest,limit=1] wt_ID = @s wt_ID
 
-#execute if entity @s[tag=wt_expand_negative] run say 1
-#execute if entity @s[tag=wt_expand_positive] run say 2
-
 execute if entity @s[tag=wt_expand_positive] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos1,sort=nearest,limit=1] at @s run function worldtool:brush/brushes/main/load_function

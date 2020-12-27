@@ -30,11 +30,12 @@ execute if predicate worldtool:tool_states/4 run tag @s add random_1
 execute if predicate worldtool:tool_states/5 run tag @s add random_2
 execute if predicate worldtool:tool_states/6 run tag @s add wt_brush
 execute if predicate worldtool:tool_states/7 run tag @s add wt_generation
+execute if predicate worldtool:tool_states/8 run tag @s add wt_pick_block_tool
 
 #define score_holder #ID_temp
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool_ui/set_positions
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool_ui/menus
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool/set_positions
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/general_tool/menus
 scoreboard players reset @s wt_click
 
 scoreboard players operation #tempMaxRayDistance worldtool = $raycastingMaxDistance worldtool

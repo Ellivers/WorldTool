@@ -19,3 +19,5 @@ tag @s remove sphere
 tag @s add circle
 tag @s add brush_cmd
 tag @s remove filling_outline
+tag @s remove wt_struct_corner_place
+tag @s remove cmd_block_fill

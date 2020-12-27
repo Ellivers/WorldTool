@@ -31,5 +31,7 @@ tag @s remove circle
 tag @s remove brush_cmd
 tag @s remove inner_block
 tag @s remove filling_outline
+tag @s remove wt_struct_corner_place
+tag @s remove cmd_block_fill
 scoreboard players reset @s wt_chance
 tag @s remove wt_no_drops

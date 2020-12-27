@@ -3,6 +3,10 @@
 tag @s remove grabbing_block
 tag @s remove pick_primary_block
 tag @s remove pick_secondary_block
+tag @s[predicate=worldtool:tool_states/8] add wt_pick_block_tool
+clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:8b}
+execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2,tag=!wt_pick_block_tool] run loot give @s loot worldtool:general_tool
+tag @s remove wt_pick_block_tool
 execute if entity @s[tag=replacing_fill1] run function worldtool:ui/replace/select_replace1
 execute if entity @s[tag=replacing_fill2] run function worldtool:ui/replace/select_replace2
 execute if entity @s[tag=checkered_select] run function worldtool:ui/checkered/select

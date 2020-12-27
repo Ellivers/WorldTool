@@ -1,12 +1,14 @@
 # Called by various functions
 # The generation tool menu
 
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+
 function worldtool:ui/clear_chat
 tag @s add wt_user
 tag @s remove wt_gentool_dropped
 tag @s remove wt_check_block_shge
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = @p wt_ID run tag @s add wt_be_seleected
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = #ID_temp worldtool run tag @s add wt_be_seleected
 
 execute if entity @s[tag=wt_outline_selection] at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] align xyz positioned ~.5 ~.5 ~.5 run function worldtool:particles/load_shape_preview
 
@@ -22,6 +24,7 @@ execute if predicate worldtool:shapes/circle if predicate worldtool:orientation/
 execute if predicate worldtool:shapes/circle if predicate worldtool:orientation/south run function worldtool:ui/generation_tool/orientation/north
 execute if predicate worldtool:shapes/circle if predicate worldtool:orientation/west run function worldtool:ui/generation_tool/orientation/east
 
+tellraw @s ["                                                                            ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 tellraw @s ["",{"text": "Selected shape: ","color": "green"},{"nbt": "SelectedItem.tag.SelectedShape","entity": "@s","color": "aqua","bold": true},{"text": " [Change...]","color": "yellow","hoverEvent": {"action": "show_text","value": "Change the shape to be generated"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/choose_shape"}}]
 tellraw @s ["",{"text": "\nDiameter: ","color": "yellow"},{"text": "< ","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Decrease"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/diameter_decrease"}},{"score": {"name": "@s","objective": "wt_diameter"}},{"text": " >","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Increase"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/diameter_increase"}},{"text": " [Reset]","color": "dark_purple","hoverEvent": {"action": "show_text","value": "Reset the diameter value to 3"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/diameter_reset"}}]
 tellraw @s ["",{"text": "Precision ","color": "gold"},{"text": "(?) ","color": "aqua","hoverEvent": {"action": "show_text","value": "How precisely shapes are drawn. Higher values = less precision. Larger diameters might require higher precision to work correctly."}},{"text": "< ","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Increase"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/precision_decrease"}},{"score": {"name": "@s","objective": "wt_precision"}},{"text": " >","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","value": "Decrease"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/precision_increase"}},{"text": " [Reset]","color": "dark_purple","hoverEvent": {"action": "show_text","value": "Reset the precision value to 100"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/precision_reset"}}]
@@ -40,8 +43,9 @@ execute unless predicate worldtool:shapes/keep run tellraw @s {"text": "[Keep: O
 execute if predicate worldtool:shapes/keep run tellraw @s {"text": "[Keep: On]","color": "green","hoverEvent": {"action": "show_text", "value": "Don't replace existing blocks"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/keep_toggle"}}
 execute unless predicate worldtool:shapes/continuous_place run tellraw @s {"text": "[Continuous placement: Off]","color": "light_purple","hoverEvent": {"action": "show_text", "value": "Generate the selected shape every time you right-click the tool"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cont_place_toggle"}}
 execute if predicate worldtool:shapes/continuous_place run tellraw @s {"text": "[Continuous placement: On]","color": "light_purple","hoverEvent": {"action": "show_text", "value": "Generate the selected shape every time you right-click the tool"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cont_place_toggle"}}
+tellraw @s {"text": "[Nudge position...]","color": "dark_aqua","hoverEvent": {"action": "show_text","value": "Move the selected position one block at a time"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/move_selection/select"}}
 
-tellraw @s {"text": "\n[Select new block]","color": "dark_green","hoverEvent": {"action": "show_text","value": "Select a new block to use"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/select/select_block"}}
+tellraw @s {"text": "\n[Select new block...]","color": "dark_green","hoverEvent": {"action": "show_text","value": "Select a new block to use"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/select/select_block"}}
 execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "[Run!]  ","color": "green","bold": true,"hoverEvent": {"action": "show_text","value": "Run generation with the selected settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/start"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Close all menus and cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
 execute unless entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seleected] run tellraw @s ["",{"text": "[Run!]  ","color": "gray","bold": true,"hoverEvent": {"action": "show_text","value": "Set a position to continue"}},{"text": "[Cancel]","hoverEvent": {"action": "show_text","value": "Close all menus and cancel"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/generation_tool/cancel"}}]
 
