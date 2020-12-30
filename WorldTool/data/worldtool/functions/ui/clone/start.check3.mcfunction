@@ -30,4 +30,4 @@ execute if score @s wt_rotY matches 90 run tag @e[type=minecraft:area_effect_clo
 execute if score @s wt_rotZ matches 90 run tag @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker,tag=check_clone_overlap,limit=1] add z_90
 
 # Set position of preview pos2
-execute at @s as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker,tag=check_clone_overlap] if score @s wt_ID = @p wt_ID run function worldtool:clone/check_overlap/set_cpos2
+execute at @s as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_waiting_marker,tag=check_clone_overlap] if score @s wt_ID = @p wt_ID run function worldtool:processes/clone/check_overlap/set_cpos2

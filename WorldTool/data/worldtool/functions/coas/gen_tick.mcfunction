@@ -1,1 +1,1 @@
-execute as @a[tag=wt_gentool_dropped] at @s run function worldtool:ui/generation_tool/select
+execute as @a[tag=wt_gentool_dropped] at @s run function worldtool:ui/tool_shapes/select

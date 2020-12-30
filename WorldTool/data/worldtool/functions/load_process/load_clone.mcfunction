@@ -13,5 +13,5 @@ execute if entity @s[tag=!mirrorY] unless score @s wt_rotX matches -90.. unless 
 
 #execute if entity @s[tag=moveclone] unless entity @s[tag=!filtered,tag=!filtered_reversed] at @s run clone 2 1 13 2 1 13 0 1 13
 # Start
-execute if entity @s[tag=!rotated] run function worldtool:clone/clone
-execute if entity @s[tag=rotated] run function worldtool:clone/rotated
+execute if entity @s[tag=!rotated] run function worldtool:processes/clone/clone
+execute if entity @s[tag=rotated] run function worldtool:processes/clone/rotated

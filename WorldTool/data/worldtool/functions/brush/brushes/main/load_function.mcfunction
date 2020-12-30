@@ -47,9 +47,8 @@ execute as @a[tag=wt_brushload,predicate=worldtool:brushes/color] run data modif
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] wt_ID = @s wt_ID
 
 #Start different functions depending on which brush the player is using
-execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:brush/paint
+execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/paint/paint
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/color] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:color
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:brush/replace/replace
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:brush/replace/replace
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/replace/replace
 #schedule function worldtool:load_process/load2_fill 1t
 execute as @a[tag=wt_brushload] run function worldtool:brush/player_removetags

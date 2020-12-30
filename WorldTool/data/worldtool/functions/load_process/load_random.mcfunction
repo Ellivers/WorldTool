@@ -31,5 +31,5 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=
 
 #execute at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,sort=random,limit=1] run clone ~ ~ ~ ~ ~ ~ 0 1 13
 # Start
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:random/1
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:processes/random/1
 function worldtool:ui/anti_feedback_chat_message/load
