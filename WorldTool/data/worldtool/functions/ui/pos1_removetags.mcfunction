@@ -23,3 +23,4 @@ tag @s remove no_output
 tag @s remove filling_outline
 tag @s remove wt_no_drops
 tag @s remove wt_destroy
+tag @s remove wt_fill

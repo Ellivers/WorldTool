@@ -1,4 +1,5 @@
-execute at @s positioned ~ ~ ~ as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s add random1
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run tag @s add random1
 
 function worldtool:ui/clear_chat
 tellraw @s {"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/random/select"}}

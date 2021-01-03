@@ -1,5 +1,6 @@
 # Called by worldtool:ui/check
 # The main menu
+scoreboard players operation #ID_temp worldtool = @s wt_ID
 
 tag @s add in_menu
 tag @s add placing_fill
@@ -9,15 +10,15 @@ scoreboard players set @s wt_rotX 0
 scoreboard players set @s wt_rotY 0
 scoreboard players set @s wt_rotZ 0
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=show_rot] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=show_rot] if score @s wt_ID = #ID_temp worldtool run kill @s
 
 function worldtool:ui/clear_chat
 tellraw @s[tag=wt_outline_selection] ["",{"text":"[Outline selection: On]","color":"dark_purple","hoverEvent":{"action":"show_text","value":"Turn off the selection marker"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/outline/off/main"}},"                                                 ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 tellraw @s[tag=!wt_outline_selection] ["",{"text":"[Outline selection: Off]","color":"dark_purple","hoverEvent":{"action":"show_text","value":"Highlight the selected area while in the menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/outline/on"}},"                                                ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 
 execute if entity @s[tag=wt_outline_selection] run function worldtool:ui/outline/load1
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/select.pos1
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,tag=dostuff] if score @s wt_ID = @p wt_ID run tag @s remove dostuff
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui/select.pos1
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,tag=dostuff] if score @s wt_ID = #ID_temp worldtool run tag @s remove dostuff
 function worldtool:ui/player_removetags
 function worldtool:ui/clone/remove_preview
 

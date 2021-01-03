@@ -1,5 +1,6 @@
 tag @s add wt_waiting
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID run tag @s add waiting
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = #ID_temp worldtool run tag @s add waiting
 
 scoreboard players set #highest wt_queue_pos 0
 execute as @a[scores={wt_queue_pos=2..}] run scoreboard players operation #highest wt_ > @s wt_queue_pos

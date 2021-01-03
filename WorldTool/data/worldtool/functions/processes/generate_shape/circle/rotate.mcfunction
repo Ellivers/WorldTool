@@ -29,4 +29,5 @@ execute unless score #axisTemp worldtool matches 3..6 if score #totalRotation wo
 execute if score #stopGenerating worldtool matches 1 run function worldtool:processes/generate_shape/circle/stop
 #tellraw @a {"score": {"name": "#rayMaxDistance","objective": "worldtool"}}
 execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #stopGenerating worldtool matches 1 at @s run function worldtool:processes/generate_shape/circle/raycast
+#execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #stopGenerating worldtool matches 1 if score #generationRay worldtool > #rayMaxDistance worldtool run function worldtool:processes/generate_shape/circle/rotate
 #execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

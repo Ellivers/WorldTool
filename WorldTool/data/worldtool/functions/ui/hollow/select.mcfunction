@@ -5,6 +5,8 @@ tag @s add hollowing
 tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 #🦀
+# crab in the code ^
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/hollow/select.pos1
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui/hollow/select.pos1
 function worldtool:ui/anti_feedback_chat_message/load

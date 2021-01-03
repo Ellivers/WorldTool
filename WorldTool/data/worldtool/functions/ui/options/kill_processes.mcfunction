@@ -4,7 +4,7 @@
 #scoreboard players operation #kill_wt_drawer worldtool += #kill_clonepos worldtool
 #tellraw @s ["Killed ",{"score": {"name": "#kill_wt_drawer","objective": "worldtool"}}," entities"]
 tellraw @s "Killed running processes"
-tag @s remove wt.started_function
+tag @s remove wt_started_function
 scoreboard players reset #drawerError worldtool
 scoreboard players set $functionRunning worldtool 0
 scoreboard players set #displayLagWarning worldtool 1

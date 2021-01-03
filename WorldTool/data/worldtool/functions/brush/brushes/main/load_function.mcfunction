@@ -1,6 +1,6 @@
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add wt_brushload
-execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add wt.started_function
+execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add wt_started_function
 
 #define score_holder $brushFunctionRunning
 scoreboard players set $brushFunctionRunning worldtool 1

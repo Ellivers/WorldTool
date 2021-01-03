@@ -1,4 +1,5 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run function worldtool:ui/kill_wt_check
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui/kill_wt_check
 
 tag @s remove placing_replace_foliage
 tag @s remove placing_replace_foliage_reversed

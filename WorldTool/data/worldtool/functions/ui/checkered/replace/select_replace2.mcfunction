@@ -1,5 +1,6 @@
 function worldtool:ui/clear_chat
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID at @s run setblock ~1 1 ~ minecraft:air
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = #ID_temp worldtool at @s run setblock ~1 1 ~ minecraft:air
 tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/checkered/replace/select_replace1"}}
 tag @s remove c_replacing_fill1
 tag @s add c_replacing_fill2

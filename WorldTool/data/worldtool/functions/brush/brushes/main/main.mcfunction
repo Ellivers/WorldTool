@@ -1,4 +1,5 @@
-execute at @a if score @s wt_ID = @p wt_ID as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=setblock_source] if score @s wt_ID = @p wt_ID run kill @s
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=setblock_source] if score @s wt_ID = #ID_temp worldtool run kill @s
 # Sets the block at 0 1 13 to the block you're using with your brush
 execute unless entity @s[predicate=!worldtool:brush/air] run tag @s add brush_paint_air
 #execute unless entity @s[tag=brush_replace] run setblock 2 1 13 air

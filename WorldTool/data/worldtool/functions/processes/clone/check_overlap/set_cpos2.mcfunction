@@ -46,8 +46,9 @@ execute store result score @s wt_rotZ run data get entity @s Pos[2]
 
 function worldtool:processes/clone/check_overlap/check
 
-execute if entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/clone/overlap_warning
-execute unless entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:ui/clone/start.check4
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute if entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui/clone/overlap_warning
+execute unless entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui/clone/start.check4
 
 
 tag @s remove wt_overlappingX

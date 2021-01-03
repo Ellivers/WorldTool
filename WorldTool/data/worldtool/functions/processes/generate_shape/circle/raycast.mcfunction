@@ -2,6 +2,7 @@
 
 scoreboard players add #generationRay worldtool 100
 scoreboard players add #genFunctionsRun worldtool 1
+
 execute if score #hollowTemp worldtool matches 1 if score #generationRay worldtool > #rayMaxDistance worldtool run function worldtool:block_place/place_block
 execute unless score #hollowTemp worldtool matches 1 run function worldtool:block_place/place_block
 

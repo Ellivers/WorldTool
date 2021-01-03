@@ -1,8 +1,9 @@
 # Copy the rotation to this entity
-execute at @a if score @s wt_ID = @p wt_ID as @p run function worldtool:load_process/load_clone.settempscore
-execute at @a[tag=mirrorX] if score @s wt_ID = @p wt_ID run tag @s add mirrorX
-execute at @a[tag=mirrorY] if score @s wt_ID = @p wt_ID run tag @s add mirrorY
-execute at @a[tag=mirrorZ] if score @s wt_ID = @p wt_ID run tag @s add mirrorZ
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:load_process/load_clone.settempscore
+execute at @a[tag=mirrorX] if score #ID_temp worldtool = @p wt_ID run tag @s add mirrorX
+execute at @a[tag=mirrorY] if score #ID_temp worldtool = @p wt_ID run tag @s add mirrorY
+execute at @a[tag=mirrorZ] if score #ID_temp worldtool = @p wt_ID run tag @s add mirrorZ
 scoreboard players operation @s wt_rotX = $temp wt_rotX
 scoreboard players operation @s wt_rotY = $temp wt_rotY
 scoreboard players operation @s wt_rotZ = $temp wt_rotZ

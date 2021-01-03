@@ -27,9 +27,10 @@ scoreboard players set #sTotalRot worldtool 0
 scoreboard players set #sMaxRotation worldtool 0
 scoreboard players set #sMaxDegrees worldtool 18000
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = @p wt_ID run kill @s
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = #ID_temp worldtool run kill @s
 
-tag @s add wt.started_function
+tag @s add wt_started_function
 scoreboard players set $functionRunning worldtool 1
 execute if score $progressBar worldtool matches 1.. run function worldtool:processes/generate_shape/sphere/get_volume
 

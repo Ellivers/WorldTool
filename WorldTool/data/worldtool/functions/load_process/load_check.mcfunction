@@ -1,6 +1,6 @@
 # Start
 
-tag @s add wt.started_function
+tag @s add wt_started_function
 function worldtool:ui/anti_feedback_chat_message/load
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 

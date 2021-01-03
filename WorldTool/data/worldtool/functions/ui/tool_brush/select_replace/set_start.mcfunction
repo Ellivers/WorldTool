@@ -1,4 +1,5 @@
-execute at @a if score @s wt_ID = @p wt_ID run tag @p add setting_bb_replace
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @a if score @s wt_ID = #ID_temp worldtool run tag @s add setting_bb_replace
 setblock ~ 254 ~ minecraft:stone
 clone ~ ~ ~ ~ ~ ~ ~ 255 ~ replace move
 execute positioned ~ 256 ~ align xyz run summon minecraft:arrow ~.5 ~ ~.5 {Tags:[switch_block_brush,worldtool],Motion:[0d,-1d,0d]}

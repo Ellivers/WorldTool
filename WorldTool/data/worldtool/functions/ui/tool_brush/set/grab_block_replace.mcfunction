@@ -14,8 +14,9 @@ execute if entity @s[tag=replacebrush_reversed] run data modify entity @e[type=m
 clone ~1 255 ~ ~1 255 ~ ~2 255 ~
 execute at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brush_grab_marker] run clone ~1 ~-1 ~ ~1 ~ ~ ~ ~-1 ~
 
+scoreboard players operation #ID_temp worldtool = @s wt_ID
 tag @s remove replacebrush
 tag @s remove replacebrush_reversed
 kill @e[type=minecraft:arrow,tag=switch_block_brush,limit=1]
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = @p wt_ID run kill @s
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check] if score @s wt_ID = #ID_temp worldtool run kill @s
 replaceitem entity @s weapon.mainhand minecraft:air

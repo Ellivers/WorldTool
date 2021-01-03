@@ -1,6 +1,6 @@
 scoreboard players set #posSelected worldtool 1
 # Clear the chat (as the player that this entity belongs to)
-execute at @a if score @s wt_ID = @p wt_ID run scoreboard players operation #ID_temp worldtool = @p wt_ID
+scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute as @a if score @s wt_ID = #ID_temp worldtool run function worldtool:ui/clear_chat
 
 #define score_holder $functionRunning

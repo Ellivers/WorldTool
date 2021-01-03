@@ -1,7 +1,8 @@
 tag @s add wt_user
 # Give both positions belonging to the executing player a tag to be able to select them
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run tag @s add pos1_found
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = @p wt_ID run tag @s add pos2_found
+scoreboard players operation #ID_temp worldtool = @s wt_ID
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run tag @s add pos1_found
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run tag @s add pos2_found
 
 execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1_found] if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2_found] run function worldtool:ui/select
 
