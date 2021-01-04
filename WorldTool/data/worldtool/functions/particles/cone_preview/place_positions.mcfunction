@@ -81,4 +81,4 @@ execute unless entity @s[predicate=!worldtool:orientation/north,predicate=!world
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cone_preview] if score @s wt_ID = #ID_temp worldtool run tag @s add wt_coneprev_select
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cone_preview] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:particles/cone_preview/place_positions2
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_cone_preview] if score @s wt_ID = #ID_temp worldtool run tag @s remove wt_coneprev_select
-schedule function worldtool:particles/main 8t append
+schedule function worldtool:particles/main 8t replace
