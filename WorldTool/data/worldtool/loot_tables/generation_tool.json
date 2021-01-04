@@ -24,7 +24,7 @@
                   "entity": "this",
                   "lore": [
                     "",
-                    {"text":"Selected block:"},
+                    {"text":"Selected block:","color": "white","italic": false},
                     {"nbt":"SelectedItem.tag.Block.BlockState.Name","entity":"@s", "color": "light_purple", "italic": false},
                     "",
                     [{

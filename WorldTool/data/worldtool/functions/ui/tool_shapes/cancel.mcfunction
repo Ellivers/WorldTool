@@ -6,4 +6,5 @@ tag @s remove grabbing_block
 tag @s remove grabbing_block_gentool
 function worldtool:ui/clear_chat
 tellraw @s "Cancelled"
+tag @s add nospaceplzthx
 function worldtool:ui/anti_feedback_chat_message/load

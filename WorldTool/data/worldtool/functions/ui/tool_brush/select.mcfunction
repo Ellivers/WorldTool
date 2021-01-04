@@ -17,7 +17,7 @@ execute if predicate worldtool:brushes/circle run tag @s add wt_brush.circle
 execute if predicate worldtool:brushes/sphere run tag @s add wt_brush.sphere
 execute if predicate worldtool:brushes/structure run tag @s add wt_brush.structure
 
-execute if predicate worldtool:brushes/any unless data entity @s SelectedItem.tag.Brush run tellraw @s {"text":"\n\nPlease select a brush.","color":"gold","italic":true}
+execute if predicate worldtool:brushes/none run tellraw @s {"text":"\n\nPlease select a brush.","color":"gold","italic":true}
 execute if entity @s[tag=wt_brush.paint] run tellraw @s [{"text":"\n\n"},{"text":"Current brush: Paint","color":"yellow","bold":true}]
 execute if entity @s[tag=wt_brush.place] run tellraw @s [{"text":"\n\n"},{"text":"Current brush: Place","color":"yellow","bold":true}]
 execute if entity @s[tag=wt_brush.replace] run tellraw @s [{"text":"\n\n"},{"text":"Current brush: Replace","color":"yellow","bold":true},{"text":"\n[Replace new block...]","color":"aqua","bold":false,"hoverEvent":{"action":"show_text","value":"Select a new block to replace"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/tool_brush/select_replace/select"}}]

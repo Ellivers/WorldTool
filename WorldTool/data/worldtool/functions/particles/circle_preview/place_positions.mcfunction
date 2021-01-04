@@ -15,7 +15,7 @@ scoreboard players operation #tempPos worldtool += #tempRadius worldtool
 execute if predicate worldtool:orientation/up run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","1","wt_particles","wt_shape_preview","up"]}
 execute if predicate worldtool:orientation/north run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","1","wt_particles","wt_shape_preview","north"]}
 execute if predicate worldtool:orientation/east run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","1","wt_particles","wt_shape_preview","east"]}
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] wt_ID = @s wt_ID
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,tag=1,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute if predicate worldtool:orientation/east store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[2] double 0.01 run scoreboard players get #tempPos worldtool
 execute unless entity @s[predicate=!worldtool:orientation/up,predicate=!worldtool:orientation/north] store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[0] double 0.01 run scoreboard players get #tempPos worldtool
 
@@ -25,7 +25,7 @@ scoreboard players operation #tempPos worldtool -= #tempRadius worldtool
 execute if predicate worldtool:orientation/up run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","2","wt_particles","wt_shape_preview","up"]}
 execute if predicate worldtool:orientation/north run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","2","wt_particles","wt_shape_preview","north"]}
 execute if predicate worldtool:orientation/east run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","2","wt_particles","wt_shape_preview","east"]}
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] wt_ID = @s wt_ID
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,tag=2,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute if predicate worldtool:orientation/east store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[2] double 0.01 run scoreboard players get #tempPos worldtool
 execute unless entity @s[predicate=!worldtool:orientation/up,predicate=!worldtool:orientation/north] store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[0] double 0.01 run scoreboard players get #tempPos worldtool
 
@@ -35,7 +35,7 @@ scoreboard players operation #tempPos worldtool += #tempRadius worldtool
 execute if predicate worldtool:orientation/up run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","3","wt_particles","wt_shape_preview","up"]}
 execute if predicate worldtool:orientation/north run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","3","wt_particles","wt_shape_preview","north"]}
 execute if predicate worldtool:orientation/east run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","3","wt_particles","wt_shape_preview","east"]}
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] wt_ID = @s wt_ID
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,tag=3,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute if predicate worldtool:orientation/up store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[2] double 0.01 run scoreboard players get #tempPos worldtool
 execute unless entity @s[predicate=!worldtool:orientation/east,predicate=!worldtool:orientation/north] store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[1] double 0.01 run scoreboard players get #tempPos worldtool
 
@@ -45,7 +45,7 @@ scoreboard players operation #tempPos worldtool -= #tempRadius worldtool
 execute if predicate worldtool:orientation/up run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","4","wt_particles","wt_shape_preview","up"]}
 execute if predicate worldtool:orientation/north run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","4","wt_particles","wt_shape_preview","north"]}
 execute if predicate worldtool:orientation/east run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_circle_preview","4","wt_particles","wt_shape_preview","east"]}
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] wt_ID = @s wt_ID
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,tag=4,sort=nearest,limit=1] wt_ID = @s wt_ID
 execute if predicate worldtool:orientation/up store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[2] double 0.01 run scoreboard players get #tempPos worldtool
 execute unless entity @s[predicate=!worldtool:orientation/east,predicate=!worldtool:orientation/north] store result entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview,sort=nearest,limit=1] Pos[1] double 0.01 run scoreboard players get #tempPos worldtool
 
