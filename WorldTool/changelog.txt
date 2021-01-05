@@ -1,5 +1,7 @@
+The reason this update exists is because it fixes a lot of bugs and contains a lot of improvements.
+I still have more features planned for version 0.6, so this serves as a sort of in-between version.
+
 - Added generation tool for generating shapes
-- Added an option to show a progress bar
 - Fixed a lot of multiplayer issues
 - With the non-general tool block picking, more blocks can now be picked
 - A tool's actions are now shown in the tooltip
@@ -10,10 +12,10 @@
 - The [Options] button now shows up without needing both pos
 - Added command functionality for command block chain and structure corner
 - Added more error messages (yay!)
-- The [Show loading bar] option is now enabled by default
-- Added a togglable option for performance warnings
+- Added an option to show a progress bar
+- Added an option for performance warnings
 - Added an option for making the space between menus a lot smaller
-- Added a togglable option for displaying a reload message
+- Added an option for displaying a reload message
 - Many bugfixes
 - Many reworks
 - Performance improvements
