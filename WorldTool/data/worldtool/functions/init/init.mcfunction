@@ -53,7 +53,7 @@ execute unless score $circleBlocksPerTick worldtool matches 2.. run scoreboard p
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboard players set $forceLoadCmdPositions worldtool 0
-execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 0
+execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 1
 execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
 execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
 

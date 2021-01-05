@@ -1,6 +1,5 @@
 - Added generation tool for generating shapes
 - Added an option to show a progress bar
-- Added a togglable performance warning
 - Fixed a lot of multiplayer issues
 - With the non-general tool block picking, more blocks can now be picked
 - A tool's actions are now shown in the tooltip
@@ -11,6 +10,8 @@
 - The [Options] button now shows up without needing both pos
 - Added command functionality for command block chain and structure corner
 - Added more error messages (yay!)
+- The [Show loading bar] option is now enabled by default
+- Added a togglable option for performance warnings
 - Added an option for making the space between menus a lot smaller
 - Added a togglable option for displaying a reload message
 - Many bugfixes

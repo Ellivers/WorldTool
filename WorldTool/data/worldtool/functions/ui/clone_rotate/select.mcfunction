@@ -11,9 +11,9 @@ execute at @s as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID =
 execute if entity @s[tag=mirrorX] run tellraw @s {"text":"Current rotation: Mirror X","color":"gold","bold":true}
 execute if entity @s[tag=mirrorY] run tellraw @s {"text":"Current rotation: Mirror Y","color":"gold","bold":true}
 execute if entity @s[tag=mirrorZ] run tellraw @s {"text":"Current rotation: Mirror Z","color":"gold","bold":true}
-execute unless score @s wt_rotY matches 0 run tellraw @s [{"text":"Current rotation: Y ","color":"gold","bold":true},{"score":{"name":"@s","objective":"rotY"},"color":"gold","bold":true}]
-execute unless score @s wt_rotZ matches 0 run tellraw @s [{"text":"Current rotation: Z ","color":"gold","bold":true},{"score":{"name":"@s","objective":"rotZ"},"color":"gold","bold":true}]
-execute unless score @s wt_rotX matches 0 run tellraw @s [{"text":"Current rotation: X ","color":"gold","bold":true},{"score":{"name":"@s","objective":"rotX"},"color":"gold","bold":true}]
+execute unless score @s wt_rotX matches 0 run tellraw @s [{"text":"Current rotation: X ","color":"gold","bold":true},{"score":{"name":"@s","objective":"wt_rotX"},"color":"gold","bold":true}]
+execute unless score @s wt_rotY matches 0 run tellraw @s [{"text":"Current rotation: Y ","color":"gold","bold":true},{"score":{"name":"@s","objective":"wt_rotY"},"color":"gold","bold":true}]
+execute unless score @s wt_rotZ matches 0 run tellraw @s [{"text":"Current rotation: Z ","color":"gold","bold":true},{"score":{"name":"@s","objective":"wt_rotZ"},"color":"gold","bold":true}]
 
 tellraw @s [{"text":"\n\n[X -90]   ","color":"light_purple","hoverEvent":{"action":"show_text","value":"X -90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/-x"}},{"text":"[X +90]\n","color":"light_purple","hoverEvent":{"action":"show_text","value":"X +90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/x"}}]
 tellraw @s [{"text":"[Y -90]   ","color":"light_purple","hoverEvent":{"action":"show_text","value":"Y -90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/-y"}},{"text":"[Y +90]\n","color":"light_purple","hoverEvent":{"action":"show_text","value":"Y +90"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/clone_rotate/y"}}]

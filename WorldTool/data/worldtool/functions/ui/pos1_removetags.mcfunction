@@ -24,3 +24,6 @@ tag @s remove filling_outline
 tag @s remove wt_no_drops
 tag @s remove wt_destroy
 tag @s remove wt_fill
+tag @s remove wt_nochX
+tag @s remove wt_nochY
+tag @s remove wt_nochZ
