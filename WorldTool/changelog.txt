@@ -1,2 +1,2 @@
-- Several bugfixes
+- Several bugfixes, incluing a fix for the destroy function and replacing with air not working
 - Minor improvements
