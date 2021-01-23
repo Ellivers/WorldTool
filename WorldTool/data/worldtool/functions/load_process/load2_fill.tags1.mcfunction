@@ -1,6 +1,7 @@
 # First list
-execute if entity @s[tag=cloning_wt,tag=!from_cmd] run function worldtool:load_process/load_clone
-execute if entity @s[tag=cloning_wt,tag=from_cmd] run function worldtool:cmd/load_clone2
+execute if entity @s[tag=cloning_wt,tag=wt_setting_clone,tag=!from_cmd] run function worldtool:load_process/load_clone
+execute if entity @s[tag=cloning_wt,tag=!wt_setting_clone,tag=rotated] run function worldtool:processes/clone/rotated
+execute if entity @s[tag=cloning_wt,tag=!wt_setting_clone,tag=!rotated] run function worldtool:processes/clone/clone
 execute if entity @s[tag=hollow] run function worldtool:processes/hollow/hollow
 execute if entity @s[tag=random1,tag=!from_cmd] run function worldtool:processes/random/1
 execute if entity @s[tag=random1,tag=from_cmd] run function worldtool:cmd/random/1

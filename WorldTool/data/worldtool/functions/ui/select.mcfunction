@@ -17,6 +17,7 @@ tellraw @s[tag=wt_outline_selection] ["",{"text":"[Outline selection: On]","colo
 tellraw @s[tag=!wt_outline_selection] ["",{"text":"[Outline selection: Off]","color":"dark_purple","hoverEvent":{"action":"show_text","value":"Highlight the selected area while in the menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/outline/on"}},"                                                ",{"text": "[?]\n","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}}]
 
 execute if entity @s[tag=wt_outline_selection] run function worldtool:ui/outline/load1
+execute if entity @s[tag=wt_outline_selection] run schedule function worldtool:particles/main 8t replace
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui/select.pos1
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,tag=dostuff] if score @s wt_ID = #ID_temp worldtool run tag @s remove dostuff
 function worldtool:ui/player_removetags
