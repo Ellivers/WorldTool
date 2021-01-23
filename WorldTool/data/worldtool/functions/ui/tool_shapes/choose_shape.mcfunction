@@ -14,4 +14,7 @@ execute if predicate worldtool:shapes/sphere run tellraw @s {"text": "[Sphere]",
 execute unless predicate worldtool:shapes/cone run tellraw @s {"text": "[Cone]","color": "green","hoverEvent": {"action": "show_text","value": "Cone"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/tool_shapes/select/cone"}}
 execute if predicate worldtool:shapes/cone run tellraw @s {"text": "[Cone]","color": "gray","hoverEvent": {"action": "show_text","value": "Cone"}}
 
+execute if score $shapeToolAddons worldtool matches 1.. run tellraw @s {"text": "\nAddon shapes:","color": "light_purple"}
+function #worldtool:shape_tool/select_shape
+
 function worldtool:ui/anti_feedback_chat_message/load

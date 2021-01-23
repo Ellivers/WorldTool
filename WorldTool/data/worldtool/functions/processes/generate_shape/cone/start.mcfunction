@@ -7,6 +7,7 @@ execute if predicate worldtool:orientation/west run scoreboard players set #axis
 
 scoreboard players set #shapeRotated worldtool 0
 scoreboard players operation #shapePrecision worldtool = @s wt_precision
+scoreboard players operation #shapePrecision worldtool *= #100 worldtool
 scoreboard players operation #generationRadius worldtool = @s wt_diameter
 scoreboard players operation #generationRadius worldtool /= #2 worldtool
 scoreboard players operation #maxHeight worldtool = @s wt_height
@@ -24,9 +25,9 @@ scoreboard players operation #maxRotation worldtool = @s wt_degrees
 execute if score #axisTemp worldtool matches 1..2 run scoreboard players operation #maxRotation worldtool += @s wt_rotY
 execute if score #axisTemp worldtool matches 3..6 run scoreboard players operation #maxRotation worldtool += @s wt_rotX
 execute if score #maxRotation worldtool matches 360.. run scoreboard players remove #maxRotation worldtool 360
-scoreboard players operation #maxRotation worldtool *= #100 worldtool
+scoreboard players operation #maxRotation worldtool *= #10000 worldtool
 scoreboard players operation #maxDegrees worldtool = @s wt_degrees
-scoreboard players operation #maxDegrees worldtool *= #100 worldtool
+scoreboard players operation #maxDegrees worldtool *= #10000 worldtool
 scoreboard players set #hollowTemp worldtool 0
 scoreboard players set #hollowTempTemp worldtool 0
 execute if predicate worldtool:shapes/hollow run scoreboard players set #hollowTempTemp worldtool 1

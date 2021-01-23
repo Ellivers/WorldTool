@@ -23,7 +23,7 @@ execute unless predicate worldtool:brushes/structure run tellraw @p [{"text":"[S
 execute if predicate worldtool:brushes/structure run tellraw @p [{"text":"[Structure]","color":"gray"}]
 
 execute if score $brushAddons worldtool matches 1.. run tellraw @p {"text": "\nAddon brushes:\n","color":"light_purple"}
-function #worldtool:brush_list
+function #worldtool:brush/select_brush
 
 tellraw @s {"text":"\n[⬅Back]","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main brush menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/tool_brush/select"}}
 function worldtool:ui/anti_feedback_chat_message/load

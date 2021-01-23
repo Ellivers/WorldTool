@@ -17,8 +17,11 @@ tellraw @s ["",{"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": 
 execute if entity @s[tag=wt_outline_selection] run tellraw @s {"text": "[Outline selection: On]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Toggle particle previewing and highlighting"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/outline_toggle"}}
 execute if entity @s[tag=!wt_outline_selection] run tellraw @s {"text": "[Outline selection: Off]","color":"dark_purple","hoverEvent": {"action": "show_text","value": "Toggle particle previewing and highlighting"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/outline_toggle"}}
 
-execute if entity @s[tag=wt_pos1found,tag=wt_pos2found] run tellraw @s ["",{"text": "\n\n[Nudge Selection...]  ","color":"light_purple","hoverEvent": {"action": "show_text","value": "Move one or both positions one block at a time"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/nudge/select"}},{"text": "[Settings...]","color":"dark_green","hoverEvent": {"action": "show_text","value": "Settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}}]
+execute if entity @s[tag=wt_pos1found,tag=wt_pos2found] run tellraw @s ["",{"text": "\n\n[Nudge Selection...]  ","color":"gold","hoverEvent": {"action": "show_text","value": "Move one or both positions one block at a time"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/nudge/select"}},{"text": "[Settings...]","color":"dark_green","hoverEvent": {"action": "show_text","value": "Settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}}]
 execute unless entity @s[tag=wt_pos1found,tag=wt_pos2found] run tellraw @s {"text": "\n\n[Settings...]","color":"dark_green","hoverEvent": {"action": "show_text","value": "Settings"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/settings"}}
+execute if score $addons worldtool matches 1.. run tellraw @s {"text": "[Addon list...]","color": "light_purple","hoverEvent": {"action": "show_text","value": "Show a list of installed addons with additional addon info"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/addon_list"}}
+execute if score $optionAddons worldtool matches 1.. run tellraw @s {"text": "Addon options:"}
+function #worldtool:options
 function worldtool:ui/anti_feedback_chat_message/load
 
 tag @s remove wt_pos1found

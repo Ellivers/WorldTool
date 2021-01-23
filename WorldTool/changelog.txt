@@ -1,2 +1,3 @@
-- Several bugfixes, incluing a fix for the destroy function and replacing with air not working
-- Minor improvements
+- Added toggles for all sides of the selection with Hollow
+- Fixed the brush item sometimes disappearing when not having a brush selected
+- Fixed some precision and overflowing issues with shape generation

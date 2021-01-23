@@ -56,6 +56,7 @@ execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboar
 execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 1
 execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
 execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
+execute unless score $sizeWarnLimit worldtool matches 0..10000000 run scoreboard players set $sizeWarnLimit worldtool 100000
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
@@ -66,6 +67,7 @@ scoreboard players set #8 worldtool 8
 scoreboard players set #10 worldtool 10
 scoreboard players set #100 worldtool 100
 scoreboard players set #200 worldtool 200
+scoreboard players set #1000 worldtool 1000
 scoreboard players set #10000 worldtool 10000
 scoreboard players set #pi worldtool 31416
 
@@ -81,10 +83,15 @@ scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborder
 scoreboard players remove #minWorldborderSize worldtool 20
 scoreboard players set #displayLagWarning worldtool 1
 
+#define storage worldtool:storage
+# Addon list storage
+data modify storage worldtool:storage AddonList set value []
+
 # Addon variables
 scoreboard players set $addons worldtool 0
-scoreboard players set $brushAddons worldtool 0
-scoreboard players set $processAddons worldtool 0
+scoreboard players set $generalToolAddons worldtool 0
+scoreboard players set $brushToolAddons worldtool 0
+scoreboard players set $shapeToolAddons worldtool 0
 scoreboard players set $settingAddons worldtool 0
 scoreboard players set $optionAddons worldtool 0
 function #worldtool:addon_init

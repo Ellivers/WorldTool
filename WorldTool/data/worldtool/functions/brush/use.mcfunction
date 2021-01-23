@@ -17,4 +17,4 @@ execute if entity @s[predicate=worldtool:brushes/structure] unless score $functi
 execute if entity @s[predicate=worldtool:brushes/sphere] run function worldtool:brush/brushes/sphere/loadcheck
 execute if entity @s[predicate=worldtool:brushes/circle] run function worldtool:brush/brushes/circle/loadcheck
 
-function #worldtool:brush/hit_block
+function #worldtool:brush/use

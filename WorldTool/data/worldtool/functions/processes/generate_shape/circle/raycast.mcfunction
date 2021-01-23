@@ -7,5 +7,5 @@ execute if score #hollowTemp worldtool matches 1 if score #generationRay worldto
 execute unless score #hollowTemp worldtool matches 1 run function worldtool:block_place/place_block
 
 execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #generationRay worldtool > #rayMaxDistance worldtool positioned ^ ^ ^.5000001 run function worldtool:processes/generate_shape/circle/raycast
-execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool if score #generationRay worldtool > #rayMaxDistance worldtool run function worldtool:processes/generate_shape/circle/rotate
+execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool if score #generationRay worldtool > #rayMaxDistance worldtool unless entity @s[tag=wt_dont_continue] run function worldtool:processes/generate_shape/circle/rotate
 #execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t

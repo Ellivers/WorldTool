@@ -51,6 +51,9 @@ data modify entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_draw
 # When randomizing, make sure to fill from the bottom up, to try making sure blocks that need support don't pop off
 execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_process/switch_y_levels
 
+# Setting the relative sides for the hollow function
+execute if entity @s[tag=hollow] run function worldtool:load_process/load_hollow
+
 # Some stuff
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_process/load_fill.wtd
 scoreboard players set $blocksplaced worldtool 0

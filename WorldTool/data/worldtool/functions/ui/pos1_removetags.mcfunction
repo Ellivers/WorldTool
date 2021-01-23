@@ -27,3 +27,9 @@ tag @s remove wt_fill
 tag @s remove wt_nochX
 tag @s remove wt_nochY
 tag @s remove wt_nochZ
+tag @s remove wt_exclude_east
+tag @s remove wt_exclude_west
+tag @s remove wt_exclude_up
+tag @s remove wt_exclude_down
+tag @s remove wt_exclude_south
+tag @s remove wt_exclude_north

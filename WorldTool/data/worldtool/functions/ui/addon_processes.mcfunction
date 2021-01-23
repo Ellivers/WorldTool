@@ -6,4 +6,6 @@ tag @s add wt_backbuttonplzthx
 function worldtool:ui/clear_chat
 
 tellraw @s {"text": "List of addon processes:\n","color":"light_purple"}
-function #worldtool:processes
+function #worldtool:general_list
+
+function worldtool:ui/anti_feedback_chat_message/load

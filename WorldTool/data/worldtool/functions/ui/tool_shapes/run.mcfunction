@@ -7,3 +7,4 @@ execute if predicate worldtool:shapes/circle unless score $functionRunning world
 execute if predicate worldtool:shapes/cylinder unless score $functionRunning worldtool matches 1.. at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seelected] run function worldtool:processes/generate_shape/cylinder/start
 execute if predicate worldtool:shapes/sphere unless score $functionRunning worldtool matches 1.. at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seelected] run function worldtool:processes/generate_shape/sphere/start
 execute if predicate worldtool:shapes/cone unless score $functionRunning worldtool matches 1.. at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker,tag=wt_be_seelected] run function worldtool:processes/generate_shape/cone/start
+function #worldtool:shape_tool/use
