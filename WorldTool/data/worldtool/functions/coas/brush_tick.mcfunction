@@ -1,1 +1,1 @@
-execute as @a[tag=brush_tick] at @s run function worldtool:ui/tool_brush/drop_redirects
+execute as @a[tag=brush_tick] at @s run function worldtool:ui_brush/drop_redirects

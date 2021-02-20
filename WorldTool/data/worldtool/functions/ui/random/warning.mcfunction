@@ -1,4 +1,0 @@
-function worldtool:ui/clear_chat
-tag @s add wt_waiting_in_menu
-tellraw @s [{"text":"WARNING:\nThe selected area is very large, and using/loading this as a\nsource for random blocks ","color":"gold"},{"text":"will","underlined":true},{"text":" cause huge amounts of lag and\npossibly crash the server.\nDo you wish to proceed anyway?"},{"text": "\n\n[⬅Back]  ","color":"green","bold": true,"hoverEvent": {"action": "show_text","value": "Go back to the randomizing menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui/random/select"}},{"text":"[Continue]","color":"red","hoverEvent":{"action":"show_text","value":"Continue"},"clickEvent":{"action":"run_command","value":"/function worldtool:load_process/load_random_check.3"}}]
-function worldtool:ui/anti_feedback_chat_message/load

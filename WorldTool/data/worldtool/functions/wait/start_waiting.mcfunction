@@ -7,8 +7,8 @@ execute as @a[scores={wt_queue_pos=2..}] run scoreboard players operation #highe
 scoreboard players add #highest wt_queue_pos 1
 scoreboard players operation @s wt_queue_pos = #highest wt_queue_pos
 
-function worldtool:ui/clear_chat
-tellraw @s [{"text": "Another process is currently running. The function you've \nselected will automagically start when the other process ends.","color":"gold"},{"text": "\n[Kill processes]  ","color":"red","hoverEvent": {"action": "show_text","value": "Kill all running processes"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/options/kill_processes"}},{"text":"[Cancel]","color":"white","hoverEvent":{"action":"show_text","value":"Close all menus and cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui/cancel"}}]
-function worldtool:ui/anti_feedback_chat_message/load
+function worldtool:ui_general/clear_chat
+tellraw @s [{"text": "Another process is currently running. The function you've \nselected will automagically start when the other process ends.","color":"gold"},{"text": "\n[Kill processes]  ","color":"red","hoverEvent": {"action": "show_text","value": "Kill all running processes"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/kill_processes"}},{"text":"[Cancel]","color":"white","hoverEvent":{"action":"show_text","value":"Close all menus and cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_general/cancel"}}]
+function worldtool:ui_general/anti_feedback_chat_message/load
 
 schedule function worldtool:wait/check 1t replace

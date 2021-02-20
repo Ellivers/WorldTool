@@ -1,7 +1,7 @@
 scoreboard players set #posSelected worldtool 1
 # Clear the chat (as the player that this entity belongs to)
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute as @a if score @s wt_ID = #ID_temp worldtool run function worldtool:ui/clear_chat
+execute as @a if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/clear_chat
 
 #define score_holder $functionRunning
 scoreboard players set $functionRunning worldtool 1
@@ -22,7 +22,7 @@ execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard
 execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 
 # Get the positions of pos2
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:load_process/load_fill.pos2
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:common/get_pos2
 
 # Set the current position where blocks are being drawn
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool

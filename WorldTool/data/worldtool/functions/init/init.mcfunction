@@ -35,7 +35,7 @@ scoreboard objectives add wt_degrees dummy
 
 # Detect an older version
 execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 1.. run function worldtool:upgrade_version
-scoreboard players set $version worldtool 2
+scoreboard players set $version worldtool 3
 
 # Set the blocks-per-tick settings to their default values, if they're not in a supported range
 execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4000

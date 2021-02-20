@@ -1,6 +1,6 @@
 #define tag worldtool
 
-# Called by clickEvent from worldtool:ui/options/settings
+# Called by clickEvent from worldtool:ui_general/options/settings
 # Removes everything added by WorldTool
 
 data remove storage worldtool:storage {}
@@ -43,7 +43,7 @@ scoreboard objectives remove wt_precision
 scoreboard objectives remove wt_degrees
 
 # Remove tags added by WorldTool from players
-execute as @a run function worldtool:ui/player_removetags
+execute as @a run function worldtool:ui_general/player_removetags
 tag @a remove fun_menu
 
 # Remove entities summoned by WorldTool
@@ -65,6 +65,6 @@ kill @e[type=minecraft:armor_stand]
 #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint]
 #kill @e[type=minecraft:armor_stand,tag=show_rot]
 
-function worldtool:ui/clear_chat
+function worldtool:ui_general/clear_chat
 
 tellraw @a {"text": "WorldTool has been uninstalled","color":"green"}

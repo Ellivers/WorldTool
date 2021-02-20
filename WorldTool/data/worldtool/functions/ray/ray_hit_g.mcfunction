@@ -6,4 +6,4 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,t
 
 execute if entity @s[tag=wt_outline_selection] align xyz positioned ~.5 ~.5 ~.5 run function worldtool:particles/load_shape_preview
 
-function worldtool:ui/tool_shapes/select
+function worldtool:ui_shapes/select

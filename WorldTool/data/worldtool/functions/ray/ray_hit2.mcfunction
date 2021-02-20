@@ -10,4 +10,4 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,sort=neare
 
 tellraw @s ["",{"text":"Set position 2 to "},{"score":{"name":"#posXt","objective":"worldtool"}}," ",{"score":{"name":"#posYt","objective":"worldtool"}}," ",{"score":{"name":"#posZt","objective":"worldtool"}}]
 tag @s add nospaceplzthx
-function worldtool:ui/anti_feedback_chat_message/load
+function worldtool:ui_general/anti_feedback_chat_message/load

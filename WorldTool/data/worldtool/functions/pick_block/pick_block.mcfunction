@@ -1,4 +1,4 @@
-# Called by worldtool:ui/pick_block/pick_block
+# Called by worldtool:ui_general/pick_block/pick_block
 # Moves the selected block to the required spot underneath wt_check
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID

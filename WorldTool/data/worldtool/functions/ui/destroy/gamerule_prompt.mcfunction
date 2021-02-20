@@ -1,3 +1,0 @@
-function worldtool:ui/clear_chat
-tellraw @s [{"text": "The item drops option cannot be turned on, since the \ndoTileDrops gamerule has been disabled.\nWould you like to enable the gamerule?"},{"text": "\n[No]  ","color":"red","hoverEvent": {"action": "show_text","value":"No"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/destroy/select"}},{"text": "[Yes]","color":"green","hoverEvent": {"action": "show_text","value":"Yes"},"clickEvent": {"action": "run_command","value": "/execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = @p wt_ID run function worldtool:ui/destroy/toggle_drops"}}]
-function worldtool:ui/anti_feedback_chat_message/load

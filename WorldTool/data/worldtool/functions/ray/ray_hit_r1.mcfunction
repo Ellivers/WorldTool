@@ -10,4 +10,4 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner1,s
 
 tellraw @s ["",{"text":"Set randomizer origin position 1 to "},{"score":{"name":"#posXt","objective":"worldtool"}}," ",{"score":{"name":"#posYt","objective":"worldtool"}}," ",{"score":{"name":"#posZt","objective":"worldtool"}}]
 execute at @s run playsound minecraft:entity.item.pickup master @s
-function worldtool:ui/random/setcorner1
+function worldtool:ui_general/random/setcorner1

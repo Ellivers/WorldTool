@@ -34,8 +34,8 @@ execute if predicate worldtool:tool_states/8 run tag @s add wt_pick_block_tool
 
 #define score_holder #ID_temp
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/tool_general/set_positions
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui/tool_general/menus
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/click_menu/set_positions
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/click_menu/menus
 scoreboard players reset @s wt_click
 
 scoreboard players operation #tempMaxRayDistance worldtool = $raycastingMaxDistance worldtool
