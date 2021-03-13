@@ -1,4 +1,4 @@
-# This function splits up the.. functions (they need a better name) into two main lists to reduce the amount of commands run
+# This function splits up the processes into two main lists to reduce the amount of commands run
 
 # Remove the 'ticking' tag which is there to make sure a one-block area doesn't get marked as "done"
 tag @s remove ticking

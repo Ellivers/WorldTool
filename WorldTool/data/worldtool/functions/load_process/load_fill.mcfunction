@@ -22,7 +22,7 @@ execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard
 execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 
 # Get the positions of pos2
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:common/get_pos2
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:load_process/positions/get_pos2
 
 # Set the current position where blocks are being drawn
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool

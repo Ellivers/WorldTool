@@ -1,4 +1,4 @@
-# Global starting function for most... functions. I really need to give them a better name.
+# Global starting function for most processes
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 tag @s remove placing_fill

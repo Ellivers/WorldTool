@@ -10,5 +10,5 @@ scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,t
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2,sort=nearest,limit=1] run function worldtool:ray/pos
 
 tellraw @s ["",{"text":"Set randomizer origin position 2 to "},{"score":{"name":"#posXt","objective":"worldtool"}}," ",{"score":{"name":"#posYt","objective":"worldtool"}}," ",{"score":{"name":"#posZt","objective":"worldtool"}},"\nLoading..."]
-execute at @s run playsound minecraft:entity.item.pickup master @s
-function worldtool:load_process/load_random_check
+execute if score $playUISounds worldtool matches 1.. at @s run playsound minecraft:entity.item.pickup master @s ~ ~ ~ 0.5
+function worldtool:load_process/randomize/check

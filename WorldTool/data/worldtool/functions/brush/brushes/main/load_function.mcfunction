@@ -41,14 +41,10 @@ execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/sphere] run su
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_normal] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer","worldtool"]}
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_exclude] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","replacing","wt_drawer","worldtool"]}
 
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/color] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","coloring","wt_drawer","worldtool"]}
-
-execute as @a[tag=wt_brushload,predicate=worldtool:brushes/color] run data modify entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s SelectedItem.tag.BrushSettings.Color
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] wt_ID = @s wt_ID
 
-#Start different functions depending on which brush the player is using
-execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/color,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/paint/paint
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/color] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:color
+#Start different processes depending on which brush the player is using
+execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/paint/paint
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/replace/replace
 #schedule function worldtool:load_process/load2_fill 1t
 execute as @a[tag=wt_brushload] run function worldtool:brush/player_removetags

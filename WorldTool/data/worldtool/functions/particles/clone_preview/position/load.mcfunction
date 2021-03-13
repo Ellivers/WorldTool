@@ -7,15 +7,9 @@ summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTi
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos1,sort=nearest,limit=1] wt_ID = @s wt_ID
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_ID = @s wt_ID
 
-# Get position of position 1
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos1x as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[0]
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos1y as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[1]
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos1z as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[2]
-
-# Get position of position 2
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos2x as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[0]
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos2y as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[1]
-execute store result score @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2,sort=nearest,limit=1] wt_pos2z as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run data get entity @s Pos[2]
+# Get positions
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:particles/clone_preview/position/get_pos1
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:particles/clone_preview/position/get_pos2
 
 
 # All possible rotations (there can only be one at a time)

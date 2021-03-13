@@ -4,7 +4,7 @@ tellraw @s [{"text":"Place the cloning destination in the same corner as the fir
 tag @s remove setpos2
 tag @s remove placing_fill
 tag @s[tag=wt_outline_selection] add wt_clone_preview
-execute if entity @s[tag=wt_outline_selection] run function worldtool:particles/clone_preview/delay
+execute if score $clonePreviewDelay worldtool matches 5.. if entity @s[tag=wt_outline_selection] run function worldtool:particles/clone_preview/delay
 replaceitem entity @s weapon.mainhand minecraft:air
 loot give @s loot worldtool:clone_destination_tool
 function worldtool:ui_general/anti_feedback_chat_message/load

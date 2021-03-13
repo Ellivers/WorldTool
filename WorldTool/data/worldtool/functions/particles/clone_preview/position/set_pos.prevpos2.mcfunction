@@ -2,13 +2,13 @@ execute store result score @s wt_rotX run data get entity @s Pos[0]
 execute store result score @s wt_rotY run data get entity @s Pos[1]
 execute store result score @s wt_rotZ run data get entity @s Pos[2]
 
-scoreboard players operation @s wt_differenceX = @s wt_pos1x
-scoreboard players operation @s wt_differenceY = @s wt_pos1y
-scoreboard players operation @s wt_differenceZ = @s wt_pos1z
+scoreboard players operation @s wt_differenceX = $pos1xt worldtool
+scoreboard players operation @s wt_differenceY = $pos1yt worldtool
+scoreboard players operation @s wt_differenceZ = $pos1zt worldtool
 
-scoreboard players operation @s wt_differenceX -= @s wt_pos2x
-scoreboard players operation @s wt_differenceY -= @s wt_pos2y
-scoreboard players operation @s wt_differenceZ -= @s wt_pos2z
+scoreboard players operation @s wt_differenceX -= $pos2xt worldtool
+scoreboard players operation @s wt_differenceY -= $pos2yt worldtool
+scoreboard players operation @s wt_differenceZ -= $pos2zt worldtool
 
 
 scoreboard players operation @s wt_temp_diffX = @s wt_differenceX

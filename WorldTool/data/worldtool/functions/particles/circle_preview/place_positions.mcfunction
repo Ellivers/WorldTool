@@ -54,4 +54,4 @@ scoreboard players operation #tempDiameter worldtool = @s wt_diameter
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview] if score @s wt_ID = #ID_temp worldtool run tag @s add wt_circleprev_select
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:particles/circle_preview/place_positions2
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_circle_preview] if score @s wt_ID = #ID_temp worldtool run tag @s remove wt_circleprev_select
-schedule function worldtool:particles/main 8t replace
+#schedule function worldtool:particles/main 8t replace

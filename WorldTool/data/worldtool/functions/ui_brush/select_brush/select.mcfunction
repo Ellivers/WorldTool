@@ -7,9 +7,6 @@ execute if predicate worldtool:brushes/paint run tellraw @p [{"text":"[Paint]","
 execute unless predicate worldtool:brushes/place run tellraw @p [{"text":"[Place]","color":"green","hoverEvent":{"action":"show_text","value":"Place blocks on existing ones"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/select_brush/place"}}]
 execute if predicate worldtool:brushes/place run tellraw @p [{"text":"[Place]","color":"gray"}]
 
-#execute unless predicate worldtool:brushes/color run tellraw @p [{"text":"[Color]","color":"green","hoverEvent":{"action":"show_text","value":"Change blocks to their closest colored counterpart"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/select_brush/color"}}]
-#execute if predicate worldtool:brushes/color run tellraw @p [{"text":"[Color]","color":"gray"}]
-
 execute unless predicate worldtool:brushes/replace run tellraw @p [{"text":"[Replace]","color":"green","hoverEvent":{"action":"show_text","value":"Choose a block to replace"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/select_brush/replace"}}]
 execute if predicate worldtool:brushes/replace run tellraw @p [{"text":"[Replace]","color":"gray"}]
 

@@ -57,6 +57,7 @@ execute unless score $progressBar worldtool matches 0..1 run scoreboard players 
 execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
 execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
 execute unless score $sizeWarnLimit worldtool matches 0..10000000 run scoreboard players set $sizeWarnLimit worldtool 100000
+execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
 scoreboard players set #2 worldtool 2
@@ -71,7 +72,7 @@ scoreboard players set #1000 worldtool 1000
 scoreboard players set #10000 worldtool 10000
 scoreboard players set #pi worldtool 31416
 
-execute unless score $clonePreviewDelay worldtool matches 0.. run scoreboard players set $clonePreviewDelay worldtool 2
+execute unless score $clonePreviewDelay worldtool matches 4.. run scoreboard players set $clonePreviewDelay worldtool 5
 
 gamerule commandBlockOutput false
 
