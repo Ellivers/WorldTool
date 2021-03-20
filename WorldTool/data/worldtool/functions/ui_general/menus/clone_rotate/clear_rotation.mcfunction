@@ -1,0 +1,3 @@
+function worldtool:ui_general/menus/clone_rotate/reset
+function worldtool:ui_general/menus/clone_rotate/mirror_off
+function worldtool:ui_general/menus/clone_rotate/select

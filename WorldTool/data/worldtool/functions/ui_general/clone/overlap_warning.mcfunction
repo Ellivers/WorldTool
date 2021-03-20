@@ -1,3 +1,0 @@
-function worldtool:ui_general/clear_chat
-tellraw @s [{"text": "WARNING\nThe selected clone destination overlaps the source. This will \nmost likely cause the source to get messed up.\nDo you want to continue anyway?","color": "gold"},{"text": "\n\n[⬅Back]  ","color":"green","bold": true,"hoverEvent": {"action": "show_text","value": "Go back to the clone menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/clone/select_clone"}},{"text": "[Continue]","color":"red","hoverEvent": {"action": "show_text","value": "Continue"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/clone/start.check4"}}]
-function worldtool:ui_general/anti_feedback_chat_message/load

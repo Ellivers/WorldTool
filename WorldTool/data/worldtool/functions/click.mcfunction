@@ -1,7 +1,5 @@
 # Called by worldtool:player_tick
 
-#execute unless score @s wt_ID matches -2147483648.. unless score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUIDMost 0.0000000001
-#execute unless score @s wt_ID matches -2147483648.. if score $20w12a+ worldtool matches 1 store result score @s wt_ID run data get entity @s UUID[0]
 # If the player doesn't have an ID, give one
 execute unless score @s wt_ID matches -2147483648.. run function worldtool:assign_id
 
@@ -34,8 +32,8 @@ execute if predicate worldtool:tool_states/8 run tag @s add wt_pick_block_tool
 
 #define score_holder #ID_temp
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/click_menu/set_positions
-execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/click_menu/menus
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/menus/click/set_positions
+execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/menus/click/menus
 scoreboard players reset @s wt_click
 
 scoreboard players operation #tempMaxRayDistance worldtool = $raycastingMaxDistance worldtool

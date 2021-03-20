@@ -1,4 +1,4 @@
-function worldtool:ui_general/options/bpt/get
+function worldtool:ui_general/menus/options/bpt/get
 
 scoreboard players set #displayLagWarning worldtool 0
 execute if entity @s[tag=wt_customBPT] run tellraw @s [{"text": "Your world seems so be lagging. To change the amount of blocks read per tick to High (currently set to a custom value), ","color":"gold"},{"text": "[click here]","color":"green","hoverEvent": {"action": "show_text","value": "Set to High"},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/lag_warning/set_high"}}]

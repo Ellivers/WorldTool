@@ -5,7 +5,7 @@ tag @s remove measuring
 tag @s remove measuredX
 tag @s remove measuredY
 tag @s remove checkered
-tag @s remove foliage_ing
+tag @s remove wt_greenery
 tag @s add sphere
 tag @s add brush_cmd
 tag @s remove filling_outline

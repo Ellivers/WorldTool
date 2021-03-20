@@ -1,6 +1,6 @@
 #define tag worldtool
 
-# Called by clickEvent from worldtool:ui_general/options/settings
+# Called by clickEvent from worldtool:ui_general/menus/options/settings
 # Removes everything added by WorldTool
 
 data remove storage worldtool:storage {}

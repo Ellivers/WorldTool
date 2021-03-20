@@ -10,7 +10,7 @@ tag @s remove measuring
 tag @s remove measuredX
 tag @s remove measuredY
 tag @s remove checkered
-tag @s remove foliage_ing
+tag @s remove wt_greenery
 tag @s add random1
 tag @s remove sphere
 tag @s remove circle

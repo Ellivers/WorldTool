@@ -14,7 +14,7 @@ tag @s remove measuredY
 tag @s remove checkered
 tag @s remove wt_destroy
 tag @s remove keep
-tag @s remove foliage_ing
+tag @s remove wt_greenery
 tag @s remove plains
 tag @s remove taiga
 tag @s remove desert

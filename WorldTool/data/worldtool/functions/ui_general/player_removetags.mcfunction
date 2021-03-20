@@ -21,8 +21,8 @@ tag @s remove block_select_outline
 tag @s remove c_replacing_fill1
 tag @s remove c_replacing_fill2
 tag @s remove checkered_select
-tag @s remove placing_replace_foliage
-tag @s remove placing_replace_foliage_reversed
+tag @s remove wt_placing_replace_greenery
+tag @s remove wt_placing_replace_greenery_reversed
 tag @s remove check_block_brush
 tag @s remove check_block_replacebrush
 tag @s remove brush_tick

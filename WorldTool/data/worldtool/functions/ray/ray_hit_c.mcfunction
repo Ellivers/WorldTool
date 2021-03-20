@@ -12,4 +12,4 @@ tag @s remove setclonepos
 
 tellraw @s ["",{"text":"Set clone destination to "},{"score":{"name":"#posXt","objective":"worldtool"}}," ",{"score":{"name":"#posYt","objective":"worldtool"}}," ",{"score":{"name":"#posZt","objective":"worldtool"}}]
 
-function worldtool:ui_general/clone/start.check1
+function worldtool:ui_general/menus/clone/start.check1

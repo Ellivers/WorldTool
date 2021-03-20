@@ -1,3 +1,4 @@
 - Added toggles for all sides of the selection with Hollow
+- Added sounds for the UI
 - Fixed the brush item sometimes disappearing when not having a brush selected
 - Fixed some precision and overflowing issues with shape generation
