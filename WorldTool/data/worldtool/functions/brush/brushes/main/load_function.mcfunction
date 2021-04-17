@@ -32,19 +32,19 @@ kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=brushpos2]
 kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=setblock_source]
 
 #Summon different "wt_drawer" AECs depending on which brush the player is using
-execute as @a[tag=wt_brushload] if predicate worldtool:brushes/paint run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","replacefill_reversed","worldtool"]}
-execute as @a[tag=wt_brushload,predicate=worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","worldtool"]}
-execute as @a[tag=wt_brushload,predicate=!worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","wt_drawer","keep","worldtool"]}
+execute as @a[tag=wt_brushload] if predicate worldtool:brushes/paint run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+execute as @a[tag=wt_brushload,predicate=worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+execute as @a[tag=wt_brushload,predicate=!worldtool:brush/overwrite_blocks] if predicate worldtool:brushes/place run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","keep","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/sphere] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer","worldtool"]}
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/sphere] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_normal] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","wt_drawer","worldtool"]}
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_exclude] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","replacing","wt_drawer","worldtool"]}
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_normal] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill","replacing","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace,predicate=worldtool:brush/replace_exclude] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["brushing","replacefill_reversed","replacing","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] wt_ID = @s wt_ID
+scoreboard players operation 35c1ab68-9d4c-11eb-a8b3-0242ac130003 wt_ID = @s wt_ID
 
 #Start different processes depending on which brush the player is using
-execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/paint/paint
-execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] at @s run function worldtool:processes/brush/replace/replace
+execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:processes/brush/paint/paint
+execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:processes/brush/replace/replace
 #schedule function worldtool:load_process/load2_fill 1t
 execute as @a[tag=wt_brushload] run function worldtool:brush/player_removetags

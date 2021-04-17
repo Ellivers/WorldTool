@@ -1,4 +1,3 @@
-data modify entity @s PickupDelay set value 0s
-tag @p add brush_tick
-tp @p
-schedule function worldtool:coas/brush_tick 2t
+tag @p[scores={wt_drop_coas=1..}] add wt_brush_schedule
+function worldtool:coas/give_back
+schedule function worldtool:ui_brush/drop_scheduled 2t

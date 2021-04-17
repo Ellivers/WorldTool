@@ -35,6 +35,6 @@ tag @s add wt_started_function
 scoreboard players set $functionRunning worldtool 1
 execute if score $progressBar worldtool matches 1.. run function worldtool:processes/generate_shape/sphere/get_volume
 
-execute unless predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","wt_generator"]}
-execute if predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","worldtool","wt_spheregen","wt_circlegen","keep","wt_generator"]}
+execute unless predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_spheregen","wt_circlegen","wt_generator"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+execute if predicate worldtool:shapes/keep align xyz positioned ~.5 ~.5 ~.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["worldtool","wt_spheregen","wt_circlegen","keep","wt_generator"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 execute as @e[type=minecraft:area_effect_cloud,tag=wt_circlegen,sort=nearest,limit=1] at @s run function worldtool:processes/generate_shape/circle/start.entity

@@ -6,8 +6,9 @@ scoreboard players operation #ID_temp worldtool = @s wt_ID
 function worldtool:ui_general/clear_chat
 tag @s[tag=!wt_user] add wt_outline_selection
 tag @s add wt_user
-tag @s remove wt_gentool_dropped
+tag @s remove wt_shapetool_schedule
 tag @s remove wt_check_block_shge
+tag @s remove wt_block_check
 
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_generation_marker] if score @s wt_ID = #ID_temp worldtool run tag @s add wt_be_seleected
 

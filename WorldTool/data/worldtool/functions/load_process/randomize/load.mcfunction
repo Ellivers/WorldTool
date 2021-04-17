@@ -24,12 +24,12 @@ scoreboard players set $blocksplaced worldtool 0
 scoreboard players set #blockschecked worldtool 0
 
 # Summon the drawer
-kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer]
-summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","random1","worldtool"]}
-data modify entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s Tags[]
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_process/load_fill.wtd
+kill 35c1ab68-9d4c-11eb-a8b3-0242ac130003
+summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["random1","wt_finish_other","wt_no_done_message","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+data modify entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Tags append from entity @s Tags[]
+execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:load_process/load_fill.wtd
 
 #execute at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint,sort=random,limit=1] run clone ~ ~ ~ ~ ~ ~ 0 1 13
 # Start
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer] if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:processes/random/1
+execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:processes/random/1
 function worldtool:ui_general/anti_feedback_chat_message/load

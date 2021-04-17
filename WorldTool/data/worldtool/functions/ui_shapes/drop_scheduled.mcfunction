@@ -1,0 +1,1 @@
+execute as @a[tag=wt_shapetool_schedule] at @s run function worldtool:ui_shapes/select

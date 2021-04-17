@@ -8,3 +8,4 @@ execute if entity @s[tag=c_replacing_fill2] run function worldtool:ui_general/me
 execute if entity @s[tag=block_select_outline] run function worldtool:ui_general/menus/outline/start
 execute if entity @s[tag=destroy_select] run function worldtool:ui_general/menus/destroy/start
 execute if entity @s[tag=d_replacing_fill2] run function worldtool:ui_general/menus/destroy/replace/start_replace
+function #worldtool:input/primary_block

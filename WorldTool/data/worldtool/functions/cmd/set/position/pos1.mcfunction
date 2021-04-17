@@ -1,0 +1,2 @@
+execute if score $functionRunning worldtool matches 1 run tellraw @s {"text": "Error: A process is currently running","color": "red"}
+execute unless score $functionRunning worldtool matches 1 as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1marker] at @s run function worldtool:cmd/load/pos1_set

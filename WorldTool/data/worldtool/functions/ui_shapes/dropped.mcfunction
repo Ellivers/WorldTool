@@ -1,4 +1,3 @@
-data modify entity @s PickupDelay set value 0s
-tag @p add wt_gentool_dropped
-tp @p
-schedule function worldtool:coas/gen_tick 2t
+tag @p[scores={wt_drop_coas=1..}] add wt_shapetool_schedule
+function worldtool:coas/give_back
+schedule function worldtool:ui_shapes/drop_scheduled 2t

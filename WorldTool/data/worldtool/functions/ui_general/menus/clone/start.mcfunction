@@ -2,7 +2,7 @@ kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=clonepos]
 function worldtool:ui_general/menus/clone/remove_preview
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute at @s as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking","wt_setting_clone","worldtool"]}
+execute at @s as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ticking","wt_setting_clone","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 
 summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["clonepos","worldtool"]}
 

@@ -1,5 +1,6 @@
 tag @s add replacebrush
 tag @s add check_block_replacebrush
+tag @s add wt_block_check
 function worldtool:ui_general/clear_chat
 tellraw @s {"text": "[⬅Back]\n","color":"yellow","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_brush/select_replace/select"}}
 

@@ -9,3 +9,5 @@ replaceitem entity @s weapon.mainhand minecraft:air
 
 kill @e[type=minecraft:item,tag=wt_set_structure_offset,sort=nearest,limit=1]
 data modify entity @e[type=minecraft:item,tag=!wt_set_structure_offset,sort=nearest,limit=1] PickupDelay set value 0s
+tag @s remove check_brush_structure_offset
+tag @s remove wt_block_check

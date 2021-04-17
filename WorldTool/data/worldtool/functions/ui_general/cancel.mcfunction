@@ -22,17 +22,17 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score 
 
 # Remove the other tool variants you can have and replace them with the position 1 tool
 tag @s[predicate=worldtool:tool_states/3] add setclonepos
-tag @s[predicate=worldtool:tool_states/4] add random_1
-tag @s[predicate=worldtool:tool_states/5] add random_2
+tag @s[predicate=worldtool:tool_states/4] add wt_random_1
+tag @s[predicate=worldtool:tool_states/5] add wt_random_2
 tag @s[predicate=worldtool:tool_states/8] add wt_pick_block_tool
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:3b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:4b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:8b}
-execute unless entity @s[tag=!setclonepos,tag=!random_1,tag=!random_2,tag=!wt_pick_block_tool] run loot give @s loot worldtool:general_tool
+execute unless entity @s[tag=!setclonepos,tag=!wt_random_1,tag=!wt_random_2,tag=!wt_pick_block_tool] run loot give @s loot worldtool:general_tool
 tag @s remove setclonepos
-tag @s remove random_1
-tag @s remove random_2
+tag @s remove wt_random_1
+tag @s remove wt_random_2
 tag @s remove wt_pick_block_tool
 
 tag @s add nospaceplzthx

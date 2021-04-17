@@ -1,14 +1,14 @@
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner1] if score @s wt_ID = #ID_temp worldtool as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2] if score @s wt_ID = #ID_temp worldtool run tag @p add randomizing
 
-tag @s[predicate=worldtool:tool_states/4] add random_1
-tag @s[predicate=worldtool:tool_states/5] add random_2
+tag @s[predicate=worldtool:tool_states/4] add wt_random_1
+tag @s[predicate=worldtool:tool_states/5] add wt_random_2
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:4b}
 clear @s minecraft:carrot_on_a_stick{worldTool:1b,Type:5b}
-execute unless entity @s[tag=!random_1,tag=!random_2] run loot give @s loot worldtool:general_tool
+execute unless entity @s[tag=!wt_random_1,tag=!wt_random_2] run loot give @s loot worldtool:general_tool
 
-tag @s remove random_1
-tag @s remove random_2
+tag @s remove wt_random_1
+tag @s remove wt_random_2
 tag @s remove placing_fill
 tag @s remove rnd_replacingfill1
 

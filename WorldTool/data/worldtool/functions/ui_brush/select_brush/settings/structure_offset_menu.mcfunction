@@ -1,6 +1,7 @@
 function worldtool:ui_general/clear_chat
 tag @s remove wt_brush_drop_redirect.structure_offset
 tag @s add check_brush_structure_offset
+tag @s add wt_block_check
 
 tellraw @s {"text":"[⬅Back]\n","color":"gold","hoverEvent":{"action":"show_text","value":"Back to the main brush menu"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/select"}}
 

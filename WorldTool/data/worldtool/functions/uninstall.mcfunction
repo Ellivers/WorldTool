@@ -50,20 +50,6 @@ tag @a remove fun_menu
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool] unless entity @s[tag=!pos1,tag=!pos2,tag=!cmdpos1,tag=!cmdpos2] at @s run function worldtool:ray/del_pos
 kill @e[type=minecraft:area_effect_cloud,tag=worldtool]
 kill @e[type=minecraft:armor_stand]
- #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1]
- #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=clonepos]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner1]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2]
- #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1]
- #kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos2]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdclonedest]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd1]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd2]
-#kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randompoint]
-#kill @e[type=minecraft:armor_stand,tag=show_rot]
 
 function worldtool:ui_general/clear_chat
 

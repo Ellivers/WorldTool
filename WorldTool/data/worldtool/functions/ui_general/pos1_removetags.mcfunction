@@ -33,3 +33,6 @@ tag @s remove wt_exclude_up
 tag @s remove wt_exclude_down
 tag @s remove wt_exclude_south
 tag @s remove wt_exclude_north
+tag @s remove wt_finish_other
+tag @s remove wt_no_done_message
+tag @s remove wt_no_reset

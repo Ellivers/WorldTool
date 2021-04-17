@@ -8,3 +8,4 @@ clone ~1 255 ~ ~1 255 ~ ~2 255 ~
 kill @e[type=minecraft:item,tag=wt_set_structure,sort=nearest,limit=1]
 replaceitem entity @s weapon.mainhand minecraft:air
 tag @s remove check_brush_structure
+tag @s remove wt_block_check

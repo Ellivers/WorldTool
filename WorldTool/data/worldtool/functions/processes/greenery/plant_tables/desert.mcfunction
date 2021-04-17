@@ -1,11 +1,10 @@
 scoreboard players add $blocksplaced worldtool 1
-# Spawn loot from loot table
-loot spawn ~ ~ ~ loot worldtool:plant_tables/16
-execute store result score @s worldtool run data get entity @e[type=minecraft:item,sort=nearest,limit=1] Item.Count
-kill @e[type=minecraft:item,sort=nearest,limit=1]
+scoreboard players set #maximum worldtool 15
+# Get a random number
+function worldtool:lcg
 
 # Each score value places a different plant
-execute if score @s worldtool matches ..3 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks run setblock ~ ~ ~ minecraft:cactus
-execute if score @s worldtool matches 4..6 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks if block ~ ~1 ~ #worldtool:air_blocks run fill ~ ~ ~ ~ ~1 ~ minecraft:cactus
-execute if score @s worldtool matches 7 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks if block ~ ~1 ~ #worldtool:air_blocks if block ~ ~2 ~ #worldtool:air_blocks run fill ~ ~ ~ ~ ~2 ~ minecraft:cactus
-execute if score @s worldtool matches 8..16 run setblock ~ ~ ~ minecraft:dead_bush
+execute if score #output worldtool matches ..2 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks run setblock ~ ~ ~ minecraft:cactus
+execute if score #output worldtool matches 3..5 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks if block ~ ~1 ~ #worldtool:air_blocks run fill ~ ~ ~ ~ ~1 ~ minecraft:cactus
+execute if score #output worldtool matches 6 if block ~1 ~ ~ #worldtool:air_blocks if block ~ ~ ~1 #worldtool:air_blocks if block ~-1 ~ ~ #worldtool:air_blocks if block ~ ~ ~-1 #worldtool:air_blocks if block ~ ~1 ~ #worldtool:air_blocks if block ~ ~2 ~ #worldtool:air_blocks run fill ~ ~ ~ ~ ~2 ~ minecraft:cactus
+execute if score #output worldtool matches 7..15 run setblock ~ ~ ~ minecraft:dead_bush

@@ -1,7 +1,6 @@
 # Called by #minecraft:load
 
-# BUILD THE HELICOPTER
-# AND OFF TO THE RESCUE
+## Objectives ##
 scoreboard objectives add worldtool dummy
 scoreboard objectives add wt_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add wt_ID dummy
@@ -37,6 +36,7 @@ scoreboard objectives add wt_degrees dummy
 execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 1.. run function worldtool:upgrade_version
 scoreboard players set $version worldtool 3
 
+## Default blocks per tick ##
 # Set the blocks-per-tick settings to their default values, if they're not in a supported range
 execute unless score $blocksPerTick worldtool matches 2.. run scoreboard players set $blocksPerTick worldtool 4000
 execute unless score $clonedBlocksPerTick worldtool matches 2.. run scoreboard players set $clonedBlocksPerTick worldtool 2100
@@ -49,7 +49,7 @@ execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard
 execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 execute unless score $circleBlocksPerTick worldtool matches 2.. run scoreboard players set $circleBlocksPerTick worldtool 6000
 
-# Set the defaults of settings
+## Default settings ##
 execute unless score $particles worldtool matches 0..1 run scoreboard players set $particles worldtool 1
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 execute unless score $forceLoadCmdPositions worldtool matches 0..1 run scoreboard players set $forceLoadCmdPositions worldtool 0
@@ -60,6 +60,7 @@ execute unless score $sizeWarnLimit worldtool matches 0..10000000 run scoreboard
 execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
 
 execute unless score $raycastingMaxDistance worldtool matches 1.. run scoreboard players set $raycastingMaxDistance worldtool 100
+## Constants ##
 scoreboard players set #2 worldtool 2
 scoreboard players set #3 worldtool 3
 scoreboard players set #4 worldtool 4
@@ -84,6 +85,12 @@ scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborder
 scoreboard players remove #minWorldborderSize worldtool 20
 scoreboard players set #displayLagWarning worldtool 1
 
+## LCG (thx dominexis) ##
+scoreboard players set #rng_multiplier worldtool 1664525
+scoreboard players set #rng_increment worldtool 1013904223
+execute unless score #rng worldtool = #rng worldtool store result score #rng worldtool run seed
+
+## Addon stuff ##
 #define storage worldtool:storage
 # Addon list storage
 data modify storage worldtool:storage AddonList set value []
@@ -95,6 +102,7 @@ scoreboard players set $brushToolAddons worldtool 0
 scoreboard players set $shapeToolAddons worldtool 0
 scoreboard players set $settingAddons worldtool 0
 scoreboard players set $optionAddons worldtool 0
+scoreboard players set $greeneryAddons worldtool 0
 function #worldtool:addon_init
 
 # Forceload for access to storing blocks at 0 0

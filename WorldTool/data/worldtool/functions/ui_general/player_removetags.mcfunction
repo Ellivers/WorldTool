@@ -25,7 +25,8 @@ tag @s remove wt_placing_replace_greenery
 tag @s remove wt_placing_replace_greenery_reversed
 tag @s remove check_block_brush
 tag @s remove check_block_replacebrush
-tag @s remove brush_tick
+tag @s remove wt_brush_schedule
+tag @s remove wt_shapetool_schedule
 tag @s remove wt_waiting
 tag @s remove wt_TempHahaThisIsNeeded
 tag @s remove wt_dont_move_pos1
@@ -43,3 +44,5 @@ tag @s remove wt_waiting_in_menu
 tag @s remove wt_nochX
 tag @s remove wt_nochY
 tag @s remove wt_nochZ
+tag @s remove wt_check_block_shge
+tag @s remove wt_block_check

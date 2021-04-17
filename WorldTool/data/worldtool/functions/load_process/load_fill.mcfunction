@@ -44,9 +44,9 @@ tag @s remove measuredX
 tag @s remove measuredY
 
 # Summon the drawer (when cloning, the drawer has already been summoned)
-execute if entity @s[tag=!cloning_wt] run kill @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer]
-execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["wt_drawer","ticking","worldtool"]}
-data modify entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] Tags append from entity @s Tags[]
+execute if entity @s[tag=!cloning_wt] run kill 35c1ab68-9d4c-11eb-a8b3-0242ac130003
+execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ticking","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+data modify entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Tags append from entity @s Tags[]
 
 # When randomizing, make sure to fill from the bottom up, to try making sure blocks that need support don't pop off
 execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_process/switch_y_levels
@@ -55,7 +55,7 @@ execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool r
 execute if entity @s[tag=hollow] run function worldtool:load_process/load_hollow
 
 # Some stuff
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_drawer,sort=nearest,limit=1] run function worldtool:load_process/load_fill.wtd
+execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:load_process/load_fill.wtd
 scoreboard players set $blocksplaced worldtool 0
 
 # Start

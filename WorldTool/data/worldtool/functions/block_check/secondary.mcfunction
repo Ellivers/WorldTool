@@ -8,3 +8,4 @@ execute unless entity @s[tag=!wt_placing_replace_greenery,tag=!wt_placing_replac
 execute if entity @s[tag=rnd_replacingfill1] run function worldtool:ui_general/menus/randomize/replace/start
 execute if entity @s[tag=c_replacing_fill1] run function worldtool:ui_general/menus/checkered/replace/select_replace2
 execute if entity @s[tag=d_replacing_fill1] run function worldtool:ui_general/menus/destroy/replace/select_replace2
+function #worldtool:input/secondary_block

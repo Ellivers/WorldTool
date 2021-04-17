@@ -1,3 +1,4 @@
+tag @s add wt_block_check
 tag @s add wt_check_block_shge
 tag @s remove grabbing_block
 tag @s remove grabbing_block_gentool

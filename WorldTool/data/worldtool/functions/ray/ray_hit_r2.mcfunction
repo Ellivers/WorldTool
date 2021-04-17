@@ -1,5 +1,5 @@
 # Called by worldtool:ray/raycast_done
-tag @s add random_2
+tag @s add wt_random_2
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=randomcorner2] if score @s wt_ID = #ID_temp worldtool run kill @s
 summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["randomcorner2","worldtool"]}
