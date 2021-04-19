@@ -1,7 +1,6 @@
 scoreboard players set #posSelected worldtool 1
 # Clear the chat (as the player that this entity belongs to)
 scoreboard players operation #ID_temp worldtool = @s wt_ID
-execute as @a if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/clear_chat
 
 #define score_holder $functionRunning
 scoreboard players set $functionRunning worldtool 1
@@ -22,7 +21,7 @@ execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard
 execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 
 # Get the positions of pos2
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:load_process/positions/get_pos2
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:process_load/positions/get_pos2
 
 # Set the current position where blocks are being drawn
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool
@@ -49,14 +48,14 @@ execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~
 data modify entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Tags append from entity @s Tags[]
 
 # When randomizing, make sure to fill from the bottom up, to try making sure blocks that need support don't pop off
-execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool run function worldtool:load_process/switch_y_levels
+execute if entity @s[tag=random2] if score $pos1y worldtool > $pos2y worldtool run function worldtool:process_load/switch_y_levels
 
 # Setting the relative sides for the hollow function
-execute if entity @s[tag=hollow] run function worldtool:load_process/load_hollow
+execute if entity @s[tag=hollow] run function worldtool:process_load/load_hollow
 
 # Some stuff
-execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:load_process/load_fill.wtd
+execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_load/load_fill.wtd
 scoreboard players set $blocksplaced worldtool 0
 
 # Start
-schedule function worldtool:load_process/load2_fill 1t
+schedule function worldtool:process_load/load2_fill 1t

@@ -46,5 +46,5 @@ scoreboard players operation 35c1ab68-9d4c-11eb-a8b3-0242ac130003 wt_ID = @s wt_
 #Start different processes depending on which brush the player is using
 execute if entity @a[tag=wt_brushload,predicate=!worldtool:brushes/replace,predicate=!worldtool:brushes/sphere] as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:processes/brush/paint/paint
 execute if entity @a[tag=wt_brushload,predicate=worldtool:brushes/replace] as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:processes/brush/replace/replace
-#schedule function worldtool:load_process/load2_fill 1t
+#schedule function worldtool:process_load/load2_fill 1t
 execute as @a[tag=wt_brushload] run function worldtool:brush/player_removetags

@@ -1,4 +1,4 @@
-tag @s add in_menu
+tag @s add wt_in_menu
 tag @s add menu_nudge
 execute if entity @s[tag=wt_outline_selection] run function worldtool:ui_general/outline/load1
 

@@ -38,4 +38,4 @@ tag 35c1ab68-9d4c-11eb-a8b3-0242ac130003 remove cmdpos1
 
 execute if entity @s[tag=cloning_wt] run function worldtool:cmd/load/load_clone1
 execute if entity @s[tag=random1] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdrnd1] at @s run function worldtool:cmd/load/start_wt_random_1
-execute if entity @s[tag=!cloning_wt,tag=!random1] run schedule function worldtool:load_process/load2_fill 1t
+execute if entity @s[tag=!cloning_wt,tag=!random1] run schedule function worldtool:process_load/load2_fill 1t

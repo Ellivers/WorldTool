@@ -9,4 +9,4 @@ execute if score $blocksplaced worldtool matches 1 if entity @s[tag=!cloning_wt,
 execute if score $blocksplaced worldtool matches 1 if entity @s[tag=cloning_wt,tag=!no_output] run tellraw @a[tag=wt_started_function,limit=1] "Cloned 1 block"
 
 execute if entity @s[tag=cmdlist,tag=!no_output] run tellraw @a[tag=wt_started_function,limit=1] {"nbt":"Text","storage":"worldtool:cmdlist","interpret":true}
-execute if entity @s[tag=cmdlist_search,tag=!no_output] run tellraw @a[tag=wt_started_function,limit=1] "No command blocks were found"
+execute if entity @s[tag=cmdlist_search,tag=!no_output] run tellraw @a[tag=wt_started_function,limit=1] "No command block chain starts were found"

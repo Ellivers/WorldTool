@@ -1,6 +1,7 @@
 # Start
 
 tag @s add wt_started_function
+tag @s add nospaceplzthx
 function worldtool:ui_general/anti_feedback_chat_message/load
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 
@@ -23,4 +24,4 @@ execute if score #temp1 worldtool matches 2.. run function worldtool:ui_general/
 execute if score #temp2 worldtool matches 2.. run function worldtool:ui_general/errors/too_many_pos2
 execute if score #posSelected worldtool matches ..1 run function worldtool:ui_general/errors/load
 execute if score #posSelected worldtool matches 2 if score $functionRunning worldtool matches 1 run function worldtool:wait/start_waiting
-execute if score #posSelected worldtool matches 2 unless score $functionRunning worldtool matches 1 as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s[distance=0..] wt_ID = #ID_temp worldtool at @s run function worldtool:load_process/load_fill
+execute if score #posSelected worldtool matches 2 unless score $functionRunning worldtool matches 1 as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s[distance=0..] wt_ID = #ID_temp worldtool at @s run function worldtool:process_load/load_fill

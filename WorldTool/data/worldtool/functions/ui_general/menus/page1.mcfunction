@@ -2,7 +2,7 @@
 # The main menu
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 
-tag @s add in_menu
+tag @s add wt_in_menu
 tag @s add placing_fill
 tag @s remove fun_menu
 

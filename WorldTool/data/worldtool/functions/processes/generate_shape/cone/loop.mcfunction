@@ -25,4 +25,4 @@ execute if score #hollowTempTemp worldtool matches 1 run scoreboard players set 
 
 execute if score #currentHeight worldtool >= #maxHeight worldtool run function worldtool:processes/generate_shape/circle/stop.stop
 execute unless score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool unless score #currentHeight worldtool >= #maxHeight worldtool at @s run function worldtool:processes/generate_shape/circle/raycast
-#execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:load_process/load2_fill 1t
+#execute if score #genFunctionsRun worldtool >= $circleBlocksPerTick worldtool run schedule function worldtool:process_load/load2_fill 1t

@@ -1,7 +1,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:load_process/positions/get_pos1
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:load_process/positions/get_pos2
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:process_load/positions/get_pos1
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score @s wt_ID = #ID_temp worldtool run function worldtool:process_load/positions/get_pos2
 
 scoreboard players operation $drawingposY worldtool = $pos1y worldtool
 scoreboard players operation $drawingposZ worldtool = $pos1z worldtool

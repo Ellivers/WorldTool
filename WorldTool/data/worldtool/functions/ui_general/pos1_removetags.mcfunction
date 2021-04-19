@@ -13,6 +13,7 @@ tag @s remove measuring
 tag @s remove measuredX
 tag @s remove measuredY
 tag @s remove wt_greenery
+tag @s remove cmdlist_search
 tag @s remove cmdlist
 tag @s remove cmd_block_fill
 tag @s remove inner_block

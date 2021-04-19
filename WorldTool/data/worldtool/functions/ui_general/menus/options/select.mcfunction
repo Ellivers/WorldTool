@@ -1,4 +1,4 @@
-tag @s remove in_menu
+tag @s remove wt_in_menu
 tag @s remove menu_nudge
 tag @s remove wt_dont_move_pos1
 tag @s remove wt_dont_move_pos2

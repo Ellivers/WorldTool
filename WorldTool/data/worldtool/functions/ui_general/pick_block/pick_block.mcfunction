@@ -5,5 +5,5 @@ loot replace entity @s weapon.mainhand loot worldtool:pick_block_tool
 
 tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/back_using_tags"}}
 
-tellraw @s [{"text":"Select a block to pick","color":"aqua"},{"text":"\n[Cancel]","color":"red","hoverEvent":{"action":"show_text","value":"Close all menus and cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_general/cancel"}}]
+tellraw @s [{"text":"Select a block to pick","color":"aqua"},{"text":"\n[Close]","color":"red","hoverEvent":{"action":"show_text","value":"Close all menus and cancel"},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_general/cancel"}}]
 function worldtool:ui_general/anti_feedback_chat_message/load

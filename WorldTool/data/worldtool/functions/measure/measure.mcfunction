@@ -1,6 +1,5 @@
 # Measures the area
-
-execute if entity @s[tag=!nomeasuredonemessageplzthx] run tag @s remove in_menu
+#execute if entity @s[tag=!nomeasuredonemessageplzthx] run tag @s remove wt_in_menu
 
 # 'gtr' = 'greater' & 'lsr' = 'lesser'
 execute if score $pos1xm worldtool > $pos2xm worldtool run function worldtool:measure/x/gtr

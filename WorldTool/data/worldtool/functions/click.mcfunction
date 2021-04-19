@@ -28,8 +28,11 @@ scoreboard players reset @s wt_raycast
 execute if entity @s[tag=holding_wttool] unless entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast
 execute if entity @s[tag=holding_wttool] if entity @s[predicate=worldtool:brush/before_block,tag=!grabbing_block] run function worldtool:ray/raycast.b4b
 
+execute unless entity @s[tag=!setpos1,tag=!setpos2] if entity @s[tag=wt_in_menu] run function worldtool:click.reset
+
 #define score_holder #ID_temp
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/menus/click/set_positions
 execute unless entity @s[tag=!setpos1,tag=!setpos2] run function worldtool:ui_general/menus/click/menus
+
 scoreboard players reset @s wt_click

@@ -8,7 +8,7 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2] if score 
 execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1_found] if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2_found] run function worldtool:ui_general/menus/page1
 
 # If the menu isn't open (AKA both positions aren't there)
-execute unless entity @s[tag=in_menu] run function worldtool:ui_general/errors/pos_missing
+execute unless entity @s[tag=wt_in_menu] run function worldtool:ui_general/errors/pos_missing
 
 # Get how many of each position the executing player has
 execute store result score #pos1Count worldtool run execute if entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1_found]

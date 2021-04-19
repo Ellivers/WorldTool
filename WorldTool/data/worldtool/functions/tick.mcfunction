@@ -14,4 +14,4 @@ execute as @a at @s run function worldtool:player_tick
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_check,tag=!waiting] at @s run function worldtool:block_check/main
 
 # Run processes that last more than one tick
-execute if score $functionRunning worldtool matches 1 run function worldtool:load_process/load2_fill
+execute if score $functionRunning worldtool matches 1 run function worldtool:process_load/load2_fill
