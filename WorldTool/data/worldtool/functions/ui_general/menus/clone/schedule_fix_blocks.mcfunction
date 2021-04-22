@@ -1,0 +1,1 @@
+execute as @a[tag=wt_clone_block_fix_schedule,limit=1] run function worldtool:ui_general/menus/clone/schedule_fix_blocks.player

@@ -22,8 +22,13 @@ execute unless score @s wt_rotY matches 0 run tellraw @s [{"text":"Current rotat
 execute unless score @s wt_rotZ matches 0 run tellraw @s [{"text":"Current rotation: Z ","color":"gold","bold":true},{"score":{"name":"@s","objective":"wt_rotZ"},"color":"gold","bold":true},{"text":"\n\n\n"}]
 execute unless score @s wt_rotX matches 0 run tellraw @s [{"text":"Current rotation: X ","color":"gold","bold":true},{"score":{"name":"@s","objective":"wt_rotX"},"color":"gold","bold":true},{"text":"\n\n\n"}]
 
-execute if entity @s[tag=!atsetpos] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/menus/clone/select_clone.pos1_1
-execute if entity @s[tag=atsetpos] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/menus/clone/select_clone.pos1_2
+execute if entity @s[tag=!atsetpos] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/menus/clone/select.pos1_1
+execute if entity @s[tag=atsetpos] as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s wt_ID = #ID_temp worldtool run function worldtool:ui_general/menus/clone/select.pos1_2
+
+tag @s[tag=wt_fix_blocks3] add wt_fix_blocks
+tag @s[tag=wt_fix_blocks3] remove wt_fix_blocks3
+execute if entity @s[tag=!wt_fix_blocks] run tellraw @s {"text": "[Fix blocks: Off]","color": "yellow","hoverEvent": {"action": "show_text","value": "Attempts to fix rare occasions when blocks that are broken when cloned, such as blocks that require a block above them, or blocks that connect to other ones, such as fences."},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/menus/clone/toggle_fix_blocks"}}
+execute if entity @s[tag=wt_fix_blocks] run tellraw @s {"text": "[Fix blocks: On]","color": "yellow","hoverEvent": {"action": "show_text","value": "Attempts to fix rare occasions blocks that are broken when cloned, such as blocks that require a block above them, or blocks that connect to other ones, such as fences."},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/menus/clone/toggle_fix_blocks"}}
 
 execute if entity @s[tag=!atsetpos,tag=wt_outline_selection] if score $particles worldtool matches ..0 run tellraw @s [{"text": "\nCouldn't display outlining particles, as particles are disabled. ","color":"red"},{"text": "[Enable]","color":"white","hoverEvent": {"action": "show_text","value": "Enable WorldTool particles"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/menus/options/particles_toggle"}}]
 

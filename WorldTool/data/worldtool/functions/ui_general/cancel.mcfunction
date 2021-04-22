@@ -9,7 +9,8 @@ execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_previe
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt_clone_preview_pos2] if score @s wt_ID = #ID_temp worldtool run kill @s
 # Clear up the chat
 function worldtool:ui_general/clear_chat
-tellraw @s "Menus closed"
+tellraw @s[tag=!nocancelmessageplzthx] "Menus closed"
+tag @s remove nocancelmessageplzthx
 # Remove the (temporary) tags
 tag @s remove wt_in_menu
 tag @s remove placing_fill

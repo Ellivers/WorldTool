@@ -1,5 +1,5 @@
 tag @s remove rotated
-tag @s remove cloning_wt
+tag @s remove wt_clone
 tag @s remove hollow
 tag @s remove moveclone
 tag @s remove filtered

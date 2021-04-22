@@ -2,7 +2,7 @@
 # Tags for the primary block (at x+1)
 execute if entity @s[tag=placing_fill] run function worldtool:ui_general/start_fill
 execute if entity @s[tag=replacing_fill2] run function worldtool:ui_general/start_fill
-execute if entity @s[tag=hollowing] run function worldtool:ui_general/menus/hollow/start_hollow
+execute if entity @s[tag=hollowing] run function worldtool:ui_general/menus/hollow/start
 execute if entity @s[tag=checkered_select] run function worldtool:ui_general/menus/checkered/start
 execute if entity @s[tag=c_replacing_fill2] run function worldtool:ui_general/menus/checkered/replace/start_replace
 execute if entity @s[tag=block_select_outline] run function worldtool:ui_general/menus/outline/start

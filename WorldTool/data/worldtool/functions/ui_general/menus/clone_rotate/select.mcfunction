@@ -1,6 +1,6 @@
 tag @s add rotating_clone
 function worldtool:ui_general/clear_chat
-tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/menus/clone/select_clone"}}
+tellraw @s {"text": "[⬅Back]\n","color":"aqua","hoverEvent": {"action": "show_text","value": "Go back to the previous menu"},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/menus/clone/select"}}
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute as @e[type=minecraft:armor_stand,tag=show_rot] if score @s wt_ID = #ID_temp worldtool run tag @s add found

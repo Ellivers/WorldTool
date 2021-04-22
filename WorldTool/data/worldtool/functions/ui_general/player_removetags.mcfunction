@@ -46,3 +46,7 @@ tag @s remove wt_nochY
 tag @s remove wt_nochZ
 tag @s remove wt_check_block_shge
 tag @s remove wt_block_check
+tag @s remove wt_fix_blocks
+tag @s remove wt_fix_blocks2
+tag @s remove wt_fix_blocks3
+tag @s remove wt_drawer_error

@@ -48,7 +48,7 @@ function worldtool:processes/clone/check_overlap/check
 
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 execute if entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui_general/menus/clone/overlap_warning
-execute unless entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui_general/menus/clone/start.check4
+execute unless entity @s[tag=wt_overlappingX,tag=wt_overlappingY,tag=wt_overlappingZ] as @a if score @s wt_ID = #ID_temp worldtool at @s run function worldtool:ui_general/menus/clone/start/check4
 
 
 tag @s remove wt_overlappingX

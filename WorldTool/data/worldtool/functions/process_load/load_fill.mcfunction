@@ -1,5 +1,4 @@
 scoreboard players set #posSelected worldtool 1
-# Clear the chat (as the player that this entity belongs to)
 scoreboard players operation #ID_temp worldtool = @s wt_ID
 
 #define score_holder $functionRunning
@@ -43,8 +42,8 @@ tag @s remove measuredX
 tag @s remove measuredY
 
 # Summon the drawer (when cloning, the drawer has already been summoned)
-execute if entity @s[tag=!cloning_wt] run kill 35c1ab68-9d4c-11eb-a8b3-0242ac130003
-execute if entity @s[tag=!cloning_wt] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ticking","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
+execute if entity @s[tag=!wt_clone] run kill 35c1ab68-9d4c-11eb-a8b3-0242ac130003
+execute if entity @s[tag=!wt_clone] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ticking","worldtool"], UUID:[I; 901884776, -1655959061, -1464663486, -1408040957]}
 data modify entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Tags append from entity @s Tags[]
 
 # When randomizing, make sure to fill from the bottom up, to try making sure blocks that need support don't pop off

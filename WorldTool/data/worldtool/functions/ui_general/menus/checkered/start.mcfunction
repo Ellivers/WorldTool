@@ -8,5 +8,3 @@ execute if entity @s[tag=wt_nochZ] run tag @e[type=minecraft:area_effect_cloud,t
 execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1] if score @s[distance=0..] wt_ID = #ID_temp worldtool run tag @s remove wt_found
 
 function worldtool:process_load/start_check1
-
-function worldtool:ui_general/menus/checkered/select

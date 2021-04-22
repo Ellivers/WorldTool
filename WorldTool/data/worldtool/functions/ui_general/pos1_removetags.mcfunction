@@ -1,7 +1,7 @@
 tag @s remove rotated
 tag @s remove replacefill
 tag @s remove replacefill_reversed
-tag @s remove cloning_wt
+tag @s remove wt_clone
 tag @s remove checkered
 tag @s remove hollow
 tag @s remove moveclone
@@ -20,7 +20,6 @@ tag @s remove inner_block
 tag @s remove mirrorX
 tag @s remove mirrorY
 tag @s remove mirrorZ
-tag @s remove no_output
 tag @s remove filling_outline
 tag @s remove wt_no_drops
 tag @s remove wt_destroy
@@ -35,5 +34,6 @@ tag @s remove wt_exclude_down
 tag @s remove wt_exclude_south
 tag @s remove wt_exclude_north
 tag @s remove wt_finish_other
-tag @s remove wt_no_done_message
+tag @s remove wt_no_output
 tag @s remove wt_no_reset
+tag @s remove wt_no_kill
