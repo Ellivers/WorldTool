@@ -1,1 +1,0 @@
-execute as @a[tag=wt_brush_schedule] at @s run function worldtool:ui_brush/drop_redirects

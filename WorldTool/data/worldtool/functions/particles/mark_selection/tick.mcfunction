@@ -1,2 +1,0 @@
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos1,tag=wt_particles] at @s run function worldtool:particles/mark_selection/pos1/load
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=pos2,tag=wt_particles] at @s run function worldtool:particles/mark_selection/pos2/load
