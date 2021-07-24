@@ -2,6 +2,7 @@
 # Gives all tools
 
 loot give @s loot worldtool:general_tool
+loot give @s loot worldtool:brush_tool
 
 function #worldtool:addon/give_tools
 

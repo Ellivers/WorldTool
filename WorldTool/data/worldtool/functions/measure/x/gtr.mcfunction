@@ -1,4 +1,4 @@
-scoreboard players add #pos1xm worldtool 1
+scoreboard players add #pos1xt worldtool 1
 
-scoreboard players operation #widthX worldtool = #pos1xm worldtool
-scoreboard players operation #widthX worldtool -= #pos2xm worldtool
+scoreboard players operation #widthX worldtool = #pos1xt worldtool
+scoreboard players operation #widthX worldtool -= #pos2xt worldtool

@@ -1,0 +1,19 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{WorldTool:{ToolState:\"pick_block\"}}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "nbt": "Translation.\"item.general.pick_block\"",
+            "storage": "worldtool:storage"
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"lore.general.pick_block\"","storage": "worldtool:storage","interpret": true}
+        ]
+    }
+]

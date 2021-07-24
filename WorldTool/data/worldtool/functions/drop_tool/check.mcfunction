@@ -10,4 +10,7 @@ execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"general"
 execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"general",ToolState:"pos1"} run function worldtool:drop_tool/tools/general_pos1
 execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"general",ToolState:"pos2"} run function worldtool:drop_tool/tools/general_pos2
 
+# Brush tool
+execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"brush"} run function worldtool:drop_tool/tools/brush
+
 function #worldtool:addon/drop_tool

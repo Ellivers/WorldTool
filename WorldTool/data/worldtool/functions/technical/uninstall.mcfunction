@@ -13,7 +13,7 @@ scoreboard objectives remove wt.height
 scoreboard objectives remove wt.precision
 scoreboard objectives remove wt.degrees
 
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
 kill @e[tag=worldtool]
 
 tellraw @a[tag=wt.user] {"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}

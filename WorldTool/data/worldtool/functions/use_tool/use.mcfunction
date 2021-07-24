@@ -12,8 +12,8 @@ execute if predicate worldtool:tools/general/pick_block run tag @s add wt.tool.g
 execute if predicate worldtool:tools/brush run tag @s add wt.tool.brush
 execute if predicate worldtool:tools/shapes run tag @s add wt.tool.shapes
 
-execute unless entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_normal
-execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before
+execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none] unless entity @s[predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_normal
+execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before
 
 function #worldtool:addon/use_tool/add_tags
 
@@ -30,16 +30,4 @@ execute unless entity @s[tag=!wt.raycast_normal,tag=!wt.raycast_before] anchored
 execute unless entity @s[tag=!wt.tool.general.pos1,tag=!wt.tool.general.pos2] run function worldtool:ui_general/click/load
 
 ## Remove tags ##
-function #worldtool:addon/use_tool/remove_tags
-tag @s remove wt.tool.general.pos1
-tag @s remove wt.tool.general.pos2
-tag @s remove wt.tool.general.clonepos
-tag @s remove wt.tool.general.random_pos1
-tag @s remove wt.tool.general.random_pos2
-tag @s remove wt.tool.general.pick_block
-
-tag @s remove wt.tool.brush
-tag @s remove wt.tool.shapes
-
-tag @s remove wt.raycast_normal
-tag @s remove wt.raycast_before
+function worldtool:use_tool/remove_tags

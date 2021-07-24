@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot_on_a_stick",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Brush:\"none\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "nbt": "Translation.\"item.brush\"",
+                                "storage": "worldtool:storage"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true},
+                                {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
