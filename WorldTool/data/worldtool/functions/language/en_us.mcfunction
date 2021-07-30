@@ -1,4 +1,4 @@
-# Called by worldtool:language/reload and INSERT_FUNCTION
+# Called by worldtool:language/reload, worldtool:technical/load, and INSERT_FUNCTION
 # Translations for English
 
 data modify storage worldtool:storage Language set value "worldtool:en_us"
@@ -8,9 +8,14 @@ data modify storage worldtool:storage Language set value "worldtool:en_us"
 # Items
 data modify storage worldtool:storage Translation."item.general.pos1" set value "Set Position 1"
 data modify storage worldtool:storage Translation."item.general.pos2" set value "Set Position 2"
+data modify storage worldtool:storage Translation."lore.general.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
+data modify storage worldtool:storage Translation."lore.general.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
+data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Cloning Destination"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
+data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
+data modify storage worldtool:storage Translation."lore.brush.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."item.shapes" set value "Shape Generation Tool"
 
 # Processes

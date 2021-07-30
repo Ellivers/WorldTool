@@ -3,6 +3,6 @@
 
 tag @s remove wt.select_block.brush
 data remove storage worldtool:storage Temp
-data modify storage worldtool:storage Temp.Item.tag.WorldTool.Block.Name set value "minecraft:air"
+data modify storage worldtool:storage Temp.Block.State.Name set value "minecraft:air"
 
 function worldtool:ui_brush/select_block/selected
