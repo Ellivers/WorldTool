@@ -7,8 +7,8 @@
     "ops": [
         {
             "op": "replace",
-            "source": "Temp.ReplaceBlock",
-            "target": "WorldTool.ReplaceBlock"
+            "source": "Temp.SecondaryBlock",
+            "target": "WorldTool.SecondaryBlock"
         }
     ]
 }
