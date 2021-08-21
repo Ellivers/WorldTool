@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:command",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:8b,Enchantments:[{}]}"
+                },
+                {
+                    "function": "minecraft:set_name",
+                    "name": {
+                        "text": "Pick a block",
+                        "italic": false
+                    }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    [{
+                      "keybind": "key.use", "color": "light_purple", "italic": false
+                    },
+                    {"text": " to pick a block","color": "white"}]
+                  ]
+                }
+            ]
+          }
+        ]
+      }
+    ]
+}

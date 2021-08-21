@@ -1,0 +1,36 @@
+{
+    "values": [
+        "#minecraft:planks",
+        "#minecraft:wool",
+        "#worldtool:concrete",
+        "#worldtool:concrete_powder",
+        "#minecraft:logs",
+        "#minecraft:wooden_stairs",
+
+        "minecraft:sandstone",
+        "minecraft:smooth_sandstone",
+        "minecraft:chiseled_sandstone",
+        "minecraft:cut_sandstone",
+        "minecraft:sandstone_slab",
+        "minecraft:cut_sandstone_slab",
+        "minecraft:sandstone_stairs",
+        "minecraft:smooth_sandstone_slab",
+        "minecraft:smooth_sandstone_stairs",
+        "minecraft:sandstone_wall",
+
+        "#worldtool:tulips",
+        "minecraft:sand",
+        "#minecraft:carpets",
+        "minecraft:torch",
+        "#worldtool:terracotta",
+
+        "minecraft:bricks",
+        "minecraft:brick_slab",
+        "minecraft:brick_wall",
+        "minecraft:brick_stairs",
+
+        "minecraft:polished_andesite",
+        "minecraft:polished_diorite",
+        "minecraft:stone"
+    ]
+}

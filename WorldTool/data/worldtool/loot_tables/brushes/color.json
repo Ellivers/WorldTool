@@ -1,0 +1,62 @@
+{
+    "type": "minecraft:command",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:6b,Block:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},ReplaceBlock:{BlockState:{Name:\"minecraft:stone\"},BlockData:{}},Brush:\"Color\",BrushSettings:{Color:\"White\",LoadBlock:1b},Enchantments:[{}],display:{Name:'{\"text\":\"Brush tool\",\"italic\":false}'}}"
+                },
+                {
+                    "function": "minecraft:copy_nbt",
+                    "source": "this",
+                    "ops": [
+                        {
+                            "source": "SelectedItem.tag.Block",
+                            "target": "Block",
+                            "op": "replace"
+                        },
+                        {
+                            "source": "SelectedItem.tag.ReplaceBlock",
+                            "target": "ReplaceBlock",
+                            "op": "replace"
+                        },
+                        {
+                            "source":"SelectedItem.tag.BrushSettings",
+                            "target":"BrushSettings",
+                            "op":"merge"
+                        }
+                    ]
+                },
+                {
+                    "function":"minecraft:set_lore",
+                    "replace":true,
+                    "entity": "this",
+                    "lore": [
+                        "",
+                        {"text":"Selected brush: Paint","color":"yellow","italic":false},
+                        "",
+                        {"text":"Selected color:","color":"white","italic":false},
+                        {"nbt":"SelectedItem.tag.BrushSettings.Color","entity":"@s","color":"light_purple","italic":false},
+                        "",
+                        [{
+                            "keybind": "key.use", "color": "gold", "italic": false
+                        },
+                        {"text": " to use the brush","color": "white", "italic": false}],
+                        [{
+                            "keybind": "key.drop", "color": "gold", "italic": false
+                        },
+                        {"text": " to open the brush menu","color": "white", "italic": false}]
+                    ]
+                }
+            ]
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:command",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{Unbreakable:1b,worldTool:1b,Type:5b,Enchantments:[{}]}"
+                },
+                {
+                    "function": "minecraft:set_name",
+                    "name": {
+                        "text": "Set random position 2",
+                        "italic": false
+                    }
+                }
+            ]
+          }
+        ]
+      }
+    ]
+}

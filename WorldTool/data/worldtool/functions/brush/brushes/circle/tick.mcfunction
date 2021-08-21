@@ -1,0 +1,1 @@
+execute as @a[tag=scheduled_circle] at @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=scheduled_circle,limit=1] run function worldtool:brush/brushes/circle/gen

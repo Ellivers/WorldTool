@@ -1,10 +1,6 @@
-# Called by users
-# Gives all tools
-
+# Called manually
+# Gives you a stick that pigs like
+# And it's a world editing tool as well!
 loot give @s loot worldtool:general_tool
-loot give @s loot worldtool:brush_tool
-
-function #worldtool:addon/give_tools
-
-tag @s add wt.no_space
-function worldtool:ui/anti_feedback_chat_message/load
+loot give @s loot worldtool:brushes/none
+loot give @s loot worldtool:generation_tool

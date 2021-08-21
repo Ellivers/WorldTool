@@ -1,0 +1,6 @@
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=bottom,waterlogged=false] run setblock ~ ~ ~ minecraft:sandstone_slab[type=bottom,waterlogged=false]
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=top,waterlogged=false] run setblock ~ ~ ~ minecraft:sandstone_slab[type=top,waterlogged=false]
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=double,waterlogged=false] run setblock ~ ~ ~ minecraft:sandstone_slab[type=double,waterlogged=false]
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=bottom,waterlogged=true] run setblock ~ ~ ~ minecraft:sandstone_slab[type=bottom,waterlogged=true]
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=top,waterlogged=true] run setblock ~ ~ ~ minecraft:sandstone_slab[type=top,waterlogged=true]
+execute if block ~ ~ ~ minecraft:red_sandstone_slab[type=double,waterlogged=true] run setblock ~ ~ ~ minecraft:sandstone_slab[type=double,waterlogged=true]

@@ -1,0 +1,3 @@
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1marker] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["cmdpos1marker","worldtool"]}
+execute if score $functionRunning worldtool matches 1 run schedule function worldtool:cmd/set_pos1 1t replace
+execute unless score $functionRunning worldtool matches 1 as @e[type=minecraft:area_effect_cloud,tag=worldtool,tag=cmdpos1marker] at @s run function worldtool:cmd/pos1_set
