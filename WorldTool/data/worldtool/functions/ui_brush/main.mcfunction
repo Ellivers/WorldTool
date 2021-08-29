@@ -5,9 +5,6 @@ function worldtool:ui_brush/remove_tags
 
 function worldtool:ui/open_tool
 
-function worldtool:ui/clear_chat
-tellraw @s ["                                                                            ",{"text": "[?]","color":"aqua","hoverEvent": {"action":"show_text","value":"Don't know what to do?"},"clickEvent": {"action":"open_url","value": "https://docs.google.com/document/d/1TSxtvy8hIcM4l1fHgRSbBUVkaNZ8twtr9cFbED7ynjw/edit?usp=sharing"}},"\n"]
-
 data remove storage worldtool:storage Temp
 
 # Add brush tags

@@ -12,6 +12,8 @@ scoreboard objectives remove wt.diameter
 scoreboard objectives remove wt.height
 scoreboard objectives remove wt.precision
 scoreboard objectives remove wt.degrees
+scoreboard objectives remove wt.rotX
+scoreboard objectives remove wt.rotY
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
 kill @e[tag=worldtool]

@@ -22,6 +22,8 @@ scoreboard objectives add wt.diameter dummy
 scoreboard objectives add wt.height dummy
 scoreboard objectives add wt.precision dummy
 scoreboard objectives add wt.degrees dummy
+scoreboard objectives add wt.rotX dummy
+scoreboard objectives add wt.rotY dummy
 
 # Default language
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us

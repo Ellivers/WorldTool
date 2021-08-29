@@ -8,12 +8,7 @@
         {
             "op": "replace",
             "source": "Temp.Block",
-            "target": "WorldTool.Block"
-        },
-        {
-            "op": "replace",
-            "source": "Temp.Block.State.Name",
-            "target": "display.Lore[2]"
+            "target": "WorldTool.SecondaryBlock"
         }
     ]
 }

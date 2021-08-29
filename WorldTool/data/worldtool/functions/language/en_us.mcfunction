@@ -16,7 +16,23 @@ data modify storage worldtool:storage Translation."item.general.pick_block" set 
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
 data modify storage worldtool:storage Translation."lore.brush.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+
 data modify storage worldtool:storage Translation."item.shapes" set value "Shape Generation Tool"
+
+data modify storage worldtool:storage Translation."lore.selected_brush.none" set value "Selected brush: None"
+data modify storage worldtool:storage Translation."lore.selected_brush.paint" set value "Selected brush: Paint"
+data modify storage worldtool:storage Translation."lore.selected_brush.place" set value "Selected brush: Place"
+data modify storage worldtool:storage Translation."lore.selected_brush.replace" set value "Selected brush: Replace"
+data modify storage worldtool:storage Translation."lore.selected_brush.sphere" set value "Selected brush: Sphere"
+data modify storage worldtool:storage Translation."lore.selected_brush.circle" set value "Selected brush: Circle"
+data modify storage worldtool:storage Translation."lore.selected_brush.structure" set value "Selected brush: Paint"
+data modify storage worldtool:storage Translation."item.shape_tool" set value "Shape Generation Tool"
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set value '"& open the menu"'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+
+data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
+
 
 # Processes
 data modify storage worldtool:storage Translation."process.fill" set value "Fill area"
@@ -128,6 +144,16 @@ data modify storage worldtool:storage Translation."info.selected_brush.replace" 
 data modify storage worldtool:storage Translation."info.selected_brush.sphere" set value "Selected brush: Sphere"
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Paint"
+
+data modify storage worldtool:storage Translation."info.selected_brush" set value "Selected brush: "
+data modify storage worldtool:storage Translation."brush.none" set value "None"
+data modify storage worldtool:storage Translation."brush.paint" set value "Paint"
+data modify storage worldtool:storage Translation."brush.place" set value "Place"
+data modify storage worldtool:storage Translation."brush.replace" set value "Replace"
+data modify storage worldtool:storage Translation."brush.sphere" set value "Sphere"
+data modify storage worldtool:storage Translation."brush.circle" set value "Circle"
+data modify storage worldtool:storage Translation."brush.structure" set value "Paint"
+
 
 # Brush settings
 data modify storage worldtool:storage Translation."button.brush.hollow.on" set value "[Hollow: On]"
