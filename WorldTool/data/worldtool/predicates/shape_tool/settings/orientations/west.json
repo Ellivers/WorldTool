@@ -5,7 +5,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{WorldTool:{Orientation:\"West\"}}"
+                "nbt": "{WorldTool:{ShapeSettings:{Orientation:\"west\"}}}"
             }
         }
     }

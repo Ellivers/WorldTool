@@ -73,8 +73,11 @@ data modify storage worldtool:storage Translation."button.pick_block.name" set v
 data modify storage worldtool:storage Translation."button.pick_block.description" set value "Select a block in the world to use"
 data modify storage worldtool:storage Translation."button.air.name" set value "(Air)"
 data modify storage worldtool:storage Translation."button.air.description" set value "Air"
+data modify storage worldtool:storage Translation."button.water.name" set value "(Water)"
+data modify storage worldtool:storage Translation."button.water.description" set value "Water"
 data modify storage worldtool:storage Translation."button.help.spacer" set value "                                                                            "
 data modify storage worldtool:storage Translation."button.help.name" set value "[?]"
+data modify storage worldtool:storage Translation."button.question.name" set value "(?)"
 data modify storage worldtool:storage Translation."button.help.description" set value "Don't know what to do?"
 
 # Common option buttons
@@ -134,8 +137,6 @@ data modify storage worldtool:storage Translation."button.brush.replace_block.na
 data modify storage worldtool:storage Translation."button.brush.replace_block.description" set value "Select a new block to replace"
 data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]  "
 data modify storage worldtool:storage Translation."button.brush.select_structure.description" set value "Select a new structure to place"
-data modify storage worldtool:storage Translation."button.water.name" set value "(Water)"
-data modify storage worldtool:storage Translation."button.water.description" set value "Water"
 
 data modify storage worldtool:storage Translation."info.selected_brush.none" set value "Selected brush: None"
 data modify storage worldtool:storage Translation."info.selected_brush.paint" set value "Selected brush: Paint"
@@ -181,5 +182,18 @@ data modify storage worldtool:storage Translation."button.brush.update_block.on"
 data modify storage worldtool:storage Translation."button.brush.update_block.off" set value "[Update Block: Off]"
 data modify storage worldtool:storage Translation."button.brush.update_block.description" set value "Update the process block every time the brush is used (recommended)"
 
+
+# Shape Generation Tool
+data modify storage worldtool:storage Translation."button.change_shape.name" set value "[Change...]"
+data modify storage worldtool:storage Translation."button.change_shape.description" set value "Select another shape to use"
+
+data modify storage worldtool:storage Translation."info.selected_shape.circle" set value "Selected shape: Circle"
+data modify storage worldtool:storage Translation."info.selected_shape.cone" set value "Selected shape: Cone"
+data modify storage worldtool:storage Translation."info.selected_shape.cylinder" set value "Selected shape: Cylinder"
+data modify storage worldtool:storage Translation."info.selected_shape.sphere" set value "Selected shape: Sphere"
+
+# Shape settings
+data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
+data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"
 
 function #worldtool:addon/language/en_us

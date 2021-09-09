@@ -19,7 +19,7 @@ scoreboard objectives add wt.brush_size dummy
 scoreboard objectives add wt.chance dummy
 scoreboard objectives add wt.queue_pos dummy
 scoreboard objectives add wt.diameter dummy
-scoreboard objectives add wt.height dummy
+scoreboard objectives add wt.length dummy
 scoreboard objectives add wt.precision dummy
 scoreboard objectives add wt.degrees dummy
 scoreboard objectives add wt.rotX dummy

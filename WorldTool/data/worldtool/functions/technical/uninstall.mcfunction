@@ -9,7 +9,7 @@ scoreboard objectives remove wt.brush_size
 scoreboard objectives remove wt.chance
 scoreboard objectives remove wt.queue_pos
 scoreboard objectives remove wt.diameter
-scoreboard objectives remove wt.height
+scoreboard objectives remove wt.length
 scoreboard objectives remove wt.precision
 scoreboard objectives remove wt.degrees
 scoreboard objectives remove wt.rotX
