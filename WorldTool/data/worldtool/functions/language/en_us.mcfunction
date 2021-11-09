@@ -81,16 +81,20 @@ data modify storage worldtool:storage Translation."button.question.name" set val
 data modify storage worldtool:storage Translation."button.help.description" set value "Don't know what to do?"
 
 # Common option buttons
-data modify storage worldtool:storage Translation."button.left.name" set value "< "
+data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
 data modify storage worldtool:storage Translation."button.decrease.description" set value "Decrease"
-data modify storage worldtool:storage Translation."button.right.name" set value " >"
+data modify storage worldtool:storage Translation."button.increase.name" set value " +"
 data modify storage worldtool:storage Translation."button.increase.description" set value "Increase"
+data modify storage worldtool:storage Translation."button.left.name" set value "< "
 data modify storage worldtool:storage Translation."button.left.description" set value "Left"
+data modify storage worldtool:storage Translation."button.right.name" set value " >"
 data modify storage worldtool:storage Translation."button.right.description" set value "Right"
 data modify storage worldtool:storage Translation."button.enabled.name" set value "Enabled"
 data modify storage worldtool:storage Translation."button.enabled.description" set value "Disable"
 data modify storage worldtool:storage Translation."button.disabled.name" set value "Disabled"
 data modify storage worldtool:storage Translation."button.disabled.description" set value "Enable"
+data modify storage worldtool:storage Translation."button.reset.name" set value "[Reset]"
+data modify storage worldtool:storage Translation."button.reset.description" set value "Reset to the default value"
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
@@ -195,5 +199,7 @@ data modify storage worldtool:storage Translation."info.selected_shape.sphere" s
 # Shape settings
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
 data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"
+data modify storage worldtool:storage Translation."label.shapes.precision.name" set value "Precision: "
+data modify storage worldtool:storage Translation."label.shapes.precision.description" set value "How precisely shapes are drawn, with lowest being most precise. High precision is only useful for bigger shapes."
 
 function #worldtool:addon/language/en_us

@@ -5,7 +5,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{WorldTool:{Shape:\"Circle\"}}"
+                "nbt": "{WorldTool:{Shape:\"circle\"}}"
             }
         }
     }
