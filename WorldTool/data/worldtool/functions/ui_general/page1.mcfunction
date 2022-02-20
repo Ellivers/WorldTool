@@ -2,8 +2,11 @@
 # Code for page 1 of the general tool's menu
 
 function worldtool:ui/open_tool
+tag @s add wt.menu.general.p1
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
+
+function worldtool:ui/start_input/primary
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run function worldtool:ui_general/page1.display
 

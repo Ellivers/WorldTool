@@ -9,14 +9,15 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Brush:\"none\",PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Droppable:1b,Brush:\"none\",PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
                         },
                         {
                             "function": "minecraft:set_name",
                             "name": {
                                 "nbt": "Translation.\"item.brush\"",
                                 "storage": "worldtool:storage"
-                            }
+                            },
+                            "entity": "this"
                         },
                         {
                             "function": "minecraft:set_lore",
@@ -27,7 +28,8 @@
                                 "",
                                 {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true},
                                 {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true}
-                            ]
+                            ],
+                            "entity": "this"
                         }
                     ]
                 }

@@ -11,5 +11,6 @@ tag @s remove wt.tool.general.pick_block
 tag @s remove wt.tool.brush
 tag @s remove wt.tool.shapes
 
+tag @s remove wt.raycast
 tag @s remove wt.raycast_normal
 tag @s remove wt.raycast_before

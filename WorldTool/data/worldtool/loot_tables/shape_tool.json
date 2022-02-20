@@ -9,14 +9,15 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"shapes\",Shape:\"circle\",PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"shapes\",Droppable:1b,Shape:\"circle\",PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
                         },
                         {
                             "function": "minecraft:set_name",
                             "name": {
                                 "nbt": "Translation.\"item.shape_tool\"",
                                 "storage": "worldtool:storage"
-                            }
+                            },
+                            "entity": "this"
                         },
                         {
                             "function": "minecraft:set_lore",
@@ -28,7 +29,8 @@
                                 {"nbt":"Translation.\"lore.shape_tool.1\"","storage": "worldtool:storage","interpret": true},
                                 {"nbt":"Translation.\"lore.shape_tool.2\"","storage": "worldtool:storage","interpret": true},
                                 {"nbt":"Translation.\"lore.shape_tool.3\"","storage": "worldtool:storage","interpret": true}
-                            ]
+                            ],
+                            "entity": "this"
                         }
                     ]
                 }

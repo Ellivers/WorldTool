@@ -52,6 +52,7 @@ data modify storage worldtool:storage Translation."error.pos1_missing" set value
 data modify storage worldtool:storage Translation."error.pos2_duplicates" set value "Error: You appear to have a duplicated position 2. Try setting position 2 again."
 data modify storage worldtool:storage Translation."error.pos2_missing" set value "Error: You appear to not have a position 2. Positions 1 and 2 are needed to access this function."
 data modify storage worldtool:storage Translation."error.process_running" set value "Another process is currently running"
+data modify storage worldtool:storage Translation."error.outside_world" set value "You can't use that outside the world"
 
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"
@@ -111,6 +112,10 @@ data modify storage worldtool:storage Translation."info.queue.in_queue" set valu
 data modify storage worldtool:storage Translation."info.queue.position" set value "Your queue position: "
 
 # General Tool
+data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set position 1]"
+data modify storage worldtool:storage Translation."button.set_pos1.description" set value "Set position 1 at your position"
+data modify storage worldtool:storage Translation."button.set_pos2.name" set value "[Set position 2]"
+data modify storage worldtool:storage Translation."button.set_pos2.description" set value "Set position 2 at your position"
 data modify storage worldtool:storage Translation."button.use.name" set value "[Use]  "
 data modify storage worldtool:storage Translation."button.use.description" set value "Open the main menu"
 data modify storage worldtool:storage Translation."button.options.name" set value "[Options]"

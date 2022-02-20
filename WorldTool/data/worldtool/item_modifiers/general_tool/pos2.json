@@ -1,12 +1,12 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{ToolState:\"pos1\"}}"
+        "tag": "{WorldTool:{ToolState:\"pos2\"}}"
     },
     {
         "function": "minecraft:set_name",
         "name": {
-            "nbt": "Translation.\"item.general.pos1\"",
+            "nbt": "Translation.\"item.general.pos2\"",
             "storage": "worldtool:storage",
             "italic": false
         },

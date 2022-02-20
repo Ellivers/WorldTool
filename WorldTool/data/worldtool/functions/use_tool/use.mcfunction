@@ -1,7 +1,10 @@
 # Called by worldtool:use_tool/load
 # Commands for right-clicking a worldtool tool
 
+execute unless score @s wt.ID matches -2147483648.. run function worldtool:use_tool/assign_id
+
 ## Add tags ##
+tag @s add wt.raycast_normal
 execute if predicate worldtool:tools/general/pos1 run tag @s add wt.tool.general.pos1
 execute if predicate worldtool:tools/general/pos2 run tag @s add wt.tool.general.pos2
 execute if predicate worldtool:tools/general/clonepos run tag @s add wt.tool.general.clonepos
@@ -12,7 +15,7 @@ execute if predicate worldtool:tools/general/pick_block run tag @s add wt.tool.g
 execute if predicate worldtool:tools/brush run tag @s add wt.tool.brush
 execute if predicate worldtool:tools/shapes run tag @s add wt.tool.shapes
 
-execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none] unless entity @s[predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_normal
+#execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none] unless entity @s[predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_normal
 execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before
 
 function #worldtool:addon/use_tool/add_tags

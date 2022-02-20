@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "pci": {
+            "trigger": "minecraft:thrown_item_picked_up_by_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "nbt": "{Tags:[\"wt.general_tool_thrown\"]}"
+                }
+            }
+        }
+    },
+
+    "rewards": {
+        "function": "worldtool:drop_tool/tools/general/picked_up"
+    }
+}

@@ -7,13 +7,17 @@
         "function": "minecraft:set_name",
         "name": {
             "nbt": "Translation.\"item.general.pick_block\"",
-            "storage": "worldtool:storage"
-        }
+            "storage": "worldtool:storage",
+            "italic": false
+        },
+        "entity": "this"
     },
     {
         "function": "minecraft:set_lore",
         "lore": [
-            {"nbt":"Translation.\"lore.general.pick_block\"","storage": "worldtool:storage","interpret": true}
-        ]
+            {"nbt":"Translation.\"lore.general.pick_block\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
     }
 ]

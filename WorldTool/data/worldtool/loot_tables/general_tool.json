@@ -9,14 +9,15 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"general\",ToolState:\"pos1\"}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"general\",Droppable:1b,ToolState:\"pos1\"}}"
                         },
                         {
                             "function": "minecraft:set_name",
                             "name": {
                                 "nbt": "Translation.\"item.general.pos1\"",
                                 "storage": "worldtool:storage"
-                            }
+                            },
+                            "entity": "this"
                         },
                         {
                             "function": "minecraft:set_lore",
@@ -24,7 +25,8 @@
                                 {"nbt":"Translation.\"lore.general.normal.1\"","storage": "worldtool:storage","interpret": true},
                                 {"nbt":"Translation.\"lore.general.normal.2\"","storage": "worldtool:storage","interpret": true},
                                 {"nbt":"Translation.\"lore.general.normal.3\"","storage": "worldtool:storage","interpret": true}
-                            ]
+                            ],
+                            "entity": "this"
                         }
                     ]
                 }
