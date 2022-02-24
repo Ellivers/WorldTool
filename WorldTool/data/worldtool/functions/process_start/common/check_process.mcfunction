@@ -3,5 +3,5 @@
 
 scoreboard players set #success worldtool 1
 
-execute if score $functionRunning worldtool matches 1.. run tag @s add wt.start.common
-execute if score $functionRunning worldtool matches 1.. run function worldtool:ui/queue/load
+execute if score $processRunning worldtool matches 1.. run tag @s add wt.start.common
+execute if score $processRunning worldtool matches 1.. run function worldtool:ui/queue/load

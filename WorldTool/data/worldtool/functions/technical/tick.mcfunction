@@ -7,4 +7,4 @@ execute as @a at @s run function worldtool:technical/tick/player
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.input,tag=!wt.dont_check] at @s run function worldtool:block_test/main
 
 # Commands to be run while a process is running
-execute if score $functionRunning worldtool matches 1.. run function worldtool:technical/tick/process
+execute if score $processRunning worldtool matches 1.. run function worldtool:technical/tick/process

@@ -3,8 +3,8 @@
 ## DHP definitions ##
 #define storage worldtool:storage
 #define score_holder #ID_temp
-#define score_holder $functionRunning
-#define score_holder $brushFunctionRunning
+#define score_holder $processRunning
+#define score_holder $brushprocessRunning
 #define tag worldtool
 #define tag wt.temp
 # Writer
@@ -27,6 +27,7 @@ scoreboard objectives add wt.rotX dummy
 scoreboard objectives add wt.rotY dummy
 
 # Default language
+execute if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Detect an older version
@@ -72,7 +73,7 @@ scoreboard players set #pi worldtool 31416
 
 gamerule commandBlockOutput false
 
-bossbar add worldtool:progress "WorldTool Progress"
+bossbar add worldtool:progress {"nbt":"Translation.\"worldtool.progress\"","storage": "worldtool:storage"}
 bossbar set worldtool:progress color pink
 
 execute unless score #defaultWorldborderSize worldtool matches 1.. store result score #defaultWorldborderSize worldtool run worldborder get
@@ -80,7 +81,7 @@ scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborder
 scoreboard players remove #minWorldborderSize worldtool 20
 scoreboard players set #displayLagWarning worldtool 1
 
-## LCG (thx dominexis) ##
+## LCG ##
 scoreboard players set #rng_multiplier worldtool 1664525
 scoreboard players set #rng_increment worldtool 1013904223
 execute unless score #rng worldtool = #rng worldtool store result score #rng worldtool run seed
@@ -108,4 +109,4 @@ schedule function worldtool:technical/load/set_base 2t
 
 execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
-function worldtool:particles/clock
+#function worldtool:particles/clock

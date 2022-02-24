@@ -33,6 +33,8 @@ data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set
 
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
 
+# Progress bar
+data modify storage worldtool:storage Translation."progress" set value "WorldTool Progress"
 
 # Processes
 data modify storage worldtool:storage Translation."process.fill" set value "Fill area"
@@ -42,6 +44,7 @@ data modify storage worldtool:storage Translation."info.uninstall" set value "Wo
 data modify storage worldtool:storage Translation."info.affected_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," affected blocks"]'
 data modify storage worldtool:storage Translation."info.pos1_set" set value "Set position 1 to "
 data modify storage worldtool:storage Translation."info.pos2_set" set value "Set position 2 to "
+data modify storage worldtool:storage Translation."info.menu_closed" set value "Closed"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -78,8 +81,18 @@ data modify storage worldtool:storage Translation."button.water.name" set value 
 data modify storage worldtool:storage Translation."button.water.description" set value "Water"
 data modify storage worldtool:storage Translation."button.help.spacer" set value "                                                                            "
 data modify storage worldtool:storage Translation."button.help.name" set value "[?]"
-data modify storage worldtool:storage Translation."button.question.name" set value "(?)"
 data modify storage worldtool:storage Translation."button.help.description" set value "Don't know what to do?"
+data modify storage worldtool:storage Translation."button.question.name" set value "(?)"
+data modify storage worldtool:storage Translation."button.normal.name" set value "[Normal...]"
+data modify storage worldtool:storage Translation."button.normal.description" set value "Choose a block to filter/replace"
+data modify storage worldtool:storage Translation."button.exclude.name" set value "[Exclude...]"
+data modify storage worldtool:storage Translation."button.exclude.description" set value "Choose a block to NOT filter/replace"
+data modify storage worldtool:storage Translation."button.to_replace.name" set value "[Select a block to replace]"
+data modify storage worldtool:storage Translation."button.to_replace.description" set value "Choose which block you want to replace"
+data modify storage worldtool:storage Translation."button.to_not_replace.name" set value "[Select a block to not replace]"
+data modify storage worldtool:storage Translation."button.to_not_replace.description" set value "Choose which block you do not want to replace"
+data modify storage worldtool:storage Translation."button.replace_with.name" set value "[Select a block to replace with]"
+data modify storage worldtool:storage Translation."button.replace_with.description" set value "Choose which block you want to replace with"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
@@ -116,10 +129,13 @@ data modify storage worldtool:storage Translation."button.set_pos1.name" set val
 data modify storage worldtool:storage Translation."button.set_pos1.description" set value "Set position 1 at your position"
 data modify storage worldtool:storage Translation."button.set_pos2.name" set value "[Set position 2]"
 data modify storage worldtool:storage Translation."button.set_pos2.description" set value "Set position 2 at your position"
-data modify storage worldtool:storage Translation."button.use.name" set value "[Use]  "
+data modify storage worldtool:storage Translation."button.use.name" set value "[Use...]  "
 data modify storage worldtool:storage Translation."button.use.description" set value "Open the main menu"
-data modify storage worldtool:storage Translation."button.options.name" set value "[Options]"
+data modify storage worldtool:storage Translation."button.options.name" set value "[Options...]"
 data modify storage worldtool:storage Translation."button.options.description" set value "Open the options menu"
+
+data modify storage worldtool:storage Translation."button.replace.name" set value "[Replace...]"
+data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
 
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"

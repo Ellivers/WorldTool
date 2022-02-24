@@ -1,5 +1,5 @@
 # Called by worldtool:block_test/primary
-# Starts the filling function
+# Starts the filling process
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 

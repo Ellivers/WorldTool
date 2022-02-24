@@ -3,6 +3,8 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
+scoreboard players set $processRunning worldtool 1
+
 ## Common variables ##
 
 scoreboard players set #blocksChecked worldtool 0
