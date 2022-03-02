@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/menus/options/settings
 # Unistalls WorldTool
 
+function worldtool:ui/anti_feedback_chat_message/load
+
 scoreboard objectives remove worldtool
 scoreboard objectives remove wt.use_coas
 scoreboard objectives remove wt.drop_coas
