@@ -2,7 +2,8 @@
 # Displays the block selection for the primary block (the one to replace with)
 
 tag @s remove wt.menu.two_block_query.1
-tag @s add wt.menu.two_block_query.2
+tag @s remove wt.menu.two_block_query.2
+tag @s add wt.menu.two_block_query.3
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button

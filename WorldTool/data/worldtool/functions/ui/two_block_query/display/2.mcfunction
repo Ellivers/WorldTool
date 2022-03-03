@@ -1,8 +1,9 @@
 # Called by worldtool:ui/two_block_query/display/selected.normal and worldtool:ui/two_block_query/display/selected.exclude
 # Displays the block selection for the secondary block (the one to replace/filter)
 
-tag @s add wt.menu.two_block_query.1
-tag @s remove wt.menu.two_block_query.2
+tag @s remove wt.menu.two_block_query.1
+tag @s add wt.menu.two_block_query.2
+tag @s remove wt.menu.two_block_query.3
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button

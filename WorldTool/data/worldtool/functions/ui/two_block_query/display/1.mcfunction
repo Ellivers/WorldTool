@@ -3,6 +3,9 @@
 
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
+tag @s remove wt.menu.two_block_query.2
+tag @s remove wt.menu.two_block_query.3
+tag @s add wt.menu.two_block_query.1
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
