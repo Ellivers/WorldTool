@@ -1,4 +1,4 @@
-tellraw @s {"nbt":"Translation.\"info.killed_processes\"","storage": "worldtool:storage"}
+tellraw @s {"nbt":"Translation.\"info.killed_process\"","storage": "worldtool:storage"}
 
 scoreboard players set $processRunning worldtool 0
 #scoreboard players set $brushFunctionRunning worldtool 0

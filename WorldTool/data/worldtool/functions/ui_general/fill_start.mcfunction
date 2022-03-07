@@ -7,5 +7,3 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID
 
 data modify storage worldtool:storage Processes prepend value '{"nbt":"Translation.\\"process.fill\\"","storage":"worldtool:storage"}'
 function worldtool:process_start/common/load
-
-execute if score #success worldtool matches 1 run function worldtool:ui_general/page1

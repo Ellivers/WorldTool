@@ -45,6 +45,7 @@ data modify storage worldtool:storage Translation."info.affected_blocks" set val
 data modify storage worldtool:storage Translation."info.pos1_set" set value "Set position 1 to "
 data modify storage worldtool:storage Translation."info.pos2_set" set value "Set position 2 to "
 data modify storage worldtool:storage Translation."info.menu_closed" set value "Closed"
+data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -64,7 +65,7 @@ data modify storage worldtool:storage Translation."button.back.name" set value "
 data modify storage worldtool:storage Translation."button.back.description" set value "Go back to the previous menu"
 data modify storage worldtool:storage Translation."button.ui_general.back.description" set value "Go back to page 1 of the main menu"
 data modify storage worldtool:storage Translation."button.kill_process.name" set value "[Kill Process]"
-data modify storage worldtool:storage Translation."button.kill_process.description" set value "Kill the currently running process"
+data modify storage worldtool:storage Translation."button.kill_process.description" set value "Kill any currently running process"
 data modify storage worldtool:storage Translation."button.select_block.name" set value "[Select a Block]"
 data modify storage worldtool:storage Translation."button.select_block.description" set value "Select a block to use"
 data modify storage worldtool:storage Translation."button.replace_block.replace.name" set value "[Select a Block to Replace]"
@@ -93,6 +94,8 @@ data modify storage worldtool:storage Translation."button.to_not_replace.name" s
 data modify storage worldtool:storage Translation."button.to_not_replace.description" set value "Choose which block you do not want to replace"
 data modify storage worldtool:storage Translation."button.replace_with.name" set value "[Select a block to replace with]"
 data modify storage worldtool:storage Translation."button.replace_with.description" set value "Choose which block you want to replace with"
+data modify storage worldtool:storage Translation."button.retry.name" set value "[Retry]"
+data modify storage worldtool:storage Translation."button.retry.description" set value "Try again"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
