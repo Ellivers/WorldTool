@@ -1,6 +1,8 @@
 # Called by worldtool:ui/queue/move
 # Starts the process
 
+scoreboard players set #success worldtool 1
+
 tag @s remove wt.in_queue
 scoreboard players reset @s wt.queue_pos
 

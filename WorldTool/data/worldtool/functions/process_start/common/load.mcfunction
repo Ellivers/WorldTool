@@ -11,5 +11,4 @@ execute if score #success worldtool matches 1 if score $sizeWarnLimit worldtool 
 
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/check_process
 
-execute if score #success worldtool matches 1 run function worldtool:ui/reopen_menu
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/start
