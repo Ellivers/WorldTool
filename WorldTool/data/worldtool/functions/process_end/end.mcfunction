@@ -6,7 +6,7 @@ scoreboard players set $brushprocessRunning worldtool 0
 
 bossbar set worldtool:progress visible false
 
-execute as @a[tag=wt.in_queue] at @s run function worldtool:ui/queue/move
+execute as @a[tag=wt.menu.queue] at @s run function worldtool:ui/queue/move
 
 # After process stuff
 

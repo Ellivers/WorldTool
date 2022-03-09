@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 0
 
-tag @s add wt.in_queue
+tag @s add wt.menu.queue
 
 scoreboard players set #temp worldtool 0
 execute as @a[scores={wt.queue_pos=1..}] run scoreboard players operation #temp worldtool > @s wt.queue_pos

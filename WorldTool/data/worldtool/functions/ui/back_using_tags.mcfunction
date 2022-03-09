@@ -1,7 +1,7 @@
 # Called by various functions
 # Goes back to the previous menu using its tag
 
-tag @s remove wt.in_queue
+execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
 
 execute if entity @s[tag=wt.menu.two_block_query.2] run function worldtool:ui/two_block_query/display/1
 execute if entity @s[tag=wt.menu.two_block_query.3,tag=!wt.two_block_query.primary] run function worldtool:ui/two_block_query/display/2

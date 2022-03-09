@@ -1,4 +1,4 @@
-# Called by worldtool:language/reload, worldtool:technical/load, and INSERT_FUNCTION
+# Called by worldtool:language/reload, worldtool:technical/load, and a future options button for English
 # Translations for English
 
 data modify storage worldtool:storage Language set value "worldtool:en_us"
@@ -16,7 +16,6 @@ data modify storage worldtool:storage Translation."item.general.pick_block" set 
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
 data modify storage worldtool:storage Translation."lore.brush.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
-
 data modify storage worldtool:storage Translation."item.shapes" set value "Shape Generation Tool"
 
 data modify storage worldtool:storage Translation."lore.selected_brush.none" set value "Selected brush: None"
@@ -126,6 +125,9 @@ data modify storage worldtool:storage Translation."error.queue.no_processes" set
 data modify storage worldtool:storage Translation."error.queue.invalid_process_count" set value "Error fetching process names: Could not find all queued processes."
 data modify storage worldtool:storage Translation."info.queue.in_queue" set value "Another process is currently running. The process you have selected will run after the following processes have finished:"
 data modify storage worldtool:storage Translation."info.queue.position" set value "Your queue position: "
+data modify storage worldtool:storage Translation."info.queue.leave_warning" set value "Leaving this menu will also leave the queue"
+data modify storage worldtool:storage Translation."button.queue.leave.name" set value "[⬅Leave]"
+data modify storage worldtool:storage Translation."button.queue.leave.description" set value "Leave the queue and go back to the previous menu"
 
 # General Tool
 data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set position 1]"

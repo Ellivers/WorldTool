@@ -7,7 +7,7 @@ execute positioned ~ ~1 ~ run scoreboard players operation @e[type=minecraft:mar
 
 # Set up the area to detect blocks in an air space
 fill ~-2 ~ ~-1 ~2 ~2 ~1 minecraft:bedrock
-setblock ~-1 1 ~ minecraft:air
-setblock ~1 1 ~ minecraft:air
+setblock ~-1 ~1 ~ minecraft:air
+setblock ~1 ~1 ~ minecraft:air
 
 kill @s
