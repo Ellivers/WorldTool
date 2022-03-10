@@ -3,8 +3,8 @@
 
 # Set scores
 scoreboard players set #generationRay worldtool 0
-scoreboard players operation #blockschecked worldtool += $blocksplaced worldtool
-scoreboard players set $blocksplaced worldtool 0
+scoreboard players operation #blockschecked worldtool += #blocksPlaced worldtool
+scoreboard players set #blocksPlaced worldtool 0
 
 # Get the current rotation
 execute unless score #axisTemp worldtool matches 1..2 store result score #currentRotX worldtool run data get entity @s Rotation[1] 100

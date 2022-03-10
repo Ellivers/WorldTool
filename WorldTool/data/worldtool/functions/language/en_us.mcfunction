@@ -162,9 +162,11 @@ data modify storage worldtool:storage Translation."button.fill.select_block.desc
 data modify storage worldtool:storage Translation."button.fill.air.description" set value "Fill with air"
 
 # Measure
+data modify storage worldtool:storage Translation."info.measure.dimensions" set value '["",{"score":{"name":"#sizeX","objective":"worldtool"}}," X * ",{"score":{"name":"#sizeY","objective":"worldtool"}}," Y * ",{"score":{"name":"#sizeZ","objective":"worldtool"}}," Z"]'
 data modify storage worldtool:storage Translation."info.measure.single" set value "This area contains 1 block (1 X * 1 Y * 1 Z)"
-data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks"]'
-data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," of the selected block(s)"]'
+data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks (",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true},")"]'
+data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s)"]'
+#,\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}
 
 # Brush Tool
 data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "

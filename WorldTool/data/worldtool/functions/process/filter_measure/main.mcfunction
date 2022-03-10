@@ -5,8 +5,10 @@ scoreboard players add #blockschecked worldtool 1
 
 # All different options
 # Makes sure it doesn't check a block twice
-execute unless score #blockschecked worldtool >= $blocksPerTick worldtool if entity @s[tag=wt.process.measure_filter.normal] if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run scoreboard players add $blocksplaced worldtool 1
-execute unless score #blockschecked worldtool >= $blocksPerTick worldtool if entity @s[tag=wt.process.measure_filter.exclude] unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run scoreboard players add $blocksplaced worldtool 1
+scoreboard players set #filterSuccess worldtool 0
+execute unless score #blockschecked worldtool >= $blocksPerTick worldtool if entity @s[tag=wt.process.filter_measure.normal] if blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run scoreboard players set #filterSuccess worldtool 1
+execute unless score #blockschecked worldtool >= $blocksPerTick worldtool if entity @s[tag=wt.process.filter_measure.exclude] unless blocks ~ ~ ~ ~ ~ ~ 2 1 13 all run scoreboard players set #filterSuccess worldtool 1
+execute if score #filterSuccess worldtool matches 1.. run scoreboard players add #blocksPlaced worldtool 1
 
 # Move the reader
 execute if score #writerPosX worldtool < #pos2x worldtool unless score #blockschecked worldtool >= $blocksPerTick worldtool run function worldtool:process/filter_measure/x

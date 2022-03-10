@@ -4,7 +4,6 @@
 tag @s remove wt.no_message
 tag @s remove wt.dont_end
 
-tag @s remove wt.process.fill
-tag @s remove wt.process.filter_measure
+function worldtool:ui/remove_process_tags
 
 function #worldtool:addon/process/remove_tags

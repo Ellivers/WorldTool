@@ -3,7 +3,7 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run tag @s add wt.process.filter_measure
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run function worldtool:ui_general/measure/add_process_tags
 execute if entity @s[tag=wt.two_block_query.normal] as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run tag @s add wt.process.filter_measure.normal
 execute if entity @s[tag=wt.two_block_query.exclude] as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run tag @s add wt.process.filter_measure.exclude
 tag @s remove wt.two_block_query.normal

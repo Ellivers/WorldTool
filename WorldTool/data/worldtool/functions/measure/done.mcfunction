@@ -2,9 +2,9 @@
 # Completes the measure calculations
 
 # Calculations
-scoreboard players operation #totalArea worldtool = #widthX worldtool
-scoreboard players operation #totalArea worldtool *= #heightY worldtool
-scoreboard players operation #totalArea worldtool *= #lengthZ worldtool
+scoreboard players operation #totalArea worldtool = #sizeX worldtool
+scoreboard players operation #totalArea worldtool *= #sizeY worldtool
+scoreboard players operation #totalArea worldtool *= #sizeZ worldtool
 
 # Message
 execute if entity @s[tag=!wt.no_message] run function worldtool:ui/reopen_menu
