@@ -3,6 +3,8 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
+data remove storage worldtool:storage Temp
+data modify storage worldtool:storage Temp.Tags set from entity @s Tags
 execute if entity @s[tag=!wt.no_message] as @a if score @s wt.ID = #ID_temp worldtool run function worldtool:process_end/message
 
 execute if entity @s[tag=!wt.dont_end] run function worldtool:process_end/end

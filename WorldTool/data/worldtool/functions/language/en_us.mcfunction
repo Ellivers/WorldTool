@@ -37,6 +37,8 @@ data modify storage worldtool:storage Translation."progress" set value "WorldToo
 
 # Processes
 data modify storage worldtool:storage Translation."process.fill" set value "Fill area"
+data modify storage worldtool:storage Translation."process.replace" set value "Replace"
+data modify storage worldtool:storage Translation."process.filter_measure" set value "Measure"
 
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled"
@@ -93,6 +95,10 @@ data modify storage worldtool:storage Translation."button.to_not_replace.name" s
 data modify storage worldtool:storage Translation."button.to_not_replace.description" set value "Choose which block you do not want to replace"
 data modify storage worldtool:storage Translation."button.replace_with.name" set value "[Select a block to replace with]"
 data modify storage worldtool:storage Translation."button.replace_with.description" set value "Choose which block you want to replace with"
+data modify storage worldtool:storage Translation."button.to_filter.name" set value "[Select a block to filter with]"
+data modify storage worldtool:storage Translation."button.to_filter.description" set value "Choose which block you want to filter with"
+data modify storage worldtool:storage Translation."button.to_not_filter.name" set value "[Select a block to not filter with]"
+data modify storage worldtool:storage Translation."button.to_not_filter.description" set value "Choose which block you do not want to filter with"
 data modify storage worldtool:storage Translation."button.retry.name" set value "[Retry]"
 data modify storage worldtool:storage Translation."button.retry.description" set value "Try again"
 
@@ -142,6 +148,13 @@ data modify storage worldtool:storage Translation."button.options.description" s
 data modify storage worldtool:storage Translation."button.replace.name" set value "[Replace...]"
 data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
 
+data modify storage worldtool:storage Translation."button.measure.name" set value "[Measure...]"
+data modify storage worldtool:storage Translation."button.measure.description" set value "Measure the dimensions and/or blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.all.name" set value "[All]"
+data modify storage worldtool:storage Translation."button.measure.all.description" set value "Measure the dimensions and count of all blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
+data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions and count of specific blocks in the area"
+
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
 data modify storage worldtool:storage Translation."button.general.previous_page.description" set value "Go to page 1"
@@ -151,6 +164,7 @@ data modify storage worldtool:storage Translation."button.fill.air.description" 
 # Measure
 data modify storage worldtool:storage Translation."info.measure.single" set value "This area contains 1 block (1 X * 1 Y * 1 Z)"
 data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks"]'
+data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," of the selected block(s)"]'
 
 # Brush Tool
 data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "

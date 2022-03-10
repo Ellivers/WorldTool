@@ -1,6 +1,8 @@
 # Called by various functions
 # Welcome to The Queue™
 
+execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
+
 scoreboard players set #success worldtool 0
 
 tag @s add wt.menu.queue
