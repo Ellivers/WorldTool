@@ -18,6 +18,7 @@ scoreboard objectives remove wt.rotX
 scoreboard objectives remove wt.rotY
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.dimension_base] at @s run function worldtool:block_test/stop
 kill @e[tag=worldtool]
 
 tellraw @a[tag=wt.user] {"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}

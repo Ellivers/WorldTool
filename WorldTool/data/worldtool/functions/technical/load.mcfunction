@@ -97,7 +97,8 @@ function #worldtool:addon/load
 execute in minecraft:overworld run forceload add 0 0
 execute in minecraft:the_nether run forceload add 0 0
 execute in minecraft:the_end run forceload add 0 0
-schedule function worldtool:technical/load/set_base 2t
+function #worldtool:addon/init_dimensions/forceload
+function worldtool:technical/load/wait_for_player
 
 execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
