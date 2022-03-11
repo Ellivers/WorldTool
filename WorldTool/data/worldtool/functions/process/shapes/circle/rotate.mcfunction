@@ -3,7 +3,7 @@
 
 # Set scores
 scoreboard players set #generationRay worldtool 0
-scoreboard players operation #blockschecked worldtool += #blocksPlaced worldtool
+scoreboard players operation #blocksChecked worldtool += #blocksPlaced worldtool
 scoreboard players set #blocksPlaced worldtool 0
 
 # Get the current rotation

@@ -4,6 +4,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.input] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:block_test/stop
 
+tag @s remove wt.in_menu
 function worldtool:ui/remove_return_tags
 function worldtool:ui/remove_menu_tags
 function worldtool:ui/clear_chat

@@ -5,4 +5,4 @@ function worldtool:process_start/positions
 function worldtool:process_start/summon
 function worldtool:process_start/variables
 
-schedule function worldtool:process/load 1t
+#schedule function worldtool:process/load 1t

@@ -43,8 +43,8 @@ data modify storage worldtool:storage Translation."process.filter_measure" set v
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled"
 data modify storage worldtool:storage Translation."info.affected_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," affected blocks"]'
-data modify storage worldtool:storage Translation."info.pos1_set" set value "Set position 1 to "
-data modify storage worldtool:storage Translation."info.pos2_set" set value "Set position 2 to "
+data modify storage worldtool:storage Translation."info.set_pos1" set value '["Set position 1 to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
+data modify storage worldtool:storage Translation."info.set_pos2" set value '["Set position 2 to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
 data modify storage worldtool:storage Translation."info.menu_closed" set value "Closed"
 data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
 
@@ -165,8 +165,7 @@ data modify storage worldtool:storage Translation."button.fill.air.description" 
 data modify storage worldtool:storage Translation."info.measure.dimensions" set value '["",{"score":{"name":"#sizeX","objective":"worldtool"}}," X * ",{"score":{"name":"#sizeY","objective":"worldtool"}}," Y * ",{"score":{"name":"#sizeZ","objective":"worldtool"}}," Z"]'
 data modify storage worldtool:storage Translation."info.measure.single" set value "This area contains 1 block (1 X * 1 Y * 1 Z)"
 data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks (",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true},")"]'
-data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s)"]'
-#,\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}
+data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s),\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}]'
 
 # Brush Tool
 data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "

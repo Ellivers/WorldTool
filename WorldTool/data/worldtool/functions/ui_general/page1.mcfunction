@@ -2,6 +2,7 @@
 # Code for page 1 of the general tool's menu
 
 function worldtool:ui/open_tool
+tag @s add wt.in_menu
 tag @s add wt.menu.general.p1
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

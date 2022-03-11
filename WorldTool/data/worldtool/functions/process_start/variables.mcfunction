@@ -13,11 +13,12 @@ scoreboard players set #blocksChecked worldtool 0
 scoreboard players set #blocksPlaced worldtool 0
 
 # Not so common but whatever
-scoreboard players operation #midX worldtool = #pos1x worldtool
-scoreboard players operation #midX worldtool += #pos2x worldtool
-scoreboard players operation #midX worldtool /= #2 worldtool
-scoreboard players operation #minX worldtool = #midX worldtool
-scoreboard players operation #maxX worldtool = #midX worldtool
+scoreboard players set #minX worldtool 2147483647
+scoreboard players set #maxX worldtool -2147483648
+scoreboard players set #minY worldtool 2147483647
+scoreboard players set #maxY worldtool -2147483648
+scoreboard players set #minZ worldtool 2147483647
+scoreboard players set #maxZ worldtool -2147483648
 
 
 function #worldtool:addon/process_start/variables
