@@ -14,5 +14,7 @@ tag @s remove wt.two_block_query.text.replace
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
 tag @s remove wt.two_block_query.text.filter
+tag @s remove wt.pick_block.primary
+tag @s remove wt.pick_block.secondary
 
 function #worldtool:addon/ui/remove_menu_tags

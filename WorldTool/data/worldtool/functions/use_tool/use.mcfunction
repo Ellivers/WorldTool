@@ -21,8 +21,8 @@ execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/n
 function #worldtool:addon/use_tool/add_tags
 
 ## Raycasting stuff ##
-#temp = distance raycasted
-#temp2 = max raycast distance
+# temp = distance raycasted
+# temp2 = max raycast distance
 # both of these are measured in half blocks
 scoreboard players operation #temp2 worldtool = $maxRaycastingDistance worldtool
 scoreboard players operation #temp2 worldtool *= #2 worldtool

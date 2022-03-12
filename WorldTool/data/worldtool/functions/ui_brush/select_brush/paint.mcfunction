@@ -3,6 +3,6 @@
 
 item modify entity @s weapon.mainhand worldtool:brush_tool/brushes/paint
 
-execute if score $playUISounds worldtool matches 1.. at @s run playsound minecraft:entity.item.pickup master @s ~ ~ ~ 0.5
+function worldtool:ui/sound.change_item
 
 function worldtool:ui_brush/main

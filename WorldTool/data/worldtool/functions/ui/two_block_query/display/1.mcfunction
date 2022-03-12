@@ -11,7 +11,7 @@ tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/return.back_button
 
-tellraw @s ["\n",{"nbt":"Translation.\"button.normal.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.normal.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/two_block_query/display/selected.normal"}}," ",{"nbt":"Translation.\"button.exclude.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.exclude.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/two_block_query/display/selected.exclude"}}]
+tellraw @s ["",{"nbt":"Translation.\"button.normal.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.normal.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/two_block_query/display/selected.normal"}}," ",{"nbt":"Translation.\"button.exclude.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.exclude.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/two_block_query/display/selected.exclude"}}]
 function worldtool:ui/close_button
 
 function worldtool:ui/anti_feedback_chat_message/load

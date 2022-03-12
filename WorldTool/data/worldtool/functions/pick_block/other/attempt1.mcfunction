@@ -5,7 +5,7 @@ scoreboard players operation @s wt.ID = #ID_temp worldtool
 tag @s remove wt.temp
 
 setblock ~ ~-1 ~ minecraft:glass
-clone 0 245 13 0 245 13 ~ ~ ~ replace move
+clone 27450 254 13 27450 254 13 ~ ~ ~ replace move
 
 execute align xyz run summon minecraft:arrow ~.5 ~1 ~.5 {Motion:[0d,-1d,0d],Tags:["worldtool","wt.pick_block"]}
 

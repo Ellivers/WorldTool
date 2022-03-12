@@ -3,7 +3,7 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-clone ~ ~ ~ ~ ~ ~ 0 245 13
+clone ~ ~ ~ ~ ~ ~ 27450 254 13
 
 summon minecraft:marker ~ 255 ~ {Tags:["worldtool","wt.pick_block_marker","wt.temp"]}
 

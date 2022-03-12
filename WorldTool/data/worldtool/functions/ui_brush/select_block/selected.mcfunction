@@ -9,7 +9,7 @@ execute if entity @s[tag=!wt.select_block.brush.secondary] run item modify entit
 execute if entity @s[tag=wt.select_block.brush.secondary] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
 
 tellraw @s {"nbt":"Translation.\"info.selected_block\"","storage": "worldtool:storage","interpret": true}
-execute if score $playUISounds worldtool matches 1.. at @s run playsound minecraft:entity.item.pickup master @s ~ ~ ~ 0.5
+function worldtool:ui/sound.change_item
 
 tag @s remove wt.select_block
 tag @s remove wt.select_block.brush

@@ -11,6 +11,7 @@ data modify storage worldtool:storage Translation."item.general.pos2" set value 
 data modify storage worldtool:storage Translation."lore.general.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.general.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
 data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Cloning Destination"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
@@ -47,6 +48,7 @@ data modify storage worldtool:storage Translation."info.set_pos1" set value '["S
 data modify storage worldtool:storage Translation."info.set_pos2" set value '["Set position 2 to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
 data modify storage worldtool:storage Translation."info.menu_closed" set value "Closed"
 data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
+data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -75,7 +77,7 @@ data modify storage worldtool:storage Translation."button.replace_block.dont_rep
 data modify storage worldtool:storage Translation."button.replace_block.dont_replace.description" set value "Select a block to exclude"
 data modify storage worldtool:storage Translation."button.replace_block.place.name" set value "[Select a Block to Replace With]"
 data modify storage worldtool:storage Translation."button.replace_block.place.description" set value "Select a block to place"
-data modify storage worldtool:storage Translation."button.pick_block.name" set value "[Pick Block]"
+data modify storage worldtool:storage Translation."button.pick_block.name" set value "[Pick Block...]"
 data modify storage worldtool:storage Translation."button.pick_block.description" set value "Select a block in the world to use"
 data modify storage worldtool:storage Translation."button.air.name" set value "(Air)"
 data modify storage worldtool:storage Translation."button.air.description" set value "Air"
@@ -155,6 +157,7 @@ data modify storage worldtool:storage Translation."button.measure.all.descriptio
 data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
 data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions and count of specific blocks in the area"
 
+data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
 data modify storage worldtool:storage Translation."button.general.previous_page.description" set value "Go to page 1"
