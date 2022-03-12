@@ -93,12 +93,13 @@ scoreboard players set $optionAddons worldtool 0
 scoreboard players set $greeneryAddons worldtool 0
 function #worldtool:addon/load
 
-# Forceload for access to storing blocks at 0 0
-execute in minecraft:overworld run forceload add 0 0
-execute in minecraft:the_nether run forceload add 0 0
-execute in minecraft:the_end run forceload add 0 0
+# Forceload for access to storing blocks at 27450 19
+execute in minecraft:overworld run forceload add 27450 19
+execute in minecraft:the_nether run forceload add 27450 19
+execute in minecraft:the_end run forceload add 27450 19
 function #worldtool:addon/init_dimensions/forceload
-function worldtool:technical/load/wait_for_player
+scoreboard players set #loadWaitTime worldtool 0
+function worldtool:technical/load/wait_for_load
 
 execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
