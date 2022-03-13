@@ -1,4 +1,4 @@
-# Called by worldtool:technical/load
+# Scheduled by itself and called by worldtool:technical/load
 # Waits for the chunk at 27450 19 to load properly
 
 scoreboard players add #loadWaitTime worldtool 1

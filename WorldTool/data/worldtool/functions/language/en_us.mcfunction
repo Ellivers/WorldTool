@@ -151,11 +151,13 @@ data modify storage worldtool:storage Translation."button.replace.name" set valu
 data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
 
 data modify storage worldtool:storage Translation."button.measure.name" set value "[Measure...]"
-data modify storage worldtool:storage Translation."button.measure.description" set value "Measure the dimensions and/or blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.description" set value "Various info such as block count, dimensions, and distance"
 data modify storage worldtool:storage Translation."button.measure.all.name" set value "[All]"
-data modify storage worldtool:storage Translation."button.measure.all.description" set value "Measure the dimensions and count of all blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.all.description" set value "Measure the dimensions of and count all blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.distance.name" set value "[Distance]"
+data modify storage worldtool:storage Translation."button.measure.distance.description" set value "Get the distance between position 1 and position 2"
 data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
-data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions and count of specific blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions of and count specific blocks in the area"
 
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
@@ -169,6 +171,7 @@ data modify storage worldtool:storage Translation."info.measure.dimensions" set 
 data modify storage worldtool:storage Translation."info.measure.single" set value "This area contains 1 block (1 X * 1 Y * 1 Z)"
 data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks (",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true},")"]'
 data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s),\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}]'
+data modify storage worldtool:storage Translation."info.measure.distance" set value '["There is a distance of ~",{"score":{"name":"#sqrtOutput","objective":"worldtool"}},".",{"score":{"name":"#outputDecimals","objective":"worldtool"}}," blocks between the positions [",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},"] and [",{"score":{"name":"#pos2xt","objective":"worldtool"}},", ",{"score":{"name":"#pos2yt","objective":"worldtool"}},", ",{"score":{"name":"#pos2zt","objective":"worldtool"}},"]"]'
 
 # Brush Tool
 data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "
