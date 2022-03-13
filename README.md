@@ -1,5 +1,9 @@
 # WorldTool
 
+***This branch is currently being reworked and will not function/have all features for a while. If you want to clone the current version with all features, please check out the [old branch](https://github.com/Ellivers/WorldTool/tree/old) instead.***
+<br></br>
+<br></br>
+
 WorldTool is a world-editing data pack with similar functionality to WorldEdit and BlingEdit. It has a large number of helpful features that make it so much easier to edit your Minecraft blocks, including rotation and a full system for automating editing using commands.
 
 Here you can download non-full releases (experimental versions) to try out.
