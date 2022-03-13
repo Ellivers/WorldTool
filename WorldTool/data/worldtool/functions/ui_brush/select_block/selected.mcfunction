@@ -1,4 +1,4 @@
-# Called by worldtool:block_test/player and worldtool:ui_brush/select_block/selected.air
+# Called by worldtool:input_check/player and worldtool:ui_brush/select_block/selected.air
 # Sets the block to what you selected
 
 execute if entity @s[tag=wt.select_block.brush] run data remove storage worldtool:storage Temp

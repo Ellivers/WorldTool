@@ -9,5 +9,5 @@ function worldtool:ui/clear_chat
 
 tellraw @s [{"nbt":"Translation.\"button.back.name\"","storage": "worldtool:storage","color":"yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.back.description\"","storage": "worldtool:storage"}},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_general/pick_block/back"}},"\n"]
 
-tellraw @s ["\n",{"nbt":"Translation.\"info.pick_block\"","storage": "worldtool:storage"}]
+tellraw @s ["\n",{"nbt":"Translation.\"info.pick_block\"","storage": "worldtool:storage","color": "aqua"}]
 function worldtool:ui/anti_feedback_chat_message/load
