@@ -103,4 +103,4 @@ function worldtool:technical/load/wait_for_load
 
 execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
-#function worldtool:particles/clock
+function worldtool:particles/clock
