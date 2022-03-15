@@ -9,7 +9,7 @@
 #define tag wt.temp
 # Writer
 #define entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Writer
-#define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Bottom
+#define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Bottom (Temporary)
 
 ## Objectives ##
 scoreboard objectives add worldtool dummy
@@ -25,6 +25,12 @@ scoreboard objectives add wt.precision dummy
 scoreboard objectives add wt.degrees dummy
 scoreboard objectives add wt.rotX dummy
 scoreboard objectives add wt.rotY dummy
+scoreboard objectives add wt.pos1x dummy
+scoreboard objectives add wt.pos1y dummy
+scoreboard objectives add wt.pos1z dummy
+scoreboard objectives add wt.pos2x dummy
+scoreboard objectives add wt.pos2y dummy
+scoreboard objectives add wt.pos2z dummy
 
 # Default language
 execute if data storage worldtool:storage Language run function worldtool:language/reload

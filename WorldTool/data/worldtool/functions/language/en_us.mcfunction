@@ -160,6 +160,9 @@ data modify storage worldtool:storage Translation."button.measure.distance.descr
 data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
 data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions of and count specific blocks in the area"
 
+data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Outline selection: Off]"
+data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Outline selection: On]"
+data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show lines around the selected area"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
