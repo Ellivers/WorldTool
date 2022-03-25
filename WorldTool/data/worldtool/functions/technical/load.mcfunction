@@ -11,6 +11,9 @@
 #define entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Writer
 #define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Bottom (Temporary)
 
+# Detect an older version
+execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 4.. run function worldtool:technical/upgrade_version
+
 ## Objectives ##
 scoreboard objectives add worldtool dummy
 scoreboard objectives add wt.use_coas used:minecraft.carrot_on_a_stick
@@ -36,8 +39,7 @@ scoreboard objectives add wt.pos2z dummy
 execute if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
-# Detect an older version
-execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 4.. run function worldtool:technical/upgrade_version
+# Set the current version
 scoreboard players set $version worldtool 4
 
 ## Default blocks per tick ##

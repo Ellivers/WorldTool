@@ -3,6 +3,6 @@
 
 scoreboard players operation @s wt.ID = #ID_temp worldtool
 
-function worldtool:technical/common/remove_non_process_tags
+data modify entity @s Tags append from storage worldtool:storage Processes[-1].Tags[]
 
 function #worldtool:addon/process_start/writer_setup

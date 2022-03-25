@@ -30,3 +30,5 @@ scoreboard objectives remove wt_diameter
 scoreboard objectives remove wt_height
 scoreboard objectives remove wt_precision
 scoreboard objectives remove wt_degrees
+
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool] at @s run function worldtool:technical/upgrade_version/remove_entities

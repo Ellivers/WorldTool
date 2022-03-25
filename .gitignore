@@ -1,2 +1,4 @@
 # Temporary old data folder
 old_data/
+# VSCode is funny
+.vscode/
