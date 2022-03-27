@@ -10,9 +10,10 @@
 # Writer
 #define entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Writer
 #define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Bottom (Temporary)
+#define entity 9880ccfe-fdf6-4538-838a-ddc75a54608e Reciever
 
 # Detect an older version
-execute if score $blocksPerTick worldtool matches -2147483648.. unless score $version worldtool matches 4.. run function worldtool:technical/upgrade_version
+execute if score $version worldtool matches ..3 run function worldtool:technical/upgrade_version
 
 ## Objectives ##
 scoreboard objectives add worldtool dummy

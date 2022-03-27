@@ -10,7 +10,7 @@ execute unless score #blocksChecked worldtool >= $clonedBlocksPerTick worldtool 
 execute unless score #blocksChecked worldtool >= $clonedBlocksPerTick worldtool if entity @s[tag=wt.process.clone.move,tag=wt.process.clone.filter.normal] if blocks 2 1 13 2 1 13 ~ ~ ~ all run clone ~ ~ ~ ~ ~ ~ 0 1 13 replace move
 execute unless score #blocksChecked worldtool >= $clonedBlocksPerTick worldtool if entity @s[tag=wt.process.clone.move,tag=wt.process.clone.filter.exclude] unless blocks 2 1 13 2 1 13 ~ ~ ~ all run clone ~ ~ ~ ~ ~ ~ 0 1 13 replace move
 
-execute unless score #blocksChecked worldtool >= $clonedBlocksPerTick worldtool at @e[type=minecraft:marker,tag=worldtool,tag=wt.process.clone_receiver] unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:process/clone/check_place
+execute unless score #blocksChecked worldtool >= $clonedBlocksPerTick worldtool at 9880ccfe-fdf6-4538-838a-ddc75a54608e unless blocks ~ ~ ~ ~ ~ ~ 0 1 13 all run function worldtool:process/clone/check_place
 
 # Move the writer
 execute if score #writerPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= $blocksPerTick worldtool run function worldtool:process/clone/normal/x

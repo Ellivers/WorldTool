@@ -40,6 +40,7 @@ data modify storage worldtool:storage Translation."progress" set value "WorldToo
 data modify storage worldtool:storage Translation."process.fill" set value "Fill area"
 data modify storage worldtool:storage Translation."process.replace" set value "Replace"
 data modify storage worldtool:storage Translation."process.filter_measure" set value "Measure"
+data modify storage worldtool:storage Translation."process.clone" set value "Clone"
 
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled"
@@ -139,9 +140,9 @@ data modify storage worldtool:storage Translation."button.queue.leave.name" set 
 data modify storage worldtool:storage Translation."button.queue.leave.description" set value "Leave the queue and go back to the previous menu"
 
 # General Tool
-data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set position 1]"
+data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set Position 1]"
 data modify storage worldtool:storage Translation."button.set_pos1.description" set value "Set position 1 at your position"
-data modify storage worldtool:storage Translation."button.set_pos2.name" set value "[Set position 2]"
+data modify storage worldtool:storage Translation."button.set_pos2.name" set value "[Set Position 2]"
 data modify storage worldtool:storage Translation."button.set_pos2.description" set value "Set position 2 at your position"
 data modify storage worldtool:storage Translation."button.use.name" set value "[Use...]  "
 data modify storage worldtool:storage Translation."button.use.description" set value "Open the main menu"
@@ -160,8 +161,26 @@ data modify storage worldtool:storage Translation."button.measure.distance.descr
 data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
 data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions of and count specific blocks in the area"
 
-data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Outline selection: Off]"
-data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Outline selection: On]"
+data modify storage worldtool:storage Translation."button.clone.name" set value "[Clone...]"
+data modify storage worldtool:storage Translation."button.clone.description" set value "Copy, move, and rotate the area"
+data modify storage worldtool:storage Translation."button.clone.copy.player_pos" set value "[Copy]"
+data modify storage worldtool:storage Translation."button.clone.copy.block_pos" set value "[Copy...]"
+data modify storage worldtool:storage Translation."button.clone.copy.description" set value "Copy the area"
+data modify storage worldtool:storage Translation."button.clone.move.player_pos" set value "[Move]"
+data modify storage worldtool:storage Translation."button.clone.move.block_pos" set value "[Move...]"
+data modify storage worldtool:storage Translation."button.clone.move.description" set value "Move the area"
+data modify storage worldtool:storage Translation."button.clone.player_pos.name" set value "[Destination: At Player]"
+data modify storage worldtool:storage Translation."button.clone.player_pos.description" set value "Switch to setting the destination at a block position"
+data modify storage worldtool:storage Translation."button.clone.block_pos.name" set value "[Destination: At Block]"
+data modify storage worldtool:storage Translation."button.clone.block_pos.description" set value "Switch to setting the destination at your position"
+data modify storage worldtool:storage Translation."button.clone.filter.on" set value "[Filter: On]"
+data modify storage worldtool:storage Translation."button.clone.filter.off" set value "[Filter: Off...]"
+data modify storage worldtool:storage Translation."button.clone.filter.description" set value "Choose which block(s) to be cloned"
+data modify storage worldtool:storage Translation."info.cloned_block" set value "1 block cloned"
+data modify storage worldtool:storage Translation."info.cloned_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," blocks cloned"]'
+
+data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Outline Selection: Off]"
+data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Outline Selection: On]"
 data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show lines around the selected area"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
@@ -199,7 +218,7 @@ data modify storage worldtool:storage Translation."info.selected_brush.place" se
 data modify storage worldtool:storage Translation."info.selected_brush.replace" set value "Selected brush: Replace"
 data modify storage worldtool:storage Translation."info.selected_brush.sphere" set value "Selected brush: Sphere"
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
-data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Paint"
+data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Structure"
 
 data modify storage worldtool:storage Translation."info.selected_brush" set value "Selected brush: "
 data modify storage worldtool:storage Translation."brush.none" set value "None"
@@ -208,7 +227,7 @@ data modify storage worldtool:storage Translation."brush.place" set value "Place
 data modify storage worldtool:storage Translation."brush.replace" set value "Replace"
 data modify storage worldtool:storage Translation."brush.sphere" set value "Sphere"
 data modify storage worldtool:storage Translation."brush.circle" set value "Circle"
-data modify storage worldtool:storage Translation."brush.structure" set value "Paint"
+data modify storage worldtool:storage Translation."brush.structure" set value "Structure"
 
 
 # Brush settings

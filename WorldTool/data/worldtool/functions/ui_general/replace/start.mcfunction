@@ -1,8 +1,6 @@
 # Called by worldtool:ui/return
 # Starts the replacing process
 
-scoreboard players operation #ID_temp worldtool = @s wt.ID
-
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.replace\\"","storage":"worldtool:storage"}',Id:"worldtool:replace",Tags:["wt.process.replace"]}
 
 execute if entity @s[tag=wt.two_block_query.normal] run data modify storage worldtool:storage Processes[-1].Tags append value "wt.process.replace.normal"

@@ -1,4 +1,5 @@
 # Called by worldtool:ui_general/page1.display
+# Shows the measuring menu
 
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
