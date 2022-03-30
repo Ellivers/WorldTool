@@ -15,7 +15,8 @@
                             "function": "minecraft:set_name",
                             "name": {
                                 "nbt": "Translation.\"item.brush\"",
-                                "storage": "worldtool:storage"
+                                "storage": "worldtool:storage",
+                                "italic": false
                             },
                             "entity": "this"
                         },

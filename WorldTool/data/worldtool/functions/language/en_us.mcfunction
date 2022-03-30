@@ -12,6 +12,7 @@ data modify storage worldtool:storage Translation."lore.general.normal.1" set va
 data modify storage worldtool:storage Translation."lore.general.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
 data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
+data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
 data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Cloning Destination"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
@@ -51,6 +52,7 @@ data modify storage worldtool:storage Translation."info.set_pos2" set value '["S
 data modify storage worldtool:storage Translation."info.menu_closed" set value "Closed"
 data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
 data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
+data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."

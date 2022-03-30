@@ -3,9 +3,8 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-# NOTE: SET A TEMPORARY ENTITY BEFORE THIS
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
-execute if data storage worldtool:storage {Temp:{Process:{Id:"worldtool:clone"}}} run summon minecraft:marker ~ ~ ~ {CustomName:'"WorldTool Clone Reciever"',Tags:["worldtool","wt.reciever"],UUID:[I;-1736389378,-34192072,-2088051257,1515479182]}
+execute if data storage worldtool:storage {Temp:{Process:{Id:"worldtool:clone"}}} as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:ui_general/clone/summon_reciever
 
 function #worldtool:addon/process_start/common_start
 

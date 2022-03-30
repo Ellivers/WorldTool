@@ -15,7 +15,8 @@
                             "function": "minecraft:set_name",
                             "name": {
                                 "nbt": "Translation.\"item.general.pos1\"",
-                                "storage": "worldtool:storage"
+                                "storage": "worldtool:storage",
+                                "italic": false
                             },
                             "entity": "this"
                         },

@@ -6,7 +6,7 @@
     {
         "function": "minecraft:set_name",
         "name": {
-            "nbt": "Translation.\"item.general.clone\"",
+            "nbt": "Translation.\"item.general.clonepos\"",
             "storage": "worldtool:storage",
             "italic": false
         },
