@@ -123,6 +123,8 @@ data modify storage worldtool:storage Translation."button.disabled.name" set val
 data modify storage worldtool:storage Translation."button.disabled.description" set value "Enable"
 data modify storage worldtool:storage Translation."button.reset.name" set value "[Reset]"
 data modify storage worldtool:storage Translation."button.reset.description" set value "Reset to the default value"
+data modify storage worldtool:storage Translation."button.reset_all.name" set value "[Reset All]"
+data modify storage worldtool:storage Translation."button.reset_all.description" set value "Reset all settings to the default values"
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
