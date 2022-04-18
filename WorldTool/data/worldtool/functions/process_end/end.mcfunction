@@ -6,8 +6,6 @@ scoreboard players set $brushprocessRunning worldtool 0
 
 bossbar set worldtool:progress visible false
 
-function worldtool:ui/queue/move
-
 # After process stuff
 
 execute if entity @s[tag=wt.process.clone] run kill 9880ccfe-fdf6-4538-838a-ddc75a54608e
@@ -15,3 +13,6 @@ execute if entity @s[tag=wt.process.clone] run kill 9880ccfe-fdf6-4538-838a-ddc7
 function #worldtool:addon/process/end
 
 kill @s
+
+
+function worldtool:ui/queue/move

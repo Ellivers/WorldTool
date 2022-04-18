@@ -1,4 +1,4 @@
-# Called by various functions
+# Called by worldtool:ui/queue/load and worldtool:ui/queue/move
 # Displays the queue message
 
 tag @s add wt.dont_clear_tags
