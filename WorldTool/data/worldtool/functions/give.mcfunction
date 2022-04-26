@@ -1,4 +1,4 @@
-# Called by users
+# Called manually
 # Gives all tools
 
 loot give @s loot worldtool:general_tool

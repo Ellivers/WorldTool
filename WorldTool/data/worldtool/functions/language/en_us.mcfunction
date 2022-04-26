@@ -67,7 +67,7 @@ data modify storage worldtool:storage Translation."error.outside_world" set valu
 
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"
-data modify storage worldtool:storage Translation."button.close.description" set value "Cancel and close this menu"
+data modify storage worldtool:storage Translation."button.close.description" set value "Cancel and close the menu"
 data modify storage worldtool:storage Translation."button.back.name" set value "[⬅Back]"
 data modify storage worldtool:storage Translation."button.back.description" set value "Go back to the previous menu"
 data modify storage worldtool:storage Translation."button.ui_general.back.description" set value "Go back to page 1 of the main menu"
@@ -142,6 +142,7 @@ data modify storage worldtool:storage Translation."info.queue.position" set valu
 data modify storage worldtool:storage Translation."info.queue.leave_warning" set value "Leaving this menu will also leave the queue"
 data modify storage worldtool:storage Translation."button.queue.leave.name" set value "[⬅Leave]"
 data modify storage worldtool:storage Translation."button.queue.leave.description" set value "Leave the queue and go back to the previous menu"
+data modify storage worldtool:storage Translation."info.queue.from_command" set value " (Command)"
 
 # General Tool
 data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set Position 1]"

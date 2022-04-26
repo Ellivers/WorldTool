@@ -1,5 +1,6 @@
 # Called by worldtool:process_start/common/start
-# Give the process the selected blocks
+# Gives the process the selected blocks
 
-execute unless entity @s[tag=!wt.primary,tag=!wt.both] run clone ~1 ~ ~ ~1 ~ ~ 27451 1 19 replace
-execute unless entity @s[tag=!wt.secondary,tag=!wt.both] run clone ~-1 ~ ~ ~-1 ~ ~ 27449 1 19 replace
+summon minecraft:marker ~ ~ ~ {Tags:["worldtool","wt.fetch_blocks"],UUID:[I;-734294480,1372343712,-1853202267,1471047535]}
+
+execute as d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:process_start/common/start.input.entity

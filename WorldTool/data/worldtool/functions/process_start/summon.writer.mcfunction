@@ -4,6 +4,7 @@
 scoreboard players operation @s wt.ID = #ID_temp worldtool
 
 data modify entity @s Tags append from storage worldtool:storage Processes[-1].Tags[]
+data modify entity @s Pos set from storage worldtool:storage Processes[-1].Positions.1
 
 execute if entity @s[tag=wt.from_bottom] run function worldtool:process_start/common/start_from_bottom
 

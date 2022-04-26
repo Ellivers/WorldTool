@@ -1,4 +1,4 @@
-# Called by worldtool:ui/queue/move
+# Called by worldtool:ui/queue/move_all
 # Starts the process
 
 scoreboard players set #success worldtool 1
