@@ -8,6 +8,9 @@ tag @s remove wt.clone.move
 tag @s remove wt.menu.clone.filter
 tag @s add wt.menu.clone
 
+scoreboard players operation #ID_temp worldtool = @s wt.ID
+execute as @e[type=minecraft:marker,tag=wt.input] if score @s wt.ID = #ID_temp worldtool run tag @s remove wt.dont_check
+
 execute if predicate worldtool:tools/general/clonepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
 tellraw @s[tag=wt.clone_at_player,tag=!wt.two_block_query.normal,tag=!wt.two_block_query.exclude] [{"nbt":"Translation.\"button.clone.copy.player_pos\"","storage": "worldtool:storage","color": "dark_green","clickEvent":{"action":"run_command","value":"/function worldtool:ui_general/clone/start"},"hoverEvent":{"action":"show_text","contents": {"nbt":"Translation.\"button.clone.copy.description\"","storage": "worldtool:storage"}}}," ",{"nbt":"Translation.\"button.clone.move.player_pos\"","storage": "worldtool:storage","color": "dark_purple","clickEvent":{"action": "run_command","value": "/function worldtool:ui_general/clone/start_move"},"hoverEvent":{"action":"show_text","contents":{"nbt":"Translation.\"button.clone.move.description\"","storage": "worldtool:storage"}}}," ",{"nbt":"Translation.\"button.clone.player_pos.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action":"show_text","contents": {"nbt":"Translation.\"button.clone.player_pos.description\"","storage": "worldtool:storage"}},"clickEvent": {"action":"run_command","value":"/function worldtool:ui_general/clone/settings/destination_pos"}}," ",{"nbt":"Translation.\"button.clone.filter.off\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action":"show_text","contents": {"nbt":"Translation.\"button.clone.filter.description\"","storage": "worldtool:storage"}},"clickEvent": {"action":"run_command","value":"/function worldtool:ui_general/clone/filter_on"}}]

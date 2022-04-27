@@ -1,4 +1,5 @@
 # Called by worldtool:pick_block/other/attempt2
+# Displays an error
 
 function worldtool:ui/clear_chat
 tellraw @s {"nbt":"Translation.\"error.block_not_picked\"","storage": "worldtool:storage","color": "red"}

@@ -1,4 +1,5 @@
 # Called by worldtool:technical/common/get_dim_bottom/load
+# Displays an error
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat

@@ -65,11 +65,15 @@ data modify storage worldtool:storage Translation."error.pos2_missing" set value
 data modify storage worldtool:storage Translation."error.process_running" set value "Another process is currently running"
 data modify storage worldtool:storage Translation."error.outside_world" set value "You can't use that outside the world"
 
+# Warnings
+data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue?"]'
+
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"
 data modify storage worldtool:storage Translation."button.close.description" set value "Cancel and close the menu"
 data modify storage worldtool:storage Translation."button.back.name" set value "[⬅Back]"
 data modify storage worldtool:storage Translation."button.back.description" set value "Go back to the previous menu"
+data modify storage worldtool:storage Translation."button.back_cancel.description" set value "Cancel and go back to the previous menu"
 data modify storage worldtool:storage Translation."button.ui_general.back.description" set value "Go back to page 1 of the main menu"
 data modify storage worldtool:storage Translation."button.kill_process.name" set value "[Kill Process]"
 data modify storage worldtool:storage Translation."button.kill_process.description" set value "Kill any currently running process"
@@ -107,6 +111,8 @@ data modify storage worldtool:storage Translation."button.to_not_filter.name" se
 data modify storage worldtool:storage Translation."button.to_not_filter.description" set value "Choose which block you do not want to filter with"
 data modify storage worldtool:storage Translation."button.retry.name" set value "[Retry]"
 data modify storage worldtool:storage Translation."button.retry.description" set value "Try again"
+data modify storage worldtool:storage Translation."button.continue.name" set value "[Continue]"
+data modify storage worldtool:storage Translation."button.continue.description" set value "Continue"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
