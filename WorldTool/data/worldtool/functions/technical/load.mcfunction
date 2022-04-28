@@ -59,6 +59,7 @@ execute unless score $clearChat worldtool matches 0..1 run scoreboard players se
 execute unless score $sizeWarnLimit worldtool matches 0..10000000 run scoreboard players set $sizeWarnLimit worldtool 100000
 execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
 execute unless score $clonePreviewDelay worldtool matches 4.. run scoreboard players set $clonePreviewDelay worldtool 5
+execute unless score $logLimit worldtool matches -2147483648.. run scoreboard players set $clonePreviewDelay worldtool 100
 
 execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard players set $maxRaycastingDistance worldtool 100
 

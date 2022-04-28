@@ -69,6 +69,11 @@ data modify storage worldtool:storage Translation."error.outside_world" set valu
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue?"]'
 
+# Log messages
+data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
+data modify storage worldtool:storage Translation."info.log.process_already_running.cancel" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
+data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"[Error] Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
+
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"
 data modify storage worldtool:storage Translation."button.close.description" set value "Cancel and close the menu"
