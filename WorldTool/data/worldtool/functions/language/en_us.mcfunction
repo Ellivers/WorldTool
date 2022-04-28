@@ -53,6 +53,7 @@ data modify storage worldtool:storage Translation."info.menu_closed" set value "
 data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
 data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
 data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
+data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."

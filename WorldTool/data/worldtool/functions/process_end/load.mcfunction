@@ -3,7 +3,6 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-
 execute if entity @s[tag=wt.process.filter_measure] run function worldtool:process/filter_measure/calculate
 
 function #worldtool:addon/process/final_code
