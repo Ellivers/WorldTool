@@ -9,6 +9,9 @@ execute if score $sizeWarnLimit worldtool matches ..0 run function worldtool:pro
 
 execute if score #success worldtool matches 1 if score $sizeWarnLimit worldtool matches 1.. run function worldtool:process_start/common/check_positions
 
+execute if score #success worldtool matches 0 run function worldtool:process_start/common/cancel_process
+
+
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/check_process
 
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/start
