@@ -14,6 +14,4 @@ execute if entity @s[tag=wt.input] unless entity @s[tag=!wt.secondary,tag=!wt.bo
 execute if entity @s[tag=wt.input] unless entity @s[tag=!wt.secondary,tag=!wt.both] run scoreboard players remove #temp worldtool 1
 execute if entity @s[tag=wt.input] unless entity @s[tag=!wt.secondary,tag=!wt.both] store result storage worldtool:storage Processes[-1].BlockPositions.Secondary[0] double 1 run scoreboard players get #temp worldtool
 
-execute if entity @s[tag=wt.reciever_marker] run data modify storage worldtool:storage Processes[-1].Positions.CloneDestination set from entity @s Pos
-
 function #worldtool:addon/process_start/get_player_data

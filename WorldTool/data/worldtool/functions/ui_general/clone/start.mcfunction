@@ -13,9 +13,9 @@ execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage wor
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker] if score @s wt.ID = #ID_temp worldtool run kill @s
-summon minecraft:marker ~ ~ ~ {Tags:["worldtool","wt.reciever_marker"]}
-scoreboard players operation @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker,sort=nearest,limit=1] wt.ID = #ID_temp worldtool
+function worldtool:technical/common/temp_entity
+data modify storage worldtool:storage Processes[0].Positions.CloneDestination set from entity d43b8e30-51cc-4da0-918a-60a557ae676f Pos
+kill d43b8e30-51cc-4da0-918a-60a557ae676f
 
 function worldtool:process_start/common/load
 
