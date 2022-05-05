@@ -32,6 +32,7 @@ scoreboard objectives add wt.precision dummy
 scoreboard objectives add wt.degrees dummy
 scoreboard objectives add wt.rotX dummy
 scoreboard objectives add wt.rotY dummy
+scoreboard objectives add wt.rotZ dummy
 scoreboard objectives add wt.pos1x dummy
 scoreboard objectives add wt.pos1y dummy
 scoreboard objectives add wt.pos1z dummy
@@ -70,6 +71,7 @@ scoreboard players set #4 worldtool 4
 scoreboard players set #5 worldtool 5
 scoreboard players set #8 worldtool 8
 scoreboard players set #10 worldtool 10
+scoreboard players set #90 worldtool 90
 scoreboard players set #100 worldtool 100
 scoreboard players set #200 worldtool 200
 scoreboard players set #1000 worldtool 1000
