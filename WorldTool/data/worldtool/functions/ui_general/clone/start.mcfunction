@@ -17,7 +17,9 @@ function worldtool:technical/common/temp_entity
 data modify storage worldtool:storage Processes[0].Positions.CloneDestination set from entity d43b8e30-51cc-4da0-918a-60a557ae676f Pos
 kill d43b8e30-51cc-4da0-918a-60a557ae676f
 
-function worldtool:process_start/common/load
+
+function worldtool:ui_general/clone/calculate_overlap
+execute if score #success worldtool matches 1 run function worldtool:process_start/common/load
 
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

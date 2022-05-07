@@ -65,13 +65,13 @@ execute unless score $logLimit worldtool matches -2147483648.. run scoreboard pl
 execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard players set $maxRaycastingDistance worldtool 100
 
 ## Constants ##
+scoreboard players set #-1 worldtool -1
 scoreboard players set #2 worldtool 2
 scoreboard players set #3 worldtool 3
 scoreboard players set #4 worldtool 4
 scoreboard players set #5 worldtool 5
 scoreboard players set #8 worldtool 8
 scoreboard players set #10 worldtool 10
-scoreboard players set #90 worldtool 90
 scoreboard players set #100 worldtool 100
 scoreboard players set #200 worldtool 200
 scoreboard players set #1000 worldtool 1000

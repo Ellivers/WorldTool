@@ -67,7 +67,8 @@ data modify storage worldtool:storage Translation."error.process_running" set va
 data modify storage worldtool:storage Translation."error.outside_world" set value "You can't use that outside the world"
 
 # Warnings
-data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue?"]'
+data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
+data modify storage worldtool:storage Translation."warning.clone_overlap" set value "Warning: The clone destination area overlaps with the source area. This is likely to mess up both areas. Do you wish to continue anyway?"
 
 # Log messages
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
