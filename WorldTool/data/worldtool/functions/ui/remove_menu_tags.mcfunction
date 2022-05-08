@@ -19,6 +19,14 @@ tag @s remove wt.pick_block.primary
 tag @s remove wt.pick_block.secondary
 tag @s remove wt.dont_start_input
 tag @s remove wt.clone.rotate
+tag @s remove wt.clone.mirror.x
+tag @s remove wt.clone.mirror.y
+tag @s remove wt.clone.mirror.z
 tag @s remove wt.clone.move
+
+tag @s remove wt.setup.fill
+tag @s remove wt.setup.replace
+tag @s remove wt.setup.clone
+tag @s remove wt.setup.filter_measure
 
 function #worldtool:addon/ui/remove_menu_tags

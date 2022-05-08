@@ -1,5 +1,5 @@
 # Called by worldtool:particles/ui_general/arrange_positions/pos1 and worldtool:particles/ui_general/arrange_positions/pos2
-# Sets the dumb stupid entity scores
+# Sets the entity scores
 
 scoreboard players operation @s wt.pos1x = #pos1xt worldtool
 scoreboard players operation @s wt.pos1y = #pos1yt worldtool

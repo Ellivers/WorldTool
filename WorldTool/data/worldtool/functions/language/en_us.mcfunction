@@ -13,7 +13,7 @@ data modify storage worldtool:storage Translation."lore.general.normal.2" set va
 data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
-data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Cloning Destination"
+data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Clone Destination"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'

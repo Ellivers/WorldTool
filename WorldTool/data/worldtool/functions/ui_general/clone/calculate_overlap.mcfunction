@@ -17,9 +17,11 @@ scoreboard players operation #boxAPos2y worldtool = #pos2yt worldtool
 scoreboard players operation #boxAPos2z worldtool = #pos2zt worldtool
 
 # Box B
-execute store result score #boxBPos1x worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[0]
-execute store result score #boxBPos1y worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[1]
-execute store result score #boxBPos1z worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[2]
+scoreboard players operation #ID_temp worldtool = @s wt.ID
+execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker] if score @s wt.ID = #ID_temp worldtool run data modify storage worldtool:storage Temp.Pos set from entity @s Pos
+execute store result score #boxBPos1x worldtool run data get storage worldtool:storage Temp.Pos[0]
+execute store result score #boxBPos1y worldtool run data get storage worldtool:storage Temp.Pos[1]
+execute store result score #boxBPos1z worldtool run data get storage worldtool:storage Temp.Pos[2]
 
 scoreboard players operation #boxBPos2x worldtool = #boxBPos1x worldtool
 scoreboard players operation #boxBPos2y worldtool = #boxBPos1y worldtool
@@ -79,12 +81,12 @@ execute if score #boxBDistanceZ worldtool matches ..-1 run scoreboard players op
 
 # Checks if the two boxes are overlapping
 
-scoreboard players operation #evenOffsetX worldtool = #offsetX worldtool
-scoreboard players operation #evenOffsetX worldtool %= #2 worldtool
-scoreboard players operation #evenOffsetY worldtool = #offsetY worldtool
-scoreboard players operation #evenOffsetY worldtool %= #2 worldtool
-scoreboard players operation #evenOffsetZ worldtool = #offsetZ worldtool
-scoreboard players operation #evenOffsetZ worldtool %= #2 worldtool
+scoreboard players operation #evenSizeX worldtool = #offsetX worldtool
+scoreboard players operation #evenSizeX worldtool %= #2 worldtool
+scoreboard players operation #evenSizeY worldtool = #offsetY worldtool
+scoreboard players operation #evenSizeY worldtool %= #2 worldtool
+scoreboard players operation #evenSizeZ worldtool = #offsetZ worldtool
+scoreboard players operation #evenSizeZ worldtool %= #2 worldtool
 
 scoreboard players operation #newPos1x worldtool = #boxACenterX worldtool
 scoreboard players operation #newPos1x worldtool += #boxADistanceX worldtool
@@ -95,9 +97,9 @@ scoreboard players operation #newPos1y worldtool += #boxBDistanceY worldtool
 scoreboard players operation #newPos1z worldtool = #boxACenterZ worldtool
 scoreboard players operation #newPos1z worldtool += #boxADistanceZ worldtool
 scoreboard players operation #newPos1z worldtool += #boxBDistanceZ worldtool
-execute if score #evenOffsetX worldtool matches 1 run scoreboard players remove #newPos1x worldtool 1
-execute if score #evenOffsetY worldtool matches 1 run scoreboard players remove #newPos1y worldtool 1
-execute if score #evenOffsetZ worldtool matches 1 run scoreboard players remove #newPos1z worldtool 1
+execute if score #evenSizeX worldtool matches 1 run scoreboard players remove #newPos1x worldtool 1
+execute if score #evenSizeY worldtool matches 1 run scoreboard players remove #newPos1y worldtool 1
+execute if score #evenSizeZ worldtool matches 1 run scoreboard players remove #newPos1z worldtool 1
 
 scoreboard players operation #newPos2x worldtool = #boxACenterX worldtool
 scoreboard players operation #newPos2x worldtool -= #boxADistanceX worldtool
@@ -108,9 +110,9 @@ scoreboard players operation #newPos2y worldtool -= #boxBDistanceY worldtool
 scoreboard players operation #newPos2z worldtool = #boxACenterZ worldtool
 scoreboard players operation #newPos2z worldtool -= #boxADistanceZ worldtool
 scoreboard players operation #newPos2z worldtool -= #boxBDistanceZ worldtool
-execute if score #evenOffsetX worldtool matches 1 run scoreboard players add #newPos2x worldtool 1
-execute if score #evenOffsetY worldtool matches 1 run scoreboard players add #newPos2y worldtool 1
-execute if score #evenOffsetZ worldtool matches 1 run scoreboard players add #newPos2z worldtool 1
+execute if score #evenSizeX worldtool matches 1 run scoreboard players add #newPos2x worldtool 1
+execute if score #evenSizeY worldtool matches 1 run scoreboard players add #newPos2y worldtool 1
+execute if score #evenSizeZ worldtool matches 1 run scoreboard players add #newPos2z worldtool 1
 
 scoreboard players set #insideX worldtool 0
 scoreboard players set #insideY worldtool 0
