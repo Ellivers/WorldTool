@@ -32,13 +32,13 @@ scoreboard players operation #boxBPos2z worldtool += #offsetZ worldtool
 # Gets the center coordinates for the two boxes
 
 # Box A
-scoreboard players operation #boxACenterX worldtool = #offsetX worldtool
+scoreboard players operation #boxACenterX worldtool = #baseOffsetX worldtool
 scoreboard players operation #boxACenterX worldtool /= #2 worldtool
 scoreboard players operation #boxACenterX worldtool += #boxAPos1x worldtool
-scoreboard players operation #boxACenterY worldtool = #offsetY worldtool
+scoreboard players operation #boxACenterY worldtool = #baseOffsetY worldtool
 scoreboard players operation #boxACenterY worldtool /= #2 worldtool
 scoreboard players operation #boxACenterY worldtool += #boxAPos1y worldtool
-scoreboard players operation #boxACenterZ worldtool = #offsetZ worldtool
+scoreboard players operation #boxACenterZ worldtool = #baseOffsetZ worldtool
 scoreboard players operation #boxACenterZ worldtool /= #2 worldtool
 scoreboard players operation #boxACenterZ worldtool += #boxAPos1z worldtool
 
@@ -79,6 +79,13 @@ execute if score #boxBDistanceZ worldtool matches ..-1 run scoreboard players op
 
 # Checks if the two boxes are overlapping
 
+scoreboard players operation #evenOffsetX worldtool = #offsetX worldtool
+scoreboard players operation #evenOffsetX worldtool %= #2 worldtool
+scoreboard players operation #evenOffsetY worldtool = #offsetY worldtool
+scoreboard players operation #evenOffsetY worldtool %= #2 worldtool
+scoreboard players operation #evenOffsetZ worldtool = #offsetZ worldtool
+scoreboard players operation #evenOffsetZ worldtool %= #2 worldtool
+
 scoreboard players operation #newPos1x worldtool = #boxACenterX worldtool
 scoreboard players operation #newPos1x worldtool += #boxADistanceX worldtool
 scoreboard players operation #newPos1x worldtool += #boxBDistanceX worldtool
@@ -88,6 +95,9 @@ scoreboard players operation #newPos1y worldtool += #boxBDistanceY worldtool
 scoreboard players operation #newPos1z worldtool = #boxACenterZ worldtool
 scoreboard players operation #newPos1z worldtool += #boxADistanceZ worldtool
 scoreboard players operation #newPos1z worldtool += #boxBDistanceZ worldtool
+execute if score #evenOffsetX worldtool matches 1 run scoreboard players remove #newPos1x worldtool 1
+execute if score #evenOffsetY worldtool matches 1 run scoreboard players remove #newPos1y worldtool 1
+execute if score #evenOffsetZ worldtool matches 1 run scoreboard players remove #newPos1z worldtool 1
 
 scoreboard players operation #newPos2x worldtool = #boxACenterX worldtool
 scoreboard players operation #newPos2x worldtool -= #boxADistanceX worldtool
@@ -98,9 +108,15 @@ scoreboard players operation #newPos2y worldtool -= #boxBDistanceY worldtool
 scoreboard players operation #newPos2z worldtool = #boxACenterZ worldtool
 scoreboard players operation #newPos2z worldtool -= #boxADistanceZ worldtool
 scoreboard players operation #newPos2z worldtool -= #boxBDistanceZ worldtool
+execute if score #evenOffsetX worldtool matches 1 run scoreboard players add #newPos2x worldtool 1
+execute if score #evenOffsetY worldtool matches 1 run scoreboard players add #newPos2y worldtool 1
+execute if score #evenOffsetZ worldtool matches 1 run scoreboard players add #newPos2z worldtool 1
 
-execute store success score #insideX worldtool if score #boxBCenterX worldtool <= #newPos1x worldtool if score #boxBCenterX worldtool >= #newPos2x worldtool
-execute store success score #insideY worldtool if score #boxBCenterY worldtool <= #newPos1y worldtool if score #boxBCenterY worldtool >= #newPos2y worldtool
-execute store success score #insideZ worldtool if score #boxBCenterZ worldtool <= #newPos1z worldtool if score #boxBCenterZ worldtool >= #newPos2z worldtool
+scoreboard players set #insideX worldtool 0
+scoreboard players set #insideY worldtool 0
+scoreboard players set #insideZ worldtool 0
+execute if score #boxBCenterX worldtool <= #newPos1x worldtool if score #boxBCenterX worldtool >= #newPos2x worldtool run scoreboard players set #insideX worldtool 1
+execute if score #boxBCenterY worldtool <= #newPos1y worldtool if score #boxBCenterY worldtool >= #newPos2y worldtool run scoreboard players set #insideY worldtool 1
+execute if score #boxBCenterZ worldtool <= #newPos1z worldtool if score #boxBCenterZ worldtool >= #newPos2z worldtool run scoreboard players set #insideZ worldtool 1
 
 execute if score #insideX worldtool matches 1 if score #insideY worldtool matches 1 if score #insideZ worldtool matches 1 run function worldtool:ui/warning/clone_overlap

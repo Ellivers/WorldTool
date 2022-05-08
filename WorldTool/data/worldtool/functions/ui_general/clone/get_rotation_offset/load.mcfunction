@@ -10,12 +10,16 @@ scoreboard players operation #tempRotX worldtool = @s wt.rotX
 scoreboard players operation #tempRotY worldtool = @s wt.rotY
 scoreboard players operation #tempRotZ worldtool = @s wt.rotZ
 
-scoreboard players operation #offsetX worldtool = #pos2xt worldtool
-scoreboard players operation #offsetX worldtool -= #pos1xt worldtool
-scoreboard players operation #offsetY worldtool = #pos2yt worldtool
-scoreboard players operation #offsetY worldtool -= #pos1yt worldtool
-scoreboard players operation #offsetZ worldtool = #pos2zt worldtool
-scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
+scoreboard players operation #baseOffsetX worldtool = #pos2xt worldtool
+scoreboard players operation #baseOffsetX worldtool -= #pos1xt worldtool
+scoreboard players operation #baseOffsetY worldtool = #pos2yt worldtool
+scoreboard players operation #baseOffsetY worldtool -= #pos1yt worldtool
+scoreboard players operation #baseOffsetZ worldtool = #pos2zt worldtool
+scoreboard players operation #baseOffsetZ worldtool -= #pos1zt worldtool
+
+scoreboard players operation #offsetX worldtool = #baseOffsetX worldtool
+scoreboard players operation #offsetY worldtool = #baseOffsetY worldtool
+scoreboard players operation #offsetZ worldtool = #baseOffsetZ worldtool
 
 execute if score #tempRotY worldtool matches 90 run function worldtool:ui_general/clone/get_rotation_offset/y90
 execute if score #tempRotY worldtool matches 180 run function worldtool:ui_general/clone/get_rotation_offset/y180
