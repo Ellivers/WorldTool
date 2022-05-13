@@ -1,7 +1,7 @@
 # Called by worldtool:ui_general/load
 # Code for page 1 of the general tool's menu
 
-tag @s[tag=!wt.user] add wt.clone_at_player
+tag @s[tag=!wt.user] add wt.clone.at_player
 function worldtool:ui/open_tool
 tag @s add wt.in_menu
 tag @s add wt.menu.general.p1

@@ -5,7 +5,7 @@ scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker] if score @s wt.ID = #ID_temp worldtool run kill @s
 summon minecraft:marker ~ ~ ~ {Tags:["worldtool","wt.reciever_marker"]}
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker,sort=nearest,limit=1] run scoreboard players operation @s wt.ID = #ID_temp worldtool
+scoreboard players operation @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker,sort=nearest,limit=1] wt.ID = #ID_temp worldtool
 
 tag @s add wt.setup.clone
 function worldtool:ui_general/clone/calculate_overlap
