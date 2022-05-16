@@ -1,10 +1,9 @@
 # Called by worldtool:pick_block/other/load_brush and worldtool:pick_block/other/load_shapes
 # Picks a block
 
+function worldtool:technical/common/get_dim_top/load
+
+execute if score #success worldtool matches 1 run clone ~ ~ ~ ~ ~ ~ 27450 2 19
+
 scoreboard players operation #ID_temp worldtool = @s wt.ID
-
-clone ~ ~ ~ ~ ~ ~ 27450 254 13
-
-summon minecraft:marker ~ 255 ~ {Tags:["worldtool","wt.pick_block_marker","wt.temp"]}
-
-execute positioned ~ 255 ~ as @e[type=minecraft:marker,tag=worldtool,tag=wt.pick_block_marker,tag=wt.temp,sort=nearest,limit=1] at @s run function worldtool:pick_block/other/attempt1
+execute if score #success worldtool matches 1 as fe66c968-8ef7-4f14-b6e2-44faa2083170 at @s run function worldtool:pick_block/other/attempt1

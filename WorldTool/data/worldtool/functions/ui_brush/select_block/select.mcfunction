@@ -4,6 +4,8 @@
 function worldtool:ui/clear_chat
 function worldtool:ui_brush/back_button
 
+function worldtool:pick_block/other/remove_tags
+
 tag @s add wt.select_block
 tag @s add wt.select_block.brush
 

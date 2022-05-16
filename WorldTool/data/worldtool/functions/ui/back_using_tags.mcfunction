@@ -10,5 +10,6 @@ execute if entity @s[tag=wt.menu.general.p1] run function worldtool:ui_general/c
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/click/backto
 execute unless entity @s[tag=!wt.menu.measure,tag=!wt.menu.clone] run function worldtool:ui_general/load
 execute if entity @s[tag=wt.menu.clone.rotate] run function worldtool:ui_general/clone/menu
+execute if entity @s[tag=wt.pick_block.brush] run function worldtool:ui_brush/select_block/select
 
 function #worldtool:addon/ui/back_using_tags

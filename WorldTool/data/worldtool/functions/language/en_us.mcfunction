@@ -54,6 +54,7 @@ data modify storage worldtool:storage Translation."info.killed_process" set valu
 data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
 data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
 data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
+data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared log."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -63,8 +64,8 @@ data modify storage worldtool:storage Translation."error.pos1_duplicates" set va
 data modify storage worldtool:storage Translation."error.pos1_missing" set value "Error: You appear to not have a position 1. Positions 1 and 2 are needed to access this function."
 data modify storage worldtool:storage Translation."error.pos2_duplicates" set value "Error: You appear to have a duplicated position 2. Try setting position 2 again."
 data modify storage worldtool:storage Translation."error.pos2_missing" set value "Error: You appear to not have a position 2. Positions 1 and 2 are needed to access this function."
-data modify storage worldtool:storage Translation."error.process_running" set value "Another process is currently running"
-data modify storage worldtool:storage Translation."error.outside_world" set value "You can't use that outside the world"
+data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
+data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
