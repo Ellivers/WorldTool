@@ -11,7 +11,7 @@
 #define entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 Writer
 #define entity 9880ccfe-fdf6-4538-838a-ddc75a54608e Reciever
 # Entities that generally only exist for a tick
-#define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Bottom
+#define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Top or Bottom
 #define entity d43b8e30-51cc-4da0-918a-60a557ae676f Temporary Entity
 
 
