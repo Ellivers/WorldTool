@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/common/load
+# Called by worldtool:process_start/common/load, worldtool:process_start/common/continue1 and worldtool:process_start/common/continue2
 # Starts the process
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

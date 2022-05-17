@@ -1,4 +1,4 @@
-# Called by various functions
+# Called by worldtool:process_start/common/check_process
 # Welcome to The Queue™
 
 execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave

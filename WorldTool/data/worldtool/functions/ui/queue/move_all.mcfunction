@@ -11,4 +11,4 @@ execute if score #temp worldtool matches 0 run scoreboard players set #success w
 
 execute if score #success worldtool matches 0 run data remove storage worldtool:storage Processes[-1]
 
-execute unless score #success worldtool matches 1.. unless score $processRunning worldtool matches 1.. run function worldtool:ui/queue/move_all
+execute if score #success worldtool matches 0 unless score $processRunning worldtool matches 1.. run function worldtool:ui/queue/move_all
