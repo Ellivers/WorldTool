@@ -8,11 +8,16 @@ tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:s
 
 execute store result score #temp worldtool run data get storage worldtool:storage Processes
 execute unless score #temp worldtool matches 1.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
-scoreboard players set #temp2 worldtool 0
-scoreboard players set #temp3 worldtool 0
+
+scoreboard players operation #temp3 worldtool = #temp worldtool
+scoreboard players set #temp4 worldtool 0
 scoreboard players set #temp5 worldtool 0
 scoreboard players operation #ID_temp worldtool = @s wt.ID
+function worldtool:ui/queue/get_queue_position
+
+scoreboard players set #temp2 worldtool 0
 execute if score #temp worldtool matches 1.. run function worldtool:ui/queue/list
+
 tellraw @s ["\n",{"nbt":"Translation.\"info.queue.position\"","storage": "worldtool:storage","interpret": true},"\n"]
 
 tellraw @s {"nbt":"Translation.\"info.queue.leave_warning\"","storage": "worldtool:storage"}

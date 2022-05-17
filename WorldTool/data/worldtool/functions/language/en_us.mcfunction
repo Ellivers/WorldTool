@@ -155,7 +155,7 @@ data modify storage worldtool:storage Translation."axis.z" set value "Z"
 # Queue
 data modify storage worldtool:storage Translation."error.queue.no_processes" set value "Error fetching process names: No queued processes could be found."
 data modify storage worldtool:storage Translation."info.queue.in_queue" set value "Another process is currently running. The process you have selected will run after the following processes have finished:"
-data modify storage worldtool:storage Translation."info.queue.position" set value '["", {"text":"Your queue position: ","color":"green"}, {"score":{"name":"#temp3","objective":"worldtool"},}]'
+data modify storage worldtool:storage Translation."info.queue.position" set value '["",{"text":"Your queue position: ","color":"green"},{"score":{"name":"#temp3","objective":"worldtool"}}]'
 data modify storage worldtool:storage Translation."info.queue.leave_warning" set value "Leaving this menu will also leave the queue"
 data modify storage worldtool:storage Translation."button.queue.leave.name" set value "[⬅Leave]"
 data modify storage worldtool:storage Translation."button.queue.leave.description" set value "Leave the queue and go back to the previous menu"
