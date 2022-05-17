@@ -23,6 +23,7 @@
         {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
         {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
       ],
-      "entity": "this"
+      "entity": "this",
+      "replace": true
   }
 ]

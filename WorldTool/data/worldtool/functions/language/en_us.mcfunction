@@ -66,6 +66,7 @@ data modify storage worldtool:storage Translation."error.pos2_duplicates" set va
 data modify storage worldtool:storage Translation."error.pos2_missing" set value "Error: You appear to not have a position 2. Positions 1 and 2 are needed to access this function."
 data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
+data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using [Select a Block] instead."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'

@@ -2,6 +2,7 @@
 # Picks a block
 
 function worldtool:technical/common/get_dim_top/load
+function worldtool:technical/common/is_inside_world
 
 execute if score #success worldtool matches 1 run clone ~ ~ ~ ~ ~ ~ 27450 2 19
 
