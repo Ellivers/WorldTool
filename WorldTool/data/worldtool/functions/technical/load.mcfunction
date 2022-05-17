@@ -25,7 +25,6 @@ scoreboard objectives add wt.drop_coas dropped:minecraft.carrot_on_a_stick
 scoreboard objectives add wt.ID dummy
 scoreboard objectives add wt.brush_size dummy
 scoreboard objectives add wt.chance dummy
-scoreboard objectives add wt.queue_pos dummy
 scoreboard objectives add wt.diameter dummy
 scoreboard objectives add wt.length dummy
 scoreboard objectives add wt.precision dummy

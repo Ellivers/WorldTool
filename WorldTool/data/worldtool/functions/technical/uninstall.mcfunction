@@ -9,13 +9,19 @@ scoreboard objectives remove wt.drop_coas
 scoreboard objectives remove wt.ID
 scoreboard objectives remove wt.brush_size
 scoreboard objectives remove wt.chance
-scoreboard objectives remove wt.queue_pos
 scoreboard objectives remove wt.diameter
 scoreboard objectives remove wt.length
 scoreboard objectives remove wt.precision
 scoreboard objectives remove wt.degrees
 scoreboard objectives remove wt.rotX
 scoreboard objectives remove wt.rotY
+scoreboard objectives remove wt.rotZ
+scoreboard objectives remove wt.pos1x
+scoreboard objectives remove wt.pos1y
+scoreboard objectives remove wt.pos1z
+scoreboard objectives remove wt.pos2x
+scoreboard objectives remove wt.pos2y
+scoreboard objectives remove wt.pos2z
 
 forceload remove 27450 19
 

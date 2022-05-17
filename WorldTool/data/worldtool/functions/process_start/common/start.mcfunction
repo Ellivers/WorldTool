@@ -12,4 +12,4 @@ function #worldtool:addon/process_start/common_start
 function worldtool:process_start/common/start.input
 
 function worldtool:process_start/start
-execute unless data storage worldtool:storage Temp.Process{FromCommand:1b} run function worldtool:ui/reopen_menu/after_starting
+execute if data storage worldtool:storage Temp.Process.Owner run function worldtool:ui/reopen_menu/after_starting

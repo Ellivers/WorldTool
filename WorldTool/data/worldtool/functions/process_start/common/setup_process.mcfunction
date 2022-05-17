@@ -11,5 +11,7 @@ execute if entity @s[tag=wt.setup.clone] run function worldtool:ui_general/clone
 function #worldtool:addon/process_start/setup_process
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
+
+execute if score #success worldtool matches 1 store result storage worldtool:storage Processes[0].Owner int 1 run scoreboard players get #ID_temp worldtool
 execute if score #success worldtool matches 1 as @e[type=minecraft:marker,tag=worldtool] if score @s wt.ID = #ID_temp worldtool run function worldtool:process_start/common/setup_process.entity
-execute if score #success worldtool matches 0
+execute if score #success worldtool matches 0 run function worldtool:ui/error/no_process_selected

@@ -1,7 +1,7 @@
 # Called by worldtool:use_tool/load
 # Commands for right-clicking a worldtool tool
 
-execute unless score @s wt.ID matches -2147483648.. run function worldtool:use_tool/assign_id
+execute unless score @s wt.ID matches 1.. run function worldtool:use_tool/assign_id
 
 ## Add tags ##
 tag @s add wt.raycast_normal

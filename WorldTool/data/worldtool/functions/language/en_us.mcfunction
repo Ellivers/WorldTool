@@ -123,6 +123,8 @@ data modify storage worldtool:storage Translation."button.retry.name" set value 
 data modify storage worldtool:storage Translation."button.retry.description" set value "Try again"
 data modify storage worldtool:storage Translation."button.continue.name" set value "[Continue]"
 data modify storage worldtool:storage Translation."button.continue.description" set value "Continue"
+data modify storage worldtool:storage Translation."button.reopen_menu.name" set value "[Reopen Menu]"
+data modify storage worldtool:storage Translation."button.reopen_menu.description" set value "Reopen the previous menu"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
@@ -152,9 +154,8 @@ data modify storage worldtool:storage Translation."axis.z" set value "Z"
 
 # Queue
 data modify storage worldtool:storage Translation."error.queue.no_processes" set value "Error fetching process names: No queued processes could be found."
-data modify storage worldtool:storage Translation."error.queue.invalid_process_count" set value "Error fetching process names: Could not find all queued processes."
 data modify storage worldtool:storage Translation."info.queue.in_queue" set value "Another process is currently running. The process you have selected will run after the following processes have finished:"
-data modify storage worldtool:storage Translation."info.queue.position" set value "Your queue position: "
+data modify storage worldtool:storage Translation."info.queue.position" set value '["", {"text":"Your queue position: ","color":"green"}, {"score":{"name":"#temp3","objective":"worldtool"},}]'
 data modify storage worldtool:storage Translation."info.queue.leave_warning" set value "Leaving this menu will also leave the queue"
 data modify storage worldtool:storage Translation."button.queue.leave.name" set value "[⬅Leave]"
 data modify storage worldtool:storage Translation."button.queue.leave.description" set value "Leave the queue and go back to the previous menu"
