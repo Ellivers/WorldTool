@@ -2,8 +2,6 @@
 # Starts the set process
 # If another process is already running, this one will be added to the queue
 
-data modify storage worldtool:storage CmdProcess.FromCommand set value 1b
-
 function worldtool:technical/cmd/check_start
 
 execute if score #success worldtool matches 0 run data modify storage worldtool:storage Temp.LogEntry set value '{"nbt":"Translation.\\"log.error.invalid_process\\"","storage":"worldtool:storage","interpret":true}'

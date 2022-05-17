@@ -67,6 +67,7 @@ data modify storage worldtool:storage Translation."error.pos2_missing" set value
 data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using [Select a Block] instead."
+data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'

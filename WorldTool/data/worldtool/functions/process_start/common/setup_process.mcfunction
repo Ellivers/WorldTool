@@ -1,6 +1,8 @@
 # Called by worldtool:process_start/common/load and worldtool:process_start/common/continue1
 # Sets up the process data
 
+scoreboard players set #success worldtool 0
+
 execute if entity @s[tag=wt.setup.fill] run function worldtool:ui_general/fill_setup_process
 execute if entity @s[tag=wt.setup.replace] run function worldtool:ui_general/replace/setup_process
 execute if entity @s[tag=wt.setup.filter_measure] run function worldtool:ui_general/measure/filter_setup_process
@@ -9,4 +11,5 @@ execute if entity @s[tag=wt.setup.clone] run function worldtool:ui_general/clone
 function #worldtool:addon/process_start/setup_process
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
-execute as @e[type=minecraft:marker,tag=worldtool] if score @s wt.ID = #ID_temp worldtool run function worldtool:process_start/common/setup_process.entity
+execute if score #success worldtool matches 1 as @e[type=minecraft:marker,tag=worldtool] if score @s wt.ID = #ID_temp worldtool run function worldtool:process_start/common/setup_process.entity
+execute if score #success worldtool matches 0
