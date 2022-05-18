@@ -53,8 +53,6 @@ data modify storage worldtool:storage Translation."info.menu_closed" set value "
 data modify storage worldtool:storage Translation."info.killed_process" set value "Killed any running process"
 data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
 data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
-data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
-data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared log."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -74,6 +72,8 @@ data modify storage worldtool:storage Translation."warning.size" set value '["Wa
 data modify storage worldtool:storage Translation."warning.clone_overlap" set value "Warning: The clone destination area overlaps with the source area. This is likely to mess up both areas. Do you wish to continue anyway?"
 
 # Log messages
+data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
+data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared log."
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
 data modify storage worldtool:storage Translation."info.log.process_already_running.cancel" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
 data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"[Error] Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'

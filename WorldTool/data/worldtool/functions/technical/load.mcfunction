@@ -4,7 +4,6 @@
 #define storage worldtool:storage
 #define score_holder #ID_temp
 #define score_holder $processRunning
-#define score_holder $brushprocessRunning
 #define tag worldtool
 #define tag wt.temp
 # Entities that stay around for a while

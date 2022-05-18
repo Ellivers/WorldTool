@@ -2,7 +2,6 @@
 # Ends the running process
 
 scoreboard players set $processRunning worldtool 0
-scoreboard players set $brushprocessRunning worldtool 0
 
 bossbar set worldtool:progress visible false
 
