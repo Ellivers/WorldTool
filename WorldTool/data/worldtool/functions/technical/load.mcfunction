@@ -79,8 +79,7 @@ scoreboard players set #pi worldtool 31416
 
 gamerule commandBlockOutput false
 
-bossbar add worldtool:progress {"nbt":"Translation.\"worldtool.progress\"","storage": "worldtool:storage"}
-bossbar set worldtool:progress color pink
+bossbar add worldtool:progress {"nbt":"Translation.\"progress.default\"","storage": "worldtool:storage"}
 
 execute unless score #defaultWorldborderSize worldtool matches 1.. store result score #defaultWorldborderSize worldtool run worldborder get
 scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborderSize worldtool

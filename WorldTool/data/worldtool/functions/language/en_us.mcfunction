@@ -35,7 +35,7 @@ data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
 
 # Progress bar
-data modify storage worldtool:storage Translation."progress" set value "WorldTool Progress"
+data modify storage worldtool:storage Translation."progress.default" set value "WorldTool Progress"
 
 # Processes
 data modify storage worldtool:storage Translation."process.fill" set value "Fill area"

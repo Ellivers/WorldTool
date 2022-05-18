@@ -9,6 +9,7 @@ function worldtool:technical/common/fix_bpt_vars
 
 ## Common variables ##
 
+scoreboard players set #totalBlocksChecked worldtool 0
 scoreboard players set #blocksChecked worldtool 0
 scoreboard players set #blocksPlaced worldtool 0
 
