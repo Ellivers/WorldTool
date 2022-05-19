@@ -1,6 +1,7 @@
 {
     "values": [
         "minecraft:marker",
-        "minecraft:armor_stand"
+        "minecraft:armor_stand",
+        "minecraft:player"
     ]
 }

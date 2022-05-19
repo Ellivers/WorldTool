@@ -15,4 +15,4 @@ function worldtool:process_start/common/start.input
 
 function worldtool:process_start/start
 execute if score #reopenMenu worldtool matches 1 if data storage worldtool:storage Temp.Process.Owner run function worldtool:ui/reopen_menu/after_starting
-execute if data storage worldtool:storage Temp.Process.Owner run function worldtool:process_start/common/setup_progress_bar
+execute if score $progressBar worldtool matches 1 if data storage worldtool:storage Temp.Process.Owner run function worldtool:process_start/common/setup_progress_bar
