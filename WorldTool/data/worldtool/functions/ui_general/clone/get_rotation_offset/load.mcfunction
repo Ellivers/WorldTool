@@ -1,4 +1,4 @@
-# Called by various functions (?)
+# Called by worldtool:ui_general/clone/calculate_overlap and worldtool:particles/clone_preview/display
 # Gets the offset of position 2 relative to position 1, and takes rotation into account
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
@@ -9,6 +9,10 @@ execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos2] if s
 scoreboard players operation #tempRotX worldtool = @s wt.rotX
 scoreboard players operation #tempRotY worldtool = @s wt.rotY
 scoreboard players operation #tempRotZ worldtool = @s wt.rotZ
+
+execute store success score #mirrorX worldtool if entity @s[tag=wt.clone.mirror.x]
+execute store success score #mirrorY worldtool if entity @s[tag=wt.clone.mirror.y]
+execute store success score #mirrorZ worldtool if entity @s[tag=wt.clone.mirror.z]
 
 scoreboard players operation #baseOffsetX worldtool = #pos2xt worldtool
 scoreboard players operation #baseOffsetX worldtool -= #pos1xt worldtool
@@ -23,18 +27,4 @@ scoreboard players operation #offsetZ worldtool = #baseOffsetZ worldtool
 
 # Rotate the offset by the rotation
 
-execute if score #tempRotX worldtool matches 90 run function worldtool:ui_general/clone/get_rotation_offset/x90
-execute if score #tempRotX worldtool matches 180 run function worldtool:ui_general/clone/get_rotation_offset/x180
-execute if score #tempRotX worldtool matches 270 run function worldtool:ui_general/clone/get_rotation_offset/x270
-
-execute if score #tempRotY worldtool matches 90 run function worldtool:ui_general/clone/get_rotation_offset/y90
-execute if score #tempRotY worldtool matches 180 run function worldtool:ui_general/clone/get_rotation_offset/y180
-execute if score #tempRotY worldtool matches 270 run function worldtool:ui_general/clone/get_rotation_offset/y270
-
-execute if score #tempRotZ worldtool matches 90 run function worldtool:ui_general/clone/get_rotation_offset/z90
-execute if score #tempRotZ worldtool matches 180 run function worldtool:ui_general/clone/get_rotation_offset/z180
-execute if score #tempRotZ worldtool matches 270 run function worldtool:ui_general/clone/get_rotation_offset/z270
-
-execute if entity @s[tag=wt.clone.mirror.x] run function worldtool:ui_general/clone/get_rotation_offset/x_mirror
-execute if entity @s[tag=wt.clone.mirror.y] run function worldtool:ui_general/clone/get_rotation_offset/y_mirror
-execute if entity @s[tag=wt.clone.mirror.z] run function worldtool:ui_general/clone/get_rotation_offset/z_mirror
+function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
