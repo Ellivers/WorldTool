@@ -11,5 +11,7 @@ tag @s remove wt.in_menu
 function worldtool:ui/remove_return_tags
 function worldtool:ui/remove_menu_tags
 function worldtool:ui/clear_chat
-tellraw @s {"nbt":"Translation.\"info.menu_closed\"","storage": "worldtool:storage"}
+tellraw @s[tag=!wt.no_message] {"nbt":"Translation.\"info.menu_closed\"","storage": "worldtool:storage"}
 function worldtool:ui/anti_feedback_chat_message/load
+
+tag @s remove wt.no_message

@@ -7,6 +7,8 @@ function worldtool:ui/back_button
 tag @s remove wt.clone.move
 tag @s add wt.menu.clone
 
+execute if entity @s[tag=wt.outline_selection] run tag @s add wt.particles
+
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:marker,tag=wt.input] if score @s wt.ID = #ID_temp worldtool run tag @s remove wt.dont_check
 execute as @e[type=minecraft:armor_stand,tag=worldtool,tag=wt.rotation_preview] if score @s wt.ID = #ID_temp worldtool run kill @s

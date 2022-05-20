@@ -20,6 +20,7 @@ tag @s remove wt.two_block_query.text.filter
 tag @s remove wt.pick_block.primary
 tag @s remove wt.pick_block.secondary
 tag @s remove wt.dont_start_input
+tag @s remove wt.particles
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

@@ -26,7 +26,7 @@ function #worldtool:addon/use_tool/add_tags
 # both of these are measured in half blocks
 scoreboard players operation #temp2 worldtool = $maxRaycastingDistance worldtool
 scoreboard players operation #temp2 worldtool *= #2 worldtool
-scoreboard players reset #temp worldtool
+scoreboard players set #temp worldtool 0
 execute unless entity @s[tag=!wt.raycast_normal,tag=!wt.raycast_before] anchored eyes positioned ^ ^ ^ run function worldtool:use_tool/raycast
 
 ## Menu stuff ##
