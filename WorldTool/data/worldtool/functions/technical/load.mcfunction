@@ -70,11 +70,15 @@ scoreboard players set #4 worldtool 4
 scoreboard players set #5 worldtool 5
 scoreboard players set #8 worldtool 8
 scoreboard players set #10 worldtool 10
+scoreboard players set #20 worldtool 20
+scoreboard players set #60 worldtool 60
 scoreboard players set #100 worldtool 100
 scoreboard players set #200 worldtool 200
 scoreboard players set #360 worldtool 360
 scoreboard players set #1000 worldtool 1000
+scoreboard players set #3600 worldtool 3600
 scoreboard players set #10000 worldtool 10000
+scoreboard players set #86400 worldtool 86400
 scoreboard players set #pi worldtool 31416
 
 gamerule commandBlockOutput false

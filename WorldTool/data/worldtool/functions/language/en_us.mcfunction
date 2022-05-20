@@ -71,9 +71,17 @@ data modify storage worldtool:storage Translation."error.no_process_selected" se
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
 data modify storage worldtool:storage Translation."warning.clone_overlap" set value "Warning: The clone destination area overlaps with the source area. This is likely to mess up both areas. Do you wish to continue anyway?"
 
-# Log messages
+# Command log
 data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
-data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared log."
+data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared all log entries."
+data modify storage worldtool:storage Translation."info.log.time.seconds" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," seconds ago] "]'
+data modify storage worldtool:storage Translation."info.log.time.second" set value "[1 second ago] "
+data modify storage worldtool:storage Translation."info.log.time.minutes" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," minutes ago] "]'
+data modify storage worldtool:storage Translation."info.log.time.minute" set value "[1 minute ago] "
+data modify storage worldtool:storage Translation."info.log.time.hours" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," hours ago] "]'
+data modify storage worldtool:storage Translation."info.log.time.hour" set value "[1 hour ago] "
+data modify storage worldtool:storage Translation."info.log.time.days" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," days ago] "]'
+data modify storage worldtool:storage Translation."info.log.time.day" set value "[1 day ago] "
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
 data modify storage worldtool:storage Translation."info.log.process_already_running.cancel" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
 data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"[Error] Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
