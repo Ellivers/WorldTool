@@ -1,4 +1,5 @@
 - Reworked all code
+- Several Clone rotations can now be used at once
 - Added distance checking to Measure
 - Added toggles for all sides of the selection with Hollow
 - Added sounds for the UI

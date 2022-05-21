@@ -58,26 +58,66 @@ scoreboard players operation #boxBCenterZ worldtool += #boxBPos1z worldtool
 # Gets the maximum distance to the center for the two boxes
 
 # Box A
-scoreboard players operation #boxADistanceX worldtool = #boxAPos2x worldtool
-scoreboard players operation #boxADistanceX worldtool -= #boxACenterX worldtool
-execute if score #boxADistanceX worldtool matches ..-1 run scoreboard players operation #boxADistanceX worldtool *= #-1 worldtool
-scoreboard players operation #boxADistanceY worldtool = #boxAPos2y worldtool
-scoreboard players operation #boxADistanceY worldtool -= #boxACenterY worldtool
-execute if score #boxADistanceY worldtool matches ..-1 run scoreboard players operation #boxADistanceY worldtool *= #-1 worldtool
-scoreboard players operation #boxADistanceZ worldtool = #boxAPos2z worldtool
-scoreboard players operation #boxADistanceZ worldtool -= #boxACenterZ worldtool
-execute if score #boxADistanceZ worldtool matches ..-1 run scoreboard players operation #boxADistanceZ worldtool *= #-1 worldtool
+scoreboard players operation #boxADistanceX1 worldtool = #boxAPos1x worldtool
+scoreboard players operation #boxADistanceX1 worldtool -= #boxACenterX worldtool
+execute if score #boxADistanceX1 worldtool matches ..-1 run scoreboard players operation #boxADistanceX1 worldtool *= #-1 worldtool
+scoreboard players operation #boxADistanceY1 worldtool = #boxAPos1y worldtool
+scoreboard players operation #boxADistanceY1 worldtool -= #boxACenterY worldtool
+execute if score #boxADistanceY1 worldtool matches ..-1 run scoreboard players operation #boxADistanceY1 worldtool *= #-1 worldtool
+scoreboard players operation #boxADistanceZ1 worldtool = #boxAPos1z worldtool
+scoreboard players operation #boxADistanceZ1 worldtool -= #boxACenterZ worldtool
+execute if score #boxADistanceZ1 worldtool matches ..-1 run scoreboard players operation #boxADistanceZ1 worldtool *= #-1 worldtool
+
+scoreboard players operation #boxADistanceX2 worldtool = #boxAPos2x worldtool
+scoreboard players operation #boxADistanceX2 worldtool -= #boxACenterX worldtool
+execute if score #boxADistanceX2 worldtool matches ..-1 run scoreboard players operation #boxADistanceX2 worldtool *= #-1 worldtool
+scoreboard players operation #boxADistanceY2 worldtool = #boxAPos2y worldtool
+scoreboard players operation #boxADistanceY2 worldtool -= #boxACenterY worldtool
+execute if score #boxADistanceY2 worldtool matches ..-1 run scoreboard players operation #boxADistanceY2 worldtool *= #-1 worldtool
+scoreboard players operation #boxADistanceZ2 worldtool = #boxAPos2z worldtool
+scoreboard players operation #boxADistanceZ2 worldtool -= #boxACenterZ worldtool
+execute if score #boxADistanceZ2 worldtool matches ..-1 run scoreboard players operation #boxADistanceZ2 worldtool *= #-1 worldtool
+
+scoreboard players set #boxADistanceX worldtool 1
+scoreboard players operation #boxADistanceX worldtool > #boxADistanceX1 worldtool
+scoreboard players operation #boxADistanceX worldtool > #boxADistanceX2 worldtool
+scoreboard players set #boxADistanceY worldtool 1
+scoreboard players operation #boxADistanceY worldtool > #boxADistanceY1 worldtool
+scoreboard players operation #boxADistanceY worldtool > #boxADistanceY2 worldtool
+scoreboard players set #boxADistanceZ worldtool 1
+scoreboard players operation #boxADistanceZ worldtool > #boxADistanceZ1 worldtool
+scoreboard players operation #boxADistanceZ worldtool > #boxADistanceZ2 worldtool
 
 # Box B
-scoreboard players operation #boxBDistanceX worldtool = #boxBPos2x worldtool
-scoreboard players operation #boxBDistanceX worldtool -= #boxBCenterX worldtool
-execute if score #boxBDistanceX worldtool matches ..-1 run scoreboard players operation #boxBDistanceX worldtool *= #-1 worldtool
-scoreboard players operation #boxBDistanceY worldtool = #boxBPos2y worldtool
-scoreboard players operation #boxBDistanceY worldtool -= #boxBCenterY worldtool
-execute if score #boxBDistanceY worldtool matches ..-1 run scoreboard players operation #boxBDistanceY worldtool *= #-1 worldtool
-scoreboard players operation #boxBDistanceZ worldtool = #boxBPos2z worldtool
-scoreboard players operation #boxBDistanceZ worldtool -= #boxBCenterZ worldtool
-execute if score #boxBDistanceZ worldtool matches ..-1 run scoreboard players operation #boxBDistanceZ worldtool *= #-1 worldtool
+scoreboard players operation #boxBDistanceX1 worldtool = #boxBPos1x worldtool
+scoreboard players operation #boxBDistanceX1 worldtool -= #boxBCenterX worldtool
+execute if score #boxBDistanceX1 worldtool matches ..-1 run scoreboard players operation #boxBDistanceX1 worldtool *= #-1 worldtool
+scoreboard players operation #boxBDistanceY1 worldtool = #boxBPos1y worldtool
+scoreboard players operation #boxBDistanceY1 worldtool -= #boxBCenterY worldtool
+execute if score #boxBDistanceY1 worldtool matches ..-1 run scoreboard players operation #boxBDistanceY1 worldtool *= #-1 worldtool
+scoreboard players operation #boxBDistanceZ1 worldtool = #boxBPos1z worldtool
+scoreboard players operation #boxBDistanceZ1 worldtool -= #boxBCenterZ worldtool
+execute if score #boxBDistanceZ1 worldtool matches ..-1 run scoreboard players operation #boxBDistanceZ1 worldtool *= #-1 worldtool
+
+scoreboard players operation #boxBDistanceX2 worldtool = #boxBPos2x worldtool
+scoreboard players operation #boxBDistanceX2 worldtool -= #boxBCenterX worldtool
+execute if score #boxBDistanceX2 worldtool matches ..-1 run scoreboard players operation #boxBDistanceX2 worldtool *= #-1 worldtool
+scoreboard players operation #boxBDistanceY2 worldtool = #boxBPos2y worldtool
+scoreboard players operation #boxBDistanceY2 worldtool -= #boxBCenterY worldtool
+execute if score #boxBDistanceY2 worldtool matches ..-1 run scoreboard players operation #boxBDistanceY2 worldtool *= #-1 worldtool
+scoreboard players operation #boxBDistanceZ2 worldtool = #boxBPos2z worldtool
+scoreboard players operation #boxBDistanceZ2 worldtool -= #boxBCenterZ worldtool
+execute if score #boxBDistanceZ2 worldtool matches ..-1 run scoreboard players operation #boxBDistanceZ2 worldtool *= #-1 worldtool
+
+scoreboard players set #boxBDistanceX worldtool 1
+scoreboard players operation #boxBDistanceX worldtool > #boxBDistanceX1 worldtool
+scoreboard players operation #boxBDistanceX worldtool > #boxBDistanceX2 worldtool
+scoreboard players set #boxBDistanceY worldtool 1
+scoreboard players operation #boxBDistanceY worldtool > #boxBDistanceY1 worldtool
+scoreboard players operation #boxBDistanceY worldtool > #boxBDistanceY2 worldtool
+scoreboard players set #boxBDistanceZ worldtool 1
+scoreboard players operation #boxBDistanceZ worldtool > #boxBDistanceZ1 worldtool
+scoreboard players operation #boxBDistanceZ worldtool > #boxBDistanceZ2 worldtool
 
 # Checks if the two boxes are overlapping
 
