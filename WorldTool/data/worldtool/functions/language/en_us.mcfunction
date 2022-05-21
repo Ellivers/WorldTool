@@ -188,6 +188,8 @@ data modify storage worldtool:storage Translation."button.measure.all.name" set 
 data modify storage worldtool:storage Translation."button.measure.all.description" set value "Measure the dimensions of and count all blocks in the area"
 data modify storage worldtool:storage Translation."button.measure.distance.name" set value "[Distance]"
 data modify storage worldtool:storage Translation."button.measure.distance.description" set value "Get the distance between position 1 and position 2"
+data modify storage worldtool:storage Translation."button.measure.positions.name" set value "[Get Positions]"
+data modify storage worldtool:storage Translation."button.measure.positions.description" set value "Get the positions of position 1 and position 2"
 data modify storage worldtool:storage Translation."button.measure.filter.name" set value "[Filter...]"
 data modify storage worldtool:storage Translation."button.measure.filter.description" set value "Measure the dimensions of and count specific blocks in the area"
 
@@ -237,9 +239,9 @@ data modify storage worldtool:storage Translation."info.clone.mirror.z" set valu
 data modify storage worldtool:storage Translation."info.cloned_block" set value "1 block cloned"
 data modify storage worldtool:storage Translation."info.cloned_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," blocks cloned"]'
 
-data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Outline Selection: Off]"
-data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Outline Selection: On]"
-data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show lines around the selected area"
+data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
+data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
+data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show helping particles around selected areas and clone destinations"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
@@ -253,7 +255,8 @@ data modify storage worldtool:storage Translation."info.measure.single" set valu
 data modify storage worldtool:storage Translation."info.measure.multiple" set value '["This area contains ",{"score":{"name":"#totalArea","objective":"worldtool"}}," blocks (",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true},")"]'
 data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s),\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}]'
 data modify storage worldtool:storage Translation."info.measure.filter.none" set value "This area contains 0 of the selected block(s)"
-data modify storage worldtool:storage Translation."info.measure.distance" set value '["There is a distance of ~",{"score":{"name":"#sqrtOutput","objective":"worldtool"}},".",{"score":{"name":"#outputDecimals","objective":"worldtool"}}," blocks between the positions (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},") and (",{"score":{"name":"#pos2xt","objective":"worldtool"}},", ",{"score":{"name":"#pos2yt","objective":"worldtool"}},", ",{"score":{"name":"#pos2zt","objective":"worldtool"}},")"]'
+data modify storage worldtool:storage Translation."info.measure.distance" set value '["There is a distance of ~",{"score":{"name":"#sqrtOutput","objective":"worldtool"}},".",{"score":{"name":"#outputDecimals","objective":"worldtool"}}," blocks between the two selected positions"]'
+data modify storage worldtool:storage Translation."info.measure.positions" set value '["Position 1: (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},")\\nPosition 2: (",{"score":{"name":"#pos2xt","objective":"worldtool"}},", ",{"score":{"name":"#pos2yt","objective":"worldtool"}},", ",{"score":{"name":"#pos2zt","objective":"worldtool"}},")"]'
 
 # Brush Tool
 data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "
