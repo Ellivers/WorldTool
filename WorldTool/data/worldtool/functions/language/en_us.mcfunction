@@ -203,6 +203,18 @@ data modify storage worldtool:storage Translation."info.available_addons" set va
 
 data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[Adjust Positions...]"
 data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
+data modify storage worldtool:storage Translation."button.position_1.name" set value "[Position 1]"
+data modify storage worldtool:storage Translation."button.position_1.description" set value "Select/deselect the first position"
+data modify storage worldtool:storage Translation."button.position_2.name" set value "[Position 2]"
+data modify storage worldtool:storage Translation."button.position_2.description" set value "Select/deselect the second position"
+data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
+data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_x.description" set value "Nudge the selected position(s) in the positive X direction"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_y.description" set value "Nudge the selected position(s) in the positive Y direction"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_z.description" set value "Nudge the selected position(s) in the positive Z direction"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_x.description" set value "Nudge the selected position(s) in the negative X direction"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_y.description" set value "Nudge the selected position(s) in the negative Y direction"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_z.description" set value "Nudge the selected position(s) in the negative Z direction"
 
 # General Tool
 data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set Position 1 Here]"

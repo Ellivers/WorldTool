@@ -9,8 +9,6 @@ tag @s add wt.menu.general.p1
 # Particles
 execute if entity @s[tag=wt.outline_selection] run function worldtool:ui_general/arrange_positions/load
 
-scoreboard players operation #ID_temp worldtool = @s wt.ID
-
 function worldtool:ui/start_input/primary
 
 # Display
