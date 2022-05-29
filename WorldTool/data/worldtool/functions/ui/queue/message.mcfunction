@@ -7,7 +7,7 @@ function worldtool:ui/clear_chat
 tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:storage","color": "gold"},"\n"]
 
 execute store result score #temp worldtool run data get storage worldtool:storage Processes
-execute unless score #temp worldtool matches 1.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
+execute unless score #temp worldtool matches 2.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
 
 scoreboard players operation #temp3 worldtool = #temp worldtool
 scoreboard players set #temp4 worldtool 0

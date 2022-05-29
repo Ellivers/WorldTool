@@ -1,3 +1,6 @@
+# Called by worldtool:ui/queue/message and worldtool:ui_general/options/menu
+# Kills the currently running process
+
 tellraw @s {"nbt":"Translation.\"info.killed_process\"","storage": "worldtool:storage"}
 
 scoreboard players set $processRunning worldtool 0

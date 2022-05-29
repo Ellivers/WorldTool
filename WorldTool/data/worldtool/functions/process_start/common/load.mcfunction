@@ -6,10 +6,9 @@ execute unless score @s wt.ID matches 1.. run function worldtool:use_tool/assign
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.input] if score @s wt.ID = #ID_temp worldtool run tag @s add wt.dont_check
 
-execute if score $sizeWarnLimit worldtool matches 1.. run function worldtool:process_start/common/check_size
-execute if score $sizeWarnLimit worldtool matches ..0 run function worldtool:process_start/common/check_positions
+function worldtool:process_start/common/check_size
 
-execute if score #success worldtool matches 1 if score $sizeWarnLimit worldtool matches 1.. run function worldtool:process_start/common/check_positions
+execute if score #success worldtool matches 1 run function worldtool:process_start/common/check_positions
 
 function #worldtool:addon/process_start/common_load
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/setup_process
