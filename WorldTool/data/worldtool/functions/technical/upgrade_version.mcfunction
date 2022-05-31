@@ -1,6 +1,8 @@
 # Called by worldtool:technical/load
 # Updates some stuff from previous versions
 
+execute as @e[type=minecraft:area_effect_cloud,tag=worldtool] at @s run function worldtool:technical/upgrade_version/remove_entities
+
 scoreboard objectives remove wt_brush_size
 scoreboard objectives remove wt_click
 scoreboard objectives remove wt_rotX
@@ -30,5 +32,3 @@ scoreboard objectives remove wt_diameter
 scoreboard objectives remove wt_height
 scoreboard objectives remove wt_precision
 scoreboard objectives remove wt_degrees
-
-execute as @e[type=minecraft:area_effect_cloud,tag=worldtool] at @s run function worldtool:technical/upgrade_version/remove_entities
