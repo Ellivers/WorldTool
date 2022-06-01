@@ -5,6 +5,7 @@ function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 
 tag @s add wt.menu.adjust_positions
+tag @s add wt.allow_input
 
 execute if entity @s[tag=wt.outline_selection] run function worldtool:ui_general/arrange_positions/load
 
@@ -17,6 +18,7 @@ execute if entity @s[tag=wt.outline_selection] run tellraw @s [{"nbt":"Translati
 
 tellraw @s [{"nbt":"Translation.\"info.measure.positions\"","storage":"worldtool:storage","interpret":true},"\n"]
 
+tellraw @s [{"nbt":"Translation.\"button.set_positions.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "suggest_command","value": "/summon item ~ ~ ~ {Tags:[worldtool,wt.selected_data],PickupDelay:32767s,Item:{id:\"minecraft:stick\",Count:1b,tag:{WorldTool:{Pos1:[0d,0d,0d],Pos2:[0d,0d,0d]}}}}"}}]
 tellraw @s [{"nbt":"Translation.\"button.swap_positions.name\"","storage": "worldtool:storage","color": "#4cd10f","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.swap_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/swap_positions"}},"\n"]
 
 execute if score #temp1 worldtool matches 1.. if score #temp2 worldtool matches 1.. run tellraw @s [{"nbt":"Translation.\"button.position_1.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.position_1.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/toggle_positions/pos1_toggle"}}," ",{"nbt":"Translation.\"button.position_2.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.position_2.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/toggle_positions/pos2_toggle"}}]

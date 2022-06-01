@@ -11,7 +11,7 @@ execute if entity @s[tag=wt.select_block.brush.secondary] run item modify entity
 tellraw @s {"nbt":"Translation.\"info.selected_block\"","storage": "worldtool:storage","interpret": true}
 function worldtool:ui/sound.change_item
 
-tag @s remove wt.select_block
+tag @s remove wt.allow_input
 tag @s remove wt.select_block.brush
 tag @s remove wt.select_block.brush.secondary
 

@@ -3,7 +3,7 @@
 
 tag @s remove wt.pick_block.brush
 tag @s remove wt.pick_block.secondary
-tag @s remove wt.select_block
+tag @s remove wt.allow_input
 tag @s remove wt.select_block.brush
 tag @s remove wt.select_block.brush.secondary
 

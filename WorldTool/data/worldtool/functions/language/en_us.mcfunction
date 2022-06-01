@@ -207,6 +207,8 @@ data modify storage worldtool:storage Translation."button.position_1.name" set v
 data modify storage worldtool:storage Translation."button.position_1.description" set value "Select/deselect the first position"
 data modify storage worldtool:storage Translation."button.position_2.name" set value "[Position 2]"
 data modify storage worldtool:storage Translation."button.position_2.description" set value "Select/deselect the second position"
+data modify storage worldtool:storage Translation."button.set_positions.name" set value "<Set Positions>"
+data modify storage worldtool:storage Translation."button.set_positions.description" set value "Enter the positions manually"
 data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
 data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
 data modify storage worldtool:storage Translation."button.nudge_positions.positive_x.description" set value "Nudge the selected position(s) in the positive X direction"
