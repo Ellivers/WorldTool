@@ -7,6 +7,8 @@ execute if entity @s[tag=wt.setup.fill] run function worldtool:ui_general/fill_s
 execute if entity @s[tag=wt.setup.replace] run function worldtool:ui_general/replace/setup_process
 execute if entity @s[tag=wt.setup.filter_measure] run function worldtool:ui_general/measure/filter_setup_process
 execute if entity @s[tag=wt.setup.clone] run function worldtool:ui_general/clone/setup_process
+execute if entity @s[tag=wt.setup.randomization_source] run function worldtool:ui_general/randomize/set_source/setup_process
+execute if entity @s[tag=wt.setup.randomize] run function worldtool:ui_general/randomize/setup_process
 
 function #worldtool:addon/process_start/setup_process
 

@@ -1,0 +1,23 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{WorldTool:{ToolState:\"sourcepos\"}}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "nbt": "Translation.\"item.general.sourcepos\"",
+            "storage": "worldtool:storage",
+            "italic": false
+        },
+        "entity": "this"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"lore.general.sourcepos\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

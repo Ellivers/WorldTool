@@ -58,6 +58,7 @@ execute unless score $sizeWarnLimit worldtool matches 0.. run scoreboard players
 execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
 execute unless score $logLimit worldtool matches -2147483648.. run scoreboard players set $logLimit worldtool 100
 execute unless score $reloadMessage worldtool matches 0..1 run scoreboard players set $reloadMessage worldtool 0
+execute unless score $randomizationSourceSizeWarnLimit worldtool matches 0.. run scoreboard players set $randomizationSourceSizeWarnLimit worldtool 60000
 
 execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard players set $maxRaycastingDistance worldtool 100
 

@@ -11,12 +11,20 @@ tag @s remove wt.menu.replace
 tag @s remove wt.menu.clone
 tag @s remove wt.menu.clone.filter
 tag @s remove wt.menu.clone.rotate
+tag @s remove wt.menu.randomize
+tag @s remove wt.menu.randomize.set_source.pos1
+tag @s remove wt.menu.randomize.set_source.pos2
+tag @s remove wt.menu.randomize.set_source.confirm
+tag @s remove wt.menu.randomize.exclude
+tag @s remove wt.menu.randomize.replace_return
 tag @s remove wt.menu.two_block_query.1
 tag @s remove wt.menu.two_block_query.2
 tag @s remove wt.menu.two_block_query.3
 tag @s remove wt.two_block_query.secondary
 tag @s remove wt.two_block_query.primary
+tag @s remove wt.two_block_query.locked_rule
 tag @s remove wt.two_block_query.text.replace
+tag @s remove wt.two_block_query.text.randomize_exclude
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
 tag @s remove wt.two_block_query.text.filter
@@ -30,5 +38,6 @@ tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace
 tag @s remove wt.setup.clone
 tag @s remove wt.setup.filter_measure
+tag @s remove wt.setup.randomization_source
 
 function #worldtool:addon/ui/remove_menu_tags

@@ -13,7 +13,9 @@ data modify storage worldtool:storage Translation."lore.general.normal.2" set va
 data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
+data modify storage worldtool:storage Translation."lore.general.sourcepos" set value '["",{"keybind":"key.use","color":"gold"}," to set a corner position"]'
 data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Clone Destination"
+data modify storage worldtool:storage Translation."item.general.sourcepos" set value "Set Source Corner"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
@@ -169,6 +171,7 @@ data modify storage worldtool:storage Translation."axis.z" set value "Z"
 # Queue
 data modify storage worldtool:storage Translation."error.queue.no_processes" set value "Error fetching process names: No queued processes could be found."
 data modify storage worldtool:storage Translation."info.queue.in_queue" set value "Another process is currently running. The process you have selected will run after the following processes have finished:"
+data modify storage worldtool:storage Translation."info.queue.in_queue.hidden_process" set value "Another process is currently running. Please wait for it to finish."
 data modify storage worldtool:storage Translation."info.queue.position" set value '["",{"text":"Your queue position: ","color":"green"},{"score":{"name":"#temp3","objective":"worldtool"}}]'
 data modify storage worldtool:storage Translation."info.queue.leave_warning" set value "Leaving this menu will also leave the queue"
 data modify storage worldtool:storage Translation."button.queue.leave.name" set value "[⬅Leave]"
@@ -281,6 +284,26 @@ data modify storage worldtool:storage Translation."info.clone.mirror.y" set valu
 data modify storage worldtool:storage Translation."info.clone.mirror.z" set value "Mirror Z"
 data modify storage worldtool:storage Translation."info.cloned_block" set value "1 block cloned"
 data modify storage worldtool:storage Translation."info.cloned_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," blocks cloned"]'
+
+data modify storage worldtool:storage Translation."button.randomize.name" set value "[Randomize...]"
+data modify storage worldtool:storage Translation."button.randomize.description" set value "Place random blocks from a selected source"
+data modify storage worldtool:storage Translation."button.randomize.run.name" set value "[▶Run]"
+data modify storage worldtool:storage Translation."button.randomize.run.enabled.description" set value "Run the randomization"
+data modify storage worldtool:storage Translation."button.randomize.run.disabled.description" set value "You need to select a source in order to run the randomization"
+data modify storage worldtool:storage Translation."button.randomize.select_source.name" set value "[Select Source...]"
+data modify storage worldtool:storage Translation."button.randomize.select_source.description" set value "Choose a new source area for the randomization"
+data modify storage worldtool:storage Translation."info.randomize.select_source" set value "Select a source area for the randomization to get blocks from"
+data modify storage worldtool:storage Translation."info.randomize.select_position.1" set value "Select the first corner position of the source area"
+data modify storage worldtool:storage Translation."info.randomize.select_position.2" set value "Select the second corner position of the source area"
+data modify storage worldtool:storage Translation."warning.randomize.source_size" set value "Warning: The randomization source area is very big. Having this area selected may cause a lot of lag."
+data modify storage worldtool:storage Translation."button.randomize.exclude.name" set value "[Exclude...]"
+data modify storage worldtool:storage Translation."button.randomize.exclude.description" set value "Choose a block type to exclude from the source"
+data modify storage worldtool:storage Translation."button.randomize.select_exclude.name" set value "<Select a Block to Exclude>"
+data modify storage worldtool:storage Translation."button.randomize.continue.name" set value "[Continue with All Blocks...]"
+data modify storage worldtool:storage Translation."button.randomize.continue.description" set value "Continue with all the blocks in the source area"
+data modify storage worldtool:storage Translation."button.randomize.replace.on" set value "[Replace: On]"
+data modify storage worldtool:storage Translation."button.randomize.replace.off" set value "[Replace: Off...]"
+data modify storage worldtool:storage Translation."button.randomize.replace.description" set value "Choose which block(s) to replace"
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"

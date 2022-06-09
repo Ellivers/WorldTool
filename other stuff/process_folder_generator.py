@@ -78,7 +78,10 @@ contents = [
         "\n"
     ),
     a(
-        "scoreboard players add #blocksChecked worldtool 1"
+        "# Called by various functions"
+        "\n# The process functionality for PROCESS NAME"
+        "\n"
+        "\nscoreboard players add #blocksChecked worldtool 1"
         "\n"
         "\n# PROCESS-SPECIFIC COMMANDS HERE"
         "\n"

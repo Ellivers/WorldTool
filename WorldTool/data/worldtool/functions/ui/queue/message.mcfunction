@@ -4,9 +4,12 @@
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 
-tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:storage","color": "gold"},"\n"]
-
 execute store result score #temp worldtool run data get storage worldtool:storage Processes
+execute if score #temp worldtool matches 1 store result score #temp6 worldtool run data get storage worldtool:storage Processes[0].Hidden
+
+execute unless score #temp6 worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:storage","color": "gold"},"\n"]
+execute if score #temp6 worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue.hidden_process\"","storage": "worldtool:storage","color": "gold"},"\n"]
+
 execute unless score #temp worldtool matches 2.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
 
 scoreboard players operation #temp3 worldtool = #temp worldtool

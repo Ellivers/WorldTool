@@ -33,7 +33,7 @@ scoreboard players operation #outputDecimals worldtool = #sqrtOutput worldtool
 scoreboard players operation #outputDecimals worldtool -= #temp4 worldtool
 scoreboard players operation #sqrtOutput worldtool /= #10 worldtool
 
-tellraw @s {"nbt":"Translation.\"info.measure.distance\"","storage": "worldtool:storage","interpret": true}
+tellraw @s[tag=!wt.no_message] {"nbt":"Translation.\"info.measure.distance\"","storage": "worldtool:storage","interpret": true}
 
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

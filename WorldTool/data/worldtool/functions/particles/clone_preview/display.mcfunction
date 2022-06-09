@@ -17,9 +17,9 @@ execute if score #pos1xt worldtool < #pos2xt worldtool run scoreboard players ad
 execute if score #pos1yt worldtool < #pos2yt worldtool run scoreboard players add #pos2yt worldtool 1
 execute if score #pos1zt worldtool < #pos2zt worldtool run scoreboard players add #pos2zt worldtool 1
 
-execute if score #pos1xt worldtool > #pos2xt worldtool run scoreboard players remove #pos2xt worldtool 1
-execute if score #pos1yt worldtool > #pos2yt worldtool run scoreboard players remove #pos2yt worldtool 1
-execute if score #pos1zt worldtool > #pos2zt worldtool run scoreboard players remove #pos2zt worldtool 1
+execute if score #pos1xt worldtool >= #pos2xt worldtool run scoreboard players remove #pos2xt worldtool 1
+execute if score #pos1yt worldtool >= #pos2yt worldtool run scoreboard players remove #pos2yt worldtool 1
+execute if score #pos1zt worldtool >= #pos2zt worldtool run scoreboard players remove #pos2zt worldtool 1
 
 execute as d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:particles/clone_preview/display.entity.pos1
 execute at d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:particles/clone_preview/pos1/load
@@ -28,17 +28,17 @@ execute if score #pos1xt worldtool < #pos2xt worldtool run scoreboard players re
 execute if score #pos1yt worldtool < #pos2yt worldtool run scoreboard players remove #pos2yt worldtool 1
 execute if score #pos1zt worldtool < #pos2zt worldtool run scoreboard players remove #pos2zt worldtool 1
 
-execute if score #pos1xt worldtool > #pos2xt worldtool run scoreboard players add #pos2xt worldtool 1
-execute if score #pos1yt worldtool > #pos2yt worldtool run scoreboard players add #pos2yt worldtool 1
-execute if score #pos1zt worldtool > #pos2zt worldtool run scoreboard players add #pos2zt worldtool 1
+execute if score #pos1xt worldtool >= #pos2xt worldtool run scoreboard players add #pos2xt worldtool 1
+execute if score #pos1yt worldtool >= #pos2yt worldtool run scoreboard players add #pos2yt worldtool 1
+execute if score #pos1zt worldtool >= #pos2zt worldtool run scoreboard players add #pos2zt worldtool 1
 
 scoreboard players operation #pos1xt worldtool >< #pos2xt worldtool
 scoreboard players operation #pos1yt worldtool >< #pos2yt worldtool
 scoreboard players operation #pos1zt worldtool >< #pos2zt worldtool
 
-execute if score #pos1xt worldtool < #pos2xt worldtool run scoreboard players add #pos2xt worldtool 1
-execute if score #pos1yt worldtool < #pos2yt worldtool run scoreboard players add #pos2yt worldtool 1
-execute if score #pos1zt worldtool < #pos2zt worldtool run scoreboard players add #pos2zt worldtool 1
+execute if score #pos1xt worldtool <= #pos2xt worldtool run scoreboard players add #pos2xt worldtool 1
+execute if score #pos1yt worldtool <= #pos2yt worldtool run scoreboard players add #pos2yt worldtool 1
+execute if score #pos1zt worldtool <= #pos2zt worldtool run scoreboard players add #pos2zt worldtool 1
 
 execute if score #pos1xt worldtool > #pos2xt worldtool run scoreboard players remove #pos2xt worldtool 1
 execute if score #pos1yt worldtool > #pos2yt worldtool run scoreboard players remove #pos2yt worldtool 1

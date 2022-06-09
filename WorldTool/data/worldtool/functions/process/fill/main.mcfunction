@@ -3,7 +3,7 @@
 
 scoreboard players add #blocksChecked worldtool 1
 
-# All different options
+# Place a block.
 execute unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary
 
 # Move the writer
