@@ -78,13 +78,13 @@ scoreboard players operation #boxADistanceZ2 worldtool = #boxAPos2z worldtool
 scoreboard players operation #boxADistanceZ2 worldtool -= #boxACenterZ worldtool
 execute if score #boxADistanceZ2 worldtool matches ..-1 run scoreboard players operation #boxADistanceZ2 worldtool *= #-1 worldtool
 
-scoreboard players set #boxADistanceX worldtool 1
+scoreboard players set #boxADistanceX worldtool 0
 scoreboard players operation #boxADistanceX worldtool > #boxADistanceX1 worldtool
 scoreboard players operation #boxADistanceX worldtool > #boxADistanceX2 worldtool
-scoreboard players set #boxADistanceY worldtool 1
+scoreboard players set #boxADistanceY worldtool 0
 scoreboard players operation #boxADistanceY worldtool > #boxADistanceY1 worldtool
 scoreboard players operation #boxADistanceY worldtool > #boxADistanceY2 worldtool
-scoreboard players set #boxADistanceZ worldtool 1
+scoreboard players set #boxADistanceZ worldtool 0
 scoreboard players operation #boxADistanceZ worldtool > #boxADistanceZ1 worldtool
 scoreboard players operation #boxADistanceZ worldtool > #boxADistanceZ2 worldtool
 
@@ -109,13 +109,13 @@ scoreboard players operation #boxBDistanceZ2 worldtool = #boxBPos2z worldtool
 scoreboard players operation #boxBDistanceZ2 worldtool -= #boxBCenterZ worldtool
 execute if score #boxBDistanceZ2 worldtool matches ..-1 run scoreboard players operation #boxBDistanceZ2 worldtool *= #-1 worldtool
 
-scoreboard players set #boxBDistanceX worldtool 1
+scoreboard players set #boxBDistanceX worldtool 0
 scoreboard players operation #boxBDistanceX worldtool > #boxBDistanceX1 worldtool
 scoreboard players operation #boxBDistanceX worldtool > #boxBDistanceX2 worldtool
-scoreboard players set #boxBDistanceY worldtool 1
+scoreboard players set #boxBDistanceY worldtool 0
 scoreboard players operation #boxBDistanceY worldtool > #boxBDistanceY1 worldtool
 scoreboard players operation #boxBDistanceY worldtool > #boxBDistanceY2 worldtool
-scoreboard players set #boxBDistanceZ worldtool 1
+scoreboard players set #boxBDistanceZ worldtool 0
 scoreboard players operation #boxBDistanceZ worldtool > #boxBDistanceZ1 worldtool
 scoreboard players operation #boxBDistanceZ worldtool > #boxBDistanceZ2 worldtool
 
