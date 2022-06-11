@@ -17,7 +17,7 @@ execute if entity @s[tag=wt.input] unless entity @s[tag=!wt.secondary,tag=!wt.bo
 execute if entity @s[tag=wt.reciever_marker] run data modify storage worldtool:storage Processes[0].Positions.CloneDestination set from entity @s Pos
 kill @s[tag=wt.reciever_marker]
 
-execute if entity @s[tag=wt.randomization_source_corner.1] run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos
-execute if entity @s[tag=wt.randomization_source_corner.2] run data modify storage worldtool:storage Processes[0].Positions.2 set from entity @s Pos
+execute if entity @s[tag=wt.randomization_source_corner.1,tag=wt.not_used_yet] run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos
+execute if entity @s[tag=wt.randomization_source_corner.2,tag=wt.not_used_yet] run data modify storage worldtool:storage Processes[0].Positions.2 set from entity @s Pos
 
 function #worldtool:addon/process_start/setup_process.entity

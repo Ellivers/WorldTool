@@ -1,7 +1,8 @@
 # Called by worldtool:ui/queue/message and worldtool:ui_general/options/menu
 # Kills the currently running process
 
-tellraw @s {"nbt":"Translation.\"info.killed_process\"","storage": "worldtool:storage"}
+tellraw @s[tag=!wt.no_message] {"nbt":"Translation.\"info.killed_process\"","storage": "worldtool:storage"}
+tag @s remove wt.no_message
 
 scoreboard players set $processRunning worldtool 0
 bossbar set worldtool:progress visible false

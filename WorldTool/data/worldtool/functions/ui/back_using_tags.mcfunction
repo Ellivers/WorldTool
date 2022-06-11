@@ -12,7 +12,6 @@ execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/clic
 execute if entity @s[tag=wt.menu.settings] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.adjust_positions] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.addons] run function worldtool:ui_general/options/menu
-execute unless entity @s[tag=!wt.menu.measure,tag=!wt.menu.clone] run function worldtool:ui_general/load
 execute if entity @s[tag=wt.menu.clone.rotate] run function worldtool:ui_general/clone/menu
 execute if entity @s[tag=wt.pick_block.brush] run function worldtool:ui_brush/select_block/select
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:ui_general/randomize/menu

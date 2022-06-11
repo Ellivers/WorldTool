@@ -4,6 +4,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 execute if entity @s[tag=wt.process.filter_measure] run function worldtool:process/filter_measure/calculate
+execute if entity @s[tag=wt.process.randomization_source] run function worldtool:ui_general/randomize/set_source/complete
 
 function #worldtool:addon/process/final_code
 

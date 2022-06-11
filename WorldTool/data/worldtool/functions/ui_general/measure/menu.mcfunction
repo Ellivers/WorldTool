@@ -2,7 +2,7 @@
 # Shows the measuring menu
 
 function worldtool:ui/clear_chat
-function worldtool:ui/back_button
+function worldtool:ui_general/back_button
 
 tag @s add wt.menu.measure
 

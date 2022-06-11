@@ -8,8 +8,8 @@ tag @s add wt.menu.randomize
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 scoreboard players set #temp worldtool 0
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] run scoreboard players add #temp worldtool 1
-execute if score #temp worldtool matches 0 as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] run kill @s
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] if score @s wt.ID = #ID_temp worldtool run scoreboard players add #temp worldtool 1
+execute if score #temp worldtool matches 0 as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] if score @s wt.ID = #ID_temp worldtool run kill @s
 
 scoreboard players set #temp2 worldtool 0
 execute if entity @s[tag=wt.outline_selection] as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] run scoreboard players add #temp2 worldtool 1

@@ -15,6 +15,10 @@ scoreboard players operation #temp2 worldtool > #pos2y worldtool
 scoreboard players operation #pos1y worldtool = #temp worldtool
 scoreboard players operation #pos2y worldtool = #temp2 worldtool
 
+scoreboard players operation #writerPosX worldtool = #pos1x worldtool
+scoreboard players operation #writerPosY worldtool = #pos1y worldtool
+scoreboard players operation #writerPosZ worldtool = #pos1z worldtool
+
 execute store result entity @s Pos[1] double 1 run scoreboard players get #pos1y worldtool
 
 execute if score #temp3 worldtool matches 1 if entity @s[tag=wt.process.clone] as 9880ccfe-fdf6-4538-838a-ddc75a54608e run function worldtool:ui_general/clone/set_reciever_at_bottom
