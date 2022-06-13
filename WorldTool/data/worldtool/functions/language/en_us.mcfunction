@@ -232,6 +232,9 @@ data modify storage worldtool:storage Translation."button.use.description" set v
 data modify storage worldtool:storage Translation."button.options.name" set value "[Options...]"
 data modify storage worldtool:storage Translation."button.options.description" set value "Open the options menu"
 
+data modify storage worldtool:storage Translation."button.next_page.description" set value "Go to the next page"
+data modify storage worldtool:storage Translation."button.previous_page.description" set value "Go to the previous page"
+
 data modify storage worldtool:storage Translation."button.replace.name" set value "[Replace...]"
 data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
 

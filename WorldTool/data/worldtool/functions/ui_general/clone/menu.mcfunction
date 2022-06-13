@@ -10,8 +10,9 @@ tag @s add wt.menu.clone
 execute if entity @s[tag=wt.outline_selection] run tag @s add wt.particles
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
-#execute as @e[type=minecraft:armor_stand,tag=worldtool,tag=wt.rotation_preview] if score @s wt.ID = #ID_temp worldtool run kill @s
+execute as @e[type=minecraft:armor_stand,tag=worldtool,tag=wt.rotation_preview] if score @s wt.ID = #ID_temp worldtool run kill @s
 
+execute if predicate worldtool:tools/general/clonepos run function worldtool:ui/sound.change_item
 execute if predicate worldtool:tools/general/clonepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
 function worldtool:ui_general/clone/display_rotation

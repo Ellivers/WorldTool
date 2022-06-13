@@ -30,7 +30,7 @@ scoreboard players set #temp worldtool 0
 execute unless entity @s[tag=!wt.raycast_normal,tag=!wt.raycast_before] anchored eyes positioned ^ ^ ^ run function worldtool:use_tool/raycast
 
 ## Menu stuff ##
-execute unless entity @s[tag=!wt.tool.general.pos1,tag=!wt.tool.general.pos2] run function worldtool:ui_general/click/load
+execute unless entity @s[tag=!wt.tool.general.pos1,tag=!wt.tool.general.pos2] run function worldtool:ui_general/click/display
 
 ## Remove tags ##
 function worldtool:use_tool/remove_tags
