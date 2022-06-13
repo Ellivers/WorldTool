@@ -44,6 +44,8 @@ data modify storage worldtool:storage Translation."process.fill" set value "Fill
 data modify storage worldtool:storage Translation."process.replace" set value "Replace"
 data modify storage worldtool:storage Translation."process.filter_measure" set value "Measure"
 data modify storage worldtool:storage Translation."process.clone" set value "Clone"
+data modify storage worldtool:storage Translation."process.randomization_source" set value "Mark randomization source"
+data modify storage worldtool:storage Translation."process.randomize" set value "Randomize"
 
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled"
@@ -56,6 +58,7 @@ data modify storage worldtool:storage Translation."info.killed_process" set valu
 data modify storage worldtool:storage Translation."info.pick_block" set value "Click a block in the world to use"
 data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
 data modify storage worldtool:storage Translation."info.wait" set value "Please wait..."
+data modify storage worldtool:storage Translation."info.writer_found" set value "The process entity has been found"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -69,6 +72,7 @@ data modify storage worldtool:storage Translation."error.process_running" set va
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using [Select a Block] instead."
 data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected."
+data modify storage worldtool:storage Translation."error.writer_not_found" set value "Error: The process entity could not be found. It may have been killed or been unloaded. The process will resume when the entity is found again."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -87,7 +91,7 @@ data modify storage worldtool:storage Translation."info.log.time.days" set value
 data modify storage worldtool:storage Translation."info.log.time.day" set value "[1 day ago] "
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
 data modify storage worldtool:storage Translation."info.log.process_already_running.cancel" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
-data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"[Error] Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
+data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"Error: Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
 
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"

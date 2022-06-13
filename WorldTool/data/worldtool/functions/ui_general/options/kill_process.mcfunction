@@ -7,9 +7,9 @@ tag @s remove wt.no_message
 scoreboard players set $processRunning worldtool 0
 bossbar set worldtool:progress visible false
 
-execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:process_end/end
+execute unless entity 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:ui/queue/move
 
-function worldtool:ui/queue/move
+execute as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 at @s run function worldtool:process_end/end
 
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

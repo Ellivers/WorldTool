@@ -5,6 +5,8 @@ scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 scoreboard players set $processRunning worldtool 1
 
+scoreboard players set #writerNotFoundError worldtool 0
+
 function worldtool:technical/common/fix_bpt_vars
 
 ## Common variables ##

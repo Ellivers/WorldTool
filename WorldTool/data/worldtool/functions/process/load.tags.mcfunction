@@ -2,6 +2,7 @@
 # Specifies which process to continue with
 
 scoreboard players reset #blocksChecked worldtool
+execute if score #writerNotFoundError worldtool matches 1 run function worldtool:process/writer_found
 
 execute if entity @s[tag=wt.process.fill] run function worldtool:process/fill/main
 execute if entity @s[tag=wt.process.replace] run function worldtool:process/replace/main
