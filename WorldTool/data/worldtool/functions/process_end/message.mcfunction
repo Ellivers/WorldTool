@@ -4,6 +4,8 @@
 tag @s add wt.message.default
 execute if data storage worldtool:storage {Temp:{Tags:["wt.message.non_default"]}} run tag @s remove wt.message.default
 
+function worldtool:ui/reopen_menu/after_process
+
 function #worldtool:addon/process_message/display
 
 execute if entity @s[tag=wt.message.default] if score #blocksPlaced worldtool matches 1 run tellraw @s {"nbt":"Translation.\"info.affected_block\"","storage": "worldtool:storage"}

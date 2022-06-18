@@ -1,7 +1,7 @@
 # Called by worldtool:process_start/common/check_process
 # Welcome to The Queue™
 
-execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
+#execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
 
 scoreboard players set #success worldtool 0
 

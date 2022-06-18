@@ -1,0 +1,10 @@
+{
+  "values": [
+    {
+      "id": "#rx.playerdb:load/dependencies",
+      "required": false
+    },
+    "#rx.playerdb:load/enumerate",
+    "#rx.playerdb:load/resolve"
+  ]
+}

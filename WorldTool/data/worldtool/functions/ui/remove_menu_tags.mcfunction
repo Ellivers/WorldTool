@@ -33,6 +33,7 @@ tag @s remove wt.pick_block.secondary
 tag @s remove wt.dont_start_input
 tag @s remove wt.particles
 tag @s remove wt.allow_input
+tag @s remove wt.menu.copy_area
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

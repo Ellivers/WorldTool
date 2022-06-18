@@ -11,5 +11,7 @@ execute if entity @s[tag=wt.process.clone.normal] run function worldtool:process
 execute if entity @s[tag=wt.process.clone.rotate] run function worldtool:process/clone/rotate/main
 execute if entity @s[tag=wt.process.randomization_source] run function worldtool:process/randomization_source/load
 execute if entity @s[tag=wt.process.randomize] run function worldtool:process/randomize/load
+execute if entity @s[tag=wt.process.save_area] run function worldtool:process/save_area/main
+execute if entity @s[tag=wt.process.load_area] run function worldtool:process/load_area/main
 
 function #worldtool:addon/process/check_tags

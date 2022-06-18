@@ -13,6 +13,8 @@ execute if entity @s[tag=wt.pick_block.brush] run function worldtool:ui_brush/se
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:ui_general/randomize/menu
 execute if entity @s[tag=wt.menu.randomize.set_source.pos2] run function worldtool:ui_general/randomize/set_source/pos1
 execute if entity @s[tag=wt.menu.randomize.set_source.confirm] run function worldtool:ui_general/randomize/set_source/pos2
+execute if entity @s[tag=wt.menu.randomize.set_source.wait] run function worldtool:ui_general/randomize/set_source/back
+execute if entity @s[tag=wt.menu.copy_area] run function worldtool:ui_general/options/save_load_area/cancel_copy
 
 function #worldtool:addon/ui/back_using_tags
 

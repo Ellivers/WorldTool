@@ -8,4 +8,6 @@ data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nb
 execute if entity @s[tag=wt.menu.randomize.replace.normal] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.randomize.replace.normal"
 execute if entity @s[tag=wt.menu.randomize.replace.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.randomize.replace.exclude"
 
+function worldtool:process_start/common/set_process_values
+
 tag @s remove wt.setup.randomize

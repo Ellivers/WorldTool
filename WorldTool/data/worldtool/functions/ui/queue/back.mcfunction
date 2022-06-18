@@ -3,5 +3,3 @@
 
 function worldtool:ui/queue/leave
 function worldtool:ui/reopen_menu/after_starting
-
-function #worldtool:addon/ui/queue_back

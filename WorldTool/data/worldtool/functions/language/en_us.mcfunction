@@ -48,7 +48,7 @@ data modify storage worldtool:storage Translation."process.randomization_source"
 data modify storage worldtool:storage Translation."process.randomize" set value "Randomize"
 
 # Info
-data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled"
+data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled. Using the reload command or restarting the world will install it again."
 data modify storage worldtool:storage Translation."info.affected_block" set value "1 affected block"
 data modify storage worldtool:storage Translation."info.affected_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," affected blocks"]'
 data modify storage worldtool:storage Translation."info.set_pos1" set value '["Set position 1 to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
@@ -185,6 +185,15 @@ data modify storage worldtool:storage Translation."info.queue.from_command" set 
 
 # Options
 data modify storage worldtool:storage Translation."info.emptied_queue" set value "The queue has been emptied"
+
+data modify storage worldtool:storage Translation."button.copy_area.name" set value "[▶Copy Area]"
+data modify storage worldtool:storage Translation."button.copy_area.description" set value "Copy this area to the clipboard"
+data modify storage worldtool:storage Translation."button.paste_area.name" set value "[▶Paste Area]"
+data modify storage worldtool:storage Translation."button.paste_area.description" set value "Paste the clipboard to this area"
+data modify storage worldtool:storage Translation."button.undo.name" set value "[▶Undo]"
+data modify storage worldtool:storage Translation."button.undo.description" set value "Undo the last action"
+data modify storage worldtool:storage Translation."button.redo.name" set value "[▶Redo]"
+data modify storage worldtool:storage Translation."button.redo.description" set value "Redo the last action"
 
 data modify storage worldtool:storage Translation."button.settings.name" set value "[Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"

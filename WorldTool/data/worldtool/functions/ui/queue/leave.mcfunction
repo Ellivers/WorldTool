@@ -9,3 +9,5 @@ execute store result score #temp2 worldtool run data get storage worldtool:stora
 function worldtool:ui/queue/remove_from_list
 
 tag @s remove wt.menu.queue
+
+function #worldtool:addon/ui/queue_leave

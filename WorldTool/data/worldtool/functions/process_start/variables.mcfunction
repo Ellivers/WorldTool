@@ -23,5 +23,18 @@ scoreboard players set #maxY worldtool -2147483648
 scoreboard players set #minZ worldtool 2147483647
 scoreboard players set #maxZ worldtool -2147483648
 
+scoreboard players operation #pos1xo worldtool = #pos1x worldtool
+scoreboard players operation #pos1yo worldtool = #pos1y worldtool
+scoreboard players operation #pos1zo worldtool = #pos1z worldtool
+
+scoreboard players operation #pos2xo worldtool = #pos2x worldtool
+scoreboard players operation #pos2yo worldtool = #pos2y worldtool
+scoreboard players operation #pos2zo worldtool = #pos2z worldtool
+
+scoreboard players set #block1Placed worldtool 0
+scoreboard players set #block2Placed worldtool 0
+scoreboard players set #block3Placed worldtool 0
+scoreboard players set #block4Placed worldtool 0
+
 
 function #worldtool:addon/process_start/variables

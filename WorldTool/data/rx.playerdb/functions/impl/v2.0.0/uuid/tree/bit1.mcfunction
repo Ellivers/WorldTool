@@ -1,0 +1,16 @@
+# source: rx.playerdb:impl/v2.0.0/uuid/tree/bit1
+data modify storage rx.playerdb:main uuid[].bits.select set value 0b
+scoreboard players operation $bit rx.temp = $uid rx.temp
+scoreboard players operation $bit rx.temp %= $64 rx.int
+scoreboard players set $size rx.temp 0
+execute if score $bit rx.temp matches 0..7 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/0_7
+execute if score $bit rx.temp matches 8..15 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/8_15
+execute if score $bit rx.temp matches 16..23 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/16_23
+execute if score $bit rx.temp matches 24..31 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/24_31
+execute if score $bit rx.temp matches 32..39 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/32_39
+execute if score $bit rx.temp matches 40..47 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/40_47
+execute if score $bit rx.temp matches 48..55 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/48_55
+execute if score $bit rx.temp matches 56..63 run function rx.playerdb:impl/v2.0.0/uuid/tree/bit1/56_63
+execute if data storage rx.playerdb:main uuid[{bits: {select: 0b}}] run data modify storage rx.playerdb:main uuid[{bits: {select: 0b}}].selected set value 0b
+scoreboard players operation $uid rx.temp /= $64 rx.int
+execute if data storage rx.playerdb:main uuid[{selected: 1b}] run function rx.playerdb:impl/v2.0.0/uuid/tree/bit2

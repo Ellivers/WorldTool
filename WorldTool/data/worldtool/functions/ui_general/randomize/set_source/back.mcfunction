@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/randomize/set_source/wait
+# Called by worldtool:ui/wait
 # Cancels the running process and goes back to the main randomize menu
 
 function worldtool:technical/common/is_my_process_running

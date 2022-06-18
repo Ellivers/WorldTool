@@ -1,5 +1,5 @@
 # Called recursively and by worldtool:ui/queue/back
-# Removes the queued process with the index of the executing player's queue position
+# Removes the queued processes owned by the current user
 
 scoreboard players add #temp worldtool 1
 

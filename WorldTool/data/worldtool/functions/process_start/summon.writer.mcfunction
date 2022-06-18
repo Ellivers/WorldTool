@@ -11,5 +11,6 @@ execute store result score @s wt.rotY run data get storage worldtool:storage Pro
 execute store result score @s wt.rotZ run data get storage worldtool:storage Processes[-1].Rotation.Z
 
 execute if entity @s[tag=wt.from_bottom] run function worldtool:process_start/common/start_from_bottom
+execute if entity @s[tag=wt.from_northwest] run function worldtool:process_start/common/start_from_northwest
 
 function #worldtool:addon/process_start/writer_setup
