@@ -3,9 +3,15 @@
 
 function #rx.playerdb:api/v2/get/self
 
-data modify storage rx.playerdb:io player.data.WorldTool.Future set value []
+data modify storage worldtool:storage Temp.List set from storage rx.playerdb:io player.data.WorldTool.Future
+execute if data storage rx.playerdb:io player.data.WorldTool.Future[0] run function worldtool:technical/common/save_load_area/restock_from_list
+data remove storage rx.playerdb:io player.data.WorldTool.Future
 
-execute store result score #temp worldtool if data storage rx.playerdb:io player.data.WorldTool.History
+data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:io player.data.WorldTool.Current.TemplateList
+execute if data storage rx.playerdb:io player.data.WorldTool.Current run function worldtool:technical/common/save_load_area/restock_slots
+data remove storage rx.playerdb:io player.data.WorldTool.Current
+
+execute store result score #temp worldtool if data storage rx.playerdb:io player.data.WorldTool.History[]
 execute if score #temp worldtool >= $maxBackups worldtool run data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:io player.data.WorldTool.History[0].TemplateList
 execute if score #temp worldtool >= $maxBackups worldtool run function worldtool:technical/common/save_load_area/restock_slots
 execute if score #temp worldtool >= $maxBackups worldtool run data remove storage rx.playerdb:io player.data.WorldTool.History[0]

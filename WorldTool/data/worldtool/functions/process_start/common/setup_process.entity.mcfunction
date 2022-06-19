@@ -20,4 +20,7 @@ kill @s[tag=wt.reciever_marker]
 execute if entity @s[tag=wt.randomization_source_corner.1,tag=wt.not_used_yet] run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos
 execute if entity @s[tag=wt.randomization_source_corner.2,tag=wt.not_used_yet] run data modify storage worldtool:storage Processes[0].Positions.2 set from entity @s Pos
 
+execute if entity @s[tag=wt.paste_marker] run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos
+kill @s[tag=wt.paste_marker]
+
 function #worldtool:addon/process_start/setup_process.entity

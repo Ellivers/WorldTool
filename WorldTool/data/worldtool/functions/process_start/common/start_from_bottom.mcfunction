@@ -7,16 +7,16 @@ execute if score #pos1y worldtool > #pos2y worldtool run scoreboard players set 
 scoreboard players set #temp worldtool 2147483647
 scoreboard players operation #temp worldtool < #pos1y worldtool
 scoreboard players operation #temp worldtool < #pos2y worldtool
-scoreboard players operation #pos1y worldtool = #temp worldtool
+scoreboard players operation #pos1yt worldtool = #temp worldtool
 
 scoreboard players set #temp worldtool -2147483648
 scoreboard players operation #temp worldtool > #pos1y worldtool
 scoreboard players operation #temp worldtool > #pos2y worldtool
 scoreboard players operation #pos2y worldtool = #temp worldtool
 
-scoreboard players operation #writerPosX worldtool = #pos1x worldtool
+scoreboard players operation #pos1y worldtool = #pos1yt worldtool
+
 scoreboard players operation #writerPosY worldtool = #pos1y worldtool
-scoreboard players operation #writerPosZ worldtool = #pos1z worldtool
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #pos1y worldtool
 

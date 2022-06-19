@@ -16,6 +16,7 @@ tag @s remove wt.menu.randomize.set_source.pos1
 tag @s remove wt.menu.randomize.set_source.pos2
 tag @s remove wt.menu.randomize.set_source.confirm
 tag @s remove wt.menu.randomize.exclude
+tag @s remove wt.randomize.exclude
 tag @s remove wt.menu.randomize.replace_return
 tag @s remove wt.menu.two_block_query.1
 tag @s remove wt.menu.two_block_query.2
@@ -34,6 +35,8 @@ tag @s remove wt.dont_start_input
 tag @s remove wt.particles
 tag @s remove wt.allow_input
 tag @s remove wt.menu.copy_area
+tag @s remove wt.menu.paste_area
+tag @s remove wt.menu.select_paste_pos
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

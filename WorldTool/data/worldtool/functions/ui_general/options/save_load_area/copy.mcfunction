@@ -9,6 +9,14 @@ execute if data storage rx.playerdb:io player.data.WorldTool.Clipboard run funct
 execute unless data storage rx.playerdb:io player.data.WorldTool.Clipboard run data modify storage rx.playerdb:io player.data.WorldTool.Clipboard set value {TemplateList:[]}
 data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.TemplateList set from storage worldtool:storage Processes[-1].Output
 
+tag @s add wt.no_message
+function worldtool:measure/load
+
+data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.Size set value [0,0,0]
+execute store result storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[0] int 1 run scoreboard players get #sizeX worldtool
+execute store result storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[1] int 1 run scoreboard players get #sizeY worldtool
+execute store result storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[2] int 1 run scoreboard players get #sizeZ worldtool
+
 function #rx.playerdb:api/v2/save/self
 
 function worldtool:ui_general/options/menu

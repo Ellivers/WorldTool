@@ -2,14 +2,17 @@
 # Measures the area
 
 # 't' = temporary
-# 'gtr' = 'greater' & 'lsr' = 'lesser'
-execute if score #pos1xt worldtool > #pos2xt worldtool run function worldtool:measure/x/gtr
-execute if score #pos1xt worldtool < #pos2xt worldtool run function worldtool:measure/x/lsr
-
-execute if score #pos1yt worldtool > #pos2yt worldtool run function worldtool:measure/y/gtr
-execute if score #pos1yt worldtool < #pos2yt worldtool run function worldtool:measure/y/lsr
-
-execute if score #pos1zt worldtool > #pos2zt worldtool run function worldtool:measure/z/gtr
-execute if score #pos1zt worldtool < #pos2zt worldtool run function worldtool:measure/z/lsr
+scoreboard players operation #sizeX worldtool = #pos1xt worldtool
+scoreboard players operation #sizeX worldtool -= #pos2xt worldtool
+execute if score #sizeX worldtool matches ..-1 run scoreboard players operation #sizeX worldtool *= #-1 worldtool
+scoreboard players add #sizeX worldtool 1
+scoreboard players operation #sizeY worldtool = #pos1yt worldtool
+scoreboard players operation #sizeY worldtool -= #pos2yt worldtool
+execute if score #sizeY worldtool matches ..-1 run scoreboard players operation #sizeY worldtool *= #-1 worldtool
+scoreboard players add #sizeY worldtool 1
+scoreboard players operation #sizeZ worldtool = #pos1zt worldtool
+scoreboard players operation #sizeZ worldtool -= #pos2zt worldtool
+execute if score #sizeZ worldtool matches ..-1 run scoreboard players operation #sizeZ worldtool *= #-1 worldtool
+scoreboard players add #sizeZ worldtool 1
 
 function worldtool:measure/done

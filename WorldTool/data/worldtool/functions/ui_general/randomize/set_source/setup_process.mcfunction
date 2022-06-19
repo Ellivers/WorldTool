@@ -10,3 +10,4 @@ execute if entity @s[tag=wt.randomize.exclude] run data modify storage worldtool
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.randomization_source
+tag @s remove wt.randomize.exclude

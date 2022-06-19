@@ -1,4 +1,4 @@
-# Called by worldtool:process/load_area/template_not_found
+# Called by worldtool:process/load_area/error
 # Displays an error
 
 scoreboard players set #success worldtool 0

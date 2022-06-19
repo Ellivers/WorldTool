@@ -1,9 +1,10 @@
-# Called by worldtool:process_start/common/setup_process
+# Called by worldtool:ui_general/options/save_load_area/backup/done_check
 # Sets up the backup process
 
 function worldtool:ui_general/options/save_load_area/remove_save_tags
 
 tag @s add wt.save_area.back_up
+tag @s add wt.dont_reopen_menu
 
 data remove storage worldtool:storage Processes[0]
 function worldtool:ui_general/options/save_load_area/save_setup_process

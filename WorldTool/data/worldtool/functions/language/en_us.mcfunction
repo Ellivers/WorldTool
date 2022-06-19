@@ -16,6 +16,7 @@ data modify storage worldtool:storage Translation."lore.general.clonepos" set va
 data modify storage worldtool:storage Translation."lore.general.sourcepos" set value '["",{"keybind":"key.use","color":"gold"}," to set a corner position"]'
 data modify storage worldtool:storage Translation."item.general.clonepos" set value "Set Clone Destination"
 data modify storage worldtool:storage Translation."item.general.sourcepos" set value "Set Source Corner"
+data modify storage worldtool:storage Translation."item.general.pastepos" set value "Set Paste Position"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
@@ -59,6 +60,8 @@ data modify storage worldtool:storage Translation."info.pick_block" set value "C
 data modify storage worldtool:storage Translation."info.select_clone_destination" set value "Select a destination to clone to"
 data modify storage worldtool:storage Translation."info.wait" set value "Please wait..."
 data modify storage worldtool:storage Translation."info.writer_found" set value "The process entity has been found"
+data modify storage worldtool:storage Translation."info.select_paste_pos" set value "Select a position to paste to"
+data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire area from position 1 to position 2, not just the parts that were changed."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -73,6 +76,7 @@ data modify storage worldtool:storage Translation."error.outside_world" set valu
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using [Select a Block] instead."
 data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected."
 data modify storage worldtool:storage Translation."error.writer_not_found" set value "Error: The process entity could not be found. It may have been killed or been unloaded. The process will resume when the entity is found again."
+data modify storage worldtool:storage Translation."error.template_not_found" set value "Error: The area could not be loaded due to a missing template (structure)"
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -138,6 +142,9 @@ data modify storage worldtool:storage Translation."button.retry.name" set value 
 data modify storage worldtool:storage Translation."button.retry.description" set value "Try again"
 data modify storage worldtool:storage Translation."button.continue.name" set value "[▶Continue]"
 data modify storage worldtool:storage Translation."button.continue.description" set value "Continue"
+data modify storage worldtool:storage Translation."button.continue2.name" set value "[Continue]"
+data modify storage worldtool:storage Translation."button.cancel.name" set value "[Cancel]"
+data modify storage worldtool:storage Translation."button.cancel.description" set value "Cancel"
 data modify storage worldtool:storage Translation."button.reopen_menu.name" set value "[Reopen Menu]"
 data modify storage worldtool:storage Translation."button.reopen_menu.description" set value "Reopen the previous menu"
 data modify storage worldtool:storage Translation."button.positive_x.name" set value "[+X]"
@@ -188,12 +195,19 @@ data modify storage worldtool:storage Translation."info.emptied_queue" set value
 
 data modify storage worldtool:storage Translation."button.copy_area.name" set value "[▶Copy Area]"
 data modify storage worldtool:storage Translation."button.copy_area.description" set value "Copy this area to the clipboard"
-data modify storage worldtool:storage Translation."button.paste_area.name" set value "[▶Paste Area]"
-data modify storage worldtool:storage Translation."button.paste_area.description" set value "Paste the clipboard to this area"
-data modify storage worldtool:storage Translation."button.undo.name" set value "[▶Undo]"
+data modify storage worldtool:storage Translation."button.paste_area.name" set value "[Paste Area...]"
+data modify storage worldtool:storage Translation."button.paste_area.description" set value "Paste the clipboard"
+data modify storage worldtool:storage Translation."button.undo.name" set value "[↩Undo]"
 data modify storage worldtool:storage Translation."button.undo.description" set value "Undo the last action"
-data modify storage worldtool:storage Translation."button.redo.name" set value "[▶Redo]"
+data modify storage worldtool:storage Translation."button.redo.name" set value "[Redo↪]"
 data modify storage worldtool:storage Translation."button.redo.description" set value "Redo the last action"
+
+data modify storage worldtool:storage Translation."button.paste_area.current_pos.name" set value "[▶Paste at Position 1]"
+data modify storage worldtool:storage Translation."button.paste_area.current_pos.description" set value "Paste the clipboard at position 1"
+data modify storage worldtool:storage Translation."button.paste_area.player_pos.name" set value "[▶Paste Here]"
+data modify storage worldtool:storage Translation."button.paste_area.player_pos.description" set value "Paste the clipboard at your position"
+data modify storage worldtool:storage Translation."button.paste_area.select_pos.name" set value "[Select New Position...]"
+data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
 data modify storage worldtool:storage Translation."button.settings.name" set value "[Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
@@ -208,6 +222,8 @@ data modify storage worldtool:storage Translation."label.setting.play_ui_sounds"
 data modify storage worldtool:storage Translation."label.setting.play_ui_sounds.description" set value "If enabled, sounds will be played when the user interacts with the menu."
 data modify storage worldtool:storage Translation."label.setting.reload_message" set value "Display Reload Message: "
 data modify storage worldtool:storage Translation."label.setting.reload_message.description" set value "If enabled, a message will be displayed when the data pack is reloaded."
+data modify storage worldtool:storage Translation."label.setting.enable_backups" set value "Enable Backups: "
+data modify storage worldtool:storage Translation."label.setting.enable_backups.description" set value "If enabled, backups will be made of the area when changes are made. Enabling this also enables undo/redo."
 data modify storage worldtool:storage Translation."label.setting.size_warn_limit" set value "Size Warn Limit: "
 data modify storage worldtool:storage Translation."label.setting.size_warn_limit.description" set value "If the selected area's size is greater or equal to this value, a warning will be displayed. Set to 0 to disable the warning."
 data modify storage worldtool:storage Translation."label.setting.log_limit" set value "Log Limit: "

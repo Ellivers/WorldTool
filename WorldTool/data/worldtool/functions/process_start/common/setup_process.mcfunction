@@ -15,6 +15,6 @@ execute if entity @s[tag=wt.setup.load_area] run function worldtool:ui_general/o
 function #worldtool:addon/process_start/setup_process
 
 execute if score #success worldtool matches 1 run data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[0]
-execute if score #success worldtool matches 1 if score $enableBackups worldtool matches 1 unless data storage worldtool:storage Temp.Process{Tags:["wt.read_only"]} run function worldtool:process_start/common/setup_back_up
+execute if score #success worldtool matches 1 if score $enableBackups worldtool matches 1 unless data storage worldtool:storage Temp.Process{Tags:["wt.read_only"]} run function worldtool:ui_general/options/save_load_area/backup/setup_process
 
 execute if score #success worldtool matches 0 run function worldtool:ui/error/no_process_selected

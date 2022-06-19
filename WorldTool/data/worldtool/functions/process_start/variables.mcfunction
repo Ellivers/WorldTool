@@ -33,8 +33,8 @@ scoreboard players operation #pos2zo worldtool = #pos2z worldtool
 
 scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
-scoreboard players set #block3Placed worldtool 0
-scoreboard players set #block4Placed worldtool 0
 
+scoreboard players set #templatesLoaded worldtool 0
+execute store result score #templatesToLoad worldtool if data storage worldtool:storage Processes[-1].AreaData.TemplateList[]
 
 function #worldtool:addon/process_start/variables

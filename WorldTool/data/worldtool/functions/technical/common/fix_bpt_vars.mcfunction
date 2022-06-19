@@ -10,5 +10,6 @@ execute unless score $outlinedBlocksPerTick worldtool matches 2.. run scoreboard
 execute unless score $greeneryBlocksPerTick worldtool matches 2.. run scoreboard players set $greeneryBlocksPerTick worldtool 1200
 execute unless score $hollowBlocksPerTick worldtool matches 2.. run scoreboard players set $hollowBlocksPerTick worldtool 3300
 execute unless score $circleBlocksPerTick worldtool matches 2.. run scoreboard players set $circleBlocksPerTick worldtool 6000
+execute unless score $backedUpBlocksPerTick worldtool matches 2.. run scoreboard players set $backedUpBlocksPerTick worldtool 400000
 
 function #worldtool:addon/fix_bpt_vars

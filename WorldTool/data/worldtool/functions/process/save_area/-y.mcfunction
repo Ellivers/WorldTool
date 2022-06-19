@@ -5,6 +5,6 @@ scoreboard players operation #pos1x worldtool = #writerPosX worldtool
 
 scoreboard players operation #writerPosY worldtool -= $templateSizeLimit worldtool
 
-execute store result entity @s Pos[0] double 1 run scoreboard players get #writerPosY worldtool
+execute store result entity @s Pos[1] double 1 run scoreboard players get #writerPosY worldtool
 
 execute at @s run function worldtool:process/save_area/main

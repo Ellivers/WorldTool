@@ -5,18 +5,22 @@ scoreboard players set #success worldtool 1
 
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',Id:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only"],BackupSlots:[],Output:[]}
 
-scoreboard players operation #ID_temp worldtool = @s wt.ID
+function worldtool:process_start/common/set_process_values
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos1
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos2] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos2
+execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
+execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.1[2]
+execute store result score #pos2xt worldtool run data get storage worldtool:storage Processes[0].Positions.2[0]
+execute store result score #pos2yt worldtool run data get storage worldtool:storage Processes[0].Positions.2[1]
+execute store result score #pos2zt worldtool run data get storage worldtool:storage Processes[0].Positions.2[2]
 
 # Get the amount of necessary templates to use
-scoreboard players operation #sizeX worldtool = #pos1x worldtool
-scoreboard players operation #sizeX worldtool -= #pos2x worldtool
-scoreboard players operation #sizeY worldtool = #pos1y worldtool
-scoreboard players operation #sizeY worldtool -= #pos2y worldtool
-scoreboard players operation #sizeZ worldtool = #pos1z worldtool
-scoreboard players operation #sizeZ worldtool -= #pos2z worldtool
+scoreboard players operation #sizeX worldtool = #pos2xt worldtool
+scoreboard players operation #sizeX worldtool -= #pos1xt worldtool
+scoreboard players operation #sizeY worldtool = #pos2yt worldtool
+scoreboard players operation #sizeY worldtool -= #pos1yt worldtool
+scoreboard players operation #sizeZ worldtool = #pos2zt worldtool
+scoreboard players operation #sizeZ worldtool -= #pos1zt worldtool
 execute if score #sizeX worldtool matches ..-1 run scoreboard players operation #sizeX worldtool *= #-1 worldtool
 execute if score #sizeY worldtool matches ..-1 run scoreboard players operation #sizeY worldtool *= #-1 worldtool
 execute if score #sizeZ worldtool matches ..-1 run scoreboard players operation #sizeZ worldtool *= #-1 worldtool
@@ -49,7 +53,5 @@ scoreboard players set #temp worldtool 0
 function worldtool:technical/common/save_load_area/get_slots
 
 data modify storage worldtool:storage Processes[0].BackupSlots set from storage worldtool:storage Temp.BackupSlots
-
-function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.save_area
