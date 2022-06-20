@@ -1,4 +1,6 @@
 - Reworked all code
+- Added undoing and redoing
+- Added copying and pasting
 - Several Clone rotations can now be used at once
 - Added distance checking to Measure
 - Added position checking to Measure
