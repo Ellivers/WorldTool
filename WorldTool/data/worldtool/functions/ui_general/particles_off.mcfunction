@@ -8,6 +8,6 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s w
 
 execute if entity @s[tag=wt.menu.general.p1] run function worldtool:ui_general/load
 execute if entity @s[tag=wt.menu.adjust_positions] run function worldtool:ui_general/options/adjust_positions/menu
-execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/options/save_load_area/paste/menu
+execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/options/save_load/paste/menu
 
 function #worldtool:addon/particles/general_off

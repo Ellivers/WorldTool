@@ -1,10 +1,10 @@
-# Called by worldtool:technical/common/save_load_area/area_saved
+# Called by worldtool:technical/common/save_load/area_saved
 # Saves the area data
 
 function #rx.playerdb:api/v2/get/self
 
 data modify storage worldtool:storage Temp.List set from storage rx.playerdb:io player.data.WorldTool.Future
-execute if data storage rx.playerdb:io player.data.WorldTool.Future[0] run function worldtool:technical/common/save_load_area/restock_from_area_list
+execute if data storage rx.playerdb:io player.data.WorldTool.Future[0] run function worldtool:technical/common/save_load/restock_from_area_list
 data remove storage rx.playerdb:io player.data.WorldTool.Future
 
 data modify storage rx.playerdb:io player.data.WorldTool.History append from storage rx.playerdb:io player.data.WorldTool.Current
@@ -14,7 +14,7 @@ scoreboard players operation #temp2 worldtool *= #2 worldtool
 
 execute store result score #temp worldtool if data storage rx.playerdb:io player.data.WorldTool.History[]
 execute if score #temp worldtool >= #temp2 worldtool run data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:io player.data.WorldTool.History[0].TemplateList
-execute if score #temp worldtool >= #temp2 worldtool run function worldtool:technical/common/save_load_area/restock_slots
+execute if score #temp worldtool >= #temp2 worldtool run function worldtool:technical/common/save_load/restock_slots
 execute if score #temp worldtool >= #temp2 worldtool run data remove storage rx.playerdb:io player.data.WorldTool.History[0]
 
 data modify storage rx.playerdb:io player.data.WorldTool.Current set value {Pos:[0d,0d,0d],TemplateList:[]}

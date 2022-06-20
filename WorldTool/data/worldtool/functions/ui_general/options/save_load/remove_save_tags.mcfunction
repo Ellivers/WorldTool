@@ -5,4 +5,4 @@ tag @s remove wt.save_area.copy
 tag @s remove wt.save_area.back_up
 tag @s remove wt.save_area.first_undo
 
-function #worldtool:addon/save_load_area/remove_save_tags
+function #worldtool:addon/save_load/remove_save_tags

@@ -15,7 +15,7 @@ scoreboard players set #temp worldtool 1
 
 execute if entity @s[tag=wt.load_area.paste] run scoreboard players set #temp worldtool 0
 
-function #worldtool:addon/save_load_area/setup_load_process
+function #worldtool:addon/save_load/setup_load_process
 execute if score #temp worldtool matches 1 run data modify storage worldtool:storage Processes[0].Tags append value "wt.read_only"
 
 # Set the starting position
@@ -23,7 +23,7 @@ execute if data storage worldtool:storage Processes[0].AreaData.Pos run data mod
 
 function worldtool:process_start/common/set_process_values
 
-execute if entity @s[tag=wt.load_area.paste] run function worldtool:ui_general/options/save_load_area/paste/setup
+execute if entity @s[tag=wt.load_area.paste] run function worldtool:ui_general/options/save_load/paste/setup
 
-function worldtool:ui_general/options/save_load_area/remove_load_tags
+function worldtool:ui_general/options/save_load/remove_load_tags
 tag @s remove wt.setup.load_area

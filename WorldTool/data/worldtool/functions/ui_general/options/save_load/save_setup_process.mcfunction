@@ -50,7 +50,7 @@ scoreboard players operation #amount worldtool *= #amountZ worldtool
 
 data modify storage worldtool:storage Temp.BackupSlots set value []
 scoreboard players set #temp worldtool 0
-function worldtool:technical/common/save_load_area/get_slots
+function worldtool:technical/common/save_load/get_slots
 
 data modify storage worldtool:storage Processes[0].BackupSlots set from storage worldtool:storage Temp.BackupSlots
 

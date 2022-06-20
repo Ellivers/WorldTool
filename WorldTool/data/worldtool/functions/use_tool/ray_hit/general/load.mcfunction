@@ -9,7 +9,7 @@ execute if entity @s[tag=wt.tool.general.pick_block] run function worldtool:pick
 execute if entity @s[tag=wt.tool.general.clonepos] run function worldtool:ui_general/clone/select_destination/selected
 execute if entity @s[tag=wt.menu.randomize.set_source.pos2] run function worldtool:use_tool/ray_hit/general/randomization_source/pos2
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:use_tool/ray_hit/general/randomization_source/pos1
-execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/save_load_area/paste/pos_selected
+execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/save_load/paste/pos_selected
 
 function #worldtool:addon/use_tool/ray_hit/general
 

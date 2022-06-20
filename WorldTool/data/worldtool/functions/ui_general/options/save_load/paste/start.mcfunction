@@ -4,7 +4,7 @@
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
 
-function worldtool:ui_general/options/save_load_area/remove_load_tags
+function worldtool:ui_general/options/save_load/remove_load_tags
 
 tag @s add wt.load_area.paste
 tag @s add wt.setup.load_area

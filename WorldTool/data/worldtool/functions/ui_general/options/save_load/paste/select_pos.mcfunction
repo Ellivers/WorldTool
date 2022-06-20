@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/options/save_load_area/paste/menu
+# Called by worldtool:ui_general/options/save_load/paste/menu
 # Prompts to select a block in the world
 
 item modify entity @s weapon.mainhand worldtool:general_tool/pastepos
