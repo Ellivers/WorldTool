@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.load_area\\"","storage":"worldtool:storage"}',Id:"worldtool:load_area",Tags:["wt.process.load_area","wt.no_message"]}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.load_area\\"","storage":"worldtool:storage"}',Id:"worldtool:load_area",Tags:["wt.process.load_area","wt.no_message","wt.dont_reopen_menu"]}
 
 function #rx.playerdb:api/v2/get/self
 
@@ -23,7 +23,7 @@ execute if data storage worldtool:storage Processes[0].AreaData.Pos run data mod
 
 function worldtool:process_start/common/set_process_values
 
-execute if entity @s[tag=wt.load_area.undo] unless data storage rx.playerdb:io player.data.WorldTool.Future[0] run function worldtool:ui_general/options/save_load_area/save_future_start
+execute if entity @s[tag=wt.load_area.paste] run function worldtool:ui_general/options/save_load_area/paste/setup
 
 function worldtool:ui_general/options/save_load_area/remove_load_tags
 tag @s remove wt.setup.load_area

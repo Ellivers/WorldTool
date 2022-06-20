@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/options/save_load_area/backup/done_check
-# Sets up the backup process
+# Sets up the two backup processes
 
 function worldtool:ui_general/options/save_load_area/remove_save_tags
 
@@ -13,3 +13,8 @@ data modify storage worldtool:storage Processes prepend from storage worldtool:s
 
 execute if data storage worldtool:storage Processes[0].AffectedArea run data modify storage worldtool:storage Processes[1].Positions.1 set from storage worldtool:storage Processes[0].AffectedArea.From
 execute if data storage worldtool:storage Processes[0].AffectedArea run data modify storage worldtool:storage Processes[1].Positions.2 set from storage worldtool:storage Processes[0].AffectedArea.To
+
+function worldtool:ui_general/options/save_load_area/save_setup_process
+
+execute if data storage worldtool:storage Processes[1].AffectedArea run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Processes[1].AffectedArea.From
+execute if data storage worldtool:storage Processes[1].AffectedArea run data modify storage worldtool:storage Processes[0].Positions.2 set from storage worldtool:storage Processes[1].AffectedArea.To

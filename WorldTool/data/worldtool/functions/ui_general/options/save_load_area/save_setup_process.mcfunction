@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',Id:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only"],BackupSlots:[],Output:[]}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',Id:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only","wt.dont_reopen_menu"],BackupSlots:[],Output:[]}
 
 function worldtool:process_start/common/set_process_values
 

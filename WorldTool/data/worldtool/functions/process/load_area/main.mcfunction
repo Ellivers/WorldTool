@@ -3,15 +3,6 @@
 
 scoreboard players add #blocksChecked worldtool 1
 
-execute unless score #block1Placed worldtool matches 1 store success score #block1Placed worldtool run clone ~ ~ ~ ~ ~ ~ 27451 1 19
-execute unless score #block2Placed worldtool matches 1 store success score #block2Placed worldtool run clone ~ ~-1 ~ ~ ~-1 ~ 27449 1 19
-setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posY:0,author:"worldtool:load_area"}
-data modify block ~ ~ ~ name set from storage worldtool:storage Processes[-1].AreaData.TemplateList[0].Slot
-setblock ~ ~-1 ~ minecraft:redstone_block
-clone 27449 1 19 27449 1 19 ~ ~-1 ~
-
-execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} run function worldtool:process/load_area/error
-
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[-1].AreaData.TemplateList[0].Pos[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[-1].AreaData.TemplateList[0].Pos[1]
 execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[-1].AreaData.TemplateList[0].Pos[2]
@@ -27,12 +18,14 @@ execute store result storage worldtool:storage Temp.Pos[2] double 1 run scoreboa
 
 data modify entity @s Pos set from storage worldtool:storage Temp.Pos
 
-data remove storage worldtool:storage Processes[-1].AreaData.TemplateList[0]
+execute at @s run function worldtool:process/load_area/place
 
 scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
 
-execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool at @s run function worldtool:process/load_area/main
+data remove storage worldtool:storage Processes[-1].AreaData.TemplateList[0]
+
+execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool run function worldtool:process/load_area/main
 
 # End the process
 scoreboard players operation #writerPosX worldtool = #pos2x worldtool

@@ -215,6 +215,7 @@ data modify storage worldtool:storage Translation."button.paste_area.player_pos.
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.name" set value "[Select New Position...]"
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
+# Settings
 data modify storage worldtool:storage Translation."button.settings.name" set value "[Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
 data modify storage worldtool:storage Translation."info.settings" set value "Settings"
@@ -234,6 +235,8 @@ data modify storage worldtool:storage Translation."label.setting.size_warn_limit
 data modify storage worldtool:storage Translation."label.setting.size_warn_limit.description" set value "If the selected area's size is greater or equal to this value, a warning will be displayed. Set to 0 to disable the warning."
 data modify storage worldtool:storage Translation."label.setting.log_limit" set value "Log Limit: "
 data modify storage worldtool:storage Translation."label.setting.log_limit.description" set value "The maximum number of log entries to keep."
+data modify storage worldtool:storage Translation."label.setting.max_backups" set value "Max Backups: "
+data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once."
 
 data modify storage worldtool:storage Translation."label.addon_settings" set value "Addon Settings:"
 data modify storage worldtool:storage Translation."button.available_addons.name" set value "[Available Addons...]"

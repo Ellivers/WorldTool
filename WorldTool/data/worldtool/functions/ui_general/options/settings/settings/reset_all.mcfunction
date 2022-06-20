@@ -9,5 +9,6 @@ scoreboard players set $reloadMessage worldtool 0
 scoreboard players set $enableBackups worldtool 0
 scoreboard players set $sizeWarnLimit worldtool 100000
 scoreboard players set $logLimit worldtool 100
+scoreboard players set $maxBackups worldtool 6
 
 function worldtool:ui_general/options/settings/menu

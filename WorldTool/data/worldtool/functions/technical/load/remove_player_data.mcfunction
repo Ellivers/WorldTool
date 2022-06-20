@@ -3,21 +3,21 @@
 
 scoreboard players add #temp2 worldtool 1
 
-data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:main players[0].data.WorldTool.Clipboard.TemplateList
-execute if data storage rx.playerdb:main players[0].data.WorldTool.Clipboard run function worldtool:technical/common/save_load_area/restock_slots
-data remove storage rx.playerdb:main players[0].data.WorldTool.Clipboard
+# data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:main players[0].data.WorldTool.Clipboard.TemplateList
+# execute if data storage rx.playerdb:main players[0].data.WorldTool.Clipboard run function worldtool:technical/common/save_load_area/restock_slots
+# data remove storage rx.playerdb:main players[0].data.WorldTool.Clipboard
 
-data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:main players[0].data.WorldTool.Current.TemplateList
-execute if data storage rx.playerdb:main players[0].data.WorldTool.Current run function worldtool:technical/common/save_load_area/restock_slots
-data remove storage rx.playerdb:main players[0].data.WorldTool.Current
+# data modify storage worldtool:storage Temp.TemplateList set from storage rx.playerdb:main players[0].data.WorldTool.Current.TemplateList
+# execute if data storage rx.playerdb:main players[0].data.WorldTool.Current run function worldtool:technical/common/save_load_area/restock_slots
+# data remove storage rx.playerdb:main players[0].data.WorldTool.Current
 
-data modify storage worldtool:storage Temp.List set from storage rx.playerdb:main players[0].data.WorldTool.History
-execute if data storage rx.playerdb:main players[0].data.WorldTool.History[0] run function worldtool:technical/common/save_load_area/restock_from_list
-data remove storage rx.playerdb:main players[0].data.WorldTool.History
+# data modify storage worldtool:storage Temp.List set from storage rx.playerdb:main players[0].data.WorldTool.History
+# execute if data storage rx.playerdb:main players[0].data.WorldTool.History[0] run function worldtool:technical/common/save_load_area/restock_from_area_list
+# data remove storage rx.playerdb:main players[0].data.WorldTool.History
 
-data modify storage worldtool:storage Temp.List set from storage rx.playerdb:main players[0].data.WorldTool.Clipboard.Future
-execute if data storage rx.playerdb:main players[0].data.WorldTool.Clipboard.Future[0] run function worldtool:technical/common/save_load_area/restock_from_list
-data remove storage rx.playerdb:main players[0].data.WorldTool.Clipboard.Future
+# data modify storage worldtool:storage Temp.List set from storage rx.playerdb:main players[0].data.WorldTool.Future
+# execute if data storage rx.playerdb:main players[0].data.WorldTool.Future[0] run function worldtool:technical/common/save_load_area/restock_from_area_list
+# data remove storage rx.playerdb:main players[0].data.WorldTool.Future
 
 data remove storage rx.playerdb:main players[0].data.WorldTool
 
