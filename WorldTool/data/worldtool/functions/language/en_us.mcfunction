@@ -41,12 +41,18 @@ data modify storage worldtool:storage Translation."lore.selected_block" set valu
 data modify storage worldtool:storage Translation."progress.default" set value "WorldTool Progress"
 
 # Processes
-data modify storage worldtool:storage Translation."process.fill" set value "Fill area"
+data modify storage worldtool:storage Translation."process.fill" set value "Fill Area"
 data modify storage worldtool:storage Translation."process.replace" set value "Replace"
 data modify storage worldtool:storage Translation."process.filter_measure" set value "Measure"
 data modify storage worldtool:storage Translation."process.clone" set value "Clone"
-data modify storage worldtool:storage Translation."process.randomization_source" set value "Mark randomization source"
+data modify storage worldtool:storage Translation."process.randomization_source" set value "Mark Randomization Source"
 data modify storage worldtool:storage Translation."process.randomize" set value "Randomize"
+
+data modify storage worldtool:storage Translation."process.paint" set value "Paint"
+data modify storage worldtool:storage Translation."process.place" set value "Place"
+data modify storage worldtool:storage Translation."process.sphere" set value "Place Sphere"
+data modify storage worldtool:storage Translation."process.circle" set value "Place Circle"
+data modify storage worldtool:storage Translation."process.structure" set value "Place Structure"
 
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled. Using the reload command or restarting the world will install it again."
@@ -61,7 +67,7 @@ data modify storage worldtool:storage Translation."info.select_clone_destination
 data modify storage worldtool:storage Translation."info.wait" set value "Please wait..."
 data modify storage worldtool:storage Translation."info.writer_found" set value "The process entity has been found"
 data modify storage worldtool:storage Translation."info.select_paste_pos" set value "Select a position to paste to"
-data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire area from position 1 to position 2, not just the parts that were changed."
+data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are only for the General Tool and Shape Tool and are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire modified area, not just the parts that were changed."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -74,7 +80,7 @@ data modify storage worldtool:storage Translation."error.pos2_missing" set value
 data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using [Select a Block] instead."
-data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected."
+data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected"
 data modify storage worldtool:storage Translation."error.writer_not_found" set value "Error: The process entity could not be found. It may have been killed or been unloaded. The process will resume when the entity is found again."
 data modify storage worldtool:storage Translation."error.template_not_found" set value "Error: The area could not be loaded due to a missing template (structure)"
 
@@ -380,6 +386,20 @@ data modify storage worldtool:storage Translation."info.selected_brush.replace" 
 data modify storage worldtool:storage Translation."info.selected_brush.sphere" set value "Selected brush: Sphere"
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Structure"
+
+data modify storage worldtool:storage Translation."button.brush.paint.name" set value "[Paint]"
+data modify storage worldtool:storage Translation."button.brush.paint.description" set value "Paint existing blocks"
+data modify storage worldtool:storage Translation."button.brush.place.name" set value "[Place]"
+data modify storage worldtool:storage Translation."button.brush.place.description" set value "Place an area of blocks"
+data modify storage worldtool:storage Translation."button.brush.replace.name" set value "[Replace]"
+data modify storage worldtool:storage Translation."button.brush.replace.description" set value "Choose which block(s) to replace"
+data modify storage worldtool:storage Translation."button.brush.sphere.name" set value "[Sphere]"
+data modify storage worldtool:storage Translation."button.brush.sphere.description" set value "Place a sphere"
+data modify storage worldtool:storage Translation."button.brush.circle.name" set value "[Circle]"
+data modify storage worldtool:storage Translation."button.brush.circle.description" set value "Place a circle"
+data modify storage worldtool:storage Translation."button.brush.structure.name" set value "[Structure]"
+data modify storage worldtool:storage Translation."button.brush.structure.description" set value "Place a structure"
+data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
 
 data modify storage worldtool:storage Translation."info.selected_brush" set value "Selected brush: "
 data modify storage worldtool:storage Translation."brush.none" set value "None"

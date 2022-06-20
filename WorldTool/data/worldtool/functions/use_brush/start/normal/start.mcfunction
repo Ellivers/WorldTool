@@ -1,9 +1,13 @@
 # Called by worldtool:use_brush/start/load
 
+scoreboard players set #success worldtool 0
 
+scoreboard players operation #radius worldtool = @s wt.brush_size
+scoreboard players operation #radius worldtool /= #2 worldtool
 
-function #worldtool:addon/use_brush/normal_start/writers
-
-scoreboard players operation 35c1ab68-9d4c-11eb-a8b3-0242ac130003 wt.ID = #ID_temp worldtool
+execute if predicate worldtool:brush_tool/brushes/paint run function worldtool:use_brush/start/normal/setup_process/paint
 
 function #worldtool:addon/use_brush/normal_start/processes
+
+execute if score #success worldtool matches 0 run tellraw @s {"nbt":"Translation.\"error.no_process_selected\"","storage": "worldtool:storage","color": "red"}
+execute if score #success worldtool matches 1 run function worldtool:process_start/start

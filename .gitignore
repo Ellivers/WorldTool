@@ -2,3 +2,5 @@
 old_data/
 # VSCode is funny
 .vscode/
+# Process folder generator output
+other_stuff/output/

@@ -1,4 +1,4 @@
-# Called by worldtool:ui_brush/main
+# Called by worldtool:ui_brush/menu
 # Menu for selecting a brush block
 
 function worldtool:ui/clear_chat

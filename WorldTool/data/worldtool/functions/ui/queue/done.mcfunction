@@ -10,6 +10,6 @@ data modify storage worldtool:storage Temp.Process set from storage worldtool:st
 scoreboard players set #commonStart worldtool 0
 execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:common"} run scoreboard players set #commonStart worldtool 1
 execute unless data storage worldtool:storage Temp.Process.StartType run scoreboard players set #commonStart worldtool 1
-execute if score #commonStart worldtool matches 1 run function worldtool:process_start/common/continue2
+execute if score #commonStart worldtool matches 1 run function worldtool:process_start/common/continue/2
 
 function #worldtool:addon/process_start/from_queue

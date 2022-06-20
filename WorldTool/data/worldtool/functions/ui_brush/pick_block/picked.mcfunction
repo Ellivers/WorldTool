@@ -10,4 +10,4 @@ function worldtool:ui/sound.change_item
 tag @s remove wt.pick_block.brush
 tag @s remove wt.pick_block.secondary
 
-function worldtool:ui_brush/main
+function worldtool:ui_brush/menu

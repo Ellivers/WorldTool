@@ -1,6 +1,13 @@
 # Called by worldtool:use_brush/load
 # Different options for selecting an area for the brush process to use
 
+scoreboard players set #offset1x worldtool 0
+scoreboard players set #offset1y worldtool 0
+scoreboard players set #offset1z worldtool 0
+scoreboard players set #offset2x worldtool 0
+scoreboard players set #offset2y worldtool 0
+scoreboard players set #offset2z worldtool 0
+
 execute if predicate worldtool:brush_tool/settings/flat unless entity @s[predicate=!worldtool:brush_tool/brushes/paint,predicate=!worldtool:brush_tool/brushes/place] run tag @s add wt.brush_area.flat
 tag @s[tag=!wt.brush_area.flat] add wt.brush_area.normal
 

@@ -15,4 +15,4 @@ tag @s remove wt.allow_input
 tag @s remove wt.select_block.brush
 tag @s remove wt.select_block.brush.secondary
 
-function worldtool:ui_brush/main
+function worldtool:ui_brush/menu
