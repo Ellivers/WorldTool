@@ -37,6 +37,8 @@ tag @s remove wt.allow_input
 tag @s remove wt.menu.copy_area
 tag @s remove wt.menu.paste_area
 tag @s remove wt.menu.select_paste_pos
+tag @s remove wt.menu.checkered
+tag @s remove wt.menu.checkered.replace
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

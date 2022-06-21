@@ -13,6 +13,7 @@ execute if entity @s[tag=wt.process.randomization_source] run function worldtool
 execute if entity @s[tag=wt.process.randomize] run function worldtool:process/randomize/load
 execute if entity @s[tag=wt.process.save_area] run function worldtool:process/save_area/main
 execute if entity @s[tag=wt.process.load_area] run function worldtool:process/load_area/main
+execute if entity @s[tag=wt.process.checkered] run function worldtool:process/checkered/main
 
 execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/paint/main
 

@@ -3,5 +3,6 @@
 
 execute if entity @s[tag=wt.menu.general.p1] run function worldtool:ui_general/fill_start
 execute if entity @s[tag=wt.menu.two_block_query.3] run function worldtool:ui/two_block_query/return
+execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/checkered/start
 
 function #worldtool:addon/input/primary_block

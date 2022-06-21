@@ -34,6 +34,8 @@ scoreboard players operation #pos2zo worldtool = #pos2z worldtool
 scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
 
+data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
 execute store result score #templatesToLoad worldtool if data storage worldtool:storage Processes[-1].AreaData.TemplateList[]
+execute store result score #placeBlock worldtool if data storage worldtool:storage Temp.Process{Tags:["wt.start_with_block"]}
 
 function #worldtool:addon/process_start/variables

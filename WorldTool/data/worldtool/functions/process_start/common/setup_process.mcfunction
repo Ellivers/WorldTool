@@ -11,6 +11,7 @@ execute if entity @s[tag=wt.setup.randomization_source] run function worldtool:u
 execute if entity @s[tag=wt.setup.randomize] run function worldtool:ui_general/randomize/setup_process
 execute if entity @s[tag=wt.setup.save_area] run function worldtool:ui_general/options/save_load/setup_save_process
 execute if entity @s[tag=wt.setup.load_area] run function worldtool:ui_general/options/save_load/setup_load_process
+execute if entity @s[tag=wt.setup.checkered] run function worldtool:ui_general/checkered/setup_process
 
 function #worldtool:addon/process_start/setup_process
 
