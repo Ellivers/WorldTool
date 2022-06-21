@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/page_1.display and worldtool:ui_general/clone/menu
+# Called by worldtool:ui_general/page_1 and worldtool:ui_general/clone/menu
 # Initiates the clone menu
 
 tag @s remove wt.two_block_query.normal

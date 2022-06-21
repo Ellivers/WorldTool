@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/options/save_load/load_setup_process
+# Called by worldtool:ui_general/options/save_load/setup_load_process
 # Sets up some data to help the backup process
 
 data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.1

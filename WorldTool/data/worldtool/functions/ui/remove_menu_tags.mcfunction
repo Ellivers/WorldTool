@@ -17,7 +17,7 @@ tag @s remove wt.menu.randomize.set_source.pos2
 tag @s remove wt.menu.randomize.set_source.confirm
 tag @s remove wt.menu.randomize.exclude
 tag @s remove wt.randomize.exclude
-tag @s remove wt.menu.randomize.replace_return
+tag @s remove wt.menu.randomize.replace
 tag @s remove wt.menu.two_block_query.1
 tag @s remove wt.menu.two_block_query.2
 tag @s remove wt.menu.two_block_query.3

@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/page_1.display
+# Called by worldtool:ui_general/page_1
 # Shows the clone menu
 
 function worldtool:ui/clear_chat
