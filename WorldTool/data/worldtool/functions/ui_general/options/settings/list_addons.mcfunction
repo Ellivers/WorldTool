@@ -4,7 +4,7 @@
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 
-tag @s add wt.menu.addons
+tag @s add wt.menu.settings.addons
 
 tellraw @s [{"nbt":"Translation.\"info.available_addons\"","storage": "worldtool:storage","color": "light_purple","bold":true},"\n"]
 

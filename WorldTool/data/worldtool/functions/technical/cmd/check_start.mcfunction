@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-execute unless data storage worldtool:storage CmdProcess.Id run scoreboard players set #success worldtool 0
+execute unless data storage worldtool:storage CmdProcess.ID run scoreboard players set #success worldtool 0
 execute unless data storage worldtool:storage CmdProcess.Tags run scoreboard players set #success worldtool 0
 execute unless data storage worldtool:storage CmdProcess.DisplayName run scoreboard players set #success worldtool 0
 

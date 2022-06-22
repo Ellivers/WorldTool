@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/start
-# Starts a function, setting variables
+# Starts a process, setting variables
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
@@ -7,13 +7,14 @@ scoreboard players set $processRunning worldtool 1
 
 scoreboard players set #writerNotFoundError worldtool 0
 
-function worldtool:technical/common/fix_bpt_vars
-
 ## Common variables ##
 
 scoreboard players set #totalBlocksChecked worldtool 0
 scoreboard players set #blocksChecked worldtool 0
 scoreboard players set #blocksPlaced worldtool 0
+
+execute store result score #blocksPerTick worldtool run data get storage worldtool:storage Processes[-1].BlocksPerTick
+execute unless score #blocksPerTick worldtool matches 2.. run scoreboard players set #blocksPerTick worldtool 2147483647
 
 # Not so common but whatever
 scoreboard players set #minX worldtool 2147483647

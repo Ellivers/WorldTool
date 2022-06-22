@@ -4,7 +4,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
-execute if data storage worldtool:storage Temp.Process{Id:"worldtool:clone"} run function worldtool:ui_general/clone/summon_reciever
+execute if data storage worldtool:storage Temp.Process{ID:"worldtool:clone"} run function worldtool:ui_general/clone/summon_reciever
 
 function #worldtool:addon/process_start/common_start
 

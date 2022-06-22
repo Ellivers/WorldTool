@@ -9,6 +9,7 @@ execute if predicate worldtool:tools/general/pastepos run function worldtool:ui/
 execute if predicate worldtool:tools/general/pastepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
 function worldtool:ui/clear_chat
+tellraw @s [{"nbt":"Translation.\"button.help.spacer\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.help.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.help.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "open_url","value": "https://github.com/Ellivers/WorldTool/wiki"}}]
 function worldtool:ui/back_button
 
 tag @s add wt.menu.options
@@ -27,8 +28,6 @@ execute if data storage rx.playerdb:io player.data.WorldTool.Clipboard run tellr
 execute unless data storage rx.playerdb:io player.data.WorldTool.Clipboard run tellraw @s ["",{"nbt":"Translation.\"button.copy_area.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.copy_area.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/save_load/copy_start"}}," ",{"nbt":"Translation.\"button.paste_area.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.paste_area.description\"","storage": "worldtool:storage"}}}]
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.adjust_positions.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.adjust_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/load"}}," ",{"nbt":"Translation.\"button.settings.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/menu"}}]
-
-execute if score $addons worldtool matches 1.. run tellraw @s ["\n",{"nbt":"Translation.\"button.available_addons.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.available_addons.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/list_addons"}}]
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.kill_process.name\"","storage": "worldtool:storage","color": "red","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.kill_process.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/kill_process"}}," ",{"nbt":"Translation.\"button.empty_queue.name\"","storage": "worldtool:storage","color": "#b5146d","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.empty_queue.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/empty_queue"}}]
 

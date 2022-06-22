@@ -4,7 +4,7 @@
 
 execute if entity @s[tag=!wt.no_sound] run function worldtool:ui/sound.button
 
-execute unless entity @s[tag=wt.no_space] run tellraw @s "\n"
+execute unless entity @s[tag=wt.no_space] run tellraw @s ""
 execute store result score #SCFDefault worldtool run gamerule sendCommandFeedback
 gamerule sendCommandFeedback false
 execute unless score #SCFDefault worldtool matches 0 run schedule function worldtool:ui/anti_feedback_chat_message/scheduled 1t replace

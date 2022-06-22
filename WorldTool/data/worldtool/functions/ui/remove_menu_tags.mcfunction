@@ -6,6 +6,9 @@ execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
 tag @s remove wt.menu.general.p1
 tag @s remove wt.menu.options
 tag @s remove wt.menu.settings
+tag @s remove wt.menu.settings.addons
+tag @s remove wt.menu.settings.language
+tag @s remove wt.menu.settings.blocks_per_tick
 tag @s remove wt.menu.adjust_positions
 tag @s remove wt.menu.replace
 tag @s remove wt.menu.clone
@@ -45,5 +48,6 @@ tag @s remove wt.setup.replace
 tag @s remove wt.setup.clone
 tag @s remove wt.setup.filter_measure
 tag @s remove wt.setup.randomization_source
+tag @s remove wt.setup.checkered
 
 function #worldtool:addon/ui/remove_menu_tags

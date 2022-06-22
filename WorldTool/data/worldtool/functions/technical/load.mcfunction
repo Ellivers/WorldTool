@@ -40,15 +40,14 @@ scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
 
 # Default language
-execute if data storage worldtool:storage Language run function worldtool:language/reload
+execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
 scoreboard players set $version worldtool 4
 
 ## Default blocks per tick ##
-# Set the blocks-per-tick settings to their default values if they're not of a supported value
-function worldtool:technical/common/fix_bpt_vars
+function worldtool:technical/load/setup_blocks_per_tick
 
 ## Default settings ##
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
@@ -110,9 +109,6 @@ execute as @a unless entity @s[tag=!wt.menu.options,tag=!wt.menu.paste_area,tag=
 
 ## Addon stuff ##
 
-# Addon list storage
-data modify storage worldtool:storage AddonList set value []
-
 # Addon variables
 scoreboard players set $addons worldtool 0
 scoreboard players set $generalToolAddons worldtool 0
@@ -121,6 +117,7 @@ scoreboard players set $shapeToolAddons worldtool 0
 scoreboard players set $settingAddons worldtool 0
 scoreboard players set $optionAddons worldtool 0
 scoreboard players set $greeneryAddons worldtool 0
+scoreboard players set $blocksPerTickAddons worldtool 0
 function #worldtool:addon/load
 
 # Forceload for access to storing blocks at 27450 19

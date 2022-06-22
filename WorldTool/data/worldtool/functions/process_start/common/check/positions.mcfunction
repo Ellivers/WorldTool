@@ -22,5 +22,3 @@ execute if score #temp worldtool matches 2.. if score #temp2 worldtool matches 2
 execute unless score #temp worldtool matches 1 unless score #temp2 worldtool matches 1 run function worldtool:ui/error/pos_errors
 
 tag @e[type=minecraft:marker,tag=worldtool,tag=wt.position,tag=wt.temp] remove wt.temp
-
-execute if score #success worldtool matches 0 run function worldtool:process_start/common/remove_setup_tags
