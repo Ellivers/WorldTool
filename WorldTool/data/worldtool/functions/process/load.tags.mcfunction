@@ -16,5 +16,6 @@ execute if entity @s[tag=wt.process.load_area] run function worldtool:process/lo
 execute if entity @s[tag=wt.process.checkered] run function worldtool:process/checkered/main
 
 execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/paint/main
+execute if entity @s[tag=wt.process.replace_brush] run function worldtool:process/brush/replace/main
 
 function #worldtool:addon/process/check_tags

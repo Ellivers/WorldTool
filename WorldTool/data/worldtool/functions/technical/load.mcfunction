@@ -40,6 +40,9 @@ scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
 
 # Default language
+# Move langugae reloading to worldtool:technical/upgrade_version in future releases
+# Remove the following line this release
+execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 1
 execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 

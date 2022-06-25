@@ -1,0 +1,4 @@
+{
+    "function": "minecraft:set_nbt",
+    "tag": "{WorldTool:{BrushSettings:{UpdateBlock:0b}}}"
+}

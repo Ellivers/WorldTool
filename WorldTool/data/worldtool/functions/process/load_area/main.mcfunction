@@ -16,7 +16,7 @@ execute store result storage worldtool:storage Temp.Pos[0] double 1 run scoreboa
 execute store result storage worldtool:storage Temp.Pos[1] double 1 run scoreboard players get #pos1yt worldtool
 execute store result storage worldtool:storage Temp.Pos[2] double 1 run scoreboard players get #pos1zt worldtool
 
-data modify entity @s Pos set from storage worldtool:storage Temp.Pos
+execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run data modify entity @s Pos set from storage worldtool:storage Temp.Pos
 
 execute at @s run function worldtool:process/load_area/place
 
@@ -25,7 +25,7 @@ scoreboard players set #block2Placed worldtool 0
 
 data remove storage worldtool:storage Processes[-1].AreaData.TemplateList[0]
 
-execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool run function worldtool:process/load_area/main
+execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/load_area/main
 
 # End the process
 scoreboard players operation #writerPosX worldtool = #pos2x worldtool

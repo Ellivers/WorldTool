@@ -1,4 +1,4 @@
-# Called by worldtool:ui_brush/select_block/normal/load
+# Called by worldtool:ui_brush/select_block/secondary/select
 
 function worldtool:pick_block/other/remove_tags
 

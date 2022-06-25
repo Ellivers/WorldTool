@@ -1,0 +1,4 @@
+{
+    "function": "minecraft:set_nbt",
+    "tag": "{WorldTool:{BrushSettings:{Hollow:0b}}}"
+}

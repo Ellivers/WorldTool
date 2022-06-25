@@ -13,8 +13,8 @@ execute unless data storage worldtool:storage {Language:"worldtool:en_us"} run t
 
 function #worldtool:addon/addon_languages
 
-execute if score $reloadLanguage worldtool matches 1 run tellraw @s ["\n",{"nbt":"Translation.\"button.settings.language.reload.on\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.language.reload.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/language/set/reload_off"}}]
-execute unless score $reloadLanguage worldtool matches 1 run tellraw @s ["\n",{"nbt":"Translation.\"button.settings.language.reload.off\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.language.reload.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/language/set/reload_on"}}]
+execute if score $reloadLanguage worldtool matches 1 run tellraw @s ["\n",{"nbt":"Translation.\"button.settings.language.reload.on\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.language.reload.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/language/set/reload_toggle"}}]
+execute unless score $reloadLanguage worldtool matches 1 run tellraw @s ["\n",{"nbt":"Translation.\"button.settings.language.reload.off\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.language.reload.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/settings/language/set/reload_toggle"}}]
 function worldtool:ui/close_button
 
 function worldtool:ui/anti_feedback_chat_message/load
