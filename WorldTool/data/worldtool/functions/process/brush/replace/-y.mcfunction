@@ -5,4 +5,4 @@ scoreboard players operation #pos1x worldtool = #writerPosX worldtool
 
 scoreboard players remove #writerPosY worldtool 1
 tp ~ ~-1 ~
-execute positioned ~ ~-1 ~ run function worldtool:brush/replace/main
+execute positioned ~ ~-1 ~ run function worldtool:process/brush/replace/main

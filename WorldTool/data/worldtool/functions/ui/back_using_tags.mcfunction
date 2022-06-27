@@ -18,6 +18,7 @@ execute if entity @s[tag=wt.menu.randomize.set_source.confirm] run function worl
 execute if entity @s[tag=wt.menu.randomize.set_source.wait] run function worldtool:ui_general/randomize/set_source/back
 execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/save_load/paste/menu
+execute if entity @s[tag=wt.select_block.brush.replace] run function worldtool:ui_brush/select_block/replace/1
 
 function #worldtool:addon/ui/back_using_tags
 

@@ -42,6 +42,8 @@ tag @s remove wt.menu.paste_area
 tag @s remove wt.menu.select_paste_pos
 tag @s remove wt.menu.checkered
 tag @s remove wt.menu.checkered.replace
+tag @s remove wt.select_block.brush
+tag @s remove wt.select_block.brush.replace
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

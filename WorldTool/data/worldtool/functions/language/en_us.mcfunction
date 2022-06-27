@@ -82,6 +82,9 @@ data modify storage worldtool:storage Translation."info.wait" set value "Please 
 data modify storage worldtool:storage Translation."info.writer_found" set value "The process entity has been found"
 data modify storage worldtool:storage Translation."info.select_paste_pos" set value "Select a position to paste to"
 data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are only for the General Tool and Shape Tool and are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire modified area, not just the parts that were changed."
+data modify storage worldtool:storage Translation."info.selected_block" set value "Selected block: "
+data modify storage worldtool:storage Translation."info.selected_replace_block.normal" set value "Selected block to replace: "
+data modify storage worldtool:storage Translation."info.selected_replace_block.exclude" set value "Selected block to exclude: "
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."

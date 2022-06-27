@@ -7,4 +7,4 @@ function worldtool:technical/common/save_load/restock_slots
 
 data remove storage worldtool:storage Temp.List[0]
 
-execute if data storage worldtool:storage Temp.List[0] run function worldtool:technical/common/save_load/restock_from_list
+execute if data storage worldtool:storage Temp.List[0] run function worldtool:technical/common/save_load/restock_from_area_list
