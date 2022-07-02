@@ -183,6 +183,7 @@ data modify storage worldtool:storage Translation."button.replace.on" set value 
 data modify storage worldtool:storage Translation."button.replace.off" set value "[Replace: Off...]"
 data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
+data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "

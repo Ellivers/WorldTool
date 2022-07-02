@@ -8,11 +8,11 @@ scoreboard players operation #diffY worldtool -= #pos1yo worldtool
 scoreboard players operation #diffZ worldtool = #writerPosZ worldtool
 scoreboard players operation #diffZ worldtool -= #pos1zo worldtool
 
-data modify storage worldtool:storage Processes[-1].Output append value {Slot:"",Pos:[0d,0d,0d]}
-execute store result storage worldtool:storage Processes[-1].Output[-1].Pos[0] double 1 run scoreboard players get #diffX worldtool
-execute store result storage worldtool:storage Processes[-1].Output[-1].Pos[1] double 1 run scoreboard players get #diffY worldtool
-execute store result storage worldtool:storage Processes[-1].Output[-1].Pos[2] double 1 run scoreboard players get #diffZ worldtool
-data modify storage worldtool:storage Processes[-1].Output[-1].Slot set from storage worldtool:storage Processes[-1].BackupSlots[0]
+data modify storage worldtool:storage Processes[-1].Output.TemplateList append value {Slot:"",Pos:[0d,0d,0d]}
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[0] double 1 run scoreboard players get #diffX worldtool
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[1] double 1 run scoreboard players get #diffY worldtool
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[2] double 1 run scoreboard players get #diffZ worldtool
+data modify storage worldtool:storage Processes[-1].Output.TemplateList[-1].Slot set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 
 execute unless score #block1Placed worldtool matches 1 store success score #block1Placed worldtool run clone ~-1 ~-1 ~-1 ~-1 ~-1 ~-1 27451 1 19
 execute unless score #block2Placed worldtool matches 1 store success score #block2Placed worldtool run clone ~-1 ~-2 ~-1 ~-1 ~-2 ~-1 27449 1 19
@@ -33,7 +33,7 @@ scoreboard players operation #sizeY worldtool < $templateSizeLimit worldtool
 scoreboard players operation #sizeZ worldtool < $templateSizeLimit worldtool
 
 setblock ~-1 ~-1 ~-1 minecraft:structure_block{mode:"SAVE",ignoreEntities:1b}
-data modify block ~-1 ~-1 ~-1 name set from storage worldtool:storage Processes[-1].BackupSlots[0]
+data modify block ~-1 ~-1 ~-1 name set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 data modify block ~-1 ~-1 ~-1 posX set value 1
 data modify block ~-1 ~-1 ~-1 posY set value 1
 data modify block ~-1 ~-1 ~-1 posZ set value 1
@@ -51,7 +51,7 @@ scoreboard players operation #newBlocksChecked worldtool *= #sizeZ worldtool
 
 scoreboard players operation #blocksChecked worldtool += #newBlocksChecked worldtool
 
-execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run data remove storage worldtool:storage Processes[-1].BackupSlots[0]
+execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run data remove storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 
 scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0

@@ -7,7 +7,7 @@ execute if data storage rx.playerdb:io player.data.WorldTool.Clipboard run data 
 execute if data storage rx.playerdb:io player.data.WorldTool.Clipboard run function worldtool:technical/common/save_load/restock_slots
 
 execute unless data storage rx.playerdb:io player.data.WorldTool.Clipboard run data modify storage rx.playerdb:io player.data.WorldTool.Clipboard set value {TemplateList:[]}
-data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.TemplateList set from storage worldtool:storage Processes[-1].Output
+data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.TemplateList set from storage worldtool:storage Processes[-1].Output.TemplateList
 
 tag @s add wt.no_message
 function worldtool:measure/load

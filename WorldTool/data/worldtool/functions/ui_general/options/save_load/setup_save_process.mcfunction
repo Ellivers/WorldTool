@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',ID:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only","wt.dont_reopen_menu"],BackupSlots:[],Output:[]}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',ID:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only","wt.dont_reopen_menu"],Input:{BackupSlots:[]},Output:{TemplateList:[]}}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:save_area"}].Value
 
 function worldtool:process_start/common/set_process_values
@@ -53,6 +53,6 @@ data modify storage worldtool:storage Temp.BackupSlots set value []
 scoreboard players set #temp worldtool 0
 function worldtool:technical/common/save_load/get_slots
 
-data modify storage worldtool:storage Processes[0].BackupSlots set from storage worldtool:storage Temp.BackupSlots
+data modify storage worldtool:storage Processes[0].Input.BackupSlots set from storage worldtool:storage Temp.BackupSlots
 
 tag @s remove wt.setup.save_area

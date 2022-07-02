@@ -18,7 +18,7 @@ execute if score #temp worldtool >= #temp2 worldtool run function worldtool:tech
 execute if score #temp worldtool >= #temp2 worldtool run data remove storage rx.playerdb:io player.data.WorldTool.History[0]
 
 data modify storage rx.playerdb:io player.data.WorldTool.Current set value {Pos:[0d,0d,0d],TemplateList:[]}
-data modify storage rx.playerdb:io player.data.WorldTool.Current.TemplateList set from storage worldtool:storage Processes[-1].Output
+data modify storage rx.playerdb:io player.data.WorldTool.Current.TemplateList set from storage worldtool:storage Processes[-1].Output.TemplateList
 
 execute store result storage rx.playerdb:io player.data.WorldTool.Current.Pos[0] double 1 run scoreboard players get #pos1xo worldtool
 execute store result storage rx.playerdb:io player.data.WorldTool.Current.Pos[1] double 1 run scoreboard players get #pos1yo worldtool
