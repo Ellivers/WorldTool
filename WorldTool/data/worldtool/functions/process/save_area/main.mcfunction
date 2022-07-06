@@ -32,7 +32,7 @@ scoreboard players operation #sizeX worldtool < $templateSizeLimit worldtool
 scoreboard players operation #sizeY worldtool < $templateSizeLimit worldtool
 scoreboard players operation #sizeZ worldtool < $templateSizeLimit worldtool
 
-setblock ~-1 ~-1 ~-1 minecraft:structure_block{mode:"SAVE",ignoreEntities:1b}
+setblock ~-1 ~-1 ~-1 minecraft:structure_block{mode:"SAVE",ignoreEntities:1b,author:"worldtool:save_area"}
 data modify block ~-1 ~-1 ~-1 name set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 data modify block ~-1 ~-1 ~-1 posX set value 1
 data modify block ~-1 ~-1 ~-1 posY set value 1
@@ -40,7 +40,9 @@ data modify block ~-1 ~-1 ~-1 posZ set value 1
 execute store result block ~-1 ~-1 ~-1 sizeX int 1 run scoreboard players get #sizeX worldtool
 execute store result block ~-1 ~-1 ~-1 sizeY int 1 run scoreboard players get #sizeY worldtool
 execute store result block ~-1 ~-1 ~-1 sizeZ int 1 run scoreboard players get #sizeZ worldtool
+
 setblock ~-1 ~-2 ~-1 minecraft:redstone_block
+execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:save_area"} run setblock ~-1 ~-2 ~-1 minecraft:air
 
 clone 27451 1 19 27451 1 19 ~-1 ~-1 ~-1
 clone 27449 1 19 27449 1 19 ~-1 ~-2 ~-1
