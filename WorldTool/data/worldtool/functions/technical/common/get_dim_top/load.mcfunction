@@ -1,4 +1,3 @@
-# Called by various functions
 # Finds the highest block in the current dimension
 
 function worldtool:technical/common/is_inside_world

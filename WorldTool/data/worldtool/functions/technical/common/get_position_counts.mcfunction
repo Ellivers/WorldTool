@@ -1,4 +1,3 @@
-# Called by various functions
 # Gets the counts of positions 1 and 2
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

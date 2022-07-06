@@ -13,4 +13,4 @@ execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_gen
 
 function #worldtool:addon/use_tool/ray_hit/general
 
-execute if score #success worldtool matches 0 run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
+execute if score #success worldtool matches 0 run function worldtool:ui_general/reset_tool

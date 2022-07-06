@@ -1,4 +1,4 @@
-# Called recursively and by various functions
+# Called recursively
 # Adds backup slots to the available slots list
 
 data modify storage worldtool:storage AvailableBackupSlots append from storage worldtool:storage Temp.TemplateList[0].Slot

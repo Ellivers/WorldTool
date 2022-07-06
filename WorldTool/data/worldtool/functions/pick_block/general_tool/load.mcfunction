@@ -14,6 +14,6 @@ execute if entity @s[tag=wt.pick_block.secondary] as @e[type=minecraft:marker,ta
 tag @s remove wt.pick_block.primary
 tag @s remove wt.pick_block.secondary
 
-item modify entity @s weapon.mainhand worldtool:general_tool/pos1
+function worldtool:ui_general/reset_tool
 
 function worldtool:ui/sound.change_item

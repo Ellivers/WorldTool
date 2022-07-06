@@ -2,5 +2,5 @@
 
 scoreboard players set #success worldtool 1
 
-item modify entity @s weapon.mainhand worldtool:general_tool/pos1
+function worldtool:ui_general/reset_tool
 function worldtool:ui_general/clone/start

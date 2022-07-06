@@ -1,4 +1,3 @@
-# Called by various functions
 # Checks if the position is inside the world
 
 scoreboard players set #success worldtool 0

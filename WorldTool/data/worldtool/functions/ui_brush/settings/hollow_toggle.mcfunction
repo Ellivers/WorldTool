@@ -1,6 +1,8 @@
 # Called by worldtool:ui_brush/menu
 # Toggles the hollow setting
 
+function worldtool:ui_brush/check_tool
+
 execute if predicate worldtool:brush_tool/settings/hollow run tag @s add wt.temp
 execute if predicate worldtool:brush_tool/settings/hollow run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/hollow/off
 execute if entity @s[tag=!wt.temp,predicate=!worldtool:brush_tool/settings/hollow] run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/hollow/on

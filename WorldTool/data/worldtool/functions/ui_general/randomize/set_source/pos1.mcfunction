@@ -1,12 +1,15 @@
 # Called by worldtool:ui_general/randomize/menu and worldtool:ui_general/randomize/set_source/pos2
 # Prompts the user to select a source for the randomization
 
-execute unless predicate worldtool:tools/general/sourcepos run function worldtool:ui/sound.change_item
-item modify entity @s weapon.mainhand worldtool:general_tool/sourcepos
-
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 tag @s add wt.menu.randomize.set_source.pos1
+
+tag @s add wt.go_back
+function worldtool:ui_general/check_tool
+
+execute unless predicate worldtool:tools/general/sourcepos run function worldtool:ui/sound.change_item
+item modify entity @s weapon.mainhand worldtool:general_tool/sourcepos
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 

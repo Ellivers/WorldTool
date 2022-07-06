@@ -1,0 +1,19 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{WorldTool:{Brush:\"circle\",BrushSettings:{Requires:[\"block\"],MaxSize:25}}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"info.selected_brush.circle\"","storage": "worldtool:storage","color": "yellow","italic": false},
+            {"nbt":"Translation.\"lore.brush.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
+            {"nbt":"SelectedItem.tag.WorldTool.PrimaryBlock.State.Name", "entity": "@s","italic": false},
+            "",
+            {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

@@ -1,7 +1,7 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{Brush:\"replace\"}}"
+        "tag": "{WorldTool:{Brush:\"replace\",BrushSettings:{Requires:[\"block\",\"area\"],MaxSize:39}}}"
     },
     {
         "function": "minecraft:set_lore",

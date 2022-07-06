@@ -1,4 +1,4 @@
-# Called recursively and by various functions
+# Called recursively
 # Gets the backup slots to use for the save process
 
 scoreboard players add #temp worldtool 1

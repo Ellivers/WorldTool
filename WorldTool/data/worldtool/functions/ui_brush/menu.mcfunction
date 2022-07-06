@@ -15,18 +15,18 @@ execute if predicate worldtool:brush_tool/brushes/sphere run tag @s add wt.brush
 execute if predicate worldtool:brush_tool/brushes/structure run tag @s add wt.brush.structure
 
 # # Set the brush size to valid values
-execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.MaxBrushSize
-execute store result score #temp2 worldtool run data get entity @s SelectedItem.tag.WorldTool.MinBrushSize
+execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.MaxSize
+execute store result score #temp2 worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.MinSize
 
-execute unless score #temp worldtool matches 0 unless score #temp2 worldtool matches 0 if score @s wt.brush_size > #temp worldtool run scoreboard players operation @s wt.brush_size = #temp2 worldtool
-execute unless score #temp worldtool matches 0 unless score #temp2 worldtool matches 0 if score @s wt.brush_size < #temp2 worldtool run scoreboard players operation @s wt.brush_size = #temp worldtool
+execute unless score #temp worldtool matches 0 unless score #temp2 worldtool matches 0 if score @s wt.brush_size > #temp worldtool run scoreboard players operation @s wt.brush_size = #temp worldtool
+execute unless score #temp worldtool matches 0 unless score #temp2 worldtool matches 0 if score @s wt.brush_size < #temp2 worldtool run scoreboard players operation @s wt.brush_size = #temp2 worldtool
 
 # Add tags that decide whether something is displayed or not
 execute if entity @s[tag=!wt.brush.structure] run tag @s add wt.setting.brush_size
 execute if entity @s[tag=wt.brush.sphere] run tag @s add wt.setting.hollow
 execute if entity @s[tag=wt.brush.place] run tag @s add wt.setting.overwrite
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure
-execute unless entity @s[tag=!wt.brush.circle,tag=!wt.brush.place,tag=!wt.brush.structure] run tag @s add wt.setting.before_block
+execute unless entity @s[tag=!wt.brush.circle,tag=!wt.brush.place,tag=!wt.brush.sphere,tag=!wt.brush.structure] run tag @s add wt.setting.before_block
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_rotation
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_mirror
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_offset

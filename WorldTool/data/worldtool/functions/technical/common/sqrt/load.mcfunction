@@ -1,4 +1,3 @@
-# Called by various functions
 # Calculates the square root. Made by Dominexis
 
 # Initialize values

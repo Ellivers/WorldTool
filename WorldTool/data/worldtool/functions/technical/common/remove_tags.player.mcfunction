@@ -1,4 +1,3 @@
-# Called by various functions
 # Removes all player tags
 
 function worldtool:ui/remove_menu_tags

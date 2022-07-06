@@ -1,0 +1,19 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{WorldTool:{Brush:\"structure\",BrushSettings:{Requires:[]}}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"info.selected_brush.structure\"","storage": "worldtool:storage","color": "yellow","italic": false},
+            {"nbt":"Translation.\"lore.brush.selected_structure\"","storage": "worldtool:storage","color": "light_purple","italic": false},
+            {"nbt":"SelectedItem.tag.WorldTool.SelectedTemplate.Name", "entity": "@s","italic": false},
+            "",
+            {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

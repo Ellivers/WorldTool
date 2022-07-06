@@ -1,3 +1,5 @@
+# Gets the position of the executing entity and sets temporary scores for position 2
+
 data modify storage worldtool:storage Temp.Pos set from entity @s Pos
 execute store result score #pos2xt worldtool run data get storage worldtool:storage Temp.Pos[0]
 execute store result score #pos2yt worldtool run data get storage worldtool:storage Temp.Pos[1]

@@ -1,4 +1,3 @@
-# Called by various functions
 # Checks if the executing entity owns the current process
 
 scoreboard players set #success worldtool 0
