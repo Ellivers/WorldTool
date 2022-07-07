@@ -16,7 +16,7 @@ execute if score @s wt.brush_size matches 23 run setblock ~ ~ ~ minecraft:struct
 execute if score @s wt.brush_size matches 25.. run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",author:"worldtool:sphere",name:"worldtool:spheres/25",posX:-12,posY:-12,posZ:-12}
 
 # Some annoying block update stuff
-execute unless score @s wt.brush_size matches ..1 run setblock ~ ~1 ~ minecraft:redstone_block
-execute unless score @s wt.brush_size matches ..1 if block ~ ~ ~ minecraft:structure_block{author:"worldtool:sphere"} run setblock ~ ~1 ~ minecraft:air
+execute unless score @s wt.brush_size matches ..1 run setblock ~ ~1 ~ minecraft:air
+execute unless score @s wt.brush_size matches ..1 if block ~ ~ ~ minecraft:structure_block{author:"worldtool:sphere"} run setblock ~ ~1 ~ minecraft:redstone_block
 
 execute unless score @s wt.brush_size matches ..1 if predicate worldtool:brush_tool/settings/hollow run function worldtool:use_brush/start/shapes/sphere_hollow

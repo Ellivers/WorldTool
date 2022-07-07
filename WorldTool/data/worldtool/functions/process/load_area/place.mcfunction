@@ -6,8 +6,8 @@ execute unless score #block2Placed worldtool matches 1 store success score #bloc
 setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",posY:0,author:"worldtool:load_area",ignoreEntities:1b}
 data modify block ~ ~ ~ name set from storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[0].Slot
 
-setblock ~ ~-1 ~ minecraft:redstone_block
-execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} run setblock ~ ~-1 ~ minecraft:air
+setblock ~ ~-1 ~ minecraft:air
+execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} run setblock ~ ~-1 ~ minecraft:redstone_block
 
 clone 27449 1 19 27449 1 19 ~ ~-1 ~
 

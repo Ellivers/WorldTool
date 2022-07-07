@@ -44,8 +44,8 @@ execute if score @s wt.brush_size matches 25.. if score #temp.Z worldtool matche
 execute unless score @s wt.brush_size matches ..1 if score #temp.Y worldtool matches 1 run clone ~ ~1 ~ ~ ~1 ~ 27449 1 19
 
 # Some annoying block update stuff
-execute unless score @s wt.brush_size matches ..1 run setblock ~ ~1 ~ minecraft:redstone_block
-execute unless score @s wt.brush_size matches ..1 if block ~ ~ ~ minecraft:structure_block{author:"worldtool:circle"} run setblock ~ ~1 ~ minecraft:air
+execute unless score @s wt.brush_size matches ..1 run setblock ~ ~1 ~ minecraft:air
+execute unless score @s wt.brush_size matches ..1 if block ~ ~ ~ minecraft:structure_block{author:"worldtool:circle"} run setblock ~ ~1 ~ minecraft:redstone_block
 
 
 execute unless score @s wt.brush_size matches ..1 if score #temp.Y worldtool matches 1 run clone 27449 1 19 27449 1 19 ~ ~1 ~
