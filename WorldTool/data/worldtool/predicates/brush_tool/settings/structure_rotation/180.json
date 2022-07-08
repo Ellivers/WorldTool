@@ -5,7 +5,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{WorldTool:{BrushSettings:{StructureRot:\"CLOCKWISE_90\"}}}"
+                "nbt": "{WorldTool:{BrushSettings:{StructureRotation:\"CLOCKWISE_180\"}}}"
             }
         }
     }

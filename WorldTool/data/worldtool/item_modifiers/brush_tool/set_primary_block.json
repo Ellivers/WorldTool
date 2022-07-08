@@ -25,5 +25,19 @@
       ],
       "entity": "this",
       "replace": true
+  },
+  {
+    "function": "copy_nbt",
+    "source": {
+      "type":"minecraft:context",
+      "target": "this"
+    },
+    "ops": [
+      {
+        "op": "replace",
+        "source": "SelectedItem.tag.display.Lore[0]",
+        "target": "display.Lore[0]"
+      }
+    ]
   }
 ]

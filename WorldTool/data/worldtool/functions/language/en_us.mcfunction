@@ -36,6 +36,7 @@ data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
+data modify storage worldtool:storage Translation."lore.selected_structure" set value "Selected structure:"
 
 # Progress bar
 data modify storage worldtool:storage Translation."progress.default" set value "WorldTool Progress"
@@ -103,6 +104,7 @@ data modify storage worldtool:storage Translation."error.template_not_found" set
 data modify storage worldtool:storage Translation."error.not_holding_general_tool" set value "Error: Please hold the General Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.not_holding_shape_tool" set value "Error: Please hold the Shape Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.not_holding_brush_tool" set value "Error: Please hold the Brush Tool in your main hand before doing this"
+data modify storage worldtool:storage Translation."error.invalid_structure" set value "Error: Invalid structure name"
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -436,6 +438,8 @@ data modify storage worldtool:storage Translation."button.brush.replace_block.na
 data modify storage worldtool:storage Translation."button.brush.replace_block.description" set value "Select a new block to replace"
 data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]  "
 data modify storage worldtool:storage Translation."button.brush.select_structure.description" set value "Select a new structure to place"
+data modify storage worldtool:storage Translation."button.select_structure.name" set value "<Select a Structure to Place>"
+data modify storage worldtool:storage Translation."info.selected_structure" set value "Selected Structure: "
 
 data modify storage worldtool:storage Translation."info.selected_brush.none" set value "Selected brush: None"
 data modify storage worldtool:storage Translation."info.selected_brush.paint" set value "Selected brush: Paint"
@@ -479,18 +483,32 @@ data modify storage worldtool:storage Translation."button.brush.overwrite_blocks
 data modify storage worldtool:storage Translation."button.brush.before_block.on" set value "[Placement: On Block]"
 data modify storage worldtool:storage Translation."button.brush.before_block.off" set value "[Placement: In Block]"
 data modify storage worldtool:storage Translation."button.brush.before_block.description" set value "Toggle between centering the brush placement inside or outside the targetted block"
-data modify storage worldtool:storage Translation."label.brush.structure_rotation.nam" set value "Structure Rotation: "
+data modify storage worldtool:storage Translation."label.brush.structure_rotation.name" set value "Structure Rotation: "
 data modify storage worldtool:storage Translation."label.brush.structure_rotation.description" set value "Choose the structure's Y rotation"
+data modify storage worldtool:storage Translation."info.brush.structure_rotation" set value '[{"score":{"name":"#structureRotation","objective":"worldtool"}},"°"]'
 data modify storage worldtool:storage Translation."label.brush.structure_mirror.name" set value "Structure Mirror: "
 data modify storage worldtool:storage Translation."label.brush.structure_mirror.description" set value "Choose how to mirror the structure"
+data modify storage worldtool:storage Translation."structure_mirror.none" set value "None"
+data modify storage worldtool:storage Translation."structure_mirror.front_back" set value "Front↔Back"
+data modify storage worldtool:storage Translation."structure_mirror.left_right" set value "Left↔Right"
 data modify storage worldtool:storage Translation."button.brush.structure_offset.name" set value "[Structure Offset...]"
 data modify storage worldtool:storage Translation."button.brush.structure_offset.description" set value "Change the structure's relative position"
+data modify storage worldtool:storage Translation."info.brush.structure_offset" set value '["X: ", {"score":{"name":"#offsetX","objective":"worldtool"}}," Y: ", {"score":{"name":"#offsetY","objective":"worldtool"}}," Z: ", {"score":{"name":"#offsetZ","objective":"worldtool"}}]'
+data modify storage worldtool:storage Translation."button.brush.structure_offset.negative_x.description" set value "Move the structure offset towards the negative X direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.positive_x.description" set value "Move the structure offset towards the positive X direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.negative_y.description" set value "Move the structure offset towards the negative Y direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.positive_y.description" set value "Move the structure offset towards the positive Y direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.negative_z.description" set value "Move the structure offset towards the negative Z direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.positive_z.description" set value "Move the structure offset towards the positive Z direction"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.reset.description" set value "Reset the structure offset values to 0"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.set_offset.name" set value "<Set Structure Offset>"
+data modify storage worldtool:storage Translation."button.brush.structure_offset.set_offset.description" set value "Input the structure offset values manually"
 data modify storage worldtool:storage Translation."button.brush.flat.on" set value "[Flat: On]"
 data modify storage worldtool:storage Translation."button.brush.flat.off" set value "[Flat: Off]"
 data modify storage worldtool:storage Translation."button.brush.flat.description" set value "Toggle between a cube shape (default) and a square shape"
 data modify storage worldtool:storage Translation."label.brush.axis.name" set value "Axis: "
 data modify storage worldtool:storage Translation."label.brush.axis.description" set value "Choose which axis to place the shape on"
-data modify storage worldtool:storage Translation."value.brush.axis.auto" set value "Auto"
+data modify storage worldtool:storage Translation."axis.brush.auto" set value "Auto"
 data modify storage worldtool:storage Translation."button.brush.update_block.on" set value "[Update Block: On]"
 data modify storage worldtool:storage Translation."button.brush.update_block.off" set value "[Update Block: Off]"
 data modify storage worldtool:storage Translation."button.brush.update_block.description" set value "Update the process block every time the brush is used (recommended)"

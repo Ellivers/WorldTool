@@ -1,6 +1,8 @@
 # Called by worldtool:ui_brush/main
 # Here, you choose normal mode or exclude mode
 
+function worldtool:ui_brush/check_tool
+
 tag @s remove wt.allow_input
 tag @s remove wt.brush.replace.normal
 tag @s remove wt.brush.replace.exclude

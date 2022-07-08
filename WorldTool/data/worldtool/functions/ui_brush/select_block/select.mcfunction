@@ -1,6 +1,8 @@
 # Called by worldtool:ui_brush/menu
 # Menu for selecting a brush block
 
+function worldtool:ui_brush/check_tool
+
 function worldtool:ui/clear_chat
 function worldtool:ui_brush/back_button
 

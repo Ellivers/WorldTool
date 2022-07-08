@@ -24,6 +24,10 @@ execute if predicate worldtool:brush_tool/brushes/circle run tellraw @s {"nbt":"
 execute unless predicate worldtool:brush_tool/brushes/sphere run tellraw @s {"nbt":"Translation.\"button.brush.sphere.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.sphere.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/sphere"}}
 execute if predicate worldtool:brush_tool/brushes/sphere run tellraw @s {"nbt":"Translation.\"button.brush.sphere.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
+# Structure brush
+execute unless predicate worldtool:brush_tool/brushes/structure run tellraw @s {"nbt":"Translation.\"button.brush.structure.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.structure.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/structure"}}
+execute if predicate worldtool:brush_tool/brushes/structure run tellraw @s {"nbt":"Translation.\"button.brush.structure.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
+
 function #worldtool:addon/ui_brush/brush_list
 
 function worldtool:ui/anti_feedback_chat_message/load
