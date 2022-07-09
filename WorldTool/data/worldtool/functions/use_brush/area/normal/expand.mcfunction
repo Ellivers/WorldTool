@@ -9,4 +9,4 @@ scoreboard players add #offset2x worldtool 1
 scoreboard players add #offset2y worldtool 1
 scoreboard players add #offset2z worldtool 1
 
-execute if score #temp3 worldtool < @s wt.brush_size run function worldtool:use_brush/area/normal/expand
+execute if score #temp3 worldtool < #brushSize_temp worldtool run function worldtool:use_brush/area/normal/expand

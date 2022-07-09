@@ -10,4 +10,4 @@ execute if score #temp.X worldtool matches 0 run scoreboard players add #offset2
 execute if score #temp.Y worldtool matches 0 run scoreboard players add #offset2y worldtool 1
 execute if score #temp.Z worldtool matches 0 run scoreboard players add #offset2z worldtool 1
 
-execute if score #temp3 worldtool < @s wt.brush_size run function worldtool:use_brush/area/flat/expand
+execute if score #temp3 worldtool < #brushSize_temp worldtool run function worldtool:use_brush/area/flat/expand

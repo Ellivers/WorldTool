@@ -2,7 +2,7 @@
 
 scoreboard players set #success worldtool 0
 
-scoreboard players operation #radius worldtool = @s wt.brush_size
+execute store result score #radius worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.Size
 scoreboard players operation #radius worldtool /= #2 worldtool
 
 execute if predicate worldtool:brush_tool/brushes/paint run function worldtool:use_brush/start/normal/setup_process/paint

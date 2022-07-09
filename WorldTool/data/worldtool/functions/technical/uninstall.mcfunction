@@ -11,7 +11,6 @@ scoreboard objectives remove worldtool
 scoreboard objectives remove wt.use_coas
 scoreboard objectives remove wt.drop_coas
 scoreboard objectives remove wt.ID
-scoreboard objectives remove wt.brush_size
 scoreboard objectives remove wt.chance
 scoreboard objectives remove wt.diameter
 scoreboard objectives remove wt.length

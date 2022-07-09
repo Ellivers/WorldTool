@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Droppable:1b,Brush:\"none\",BrushSettings:{UpdateBlock:1b,MinSize:1,MaxSize:39},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Droppable:1b,Brush:\"none\",BrushSettings:{UpdateBlock:1b,MinSize:1,MaxSize:39,Size:1},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
                         },
                         {
                             "function": "minecraft:set_name",
