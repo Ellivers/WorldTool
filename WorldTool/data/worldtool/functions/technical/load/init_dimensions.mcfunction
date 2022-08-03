@@ -1,5 +1,5 @@
 # Called by worldtool:load
-# Sets base blocks for all of Minecraft's default dimensions, plus potentially some other ones
+# Sets base blocks for all of Minecraft's default dimensions
 
 execute in minecraft:overworld run function worldtool:technical/load/set_base_blocks
 execute in minecraft:the_nether run function worldtool:technical/load/set_base_blocks

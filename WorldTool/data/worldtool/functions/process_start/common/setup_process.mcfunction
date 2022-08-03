@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 0
 
-execute if entity @s[tag=wt.setup.fill] run function worldtool:ui_general/fill_setup_process
+execute if entity @s[tag=wt.setup.fill] run function worldtool:ui_general/fill/setup_process
 execute if entity @s[tag=wt.setup.replace] run function worldtool:ui_general/replace/setup_process
 execute if entity @s[tag=wt.setup.filter_measure] run function worldtool:ui_general/measure/filter_setup_process
 execute if entity @s[tag=wt.setup.clone] run function worldtool:ui_general/clone/setup_process

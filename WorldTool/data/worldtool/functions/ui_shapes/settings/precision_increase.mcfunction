@@ -1,7 +1,25 @@
-# Called by worldtool:ui_shapes/main
-# Increases the precision by 10
+# Called by worldtool:ui_shapes/menu
+# Increases the precision by 1
 
-scoreboard players add @s wt.precision 10
-execute if score @s wt.precision matches 301.. run scoreboard players set @s wt.precision 10
+function worldtool:ui_shapes/check_tool
 
-function worldtool:ui_shapes/main
+execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.ShapeSettings.Precision
+
+scoreboard players add #temp worldtool 1
+
+execute if score #temp worldtool matches 7 run scoreboard players set #temp worldtool 8
+execute if score #temp worldtool matches 11 run scoreboard players set #temp worldtool 12
+execute if score #temp worldtool matches 13..14 run scoreboard players set #temp worldtool 15
+execute if score #temp worldtool matches 17 run scoreboard players set #temp worldtool 18
+execute if score #temp worldtool matches 19 run scoreboard players set #temp worldtool 20
+execute if score #temp worldtool matches 21..23 run scoreboard players set #temp worldtool 24
+execute if score #temp worldtool matches 26..29 run scoreboard players set #temp worldtool 30
+execute if score #temp worldtool matches 31 run scoreboard players set #temp worldtool 32
+execute if score #temp worldtool matches 33.. run scoreboard players set #temp worldtool 36
+
+execute if score #temp worldtool matches -1..0 run scoreboard players set #temp worldtool 1
+
+execute store result storage worldtool:storage Temp.Precision int 1 run scoreboard players get #temp worldtool
+item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_precision
+
+function worldtool:ui_shapes/menu

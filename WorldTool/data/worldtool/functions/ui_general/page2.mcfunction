@@ -7,6 +7,6 @@ tellraw @s ["",{"nbt":"Translation.\"button.checkered.name\"","storage": "worldt
 
 function worldtool:ui/close_button
 
-tellraw @s ["\n",{"nbt":"Translation.\"button.left.name\"","storage": "worldtool:storage","bold": true,"color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.previous_page.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/page1"}},{"nbt":"Translation.\"label.page\"","storage": "worldtool:storage"},"2"]
+tellraw @s ["\n",{"nbt":"Translation.\"label.page\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.left.name\"","storage": "worldtool:storage","bold": true,"color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.previous_page.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/page1"}},"2"]
 
 function worldtool:ui/anti_feedback_chat_message/load

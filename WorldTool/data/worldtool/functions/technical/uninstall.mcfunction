@@ -35,4 +35,4 @@ tellraw @a[tag=wt.user] {"nbt":"Translation.\"info.uninstall\"","storage": "worl
 
 execute as @a run function worldtool:technical/common/remove_tags.player
 
-data remove storage worldtool:storage {}
+data modify storage worldtool:storage {} set value {}

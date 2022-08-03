@@ -38,15 +38,15 @@ scoreboard objectives add wt.pos2x dummy
 scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
 
+# Set the current version
+scoreboard players set $version worldtool 4
+
 # Default language
-# Move langugae reloading to worldtool:technical/upgrade_version in future releases
-# Remove the following line this release
+# Copy langugae reloading to worldtool:technical/upgrade_version in future releases
+# Change the following line this release to default to false
 execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 1
 execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
-
-# Set the current version
-scoreboard players set $version worldtool 4
 
 ## Default blocks per tick ##
 function worldtool:technical/load/setup_blocks_per_tick
@@ -104,8 +104,8 @@ execute unless score #rng worldtool = #rng worldtool store result score #rng wor
 function worldtool:technical/load/set_backup_slots
 
 execute store result score #temp worldtool if data storage rx.playerdb:main players[]
-execute if score #temp worldtool matches 1 store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
-execute if score #temp worldtool matches 1 run function worldtool:technical/load/remove_player_data
+execute if score #temp worldtool matches 1.. store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
+execute if score #temp worldtool matches 1.. run function worldtool:technical/load/remove_player_data
 
 execute as @a unless entity @s[tag=!wt.menu.options,tag=!wt.menu.paste_area,tag=!wt.menu.select_paste_pos] run function worldtool:ui_general/options/menu
 
@@ -119,7 +119,6 @@ scoreboard players set $shapeToolAddons worldtool 0
 scoreboard players set $settingAddons worldtool 0
 scoreboard players set $optionAddons worldtool 0
 scoreboard players set $greeneryAddons worldtool 0
-scoreboard players set $blocksPerTickAddons worldtool 0
 function #worldtool:addon/load
 
 # Forceload for access to storing blocks at 27450 19

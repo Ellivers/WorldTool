@@ -10,7 +10,7 @@ data modify storage worldtool:storage Translation."item.general.pos1" set value 
 data modify storage worldtool:storage Translation."item.general.pos2" set value "Set Position 2"
 data modify storage worldtool:storage Translation."lore.general.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.general.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
-data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"text":"Sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
 data modify storage worldtool:storage Translation."lore.general.sourcepos" set value '["",{"keybind":"key.use","color":"gold"}," to set a corner position"]'
@@ -21,7 +21,6 @@ data modify storage worldtool:storage Translation."item.general.pick_block" set 
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
 data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
 data modify storage worldtool:storage Translation."lore.brush.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
-data modify storage worldtool:storage Translation."item.shapes" set value "Shape Generation Tool"
 
 data modify storage worldtool:storage Translation."lore.selected_brush.none" set value "Selected brush: None"
 data modify storage worldtool:storage Translation."lore.selected_brush.paint" set value "Selected brush: Paint"
@@ -56,6 +55,10 @@ data modify storage worldtool:storage Translation."process.brush.paint" set valu
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
 data modify storage worldtool:storage Translation."process.brush.replace" set value "Replace"
 
+data modify storage worldtool:storage Translation."process.shape.cylinder" set value "Generate Cylinder"
+data modify storage worldtool:storage Translation."process.shape.sphere" set value "Generate Sphere"
+data modify storage worldtool:storage Translation."process.shape.cone" set value "Generate Cone"
+
 data modify storage worldtool:storage Translation."label.process.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.process.replace" set value "Replace: "
 data modify storage worldtool:storage Translation."label.process.filter_measure" set value "Measure (Filter): "
@@ -82,10 +85,11 @@ data modify storage worldtool:storage Translation."info.select_clone_destination
 data modify storage worldtool:storage Translation."info.wait" set value "Please wait..."
 data modify storage worldtool:storage Translation."info.writer_found" set value "The process entity has been found"
 data modify storage worldtool:storage Translation."info.select_paste_pos" set value "Select a position to paste to"
-data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are only for the General Tool and Shape Tool and are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire modified area, not just the parts that were changed."
+data modify storage worldtool:storage Translation."info.enable_backups" set value "Note: Backups are only for the General Tool and Shape Generation Tool and are ONLY made when an area is changed using WorldTool. Undoing/redoing affects the entire modified area, not just the parts that were changed."
 data modify storage worldtool:storage Translation."info.selected_block" set value "Selected block: "
 data modify storage worldtool:storage Translation."info.selected_replace_block.normal" set value "Selected block to replace: "
 data modify storage worldtool:storage Translation."info.selected_replace_block.exclude" set value "Selected block to exclude: "
+data modify storage worldtool:storage Translation."info.item_position" set value "In order to open this menu, you must be holding the item in your hand."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -102,9 +106,10 @@ data modify storage worldtool:storage Translation."error.no_process_selected" se
 data modify storage worldtool:storage Translation."error.writer_not_found" set value "Error: The process entity could not be found. It may have been killed or been unloaded. The process will resume when the entity is found again."
 data modify storage worldtool:storage Translation."error.template_not_found" set value "Error: The area could not be loaded due to a missing template (structure)"
 data modify storage worldtool:storage Translation."error.not_holding_general_tool" set value "Error: Please hold the General Tool in your main hand before doing this"
-data modify storage worldtool:storage Translation."error.not_holding_shape_tool" set value "Error: Please hold the Shape Tool in your main hand before doing this"
-data modify storage worldtool:storage Translation."error.not_holding_brush_tool" set value "Error: Please hold the Brush Tool in your main hand before doing this"
+data modify storage worldtool:storage Translation."error.not_holding_shape_tool" set value "Error: Please hold a Shape Generation Tool in your main hand before doing this"
+data modify storage worldtool:storage Translation."error.not_holding_brush_tool" set value "Error: Please hold a Brush Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.invalid_structure" set value "Error: Invalid structure name"
+data modify storage worldtool:storage Translation."error.shape_position_duplicates" set value "Error: You appear to have duplicate positions set. Try setting a shape position again."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -212,6 +217,7 @@ data modify storage worldtool:storage Translation."button.reset_all.description"
 data modify storage worldtool:storage Translation."axis.x" set value "X"
 data modify storage worldtool:storage Translation."axis.y" set value "Y"
 data modify storage worldtool:storage Translation."axis.z" set value "Z"
+data modify storage worldtool:storage Translation."prefix.fraction" set value "1/"
 
 
 ## Menus and processes ##
@@ -236,7 +242,7 @@ data modify storage worldtool:storage Translation."button.paste_area.description
 data modify storage worldtool:storage Translation."button.undo.name" set value "[↩Undo]"
 data modify storage worldtool:storage Translation."button.undo.description" set value "Undo the last action"
 data modify storage worldtool:storage Translation."button.redo.name" set value "[Redo↪]"
-data modify storage worldtool:storage Translation."button.redo.description" set value "Redo the last action"
+data modify storage worldtool:storage Translation."button.redo.description" set value "Redo the last undone action"
 
 data modify storage worldtool:storage Translation."button.paste_area.current_pos.name" set value "[▶Paste at Position 1]"
 data modify storage worldtool:storage Translation."button.paste_area.current_pos.description" set value "Paste the clipboard at position 1"
@@ -406,7 +412,7 @@ data modify storage worldtool:storage Translation."button.checkered.start_with_b
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
-data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show helping particles around selected areas and clone destinations"
+data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show assisting particles"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
@@ -517,16 +523,39 @@ data modify storage worldtool:storage Translation."button.brush.update_block.des
 # Shape Generation Tool
 data modify storage worldtool:storage Translation."button.change_shape.name" set value "[Change...]"
 data modify storage worldtool:storage Translation."button.change_shape.description" set value "Select another shape to use"
+data modify storage worldtool:storage Translation."button.generate_shape.enabled.description" set value "Generate the selected shape"
+data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "Place a position marker in order to generate the shape"
+data modify storage worldtool:storage Translation."info.shape_position" set value '["Set shape generation position to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
 
-data modify storage worldtool:storage Translation."info.selected_shape.circle" set value "Selected shape: Circle"
 data modify storage worldtool:storage Translation."info.selected_shape.cone" set value "Selected shape: Cone"
 data modify storage worldtool:storage Translation."info.selected_shape.cylinder" set value "Selected shape: Cylinder"
 data modify storage worldtool:storage Translation."info.selected_shape.sphere" set value "Selected shape: Sphere"
+
+data modify storage worldtool:storage Translation."button.shape.cone.name" set value "[Cone]"
+data modify storage worldtool:storage Translation."button.shape.cone.description" set value "Select the cone shape"
+data modify storage worldtool:storage Translation."button.shape.cylinder.name" set value "[Cylinder]"
+data modify storage worldtool:storage Translation."button.shape.cylinder.description" set value "Select the cylinder shape"
+data modify storage worldtool:storage Translation."button.shape.sphere.name" set value "[Sphere]"
+data modify storage worldtool:storage Translation."button.shape.sphere.description" set value "Select the sphere shape"
+data modify storage worldtool:storage Translation."button.shape.already_selected.description" set value "This shape is already selected"
 
 # Shape settings
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
 data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"
 data modify storage worldtool:storage Translation."label.shapes.precision.name" set value "Precision: "
-data modify storage worldtool:storage Translation."label.shapes.precision.description" set value "How precisely shapes are drawn, with lowest being most precise. High precision is only useful for bigger shapes."
+data modify storage worldtool:storage Translation."label.shapes.precision.description" set value "How precisely shapes are drawn. High precision is only useful for bigger shapes."
+data modify storage worldtool:storage Translation."label.shapes.length.name" set value "Length: "
+data modify storage worldtool:storage Translation."label.shapes.length.description" set value "The shape's length in blocks"
+data modify storage worldtool:storage Translation."label.shapes.orientation.name" set value "Orientation: "
+data modify storage worldtool:storage Translation."label.shapes.orientation.description" set value "The way the shape is facing"
+data modify storage worldtool:storage Translation."label.shapes.degrees.name" set value "Degrees: "
+data modify storage worldtool:storage Translation."label.shapes.degrees.description" set value "How many degrees of a circle the shape is drawn. 360 degrees is a full circle."
+
+data modify storage worldtool:storage Translation."orientation.up" set value "Up"
+data modify storage worldtool:storage Translation."orientation.down" set value "Down"
+data modify storage worldtool:storage Translation."orientation.north" set value "North"
+data modify storage worldtool:storage Translation."orientation.south" set value "South"
+data modify storage worldtool:storage Translation."orientation.west" set value "West"
+data modify storage worldtool:storage Translation."orientation.east" set value "East"
 
 function #worldtool:addon/language/en_us

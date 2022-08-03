@@ -1,5 +1,9 @@
-# Called by worldtool:ui_shapes/main
-# Resets the precision back to 3
+# Called by worldtool:ui_shapes/menu
+# Resets the precision to the default value.
 
-scoreboard players set @s wt.precision 100
-function worldtool:ui_shapes/main
+function worldtool:ui_shapes/check_tool
+
+data modify storage worldtool:storage Temp.Precision set value 2
+item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_precision
+
+function worldtool:ui_shapes/menu
