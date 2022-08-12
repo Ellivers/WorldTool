@@ -6,6 +6,7 @@ execute as @a if score @s wt.ID = #ID_temp worldtool run tag @s add wt.shape_pre
 
 execute if entity @s[tag=wt.shape.cylinder.up] run function worldtool:particles/shape_preview/cylinder_up/load
 execute if entity @s[tag=wt.shape.cylinder.down] run function worldtool:particles/shape_preview/cylinder_down/load
+execute if entity @s[tag=wt.shape.cylinder.horizontal] run function worldtool:particles/shape_preview/cylinder_horizontal/load
 
 function #worldtool:addon/particles/shape_previews
 

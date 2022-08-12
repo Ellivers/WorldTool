@@ -550,6 +550,12 @@ data modify storage worldtool:storage Translation."label.shapes.orientation.name
 data modify storage worldtool:storage Translation."label.shapes.orientation.description" set value "The way the shape is facing"
 data modify storage worldtool:storage Translation."label.shapes.degrees.name" set value "Degrees: "
 data modify storage worldtool:storage Translation."label.shapes.degrees.description" set value "How many degrees of a circle the shape is drawn. 360 degrees is a full circle."
+data modify storage worldtool:storage Translation."label.shapes.x_rotation.name" set value "X Rotation: "
+data modify storage worldtool:storage Translation."label.shapes.x_rotation.description" set value "The shape's rotation around the X axis"
+data modify storage worldtool:storage Translation."label.shapes.y_rotation.name" set value "Y Rotation: "
+data modify storage worldtool:storage Translation."label.shapes.y_rotation.description" set value "The shape's rotation around the Y axis"
+data modify storage worldtool:storage Translation."label.shapes.z_rotation.name" set value "Z Rotation: "
+data modify storage worldtool:storage Translation."label.shapes.z_rotation.description" set value "The shape's rotation around the Z axis"
 
 data modify storage worldtool:storage Translation."orientation.up" set value "Up"
 data modify storage worldtool:storage Translation."orientation.down" set value "Down"

@@ -29,9 +29,9 @@ tp @s ~ ~ ~ 0 0
 execute if score #yRotEnabled worldtool matches 1 store result entity @s Rotation[0] float 1 run data get storage worldtool:storage Temp.ShapeTool.ShapeSettings.YRotation
 execute if score #xRotEnabled worldtool matches 1 store result entity @s Rotation[1] float 1 run data get storage worldtool:storage Temp.ShapeTool.ShapeSettings.XRotation
 
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} run tp @s ~ ~ ~ ~90 ~
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} run tp @s ~ ~ ~ ~-90 ~
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"east"} run tp @s ~ ~ ~ ~180 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
 
 execute if data storage worldtool:storage Temp.ShapeTool run tag @s add wt.particles
 scoreboard players add #positions_temp worldtool 1

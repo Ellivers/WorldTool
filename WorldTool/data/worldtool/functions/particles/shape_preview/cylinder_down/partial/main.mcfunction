@@ -10,5 +10,5 @@ execute at @s run function worldtool:particles/shape_preview/cylinder_down/parti
 
 tp ~ ~ ~
 
-scoreboard players set #temp worldtool 0
+scoreboard players set #temp3 worldtool 0
 function worldtool:particles/shape_preview/cylinder_down/partial/go_down
