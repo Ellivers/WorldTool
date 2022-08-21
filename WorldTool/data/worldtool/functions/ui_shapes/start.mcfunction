@@ -1,4 +1,9 @@
 # Called by worldtool:ui_shapes/menu
 # Starts the shape generation
 
+function worldtool:ui_shapes/check_tool
 
+function worldtool:use_shapes/load
+
+tag @s add wt.no_space
+function worldtool:ui/anti_feedback_chat_message/load

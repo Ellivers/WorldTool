@@ -110,6 +110,7 @@ data modify storage worldtool:storage Translation."error.not_holding_shape_tool"
 data modify storage worldtool:storage Translation."error.not_holding_brush_tool" set value "Error: Please hold a Brush Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.invalid_structure" set value "Error: Invalid structure name"
 data modify storage worldtool:storage Translation."error.shape_position_duplicates" set value "Error: You appear to have duplicate positions set. Try setting a shape position again."
+data modify storage worldtool:storage Translation."error.shape_position_missing" set value "Error: You appear to not have set a shape position. Please do so before running the generator."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -524,7 +525,7 @@ data modify storage worldtool:storage Translation."button.brush.update_block.des
 data modify storage worldtool:storage Translation."button.change_shape.name" set value "[Change...]"
 data modify storage worldtool:storage Translation."button.change_shape.description" set value "Select another shape to use"
 data modify storage worldtool:storage Translation."button.generate_shape.enabled.description" set value "Generate the selected shape"
-data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "Place a position marker in order to generate the shape"
+data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "Place a shape position in order to generate the shape"
 data modify storage worldtool:storage Translation."info.shape_position" set value '["Set shape generation position to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
 
 data modify storage worldtool:storage Translation."info.selected_shape.cone" set value "Selected shape: Cone"

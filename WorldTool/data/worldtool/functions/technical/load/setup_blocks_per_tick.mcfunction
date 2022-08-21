@@ -18,4 +18,8 @@ execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"world
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:place"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:place",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:replace_brush"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:replace_brush",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cylinder"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:cylinder",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cone"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:cone",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:sphere"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:sphere",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
+
 function #worldtool:addon/setup_blocks_per_tick

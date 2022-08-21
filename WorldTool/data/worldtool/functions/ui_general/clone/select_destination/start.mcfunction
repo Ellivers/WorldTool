@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/select_destination/copy and worldtool:ui_general/clone/select_destination/move
+# Called by worldtool:ui_general/clone/menu and worldtool:ui_general/clone/select_destination/move
 # Gives the clone destination tool and displays a nice little message
 
 function worldtool:ui_general/check_tool

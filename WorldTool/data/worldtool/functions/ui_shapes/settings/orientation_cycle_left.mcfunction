@@ -1,6 +1,8 @@
 # Called by worldtool:ui_shapes/menu
 # Cycles the shape orientation
 
+function worldtool:ui_shapes/check_tool
+
 tag @s[predicate=worldtool:shape_tool/settings/orientation/up] add wt.temp
 item modify entity @s[predicate=worldtool:shape_tool/settings/orientation/up] weapon.mainhand worldtool:shape_tool/settings/orientation/west
 item modify entity @s[predicate=worldtool:shape_tool/settings/orientation/down] weapon.mainhand worldtool:shape_tool/settings/orientation/up

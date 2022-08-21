@@ -12,10 +12,6 @@ scoreboard objectives remove wt.use_coas
 scoreboard objectives remove wt.drop_coas
 scoreboard objectives remove wt.ID
 scoreboard objectives remove wt.chance
-scoreboard objectives remove wt.diameter
-scoreboard objectives remove wt.length
-scoreboard objectives remove wt.precision
-scoreboard objectives remove wt.degrees
 scoreboard objectives remove wt.rotX
 scoreboard objectives remove wt.rotY
 scoreboard objectives remove wt.rotZ

@@ -13,6 +13,8 @@ scoreboard players set #totalBlocksChecked worldtool 0
 scoreboard players set #blocksChecked worldtool 0
 scoreboard players set #blocksPlaced worldtool 0
 
+scoreboard players set #shapeGenStatus worldtool 0
+
 execute store result score #blocksPerTick worldtool run data get storage worldtool:storage Processes[-1].BlocksPerTick
 execute unless score #blocksPerTick worldtool matches 2.. run scoreboard players set #blocksPerTick worldtool 2147483647
 

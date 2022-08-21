@@ -18,4 +18,6 @@ execute if entity @s[tag=wt.process.checkered] run function worldtool:process/ch
 execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/paint/main
 execute if entity @s[tag=wt.process.replace_brush] run function worldtool:process/brush/replace/main
 
+execute if entity @s[tag=wt.process.cylinder.vertical] run function worldtool:process/shapes/cylinder_vertical/load
+
 function #worldtool:addon/process/check_tags

@@ -1,5 +1,5 @@
-# Called by worldtool:use_brush/check and INSERT FUNCTION
-# Sets the process block to the one selected for the brush and shape tools
+# Called by worldtool:use_tool/update_block/from_item and worldtool:use_shapes/start
+# Sets the process block to the one selected for the brush and shape generation tools
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
@@ -11,16 +11,16 @@ execute if predicate worldtool:brush_tool/brushes/replace run tag @s add wt.bloc
 
 function #worldtool:addon/use_tool/update_block/add_tags
 
-data remove storage worldtool:storage Temp
+data remove storage worldtool:storage Temp.Block
 
-execute if entity @s[tag=wt.block.primary] run data modify storage worldtool:storage Temp.Block set from entity @s SelectedItem.tag.WorldTool.PrimaryBlock
+execute if entity @s[tag=wt.block.primary] run data modify storage worldtool:storage Temp.Block set from storage worldtool:storage Temp.Blocks.Primary
 execute if entity @s[tag=wt.block.primary] if data storage worldtool:storage Temp.Block.State{Name:"minecraft:air"} run setblock 27451 1 19 minecraft:air
 
 execute if entity @s[tag=wt.block.primary] run summon minecraft:falling_block 27451 1 19 {Time:-34,Tags:["worldtool","wt.update_block"]}
 execute if entity @s[tag=wt.block.primary] positioned 27451 1 19 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.update_block,sort=nearest,limit=1] BlockState set from storage worldtool:storage Temp.Block.State
 execute if entity @s[tag=wt.block.primary] if data storage worldtool:storage Temp.Block.Data positioned 27451 1 19 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.update_block,sort=nearest,limit=1] TileEntityData set from storage worldtool:storage Temp.Block.Data
 
-execute if entity @s[tag=wt.block.secondary] run data modify storage worldtool:storage Temp.Block set from entity @s SelectedItem.tag.WorldTool.SecondaryBlock
+execute if entity @s[tag=wt.block.secondary] run data modify storage worldtool:storage Temp.Block set from storage worldtool:storage Temp.Blocks.Secondary
 execute if entity @s[tag=wt.block.secondary] if data storage worldtool:storage Temp.Block.State{Name:"minecraft:air"} run setblock 27449 1 19 minecraft:air
 
 execute if entity @s[tag=wt.block.secondary] run summon minecraft:falling_block 27449 1 19 {Time:-34,Tags:["worldtool","wt.update_block"]}

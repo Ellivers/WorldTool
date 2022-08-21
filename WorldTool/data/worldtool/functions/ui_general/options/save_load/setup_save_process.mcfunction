@@ -3,10 +3,16 @@
 
 scoreboard players set #success worldtool 1
 
+scoreboard players operation #ID_temp worldtool = @s wt.ID
+
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',ID:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.read_only","wt.dont_reopen_menu"],Input:{BackupSlots:[]},Output:{TemplateList:[]}}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:save_area"}].Value
 
 function worldtool:process_start/common/set_process_values
+
+execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Temp.AffectedArea.From
+execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.2 set from storage worldtool:storage Temp.AffectedArea.To
+data remove storage worldtool:storage Temp.AffectedArea
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]

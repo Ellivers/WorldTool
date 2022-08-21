@@ -7,15 +7,14 @@ execute store result score #temp worldtool run data get entity @s SelectedItem.t
 
 scoreboard players add #temp worldtool 1
 
-execute if score #temp worldtool matches 7 run scoreboard players set #temp worldtool 8
-execute if score #temp worldtool matches 11 run scoreboard players set #temp worldtool 12
-execute if score #temp worldtool matches 13..14 run scoreboard players set #temp worldtool 15
-execute if score #temp worldtool matches 17 run scoreboard players set #temp worldtool 18
-execute if score #temp worldtool matches 19 run scoreboard players set #temp worldtool 20
-execute if score #temp worldtool matches 21..23 run scoreboard players set #temp worldtool 24
-execute if score #temp worldtool matches 26..29 run scoreboard players set #temp worldtool 30
-execute if score #temp worldtool matches 31 run scoreboard players set #temp worldtool 32
-execute if score #temp worldtool matches 33.. run scoreboard players set #temp worldtool 36
+execute if score #temp worldtool matches 3 run scoreboard players set #temp worldtool 4
+execute if score #temp worldtool matches 6..7 run scoreboard players set #temp worldtool 8
+execute if score #temp worldtool matches 9 run scoreboard players set #temp worldtool 10
+execute if score #temp worldtool matches 11..15 run scoreboard players set #temp worldtool 16
+execute if score #temp worldtool matches 17..19 run scoreboard players set #temp worldtool 20
+execute if score #temp worldtool matches 21..24 run scoreboard players set #temp worldtool 25
+execute if score #temp worldtool matches 26..31 run scoreboard players set #temp worldtool 32
+execute if score #temp worldtool matches 33.. run scoreboard players set #temp worldtool 40
 
 execute if score #temp worldtool matches -1..0 run scoreboard players set #temp worldtool 1
 

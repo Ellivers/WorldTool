@@ -1,25 +1,19 @@
-# Recursive function called by various functions
+# Called recursively and by worldtool:process/shapes/circle_horizontal/init
 # Rotates after each line has been drawn
 
-# Set scores
-scoreboard players set #generationRay worldtool 0
-scoreboard players operation #blocksChecked worldtool += #blocksPlaced worldtool
-scoreboard players set #blocksPlaced worldtool 0
+scoreboard players add #circleRotations worldtool 1
 
-# Get the current rotation
-execute unless score #axisTemp worldtool matches 1..2 store result score #currentRotX worldtool run data get entity @s Rotation[1] 100
-execute unless score #axisTemp worldtool matches 3..6 store result score #currentRotY worldtool run data get entity @s Rotation[0] 100
+scoreboard players operation #blocksChecked worldtool = #lineBlocksPlaced worldtool
+scoreboard players set #lineBlocksPlaced worldtool 0
 
-# Move with the selected precision
-execute unless score #axisTemp worldtool matches 1..2 run scoreboard players operation #currentRotX worldtool += #shapePrecision worldtool
-execute unless score #axisTemp worldtool matches 3..6 run scoreboard players operation #currentRotY worldtool += #shapePrecision worldtool
-execute unless score #axisTemp worldtool matches 1..2 store result entity @s Rotation[1] float 0.01 run scoreboard players get #currentRotX worldtool
-execute unless score #axisTemp worldtool matches 3..6 store result entity @s Rotation[0] float 0.01 run scoreboard players get #currentRotY worldtool
-scoreboard players operation #totalRotation worldtool += #shapePrecision worldtool
+execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/shapes/line/init
 
-# Make sure it hasn't rotated too far
-execute unless score #axisTemp worldtool matches 1..2 if score #totalRotation worldtool > #maxDegrees worldtool if score #currentRotX worldtool > #maxRotation worldtool run scoreboard players set #stopGenerating worldtool 1
-execute unless score #axisTemp worldtool matches 3..6 if score #totalRotation worldtool > #maxDegrees worldtool if score #currentRotY worldtool > #maxRotation worldtool run scoreboard players set #stopGenerating worldtool 1
+scoreboard players set #temp worldtool 1000000
+scoreboard players operation #temp worldtool *= #circleRotations worldtool
+scoreboard players operation #temp worldtool += #degreesPerRotation worldtool
+scoreboard players operation #temp worldtool += #baseRotation worldtool
+execute store result entity @s Rotation[0] float 0.000001 run scoreboard players get #temp worldtool
 
-execute if score #stopGenerating worldtool matches 1 run function worldtool:process/shapes/circle/stop
-execute unless score #stopGenerating worldtool matches 1 at @s run function worldtool:process/shapes/circle/raycast
+execute if score #temp worldtool matches 0 run say fuck
+
+execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool unless score #circleRotations worldtool >= #rotations worldtool run function worldtool:process/shapes/circle_horizontal/rotate
