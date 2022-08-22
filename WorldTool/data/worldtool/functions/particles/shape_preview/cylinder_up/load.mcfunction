@@ -7,7 +7,6 @@ particle minecraft:dust 0.671 0.161 0.875 1.5 ~ ~ ~ 0 .3 0 2 3 force @a[tag=wt.s
 
 execute store result score #degrees_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Degrees
 execute store result score #length_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Length
-scoreboard players remove #length_temp worldtool 1
 execute store result score #radius_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Diameter
 scoreboard players operation #radius_temp worldtool /= #2 worldtool
 

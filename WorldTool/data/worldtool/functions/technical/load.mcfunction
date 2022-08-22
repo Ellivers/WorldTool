@@ -62,6 +62,7 @@ execute unless score $enableBackups worldtool matches 0..1 run scoreboard player
 
 execute unless score $templateSizeLimit worldtool matches 1.. run scoreboard players set $templateSizeLimit worldtool 48
 execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard players set $maxRaycastingDistance worldtool 100
+execute unless score $playerdbAvailable worldtool matches 0..1 run scoreboard players set $playerdbAvailable worldtool 1
 
 ## Constants ##
 scoreboard players set #-1 worldtool -1

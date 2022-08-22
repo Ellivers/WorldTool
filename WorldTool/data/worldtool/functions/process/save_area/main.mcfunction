@@ -42,7 +42,7 @@ execute store result block ~-1 ~-1 ~-1 sizeY int 1 run scoreboard players get #s
 execute store result block ~-1 ~-1 ~-1 sizeZ int 1 run scoreboard players get #sizeZ worldtool
 
 setblock ~-1 ~-2 ~-1 minecraft:air
-execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:save_area"} run setblock ~-1 ~-2 ~-1 minecraft:redstone_block
+setblock ~-1 ~-2 ~-1 minecraft:redstone_block
 
 clone 27451 1 19 27451 1 19 ~-1 ~-1 ~-1
 clone 27449 1 19 27449 1 19 ~-1 ~-2 ~-1
