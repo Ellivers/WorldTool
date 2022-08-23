@@ -10,8 +10,6 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID
 summon minecraft:marker ~ ~ ~ {Tags: ["worldtool", "wt.can_forceload", "wt.pos1", "wt.position"]}
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1,sort=nearest,limit=1] at @s run function worldtool:use_tool/ray_hit/general/common
 
-tag @s[tag=wt.in_menu] add wt.no_message
-execute if entity @s[tag=wt.in_menu] run function worldtool:ui/close
 tellraw @s ["\n",{"nbt":"Translation.\"info.set_pos1\"","storage": "worldtool:storage","interpret": true}]
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

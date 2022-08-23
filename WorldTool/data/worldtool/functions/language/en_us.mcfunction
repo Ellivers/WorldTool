@@ -195,6 +195,8 @@ data modify storage worldtool:storage Translation."button.replace.off" set value
 data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
 data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
+data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]  "
+data modify storage worldtool:storage Translation."button.select_new_block.description" set value "Select a new block to use"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
@@ -439,8 +441,6 @@ data modify storage worldtool:storage Translation."info.no_brush_selected" set v
 
 data modify storage worldtool:storage Translation."button.brush.select_brush.name" set value "[Select New Brush...]"
 data modify storage worldtool:storage Translation."button.brush.select_brush.description" set value "Select a new brush to use"
-data modify storage worldtool:storage Translation."button.brush.select_block.name" set value "[Select New Block...]  "
-data modify storage worldtool:storage Translation."button.brush.select_block.description" set value "Select a new block to place"
 data modify storage worldtool:storage Translation."button.brush.replace_block.name" set value "[Replace New Block...]  "
 data modify storage worldtool:storage Translation."button.brush.replace_block.description" set value "Select a new block to replace"
 data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]  "
@@ -539,6 +539,9 @@ data modify storage worldtool:storage Translation."button.shape.cylinder.descrip
 data modify storage worldtool:storage Translation."button.shape.sphere.name" set value "[Sphere]"
 data modify storage worldtool:storage Translation."button.shape.sphere.description" set value "Select the sphere shape"
 data modify storage worldtool:storage Translation."button.shape.already_selected.description" set value "This shape is already selected"
+
+data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[Adjust Position...]"
+data modify storage worldtool:storage Translation."button.adjust_position.description" set value "Edit the selected position"
 
 # Shape settings
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "

@@ -1,4 +1,4 @@
-# Called recursively and by worldtool:ui_general/options/save_load/backup/done
+# Called recursively and by worldtool:technical/save_load/backup/done
 # Restocks all backup slots in a list of template lists
 
 data modify storage worldtool:storage Temp.TemplateList set from storage worldtool:storage Temp.List[0].TemplateList

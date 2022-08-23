@@ -8,4 +8,4 @@ execute if predicate worldtool:shape_tool/shapes/sphere run function worldtool:u
 function #worldtool:addon/use_shapes/processes
 
 execute if score #success worldtool matches 1 run data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[0]
-execute if score #success worldtool matches 1 if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run function worldtool:ui_general/options/save_load/backup/setup_process
+execute if score #success worldtool matches 1 if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run function worldtool:technical/save_load/backup/setup_process
