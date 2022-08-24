@@ -4,7 +4,7 @@ function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 tag @s add wt.menu.randomize.set_source.confirm
 
-execute if entity @s[tag=wt.outline_selection] run tag @s add wt.particles
+execute if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 

@@ -45,6 +45,7 @@ tag @s remove wt.menu.checkered.replace
 tag @s remove wt.select_block.brush
 tag @s remove wt.select_block.brush.replace
 tag @s remove wt.menu.shapes.options
+tag @s remove wt.menu.shapes.adjust_position
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

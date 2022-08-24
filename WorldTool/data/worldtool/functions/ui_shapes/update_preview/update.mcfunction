@@ -1,5 +1,5 @@
-# Called by worldtool:ui_shapes/menu
-# Commands to run as the position
+# Called by worldtool:ui_shapes/update_preview/pos
+# Updates the preview entity tags and stuff
 
 data modify entity @s data.WorldTool.ShapeSettings set from storage worldtool:storage Temp.ShapeTool.ShapeSettings
 
@@ -34,4 +34,3 @@ execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientati
 execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
 
 execute if data storage worldtool:storage Temp.ShapeTool run tag @s add wt.particles
-scoreboard players add #positions_temp worldtool 1

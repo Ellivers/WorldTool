@@ -1,6 +1,6 @@
 # Called by various functions
 
-tag @s[tag=!wt.user] add wt.outline_selection
+tag @s[tag=!wt.user] add wt.helper_particles
 tag @s add wt.user
 
 function worldtool:ui/clear_chat

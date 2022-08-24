@@ -6,7 +6,7 @@ execute unless score @s wt.rotY matches -2147483648..2147483647 run scoreboard p
 execute unless score @s wt.rotZ matches -2147483648..2147483647 run scoreboard players set @s wt.rotZ 0
 
 function worldtool:ui/clear_chat
-execute if entity @s[tag=wt.outline_selection] run tag @s add wt.particles
+execute if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
 
 tag @s add wt.menu.clone.rotate
 function worldtool:ui/back_button
