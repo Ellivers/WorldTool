@@ -11,18 +11,18 @@ execute if entity @s[tag=wt.menu.settings.addons] run function worldtool:ui/sett
 execute if entity @s[tag=wt.menu.settings.language] run function worldtool:ui/settings/menu
 execute if entity @s[tag=wt.menu.settings.blocks_per_tick] run function worldtool:ui/settings/menu
 execute if entity @s[tag=wt.menu.clone.rotate] run function worldtool:ui_general/clone/menu
-execute if entity @s[tag=wt.pick_block.brush] run function worldtool:ui_brush/select_block/select
+execute if entity @s[tag=wt.pick_block.other] run function worldtool:ui/select_block/select
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:ui_general/randomize/menu
 execute if entity @s[tag=wt.menu.randomize.set_source.pos2] run function worldtool:ui_general/randomize/set_source/pos1
 execute if entity @s[tag=wt.menu.randomize.set_source.confirm] run function worldtool:ui_general/randomize/set_source/pos2
 execute if entity @s[tag=wt.menu.randomize.set_source.wait] run function worldtool:ui_general/randomize/set_source/back
 execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/paste/menu
-execute if entity @s[tag=wt.select_block.brush.replace] run function worldtool:ui_brush/select_block/replace/1
+execute if entity @s[tag=wt.select_block.other.replace] run function worldtool:ui/select_block/replace/1
 
 function #worldtool:addon/ui/back_using_tags
 
-execute if entity @s[tag=wt.menu.two_block_query.2,tag=!wt.two_block_query.locked_rule] run function worldtool:ui/two_block_query/display/1
+execute if entity @s[tag=wt.menu.two_block_query.2,tag=!wt.two_block_query.locked_rule] run function worldtool:ui_general/two_block_query/display/1
 execute if entity @s[tag=wt.menu.two_block_query.2,tag=wt.two_block_query.locked_rule] run function worldtool:ui/return.back
-execute if entity @s[tag=wt.menu.two_block_query.3,tag=!wt.two_block_query.primary] run function worldtool:ui/two_block_query/display/2
+execute if entity @s[tag=wt.menu.two_block_query.3,tag=!wt.two_block_query.primary] run function worldtool:ui_general/two_block_query/display/2
 execute if entity @s[tag=wt.menu.two_block_query.3,tag=wt.two_block_query.primary] run function worldtool:ui/return.back

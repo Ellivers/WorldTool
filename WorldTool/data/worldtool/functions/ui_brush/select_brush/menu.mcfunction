@@ -13,7 +13,7 @@ execute unless predicate worldtool:brush_tool/brushes/place run tellraw @s {"nbt
 execute if predicate worldtool:brush_tool/brushes/place run tellraw @s {"nbt":"Translation.\"button.brush.place.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
 # Replace brush
-execute unless predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.replace.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/replace"}}
+execute unless predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.replace.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/replace/set"}}
 execute if predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
 # Circle brush

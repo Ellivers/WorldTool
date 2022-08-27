@@ -4,4 +4,4 @@
 function worldtool:ui/remove_menu_tags
 tag @s add wt.menu.replace
 tag @s add wt.two_block_query.text.replace
-function worldtool:ui/two_block_query/load/both
+function worldtool:ui_general/two_block_query/load/both

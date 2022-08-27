@@ -7,4 +7,4 @@ tag @s add wt.two_block_query.text.randomize_exclude
 tag @s add wt.two_block_query.locked_rule
 tag @s add wt.two_block_query.exclude
 tag @s add wt.two_block_query.secondary
-function worldtool:ui/two_block_query/display/2
+function worldtool:ui_general/two_block_query/display/2

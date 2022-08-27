@@ -4,7 +4,13 @@
 function worldtool:ui/clear_chat
 function worldtool:ui_shapes/back_button
 
+tag @s add wt.allow_input
 tag @s add wt.menu.shapes.adjust_position
+
+scoreboard players operation #ID_temp worldtool = @s wt.ID
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos1
+
+tellraw @s [{"nbt":"Translation.\"info.measure.position\"","storage":"worldtool:storage","interpret":true},"\n"]
 
 tellraw @s [{"nbt":"Translation.\"button.negative_x.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","value": {"nbt":"Translation.\"button.nudge_position.negative_x.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/adjust_position/-x"}}," ",{"nbt":"Translation.\"button.positive_x.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","value": {"nbt":"Translation.\"button.nudge_position.positive_x.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/adjust_position/x"}}]
 tellraw @s [{"nbt":"Translation.\"button.negative_y.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","value": {"nbt":"Translation.\"button.nudge_position.negative_y.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/adjust_position/-y"}}," ",{"nbt":"Translation.\"button.positive_y.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","value": {"nbt":"Translation.\"button.nudge_position.positive_y.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/adjust_position/y"}}]
