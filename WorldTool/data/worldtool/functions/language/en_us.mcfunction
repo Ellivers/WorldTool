@@ -215,6 +215,9 @@ data modify storage worldtool:storage Translation."button.reset.name" set value 
 data modify storage worldtool:storage Translation."button.reset.description" set value "Reset to the default value"
 data modify storage worldtool:storage Translation."button.reset_all.name" set value "[Reset All]"
 data modify storage worldtool:storage Translation."button.reset_all.description" set value "Reset all settings to their default values"
+data modify storage worldtool:storage Translation."button.keep.on" set value "[Keep: On]"
+data modify storage worldtool:storage Translation."button.keep.off" set value "[Keep: Off]"
+data modify storage worldtool:storage Translation."button.keep.description" set value "Toggle keeping existing blocks, AKA only replacing air blocks"
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
@@ -557,6 +560,10 @@ data modify storage worldtool:storage Translation."button.set_position.name" set
 data modify storage worldtool:storage Translation."button.set_position.description" set value "Enter the position manually"
 
 # Shape settings
+data modify storage worldtool:storage Translation."button.shapes.hollow.on" set value "[Hollow: On]"
+data modify storage worldtool:storage Translation."button.shapes.hollow.off" set value "[Hollow: Off]"
+data modify storage worldtool:storage Translation."button.shapes.hollow.description" set value "Don't fill the inside of the shape"
+
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
 data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"
 data modify storage worldtool:storage Translation."label.shapes.precision.name" set value "Precision: "

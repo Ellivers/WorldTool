@@ -3,6 +3,8 @@
 
 function worldtool:ui_brush/remove_tags
 
+function worldtool:ui_brush/check_tool
+
 function worldtool:ui/open_tool
 
 # Add brush tags

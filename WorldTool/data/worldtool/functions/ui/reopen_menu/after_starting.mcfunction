@@ -9,5 +9,6 @@ execute if entity @s[tag=wt.menu.randomize] run function worldtool:ui_general/ra
 execute if entity @s[tag=wt.menu.randomize.set_source.confirm] run function worldtool:ui_general/randomize/set_source/wait
 execute if entity @s[tag=wt.menu.copy_area] run function worldtool:ui/wait
 execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/checkered/menu
+execute if predicate worldtool:tools/shapes run function worldtool:ui_shapes/menu
 
 function #worldtool:addon/ui/reopen_menu/after_starting
