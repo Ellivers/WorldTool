@@ -12,7 +12,7 @@ data modify storage worldtool:storage Temp.Block.State.Name set from block ~ ~-1
 
 summon minecraft:falling_block ~ ~ ~ {Tags:["worldtool","wt.pick_block_check"],Time:600,DropItem:0b}
 data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.pick_block_check,sort=nearest,limit=1] BlockState.Name set from storage worldtool:storage Temp.Block.State.Name
-execute store result score #pickBlockTemp worldtool unless data entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.pick_block_check,sort=nearest,limit=1] BlockState{Name:"minecraft:sand"}
+execute store success score #pickBlockTemp worldtool unless data entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.pick_block_check,sort=nearest,limit=1] BlockState{Name:"minecraft:sand"}
 
 execute if score #pickBlockTemp worldtool matches 0 run data modify storage worldtool:storage Temp.Block.State.Name set from block ~ ~-1 ~ Items[1].id
 execute if score #pickBlockTemp worldtool matches 0 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.pick_block_check,sort=nearest,limit=1] BlockState.Name set from storage worldtool:storage Temp.Block.State.Name

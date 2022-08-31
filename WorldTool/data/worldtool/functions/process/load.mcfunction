@@ -1,4 +1,4 @@
-# Scheduled by worldtool:process_start/start
+# Called by worldtool:technical/tick
 # Starts/continues a process
 
 execute if score $progressBar worldtool matches 1 run function worldtool:process/update_progress_bar

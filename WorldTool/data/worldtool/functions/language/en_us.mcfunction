@@ -33,6 +33,8 @@ data modify storage worldtool:storage Translation."item.shape_tool" set value "S
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set value '"& open the menu"'
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.1" set value '["",{"keybind":"key.use","color":"gold"}," to generate a shape"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
 data modify storage worldtool:storage Translation."lore.selected_structure" set value "Selected structure:"
@@ -563,6 +565,10 @@ data modify storage worldtool:storage Translation."button.set_position.descripti
 data modify storage worldtool:storage Translation."button.shapes.hollow.on" set value "[Hollow: On]"
 data modify storage worldtool:storage Translation."button.shapes.hollow.off" set value "[Hollow: Off]"
 data modify storage worldtool:storage Translation."button.shapes.hollow.description" set value "Don't fill the inside of the shape"
+
+data modify storage worldtool:storage Translation."button.shapes.continuous_place.on" set value "[Continuous Mode: On]"
+data modify storage worldtool:storage Translation."button.shapes.continuous_place.off" set value "[Continuous Mode: Off]"
+data modify storage worldtool:storage Translation."button.shapes.continuous_place.description" set value "Place shapes with the already-selected settings quickly by right-clicking with the Shape Generation Tool"
 
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
 data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"

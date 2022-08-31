@@ -9,7 +9,8 @@ tag @s remove wt.block.secondary
 tag @s remove wt.block.secondary.air
 
 tag @s add wt.block.primary
-execute if predicate worldtool:brush_tool/brushes/replace run tag @s add wt.block.secondary
+tag @s[predicate=worldtool:brush_tool/brushes/replace] add wt.block.secondary
+tag @s[predicate=worldtool:tools/shapes,predicate=!worldtool:shape_tool/settings/replace/none] add wt.block.secondary
 
 function #worldtool:addon/use_tool/update_block/add_tags
 

@@ -3,6 +3,9 @@
 
 execute unless score @s wt.ID matches 1.. run function worldtool:use_tool/assign_id
 
+## Remove tags ##
+function worldtool:use_tool/remove_tags
+
 ## Add tags ##
 tag @s add wt.raycast_normal
 execute if predicate worldtool:tools/general/pos1 run tag @s add wt.tool.general.pos1
@@ -15,8 +18,8 @@ execute if predicate worldtool:tools/general/pick_block run tag @s add wt.tool.g
 execute if predicate worldtool:tools/brush run tag @s add wt.tool.brush
 execute if predicate worldtool:tools/shapes run tag @s add wt.tool.shapes
 
-execute if entity @s[tag=wt.tool.shapes,predicate=!worldtool:shape_tool/settings/continuous_place,tag=!wt.shape_tool.pick_block] run tag @s remove wt.raycast_normal
-execute if entity @s[tag=wt.tool.shapes,predicate=!worldtool:shape_tool/settings/continuous_place,tag=!wt.shape_tool.pick_block] run tag @s add wt.raycast_before
+execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other] run tag @s remove wt.raycast_normal
+execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other] run tag @s add wt.raycast_before
 
 execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/brushes/none] run tag @s remove wt.raycast_normal
 execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before

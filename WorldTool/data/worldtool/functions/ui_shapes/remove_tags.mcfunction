@@ -1,6 +1,8 @@
 # Called by worldtool:ui_shapes/menu
 # Removes all shape menu tags
 
+tag @s remove wt.shapes.select_block
+
 tag @s remove wt.shape.cone
 tag @s remove wt.shape.cylinder
 tag @s remove wt.shape.sphere

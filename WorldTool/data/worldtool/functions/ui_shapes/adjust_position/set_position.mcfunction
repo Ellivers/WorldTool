@@ -10,8 +10,7 @@ scoreboard players set #positions_temp worldtool 0
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run scoreboard players add #positions_temp worldtool 1
 
 # Summon a new position if there isn't already one (bonus feature lol)
-execute if score #positions_temp worldtool matches 0 run summon minecraft:marker ~ ~ ~ {Tags:["worldtool","wt.shape_position"]}
-execute if score #positions_temp worldtool matches 0 run scoreboard players operation @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position,sort=nearest,limit=1] wt.ID = #ID_temp worldtool
+execute if score #positions_temp worldtool matches 0 run function worldtool:ui_shapes/summon_position
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run data modify entity @s Pos set from storage worldtool:storage Temp.Position
 
