@@ -1,5 +1,11 @@
 tag @s remove wt.update_block.shape_tool
 function worldtool:process_start/common/check/process
 
-execute if score #success worldtool matches 1 run function worldtool:use_shapes/setup_progress_bar
+execute if score #success worldtool matches 1 run data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
+
+execute if score #success worldtool matches 1 if data storage worldtool:storage Temp.Process{Tags:["wt.dont_reopen_menu"]} run tag @s add wt.dont_reopen_menu
+execute if score #success worldtool matches 1 unless entity @s[tag=wt.dont_reopen_menu] if data storage worldtool:storage Temp.Process.Owner run function worldtool:ui_shapes/menu
+tag @s remove wt.dont_reopen_menu
+
+execute if score #success worldtool matches 1 if score $progressBar worldtool matches 1 if data storage worldtool:storage Temp.Process.Owner run function worldtool:use_shapes/setup_progress_bar
 execute if score #success worldtool matches 1 run function worldtool:process_start/start

@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.cylinder\\"","storage":"worldtool:storage"}',ID:"worldtool:cylinder",Tags:["wt.no_message"]}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.cylinder\\"","storage":"worldtool:storage"}',ID:"worldtool:cylinder",Tags:[]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cylinder"}].Value
 
 execute unless entity @s[predicate=!worldtool:shape_tool/settings/orientation/up,predicate=!worldtool:shape_tool/settings/orientation/down] run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cylinder.vertical"
