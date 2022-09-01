@@ -12,7 +12,7 @@ execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orie
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"down"} run tag @s add wt.orientation.down
 
 execute store result score #precision_temp worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Precision
-execute store result score #degrees_temp worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
+execute store result score #shapeDegrees worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
 
 execute store result score #shape_y_rotation worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.YRotation
 
@@ -20,11 +20,11 @@ scoreboard players set #degreesPerRotation worldtool 360000000
 execute if score #precision_temp worldtool matches 1.. run scoreboard players operation #degreesPerRotation worldtool /= #precision_temp worldtool
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #degreesPerRotation worldtool *= #precision_temp worldtool
 
-scoreboard players operation #rotations worldtool = #degrees_temp worldtool
+scoreboard players operation #rotations worldtool = #shapeDegrees worldtool
 execute if score #precision_temp worldtool matches 1.. run scoreboard players operation #rotations worldtool *= #precision_temp worldtool
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #rotations worldtool /= #precision_temp worldtool
 
 scoreboard players set #lengthReached worldtool 0
-execute store result score #length_temp worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
+execute store result score #fullLength worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
 
 function worldtool:process/shapes/cylinder_vertical/loop
