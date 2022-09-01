@@ -7,6 +7,6 @@ execute if entity @s[tag=wt.process.shapes.replace.exclude] run scoreboard playe
 
 execute store success score #shapeHollow worldtool if entity @s[tag=wt.process.shapes.hollow]
 
-scoreboard players set #temp worldtool 0
+scoreboard players set #temp worldtool -1
 
 function worldtool:process/shapes/line/loop

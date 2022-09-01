@@ -81,6 +81,7 @@ scoreboard players set #1000 worldtool 1000
 scoreboard players set #3600 worldtool 3600
 scoreboard players set #10000 worldtool 10000
 scoreboard players set #86400 worldtool 86400
+scoreboard players set #1000000 worldtool 1000000
 scoreboard players set #pi worldtool 31416
 
 gamerule commandBlockOutput false

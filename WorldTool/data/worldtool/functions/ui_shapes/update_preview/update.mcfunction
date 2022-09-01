@@ -27,7 +27,8 @@ function #worldtool:addon/ui_shapes/add_preview_tags
 tp @s ~ ~ ~ 0 0
 
 execute if score #yRotEnabled worldtool matches 1 store result entity @s Rotation[0] float 1 run data get storage worldtool:storage Temp.ShapeTool.ShapeSettings.YRotation
-execute if score #xRotEnabled worldtool matches 1 store result entity @s Rotation[1] float 1 run data get storage worldtool:storage Temp.ShapeTool.ShapeSettings.XRotation
+execute unless score #xRotEnabled worldtool matches 1 run data remove entity @s data.WorldTool.XRotation
+execute if score #xRotEnabled worldtool matches 1 run data modify entity @s data.WorldTool.XRotation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.XRotation
 
 execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
 execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~

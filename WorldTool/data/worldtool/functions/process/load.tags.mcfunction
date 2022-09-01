@@ -19,5 +19,6 @@ execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/
 execute if entity @s[tag=wt.process.replace_brush] run function worldtool:process/brush/replace/main
 
 execute if entity @s[tag=wt.process.cylinder.vertical] run function worldtool:process/shapes/cylinder_vertical/load
+execute if entity @s[tag=wt.process.cylinder.horizontal] run function worldtool:process/shapes/cylinder_horizontal/load
 
 function #worldtool:addon/process/check_tags
