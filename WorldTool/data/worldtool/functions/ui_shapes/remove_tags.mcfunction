@@ -2,7 +2,7 @@
 # Removes all shape menu tags
 
 tag @s remove wt.shapes.select_block
-tag @s remove wt.queue.shapes
+tag @s remove wt.menu.shapes.temp
 
 tag @s remove wt.shape.cone
 tag @s remove wt.shape.cylinder

@@ -36,8 +36,6 @@ execute if score #temp6 worldtool matches 1 run function worldtool:technical/sav
 
 function #rx.playerdb:api/v2/save/self
 
-function worldtool:ui_general/options/menu
-
 function worldtool:technical/save_load/remove_load_tags
 
 tag @s add wt.load_area.undo

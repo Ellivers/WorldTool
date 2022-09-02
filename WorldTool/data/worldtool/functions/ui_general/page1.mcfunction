@@ -9,6 +9,9 @@ function worldtool:ui_general/remove_submenu_tags
 
 function worldtool:ui/start_input/primary
 
+# Particles
+execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
+
 # Display
 
 function worldtool:ui/back_button

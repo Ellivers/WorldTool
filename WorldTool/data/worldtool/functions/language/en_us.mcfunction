@@ -117,6 +117,7 @@ data modify storage worldtool:storage Translation."error.shape_position_missing"
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
 data modify storage worldtool:storage Translation."warning.clone_overlap" set value "Warning: The clone destination area overlaps with the source area. This is likely to mess up both areas. Do you wish to continue anyway?"
+data modify storage worldtool:storage Translation."warning.insufficient_backup_slots" set value "Warning: There are no more backup slots available, meaning you will not be able to properly undo this action. Do you wish to continue anyway?"
 
 # Command log
 data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"

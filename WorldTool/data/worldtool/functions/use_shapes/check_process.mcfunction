@@ -3,5 +3,5 @@
 
 scoreboard players set #success worldtool 1
 
-execute if score $processRunning worldtool matches 1.. run tag @s add wt.queue.shapes
+execute if score $processRunning worldtool matches 1.. run tag @s add wt.menu.shapes.temp
 execute if score $processRunning worldtool matches 1.. run function worldtool:ui/queue/load

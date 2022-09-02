@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/common/setup_process
+# Called by worldtool:process_start/common/setup_process and worldtool:use_shapes/setup_process
 # Sets up the two backup processes
 
 function worldtool:technical/save_load/remove_save_tags

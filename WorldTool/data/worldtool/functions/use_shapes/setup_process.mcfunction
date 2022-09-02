@@ -1,3 +1,5 @@
+# Called by worldtool:use_shapes/load
+# Sets up the shape processes
 
 scoreboard players set #success worldtool 0
 
