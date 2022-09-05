@@ -12,7 +12,7 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_co
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner.2] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos2
 
 tag @s add wt.no_message
-function worldtool:measure/measure
+function worldtool:measure/area/measure
 
 execute if score #totalArea worldtool >= $randomizationSourceSizeWarnLimit worldtool run tellraw @s [{"nbt":"Translation.\"warning.randomization_source_size\"","storage": "worldtool:storage","color": "gold"},"\n"]
 

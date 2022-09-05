@@ -10,7 +10,7 @@ execute unless data storage rx.playerdb:io player.data.WorldTool.Clipboard run d
 data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.TemplateList set from storage worldtool:storage Processes[-1].Output.TemplateList
 
 tag @s add wt.no_message
-function worldtool:measure/load
+function worldtool:measure/area/load
 
 data modify storage rx.playerdb:io player.data.WorldTool.Clipboard.Size set value [0,0,0]
 execute store result storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[0] int 1 run scoreboard players get #sizeX worldtool

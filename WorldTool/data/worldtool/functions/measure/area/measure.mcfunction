@@ -15,4 +15,13 @@ scoreboard players operation #sizeZ worldtool -= #pos2zt worldtool
 execute if score #sizeZ worldtool matches ..-1 run scoreboard players operation #sizeZ worldtool *= #-1 worldtool
 scoreboard players add #sizeZ worldtool 1
 
-function worldtool:measure/done
+# Final calculations
+scoreboard players operation #totalArea worldtool = #sizeX worldtool
+scoreboard players operation #totalArea worldtool *= #sizeY worldtool
+scoreboard players operation #totalArea worldtool *= #sizeZ worldtool
+
+# Message
+execute if entity @s[tag=!wt.no_message] run function worldtool:measure/area/message
+tag @s remove wt.no_message
+
+function #worldtool:addon/measure/area_done

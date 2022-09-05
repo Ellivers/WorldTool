@@ -7,8 +7,13 @@ tag @s remove wt.particles
 tag @s remove wt.shape.cylinder.up
 tag @s remove wt.shape.cylinder.down
 tag @s remove wt.shape.cylinder.horizontal
+tag @s remove wt.shape.cone.vertical
 tag @s remove wt.shape.cone.up
 tag @s remove wt.shape.cone.down
+tag @s remove wt.shape.cone.east
+tag @s remove wt.shape.cone.west
+tag @s remove wt.shape.cone.south
+tag @s remove wt.shape.cone.north
 tag @s remove wt.shape.cone.horizontal
 tag @s remove wt.shape.sphere
 
@@ -20,6 +25,11 @@ execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder"} unles
 
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"up"}} run tag @s add wt.shape.cone.up
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"down"}} run tag @s add wt.shape.cone.down
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"east"}} run tag @s add wt.shape.cone.east
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"west"}} run tag @s add wt.shape.cone.west
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"south"}} run tag @s add wt.shape.cone.south
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"north"}} run tag @s add wt.shape.cone.north
+execute unless entity @s[tag=!wt.shape.cone.up,tag=!wt.shape.cone.down] run tag @s add wt.shape.cone.vertical
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"up"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"down"} run tag @s add wt.shape.cone.horizontal
 
 function #worldtool:addon/ui_shapes/add_preview_tags

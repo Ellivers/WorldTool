@@ -8,7 +8,7 @@ bossbar set worldtool:progress players @s
 bossbar set worldtool:progress visible true
 
 tag @s add wt.no_message
-function worldtool:measure/load
+function worldtool:measure/area/load
 
 execute store result bossbar worldtool:progress max run scoreboard players get #totalArea worldtool
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
