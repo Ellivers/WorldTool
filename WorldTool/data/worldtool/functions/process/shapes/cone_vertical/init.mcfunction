@@ -1,5 +1,5 @@
-# Called by worldtool:process/shapes/cylinder_vertical/load
-# Initiates a vertical cylinder
+# Called by worldtool:process/shapes/cone_vertical/load
+# Initiates a vertical cone
 
 scoreboard players set #writerPosX worldtool 0
 scoreboard players set #writerPosY worldtool 0
@@ -24,12 +24,18 @@ scoreboard players operation #rotations worldtool = #shapeDegrees worldtool
 execute if score #precision_temp worldtool matches 1.. run scoreboard players operation #rotations worldtool *= #precision_temp worldtool
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #rotations worldtool /= #precision_temp worldtool
 
-execute store result score #shapeRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
-scoreboard players operation #shapeRadius worldtool /= #2 worldtool
-
 scoreboard players set #lengthReached worldtool 0
 execute store result score #fullLength worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
 
-scoreboard players set #shapeRaycastType worldtool 1
+execute store result score #currentRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
+scoreboard players operation #currentRadius worldtool /= #2 worldtool
+scoreboard players operation #currentRadius worldtool *= #1000000 worldtool
+scoreboard players set #shrinkPerCircle worldtool -1
+scoreboard players operation #shrinkPerCircle worldtool *= #currentRadius worldtool
+scoreboard players operation #length_temp worldtool = #fullLength worldtool
+scoreboard players operation #shrinkPerCircle worldtool /= #length_temp worldtool
+scoreboard players operation #shrinkPerCircle worldtool *= #-1 worldtool
 
-function worldtool:process/shapes/cylinder_vertical/loop
+scoreboard players set #shapeRaycastType worldtool 2
+
+function worldtool:process/shapes/cone_vertical/loop

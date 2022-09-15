@@ -1,4 +1,4 @@
-# Called recursively and by worldtool:process/shapes/cylinder_vertical/load and worldtool:process/shapes/cylinder_vertical/init
+# Called recursively and by worldtool:process/shapes/cylinder_horizontal/load and worldtool:process/shapes/cylinder_horizontal/init
 
 tp ~ ~ ~
 

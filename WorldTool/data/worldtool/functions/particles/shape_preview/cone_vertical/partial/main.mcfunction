@@ -1,5 +1,7 @@
 # Called by worldtool:particles/cone_vertical/load
 
+function worldtool:particles/shape_preview/line_up/load
+
 scoreboard players set #temp2 worldtool 0
 function worldtool:particles/shape_preview/cone_vertical/partial/edge
 

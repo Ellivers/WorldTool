@@ -67,6 +67,7 @@ execute unless score $playerdbAvailable worldtool matches 0..1 run scoreboard pl
 ## Constants ##
 scoreboard players set #-1 worldtool -1
 scoreboard players set #2 worldtool 2
+scoreboard players set #3 worldtool 3
 scoreboard players set #5 worldtool 5
 scoreboard players set #10 worldtool 10
 scoreboard players set #20 worldtool 20

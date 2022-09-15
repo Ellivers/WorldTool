@@ -12,4 +12,5 @@ execute store success score #shapeHollow worldtool if entity @s[tag=wt.process.s
 
 scoreboard players set #temp worldtool -1
 
-function worldtool:process/shapes/line/loop
+execute if score #shapeRaycastType worldtool matches 1 run function worldtool:process/shapes/line/loop1
+execute if score #shapeRaycastType worldtool matches 2 run function worldtool:process/shapes/line/loop2

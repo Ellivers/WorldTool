@@ -20,5 +20,7 @@ execute if entity @s[tag=wt.process.replace_brush] run function worldtool:proces
 
 execute if entity @s[tag=wt.process.cylinder.vertical] run function worldtool:process/shapes/cylinder_vertical/load
 execute if entity @s[tag=wt.process.cylinder.horizontal] run function worldtool:process/shapes/cylinder_horizontal/load
+execute if entity @s[tag=wt.process.cone.vertical] run function worldtool:process/shapes/cone_vertical/load
+execute if entity @s[tag=wt.process.cone.horizontal] run function worldtool:process/shapes/cone_horizontal/load
 
 function #worldtool:addon/process/check_tags
