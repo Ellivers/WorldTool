@@ -5,6 +5,7 @@ tp ~ ~ ~
 scoreboard players operation #shapeRadius worldtool = #currentRadius worldtool
 scoreboard players operation #shapeRadius worldtool -= #shrinkPerCircle worldtool
 
+execute store result entity @s Rotation[0] float 1 run scoreboard players get #shape_y_rotation worldtool
 function worldtool:process/shapes/circle_vertical/init
 
 scoreboard players operation #currentRadius worldtool = #shapeRadius worldtool

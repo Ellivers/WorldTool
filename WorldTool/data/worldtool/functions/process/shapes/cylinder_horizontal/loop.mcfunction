@@ -2,6 +2,7 @@
 
 tp ~ ~ ~
 
+execute store result entity @s Rotation[0] float 1 run scoreboard players get #shape_y_rotation worldtool
 function worldtool:process/shapes/circle_vertical/init
 
 execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run scoreboard players set #shapeGenStatus worldtool 2

@@ -1,0 +1,20 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{WorldTool:{Shape:\"sphere\"}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"info.selected_shape.sphere\"","storage": "worldtool:storage","color": "yellow","italic": false},
+            {"nbt":"Translation.\"lore.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
+            {"nbt":"SelectedItem.tag.WorldTool.PrimaryBlock.State.Name", "entity": "@s","color": "aqua","italic": false},
+            "",
+            {"nbt":"Translation.\"lore.shape_tool.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.shape_tool.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.shape_tool.normal.3\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

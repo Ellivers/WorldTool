@@ -8,10 +8,9 @@ execute if data storage worldtool:storage BlocksPerTick{Preset:"medium"} run fun
 execute if data storage worldtool:storage BlocksPerTick{Preset:"high"} run function worldtool:ui/settings/blocks_per_tick/set/high
 execute if data storage worldtool:storage BlocksPerTick{Preset:"maximum"} run function worldtool:ui/settings/blocks_per_tick/set/maximum
 
+tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
-function worldtool:ui/back_button
-
-tag @s add wt.menu.settings.blocks_per_tick
+function worldtool:ui/settings/back_button
 
 tellraw @s [{"nbt":"Translation.\"info.blocks_per_tick\"","storage": "worldtool:storage","color": "light_purple","bold": true},"\n"]
 

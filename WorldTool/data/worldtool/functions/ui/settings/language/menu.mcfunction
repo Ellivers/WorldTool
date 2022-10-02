@@ -1,8 +1,9 @@
 # Called by worldtool:ui_general/options/menu
 # Menu for setting the language
 
+tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
-function worldtool:ui/back_button
+function worldtool:ui/settings/back_button
 
 tag @s add wt.menu.settings.language
 

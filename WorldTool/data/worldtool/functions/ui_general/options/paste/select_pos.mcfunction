@@ -5,7 +5,7 @@ function worldtool:ui_general/check_tool
 item modify entity @s weapon.mainhand worldtool:general_tool/pastepos
 function worldtool:ui/sound.change_item
 
-tag @s add wt.dont_remove_tags
+tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/reopen_menu/from_submenu.back_button
 

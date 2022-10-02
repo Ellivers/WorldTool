@@ -1,7 +1,7 @@
 # Called by worldtool:ui_brush/menu and worldtool:ui_shapes/menu
 # Menu for selecting a block
 
-tag @s add wt.dont_remove_tags
+tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/return.back_button
 
