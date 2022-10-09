@@ -2,6 +2,11 @@
 # Page 2 of the general tool's menu
 
 function worldtool:ui/clear_chat
+tag @s add wt.menu.general.page2
+
+function worldtool:ui/back_button
+
+function worldtool:ui_general/keep/button
 
 tellraw @s ["",{"nbt":"Translation.\"button.checkered.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.checkered.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/checkered/load"}}]
 

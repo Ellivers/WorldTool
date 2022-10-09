@@ -3,7 +3,8 @@
 
 execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
 
-execute if entity @s[tag=wt.menu.general.p1] run function worldtool:ui_general/click/backto
+execute if entity @s[tag=wt.menu.general.page1] run function worldtool:ui_general/click/backto
+execute if entity @s[tag=wt.menu.general.page2] run function worldtool:ui_general/click/backto
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/click/backto
 execute if entity @s[tag=wt.menu.settings] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.adjust_positions] run function worldtool:ui_general/options/menu

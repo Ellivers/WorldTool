@@ -220,7 +220,7 @@ data modify storage worldtool:storage Translation."button.reset_all.name" set va
 data modify storage worldtool:storage Translation."button.reset_all.description" set value "Reset all settings to their default values"
 data modify storage worldtool:storage Translation."button.keep.on" set value "[Keep: On]"
 data modify storage worldtool:storage Translation."button.keep.off" set value "[Keep: Off]"
-data modify storage worldtool:storage Translation."button.keep.description" set value "Toggle keeping existing blocks, AKA only replacing air blocks"
+data modify storage worldtool:storage Translation."button.keep.description" set value "Toggle keeping existing blocks. With this on, only air blocks will be replaced."
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
