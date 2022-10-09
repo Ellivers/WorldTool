@@ -7,8 +7,8 @@
     "ops": [
       {
         "op": "replace",
-        "source": "Temp.Degrees2",
-        "target": "WorldTool.ShapeSettings.Degrees2"
+        "source": "Temp.SecondaryDegrees",
+        "target": "WorldTool.ShapeSettings.SecondaryDegrees"
       }
     ]
 }

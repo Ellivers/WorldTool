@@ -17,7 +17,7 @@ tag @s remove wt.setting.orientation.south
 tag @s remove wt.setting.orientation.west
 tag @s remove wt.setting.orientation.east
 tag @s remove wt.setting.degrees
-tag @s remove wt.setting.degrees2
+tag @s remove wt.setting.secondary_degrees
 tag @s remove wt.setting.length
 tag @s remove wt.setting.y_rotation
 tag @s remove wt.setting.x_rotation

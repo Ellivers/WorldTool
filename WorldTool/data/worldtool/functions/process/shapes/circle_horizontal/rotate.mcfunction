@@ -1,7 +1,7 @@
 # Called recursively and by worldtool:process/shapes/circle_horizontal/init
 # Rotates after each line has been drawn
 
-scoreboard players operation #blocksChecked worldtool = #lineBlocksPlaced worldtool
+scoreboard players operation #blocksChecked worldtool += #lineBlocksPlaced worldtool
 scoreboard players set #lineBlocksPlaced worldtool 0
 
 scoreboard players add #circleRotations worldtool 1

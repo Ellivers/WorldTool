@@ -11,4 +11,8 @@ scoreboard players operation #temp worldtool /= #2 worldtool
 execute if score #shapeStartSuccess worldtool matches 1 if score #success worldtool matches 1 if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 if score #amount worldtool > #temp worldtool run function worldtool:ui_shapes/warning/insufficient_backup_slots
 
 execute if score #shapeStartSuccess worldtool matches 1 if score #success worldtool matches 1 run function worldtool:use_shapes/check_process
-execute if score #success worldtool matches 1 run function worldtool:use_shapes/start
+
+scoreboard players set #temp worldtool 0
+execute if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run scoreboard players set #temp worldtool 1
+execute if score #success worldtool matches 1 if score #temp worldtool matches 1 run function worldtool:process_start/start
+execute if score #success worldtool matches 1 if score #temp worldtool matches 0 run function worldtool:use_shapes/start

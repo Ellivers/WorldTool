@@ -13,4 +13,4 @@ execute if score #replaceType worldtool matches 2 if blocks ~ ~ ~ ~ ~ ~ 27449 1 
 
 execute if score #placeShapeBlock worldtool matches 1 run function worldtool:process/place_block.primary
 
-execute unless score #temp worldtool >= #shapeRadius worldtool positioned ^ ^ ^1 run function worldtool:process/shapes/line/loop1
+execute unless score #temp worldtool >= #shapeRadius worldtool positioned ^ ^ ^1.00000000001 run function worldtool:process/shapes/line/loop1

@@ -9,6 +9,7 @@ execute if entity @s[tag=wt.shape.cylinder.down] run function worldtool:particle
 execute if entity @s[tag=wt.shape.cylinder.horizontal] run function worldtool:particles/shape_preview/cylinder_horizontal/load
 execute if entity @s[tag=wt.shape.cone.vertical] run function worldtool:particles/shape_preview/cone_vertical/load
 execute if entity @s[tag=wt.shape.cone.horizontal] run function worldtool:particles/shape_preview/cone_horizontal/load
+execute if entity @s[tag=wt.shape.sphere] run function worldtool:particles/shape_preview/sphere/load
 
 function #worldtool:addon/particles/shape_previews
 

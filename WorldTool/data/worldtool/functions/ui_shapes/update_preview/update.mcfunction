@@ -31,6 +31,7 @@ execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSetti
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"north"}} run tag @s add wt.shape.cone.north
 execute unless entity @s[tag=!wt.shape.cone.up,tag=!wt.shape.cone.down] run tag @s add wt.shape.cone.vertical
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"up"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"down"} run tag @s add wt.shape.cone.horizontal
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"sphere"} run tag @s add wt.shape.sphere
 
 function #worldtool:addon/ui_shapes/add_preview_tags
 
@@ -40,8 +41,8 @@ execute if score #yRotEnabled worldtool matches 1 store result entity @s Rotatio
 execute unless score #xRotEnabled worldtool matches 1 run data remove entity @s data.WorldTool.XRotation
 execute if score #xRotEnabled worldtool matches 1 run data modify entity @s data.WorldTool.XRotation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.XRotation
 
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
+execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
+execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~
+execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
 
 execute if data storage worldtool:storage Temp.ShapeTool run tag @s add wt.particles

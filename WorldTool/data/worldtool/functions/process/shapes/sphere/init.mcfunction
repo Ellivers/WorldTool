@@ -1,17 +1,17 @@
 # Called by worldtool:process/shapes/sphere/load
 # Initiates a sphere
 
+execute store result score #shapeDegreesSphere worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
+execute store result score #shapeDegrees worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.SecondaryDegrees
+
 function worldtool:process/shapes/common_init
 
-execute store result score #shapeDegreesSphere worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
-execute store result score #shapeDegrees worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees2
-
 execute store result score #shape_x_rotation worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.XRotation
+scoreboard players remove #shape_x_rotation worldtool 90
 
 scoreboard players operation #sphereMaxRotations worldtool = #shapeDegreesSphere worldtool
 execute if score #precision_temp worldtool matches 1.. run scoreboard players operation #sphereMaxRotations worldtool *= #precision_positive_temp worldtool
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #sphereMaxRotations worldtool /= #precision_positive_temp worldtool
-scoreboard players operation #sphereMaxRotations worldtool /= #2 worldtool
 
 execute store result score #shapeRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #shapeRadius worldtool /= #2 worldtool
