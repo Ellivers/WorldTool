@@ -1,5 +1,5 @@
 # Called byw worldtool:ui_general/shell/load
-# Displays the Shell menu
+# Displays the shell menu
 
 function worldtool:ui/clear_chat
 tag @s add wt.menu.shell

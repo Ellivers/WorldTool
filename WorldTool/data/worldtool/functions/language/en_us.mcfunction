@@ -52,6 +52,8 @@ data modify storage worldtool:storage Translation."process.randomize" set value 
 data modify storage worldtool:storage Translation."process.save_area" set value "Save Area"
 data modify storage worldtool:storage Translation."process.load_area" set value "Load Area"
 data modify storage worldtool:storage Translation."process.checkered" set value "Fill Checkered Pattern"
+data modify storage worldtool:storage Translation."process.shell" set value "Shell"
+data modify storage worldtool:storage Translation."process.outline" set value "Outline Area"
 
 data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
@@ -92,6 +94,7 @@ data modify storage worldtool:storage Translation."info.selected_block" set valu
 data modify storage worldtool:storage Translation."info.selected_replace_block.normal" set value "Selected block to replace: "
 data modify storage worldtool:storage Translation."info.selected_replace_block.exclude" set value "Selected block to exclude: "
 data modify storage worldtool:storage Translation."info.item_position" set value "In order to open this menu, you must be holding the item in your hand."
+data modify storage worldtool:storage Translation."info.unavailable" set value "Unavailable"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -442,6 +445,13 @@ data modify storage worldtool:storage Translation."button.shell.side.east.name" 
 data modify storage worldtool:storage Translation."button.shell.side.east.description" set value "Enable/disable the east wall (positive X)"
 data modify storage worldtool:storage Translation."button.shell.side.west.name" set value "[West]"
 data modify storage worldtool:storage Translation."button.shell.side.west.description" set value "Enable/disable the west wall (negative X)"
+
+data modify storage worldtool:storage Translation."button.outline.name" set value "[Outline...]"
+data modify storage worldtool:storage Translation."button.outline.description" set value "Place lines of blocks in the corners of the selection"
+data modify storage worldtool:storage Translation."label.outline.size" set value "Outline size: "
+data modify storage worldtool:storage Translation."label.outline.size.description" set value "How many blocks thick to make the outline"
+data modify storage worldtool:storage Translation."button.outline.size.decrease.description" set value "Decrease line size"
+data modify storage worldtool:storage Translation."button.outline.size.increase.description" set value "Increase line size"
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"

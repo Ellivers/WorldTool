@@ -44,6 +44,7 @@ tag @s remove wt.menu.checkered.replace
 tag @s remove wt.menu.shell
 tag @s remove wt.menu.shell.side_settings
 tag @s remove wt.menu.shell.inner_block
+tag @s remove wt.menu.outline
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes.options

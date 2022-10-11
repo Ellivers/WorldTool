@@ -5,5 +5,6 @@ execute if entity @s[tag=wt.menu.general.page1] run function worldtool:ui_genera
 execute if entity @s[tag=wt.menu.two_block_query.3] run function worldtool:ui_general/two_block_query/return
 execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/checkered/start
 execute if entity @s[tag=wt.menu.shell] run function worldtool:ui_general/shell/start
+execute if entity @s[tag=wt.menu.outline] run function worldtool:ui_general/outline/start
 
 function #worldtool:addon/input/primary_block
