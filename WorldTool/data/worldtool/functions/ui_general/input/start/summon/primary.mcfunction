@@ -1,4 +1,4 @@
-# Called by worldtool:ui/start_input/primary
+# Called by worldtool:ui_general/input/start/primary
 # Spawns an entity for detecting blocks (primary)
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.input] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:input_check/stop

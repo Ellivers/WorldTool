@@ -19,6 +19,7 @@ tag @s remove wt.menu.randomize.set_source.confirm
 tag @s remove wt.menu.randomize.exclude
 tag @s remove wt.randomize.exclude
 tag @s remove wt.menu.randomize.replace
+tag @s remove wt.two_block_query.text.randomize_exclude
 tag @s remove wt.menu.two_block_query.1
 tag @s remove wt.menu.two_block_query.2
 tag @s remove wt.menu.two_block_query.3
@@ -26,7 +27,7 @@ tag @s remove wt.two_block_query.secondary
 tag @s remove wt.two_block_query.primary
 tag @s remove wt.two_block_query.locked_rule
 tag @s remove wt.two_block_query.text.replace
-tag @s remove wt.two_block_query.text.randomize_exclude
+tag @s remove wt.two_block_query.text.standard
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
 tag @s remove wt.two_block_query.text.filter
@@ -40,6 +41,9 @@ tag @s remove wt.menu.paste_area
 tag @s remove wt.menu.select_paste_pos
 tag @s remove wt.menu.checkered
 tag @s remove wt.menu.checkered.replace
+tag @s remove wt.menu.shell
+tag @s remove wt.menu.shell.side_settings
+tag @s remove wt.menu.shell.inner_block
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes.options

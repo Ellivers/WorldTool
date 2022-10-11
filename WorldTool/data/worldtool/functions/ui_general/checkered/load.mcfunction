@@ -6,5 +6,5 @@ execute if entity @s[tag=!wt.menu.checkered] run function worldtool:ui_general/c
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
 
-function worldtool:ui/start_input/both
+function worldtool:ui_general/input/start/both
 function worldtool:ui_general/checkered/menu

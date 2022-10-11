@@ -4,5 +4,5 @@
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
 
-function worldtool:ui/start_input/secondary
+function worldtool:ui_general/input/start/secondary
 function worldtool:ui_general/clone/menu

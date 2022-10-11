@@ -1,5 +1,5 @@
 # Called by most processes
-# Universal function for placing a block!
+# Universal function for placing primary blocks!
 
 execute if entity @s[tag=wt.keep] if block ~ ~ ~ #worldtool:air run scoreboard players add #blocksPlaced worldtool 1
 execute if entity @s[tag=!wt.keep] unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run scoreboard players add #blocksPlaced worldtool 1
