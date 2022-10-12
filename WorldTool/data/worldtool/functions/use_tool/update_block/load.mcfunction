@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/update_block/from_item and worldtool:use_shapes/start
+# Called by worldtool:use_tool/update_block/from_item and worldtool:process_start/shapes/start
 # Sets the process block to the one selected for the brush and shape generation tools
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

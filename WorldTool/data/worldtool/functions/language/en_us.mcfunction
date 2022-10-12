@@ -134,7 +134,6 @@ data modify storage worldtool:storage Translation."info.log.time.hour" set value
 data modify storage worldtool:storage Translation."info.log.time.days" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," days ago] "]'
 data modify storage worldtool:storage Translation."info.log.time.day" set value "[1 day ago] "
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been added to the queue."]'
-data modify storage worldtool:storage Translation."info.log.process_already_running.cancel" set value '["Another process is already running. The process \\"",{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
 data modify storage worldtool:storage Translation."error.log.invalid_process" set value '[{"text":"Error: Invalid process: \\"","color":"red"},{"nbt":"CmdProcess.DisplayName","storage":"worldtool:storage","interpret":true},"\\" has been cancelled."]'
 
 # Common buttons

@@ -1,4 +1,4 @@
-# Called by worldtool:use_shapes/load
+# Called by worldtool:process_start/shapes/load
 # Displays an error
 
 scoreboard players set #success worldtool 0

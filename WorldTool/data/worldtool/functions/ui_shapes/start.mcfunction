@@ -3,7 +3,7 @@
 
 function worldtool:ui_shapes/check_tool
 
-function worldtool:use_shapes/load
+function worldtool:process_start/shapes/load
 
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

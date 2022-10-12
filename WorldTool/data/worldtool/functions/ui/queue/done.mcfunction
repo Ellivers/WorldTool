@@ -7,7 +7,7 @@ data modify storage worldtool:storage Temp.Process set from storage worldtool:st
 
 execute unless data storage worldtool:storage Temp.Process.StartType run function worldtool:process_start/common/start
 execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:common"} run function worldtool:process_start/common/start
-execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:shape"} run function worldtool:use_shapes/start
+execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:shape"} run function worldtool:process_start/shapes/start
 
 function #worldtool:addon/process_start/from_queue
 

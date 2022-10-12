@@ -14,6 +14,7 @@ execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"world
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:load_area"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:load_area",Value:10,Presets:{Low:3,Medium:6,High:10}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:checkered"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:checkered",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:shell"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:shell",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:outline"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:outline",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:paint"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:paint",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:place"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:place",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
