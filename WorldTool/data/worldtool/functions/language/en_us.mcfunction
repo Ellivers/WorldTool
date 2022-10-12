@@ -223,6 +223,8 @@ data modify storage worldtool:storage Translation."button.reset_all.description"
 data modify storage worldtool:storage Translation."button.keep.on" set value "[Keep: On]"
 data modify storage worldtool:storage Translation."button.keep.off" set value "[Keep: Off]"
 data modify storage worldtool:storage Translation."button.keep.description" set value "Toggle keeping existing blocks. With this on, only air blocks will be replaced."
+data modify storage worldtool:storage Translation."button.set_value.name" set value "<Set Value>"
+data modify storage worldtool:storage Translation."button.set_value.description" set value "Input this value manually"
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
