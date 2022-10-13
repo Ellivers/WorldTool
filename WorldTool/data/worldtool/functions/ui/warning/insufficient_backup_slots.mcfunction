@@ -4,12 +4,7 @@
 function #rx.playerdb:api/v2/get/self
 
 data modify storage rx.playerdb:io player.data.WorldTool.SavedProcesses set value []
-data modify storage rx.playerdb:io player.data.WorldTool.SavedProcesses append from storage worldtool:storage Processes[0]
-data remove storage worldtool:storage Processes[0]
-data modify storage rx.playerdb:io player.data.WorldTool.SavedProcesses append from storage worldtool:storage Processes[0]
-data remove storage worldtool:storage Processes[0]
-data modify storage rx.playerdb:io player.data.WorldTool.SavedProcesses append from storage worldtool:storage Processes[0]
-data remove storage worldtool:storage Processes[0]
+function worldtool:technical/save_load/backup/save_processes
 
 function #rx.playerdb:api/v2/save/self
 

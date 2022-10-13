@@ -1,6 +1,8 @@
 # Called by worldtool:process_start/common/setup_process
 # Displays an error
 
+
+
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 tellraw @s {"nbt":"Translation.\"error.no_process_selected\"","storage": "worldtool:storage","color": "red"}

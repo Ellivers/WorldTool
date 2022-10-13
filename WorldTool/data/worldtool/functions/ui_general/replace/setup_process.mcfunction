@@ -14,3 +14,5 @@ tag @s remove wt.two_block_query.exclude
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.replace
+
+function worldtool:technical/save_load/backup/load

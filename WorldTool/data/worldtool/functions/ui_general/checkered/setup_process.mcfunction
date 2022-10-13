@@ -18,3 +18,5 @@ execute if entity @s[tag=wt.checkered.alternate.z] run data modify storage world
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.checkered
+
+function worldtool:technical/save_load/backup/load

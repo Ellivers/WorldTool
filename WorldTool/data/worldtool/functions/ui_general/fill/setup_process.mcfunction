@@ -9,3 +9,5 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.fill
+
+function worldtool:technical/save_load/backup/load

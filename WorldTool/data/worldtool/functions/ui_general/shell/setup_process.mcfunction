@@ -21,3 +21,5 @@ execute if entity @s[tag=wt.shell.side.west] run data modify storage worldtool:s
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.shell
+
+function worldtool:technical/save_load/backup/load

@@ -12,3 +12,5 @@ execute if entity @s[tag=wt.randomize.replace.exclude] run data modify storage w
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.randomize
+
+function worldtool:technical/save_load/backup/load

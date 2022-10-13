@@ -12,3 +12,5 @@ data modify storage worldtool:storage Processes[0].Input.Size set from storage r
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.outline
+
+function worldtool:technical/save_load/backup/load

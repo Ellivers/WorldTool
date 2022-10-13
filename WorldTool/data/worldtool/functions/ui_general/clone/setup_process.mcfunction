@@ -66,3 +66,5 @@ execute store result storage worldtool:storage Processes[0].AffectedArea.To[1] d
 execute store result storage worldtool:storage Processes[0].AffectedArea.To[2] double 1 run scoreboard players get #pos2zt worldtool
 
 tag @s remove wt.setup.clone
+
+function worldtool:technical/save_load/backup/load
