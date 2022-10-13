@@ -12,9 +12,9 @@ function #rx.playerdb:api/v2/get/self
 execute if entity @s[tag=wt.load_area.paste] run data modify storage worldtool:storage Processes[0].Input.AreaData set from storage rx.playerdb:io player.data.WorldTool.Clipboard
 execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run data modify storage worldtool:storage Processes[0].Input.AreaData set from storage rx.playerdb:io player.data.WorldTool.Current
 
-scoreboard players set #dontBackupLoad worldtool 1
+scoreboard players set #backupLoad worldtool 1
 
-execute if entity @s[tag=wt.load_area.paste] run scoreboard players set #dontBackupLoad worldtool 0
+execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run scoreboard players set #backupLoad worldtool 0
 
 function #worldtool:addon/save_load/setup_load_process
 
@@ -28,4 +28,4 @@ execute if entity @s[tag=wt.load_area.paste] run function worldtool:ui_general/o
 function worldtool:technical/save_load/remove_load_tags
 tag @s remove wt.setup.load_area
 
-execute if score #dontBackupLoad worldtool matches 0 run function worldtool:technical/save_load/backup/load
+execute if score #backupLoad worldtool matches 1 run function worldtool:technical/save_load/backup/load

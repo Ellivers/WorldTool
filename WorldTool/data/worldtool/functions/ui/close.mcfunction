@@ -7,6 +7,7 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s w
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run kill @s
 execute as @e[type=minecraft:armor_stand,tag=worldtool,tag=wt.rotation_preview] if score @s wt.ID = #ID_temp worldtool run kill @s
 function worldtool:ui_general/clone/settings/reset_rotation
+function worldtool:ui_general/remove_submenu_tags
 
 tag @s remove wt.in_menu
 function worldtool:ui/remove_return_tags

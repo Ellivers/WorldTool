@@ -4,6 +4,9 @@
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
 
+tag @s remove wt.clone_mode.standard
+tag @s remove wt.clone_mode.structure
+
 tag @s remove wt.randomize.replace
 tag @s remove wt.randomize.replace.normal
 tag @s remove wt.randomize.replace.exclude
