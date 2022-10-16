@@ -9,7 +9,7 @@ execute if predicate worldtool:shape_tool/shapes/sphere run function worldtool:p
 
 function #worldtool:addon/use_shapes/processes
 
-function worldtool:technical/save_load/backup/load
+execute if score #success worldtool matches 1 run function worldtool:technical/save_load/backup/load
 
 execute store result score #temp worldtool if data storage worldtool:storage AvailableBackupSlots[]
 scoreboard players operation #temp worldtool /= #2 worldtool

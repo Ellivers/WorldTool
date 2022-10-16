@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/common/setup_process
+# Called by worldtool:process_start/common/set_process_values
 # Gets data from the player's entities
 
 execute if entity @s[tag=wt.pos1] unless data storage worldtool:storage Processes[0].Positions.1 run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos

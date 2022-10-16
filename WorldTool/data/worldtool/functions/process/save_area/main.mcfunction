@@ -8,10 +8,10 @@ scoreboard players operation #diffY worldtool -= #pos1yo worldtool
 scoreboard players operation #diffZ worldtool = #writerPosZ worldtool
 scoreboard players operation #diffZ worldtool -= #pos1zo worldtool
 
-data modify storage worldtool:storage Processes[-1].Output.TemplateList append value {Slot:"",Pos:[0d,0d,0d]}
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[0] double 1 run scoreboard players get #diffX worldtool
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[1] double 1 run scoreboard players get #diffY worldtool
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[2] double 1 run scoreboard players get #diffZ worldtool
+data modify storage worldtool:storage Processes[-1].Output.TemplateList append value {Slot:"",Pos:[0,0,0]}
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[0] int 1 run scoreboard players get #diffX worldtool
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[1] int 1 run scoreboard players get #diffY worldtool
+execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[2] int 1 run scoreboard players get #diffZ worldtool
 data modify storage worldtool:storage Processes[-1].Output.TemplateList[-1].Slot set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 
 execute unless score #block1Placed worldtool matches 1 store success score #block1Placed worldtool run clone ~-1 ~-1 ~-1 ~-1 ~-1 ~-1 27451 1 19

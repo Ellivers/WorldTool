@@ -1,13 +1,11 @@
-# Called by worldtool:process_start/common/setup_process
-# Sets up the clone process
+# Called by worldtool:ui_general/clone/setup_process/load
+# Sets up the clone process in standard mode
 
 scoreboard players set #success worldtool 1
 
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.clone\\"","storage":"worldtool:storage"}',ID:"worldtool:clone",Tags:["wt.process.clone","wt.message.clone","wt.message.non_default"]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:clone"}].Value
 
-execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.move"
-execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.from_top"
 execute if entity @s[tag=!wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.from_bottom"
 
 execute if entity @s[tag=!wt.clone.rotate] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.normal"
@@ -27,10 +25,6 @@ execute store result storage worldtool:storage Processes[0].Rotation.Z int 1 run
 function worldtool:process_start/common/set_process_values
 
 data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.CloneDestination
-
-scoreboard players operation #tempRotX worldtool = @s wt.rotX
-scoreboard players operation #tempRotY worldtool = @s wt.rotY
-scoreboard players operation #tempRotZ worldtool = @s wt.rotZ
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
@@ -65,6 +59,7 @@ execute store result storage worldtool:storage Processes[0].AffectedArea.To[0] d
 execute store result storage worldtool:storage Processes[0].AffectedArea.To[1] double 1 run scoreboard players get #pos2yt worldtool
 execute store result storage worldtool:storage Processes[0].AffectedArea.To[2] double 1 run scoreboard players get #pos2zt worldtool
 
-tag @s remove wt.setup.clone
-
 function worldtool:technical/save_load/backup/load
+
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.AdditionalTags set value ["wt.dont_reopen_menu","wt.no_message"]
+execute if entity @s[tag=wt.clone.move] run function worldtool:ui_general/fill/setup_process

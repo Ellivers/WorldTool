@@ -12,6 +12,7 @@ tag @s remove wt.menu.replace
 tag @s remove wt.menu.clone
 tag @s remove wt.menu.clone.filter
 tag @s remove wt.menu.clone.rotate
+tag @s remove wt.menu.clone.select_mode
 tag @s remove wt.menu.randomize
 tag @s remove wt.menu.randomize.set_source.pos1
 tag @s remove wt.menu.randomize.set_source.pos2

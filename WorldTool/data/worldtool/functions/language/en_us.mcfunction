@@ -276,7 +276,7 @@ data modify storage worldtool:storage Translation."button.settings.select_langua
 data modify storage worldtool:storage Translation."button.settings.selected_language.description" set value "This language is currently selected"
 data modify storage worldtool:storage Translation."button.settings.language.reload.on" set value "[Reload: On]"
 data modify storage worldtool:storage Translation."button.settings.language.reload.off" set value "[Reload: Off]"
-data modify storage worldtool:storage Translation."button.settings.language.reload.description" set value "Reload the language when the data pack is reloaded"
+data modify storage worldtool:storage Translation."button.settings.language.reload.description" set value "Reload translations when the data pack is reloaded"
 
 data modify storage worldtool:storage Translation."info.blocks_per_tick" set value "Blocks per tick"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per tick...]"
@@ -387,6 +387,13 @@ data modify storage worldtool:storage Translation."button.clone.mirror.y.name" s
 data modify storage worldtool:storage Translation."button.clone.mirror.y.description" set value "Mirror the area around the Y axis"
 data modify storage worldtool:storage Translation."button.clone.mirror.z.name" set value "[Mirror Z]"
 data modify storage worldtool:storage Translation."button.clone.mirror.z.description" set value "Mirror the area around the Z axis"
+data modify storage worldtool:storage Translation."button.clone.current_mode.standard" set value "[Mode: Standard...]"
+data modify storage worldtool:storage Translation."button.clone.current_mode.template" set value "[Mode: Template...]"
+data modify storage worldtool:storage Translation."button.clone.current_mode.description" set value "Select which cloning mode to use"
+data modify storage worldtool:storage Translation."button.clone.mode.standard.name" set value "[Standard]"
+data modify storage worldtool:storage Translation."button.clone.mode.standard.description" set value "All cloning options, and rotation and mirror directions/combinations"
+data modify storage worldtool:storage Translation."button.clone.mode.template.name" set value "[Template]"
+data modify storage worldtool:storage Translation."button.clone.mode.template.description" set value "Supports proper block rotation but lacks filter, Keep support, and certain rotation and mirror directions/combinations. Can be faster than Standard mode."
 data modify storage worldtool:storage Translation."info.clone.rotation" set value "Selected Rotation:"
 data modify storage worldtool:storage Translation."info.clone.rotation.x" set value '["X: ",{"score":{"objective":"wt.rotX","name":"@s"}},"°"]'
 data modify storage worldtool:storage Translation."info.clone.rotation.y" set value '["Y: ",{"score":{"objective":"wt.rotY","name":"@s"}},"°"]'
@@ -396,6 +403,7 @@ data modify storage worldtool:storage Translation."info.clone.mirror.y" set valu
 data modify storage worldtool:storage Translation."info.clone.mirror.z" set value "Mirror Z"
 data modify storage worldtool:storage Translation."info.cloned_block" set value "1 block cloned"
 data modify storage worldtool:storage Translation."info.cloned_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," blocks cloned"]'
+data modify storage worldtool:storage Translation."info.clone.additional_modes_unavailable" set value "Additional modes unavailable"
 
 data modify storage worldtool:storage Translation."button.randomize.name" set value "[Randomize...]"
 data modify storage worldtool:storage Translation."button.randomize.description" set value "Place random blocks from a selected source"
