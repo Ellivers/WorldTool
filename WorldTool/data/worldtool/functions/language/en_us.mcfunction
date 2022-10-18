@@ -387,13 +387,12 @@ data modify storage worldtool:storage Translation."button.clone.mirror.y.name" s
 data modify storage worldtool:storage Translation."button.clone.mirror.y.description" set value "Mirror the area around the Y axis"
 data modify storage worldtool:storage Translation."button.clone.mirror.z.name" set value "[Mirror Z]"
 data modify storage worldtool:storage Translation."button.clone.mirror.z.description" set value "Mirror the area around the Z axis"
-data modify storage worldtool:storage Translation."button.clone.current_mode.standard" set value "[Mode: Standard...]"
-data modify storage worldtool:storage Translation."button.clone.current_mode.template" set value "[Mode: Template...]"
-data modify storage worldtool:storage Translation."button.clone.current_mode.description" set value "Select which cloning mode to use"
-data modify storage worldtool:storage Translation."button.clone.mode.standard.name" set value "[Standard]"
-data modify storage worldtool:storage Translation."button.clone.mode.standard.description" set value "All cloning options, and rotation and mirror directions/combinations"
-data modify storage worldtool:storage Translation."button.clone.mode.template.name" set value "[Template]"
-data modify storage worldtool:storage Translation."button.clone.mode.template.description" set value "Supports proper block rotation but lacks filter, Keep support, and certain rotation and mirror directions/combinations. Can be faster than Standard mode."
+data modify storage worldtool:storage Translation."clone_mode.standard" set value "Standard"
+data modify storage worldtool:storage Translation."clone_mode.template" set value "Template"
+data modify storage worldtool:storage Translation."clone_mode.standard.description" set value "All cloning options, and rotation and mirror directions/combinations"
+data modify storage worldtool:storage Translation."clone_mode.template.description" set value "Supports proper block rotation but lacks filter, Keep support, and certain rotation and mirror directions/combinations. Can be faster than Standard mode."
+data modify storage worldtool:storage Translation."label.clone.mode" set value "Mode: "
+data modify storage worldtool:storage Translation."label.clone.mode.description" set value "Select which cloning mode to use"
 data modify storage worldtool:storage Translation."info.clone.rotation" set value "Selected Rotation:"
 data modify storage worldtool:storage Translation."info.clone.rotation.x" set value '["X: ",{"score":{"objective":"wt.rotX","name":"@s"}},"°"]'
 data modify storage worldtool:storage Translation."info.clone.rotation.y" set value '["Y: ",{"score":{"objective":"wt.rotY","name":"@s"}},"°"]'
@@ -403,7 +402,6 @@ data modify storage worldtool:storage Translation."info.clone.mirror.y" set valu
 data modify storage worldtool:storage Translation."info.clone.mirror.z" set value "Mirror Z"
 data modify storage worldtool:storage Translation."info.cloned_block" set value "1 block cloned"
 data modify storage worldtool:storage Translation."info.cloned_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," blocks cloned"]'
-data modify storage worldtool:storage Translation."info.clone.additional_modes_unavailable" set value "Additional modes unavailable"
 
 data modify storage worldtool:storage Translation."button.randomize.name" set value "[Randomize...]"
 data modify storage worldtool:storage Translation."button.randomize.description" set value "Place random blocks from a selected source"
@@ -461,6 +459,14 @@ data modify storage worldtool:storage Translation."label.outline.size" set value
 data modify storage worldtool:storage Translation."label.outline.size.description" set value "How many blocks thick to make the outline"
 data modify storage worldtool:storage Translation."button.outline.size.decrease.description" set value "Decrease line size"
 data modify storage worldtool:storage Translation."button.outline.size.increase.description" set value "Increase line size"
+
+data modify storage worldtool:storage Translation."button.greenery.name" set value "[Greenery...]"
+data modify storage worldtool:storage Translation."button.greenery.description" set value "Place plants on top of the selected blocks"
+data modify storage worldtool:storage Translation."button.greenery.run.description" set value "Start the greenery process"
+data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.off" set value "[Replace Current Greenery: Off]"
+data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.on" set value "[Replace Current Greenery: On]"
+data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.description" set value "Remove the current plants and replace them with new ones"
+data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"

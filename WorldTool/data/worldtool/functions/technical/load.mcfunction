@@ -23,7 +23,6 @@ scoreboard objectives add worldtool dummy
 scoreboard objectives add wt.use_coas used:minecraft.carrot_on_a_stick
 scoreboard objectives add wt.drop_coas dropped:minecraft.carrot_on_a_stick
 scoreboard objectives add wt.ID dummy
-scoreboard objectives add wt.chance dummy
 scoreboard objectives add wt.rotX dummy
 scoreboard objectives add wt.rotY dummy
 scoreboard objectives add wt.rotZ dummy
@@ -33,6 +32,9 @@ scoreboard objectives add wt.pos1z dummy
 scoreboard objectives add wt.pos2x dummy
 scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
+# Menu-specific objectives
+scoreboard objectives add wt.greenery_rate dummy
+scoreboard objectives add wt.thickness dummy
 
 # Set the current version
 scoreboard players set $version worldtool 4
@@ -94,8 +96,8 @@ bossbar add worldtool:progress {"nbt":"Translation.\"progress.default\"","storag
 #scoreboard players set #displayLagWarning worldtool 1
 
 ## LCG ##
-scoreboard players set #rng_multiplier worldtool 1664525
-scoreboard players set #rng_increment worldtool 1013904223
+scoreboard players set #lcgMultiplier worldtool 1664525
+scoreboard players set #lcgIncrement worldtool 1013904223
 execute unless score #rng worldtool = #rng worldtool store result score #rng worldtool run seed
 
 # Add 1000 slots for area backups

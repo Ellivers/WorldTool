@@ -6,8 +6,7 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shell\\"","storage":"worldtool:storage"}',ID:"worldtool:shell",Tags:["wt.process.shell"]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:shell"}].Value
 
-function #rx.playerdb:api/v2/get/self
-data modify storage worldtool:storage Processes[0].Input.SideSize set from storage rx.playerdb:io player.data.WorldTool.ShellSideSize
+execute store result storage worldtool:storage Processes[0].Input.SideSize int 1 run scoreboard players get @s wt.thickness
 
 execute if entity @s[tag=wt.shell.inner_block] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shell.inner_block"
 
