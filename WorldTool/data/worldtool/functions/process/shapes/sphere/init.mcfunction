@@ -4,6 +4,9 @@
 execute store result score #shapeDegreesSphere worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
 execute store result score #shapeDegrees worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.SecondaryDegrees
 
+scoreboard players set #lengthReached worldtool 0
+scoreboard players set #fullLength worldtool 1
+
 function worldtool:process/shapes/common_init
 
 execute store result score #shape_x_rotation worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.XRotation
@@ -16,8 +19,6 @@ execute if score #precision_temp worldtool matches ..-1 run scoreboard players o
 execute store result score #shapeRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #shapeRadius worldtool /= #2 worldtool
 
-scoreboard players set #lengthReached worldtool 0
-scoreboard players set #fullLength worldtool 1
 
 scoreboard players set #shapeRaycastType worldtool 1
 

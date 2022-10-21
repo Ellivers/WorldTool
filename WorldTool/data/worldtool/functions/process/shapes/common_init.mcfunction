@@ -21,3 +21,6 @@ execute if score #precision_temp worldtool matches 1.. run scoreboard players op
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #rotations worldtool /= #precision_positive_temp worldtool
 
 execute store result score #shape_y_rotation worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.YRotation
+
+scoreboard players set #circleMode worldtool 0
+execute if score #fullLength worldtool matches 1 run scoreboard players set #circleMode worldtool 1

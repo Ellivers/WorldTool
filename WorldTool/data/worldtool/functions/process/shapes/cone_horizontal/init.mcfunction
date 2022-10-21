@@ -1,18 +1,18 @@
 # Called by worldtool:process/shapes/cone_horizontal/load
 # Initiates a horizontal cone
 
-function worldtool:process/shapes/common_init
-
 execute store result score #shapeDegrees worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Degrees
+
+scoreboard players set #lengthReached worldtool 0
+execute store result score #fullLength worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
+
+function worldtool:process/shapes/common_init
 
 execute store result score #shape_x_rotation worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.XRotation
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"south"} run scoreboard players add #shape_y_rotation worldtool 90
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"north"} run scoreboard players add #shape_y_rotation worldtool 270
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"west"} run scoreboard players add #shape_y_rotation worldtool 180
 execute store result entity @s Rotation[0] float 1 run scoreboard players get #shape_y_rotation worldtool
-
-scoreboard players set #lengthReached worldtool 0
-execute store result score #fullLength worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
 
 execute store result score #currentRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #currentRadius worldtool /= #2 worldtool
