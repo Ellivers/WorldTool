@@ -1,6 +1,6 @@
 # WorldTool
 
-***This branch is currently being reworked and will not function/have all features for a while. If you want to clone the current version with all features, please check out the [old branch](https://github.com/Ellivers/WorldTool/tree/old) instead.***
+***This branch is currently being reworked and will be pretty buggy and not have all features for a while. If you want to clone the current version with all features, please check out the [old branch](https://github.com/Ellivers/WorldTool/tree/old) instead.***
 <br></br>
 <br></br>
 

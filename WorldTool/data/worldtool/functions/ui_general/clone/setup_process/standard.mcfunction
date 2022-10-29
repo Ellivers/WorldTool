@@ -6,8 +6,6 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.clone\\"","storage":"worldtool:storage"}',ID:"worldtool:clone",Tags:["wt.process.clone","wt.message.clone","wt.message.non_default"]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:clone"}].Value
 
-execute if entity @s[tag=!wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.from_bottom"
-
 execute if entity @s[tag=!wt.clone.rotate] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.normal"
 execute if entity @s[tag=wt.clone.rotate] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.rotate"
 
@@ -23,6 +21,13 @@ execute store result storage worldtool:storage Processes[0].Rotation.Y int 1 run
 execute store result storage worldtool:storage Processes[0].Rotation.Z int 1 run scoreboard players get @s wt.rotZ
 
 function worldtool:process_start/common/set_process_values
+
+execute if entity @s[tag=!wt.clone.move] run function worldtool:process_start/common/lock_direction/from_bottom
+scoreboard players operation #diffY worldtool = #pos1yt worldtool
+scoreboard players operation #diffY worldtool -= #pos2yt worldtool
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[1]
+scoreboard players operation #pos1yt worldtool -= #diffY worldtool
+execute if entity @s[tag=!wt.clone.move] if score #diffY worldtool matches 1.. store result storage worldtool:storage Processes[0].Positions.CloneDestination[1] double 1 run scoreboard players get #pos1yt worldtool
 
 data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.CloneDestination
 

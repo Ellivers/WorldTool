@@ -5,10 +5,13 @@ scoreboard players set #success worldtool 1
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',ID:"worldtool:save_area",Tags:["wt.process.save_area","wt.from_bottom","wt.from_northwest","wt.no_message","wt.dont_reopen_menu"],Input:{BackupSlots:[]},Output:{TemplateList:[]}}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.save_area\\"","storage":"worldtool:storage"}',ID:"worldtool:save_area",Tags:["wt.process.save_area","wt.no_message","wt.dont_reopen_menu"],Input:{BackupSlots:[]},Output:{TemplateList:[]}}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:save_area"}].Value
 
 function worldtool:process_start/common/set_process_values
+
+function worldtool:process_start/common/lock_direction/from_bottom
+function worldtool:process_start/common/lock_direction/from_northwest
 
 execute if entity @s[tag=wt.save_area.copy] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.save_area.copy"
 execute if entity @s[tag=wt.save_area.back_up] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.save_area.back_up"
