@@ -16,6 +16,8 @@ tag @s remove wt.checkered.alternate.y
 tag @s remove wt.checkered.alternate.z
 tag @s remove wt.checkered.start_with_block
 
+tag @s remove wt.greenery.remove_current
+
 tag @s remove wt.shell.inner_block
 tag @s remove wt.shell.side.up
 tag @s remove wt.shell.side.down

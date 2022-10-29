@@ -3,7 +3,7 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s wt.ID = #ID_temp worldtool run tag @s remove wt.particles
+execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
 
 scoreboard players set #temp3 worldtool 0
 function worldtool:technical/common/get_position_counts

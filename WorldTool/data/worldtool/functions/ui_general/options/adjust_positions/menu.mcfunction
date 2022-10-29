@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/options/adjust_positions/load and by various other functions
 # Displays the menu for adjusting positions
 
+execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
+
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 

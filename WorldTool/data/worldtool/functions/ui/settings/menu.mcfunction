@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/options/menu and by setting-chaning functions
 # Displays the settings menu
 
+function worldtool:ui_general/arrange_positions/remove_particles
+
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/reopen_menu/from_submenu.back_button

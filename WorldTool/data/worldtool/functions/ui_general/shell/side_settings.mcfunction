@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/shell/menu
+# Called by worldtool:ui_general/shell/menu and various setting functions
 # Settings for the area's sides (which includes ceilings and floors)
 
 function worldtool:ui/clear_chat

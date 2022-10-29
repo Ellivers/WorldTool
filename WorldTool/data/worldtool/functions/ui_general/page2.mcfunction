@@ -8,7 +8,7 @@ function worldtool:ui/back_button
 
 function worldtool:ui_general/keep/button
 
-tellraw @s ["",{"nbt":"Translation.\"button.checkered.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.checkered.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/checkered/load"}}]
+tellraw @s ["",{"nbt":"Translation.\"button.checkered.name\"","storage": "worldtool:storage","color": "#fc03cf","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.checkered.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/checkered/load"}}," ",{"nbt":"Translation.\"button.greenery.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.greenery.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/greenery/load"}}]
 
 function worldtool:ui/close_button
 

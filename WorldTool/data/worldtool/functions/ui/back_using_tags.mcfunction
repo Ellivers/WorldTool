@@ -19,6 +19,7 @@ execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/o
 execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/paste/menu
 execute if entity @s[tag=wt.select_block.other.replace] run function worldtool:ui/select_block/replace/1
 execute if entity @s[tag=wt.menu.shell.side_settings] run function worldtool:ui_general/shell/menu
+execute if entity @s[tag=wt.menu.greenery.select_source] run function worldtool:ui_general/greenery/menu
 
 function #worldtool:addon/ui/back_using_tags
 

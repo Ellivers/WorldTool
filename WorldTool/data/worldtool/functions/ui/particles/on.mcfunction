@@ -3,7 +3,6 @@
 
 tag @s add wt.helper_particles
 
-execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/arrange_positions/load
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/options/menu
 
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/update_preview/load

@@ -95,6 +95,7 @@ data modify storage worldtool:storage Translation."info.selected_replace_block.n
 data modify storage worldtool:storage Translation."info.selected_replace_block.exclude" set value "Selected block to exclude: "
 data modify storage worldtool:storage Translation."info.item_position" set value "In order to open this menu, you must be holding the item in your hand."
 data modify storage worldtool:storage Translation."info.unavailable" set value "Unavailable"
+data modify storage worldtool:storage Translation."info.selected" set value "(Selected)"
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -202,6 +203,7 @@ data modify storage worldtool:storage Translation."button.run.name" set value "[
 data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
 data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]  "
 data modify storage worldtool:storage Translation."button.select_new_block.description" set value "Select a new block to use"
+data modify storage worldtool:storage Translation."button.change.name" set value "[Change...]"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
@@ -463,9 +465,31 @@ data modify storage worldtool:storage Translation."button.outline.size.increase.
 data modify storage worldtool:storage Translation."button.greenery.name" set value "[Greenery...]"
 data modify storage worldtool:storage Translation."button.greenery.description" set value "Place plants on top of the selected blocks"
 data modify storage worldtool:storage Translation."button.greenery.run.description" set value "Start the greenery process"
-data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.off" set value "[Replace Current Greenery: Off]"
-data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.on" set value "[Replace Current Greenery: On]"
-data modify storage worldtool:storage Translation."button.greenery.replace_current_greenery.description" set value "Remove the current plants and replace them with new ones"
+data modify storage worldtool:storage Translation."button.greenery.remove_current.off" set value "[Remove Current Greenery: Off]"
+data modify storage worldtool:storage Translation."button.greenery.remove_current.on" set value "[Remove Current Greenery: On]"
+data modify storage worldtool:storage Translation."button.greenery.remove_current.description" set value "Remove the current plants before placing new ones"
+data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
+data modify storage worldtool:storage Translation."label.greenery.current_plant_source" set value "Current plant source: "
+data modify storage worldtool:storage Translation."button.greenery.change_plant_source.description" set value "Change the source for plants to select from"
+data modify storage worldtool:storage Translation."plant_source.plains" set value "Plains"
+data modify storage worldtool:storage Translation."plant_source.sunflower_plains" set value "Sunflower Plains"
+data modify storage worldtool:storage Translation."plant_source.flower_forest" set value "Flower Forest"
+data modify storage worldtool:storage Translation."plant_source.taiga" set value "Taiga"
+data modify storage worldtool:storage Translation."plant_source.desert" set value "Desert"
+data modify storage worldtool:storage Translation."plant_source.ocean" set value "Ocean"
+data modify storage worldtool:storage Translation."plant_source.warm_ocean" set value "Warm Ocean"
+data modify storage worldtool:storage Translation."button.greenery.source.plains.name" set value "[Plains]"
+data modify storage worldtool:storage Translation."button.greenery.source.sunflower_plains.name" set value "[Sunflower Plains]"
+data modify storage worldtool:storage Translation."button.greenery.source.flower_forest.name" set value "[Flower Forest]"
+data modify storage worldtool:storage Translation."button.greenery.source.taiga.name" set value "[Taiga]"
+data modify storage worldtool:storage Translation."button.greenery.source.desert.name" set value "[Desert]"
+data modify storage worldtool:storage Translation."button.greenery.source.ocean.name" set value "[Ocean]"
+data modify storage worldtool:storage Translation."button.greenery.source.warm_ocean.name" set value "[Warm Ocean]"
+data modify storage worldtool:storage Translation."button.greenery.source.description" set value "Select this plant source"
+data modify storage worldtool:storage Translation."label.greenery.rate" set value "Plant rate: "
+data modify storage worldtool:storage Translation."label.greenery.rate.description" set value "How big of a chance there is for a plant to be placed on each block"
+data modify storage worldtool:storage Translation."button.greenery.rate.decrease.description" set value "Decrease the rate at which plants appear"
+data modify storage worldtool:storage Translation."button.greenery.rate.increase.description" set value "Increase the rate at which plants appear"
 data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
@@ -578,7 +602,6 @@ data modify storage worldtool:storage Translation."button.brush.update_block.des
 
 
 # Shape Generation Tool
-data modify storage worldtool:storage Translation."button.change_shape.name" set value "[Change...]"
 data modify storage worldtool:storage Translation."button.change_shape.description" set value "Select another shape to use"
 data modify storage worldtool:storage Translation."button.generate_shape.enabled.description" set value "Generate the selected shape"
 data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "Place a shape position in order to generate the shape"

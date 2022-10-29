@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/options/menu
 # Menu for pasting an area from the clipboard
 
+function worldtool:ui_general/arrange_positions/remove_particles
+
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 

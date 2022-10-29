@@ -29,6 +29,7 @@ tag @s remove wt.two_block_query.primary
 tag @s remove wt.two_block_query.locked_rule
 tag @s remove wt.two_block_query.text.replace
 tag @s remove wt.two_block_query.text.standard
+tag @s remove wt.two_block_query.text.greenery_replace
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
 tag @s remove wt.two_block_query.text.filter
@@ -46,6 +47,9 @@ tag @s remove wt.menu.shell
 tag @s remove wt.menu.shell.side_settings
 tag @s remove wt.menu.shell.inner_block
 tag @s remove wt.menu.outline
+tag @s remove wt.menu.greenery
+tag @s remove wt.menu.greenery.select_source
+tag @s remove wt.menu.greenery.replace
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes
