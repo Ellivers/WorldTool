@@ -13,7 +13,7 @@ execute unless predicate worldtool:brush_tool/brushes/place run tellraw @s {"nbt
 execute if predicate worldtool:brush_tool/brushes/place run tellraw @s {"nbt":"Translation.\"button.brush.place.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
 # Replace brush
-execute unless predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.replace.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/replace/set"}}
+execute unless predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.replace.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/replace/check"}}
 execute if predicate worldtool:brush_tool/brushes/replace run tellraw @s {"nbt":"Translation.\"button.brush.replace.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
 # Circle brush
@@ -27,6 +27,10 @@ execute if predicate worldtool:brush_tool/brushes/sphere run tellraw @s {"nbt":"
 # Structure brush
 execute unless predicate worldtool:brush_tool/brushes/structure run tellraw @s {"nbt":"Translation.\"button.brush.structure.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.structure.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/structure"}}
 execute if predicate worldtool:brush_tool/brushes/structure run tellraw @s {"nbt":"Translation.\"button.brush.structure.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
+
+# Greenery brush
+execute unless predicate worldtool:brush_tool/brushes/greenery run tellraw @s {"nbt":"Translation.\"button.brush.greenery.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.greenery.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/greenery"}}
+execute if predicate worldtool:brush_tool/brushes/greenery run tellraw @s {"nbt":"Translation.\"button.brush.greenery.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
 function #worldtool:addon/ui_brush/brush_list
 

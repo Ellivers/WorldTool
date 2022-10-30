@@ -5,8 +5,6 @@ tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/settings/back_button
 
-tag @s add wt.menu.settings.language
-
 tellraw @s [{"nbt":"Translation.\"info.languages\"","storage": "worldtool:storage","color": "aqua","bold": true},"\n\n"]
 
 execute if data storage worldtool:storage {Language:"worldtool:en_us"} run tellraw @s {"text":"[English (US)]","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.selected_language.description\"","storage": "worldtool:storage"}}}

@@ -28,7 +28,8 @@ data modify storage worldtool:storage Translation."lore.selected_brush.place" se
 data modify storage worldtool:storage Translation."lore.selected_brush.replace" set value "Selected brush: Replace"
 data modify storage worldtool:storage Translation."lore.selected_brush.sphere" set value "Selected brush: Sphere"
 data modify storage worldtool:storage Translation."lore.selected_brush.circle" set value "Selected brush: Circle"
-data modify storage worldtool:storage Translation."lore.selected_brush.structure" set value "Selected brush: Paint"
+data modify storage worldtool:storage Translation."lore.selected_brush.structure" set value "Selected brush: Structure"
+data modify storage worldtool:storage Translation."lore.selected_brush.greenery" set value "Selected brush: Greenery"
 data modify storage worldtool:storage Translation."item.shape_tool" set value "Shape Generation Tool"
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set value '"& open the menu"'
@@ -38,6 +39,7 @@ data modify storage worldtool:storage Translation."lore.shape_tool.continuous.2"
 
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
 data modify storage worldtool:storage Translation."lore.selected_structure" set value "Selected structure:"
+data modify storage worldtool:storage Translation."lore.current_plant_source" set value "Current plant source:"
 
 # Progress bar
 data modify storage worldtool:storage Translation."progress.default" set value "WorldTool Progress"
@@ -54,6 +56,7 @@ data modify storage worldtool:storage Translation."process.load_area" set value 
 data modify storage worldtool:storage Translation."process.checkered" set value "Fill Checkered Pattern"
 data modify storage worldtool:storage Translation."process.shell" set value "Shell"
 data modify storage worldtool:storage Translation."process.outline" set value "Outline Area"
+data modify storage worldtool:storage Translation."process.greenery" set value "Greenery"
 
 data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
@@ -424,6 +427,7 @@ data modify storage worldtool:storage Translation."button.randomize.continue.des
 data modify storage worldtool:storage Translation."button.checkered.name" set value "[Checkered...]"
 data modify storage worldtool:storage Translation."button.checkered.description" set value "Place a checkered pattern of blocks"
 data modify storage worldtool:storage Translation."button.checkered.run.description" set value "Run the checkered pattern"
+data modify storage worldtool:storage Translation."label.checkered.alternating_axes" set value "Alternating axes: "
 data modify storage worldtool:storage Translation."button.checkered.alternate_x.description" set value "Alternate the X axis"
 data modify storage worldtool:storage Translation."button.checkered.alternate_y.description" set value "Alternate the Y axis"
 data modify storage worldtool:storage Translation."button.checkered.alternate_z.description" set value "Alternate the Z axis"
@@ -469,8 +473,8 @@ data modify storage worldtool:storage Translation."button.greenery.remove_curren
 data modify storage worldtool:storage Translation."button.greenery.remove_current.on" set value "[Remove Current Greenery: On]"
 data modify storage worldtool:storage Translation."button.greenery.remove_current.description" set value "Remove the current plants before placing new ones"
 data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
-data modify storage worldtool:storage Translation."label.greenery.current_plant_source" set value "Current plant source: "
-data modify storage worldtool:storage Translation."button.greenery.change_plant_source.description" set value "Change the source for plants to select from"
+data modify storage worldtool:storage Translation."info.greenery.current_plant_source" set value "Current plant source: "
+data modify storage worldtool:storage Translation."button.greenery.change_plant_source.description" set value "Change the source from which to get plants from"
 data modify storage worldtool:storage Translation."plant_source.plains" set value "Plains"
 data modify storage worldtool:storage Translation."plant_source.sunflower_plains" set value "Sunflower Plains"
 data modify storage worldtool:storage Translation."plant_source.flower_forest" set value "Flower Forest"
@@ -525,6 +529,8 @@ data modify storage worldtool:storage Translation."button.brush.replace_block.na
 data modify storage worldtool:storage Translation."button.brush.replace_block.description" set value "Select a new block to replace"
 data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]  "
 data modify storage worldtool:storage Translation."button.brush.select_structure.description" set value "Select a new structure to place"
+data modify storage worldtool:storage Translation."button.brush.select_plant_source.name" set value "[Select Plant Source...]  "
+data modify storage worldtool:storage Translation."button.brush.select_plant_source.description" set value "Select the source from which to get plants from"
 data modify storage worldtool:storage Translation."button.select_structure.name" set value "<Select a Structure to Place>"
 data modify storage worldtool:storage Translation."info.selected_structure" set value "Selected Structure: "
 
@@ -535,6 +541,7 @@ data modify storage worldtool:storage Translation."info.selected_brush.replace" 
 data modify storage worldtool:storage Translation."info.selected_brush.sphere" set value "Selected brush: Sphere"
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Structure"
+data modify storage worldtool:storage Translation."info.selected_brush.greenery" set value "Selected brush: Greenery"
 
 data modify storage worldtool:storage Translation."button.brush.paint.name" set value "[Paint]"
 data modify storage worldtool:storage Translation."button.brush.paint.description" set value "Paint existing blocks"
@@ -548,6 +555,8 @@ data modify storage worldtool:storage Translation."button.brush.circle.name" set
 data modify storage worldtool:storage Translation."button.brush.circle.description" set value "Place a circle"
 data modify storage worldtool:storage Translation."button.brush.structure.name" set value "[Structure]"
 data modify storage worldtool:storage Translation."button.brush.structure.description" set value "Place a structure"
+data modify storage worldtool:storage Translation."button.brush.greenery.name" set value "[Greenery]"
+data modify storage worldtool:storage Translation."button.brush.greenery.description" set value "Place plants on supported plant blocks"
 data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
 
 data modify storage worldtool:storage Translation."info.selected_brush" set value "Selected brush: "
@@ -557,6 +566,7 @@ data modify storage worldtool:storage Translation."brush.place" set value "Place
 data modify storage worldtool:storage Translation."brush.replace" set value "Replace"
 data modify storage worldtool:storage Translation."brush.sphere" set value "Sphere"
 data modify storage worldtool:storage Translation."brush.circle" set value "Circle"
+data modify storage worldtool:storage Translation."brush.structure" set value "Structure"
 data modify storage worldtool:storage Translation."brush.structure" set value "Structure"
 
 

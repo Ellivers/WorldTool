@@ -8,6 +8,7 @@ scoreboard players operation #radius worldtool /= #2 worldtool
 execute if predicate worldtool:brush_tool/brushes/paint run function worldtool:process_start/brush/start/normal/setup_process/paint
 execute if predicate worldtool:brush_tool/brushes/place run function worldtool:process_start/brush/start/normal/setup_process/place
 execute if predicate worldtool:brush_tool/brushes/replace run function worldtool:process_start/brush/start/normal/setup_process/replace
+execute if predicate worldtool:brush_tool/brushes/greenery run function worldtool:process_start/brush/start/normal/setup_process/greenery
 
 function #worldtool:addon/use_brush/normal_start/processes
 

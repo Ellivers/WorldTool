@@ -20,6 +20,7 @@ execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_gen
 execute if entity @s[tag=wt.select_block.other.replace] run function worldtool:ui/select_block/replace/1
 execute if entity @s[tag=wt.menu.shell.side_settings] run function worldtool:ui_general/shell/menu
 execute if entity @s[tag=wt.menu.greenery.select_source] run function worldtool:ui_general/greenery/menu
+execute if entity @s[tag=wt.menu.brush.greenery.select_source] run function worldtool:ui_brush/select_plant_source/selected
 
 function #worldtool:addon/ui/back_using_tags
 

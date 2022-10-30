@@ -17,6 +17,7 @@ tag @s remove wt.checkered.alternate.z
 tag @s remove wt.checkered.start_with_block
 
 tag @s remove wt.greenery.remove_current
+function worldtool:ui_general/greenery/plant_sources/remove_all
 
 tag @s remove wt.shell.inner_block
 tag @s remove wt.shell.side.up
