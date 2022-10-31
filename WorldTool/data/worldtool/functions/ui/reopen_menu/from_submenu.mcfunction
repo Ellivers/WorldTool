@@ -9,5 +9,6 @@ execute if entity @s[tag=wt.menu.paste_area] run function worldtool:ui_general/o
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/checkered/menu
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/options/menu
+execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/menu
 
 function #worldtool:addon/ui/reopen_menu/from_submenu

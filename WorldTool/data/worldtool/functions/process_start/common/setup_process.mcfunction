@@ -16,6 +16,7 @@ execute if entity @s[tag=wt.setup.checkered] run function worldtool:ui_general/c
 execute if entity @s[tag=wt.setup.shell] run function worldtool:ui_general/shell/setup_process
 execute if entity @s[tag=wt.setup.outline] run function worldtool:ui_general/outline/setup_process
 execute if entity @s[tag=wt.setup.greenery] run function worldtool:ui_general/greenery/setup_process
+execute if entity @s[tag=wt.setup.shatter] run function worldtool:ui_general/shatter/setup_process
 
 function #worldtool:addon/process_start/setup_process
 

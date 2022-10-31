@@ -496,6 +496,13 @@ data modify storage worldtool:storage Translation."button.greenery.rate.decrease
 data modify storage worldtool:storage Translation."button.greenery.rate.increase.description" set value "Increase the rate at which plants appear"
 data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
 
+data modify storage worldtool:storage Translation."button.shatter.name" set value "[Shatter...]"
+data modify storage worldtool:storage Translation."button.shatter.description" set value "Destroy blocks and replace them with a new block"
+data modify storage worldtool:storage Translation."button.shatter.drop_items.off" set value "[Drop Items: Off]"
+data modify storage worldtool:storage Translation."button.shatter.drop_items.on" set value "[Drop Items: On]"
+data modify storage worldtool:storage Translation."button.shatter.drop_items.description" set value "Toggle dropping items when destroying blocks"
+data modify storage worldtool:storage Translation."button.shatter.replace.description" set value "Choose which block(s) to destroy and replace with a new block"
+
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
 data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show assisting particles"

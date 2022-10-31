@@ -11,5 +11,7 @@ execute if entity @s[tag=wt.menu.copy_area] run function worldtool:ui/wait
 execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/checkered/menu
 execute if entity @s[tag=wt.menu.shell] run function worldtool:ui_general/shell/menu
 execute if entity @s[tag=wt.menu.outline] run function worldtool:ui_general/outline/menu
+execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/menu
+execute if entity @s[tag=wt.menu.shatter.replace] run function worldtool:ui_general/shatter/menu
 
 function #worldtool:addon/ui/reopen_menu/after_starting

@@ -51,6 +51,8 @@ tag @s remove wt.menu.greenery
 tag @s remove wt.menu.greenery.select_source
 tag @s remove wt.menu.brush.greenery.select_source
 tag @s remove wt.menu.greenery.replace
+tag @s remove wt.menu.shatter
+tag @s remove wt.menu.shatter.replace
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes

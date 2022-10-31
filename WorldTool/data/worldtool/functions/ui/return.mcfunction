@@ -9,6 +9,7 @@ execute if entity @s[tag=wt.menu.randomize.replace] run function worldtool:ui_ge
 execute if entity @s[tag=wt.menu.checkered.replace] run function worldtool:ui_general/checkered/menu
 execute if entity @s[tag=wt.menu.shell.inner_block] run function worldtool:ui_general/shell/menu
 execute if entity @s[tag=wt.menu.greenery.replace] run function worldtool:ui_general/greenery/menu
+execute if entity @s[tag=wt.menu.shatter.replace] run function worldtool:ui_general/shatter/start
 execute if entity @s[tag=wt.brush.first_replace] run function worldtool:ui_brush/select_brush/replace/set
 execute if entity @s[tag=wt.brush.select_block] run function worldtool:ui_brush/menu
 execute if entity @s[tag=wt.shapes.select_block] run function worldtool:ui_shapes/menu
