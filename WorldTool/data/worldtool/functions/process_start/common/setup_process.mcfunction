@@ -13,8 +13,8 @@ execute if entity @s[tag=wt.setup.randomize] run function worldtool:ui_general/r
 execute if entity @s[tag=wt.setup.save_area] run function worldtool:technical/save_load/setup_save_process
 execute if entity @s[tag=wt.setup.load_area] run function worldtool:technical/save_load/setup_load_process
 execute if entity @s[tag=wt.setup.checkered] run function worldtool:ui_general/checkered/setup_process
-execute if entity @s[tag=wt.setup.shell] run function worldtool:ui_general/shell/setup_process
-execute if entity @s[tag=wt.setup.outline] run function worldtool:ui_general/outline/setup_process
+execute if entity @s[tag=wt.setup.shell] run function worldtool:ui_general/shell/setup/process
+execute if entity @s[tag=wt.setup.outline] run function worldtool:ui_general/outline/setup/process
 execute if entity @s[tag=wt.setup.greenery] run function worldtool:ui_general/greenery/setup_process
 execute if entity @s[tag=wt.setup.shatter] run function worldtool:ui_general/shatter/setup_process
 

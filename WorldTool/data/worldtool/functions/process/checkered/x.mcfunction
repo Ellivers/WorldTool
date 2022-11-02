@@ -1,4 +1,4 @@
-scoreboard players add #writerPosX worldtool 1
+scoreboard players add #processPosX worldtool 1
 
 execute if entity @s[tag=wt.process.checkered.alternate.x] store result score #placeBlock worldtool if score #placeBlock worldtool matches 0
 

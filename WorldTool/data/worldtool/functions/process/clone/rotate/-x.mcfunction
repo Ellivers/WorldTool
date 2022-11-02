@@ -1,4 +1,4 @@
-scoreboard players remove #writerPosX worldtool 1
+scoreboard players remove #processPosX worldtool 1
 
 scoreboard players set #offsetX worldtool -1
 scoreboard players set #offsetY worldtool 0

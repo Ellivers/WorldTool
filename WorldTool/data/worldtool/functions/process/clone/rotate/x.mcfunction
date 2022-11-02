@@ -1,4 +1,4 @@
-scoreboard players add #writerPosX worldtool 1
+scoreboard players add #processPosX worldtool 1
 
 scoreboard players set #offsetX worldtool 1
 scoreboard players set #offsetY worldtool 0

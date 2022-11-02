@@ -26,53 +26,53 @@ def a(string):
 
 contents = [
     a(
-        "scoreboard players add #writerPosX worldtool 1"
+        "scoreboard players add #processPosX worldtool 1"
         "\ntp ~1 ~ ~"
         "\nexecute positioned ~1 ~ ~ run function {path}/{name}/main"
         "\n"
     ),
     a(
-        "scoreboard players remove #writerPosX worldtool 1"
+        "scoreboard players remove #processPosX worldtool 1"
         "\ntp ~-1 ~ ~"
         "\nexecute positioned ~-1 ~ ~ run function {path}/{name}/main"
         "\n"
     ),
     a(
         "scoreboard players operation #pos2z worldtool = #pos1z worldtool"
-        "\nscoreboard players operation #pos1z worldtool = #writerPosZ worldtool"
+        "\nscoreboard players operation #pos1z worldtool = #processPosZ worldtool"
         "\nscoreboard players operation #pos2x worldtool = #pos1x worldtool"
-        "\nscoreboard players operation #pos1x worldtool = #writerPosX worldtool"
+        "\nscoreboard players operation #pos1x worldtool = #processPosX worldtool"
         "\n"
-        "\nscoreboard players add #writerPosY worldtool 1"
+        "\nscoreboard players add #processPosY worldtool 1"
         "\ntp ~ ~1 ~"
         "\nexecute positioned ~ ~1 ~ run function {path}/{name}/main"
         "\n"
     ),
     a(
         "scoreboard players operation #pos2z worldtool = #pos1z worldtool"
-        "\nscoreboard players operation #pos1z worldtool = #writerPosZ worldtool"
+        "\nscoreboard players operation #pos1z worldtool = #processPosZ worldtool"
         "\nscoreboard players operation #pos2x worldtool = #pos1x worldtool"
-        "\nscoreboard players operation #pos1x worldtool = #writerPosX worldtool"
+        "\nscoreboard players operation #pos1x worldtool = #processPosX worldtool"
         "\n"
-        "\nscoreboard players remove #writerPosY worldtool 1"
+        "\nscoreboard players remove #processPosY worldtool 1"
         "\ntp ~ ~-1 ~"
         "\nexecute positioned ~ ~-1 ~ run function {path}/{name}/main"
         "\n"
     ),
     a(
         "scoreboard players operation #pos2x worldtool = #pos1x worldtool"
-        "\nscoreboard players operation #pos1x worldtool = #writerPosX worldtool"
+        "\nscoreboard players operation #pos1x worldtool = #processPosX worldtool"
         "\n"
-        "\nscoreboard players add #writerPosZ worldtool 1"
+        "\nscoreboard players add #processPosZ worldtool 1"
         "\ntp ~ ~ ~1"
         "\nexecute positioned ~ ~ ~1 run function {path}/{name}/main"
         "\n"
     ),
     a(
         "scoreboard players operation #pos2x worldtool = #pos1x worldtool"
-        "\nscoreboard players operation #pos1x worldtool = #writerPosX worldtool"
+        "\nscoreboard players operation #pos1x worldtool = #processPosX worldtool"
         "\n"
-        "\nscoreboard players remove #writerPosZ worldtool 1"
+        "\nscoreboard players remove #processPosZ worldtool 1"
         "\ntp ~ ~ ~-1"
         "\nexecute positioned ~ ~ ~-1 run function {path}/{name}/main"
         "\n"
@@ -85,15 +85,15 @@ contents = [
         "\n"
         "\n# PROCESS-SPECIFIC COMMANDS HERE"
         "\n"
-        "\n# Move the writer"
-        "\nexecute if score #writerPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/x"
-        "\nexecute if score #writerPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-x"
+        "\n# Move the process entity"
+        "\nexecute if score #processPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/x"
+        "\nexecute if score #processPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-x"
         "\n"
-        "\nexecute if score #writerPosX worldtool = #pos2x worldtool if score #writerPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/z"
-        "\nexecute if score #writerPosX worldtool = #pos2x worldtool if score #writerPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-z"
+        "\nexecute if score #processPosX worldtool = #pos2x worldtool if score #processPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/z"
+        "\nexecute if score #processPosX worldtool = #pos2x worldtool if score #processPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-z"
         "\n"
-        "\nexecute if score #writerPosX worldtool = #pos2x worldtool if score #writerPosZ worldtool = #pos2z worldtool if score #writerPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/y"
-        "\nexecute if score #writerPosX worldtool = #pos2x worldtool if score #writerPosZ worldtool = #pos2z worldtool if score #writerPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-y"
+        "\nexecute if score #processPosX worldtool = #pos2x worldtool if score #processPosZ worldtool = #pos2z worldtool if score #processPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/y"
+        "\nexecute if score #processPosX worldtool = #pos2x worldtool if score #processPosZ worldtool = #pos2z worldtool if score #processPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-y"
         "\n"
     )
 ]

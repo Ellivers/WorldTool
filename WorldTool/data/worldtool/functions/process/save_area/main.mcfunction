@@ -1,11 +1,11 @@
 # Called by various functions
 # The process functionality for saving an area
 
-scoreboard players operation #diffX worldtool = #writerPosX worldtool
+scoreboard players operation #diffX worldtool = #processPosX worldtool
 scoreboard players operation #diffX worldtool -= #pos1xo worldtool
-scoreboard players operation #diffY worldtool = #writerPosY worldtool
+scoreboard players operation #diffY worldtool = #processPosY worldtool
 scoreboard players operation #diffY worldtool -= #pos1yo worldtool
-scoreboard players operation #diffZ worldtool = #writerPosZ worldtool
+scoreboard players operation #diffZ worldtool = #processPosZ worldtool
 scoreboard players operation #diffZ worldtool -= #pos1zo worldtool
 
 data modify storage worldtool:storage Processes[-1].Output.TemplateList append value {Slot:"",Pos:[0,0,0]}
@@ -19,13 +19,13 @@ execute unless score #block2Placed worldtool matches 1 store success score #bloc
 
 # Get the remaining space
 scoreboard players operation #sizeX worldtool = #pos2xo worldtool
-scoreboard players operation #sizeX worldtool -= #writerPosX worldtool
+scoreboard players operation #sizeX worldtool -= #processPosX worldtool
 scoreboard players add #sizeX worldtool 1
 scoreboard players operation #sizeY worldtool = #pos2yo worldtool
-scoreboard players operation #sizeY worldtool -= #writerPosY worldtool
+scoreboard players operation #sizeY worldtool -= #processPosY worldtool
 scoreboard players add #sizeY worldtool 1
 scoreboard players operation #sizeZ worldtool = #pos2zo worldtool
-scoreboard players operation #sizeZ worldtool -= #writerPosZ worldtool
+scoreboard players operation #sizeZ worldtool -= #processPosZ worldtool
 scoreboard players add #sizeZ worldtool 1
 
 scoreboard players operation #sizeX worldtool < $templateSizeLimit worldtool
@@ -59,28 +59,28 @@ scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
 
 scoreboard players operation #sizeX worldtool = #pos2x worldtool
-scoreboard players operation #sizeX worldtool -= #writerPosX worldtool
+scoreboard players operation #sizeX worldtool -= #processPosX worldtool
 execute if score #sizeX worldtool matches ..-1 run scoreboard players operation #sizeX worldtool *= #-1 worldtool
 scoreboard players add #sizeX worldtool 1
 scoreboard players operation #sizeY worldtool = #pos2y worldtool
-scoreboard players operation #sizeY worldtool -= #writerPosY worldtool
+scoreboard players operation #sizeY worldtool -= #processPosY worldtool
 execute if score #sizeY worldtool matches ..-1 run scoreboard players operation #sizeY worldtool *= #-1 worldtool
 scoreboard players add #sizeY worldtool 1
 scoreboard players operation #sizeZ worldtool = #pos2z worldtool
-scoreboard players operation #sizeZ worldtool -= #writerPosZ worldtool
+scoreboard players operation #sizeZ worldtool -= #processPosZ worldtool
 execute if score #sizeZ worldtool matches ..-1 run scoreboard players operation #sizeZ worldtool *= #-1 worldtool
 scoreboard players add #sizeZ worldtool 1
 
-execute if score #writerPosX worldtool < #pos2x worldtool if score #sizeX worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/x
-execute if score #writerPosX worldtool > #pos2x worldtool if score #sizeX worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-x
+execute if score #processPosX worldtool < #pos2x worldtool if score #sizeX worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/x
+execute if score #processPosX worldtool > #pos2x worldtool if score #sizeX worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-x
 
-execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #writerPosZ worldtool < #pos2z worldtool if score #sizeZ worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/z
-execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #writerPosZ worldtool > #pos2z worldtool if score #sizeZ worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-z
+execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #processPosZ worldtool < #pos2z worldtool if score #sizeZ worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/z
+execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #processPosZ worldtool > #pos2z worldtool if score #sizeZ worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-z
 
-execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #writerPosY worldtool < #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/y
-execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #writerPosY worldtool > #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-y
+execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #processPosY worldtool < #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/y
+execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #processPosY worldtool > #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-y
 
 # End the process
-scoreboard players operation #writerPosX worldtool = #pos2x worldtool
-scoreboard players operation #writerPosY worldtool = #pos2y worldtool
-scoreboard players operation #writerPosZ worldtool = #pos2z worldtool
+scoreboard players operation #processPosX worldtool = #pos2x worldtool
+scoreboard players operation #processPosY worldtool = #pos2y worldtool
+scoreboard players operation #processPosZ worldtool = #pos2z worldtool

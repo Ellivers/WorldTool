@@ -1,9 +1,9 @@
 # Called by various shape generation initiation functions
 # Common setup for shapes
 
-scoreboard players set #writerPosX worldtool 0
-scoreboard players set #writerPosY worldtool 0
-scoreboard players set #writerPosZ worldtool 0
+scoreboard players set #processPosX worldtool 0
+scoreboard players set #processPosY worldtool 0
+scoreboard players set #processPosZ worldtool 0
 scoreboard players set #pos2x worldtool 1
 scoreboard players set #pos2y worldtool 1
 scoreboard players set #pos2z worldtool 1

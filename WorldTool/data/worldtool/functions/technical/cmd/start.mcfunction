@@ -7,6 +7,5 @@ scoreboard players set #commonStart worldtool 0
 execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:common"} run scoreboard players set #commonStart worldtool 1
 execute unless data storage worldtool:storage Temp.Process.StartType run scoreboard players set #commonStart worldtool 1
 execute if score #commonStart worldtool matches 1 run function worldtool:process_start/common/start
-execute if data storage worldtool:storage Temp.Process{StartType:"worldtool:common"} run function worldtool:process_start/start
 
 function #worldtool:addon/cmd/start

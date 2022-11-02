@@ -28,6 +28,6 @@ data remove storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[
 execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/load_area/main
 
 # End the process
-scoreboard players operation #writerPosX worldtool = #pos2x worldtool
-scoreboard players operation #writerPosY worldtool = #pos2y worldtool
-scoreboard players operation #writerPosZ worldtool = #pos2z worldtool
+scoreboard players operation #processPosX worldtool = #pos2x worldtool
+scoreboard players operation #processPosY worldtool = #pos2y worldtool
+scoreboard players operation #processPosZ worldtool = #pos2z worldtool

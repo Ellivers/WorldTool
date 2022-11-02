@@ -15,8 +15,8 @@ execute store result storage worldtool:storage Processes[0].Rotation.Y int 1 run
 # Load area process
 
 data modify storage worldtool:storage Temp.AdditionalData set value {Input:{AreaData:{TemplateList:[],Pos:[0d,0d,0d]},AdditionalData:{rotation:"NONE",mirror:"NONE"}},AffectedArea:{From:[0d,0d,0d],To:[0d,0d,0d]}}
-data modify storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos set from storage worldtool:storage Processes[0].Positions.CloneDestination
-data modify storage worldtool:storage Temp.AdditionalData.AffectedArea.From set from storage worldtool:storage Processes[0].Positions.CloneDestination
+data modify storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos set from storage worldtool:storage Processes[0].Positions.Secondary
+data modify storage worldtool:storage Temp.AdditionalData.AffectedArea.From set from storage worldtool:storage Processes[0].Positions.Secondary
 
 scoreboard players set #tempRotX worldtool 0
 execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Rotation.Y
@@ -43,9 +43,9 @@ scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
 
 function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
 
-execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[0]
-execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[1]
-execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.CloneDestination[2]
+execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
+execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[2]
 
 scoreboard players operation #pos2xt worldtool = #pos1xt worldtool
 scoreboard players operation #pos2xt worldtool += #offsetX worldtool

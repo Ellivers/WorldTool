@@ -1,4 +1,4 @@
-# Called by worldtool:process/shapes/cone_vertical/load
+# Called by worldtool:process_start/variables
 # Initiates a vertical cone
 
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"up"} run tag @s add wt.orientation.up
@@ -9,7 +9,7 @@ execute store result score #shapeDegrees worldtool run data get storage worldtoo
 scoreboard players set #lengthReached worldtool 0
 execute store result score #fullLength worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Length
 
-function worldtool:process/shapes/common_init
+function worldtool:process_start/shapes/init/common
 
 execute store result score #currentRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #currentRadius worldtool /= #2 worldtool
@@ -21,5 +21,3 @@ scoreboard players operation #shrinkPerCircle worldtool /= #length_temp worldtoo
 scoreboard players operation #shrinkPerCircle worldtool *= #-1 worldtool
 
 scoreboard players set #shapeRaycastType worldtool 2
-
-function worldtool:process/shapes/cone_vertical/loop

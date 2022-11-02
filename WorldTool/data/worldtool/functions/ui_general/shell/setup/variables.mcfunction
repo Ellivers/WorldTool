@@ -1,7 +1,7 @@
-# Called by worldtool:process/load.tags
-# Sets the bounds in which lines should be placed
+# Called by worldtool:process_start/variables
+# Sets veriables used by the shell process
 
-execute store result score #temp worldtool run data get storage worldtool:storage Processes[-1].Input.Size
+execute store result score #temp worldtool run data get storage worldtool:storage Processes[-1].Input.SideSize
 execute if score #temp worldtool matches ..0 run scoreboard players set #temp worldtool 1
 scoreboard players remove #temp worldtool 1
 
@@ -39,5 +39,3 @@ scoreboard players operation #pos2yi worldtool = #pos2yt worldtool
 scoreboard players operation #pos2yi worldtool += #temp worldtool
 scoreboard players operation #pos2zi worldtool = #pos2zt worldtool
 scoreboard players operation #pos2zi worldtool += #temp worldtool
-
-function worldtool:process/outline/main

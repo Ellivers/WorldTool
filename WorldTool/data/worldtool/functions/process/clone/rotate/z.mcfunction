@@ -1,7 +1,7 @@
 scoreboard players operation #pos2x worldtool = #pos1x worldtool
-scoreboard players operation #pos1x worldtool = #writerPosX worldtool
+scoreboard players operation #pos1x worldtool = #processPosX worldtool
 
-scoreboard players add #writerPosZ worldtool 1
+scoreboard players add #processPosZ worldtool 1
 
 scoreboard players set #offsetX worldtool 0
 scoreboard players set #offsetY worldtool 0

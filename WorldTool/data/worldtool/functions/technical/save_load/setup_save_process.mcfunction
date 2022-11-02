@@ -10,6 +10,10 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 function worldtool:process_start/common/set_process_values
 
+execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Temp.AffectedArea.From
+execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.2 set from storage worldtool:storage Temp.AffectedArea.To
+data remove storage worldtool:storage Temp.AffectedArea
+
 function worldtool:process_start/common/lock_direction/from_bottom
 function worldtool:process_start/common/lock_direction/from_northwest
 
@@ -19,10 +23,6 @@ execute if entity @s[tag=wt.save_area.clone] run data modify storage worldtool:s
 
 function #worldtool:addon/save_load/setup_save_process
 function worldtool:technical/save_load/remove_save_tags
-
-execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Temp.AffectedArea.From
-execute if data storage worldtool:storage Temp.AffectedArea run data modify storage worldtool:storage Processes[0].Positions.2 set from storage worldtool:storage Temp.AffectedArea.To
-data remove storage worldtool:storage Temp.AffectedArea
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
