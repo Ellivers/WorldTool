@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/randomize/set_source/confirm
-# Shows an exclude menu
+# Displays the exclude menu
 
 tag @s remove wt.menu.randomize.set_source.confirm
 tag @s add wt.menu.randomize.exclude

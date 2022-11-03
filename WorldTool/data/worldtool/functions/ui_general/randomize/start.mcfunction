@@ -3,3 +3,6 @@
 
 tag @s add wt.setup.randomize
 function worldtool:process_start/common/load
+
+tag @s add wt.no_space
+function worldtool:ui/anti_feedback_chat_message/load

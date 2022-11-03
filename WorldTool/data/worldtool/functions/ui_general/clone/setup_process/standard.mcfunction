@@ -18,9 +18,9 @@ execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:st
 execute if entity @s[tag=wt.clone.mirror.y] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.mirror.y"
 execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.mirror.z"
 
-execute store result storage worldtool:storage Processes[0].Rotation.X int 1 run scoreboard players get @s wt.rotX
-execute store result storage worldtool:storage Processes[0].Rotation.Y int 1 run scoreboard players get @s wt.rotY
-execute store result storage worldtool:storage Processes[0].Rotation.Z int 1 run scoreboard players get @s wt.rotZ
+execute store result storage worldtool:storage Processes[0].Input.Rotation.X int 1 run scoreboard players get @s wt.rotX
+execute store result storage worldtool:storage Processes[0].Input.Rotation.Y int 1 run scoreboard players get @s wt.rotY
+execute store result storage worldtool:storage Processes[0].Input.Rotation.Z int 1 run scoreboard players get @s wt.rotZ
 
 function worldtool:process_start/common/set_process_values
 

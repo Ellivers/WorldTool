@@ -1,8 +1,7 @@
 # Called by worldtool:process_end/load
 # Displays how many blocks were affected by the process
 
-tag @s add wt.message.default
-execute if data storage worldtool:storage {Temp:{Tags:["wt.message.non_default"]}} run tag @s remove wt.message.default
+execute unless data storage worldtool:storage {Temp:{Tags:["wt.message.non_default"]}} run tag @s add wt.message.default
 
 function worldtool:ui/reopen_menu/after_process
 

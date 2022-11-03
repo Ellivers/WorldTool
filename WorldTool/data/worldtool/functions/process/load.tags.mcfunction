@@ -18,6 +18,7 @@ execute if entity @s[tag=wt.process.shell] run function worldtool:process/shell/
 execute if entity @s[tag=wt.process.outline] run function worldtool:process/outline/main
 execute if entity @s[tag=wt.process.greenery] run function worldtool:process/greenery/main
 execute if entity @s[tag=wt.process.shatter] run function worldtool:process/shatter/main
+execute if entity @s[tag=wt.process.repeat] run function worldtool:process/repeat/main
 
 execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/paint/main
 execute if entity @s[tag=wt.process.replace_brush] run function worldtool:process/brush/replace/main

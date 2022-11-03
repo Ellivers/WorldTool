@@ -1,5 +1,5 @@
-# Called by worldtool:ui_general/page1.display and worldtool:ui/return.back
-# Shows the replace menu
+# Called by worldtool:ui_general/page1 and worldtool:ui/return.back
+# Displays the replace menu
 
 function worldtool:ui/remove_menu_tags
 tag @s add wt.menu.replace

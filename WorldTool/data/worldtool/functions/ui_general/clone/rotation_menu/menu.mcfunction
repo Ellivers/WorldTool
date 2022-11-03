@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/clone/rotation_menu/load and rotation setting functions
-# Shows the clone rotation menu
+# Displays the clone rotation menu
 
 execute unless score @s wt.rotX matches -2147483648..2147483647 run scoreboard players set @s wt.rotX 0
 execute unless score @s wt.rotY matches -2147483648..2147483647 run scoreboard players set @s wt.rotY 0

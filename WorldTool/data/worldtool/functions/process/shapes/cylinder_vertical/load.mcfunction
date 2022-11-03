@@ -8,4 +8,4 @@ execute if score #shapeGenStatus_temp worldtool matches 0 unless score #blocksCh
 execute if score #shapeGenStatus_temp worldtool matches 0 unless score #blocksChecked worldtool >= #blocksPerTick worldtool unless score #lengthReached worldtool >= #fullLength worldtool if entity @s[tag=wt.orientation.down] positioned ^ ^-1 ^ run function worldtool:process/shapes/cylinder_vertical/loop
 execute if score #shapeGenStatus_temp worldtool matches 1 run function worldtool:process/shapes/cylinder_vertical/loop
 
-execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/shapes/complete
+execute unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/complete

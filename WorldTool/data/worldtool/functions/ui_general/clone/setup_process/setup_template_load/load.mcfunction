@@ -2,7 +2,7 @@
 # Sets up the area data for pasting the saved area
 
 scoreboard players set #tempRotX worldtool 0
-execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Rotation.Y
+execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Y
 scoreboard players set #tempRotZ worldtool 0
 
 execute store success score #mirrorX worldtool if entity @s[tag=wt.clone.mirror.x]

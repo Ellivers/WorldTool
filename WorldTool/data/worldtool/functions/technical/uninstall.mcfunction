@@ -12,9 +12,6 @@ scoreboard objectives remove wt.use_coas
 scoreboard objectives remove wt.drop_coas
 scoreboard objectives remove wt.ID
 scoreboard objectives remove wt.chance
-scoreboard objectives remove wt.rotX
-scoreboard objectives remove wt.rotY
-scoreboard objectives remove wt.rotZ
 scoreboard objectives remove wt.pos1x
 scoreboard objectives remove wt.pos1y
 scoreboard objectives remove wt.pos1z
@@ -22,7 +19,13 @@ scoreboard objectives remove wt.pos2x
 scoreboard objectives remove wt.pos2y
 scoreboard objectives remove wt.pos2z
 scoreboard objectives remove wt.greenery_rate
-scoreboard objectives remove wt.thickness
+scoreboard objectives remove wt.size
+scoreboard objectives remove wt.rotX
+scoreboard objectives remove wt.rotY
+scoreboard objectives remove wt.rotZ
+scoreboard objectives remove wt.amountX
+scoreboard objectives remove wt.amountY
+scoreboard objectives remove wt.amountZ
 
 forceload remove 27450 19
 

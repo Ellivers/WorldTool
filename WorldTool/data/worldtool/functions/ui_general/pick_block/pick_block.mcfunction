@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/pick_block/primary, worldtool:ui_general/pick_block/secondary, and various [Pick block] buttons in the general tool's menu
-# Shows the pick block message and adds a tag that lets you pick a block
+# Displays the pick block message and adds a tag that lets you pick a block
 
 execute unless predicate worldtool:tools/general run function worldtool:ui_general/pick_block/back
 execute unless predicate worldtool:tools/general run function worldtool:ui/error/not_holding_general_tool

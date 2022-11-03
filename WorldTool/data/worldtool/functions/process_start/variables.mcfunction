@@ -48,12 +48,13 @@ scoreboard players remove #plantRate worldtool 1
 
 execute store result score #tileDropsEnabled worldtool run gamerule doTileDrops
 
-execute store result score #rotationX worldtool run data get storage worldtool:storage Processes[-1].Rotation.X
-execute store result score #rotationY worldtool run data get storage worldtool:storage Processes[-1].Rotation.Y
-execute store result score #rotationZ worldtool run data get storage worldtool:storage Processes[-1].Rotation.Z
+execute store result score #rotationX worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.X
+execute store result score #rotationY worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Y
+execute store result score #rotationZ worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Z
 
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:shell"} run function worldtool:ui_general/shell/setup/variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:outline"} run function worldtool:ui_general/outline/setup/variables
+execute if data storage worldtool:storage Temp.Process{ID:"worldtool:repeat"} run function worldtool:ui_general/repeat/setup/variables
 
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.vertical"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cylinder_vertical
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.horizontal"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cylinder_horizontal

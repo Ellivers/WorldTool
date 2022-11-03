@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/page_1 and worldtool:ui_general/randomize/menu
+# Called by worldtool:ui_general/page1 and worldtool:ui_general/randomize/menu
 # Initiates the randomization menu
 
 tag @s remove wt.randomize.replace

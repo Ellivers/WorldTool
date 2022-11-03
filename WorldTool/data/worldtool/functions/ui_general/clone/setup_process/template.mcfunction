@@ -10,7 +10,7 @@ function worldtool:technical/save_load/setup_save_process
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.move"
 execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.mirror.x"
 execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.mirror.z"
-execute store result storage worldtool:storage Processes[0].Rotation.Y int 1 run scoreboard players get @s wt.rotY
+execute store result storage worldtool:storage Processes[0].Input.Rotation.Y int 1 run scoreboard players get @s wt.rotY
 
 # Load area process
 
@@ -19,7 +19,7 @@ data modify storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos set
 data modify storage worldtool:storage Temp.AdditionalData.AffectedArea.From set from storage worldtool:storage Processes[0].Positions.Secondary
 
 scoreboard players set #tempRotX worldtool 0
-execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Rotation.Y
+execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Y
 scoreboard players set #tempRotZ worldtool 0
 
 execute store success score #mirrorX worldtool if entity @s[tag=wt.clone.mirror.x]

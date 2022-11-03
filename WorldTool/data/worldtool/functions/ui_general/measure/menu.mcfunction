@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/page1.display
+# Called by worldtool:ui_general/page1
 # Displays the measure menu
 
 function worldtool:ui/clear_chat
