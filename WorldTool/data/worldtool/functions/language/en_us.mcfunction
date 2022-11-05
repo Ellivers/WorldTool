@@ -54,9 +54,10 @@ data modify storage worldtool:storage Translation."process.randomize" set value 
 data modify storage worldtool:storage Translation."process.save_area" set value "Save Area"
 data modify storage worldtool:storage Translation."process.load_area" set value "Load Area"
 data modify storage worldtool:storage Translation."process.checkered" set value "Fill Checkered Pattern"
-data modify storage worldtool:storage Translation."process.shell" set value "Shell"
+data modify storage worldtool:storage Translation."process.shell" set value "Create Shell"
 data modify storage worldtool:storage Translation."process.outline" set value "Outline Area"
 data modify storage worldtool:storage Translation."process.greenery" set value "Greenery"
+data modify storage worldtool:storage Translation."process.repeat" set value "Repeat Area"
 
 data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"

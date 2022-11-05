@@ -1,9 +1,9 @@
 # Called by worldtool:particles/clone_preview/display
 # Displays clone preview particles
 
-scoreboard players operation #particlePosX worldtool = #pos1xt worldtool
-scoreboard players operation #particlePosY worldtool = #pos1yt worldtool
-scoreboard players operation #particlePosZ worldtool = #pos1zt worldtool
+scoreboard players operation #particlePosX worldtool = #pos2xt worldtool
+scoreboard players operation #particlePosY worldtool = #pos2yt worldtool
+scoreboard players operation #particlePosZ worldtool = #pos2zt worldtool
 
 data modify storage worldtool:storage Temp.Pos set value [0d, 0d, 0d]
 execute store result storage worldtool:storage Temp.Pos[0] double 1 run scoreboard players get #particlePosX worldtool

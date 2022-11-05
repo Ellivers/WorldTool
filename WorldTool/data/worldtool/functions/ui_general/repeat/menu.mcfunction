@@ -4,6 +4,7 @@
 function worldtool:ui/clear_chat
 tag @s add wt.menu.repeat
 tag @s add wt.allow_input
+tag @s[tag=wt.helper_particles] add wt.particles
 
 function worldtool:ui_general/back_button
 
