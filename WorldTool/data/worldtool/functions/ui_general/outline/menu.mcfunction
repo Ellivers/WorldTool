@@ -1,4 +1,4 @@
-# Called byw worldtool:ui_general/page1
+# Called by worldtool:ui_general/outline/load
 # Displays the outline menu
 
 function worldtool:ui/clear_chat

@@ -29,4 +29,11 @@ tag @s remove wt.shell.side.south
 tag @s remove wt.shell.side.east
 tag @s remove wt.shell.side.west
 
+tag @s remove wt.smooth.direction.up
+tag @s remove wt.smooth.direction.down
+tag @s remove wt.smooth.direction.east
+tag @s remove wt.smooth.direction.west
+tag @s remove wt.smooth.direction.north
+tag @s remove wt.smooth.direction.south
+
 function #worldtool:addon/ui_general/remove_submenu_tags

@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/variables
-# Sets veriables used by the shell process
+# Sets variables used by the shell process
 
 execute store result score #temp worldtool run data get storage worldtool:storage Processes[-1].Input.SideSize
 execute if score #temp worldtool matches ..0 run scoreboard players set #temp worldtool 1

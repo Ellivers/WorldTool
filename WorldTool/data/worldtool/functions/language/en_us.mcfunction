@@ -517,6 +517,12 @@ data modify storage worldtool:storage Translation."button.repeat.filter.descript
 data modify storage worldtool:storage Translation."button.repeat.run.description" set value "Start repeating this area"
 data modify storage worldtool:storage Translation."info.repeat.no_amounts" set value "Please select a copy amount for at least one of the three axes."
 
+data modify storage worldtool:storage Translation."button.smooth.name" set value "[Smooth...]"
+data modify storage worldtool:storage Translation."button.smooth.description" set value "Smooth out the area's shape"
+data modify storage worldtool:storage Translation."button.smooth.run.description" set value "Start smoothing this area out"
+data modify storage worldtool:storage Translation."info.smoothed_block" set value "1 smoothed block"
+data modify storage worldtool:storage Translation."info.smoothed_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," smoothed blocks"]'
+
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
 data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show assisting particles"

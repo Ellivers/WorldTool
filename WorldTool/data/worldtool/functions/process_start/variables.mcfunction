@@ -55,6 +55,7 @@ execute store result score #rotationZ worldtool run data get storage worldtool:s
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:shell"} run function worldtool:ui_general/shell/setup/variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:outline"} run function worldtool:ui_general/outline/setup/variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:repeat"} run function worldtool:ui_general/repeat/setup/variables
+execute if data storage worldtool:storage Temp.Process{ID:"worldtool:smooth"} run function worldtool:ui_general/smooth/setup/variables
 
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.vertical"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cylinder_vertical
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.horizontal"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cylinder_horizontal
