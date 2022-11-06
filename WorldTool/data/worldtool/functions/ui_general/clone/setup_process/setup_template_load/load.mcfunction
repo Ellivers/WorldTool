@@ -14,7 +14,7 @@ scoreboard players operation #temp worldtool += #mirrorX worldtool
 scoreboard players operation #temp worldtool += #mirrorZ worldtool
 
 scoreboard players set #temp2 worldtool 0
-execute store result score #temp3 worldtool run data get storage worldtool:storage Processes[-1].Output.AreaData.TemplateList[]
+execute store result score #temp3 worldtool if data storage worldtool:storage Processes[-1].Output.TemplateList[]
 execute unless score #temp worldtool matches 0 run function worldtool:ui_general/clone/setup_process/setup_template_load/rotate
 
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-2]

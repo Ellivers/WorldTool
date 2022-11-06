@@ -3,6 +3,9 @@
 scoreboard players set #diffY worldtool 0
 scoreboard players set #divisionNum worldtool 0
 
+#data modify storage worldtool:storage Temp.Points set from storage worldtool:storage Processes[-1].Generated.Up
+#execute store result score #temp3 worldtool if data storage worldtool:storage Temp.Points[]
+
 scoreboard players operation #pos1xt worldtool = #processPosX worldtool
 scoreboard players add #pos1xt worldtool 1
 scoreboard players set #temp worldtool 0
@@ -58,3 +61,9 @@ execute if score #diffY worldtool matches ..-1 run clone ~ ~1 ~ ~ ~1 ~ 27451 1 1
 execute if score #diffY worldtool matches ..-1 run scoreboard players set #temp2 worldtool -1
 scoreboard players set #temp worldtool 0
 execute unless score #diffY worldtool matches 0 run function worldtool:process/smooth/directions/up/apply
+
+#data modify storage worldtool:storage Temp.Pos set value [0d,0d,0d]
+#execute store result storage worldtool:storage Temp.Pos[0] int 1 run scoreboard players get #processPosX worldtool
+#execute store result storage worldtool:storage Temp.Pos[1] int 1 run scoreboard players get #processPosY worldtool
+#execute store result storage worldtool:storage Temp.Pos[2] int 1 run scoreboard players get #processPosZ worldtool
+#data modify storage worldtool:storage Processes[-1].Generated.Up append from storage worldtool:storage Temp.Pos

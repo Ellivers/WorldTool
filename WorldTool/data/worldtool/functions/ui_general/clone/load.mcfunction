@@ -7,5 +7,6 @@ tag @s remove wt.two_block_query.exclude
 tag @s add wt.clone.mode.standard
 tag @s remove wt.clone.mode.template
 
-function worldtool:ui_general/input/start/secondary
+# set to "both" so that the fill process uses air when move is on
+function worldtool:ui_general/input/start/both
 function worldtool:ui_general/clone/menu

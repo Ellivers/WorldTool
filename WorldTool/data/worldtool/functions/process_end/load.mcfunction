@@ -5,6 +5,7 @@ scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 execute if entity @s[tag=wt.process.filter_measure] run function worldtool:process/filter_measure/calculate
 execute if entity @s[tag=wt.process.save_area] run function worldtool:technical/common/save_load/area_saved
+execute if entity @s[tag=wt.process.load_area] run function worldtool:technical/common/save_load/area_loaded
 
 function #worldtool:addon/process/final_code
 

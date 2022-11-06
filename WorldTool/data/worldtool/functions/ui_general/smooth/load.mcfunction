@@ -1,7 +1,7 @@
 # Called by worldtool:ui_general/page2
 
 tag @s add wt.smooth.direction.up
-tag @s add wt.smooth.direction.down
+tag @s remove wt.smooth.direction.down
 tag @s add wt.smooth.direction.east
 tag @s add wt.smooth.direction.west
 tag @s add wt.smooth.direction.north
