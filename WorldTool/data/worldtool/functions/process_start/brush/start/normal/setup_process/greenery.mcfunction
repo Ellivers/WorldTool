@@ -4,7 +4,7 @@
 scoreboard players set #success worldtool 1
 
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.greenery\\"","storage":"worldtool:storage"}',ID:"worldtool:fill",Tags:["wt.process.greenery","wt.no_message"],Input:{Rate:100}}
-data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:greenery"}].Value
+data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:greenery_brush"}].Value
 
 function worldtool:process_start/brush/start/normal/setup_process/set_process_values
 

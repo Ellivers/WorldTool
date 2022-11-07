@@ -1,4 +1,4 @@
-# Called by worldtool:ui/settings/blocks_per_tick/menu
+# Called by a blocks per tick page
 # Cycles the preset blocks per tick values
 
 execute if data storage worldtool:storage BlocksPerTick{Preset:"low"} run tag @s add wt.temp
@@ -11,4 +11,4 @@ tag @s remove wt.temp
 
 execute if data storage worldtool:storage BlocksPerTick{Preset:"custom"} run data modify storage worldtool:storage BlocksPerTick.Preset set value "high"
 
-function worldtool:ui/settings/blocks_per_tick/menu
+function worldtool:ui/settings/blocks_per_tick/back_to_page

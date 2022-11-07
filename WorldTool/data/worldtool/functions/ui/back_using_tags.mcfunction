@@ -21,6 +21,7 @@ execute if entity @s[tag=wt.select_block.other.replace] run function worldtool:u
 execute if entity @s[tag=wt.menu.shell.side_settings] run function worldtool:ui_general/shell/menu
 execute if entity @s[tag=wt.menu.greenery.select_source] run function worldtool:ui_general/greenery/menu
 execute if entity @s[tag=wt.menu.brush.greenery.select_source] run function worldtool:ui_brush/select_plant_source/selected
+execute if entity @s[tag=wt.menu.shatter.tile_drops_error] run function worldtool:ui_general/shatter/menu
 
 function #worldtool:addon/ui/back_using_tags
 

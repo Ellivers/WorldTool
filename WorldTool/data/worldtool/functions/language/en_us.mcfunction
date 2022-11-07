@@ -57,7 +57,9 @@ data modify storage worldtool:storage Translation."process.checkered" set value 
 data modify storage worldtool:storage Translation."process.shell" set value "Create Shell"
 data modify storage worldtool:storage Translation."process.outline" set value "Outline Area"
 data modify storage worldtool:storage Translation."process.greenery" set value "Greenery"
+data modify storage worldtool:storage Translation."process.shatter" set value "Shatter Blocks"
 data modify storage worldtool:storage Translation."process.repeat" set value "Repeat Area"
+data modify storage worldtool:storage Translation."process.smooth" set value "Smooth Area"
 
 data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
@@ -76,9 +78,21 @@ data modify storage worldtool:storage Translation."label.process.randomize" set 
 data modify storage worldtool:storage Translation."label.process.save_area" set value "Save Area: "
 data modify storage worldtool:storage Translation."label.process.load_area" set value "Load Area: "
 data modify storage worldtool:storage Translation."label.process.checkered" set value "Fill Checkered Pattern: "
+data modify storage worldtool:storage Translation."label.process.shell" set value "Create Shell: "
+data modify storage worldtool:storage Translation."label.process.outline" set value "Outline Area: "
+data modify storage worldtool:storage Translation."label.process.greenery" set value "Greenery: "
+data modify storage worldtool:storage Translation."label.process.shatter" set value "Shatter Blocks: "
+data modify storage worldtool:storage Translation."label.process.repeat" set value "Repeat Area: "
+data modify storage worldtool:storage Translation."label.process.smooth" set value "Smooth Area: "
+
 data modify storage worldtool:storage Translation."label.process.brush.paint" set value "Paint Brush: "
 data modify storage worldtool:storage Translation."label.process.brush.place" set value "Place Brush: "
 data modify storage worldtool:storage Translation."label.process.brush.replace" set value "Replace Brush: "
+data modify storage worldtool:storage Translation."label.process.brush.greenery" set value "Greenery Brush: "
+
+data modify storage worldtool:storage Translation."label.process.shape.cylinder" set value "Generate Cylinder: "
+data modify storage worldtool:storage Translation."label.process.shape.sphere" set value "Generate Sphere: "
+data modify storage worldtool:storage Translation."label.process.shape.cone" set value "Generate Cone: "
 
 # Info
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled. Using the reload command or restarting the world will install it again."
@@ -167,6 +181,7 @@ data modify storage worldtool:storage Translation."button.water.description" set
 data modify storage worldtool:storage Translation."button.help.spacer" set value "                                                                            "
 data modify storage worldtool:storage Translation."button.help.name" set value "[?]"
 data modify storage worldtool:storage Translation."button.help.description" set value "Don't know what to do?"
+data modify storage worldtool:storage Translation."button.info.name" set value "[i]"
 data modify storage worldtool:storage Translation."button.question.name" set value "(?)"
 data modify storage worldtool:storage Translation."button.normal.name" set value "[Normal...]"
 data modify storage worldtool:storage Translation."button.normal.description" set value "Choose a block to filter/replace"
@@ -292,7 +307,7 @@ data modify storage worldtool:storage Translation."button.settings.language.relo
 data modify storage worldtool:storage Translation."button.settings.language.reload.off" set value "[Reload: Off]"
 data modify storage worldtool:storage Translation."button.settings.language.reload.description" set value "Reload translations when the data pack is reloaded"
 
-data modify storage worldtool:storage Translation."info.blocks_per_tick" set value "Blocks per tick"
+data modify storage worldtool:storage Translation."info.settings.blocks_per_tick" set value "Blocks per tick"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per tick...]"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.description" set value "Change the speed of certain processes"
 data modify storage worldtool:storage Translation."label.blocks_per_tick.preset" set value "Preset: "
@@ -302,6 +317,10 @@ data modify storage worldtool:storage Translation."preset.high" set value "High 
 data modify storage worldtool:storage Translation."preset.maximum" set value "Maximum"
 data modify storage worldtool:storage Translation."preset.custom" set value "Custom"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.load_area_help.description" set value '["The Load Area process\' speed is not measured in blocks per tick. It\'s measured in save regions (",{"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, " blocks)."]'
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.shape_info.description" set value "Shape generation processes may use more than the specified limit"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.addon_processes.name" set value "[Addon Processes...]"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.addon_processes.description" set value "Change blocks per tick values for addon processes"
+data modify storage worldtool:storage Translation."info.settings.blocks_per_tick.addon_processes" set value "Addon processes"
 
 data modify storage worldtool:storage Translation."label.setting.force_load_positions" set value "Force Load Positions: "
 data modify storage worldtool:storage Translation."label.setting.force_load_positions.description" set value "If enabled, positions will be loaded even if they are not in the loaded chunks."
@@ -503,6 +522,9 @@ data modify storage worldtool:storage Translation."button.shatter.drop_items.off
 data modify storage worldtool:storage Translation."button.shatter.drop_items.on" set value "[Drop Items: On]"
 data modify storage worldtool:storage Translation."button.shatter.drop_items.description" set value "Toggle dropping items when destroying blocks"
 data modify storage worldtool:storage Translation."button.shatter.replace.description" set value "Choose which block(s) to destroy and replace with a new block"
+data modify storage worldtool:storage Translation."error.shatter.tile_drops_off" set value "Error: The \"doTileDrops\" game rule is set to false. In order to enable the Drop Items option, this game rule also needs to be enabled."
+data modify storage worldtool:storage Translation."button.shatter.enable.name" set value "[Enable]"
+data modify storage worldtool:storage Translation."button.shatter.enable.description" set value "Enable this game rule and continue"
 
 data modify storage worldtool:storage Translation."button.repeat.name" set value "[Repeat...]"
 data modify storage worldtool:storage Translation."button.repeat.description" set value "Make evenly spaced-out copies of the selected area"

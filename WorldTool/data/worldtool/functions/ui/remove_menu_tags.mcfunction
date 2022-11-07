@@ -53,6 +53,7 @@ tag @s remove wt.menu.brush.greenery.select_source
 tag @s remove wt.menu.greenery.replace
 tag @s remove wt.menu.shatter
 tag @s remove wt.menu.shatter.replace
+tag @s remove wt.menu.shatter.tile_drops_error
 tag @s remove wt.menu.repeat
 tag @s remove wt.menu.repeat.filter
 tag @s remove wt.menu.smooth
@@ -69,5 +70,16 @@ tag @s remove wt.setup.clone
 tag @s remove wt.setup.filter_measure
 tag @s remove wt.setup.randomization_source
 tag @s remove wt.setup.checkered
+tag @s remove wt.setup.shell
+tag @s remove wt.setup.outline
+tag @s remove wt.setup.greenery
+tag @s remove wt.setup.shatter
+tag @s remove wt.setup.repeat
+tag @s remove wt.setup.smooth
+
+tag @s remove wt.menu.settings.blocks_per_tick.page.1
+tag @s remove wt.menu.settings.blocks_per_tick.page.2
+tag @s remove wt.menu.settings.blocks_per_tick.page.3
+tag @s remove wt.menu.settings.blocks_per_tick.page.addon
 
 function #worldtool:addon/ui/remove_menu_tags

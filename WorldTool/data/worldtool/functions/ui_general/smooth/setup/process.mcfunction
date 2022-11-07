@@ -8,6 +8,9 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 function worldtool:process_start/common/set_process_values
 
+execute if entity @s[tag=wt.two_block_query.normal] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.smooth.filter.normal"
+execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.smooth.filter.exclude"
+
 execute store result storage worldtool:storage Processes[0].Input.Threshold int 1 run scoreboard players get @s wt.size
 
 execute if entity @s[tag=wt.smooth.direction.up] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.smooth.direction.up"
