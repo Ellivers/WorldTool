@@ -29,20 +29,6 @@ scoreboard players operation #offsetY worldtool -= #pos1yt worldtool
 scoreboard players operation #offsetZ worldtool = #pos2zt worldtool
 scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
 
-execute store result score #tempPosX worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
-execute store result score #tempPosY worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
-execute store result score #tempPosZ worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[2]
-
-execute if score #offsetX worldtool matches ..-1 run scoreboard players operation #tempPosX worldtool += #offsetX worldtool
-execute if score #offsetY worldtool matches ..-1 run scoreboard players operation #tempPosY worldtool += #offsetY worldtool
-execute if score #offsetZ worldtool matches ..-1 run scoreboard players operation #tempPosZ worldtool += #offsetZ worldtool
-
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[0] double 1 run scoreboard players get #tempPosX worldtool
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[1] double 1 run scoreboard players get #tempPosY worldtool
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[2] double 1 run scoreboard players get #tempPosZ worldtool
-
-# 2
-
 scoreboard players set #tempRotX worldtool 0
 execute store result score #tempRotY worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Y
 scoreboard players set #tempRotZ worldtool 0
@@ -52,6 +38,62 @@ scoreboard players set #mirrorY worldtool 0
 execute store success score #mirrorZ worldtool if entity @s[tag=wt.clone.mirror.z]
 
 function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
+
+scoreboard players operation #pos2xt worldtool = #pos1xt worldtool
+scoreboard players operation #pos2xt worldtool += #offsetX worldtool
+scoreboard players operation #pos2yt worldtool = #pos1yt worldtool
+scoreboard players operation #pos2yt worldtool += #offsetY worldtool
+scoreboard players operation #pos2zt worldtool = #pos1zt worldtool
+scoreboard players operation #pos2zt worldtool += #offsetZ worldtool
+
+scoreboard players operation #offsetX worldtool = #pos2xt worldtool
+scoreboard players operation #offsetX worldtool -= #pos1xt worldtool
+scoreboard players operation #offsetY worldtool = #pos2yt worldtool
+scoreboard players operation #offsetY worldtool -= #pos1yt worldtool
+scoreboard players operation #offsetZ worldtool = #pos2zt worldtool
+scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
+
+execute store result score #tempPosX worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
+execute store result score #tempPosY worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
+execute store result score #tempPosZ worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[2]
+
+execute if score #offsetX worldtool matches ..-1 run scoreboard players operation #tempPosX worldtool += #offsetX worldtool
+execute if score #offsetY worldtool matches ..-1 run scoreboard players operation #tempPosY worldtool += #offsetY worldtool
+execute if score #offsetZ worldtool matches ..-1 run scoreboard players operation #tempPosZ worldtool += #offsetZ worldtool
+
+execute if score #offsetX worldtool matches ..-1 run scoreboard players operation #offsetX worldtool *= #-1 worldtool
+execute if score #offsetY worldtool matches ..-1 run scoreboard players operation #offsetY worldtool *= #-1 worldtool
+execute if score #offsetZ worldtool matches ..-1 run scoreboard players operation #offsetZ worldtool *= #-1 worldtool
+
+scoreboard players operation #diffX worldtool = #offsetX worldtool
+scoreboard players operation #diffZ worldtool = #offsetZ worldtool
+scoreboard players operation #diffY worldtool = #offsetY worldtool
+
+function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
+
+scoreboard players operation #diffX worldtool -= #offsetX worldtool
+scoreboard players operation #diffY worldtool -= #offsetY worldtool
+scoreboard players operation #diffZ worldtool -= #offsetZ worldtool
+scoreboard players operation #diffX worldtool /= #2 worldtool
+scoreboard players operation #diffY worldtool /= #2 worldtool
+scoreboard players operation #diffZ worldtool /= #2 worldtool
+
+scoreboard players operation #tempPosX worldtool += #diffX worldtool
+scoreboard players operation #tempPosY worldtool += #diffY worldtool
+scoreboard players operation #tempPosZ worldtool += #diffZ worldtool
+
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[0] double 1 run scoreboard players get #tempPosX worldtool
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[1] double 1 run scoreboard players get #tempPosY worldtool
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[2] double 1 run scoreboard players get #tempPosZ worldtool
+
+# 2
+
+scoreboard players operation #offsetX worldtool = #pos2xt worldtool
+scoreboard players operation #offsetX worldtool -= #pos1xt worldtool
+scoreboard players operation #offsetY worldtool = #pos2yt worldtool
+scoreboard players operation #offsetY worldtool -= #pos1yt worldtool
+scoreboard players operation #offsetZ worldtool = #pos2zt worldtool
+scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
