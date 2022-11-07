@@ -6,6 +6,7 @@ tag @s remove wt.two_block_query.exclude
 
 tag @s remove wt.clone.mode.standard
 tag @s remove wt.clone.mode.template
+tag @s remove wt.clone.at_player
 
 tag @s remove wt.randomize.replace
 tag @s remove wt.randomize.replace.normal

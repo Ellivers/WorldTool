@@ -10,3 +10,5 @@ function worldtool:ui/settings/blocks_per_tick/menu_common
 tag @s add wt.menu.settings.blocks_per_tick.page.addon
 
 function #worldtool:addon/addon_blocks_per_tick_list
+
+function worldtool:ui/anti_feedback_chat_message/load

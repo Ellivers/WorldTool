@@ -1,6 +1,7 @@
 # Called by worldtool:ui_general/menus/options/settings
 # Unistalls WorldTool
 
+tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
 
 execute store result score #temp worldtool if data storage rx.playerdb:main players[]
@@ -32,8 +33,15 @@ forceload remove 27450 19
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
 kill @e[tag=worldtool]
 
-tellraw @a[tag=wt.user] {"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}
+tellraw @s ["\n\n",{"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}]
 
 execute as @a run function worldtool:technical/common/remove_tags.player
 
-data modify storage worldtool:storage {} set value {}
+data remove storage worldtool:storage Translation
+data remove storage worldtool:storage Log
+data remove storage worldtool:storage AddonList
+data remove storage worldtool:storage AvailableBackupSlots
+data remove storage worldtool:storage BlocksPerTick
+data remove storage worldtool:storage Temp
+data remove storage worldtool:storage Language
+data remove storage worldtool:storage Processes

@@ -298,6 +298,17 @@ data modify storage worldtool:storage Translation."button.settings.name" set val
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
 data modify storage worldtool:storage Translation."info.settings" set value "Settings"
 
+data modify storage worldtool:storage Translation."button.addon_settings.name" set value "[Addon Settings...]"
+data modify storage worldtool:storage Translation."button.addon_settings.description" set value "Show settings added by addons"
+data modify storage worldtool:storage Translation."label.addon_settings" set value "Addon Settings:"
+data modify storage worldtool:storage Translation."button.available_addons.name" set value "[Available Addons...]"
+data modify storage worldtool:storage Translation."button.available_addons.description" set value "Show the installed addons"
+data modify storage worldtool:storage Translation."info.available_addons" set value "Available Addons:"
+
+data modify storage worldtool:storage Translation."button.uninstall.name" set value "[Uninstall...]"
+data modify storage worldtool:storage Translation."button.uninstall.description" set value "Remove all entities, data, and scores added by WorldTool"
+data modify storage worldtool:storage Translation."warning.uninstall" set value "Are you sure you want to uninstall WorldTool?"
+
 data modify storage worldtool:storage Translation."info.languages" set value "Languages"
 data modify storage worldtool:storage Translation."button.settings.language.name" set value "[Language...]"
 data modify storage worldtool:storage Translation."button.settings.language.description" set value "Change the language"
@@ -309,7 +320,7 @@ data modify storage worldtool:storage Translation."button.settings.language.relo
 
 data modify storage worldtool:storage Translation."info.settings.blocks_per_tick" set value "Blocks per tick"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per tick...]"
-data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.description" set value "Change the speed of certain processes"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.description" set value "Change the speed of individual processes"
 data modify storage worldtool:storage Translation."label.blocks_per_tick.preset" set value "Preset: "
 data modify storage worldtool:storage Translation."preset.low" set value "Low"
 data modify storage worldtool:storage Translation."preset.medium" set value "Medium"
@@ -340,11 +351,6 @@ data modify storage worldtool:storage Translation."label.setting.log_limit" set 
 data modify storage worldtool:storage Translation."label.setting.log_limit.description" set value "The maximum number of log entries to keep."
 data modify storage worldtool:storage Translation."label.setting.max_backups" set value "Max Backups: "
 data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once."
-
-data modify storage worldtool:storage Translation."label.addon_settings" set value "Addon Settings:"
-data modify storage worldtool:storage Translation."button.available_addons.name" set value "[Available Addons...]"
-data modify storage worldtool:storage Translation."button.available_addons.description" set value "Show the installed addons"
-data modify storage worldtool:storage Translation."info.available_addons" set value "Available Addons"
 
 data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[Adjust Positions...]"
 data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
