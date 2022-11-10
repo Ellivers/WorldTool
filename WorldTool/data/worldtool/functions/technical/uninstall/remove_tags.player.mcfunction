@@ -1,3 +1,4 @@
+# Called by worldtool:technical/uninstall
 # Removes all player tags
 
 function worldtool:ui/remove_menu_tags
