@@ -8,9 +8,8 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 execute if entity @s[tag=wt.two_block_query.normal] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.replace.normal"
 execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.replace.exclude"
-tag @s remove wt.two_block_query.normal
-tag @s remove wt.two_block_query.exclude
 
+tag @s remove wt.keep
 function worldtool:process_start/common/set_process_values
 
 tag @s remove wt.setup.replace

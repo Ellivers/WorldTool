@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/menu and worldtool:ui_general/clone/rotation_menu/menu
+# Called by worldtool:ui_general/clone/menu and worldtool:ui_general/clone/rotation/menu
 # Displays the current rotation
 
 scoreboard players operation @s wt.rotX %= #360 worldtool

@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/clone/rotation/menu
-# Changes the rotation
+# Resets the rotation and updates the UI
 
-scoreboard players remove @s wt.rotX 90
+function worldtool:ui_general/clone/settings/reset_rotation
 function worldtool:ui_general/clone/rotation/menu

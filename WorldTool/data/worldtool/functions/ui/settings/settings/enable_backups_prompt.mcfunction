@@ -1,4 +1,4 @@
-# Called by worldtool:ui/settings/settings/enable_backups_toggle
+# Unused file. Previously called by worldtool:ui/settings/settings/enable_backups_toggle
 # Just a little warning
 
 tag @s add wt.dont_clear_tags

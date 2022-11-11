@@ -294,7 +294,7 @@ data modify storage worldtool:storage Translation."button.paste_area.select_pos.
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
 # Settings
-data modify storage worldtool:storage Translation."button.settings.name" set value "[Settings...]"
+data modify storage worldtool:storage Translation."button.settings.name" set value "[⚙Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
 data modify storage worldtool:storage Translation."info.settings" set value "Settings"
 
@@ -352,7 +352,7 @@ data modify storage worldtool:storage Translation."label.setting.log_limit.descr
 data modify storage worldtool:storage Translation."label.setting.max_backups" set value "Max Backups: "
 data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once."
 
-data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[Adjust Positions...]"
+data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[✏Adjust Positions...]"
 data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
 data modify storage worldtool:storage Translation."button.position_1.name" set value "[Position 1]"
 data modify storage worldtool:storage Translation."button.position_1.description" set value "Select/deselect the first position"
@@ -387,8 +387,8 @@ data modify storage worldtool:storage Translation."button.replace.description" s
 
 data modify storage worldtool:storage Translation."button.measure.name" set value "[Measure...]"
 data modify storage worldtool:storage Translation."button.measure.description" set value "Various info such as block count, dimensions, and distance"
-data modify storage worldtool:storage Translation."button.measure.all.name" set value "[▶All]"
-data modify storage worldtool:storage Translation."button.measure.all.description" set value "Measure the dimensions of and count all blocks in the area"
+data modify storage worldtool:storage Translation."button.measure.size.name" set value "[▶Size]"
+data modify storage worldtool:storage Translation."button.measure.size.description" set value "Measure the dimensions of and count all blocks in the area"
 data modify storage worldtool:storage Translation."button.measure.distance.name" set value "[▶Distance]"
 data modify storage worldtool:storage Translation."button.measure.distance.description" set value "Get the distance between position 1 and position 2"
 data modify storage worldtool:storage Translation."button.measure.positions.name" set value "[▶Get Positions]"
@@ -692,7 +692,7 @@ data modify storage worldtool:storage Translation."button.shape.sphere.name" set
 data modify storage worldtool:storage Translation."button.shape.sphere.description" set value "Select the sphere shape"
 data modify storage worldtool:storage Translation."button.shape.already_selected.description" set value "This shape is already selected"
 
-data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[Adjust Position...]"
+data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[✏Adjust Position...]"
 data modify storage worldtool:storage Translation."button.adjust_position.description" set value "Edit the selected position"
 data modify storage worldtool:storage Translation."button.preview_shape.on" set value "[Preview Shape: On]"
 data modify storage worldtool:storage Translation."button.preview_shape.off" set value "[Preview Shape: Off]"

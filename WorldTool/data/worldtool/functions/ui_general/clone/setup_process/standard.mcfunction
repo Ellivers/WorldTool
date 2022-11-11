@@ -68,5 +68,7 @@ execute store result storage worldtool:storage Processes[0].AffectedArea.To[2] d
 
 function worldtool:technical/save_load/backup/load
 
+# Temporary solution until I implement saving multiple areas at once
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.AdditionalTags set value ["wt.dont_reopen_menu","wt.no_message"]
-execute if entity @s[tag=wt.clone.move] run function worldtool:ui_general/fill/setup_process
+execute if entity @s[tag=wt.clone.move,tag=!wt.two_block_query.normal,tag=!wt.two_block_query.exclude] run function worldtool:ui_general/fill/setup_process
+execute if entity @s[tag=wt.clone.move] unless entity @s[tag=!wt.two_block_query.normal,tag=!wt.two_block_query.exclude] run function worldtool:ui_general/replace/setup_process

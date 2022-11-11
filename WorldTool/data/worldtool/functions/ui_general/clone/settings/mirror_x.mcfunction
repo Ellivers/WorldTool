@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/rotation_menu/menu
+# Called by worldtool:ui_general/clone/rotation/menu
 # Toggles mirroring on the X axis
 
 tag @s[tag=wt.clone.mode.template] remove wt.clone.mirror.z
@@ -10,4 +10,4 @@ tag @s[tag=!wt.temp] add wt.clone.mirror.x
 
 tag @s remove wt.temp
 
-function worldtool:ui_general/clone/rotation_menu/menu
+function worldtool:ui_general/clone/rotation/menu

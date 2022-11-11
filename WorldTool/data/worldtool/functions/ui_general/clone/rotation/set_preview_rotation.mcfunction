@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/rotation_menu/menu
+# Called by worldtool:ui_general/clone/rotation/menu
 # Sets the rotation of the preview armor stand
 
 data modify storage worldtool:storage Temp.Rotation set value [0f, 0f, 0f]

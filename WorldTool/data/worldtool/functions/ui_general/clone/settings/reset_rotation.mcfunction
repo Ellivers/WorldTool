@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/rotation_menu/menu
+# Called by worldtool:ui_general/clone/rotation/menu
 # Resets all rotation settings to their default values
 
 scoreboard players set @s wt.rotX 0

@@ -63,7 +63,7 @@ execute unless score $logLimit worldtool matches -2147483648.. run scoreboard pl
 execute unless score $reloadMessage worldtool matches 0..1 run scoreboard players set $reloadMessage worldtool 0
 execute unless score $randomizationSourceSizeWarnLimit worldtool matches 0.. run scoreboard players set $randomizationSourceSizeWarnLimit worldtool 60000
 execute unless score $maxBackups worldtool matches 2.. run scoreboard players set $maxBackups worldtool 6
-execute unless score $enableBackups worldtool matches 0..1 run scoreboard players set $enableBackups worldtool 0
+execute unless score $enableBackups worldtool matches 0..1 run scoreboard players set $enableBackups worldtool 1
 
 execute unless score $templateSizeLimit worldtool matches 1.. run scoreboard players set $templateSizeLimit worldtool 48
 execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard players set $maxRaycastingDistance worldtool 100
