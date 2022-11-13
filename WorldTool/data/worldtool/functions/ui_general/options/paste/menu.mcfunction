@@ -9,7 +9,7 @@ function worldtool:ui/back_button
 execute if predicate worldtool:tools/general/pastepos run function worldtool:ui/sound.change_item
 execute if predicate worldtool:tools/general/pastepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
-execute if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
+tag @s[tag=wt.helper_particles] add wt.particles
 tag @s add wt.menu.paste_area
 
 scoreboard players set #temp worldtool 0

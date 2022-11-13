@@ -7,11 +7,11 @@ execute as d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:technical
 
 function #rx.playerdb:api/v2/get/self
 
-execute store result score #pos2xt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[0]
+execute store result score #pos2xt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard[0].Size[0]
 scoreboard players operation #pos2xt worldtool += #pos1xt worldtool
-execute store result score #pos2yt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[1]
+execute store result score #pos2yt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard[0].Size[1]
 scoreboard players operation #pos2yt worldtool += #pos1yt worldtool
-execute store result score #pos2zt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard.Size[2]
+execute store result score #pos2zt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard[0].Size[2]
 scoreboard players operation #pos2zt worldtool += #pos1zt worldtool
 
 scoreboard players operation #particlePosX worldtool = #pos1xt worldtool

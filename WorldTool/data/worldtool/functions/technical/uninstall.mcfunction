@@ -5,8 +5,9 @@ tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
 
 execute store result score #temp worldtool if data storage rx.playerdb:main players[]
-execute if score #temp worldtool matches 1 store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
-execute if score #temp worldtool matches 1 run function worldtool:technical/load/remove_player_data
+execute if score #temp worldtool matches 1.. store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
+execute if score #temp worldtool matches 1.. run scoreboard players set #temp2 worldtool 0
+execute if score #temp worldtool matches 1.. run function worldtool:technical/uninstall/remove_player_data
 
 scoreboard objectives remove worldtool
 scoreboard objectives remove wt.use_coas

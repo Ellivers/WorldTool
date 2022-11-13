@@ -11,14 +11,14 @@ function worldtool:process_start/common/set_process_values
 function #rx.playerdb:api/v2/get/self
 
 # Set the area data
-execute if entity @s[tag=wt.load_area.paste] run data modify storage worldtool:storage Processes[0].Input.AreaData set from storage rx.playerdb:io player.data.WorldTool.Clipboard
-execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run data modify storage worldtool:storage Processes[0].Input.AreaData set from storage rx.playerdb:io player.data.WorldTool.Current
+execute if entity @s[tag=wt.load_area.paste] run data modify storage worldtool:storage Processes[0].Input.AreaList set from storage rx.playerdb:io player.data.WorldTool.Clipboard
+execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run data modify storage worldtool:storage Processes[0].Input.AreaList set from storage rx.playerdb:io player.data.WorldTool.Current
 execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run tag @s add wt.no_backup
 
 function #worldtool:addon/save_load/setup_load_process
 
 # Set the starting position
-execute if data storage worldtool:storage Processes[0].Input.AreaData.Pos run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Processes[0].Input.AreaData.Pos
+execute if data storage worldtool:storage Processes[0].Input.AreaList[0].Pos run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Processes[0].Input.AreaList[0].Pos
 
 execute if entity @s[tag=wt.load_area.paste] run function worldtool:ui_general/options/paste/setup
 

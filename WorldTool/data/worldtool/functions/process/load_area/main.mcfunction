@@ -3,9 +3,9 @@
 
 scoreboard players add #blocksChecked worldtool 1
 
-execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[0].Pos[0]
-execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[0].Pos[1]
-execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[0].Pos[2]
+execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0].Pos[0]
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0].Pos[1]
+execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0].Pos[2]
 
 scoreboard players operation #pos1xt worldtool += #pos1xo worldtool
 scoreboard players operation #pos1yt worldtool += #pos1yo worldtool
@@ -23,7 +23,11 @@ execute at @s run function worldtool:process/load_area/place
 scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
 
-data remove storage worldtool:storage Processes[-1].Input.AreaData.TemplateList[0]
+data remove storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0]
+execute unless data storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0] if data storage worldtool:storage Processes[-1].Input.AreaList[1].Pos store result score #pos1xo worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[1].Pos[0]
+execute unless data storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0] if data storage worldtool:storage Processes[-1].Input.AreaList[1].Pos store result score #pos1yo worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[1].Pos[1]
+execute unless data storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0] if data storage worldtool:storage Processes[-1].Input.AreaList[1].Pos store result score #pos1zo worldtool run data get storage worldtool:storage Processes[-1].Input.AreaList[1].Pos[2]
+execute unless data storage worldtool:storage Processes[-1].Input.AreaList[0].TemplateList[0] run data remove storage worldtool:storage Processes[-1].Input.AreaList[0]
 
 execute unless score #blocksChecked worldtool >= #templatesToLoad worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/load_area/main
 

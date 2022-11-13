@@ -1,7 +1,6 @@
 # Called by various process setup functions
 # Makes sure the process starts at the top of the area
 
-
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.1[2]
 execute store result score #pos2xt worldtool run data get storage worldtool:storage Processes[0].Positions.2[0]

@@ -5,7 +5,7 @@
 
 data modify storage worldtool:storage Temp.AdditionalData set value {Tags:["wt.process.save_area","wt.no_message","wt.dont_reopen_menu"]}
 tag @s add wt.save_area.clone
-function worldtool:technical/save_load/setup_save_process
+function worldtool:technical/save_load/setup_save_process/setup
 
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.move"
 execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.mirror.x"
@@ -14,7 +14,7 @@ execute store result storage worldtool:storage Processes[0].Input.Rotation.Y int
 
 # Load area process
 
-data modify storage worldtool:storage Temp.AdditionalData set value {Input:{AreaData:{TemplateList:[],Pos:[0d,0d,0d]},AdditionalData:{rotation:"NONE",mirror:"NONE"}},AffectedArea:{From:[0d,0d,0d],To:[0d,0d,0d]}}
+data modify storage worldtool:storage Temp.AdditionalData set value {Input:{AreaList:[{TemplateList:[],Pos:[0d,0d,0d]}],AdditionalData:{rotation:"NONE",mirror:"NONE"}},AffectedArea:{From:[0d,0d,0d],To:[0d,0d,0d]}}
 
 # 1
 
@@ -82,9 +82,9 @@ scoreboard players operation #tempPosX worldtool += #diffX worldtool
 scoreboard players operation #tempPosY worldtool += #diffY worldtool
 scoreboard players operation #tempPosZ worldtool += #diffZ worldtool
 
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[0] double 1 run scoreboard players get #tempPosX worldtool
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[1] double 1 run scoreboard players get #tempPosY worldtool
-execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaData.Pos[2] double 1 run scoreboard players get #tempPosZ worldtool
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaList[0].Pos[0] double 1 run scoreboard players get #tempPosX worldtool
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaList[0].Pos[1] double 1 run scoreboard players get #tempPosY worldtool
+execute store result storage worldtool:storage Temp.AdditionalData.Input.AreaList[0].Pos[2] double 1 run scoreboard players get #tempPosZ worldtool
 
 # 2
 

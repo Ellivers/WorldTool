@@ -6,6 +6,8 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.clone\\"","storage":"worldtool:storage"}',ID:"worldtool:clone",Tags:["wt.process.clone","wt.message.clone","wt.message.non_default","wt.secondary_process_entity"]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:clone"}].Value
 
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.move"
+
 execute if entity @s[tag=!wt.clone.rotate] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.normal"
 execute if entity @s[tag=wt.clone.rotate] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.clone.rotate"
 
@@ -30,8 +32,6 @@ scoreboard players operation #diffY worldtool -= #pos2yt worldtool
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
 scoreboard players operation #pos1yt worldtool -= #diffY worldtool
 execute if score #diffY worldtool matches 1.. store result storage worldtool:storage Processes[0].Positions.Secondary[1] double 1 run scoreboard players get #pos1yt worldtool
-
-data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.Secondary
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
@@ -61,14 +61,11 @@ scoreboard players operation #pos2yt worldtool += #offsetY worldtool
 scoreboard players operation #pos2zt worldtool = #pos1zt worldtool
 scoreboard players operation #pos2zt worldtool += #offsetZ worldtool
 
-data modify storage worldtool:storage Processes[0].AffectedArea.To set value [0d,0d,0d]
-execute store result storage worldtool:storage Processes[0].AffectedArea.To[0] double 1 run scoreboard players get #pos2xt worldtool
-execute store result storage worldtool:storage Processes[0].AffectedArea.To[1] double 1 run scoreboard players get #pos2yt worldtool
-execute store result storage worldtool:storage Processes[0].AffectedArea.To[2] double 1 run scoreboard players get #pos2zt worldtool
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions set value [{2:[0d,0d,0d]}]
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions[0].1 set from storage worldtool:storage Processes[0].Positions.Secondary
+execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[0] double 1 run scoreboard players get #pos2xt worldtool
+execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[1] double 1 run scoreboard players get #pos2yt worldtool
+execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[2] double 1 run scoreboard players get #pos2zt worldtool
+
 
 function worldtool:technical/save_load/backup/load
-
-# Temporary solution until I implement saving multiple areas at once
-execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.AdditionalTags set value ["wt.dont_reopen_menu","wt.no_message"]
-execute if entity @s[tag=wt.clone.move,tag=!wt.two_block_query.normal,tag=!wt.two_block_query.exclude] run function worldtool:ui_general/fill/setup_process
-execute if entity @s[tag=wt.clone.move] unless entity @s[tag=!wt.two_block_query.normal,tag=!wt.two_block_query.exclude] run function worldtool:ui_general/replace/setup_process

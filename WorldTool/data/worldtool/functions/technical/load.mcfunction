@@ -108,6 +108,7 @@ function worldtool:technical/load/set_backup_slots
 
 execute store result score #temp worldtool if data storage rx.playerdb:main players[]
 execute if score #temp worldtool matches 1.. store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
+execute if score #temp worldtool matches 1.. run scoreboard players set #temp2 worldtool 0
 execute if score #temp worldtool matches 1.. run function worldtool:technical/load/remove_player_data
 
 execute as @a unless entity @s[tag=!wt.menu.options,tag=!wt.menu.paste_area,tag=!wt.menu.select_paste_pos] run function worldtool:ui_general/options/menu

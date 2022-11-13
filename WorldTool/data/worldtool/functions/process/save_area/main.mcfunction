@@ -8,11 +8,11 @@ scoreboard players operation #diffY worldtool -= #pos1yo worldtool
 scoreboard players operation #diffZ worldtool = #processPosZ worldtool
 scoreboard players operation #diffZ worldtool -= #pos1zo worldtool
 
-data modify storage worldtool:storage Processes[-1].Output.TemplateList append value {Slot:"",Pos:[0,0,0]}
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[0] int 1 run scoreboard players get #diffX worldtool
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[1] int 1 run scoreboard players get #diffY worldtool
-execute store result storage worldtool:storage Processes[-1].Output.TemplateList[-1].Pos[2] int 1 run scoreboard players get #diffZ worldtool
-data modify storage worldtool:storage Processes[-1].Output.TemplateList[-1].Slot set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
+data modify storage worldtool:storage Processes[-1].Output.SavedAreas[-1].TemplateList append value {Slot:"",Pos:[0,0,0]}
+execute store result storage worldtool:storage Processes[-1].Output.SavedAreas[-1].TemplateList[-1].Pos[0] int 1 run scoreboard players get #diffX worldtool
+execute store result storage worldtool:storage Processes[-1].Output.SavedAreas[-1].TemplateList[-1].Pos[1] int 1 run scoreboard players get #diffY worldtool
+execute store result storage worldtool:storage Processes[-1].Output.SavedAreas[-1].TemplateList[-1].Pos[2] int 1 run scoreboard players get #diffZ worldtool
+data modify storage worldtool:storage Processes[-1].Output.SavedAreas[-1].TemplateList[-1].Slot set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
 
 execute unless score #block1Placed worldtool matches 1 store success score #block1Placed worldtool run clone ~-1 ~-1 ~-1 ~-1 ~-1 ~-1 27451 1 19
 execute unless score #block2Placed worldtool matches 1 store success score #block2Placed worldtool run clone ~-1 ~-2 ~-1 ~-1 ~-2 ~-1 27449 1 19
@@ -79,6 +79,8 @@ execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #proc
 
 execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #processPosY worldtool < #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/y
 execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool if score #processPosY worldtool > #pos2y worldtool if score #sizeY worldtool > $templateSizeLimit worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/save_area/-y
+
+execute if data storage worldtool:storage Processes[-1].Input.NextPositions[0] run function worldtool:process/save_area/next_positions
 
 # End the process
 scoreboard players operation #processPosX worldtool = #pos2x worldtool
