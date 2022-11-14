@@ -82,4 +82,6 @@ tag @s remove wt.menu.settings.blocks_per_tick.page.2
 tag @s remove wt.menu.settings.blocks_per_tick.page.3
 tag @s remove wt.menu.settings.blocks_per_tick.page.addon
 
+tag @s remove wt.reopen_after_reload
+
 function #worldtool:addon/ui/remove_menu_tags

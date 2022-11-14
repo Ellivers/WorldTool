@@ -29,5 +29,6 @@ execute if entity @s[tag=wt.process.greenery] run function worldtool:process/gre
 execute if entity @s[tag=wt.process.shatter] run function worldtool:process/shatter/main
 execute if entity @s[tag=wt.process.repeat] run function worldtool:process/repeat/main
 execute if entity @s[tag=wt.process.smooth] run function worldtool:process/smooth/main
+execute if entity @s[tag=wt.process.command_list] run function worldtool:process/command_list/load
 
 function #worldtool:addon/process/check_tags

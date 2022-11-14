@@ -11,6 +11,7 @@ execute if predicate worldtool:tools/general/pastepos run item modify entity @s 
 
 tag @s[tag=wt.helper_particles] add wt.particles
 tag @s add wt.menu.paste_area
+tag @s add wt.reopen_after_reload
 
 scoreboard players set #temp worldtool 0
 function worldtool:technical/common/get_position_counts

@@ -111,7 +111,7 @@ execute if score #temp worldtool matches 1.. store result score #temp worldtool 
 execute if score #temp worldtool matches 1.. run scoreboard players set #temp2 worldtool 0
 execute if score #temp worldtool matches 1.. run function worldtool:technical/load/remove_player_data
 
-execute as @a unless entity @s[tag=!wt.menu.options,tag=!wt.menu.paste_area,tag=!wt.menu.select_paste_pos] run function worldtool:ui_general/options/menu
+execute as @a[tag=wt.reopen_after_reload] run function worldtool:ui/reopen_menu/after_reload
 
 ## Addon stuff ##
 

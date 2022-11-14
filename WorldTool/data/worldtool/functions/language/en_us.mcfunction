@@ -60,6 +60,7 @@ data modify storage worldtool:storage Translation."process.greenery" set value "
 data modify storage worldtool:storage Translation."process.shatter" set value "Shatter Blocks"
 data modify storage worldtool:storage Translation."process.repeat" set value "Repeat Area"
 data modify storage worldtool:storage Translation."process.smooth" set value "Smooth Area"
+data modify storage worldtool:storage Translation."process.command_list" set value "Search Command Block Chains"
 
 data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
 data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
@@ -84,6 +85,7 @@ data modify storage worldtool:storage Translation."label.process.greenery" set v
 data modify storage worldtool:storage Translation."label.process.shatter" set value "Shatter Blocks: "
 data modify storage worldtool:storage Translation."label.process.repeat" set value "Repeat Area: "
 data modify storage worldtool:storage Translation."label.process.smooth" set value "Smooth Area: "
+data modify storage worldtool:storage Translation."label.process.command_list" set value "Search Command Block Chains: "
 
 data modify storage worldtool:storage Translation."label.process.brush.paint" set value "Paint Brush: "
 data modify storage worldtool:storage Translation."label.process.brush.place" set value "Place Brush: "
@@ -558,6 +560,12 @@ data modify storage worldtool:storage Translation."button.smooth.direction.north
 data modify storage worldtool:storage Translation."button.smooth.direction.south.description" set value "Toggle smoothing relative to the positive Z direction"
 data modify storage worldtool:storage Translation."info.smoothed_block" set value "1 smoothed block"
 data modify storage worldtool:storage Translation."info.smoothed_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," smoothed blocks"]'
+
+data modify storage worldtool:storage Translation."button.command_list.name" set value "[▶Command List]"
+data modify storage worldtool:storage Translation."button.command_list.description" set value "List all commands from all command block chains in the selected area, for easy copying to function files"
+data modify storage worldtool:storage Translation."info.command_list.none_found" set value "No command block chains found in this area."
+data modify storage worldtool:storage Translation."info.command_list.list_number" set value '["List #",{"score":{"name":"#temp","objective":"worldtool"}},":"]'
+data modify storage worldtool:storage Translation."info.command_list.instructions" set value "^ Copy this from the output log."
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"

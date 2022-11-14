@@ -17,6 +17,7 @@ tellraw @s [{"nbt":"Translation.\"button.help.spacer\"","storage": "worldtool:st
 function worldtool:ui/back_button
 
 tag @s add wt.menu.options
+tag @s add wt.reopen_after_reload
 
 function #rx.playerdb:api/v2/get/self
 

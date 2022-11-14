@@ -5,9 +5,11 @@ function worldtool:ui_general/check_tool
 item modify entity @s weapon.mainhand worldtool:general_tool/pastepos
 function worldtool:ui/sound.change_item
 
-tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
-function worldtool:ui/reopen_menu/from_submenu.back_button
+function worldtool:ui/back_button
+tag @s[tag=wt.helper_particles] add wt.particles
+tag @s add wt.menu.select_paste_pos
+tag @s add wt.reopen_after_reload
 
 tellraw @s {"nbt":"Translation.\"info.select_paste_pos\"","storage": "worldtool:storage"}
 
