@@ -27,7 +27,7 @@ execute if entity @s[tag=wt.save_area.copy] run data modify storage worldtool:st
 execute if entity @s[tag=wt.save_area.back_up] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.save_area.back_up"
 execute if entity @s[tag=wt.save_area.clone] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.save_area.clone"
 
-function #worldtool:addon/save_load/setup_save_process
+function #worldtool:hooks/save_load/setup_save_process
 function worldtool:technical/save_load/remove_save_tags
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]

@@ -26,4 +26,4 @@ tag @s remove wt.setting.hollow
 tag @s remove wt.setting.keep
 tag @s remove wt.setting.continuous
 
-function #worldtool:addon/ui_shapes/remove_ui_tags
+function #worldtool:hooks/ui_shapes/remove_ui_tags

@@ -12,4 +12,4 @@ execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other,predicate=!worl
 execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other,predicate=worldtool:shape_tool/settings/continuous_place] run function worldtool:process_start/shapes/continuous
 execute if entity @s[tag=wt.tool.shapes,tag=wt.pick_block.other,predicate=!worldtool:shape_tool/settings/continuous_place] run function worldtool:pick_block/other/load
 
-function #worldtool:addon/use_tool/ray_hit/all
+function #worldtool:hooks/use_tool/ray_hit/all

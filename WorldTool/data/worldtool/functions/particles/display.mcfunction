@@ -8,4 +8,4 @@ execute if entity @s[tag=wt.position] run function worldtool:particles/general_s
 execute if entity @s[tag=wt.rotation_preview] as @a if score @s wt.ID = #ID_temp worldtool positioned ~ ~1.8 ~ run particle minecraft:dust 1 0 0 1 ^ ^ ^0.6 0 0 0 1 2 force @s
 execute if entity @s[tag=wt.shape_position] align xyz positioned ~.5 ~.5 ~.5 run function worldtool:particles/shape_preview/load
 
-function #worldtool:addon/particles/display
+function #worldtool:hooks/particles/display

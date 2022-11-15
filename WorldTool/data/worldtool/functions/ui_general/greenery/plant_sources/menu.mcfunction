@@ -27,6 +27,6 @@ tellraw @s[tag=wt.greenery.source.ocean] [{"nbt":"Translation.\"button.greenery.
 tellraw @s[tag=!wt.greenery.source.warm_ocean] {"nbt":"Translation.\"button.greenery.source.warm_ocean.name\"","storage": "worldtool:storage","color": "#43D5EE","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.greenery.source.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/greenery/plant_sources/warm_ocean"}}
 tellraw @s[tag=wt.greenery.source.warm_ocean] [{"nbt":"Translation.\"button.greenery.source.warm_ocean.name\"","storage": "worldtool:storage","color": "gray"}," ",{"nbt":"Translation.\"info.selected\"","storage": "worldtool:storage"}]
 
-function #worldtool:addon/greenery/list_sources
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/list_sources
 
 function worldtool:ui/anti_feedback_chat_message/load

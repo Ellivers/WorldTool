@@ -9,7 +9,7 @@ item modify entity @s[tag=wt.greenery.source.desert] weapon.mainhand worldtool:b
 item modify entity @s[tag=wt.greenery.source.ocean] weapon.mainhand worldtool:brush_tool/settings/plant_source/ocean
 item modify entity @s[tag=wt.greenery.source.warm_ocean] weapon.mainhand worldtool:brush_tool/settings/plant_source/warm_ocean
 
-function #worldtool:addon/greenery/brush/set_source
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/set_source
 
 function worldtool:ui_general/greenery/plant_sources/remove_all
 

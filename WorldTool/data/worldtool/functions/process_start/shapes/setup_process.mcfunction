@@ -7,7 +7,7 @@ execute if predicate worldtool:shape_tool/shapes/cylinder run function worldtool
 execute if predicate worldtool:shape_tool/shapes/cone run function worldtool:process_start/shapes/setup_process/cone
 execute if predicate worldtool:shape_tool/shapes/sphere run function worldtool:process_start/shapes/setup_process/sphere
 
-function #worldtool:addon/use_shapes/processes
+function #worldtool:hooks/use_shapes/processes
 
 execute if score #success worldtool matches 1 run function worldtool:technical/save_load/backup/load
 

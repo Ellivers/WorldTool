@@ -11,12 +11,12 @@ scoreboard players set #offset2z worldtool 0
 execute if predicate worldtool:brush_tool/settings/flat unless entity @s[predicate=!worldtool:brush_tool/brushes/paint,predicate=!worldtool:brush_tool/brushes/place] run tag @s add wt.brush_area.flat
 tag @s[tag=!wt.brush_area.flat] add wt.brush_area.normal
 
-function #worldtool:addon/use_brush/area/add_tags
+function #worldtool:hooks/use_brush/area/add_tags
 
 execute if entity @s[tag=wt.brush_area.flat] run function worldtool:process_start/brush/area/flat/load
 execute if entity @s[tag=wt.brush_area.normal] run function worldtool:process_start/brush/area/normal/load
 
-function #worldtool:addon/use_brush/area/remove_tags
+function #worldtool:hooks/use_brush/area/remove_tags
 
 tag @s remove wt.brush_area.flat
 tag @s remove wt.brush_area.normal

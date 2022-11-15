@@ -10,4 +10,4 @@ tag @s remove wt.temp
 execute if entity @s[tag=wt.menu.general.page1] run function worldtool:ui_general/page1
 execute if entity @s[tag=wt.menu.general.page2] run function worldtool:ui_general/page2
 
-function #worldtool:addon/ui_general/toggle_keep
+function #worldtool:hooks/ui_general/toggle_keep

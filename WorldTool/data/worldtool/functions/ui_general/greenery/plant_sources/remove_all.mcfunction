@@ -9,4 +9,4 @@ tag @s remove wt.greenery.source.desert
 tag @s remove wt.greenery.source.ocean
 tag @s remove wt.greenery.source.warm_ocean
 
-function #worldtool:addon/greenery/remove_source
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/remove_source

@@ -15,7 +15,7 @@ execute if entity @s[tag=wt.load_area.paste] run data modify storage worldtool:s
 execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run data modify storage worldtool:storage Processes[0].Input.AreaList set from storage rx.playerdb:io player.data.WorldTool.Current
 execute unless entity @s[tag=!wt.load_area.undo,tag=!wt.load_area.redo] run tag @s add wt.no_backup
 
-function #worldtool:addon/save_load/setup_load_process
+function #worldtool:hooks/save_load/setup_load_process
 
 # Set the starting position
 execute if data storage worldtool:storage Processes[0].Input.AreaList[0].Pos run data modify storage worldtool:storage Processes[0].Positions.1 set from storage worldtool:storage Processes[0].Input.AreaList[0].Pos

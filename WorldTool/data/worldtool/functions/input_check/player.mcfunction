@@ -13,4 +13,4 @@ execute if entity @s[tag=wt.brush.select_structure_offset] if entity @e[type=min
 execute if entity @s[tag=wt.menu.shapes.adjust_position] if entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1] run function worldtool:ui_shapes/adjust_position/set_position
 execute if entity @s[tag=wt.menu.shapes] if entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1] run function worldtool:ui_shapes/settings/set_value
 
-function #worldtool:addon/input/entity
+function #worldtool:hooks/input/entity

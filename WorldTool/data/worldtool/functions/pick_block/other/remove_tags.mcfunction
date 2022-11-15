@@ -4,4 +4,4 @@
 tag @s remove wt.pick_block.other
 tag @s remove wt.pick_block.secondary
 
-function #worldtool:addon/pick_block/remove_tags
+function #worldtool:hooks/pick_block/remove_tags

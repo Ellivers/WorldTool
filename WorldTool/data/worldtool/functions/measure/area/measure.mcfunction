@@ -24,4 +24,4 @@ scoreboard players operation #totalArea worldtool *= #sizeZ worldtool
 execute if entity @s[tag=!wt.no_message] run function worldtool:measure/area/message
 tag @s remove wt.no_message
 
-function #worldtool:addon/measure/area_done
+function #worldtool:hooks/measure/area_done

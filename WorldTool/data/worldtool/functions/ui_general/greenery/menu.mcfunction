@@ -24,7 +24,7 @@ tellraw @s[tag=wt.greenery.source.desert] ["",{"nbt":"Translation.\"info.greener
 tellraw @s[tag=wt.greenery.source.ocean] ["",{"nbt":"Translation.\"info.greenery.current_plant_source\"","storage": "worldtool:storage"},{"nbt":"Translation.\"plant_source.ocean\"","storage": "worldtool:storage","color": "#13c4d1"}]
 tellraw @s[tag=wt.greenery.source.warm_ocean] ["",{"nbt":"Translation.\"info.greenery.current_plant_source\"","storage": "worldtool:storage"},{"nbt":"Translation.\"plant_source.warm_ocean\"","storage": "worldtool:storage","color": "#13c4d1"}]
 
-function #worldtool:addon/greenery/display_current_source
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/display_current_source
 
 tellraw @s {"nbt":"Translation.\"button.change.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.greenery.change_plant_source.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/greenery/plant_sources/menu"}}
 

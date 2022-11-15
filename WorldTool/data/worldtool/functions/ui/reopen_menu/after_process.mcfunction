@@ -3,4 +3,4 @@
 
 execute if entity @s[tag=wt.menu.randomize.set_source.wait] run function worldtool:ui_general/randomize/set_source/complete
 
-function #worldtool:addon/ui/reopen_menu/after_process
+function #worldtool:hooks/ui/reopen_menu/after_process

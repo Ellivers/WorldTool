@@ -13,7 +13,7 @@ execute if entity @s[tag=wt.process.clone] run kill 9880ccfe-fdf6-4538-838a-ddc7
 
 execute if entity @s[tag=wt.process.randomization_source] as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner,tag=wt.not_used_yet] if score @s wt.ID = #ID_temp worldtool run kill @s
 
-function #worldtool:addon/process/end
+function #worldtool:hooks/process/end
 
 kill @s
 

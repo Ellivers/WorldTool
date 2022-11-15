@@ -25,7 +25,7 @@ execute unless entity @s[tag=!wt.greenery.source.ocean,tag=!wt.greenery.source.w
 execute if entity @s[tag=wt.greenery.source.ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.ocean"
 execute if entity @s[tag=wt.greenery.source.warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.warm_ocean"
 
-function #worldtool:addon/greenery/setup_process
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/setup_process
 
 execute if entity @s[tag=wt.greenery.standard_base] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.standard"
 tag @s remove wt.greenery.standard_base

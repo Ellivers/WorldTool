@@ -5,7 +5,7 @@ tag @s remove wt.menu.settings.blocks_per_tick.page.1
 tag @s remove wt.menu.settings.blocks_per_tick.page.2
 tag @s remove wt.menu.settings.blocks_per_tick.page.3
 
-tag @s remove wt.menu.settings.blocks_per_tick.page.addon
+tag @s remove wt.menu.settings.blocks_per_tick.page.plugin
 
 execute store result score #temp worldtool if data storage worldtool:storage BlocksPerTick.Processes[]
 scoreboard players set #temp2 worldtool 0

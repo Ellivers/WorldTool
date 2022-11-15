@@ -23,7 +23,7 @@ execute if entity @s[tag=wt.menu.greenery.select_source] run function worldtool:
 execute if entity @s[tag=wt.menu.brush.greenery.select_source] run function worldtool:ui_brush/select_plant_source/selected
 execute if entity @s[tag=wt.menu.shatter.tile_drops_error] run function worldtool:ui_general/shatter/menu
 
-function #worldtool:addon/ui/back_using_tags
+function #worldtool:hooks/ui/back_using_tags
 
 execute if entity @s[tag=wt.menu.two_block_query.2,tag=!wt.two_block_query.locked_rule] run function worldtool:ui_general/two_block_query/display/1
 execute if entity @s[tag=wt.menu.two_block_query.2,tag=wt.two_block_query.locked_rule] run function worldtool:ui/return.back

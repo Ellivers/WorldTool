@@ -8,4 +8,4 @@ execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/opti
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/update_preview/load
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/options/menu
 
-function #worldtool:addon/particles/on
+function #worldtool:hooks/particles/on

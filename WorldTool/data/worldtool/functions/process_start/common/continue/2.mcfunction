@@ -3,7 +3,7 @@
 
 function worldtool:process_start/common/check/positions
 
-function #worldtool:addon/process_start/continue2
+function #worldtool:hooks/process_start/continue2
 
 function #rx.playerdb:api/v2/get/self
 

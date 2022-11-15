@@ -63,4 +63,4 @@ execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cone.ve
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cone.horizontal"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cone_horizontal
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:sphere"} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/sphere
 
-function #worldtool:addon/process_start/variables
+function #worldtool:hooks/process_start/variables

@@ -3,4 +3,4 @@
 
 execute unless entity @s[tag=!wt.menu.options,tag=!wt.menu.paste_area,tag=!wt.menu.select_paste_pos] run function worldtool:ui_general/options/menu
 
-function #worldtool:addon/ui/reopen_menu/after_reload
+function #worldtool:hooks/ui/reopen_menu/after_reload

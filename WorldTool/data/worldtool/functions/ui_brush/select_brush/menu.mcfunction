@@ -32,6 +32,6 @@ execute if predicate worldtool:brush_tool/brushes/structure run tellraw @s {"nbt
 execute unless predicate worldtool:brush_tool/brushes/greenery run tellraw @s {"nbt":"Translation.\"button.brush.greenery.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.greenery.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_brush/greenery"}}
 execute if predicate worldtool:brush_tool/brushes/greenery run tellraw @s {"nbt":"Translation.\"button.brush.greenery.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.aleady_selected.description\"","storage": "worldtool:storage"}}}
 
-function #worldtool:addon/ui_brush/brush_list
+function #worldtool:hooks/ui_brush/brush_list
 
 function worldtool:ui/anti_feedback_chat_message/load

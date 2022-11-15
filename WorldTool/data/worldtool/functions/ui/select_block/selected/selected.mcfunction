@@ -11,7 +11,7 @@ execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools
 execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/set_primary_block
 execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
 
-function #worldtool:addon/ui/block_selected
+function #worldtool:hooks/ui/block_selected
 
 function worldtool:ui/sound.change_item
 

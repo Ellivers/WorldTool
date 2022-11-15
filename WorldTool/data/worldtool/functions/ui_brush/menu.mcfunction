@@ -59,7 +59,7 @@ execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings
 execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/y] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.y\\"","storage":"worldtool:storage"}'
 execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/z] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.z\\"","storage":"worldtool:storage"}'
 
-function #worldtool:addon/ui_brush/menu/add_tags
+function #worldtool:hooks/ui_brush/menu/add_tags
 
 # Display the selected brush
 execute if entity @s[tag=wt.brush.none] run tellraw @s ["\n\n",{"nbt":"Translation.\"info.selected_brush.none\"","storage": "worldtool:storage","color":"yellow","bold":true}]
@@ -70,7 +70,7 @@ execute if entity @s[tag=wt.brush.sphere] run tellraw @s ["\n\n",{"nbt":"Transla
 execute if entity @s[tag=wt.brush.circle] run tellraw @s ["\n\n",{"nbt":"Translation.\"info.selected_brush.circle\"","storage": "worldtool:storage","color":"yellow","bold":true}]
 execute if entity @s[tag=wt.brush.structure] run tellraw @s ["\n\n",{"nbt":"Translation.\"info.selected_brush.structure\"","storage": "worldtool:storage","color":"yellow","bold":true}]
 execute if entity @s[tag=wt.brush.greenery] run tellraw @s ["\n\n",{"nbt":"Translation.\"info.selected_brush.greenery\"","storage": "worldtool:storage","color":"yellow","bold":true}]
-function #worldtool:addon/ui_brush/menu/display_brush
+function #worldtool:hooks/ui_brush/menu/display_brush
 
 execute if entity @s[tag=wt.setting.brush_size] run tellraw @s ["",{"nbt":"Translation.\"label.brush_size\"","storage": "worldtool:storage","color":"dark_aqua"},{"nbt":"Translation.\"button.decrease.name\"","storage": "worldtool:storage","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","contents": {"nbt":"Translation.\"button.brush_size.decrease.description\"","storage": "worldtool:storage"}},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/settings/brush_size_decrease"}},{"nbt":"SelectedItem.tag.WorldTool.BrushSettings.Size","entity": "@s"},{"nbt":"Translation.\"button.increase.name\"","storage": "worldtool:storage","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","contents": {"nbt":"Translation.\"button.brush_size.increase.description\"","storage": "worldtool:storage"}},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/settings/brush_size_increase"}}]
 
@@ -92,7 +92,7 @@ execute if entity @s[tag=wt.setting.flat] unless predicate worldtool:brush_tool/
 execute if entity @s[tag=wt.setting.axis] run tellraw @s ["",{"nbt": "Translation.\"label.brush.axis.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"label.brush.axis.description\"","storage": "worldtool:storage"}}},{"nbt":"Translation.\"button.left.name\"","storage": "worldtool:storage","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.left.description\"","storage": "worldtool:storage"}},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_brush/settings/axis_cycle_left"}},{"nbt": "Temp.Axis","storage": "worldtool:storage","interpret": true,"color":"green"},{"nbt":"Translation.\"button.right.name\"","storage": "worldtool:storage","color": "light_purple","bold": true,"hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.right.description\"","storage": "worldtool:storage"}},"clickEvent": {"action":"run_command","value": "/function worldtool:ui_brush/settings/axis_cycle_right"}}]
 execute if entity @s[tag=wt.setting.update_block] if predicate worldtool:brush_tool/settings/update_block run tellraw @s {"nbt":"Translation.\"button.brush.update_block.on\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.update_block.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/settings/update_block_toggle"}}
 execute if entity @s[tag=wt.setting.update_block] unless predicate worldtool:brush_tool/settings/update_block run tellraw @s {"nbt":"Translation.\"button.brush.update_block.off\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.update_block.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/settings/update_block_toggle"}}
-function #worldtool:addon/ui_brush/menu/display_settings
+function #worldtool:hooks/ui_brush/menu/display_settings
 
 execute if entity @s[tag=wt.brush.none] run tellraw @s ["\n\n",{"nbt":"Translation.\"info.no_brush_selected\"","storage": "worldtool:storage","color":"gold","italic":true}]
 
@@ -110,14 +110,14 @@ execute if entity @s[tag=wt.brush.greenery,predicate=worldtool:brush_tool/settin
 execute if entity @s[tag=wt.brush.greenery,predicate=worldtool:brush_tool/settings/plant_source/desert] run tellraw @s ["",{"nbt":"Translation.\"info.greenery.current_plant_source\"","storage": "worldtool:storage"},{"nbt":"Translation.\"plant_source.desert\"","storage": "worldtool:storage","color": "#13c4d1"}]
 execute if entity @s[tag=wt.brush.greenery,predicate=worldtool:brush_tool/settings/plant_source/ocean] run tellraw @s ["",{"nbt":"Translation.\"info.greenery.current_plant_source\"","storage": "worldtool:storage"},{"nbt":"Translation.\"plant_source.ocean\"","storage": "worldtool:storage","color": "#13c4d1"}]
 execute if entity @s[tag=wt.brush.greenery,predicate=worldtool:brush_tool/settings/plant_source/warm_ocean] run tellraw @s ["",{"nbt":"Translation.\"info.greenery.current_plant_source\"","storage": "worldtool:storage"},{"nbt":"Translation.\"plant_source.warm_ocean\"","storage": "worldtool:storage","color": "#13c4d1"}]
-execute if entity @s[tag=wt.brush.greenery] run function #worldtool:addon/greenery/brush/display_current_source
+execute if entity @s[tag=wt.brush.greenery] if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/display_current_source
 
 execute if entity @s[tag=wt.brush.greenery] run tellraw @s ["",{"nbt":"Translation.\"button.brush.select_plant_source.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.select_plant_source.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_brush/select_plant_source/select"}},{"nbt":"Translation.\"button.brush.select_brush.name\"","storage": "worldtool:storage","color":"light_purple","hoverEvent":{"action":"show_text","contents": {"nbt":"Translation.\"button.brush.select_brush.description\"","storage": "worldtool:storage"}},"clickEvent":{"action":"run_command","value":"/function worldtool:ui_brush/select_brush/menu"}}]
 
 
 # Remove tags
 
-function #worldtool:addon/ui_brush/menu/remove_tags
+function #worldtool:hooks/ui_brush/menu/remove_tags
 
 tag @s remove wt.brush.none
 tag @s remove wt.brush.paint

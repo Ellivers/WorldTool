@@ -15,6 +15,6 @@ execute if entity @s[tag=wt.menu.randomize.set_source.pos2] run function worldto
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:use_tool/ray_hit/general/randomization_source/pos1
 execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/paste/pos_selected
 
-function #worldtool:addon/use_tool/ray_hit/general
+function #worldtool:hooks/use_tool/ray_hit/general
 
 execute if score #success worldtool matches 0 run function worldtool:ui_general/reset_tool

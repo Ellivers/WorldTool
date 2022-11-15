@@ -17,7 +17,7 @@ tag @s remove wt.shape.cone.north
 tag @s remove wt.shape.cone.horizontal
 tag @s remove wt.shape.sphere
 
-function #worldtool:addon/ui_shapes/remove_preview_tags
+function #worldtool:hooks/ui_shapes/remove_preview_tags
 
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder",ShapeSettings:{Orientation:"up"}} run tag @s add wt.shape.cylinder.up
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder",ShapeSettings:{Orientation:"down"}} run tag @s add wt.shape.cylinder.down
@@ -33,7 +33,7 @@ execute unless entity @s[tag=!wt.shape.cone.up,tag=!wt.shape.cone.down] run tag 
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"up"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"down"} run tag @s add wt.shape.cone.horizontal
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"sphere"} run tag @s add wt.shape.sphere
 
-function #worldtool:addon/ui_shapes/add_preview_tags
+function #worldtool:hooks/ui_shapes/add_preview_tags
 
 tp @s ~ ~ ~ 0 0
 

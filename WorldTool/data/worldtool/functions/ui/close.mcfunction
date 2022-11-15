@@ -16,6 +16,6 @@ function worldtool:ui/clear_chat
 tellraw @s[tag=!wt.no_message] {"nbt":"Translation.\"info.menu_closed\"","storage": "worldtool:storage"}
 function worldtool:ui/anti_feedback_chat_message/load
 
-function #worldtool:addon/ui/close
+function #worldtool:hooks/ui/close
 
 tag @s remove wt.no_message

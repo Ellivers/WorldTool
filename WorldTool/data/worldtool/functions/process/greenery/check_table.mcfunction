@@ -11,4 +11,4 @@ execute if entity @s[tag=wt.process.greenery.plant_table.desert] run function wo
 execute if entity @s[tag=wt.process.greenery.plant_table.ocean] run function worldtool:process/greenery/plant_tables/ocean
 execute if entity @s[tag=wt.process.greenery.plant_table.warm_ocean] run function worldtool:process/greenery/plant_tables/warm_ocean
 
-function #worldtool:addon/process/greenery/plant_tables
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/process/greenery/plant_tables

@@ -1,6 +1,6 @@
 # Called by worldtool:use_tool/use
 
-function #worldtool:addon/use_tool/remove_tags
+function #worldtool:hooks/use_tool/remove_tags
 tag @s remove wt.tool.general.pos1
 tag @s remove wt.tool.general.pos2
 tag @s remove wt.tool.general.clonepos

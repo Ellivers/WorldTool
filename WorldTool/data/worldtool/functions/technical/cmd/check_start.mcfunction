@@ -15,4 +15,4 @@ execute if score #temp worldtool matches 0 run scoreboard players set #success w
 
 execute if data storage worldtool:storage CmdProcess{id:"worldtool:clone"} unless data storage worldtool:storage CmdProcess.Positions.Secondary run scoreboard players set #success worldtool 0
 
-function #worldtool:addon/check_cmd_process
+function #worldtool:hooks/check_cmd_process

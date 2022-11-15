@@ -40,7 +40,7 @@ execute as @a run function worldtool:technical/uninstall/remove_tags.player
 
 data remove storage worldtool:storage Translation
 data remove storage worldtool:storage Log
-data remove storage worldtool:storage AddonList
+data remove storage worldtool:storage PluginList
 data remove storage worldtool:storage AvailableBackupSlots
 data remove storage worldtool:storage BlocksPerTick
 data remove storage worldtool:storage Temp

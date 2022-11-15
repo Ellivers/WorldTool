@@ -24,7 +24,7 @@ execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other] run tag @s add
 execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/brushes/none] run tag @s remove wt.raycast_normal
 execute if entity @s[tag=wt.tool.brush,predicate=!worldtool:brush_tool/brushes/none,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before
 
-function #worldtool:addon/use_tool/add_tags
+function #worldtool:hooks/use_tool/add_tags
 
 ## Raycasting stuff ##
 # temp = distance raycasted

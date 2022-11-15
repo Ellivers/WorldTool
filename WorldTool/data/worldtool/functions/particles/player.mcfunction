@@ -6,4 +6,4 @@ execute unless entity @s[tag=!wt.menu.randomize.set_source.pos1,tag=!wt.menu.ran
 execute unless entity @s[tag=!wt.menu.paste_area,tag=!wt.menu.select_paste_pos] run function worldtool:particles/paste_preview/load
 execute unless entity @s[tag=!wt.menu.repeat,tag=!wt.menu.repeat.filter] run function worldtool:particles/repeat_preview/load
 
-function #worldtool:addon/particles/player
+function #worldtool:hooks/particles/player

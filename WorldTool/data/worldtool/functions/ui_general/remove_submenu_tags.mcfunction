@@ -37,4 +37,4 @@ tag @s remove wt.smooth.direction.west
 tag @s remove wt.smooth.direction.north
 tag @s remove wt.smooth.direction.south
 
-function #worldtool:addon/ui_general/remove_submenu_tags
+function #worldtool:hooks/ui_general/remove_submenu_tags

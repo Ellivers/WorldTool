@@ -31,4 +31,4 @@ execute if entity @s[tag=wt.process.repeat] run function worldtool:process/repea
 execute if entity @s[tag=wt.process.smooth] run function worldtool:process/smooth/main
 execute if entity @s[tag=wt.process.command_list] run function worldtool:process/command_list/load
 
-function #worldtool:addon/process/check_tags
+function #worldtool:hooks/process/check_tags

@@ -113,23 +113,23 @@ execute if score #temp worldtool matches 1.. run function worldtool:technical/lo
 
 execute as @a[tag=wt.reopen_after_reload] run function worldtool:ui/reopen_menu/after_reload
 
-## Addon stuff ##
+## Plugin stuff ##
 
-# Addon variables
-scoreboard players set $addons worldtool 0
-scoreboard players set $generalToolAddons worldtool 0
-scoreboard players set $brushToolAddons worldtool 0
-scoreboard players set $shapeToolAddons worldtool 0
-scoreboard players set $settingAddons worldtool 0
-scoreboard players set $optionAddons worldtool 0
-scoreboard players set $greeneryAddons worldtool 0
-function #worldtool:addon/load
+# Plugin variables
+scoreboard players set $plugins worldtool 0
+scoreboard players set $generalToolPlugins worldtool 0
+scoreboard players set $brushToolPlugins worldtool 0
+scoreboard players set $shapeToolPlugins worldtool 0
+scoreboard players set $settingPlugins worldtool 0
+scoreboard players set $languagePlugins worldtool 0
+scoreboard players set $greeneryPlugins worldtool 0
+function #worldtool:hooks/load
 
 # Forceload for access to storing blocks at 27450 19
 execute in minecraft:overworld run forceload add 27450 19
 execute in minecraft:the_nether run forceload add 27450 19
 execute in minecraft:the_end run forceload add 27450 19
-function #worldtool:addon/init_dimensions/forceload
+function #worldtool:hooks/init_dimensions/forceload
 scoreboard players set #loadWaitTime worldtool 0
 execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_load
 

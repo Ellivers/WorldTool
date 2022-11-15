@@ -10,4 +10,4 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if scor
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/options/menu
 
-function #worldtool:addon/particles/off
+function #worldtool:hooks/particles/off

@@ -23,7 +23,7 @@ execute unless entity @s[predicate=!worldtool:brush_tool/settings/plant_source/o
 execute if predicate worldtool:brush_tool/settings/plant_source/ocean run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.ocean"
 execute if predicate worldtool:brush_tool/settings/plant_source/warm_ocean run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.warm_ocean"
 
-function #worldtool:addon/greenery/brush/setup_process
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/setup_process
 
 execute if entity @s[tag=wt.greenery.standard_base] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.standard"
 tag @s remove wt.greenery.standard_base

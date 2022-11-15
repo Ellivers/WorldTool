@@ -12,7 +12,7 @@ tag @s add wt.block.primary
 tag @s[predicate=worldtool:brush_tool/brushes/replace] add wt.block.secondary
 tag @s[predicate=worldtool:tools/shapes,predicate=!worldtool:shape_tool/settings/replace/none] add wt.block.secondary
 
-function #worldtool:addon/use_tool/update_block/add_tags
+function #worldtool:hooks/use_tool/update_block/add_tags
 
 data remove storage worldtool:storage Temp.Block
 
@@ -32,7 +32,7 @@ execute if entity @s[tag=wt.block.secondary,tag=!wt.block.secondary.air] run sum
 execute if entity @s[tag=wt.block.secondary,tag=!wt.block.secondary.air] positioned 27449 1 19 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.update_block,sort=nearest,limit=1] BlockState set from storage worldtool:storage Temp.Block.State
 execute if entity @s[tag=wt.block.secondary,tag=!wt.block.secondary.air] if data storage worldtool:storage Temp.Block.Data positioned 27449 1 19 run data modify entity @e[type=minecraft:falling_block,tag=worldtool,tag=wt.update_block,sort=nearest,limit=1] TileEntityData set from storage worldtool:storage Temp.Block.Data
 
-function #worldtool:addon/use_tool/update_block/remove_tags
+function #worldtool:hooks/use_tool/update_block/remove_tags
 
 tag @s remove wt.block.primary
 tag @s remove wt.block.primary.air

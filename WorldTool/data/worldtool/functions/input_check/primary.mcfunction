@@ -8,4 +8,4 @@ execute if entity @s[tag=wt.menu.shell] run function worldtool:ui_general/shell/
 execute if entity @s[tag=wt.menu.outline] run function worldtool:ui_general/outline/start
 execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/start
 
-function #worldtool:addon/input/primary_block
+function #worldtool:hooks/input/primary_block

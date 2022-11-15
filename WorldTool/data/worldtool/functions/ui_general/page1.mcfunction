@@ -1,5 +1,5 @@
 # Called by worldtool:ui_general/load
-# Page 1 of the general tool's menu
+# Page 1 of the General Tool's menu
 
 tag @s[tag=!wt.user] add wt.clone.at_player
 function worldtool:ui/open_tool

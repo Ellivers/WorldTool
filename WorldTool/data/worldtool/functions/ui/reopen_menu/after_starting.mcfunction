@@ -16,4 +16,4 @@ execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shat
 execute if entity @s[tag=wt.menu.shatter.replace] run function worldtool:ui_general/shatter/menu
 execute if entity @s[tag=wt.menu.smooth] run function worldtool:ui_general/smooth/menu
 
-function #worldtool:addon/ui/reopen_menu/after_starting
+function #worldtool:hooks/ui/reopen_menu/after_starting

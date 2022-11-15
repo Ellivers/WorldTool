@@ -10,4 +10,4 @@ tag @s remove wt.brush.select_structure
 tag @s remove wt.brush.select_structure_offset
 tag @s remove wt.select_block.other.secondary
 
-function #worldtool:addon/ui_brush/remove_ui_tags
+function #worldtool:hooks/ui_brush/remove_ui_tags

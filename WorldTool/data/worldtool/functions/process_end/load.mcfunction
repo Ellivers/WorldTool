@@ -7,7 +7,7 @@ execute if entity @s[tag=wt.process.filter_measure] run function worldtool:proce
 execute if entity @s[tag=wt.process.save_area] run function worldtool:technical/common/save_load/area_saved
 execute if entity @s[tag=wt.process.load_area] run function worldtool:technical/common/save_load/area_loaded
 
-function #worldtool:addon/process/final_code
+function #worldtool:hooks/process/final_code
 
 data remove storage worldtool:storage Temp
 data modify storage worldtool:storage Temp.Tags set from entity @s Tags

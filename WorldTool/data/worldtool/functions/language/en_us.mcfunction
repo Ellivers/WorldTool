@@ -300,12 +300,12 @@ data modify storage worldtool:storage Translation."button.settings.name" set val
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
 data modify storage worldtool:storage Translation."info.settings" set value "Settings"
 
-data modify storage worldtool:storage Translation."button.addon_settings.name" set value "[Addon Settings...]"
-data modify storage worldtool:storage Translation."button.addon_settings.description" set value "Show settings added by addons"
-data modify storage worldtool:storage Translation."label.addon_settings" set value "Addon Settings:"
-data modify storage worldtool:storage Translation."button.available_addons.name" set value "[Available Addons...]"
-data modify storage worldtool:storage Translation."button.available_addons.description" set value "Show the installed addons"
-data modify storage worldtool:storage Translation."info.available_addons" set value "Available Addons:"
+data modify storage worldtool:storage Translation."button.plugin_settings.name" set value "[Plugin Settings...]"
+data modify storage worldtool:storage Translation."button.plugin_settings.description" set value "Show settings added by plugins"
+data modify storage worldtool:storage Translation."label.plugin_settings" set value "Plugin Settings:"
+data modify storage worldtool:storage Translation."button.available_plugins.name" set value "[Available Plugins...]"
+data modify storage worldtool:storage Translation."button.available_plugins.description" set value "Show the installed plugins"
+data modify storage worldtool:storage Translation."info.available_plugins" set value '[{"score":{"name":"$plugins","objective":"worldtool"}}," Available Plugins:"]'
 
 data modify storage worldtool:storage Translation."button.uninstall.name" set value "[Uninstall...]"
 data modify storage worldtool:storage Translation."button.uninstall.description" set value "Remove all entities, data, and scores added by WorldTool"
@@ -331,9 +331,9 @@ data modify storage worldtool:storage Translation."preset.maximum" set value "Ma
 data modify storage worldtool:storage Translation."preset.custom" set value "Custom"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.load_area_help.description" set value '["The Load Area process\' speed is not measured in blocks per tick. It\'s measured in save regions (",{"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, " blocks)."]'
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.shape_info.description" set value "Shape generation processes may use more than the specified limit"
-data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.addon_processes.name" set value "[Addon Processes...]"
-data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.addon_processes.description" set value "Change blocks per tick values for addon processes"
-data modify storage worldtool:storage Translation."info.settings.blocks_per_tick.addon_processes" set value "Addon processes"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.name" set value "[Plugin Processes...]"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.description" set value "Change blocks per tick values for plugin processes"
+data modify storage worldtool:storage Translation."info.settings.blocks_per_tick.plugin_processes" set value "Plugin processes"
 
 data modify storage worldtool:storage Translation."label.setting.force_load_positions" set value "Force Load Positions: "
 data modify storage worldtool:storage Translation."label.setting.force_load_positions.description" set value "If enabled, positions will be loaded even if they are not in the loaded chunks."
@@ -750,4 +750,4 @@ data modify storage worldtool:storage Translation."orientation.south" set value 
 data modify storage worldtool:storage Translation."orientation.west" set value "West"
 data modify storage worldtool:storage Translation."orientation.east" set value "East"
 
-function #worldtool:addon/language/en_us
+function #worldtool:hooks/language/en_us

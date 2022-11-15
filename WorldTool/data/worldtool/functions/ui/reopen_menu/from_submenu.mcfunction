@@ -11,4 +11,4 @@ execute if entity @s[tag=wt.menu.checkered] run function worldtool:ui_general/ch
 execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shapes/options/menu
 execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/menu
 
-function #worldtool:addon/ui/reopen_menu/from_submenu
+function #worldtool:hooks/ui/reopen_menu/from_submenu

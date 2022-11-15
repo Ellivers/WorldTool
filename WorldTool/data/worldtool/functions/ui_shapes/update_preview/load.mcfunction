@@ -6,7 +6,7 @@ execute if entity @s[tag=wt.setting.y_rotation] run scoreboard players set #yRot
 scoreboard players set #xRotEnabled worldtool 0
 execute unless entity @s[tag=!wt.setting.x_rotation,tag=!wt.setting.z_rotation] run scoreboard players set #xRotEnabled worldtool 1
 
-function #worldtool:addon/ui_shapes/set_preview_axes
+function #worldtool:hooks/ui_shapes/set_preview_axes
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 

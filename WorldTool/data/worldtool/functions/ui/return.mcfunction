@@ -16,4 +16,4 @@ execute if entity @s[tag=wt.brush.first_replace] run function worldtool:ui_brush
 execute if entity @s[tag=wt.brush.select_block] run function worldtool:ui_brush/menu
 execute if entity @s[tag=wt.shapes.select_block] run function worldtool:ui_shapes/menu
 
-function #worldtool:addon/ui/return
+function #worldtool:hooks/ui/return

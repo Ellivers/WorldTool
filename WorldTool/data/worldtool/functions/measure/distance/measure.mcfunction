@@ -32,4 +32,4 @@ scoreboard players operation #sqrtOutput worldtool /= #10 worldtool
 tellraw @s[tag=!wt.no_message] {"nbt":"Translation.\"info.measure.distance\"","storage": "worldtool:storage","interpret": true}
 tag @s remove wt.no_message
 
-function #worldtool:addon/measure/distance_done
+function #worldtool:hooks/measure/distance_done

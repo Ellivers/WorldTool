@@ -9,4 +9,4 @@ execute if predicate worldtool:brush_tool/brushes/circle run function worldtool:
 execute if predicate worldtool:brush_tool/brushes/sphere run function worldtool:process_start/brush/start/shapes/sphere
 execute if predicate worldtool:brush_tool/brushes/structure run function worldtool:process_start/brush/start/place_structure
 
-function #worldtool:addon/use_brush/start
+function #worldtool:hooks/use_brush/start

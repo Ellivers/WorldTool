@@ -3,4 +3,4 @@
 
 execute if data storage worldtool:storage {Language:"worldtool:en_us"} run function worldtool:language/en_us
 
-function #worldtool:addon/language/reload
+function #worldtool:hooks/language/reload

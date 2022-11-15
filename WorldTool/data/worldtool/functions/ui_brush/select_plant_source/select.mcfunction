@@ -10,7 +10,7 @@ tag @s[predicate=worldtool:brush_tool/settings/plant_source/desert] add wt.green
 tag @s[predicate=worldtool:brush_tool/settings/plant_source/ocean] add wt.greenery.source.ocean
 tag @s[predicate=worldtool:brush_tool/settings/plant_source/warm_ocean] add wt.greenery.source.warm_ocean
 
-function #worldtool:addon/greenery/brush/check_source
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/check_source
 
 function worldtool:ui_general/greenery/plant_sources/menu
 function worldtool:ui/remove_menu_tags

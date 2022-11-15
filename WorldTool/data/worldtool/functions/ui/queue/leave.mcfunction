@@ -10,4 +10,4 @@ function worldtool:ui/queue/remove_from_list
 
 tag @s remove wt.menu.queue
 
-function #worldtool:addon/ui/queue_leave
+function #worldtool:hooks/ui/queue_leave

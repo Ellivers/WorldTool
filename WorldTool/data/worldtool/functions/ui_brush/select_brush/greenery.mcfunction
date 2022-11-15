@@ -17,6 +17,6 @@ item modify entity @s[predicate=worldtool:brush_tool/settings/plant_source/deser
 item modify entity @s[predicate=worldtool:brush_tool/settings/plant_source/ocean] weapon.mainhand worldtool:brush_tool/settings/plant_source/ocean
 item modify entity @s[predicate=worldtool:brush_tool/settings/plant_source/warm_ocean] weapon.mainhand worldtool:brush_tool/settings/plant_source/warm_ocean
 
-function #worldtool:addon/greenery/brush/select_brush
+execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/select_brush
 
 function worldtool:ui_brush/menu

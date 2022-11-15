@@ -16,6 +16,6 @@ execute unless predicate worldtool:shape_tool/shapes/cone run tellraw @s {"nbt":
 execute if predicate worldtool:shape_tool/shapes/sphere run tellraw @s {"nbt":"Translation.\"button.shape.sphere.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.already_selected.description\"","storage": "worldtool:storage"}}}
 execute unless predicate worldtool:shape_tool/shapes/sphere run tellraw @s {"nbt":"Translation.\"button.shape.sphere.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.sphere.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/select_shape/sphere"}}
 
-function #worldtool:addon/ui_shapes/shape_list
+function #worldtool:hooks/ui_shapes/shape_list
 
 function worldtool:ui/anti_feedback_chat_message/load

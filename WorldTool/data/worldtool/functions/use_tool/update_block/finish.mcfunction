@@ -7,4 +7,4 @@ execute if entity @s[predicate=worldtool:tools/brush,predicate=worldtool:brush_t
 execute if entity @s[predicate=worldtool:tools/brush,predicate=!worldtool:brush_tool/settings/requires/area] run function worldtool:process_start/brush/start/load
 execute if entity @s[tag=wt.update_block.shape_tool] run function worldtool:process_start/shapes/block_updated
 
-function #worldtool:addon/use_tool/update_block/finish
+function #worldtool:hooks/use_tool/update_block/finish
