@@ -3,6 +3,7 @@
 
 function worldtool:ui/clear_chat
 tag @s add wt.menu.repeat
+execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.repeat
 tag @s add wt.allow_input
 
 scoreboard players set #temp worldtool 1

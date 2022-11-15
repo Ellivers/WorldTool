@@ -3,12 +3,15 @@
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
 
-tag @s add wt.smooth.direction.up
-tag @s remove wt.smooth.direction.down
-tag @s add wt.smooth.direction.east
-tag @s add wt.smooth.direction.west
-tag @s add wt.smooth.direction.north
-tag @s add wt.smooth.direction.south
+scoreboard players set #temp worldtool 1
+execute if score $keepMenuOptions worldtool matches 1 store success score #temp worldtool if entity @s[tag=!wt.visited_menu.smooth]
+
+execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.up
+execute if score #temp worldtool matches 1 run tag @s remove wt.smooth.direction.down
+execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.east
+execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.west
+execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.north
+execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.south
 
 scoreboard players set @s wt.size 20
 

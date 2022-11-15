@@ -3,6 +3,7 @@
 
 function worldtool:ui/clear_chat
 tag @s add wt.menu.smooth
+execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.smooth
 tag @s add wt.allow_input
 
 function worldtool:ui_general/back_button

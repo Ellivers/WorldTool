@@ -1,16 +1,9 @@
-# Called by worldtool:ui_general/page1
-# Removes all tags specific to submenus of the general tool
-
-tag @s remove wt.two_block_query.normal
-tag @s remove wt.two_block_query.exclude
+# Called by worldtool:ui_general/remove_submenu_tags
+# Removes other tags that do not *need* to be removed
 
 tag @s remove wt.clone.mode.standard
 tag @s remove wt.clone.mode.template
 tag @s remove wt.clone.at_player
-
-tag @s remove wt.randomize.replace
-tag @s remove wt.randomize.replace.normal
-tag @s remove wt.randomize.replace.exclude
 
 tag @s remove wt.checkered.alternate.x
 tag @s remove wt.checkered.alternate.y
@@ -37,4 +30,9 @@ tag @s remove wt.smooth.direction.west
 tag @s remove wt.smooth.direction.north
 tag @s remove wt.smooth.direction.south
 
-function #worldtool:hooks/ui_general/remove_submenu_tags
+function #rx.playerdb:api/v2/get/self
+data remove storage rx.playerdb:io player.data.WorldTool.StructureCornerName
+
+function #worldtool:hooks/ui_general/remove_submenu_tags_other
+
+function #rx.playerdb:api/v2/save/self

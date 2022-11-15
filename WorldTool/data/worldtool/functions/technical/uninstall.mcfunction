@@ -36,7 +36,7 @@ kill @e[tag=worldtool]
 
 tellraw @s ["\n\n",{"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}]
 
-execute as @a run function worldtool:technical/uninstall/remove_tags.player
+execute as @a run function worldtool:technical/uninstall/remove_player_tags
 
 data remove storage worldtool:storage Translation
 data remove storage worldtool:storage Log

@@ -6,6 +6,7 @@ function worldtool:ui_general/back_button
 
 tag @s remove wt.clone.move
 tag @s add wt.menu.clone
+execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.clone
 
 execute if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
 

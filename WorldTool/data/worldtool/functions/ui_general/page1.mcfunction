@@ -5,7 +5,7 @@ tag @s[tag=!wt.user] add wt.clone.at_player
 function worldtool:ui/open_tool
 tag @s add wt.in_menu
 tag @s add wt.menu.general.page1
-function worldtool:ui_general/remove_submenu_tags
+function worldtool:ui_general/remove_submenu_tags/load
 
 function worldtool:ui_general/input/start/primary
 

@@ -298,7 +298,6 @@ data modify storage worldtool:storage Translation."button.paste_area.select_pos.
 # Settings
 data modify storage worldtool:storage Translation."button.settings.name" set value "[⚙Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
-data modify storage worldtool:storage Translation."info.settings" set value "Settings"
 
 data modify storage worldtool:storage Translation."button.plugin_settings.name" set value "[Plugin Settings...]"
 data modify storage worldtool:storage Translation."button.plugin_settings.description" set value "Show settings added by plugins"
@@ -347,6 +346,8 @@ data modify storage worldtool:storage Translation."label.setting.reload_message"
 data modify storage worldtool:storage Translation."label.setting.reload_message.description" set value "If enabled, a message will be displayed when the data pack is reloaded."
 data modify storage worldtool:storage Translation."label.setting.enable_backups" set value "Enable Backups: "
 data modify storage worldtool:storage Translation."label.setting.enable_backups.description" set value "If enabled, backups will be made of the area when changes are made. Enabling this also enables undo/redo."
+data modify storage worldtool:storage Translation."label.setting.keep_menu_options" set value "Keep Menu Options: "
+data modify storage worldtool:storage Translation."label.setting.keep_menu_options.description" set value "If enabled, most configured options in General Tool menus will stay when re-opening the menus later."
 data modify storage worldtool:storage Translation."label.setting.size_warn_limit" set value "Size Warn Limit: "
 data modify storage worldtool:storage Translation."label.setting.size_warn_limit.description" set value "If the selected area's size is greater or equal to this value, a warning will be displayed. Set to 0 to disable the warning."
 data modify storage worldtool:storage Translation."label.setting.log_limit" set value "Log Limit: "
@@ -566,6 +567,16 @@ data modify storage worldtool:storage Translation."button.command_list.descripti
 data modify storage worldtool:storage Translation."info.command_list.none_found" set value "No command block chains found in this area."
 data modify storage worldtool:storage Translation."info.command_list.list_number" set value '["List #",{"score":{"name":"#temp","objective":"worldtool"}},":"]'
 data modify storage worldtool:storage Translation."info.command_list.instructions" set value "^ Copy this from the output log."
+
+data modify storage worldtool:storage Translation."button.structure_corners.name" set value "[Structure Corners...]"
+data modify storage worldtool:storage Translation."button.structure_corners.description" set value "Place corner mode structure blocks outside the selection's corners"
+data modify storage worldtool:storage Translation."label.structure_corners.structure_name" set value "Structure Name: "
+data modify storage worldtool:storage Translation."button.structure_corners.run.description" set value "Place the corner structure blocks"
+data modify storage worldtool:storage Translation."button.structure_corners.change.name" set value "<Change>"
+data modify storage worldtool:storage Translation."button.structure_corners.change.description" set value "Change the structure name"
+data modify storage worldtool:storage Translation."info.structure_corners.none_placed" set value "No structure blocks were placed because Keep is on."
+data modify storage worldtool:storage Translation."info.structure_corners.some_placed" set value "One structure block was not placed because Keep is on."
+data modify storage worldtool:storage Translation."info.structure_corners.placed" set value "Placed 2 structure blocks"
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"

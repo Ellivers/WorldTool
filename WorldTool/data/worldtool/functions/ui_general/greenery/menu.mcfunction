@@ -4,6 +4,7 @@
 function worldtool:ui/clear_chat
 tag @s add wt.menu.greenery
 tag @s add wt.allow_input
+execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.greenery
 
 execute unless score @s wt.greenery_rate matches 0..100 run scoreboard players set @s wt.greenery_rate 50
 

@@ -3,6 +3,7 @@
 
 function worldtool:ui/clear_chat
 tag @s add wt.menu.shell
+execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.shell
 
 function worldtool:ui_general/input/reset_primary
 

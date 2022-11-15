@@ -58,6 +58,7 @@ tag @s remove wt.menu.repeat
 tag @s remove wt.menu.repeat.filter
 tag @s remove wt.menu.smooth
 tag @s remove wt.menu.smooth.filter
+tag @s remove wt.menu.structure_corners
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes
