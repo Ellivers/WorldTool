@@ -551,6 +551,9 @@ data modify storage worldtool:storage Translation."info.repeat.no_amounts" set v
 data modify storage worldtool:storage Translation."button.smooth.name" set value "[Smooth...]"
 data modify storage worldtool:storage Translation."button.smooth.description" set value "Smooth out the area's shape"
 data modify storage worldtool:storage Translation."button.smooth.run.description" set value "Start smoothing this area out"
+data modify storage worldtool:storage Translation."button.smooth.filter.description" set value "Choose which block(s) to be affected by the smoothing"
+data modify storage worldtool:storage Translation."button.smooth.settings.name" set value "[Settings...]"
+data modify storage worldtool:storage Translation."button.smooth.settings.description" set value "Adjust other smoothing settings"
 data modify storage worldtool:storage Translation."label.smooth.edge_detection_limit" set value "Edge detection limit: "
 data modify storage worldtool:storage Translation."label.smooth.edge_detection_limit.description" set value "The maximum distance in blocks to check for an edge's size"
 data modify storage worldtool:storage Translation."button.smooth.direction.up.description" set value "Toggle smoothing relative to the positive Y direction"
@@ -570,7 +573,7 @@ data modify storage worldtool:storage Translation."info.command_list.instruction
 
 data modify storage worldtool:storage Translation."button.structure_corners.name" set value "[Structure Corners...]"
 data modify storage worldtool:storage Translation."button.structure_corners.description" set value "Place corner mode structure blocks outside the selection's corners"
-data modify storage worldtool:storage Translation."label.structure_corners.structure_name" set value "Structure Name: "
+data modify storage worldtool:storage Translation."label.structure_corners.structure_name" set value "Structure name: "
 data modify storage worldtool:storage Translation."button.structure_corners.run.description" set value "Place the corner structure blocks"
 data modify storage worldtool:storage Translation."button.structure_corners.change.name" set value "<Change>"
 data modify storage worldtool:storage Translation."button.structure_corners.change.description" set value "Change the structure name"
