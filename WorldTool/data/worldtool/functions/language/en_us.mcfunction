@@ -310,7 +310,6 @@ data modify storage worldtool:storage Translation."button.uninstall.name" set va
 data modify storage worldtool:storage Translation."button.uninstall.description" set value "Remove all entities, data, and scores added by WorldTool"
 data modify storage worldtool:storage Translation."warning.uninstall" set value "Are you sure you want to uninstall WorldTool?"
 
-data modify storage worldtool:storage Translation."info.languages" set value "Languages"
 data modify storage worldtool:storage Translation."button.settings.language.name" set value "[Language...]"
 data modify storage worldtool:storage Translation."button.settings.language.description" set value "Change the language"
 data modify storage worldtool:storage Translation."button.settings.select_language.description" set value "Select this language"
@@ -319,7 +318,6 @@ data modify storage worldtool:storage Translation."button.settings.language.relo
 data modify storage worldtool:storage Translation."button.settings.language.reload.off" set value "[Reload: Off]"
 data modify storage worldtool:storage Translation."button.settings.language.reload.description" set value "Reload translations when the data pack is reloaded"
 
-data modify storage worldtool:storage Translation."info.settings.blocks_per_tick" set value "Blocks per tick"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per tick...]"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.description" set value "Change the speed of individual processes"
 data modify storage worldtool:storage Translation."label.blocks_per_tick.preset" set value "Preset: "

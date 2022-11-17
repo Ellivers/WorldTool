@@ -21,8 +21,8 @@ execute if score #filterSuccess worldtool matches 1.. run scoreboard players ope
 execute if score #processPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/x
 execute if score #processPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/-x
 
-execute if score #processPosX worldtool = #pos2x worldtool if score #processPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/y
-execute if score #processPosX worldtool = #pos2x worldtool if score #processPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/-y
+execute if score #processPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/y
+execute if score #processPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/-y
 
-execute if score #processPosX worldtool = #pos2x worldtool if score #processPosY worldtool = #pos2y worldtool if score #processPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/z
-execute if score #processPosX worldtool = #pos2x worldtool if score #processPosY worldtool = #pos2y worldtool if score #processPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/-z
+execute if score #processPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/z
+execute if score #processPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/filter_measure/-z

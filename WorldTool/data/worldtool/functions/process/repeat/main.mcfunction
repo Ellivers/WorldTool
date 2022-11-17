@@ -12,8 +12,8 @@ execute at 9880ccfe-fdf6-4538-838a-ddc75a54608e unless blocks ~ ~ ~ ~ ~ ~ 27451 
 execute if score #originPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/x
 execute if score #originPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/-x
 
-execute if score #originPosX worldtool = #pos2x worldtool if score #originPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/z
-execute if score #originPosX worldtool = #pos2x worldtool if score #originPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/-z
+execute if score #originPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/z
+execute if score #originPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/-z
 
-execute if score #originPosX worldtool = #pos2x worldtool if score #originPosZ worldtool = #pos2z worldtool if score #originPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/y
-execute if score #originPosX worldtool = #pos2x worldtool if score #originPosZ worldtool = #pos2z worldtool if score #originPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/-y
+execute if score #originPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/y
+execute if score #originPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function worldtool:process/repeat/-y
