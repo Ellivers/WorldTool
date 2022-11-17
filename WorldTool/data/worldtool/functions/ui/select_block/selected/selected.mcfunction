@@ -1,4 +1,4 @@
-# Called by worldtool:input_check/player and worldtool:ui/select_block/selected.air
+# Called by worldtool:input_check/player and worldtool:ui/select_block/selected/air
 # Sets the block to what you selected
 
 execute if entity @s[tag=wt.replace.normal,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/replace/normal

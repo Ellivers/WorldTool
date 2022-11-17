@@ -11,7 +11,7 @@ execute store result score #brushSize_temp worldtool run data get entity @s Sele
 scoreboard players add #brushSize_temp worldtool 2
 scoreboard players operation #temp3 worldtool = #brushSize_temp worldtool
 scoreboard players operation #temp3 worldtool %= #2 worldtool
-execute if score #temp3 worldtool matches 1 run scoreboard players add #brushSize_temp worldtool 1
+execute if score #temp3 worldtool matches 0 run scoreboard players add #brushSize_temp worldtool 1
 execute if score #brushSize_temp worldtool > #temp worldtool run scoreboard players operation #brushSize_temp worldtool = #temp2 worldtool
 
 execute store result storage worldtool:storage Temp.BrushSize int 1 run scoreboard players get #brushSize_temp worldtool

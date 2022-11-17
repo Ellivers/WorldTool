@@ -600,7 +600,7 @@ data modify storage worldtool:storage Translation."info.measure.position" set va
 data modify storage worldtool:storage Translation."info.measure.positions" set value '["Position 1: (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},")\\nPosition 2: (",{"score":{"name":"#pos2xt","objective":"worldtool"}},", ",{"score":{"name":"#pos2yt","objective":"worldtool"}},", ",{"score":{"name":"#pos2zt","objective":"worldtool"}},")"]'
 
 # Brush Tool
-data modify storage worldtool:storage Translation."label.brush_size" set value "Brush Size: "
+data modify storage worldtool:storage Translation."label.brush_size" set value "Brush size: "
 data modify storage worldtool:storage Translation."button.brush_size.decrease.description" set value "Decrease brush size"
 data modify storage worldtool:storage Translation."button.brush_size.increase.description" set value "Increase brush size"
 
