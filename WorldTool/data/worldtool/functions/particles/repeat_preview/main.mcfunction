@@ -40,8 +40,8 @@ kill d43b8e30-51cc-4da0-918a-60a557ae676f
 execute if score #particleRepeatPosX worldtool < #pos2xp worldtool run function worldtool:particles/repeat_preview/x
 execute if score #particleRepeatPosX worldtool > #pos2xp worldtool run function worldtool:particles/repeat_preview/-x
 
-execute if score #particleRepeatPosX worldtool = #pos2xp worldtool if score #particleRepeatPosZ worldtool < #pos2zp worldtool run function worldtool:particles/repeat_preview/z
-execute if score #particleRepeatPosX worldtool = #pos2xp worldtool if score #particleRepeatPosZ worldtool > #pos2zp worldtool run function worldtool:particles/repeat_preview/-z
+execute if score #particleRepeatPosZ worldtool < #pos2zp worldtool run function worldtool:particles/repeat_preview/z
+execute if score #particleRepeatPosZ worldtool > #pos2zp worldtool run function worldtool:particles/repeat_preview/-z
 
-execute if score #particleRepeatPosX worldtool = #pos2xp worldtool if score #particleRepeatPosZ worldtool = #pos2zp worldtool if score #particleRepeatPosY worldtool < #pos2yp worldtool run function worldtool:particles/repeat_preview/y
-execute if score #particleRepeatPosX worldtool = #pos2xp worldtool if score #particleRepeatPosZ worldtool = #pos2zp worldtool if score #particleRepeatPosY worldtool > #pos2yp worldtool run function worldtool:particles/repeat_preview/-y
+execute if score #particleRepeatPosY worldtool < #pos2yp worldtool run function worldtool:particles/repeat_preview/y
+execute if score #particleRepeatPosY worldtool > #pos2yp worldtool run function worldtool:particles/repeat_preview/-y

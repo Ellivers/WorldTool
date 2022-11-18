@@ -130,9 +130,13 @@ function #worldtool:hooks/load
 execute in minecraft:overworld run forceload add 27450 19
 execute in minecraft:the_nether run forceload add 27450 19
 execute in minecraft:the_end run forceload add 27450 19
+scoreboard players set #overworldLoadWaitTime worldtool 0
+execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_dimension/overworld
+scoreboard players set #theNetherLoadWaitTime worldtool 0
+execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_dimension/the_nether
+scoreboard players set #theEndLoadWaitTime worldtool 0
+execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_dimension/the_end
 function #worldtool:hooks/init_dimensions/forceload
-scoreboard players set #loadWaitTime worldtool 0
-execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_load
 
 execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
 

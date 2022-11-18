@@ -61,28 +61,35 @@ scoreboard players set #corner2z_temp worldtool -2147483648
 scoreboard players operation #corner2z_temp worldtool > #pos1zt worldtool
 scoreboard players operation #corner2z_temp worldtool > #pos2zt worldtool
 
-execute if score @s wt.amountX matches 1.. run scoreboard players operation #pos1xt worldtool = #corner1x_temp worldtool
-execute if score @s wt.amountX matches -1.. run scoreboard players operation #pos1xt worldtool = #corner2x_temp worldtool
+scoreboard players operation #offsetX worldtool = #corner2x_temp worldtool
+scoreboard players operation #offsetX worldtool -= #corner1x_temp worldtool
+scoreboard players operation #offsetY worldtool = #corner2y_temp worldtool
+scoreboard players operation #offsetY worldtool -= #corner1y_temp worldtool
+scoreboard players operation #offsetZ worldtool = #corner2z_temp worldtool
+scoreboard players operation #offsetZ worldtool -= #corner1z_temp worldtool
 
-execute if score @s wt.amountY matches 1.. run scoreboard players operation #pos1yt worldtool = #corner1y_temp worldtool
-execute if score @s wt.amountY matches -1.. run scoreboard players operation #pos1yt worldtool = #corner2y_temp worldtool
+execute if score @s wt.amountX matches 0.. run scoreboard players operation #pos1xt worldtool = #corner1x_temp worldtool
+execute if score @s wt.amountX matches ..-1 run scoreboard players operation #pos1xt worldtool = #corner2x_temp worldtool
 
-execute if score @s wt.amountZ matches 1.. run scoreboard players operation #pos1zt worldtool = #corner1z_temp worldtool
-execute if score @s wt.amountZ matches -1.. run scoreboard players operation #pos1zt worldtool = #corner2z_temp worldtool
+execute if score @s wt.amountY matches 0.. run scoreboard players operation #pos1yt worldtool = #corner1y_temp worldtool
+execute if score @s wt.amountY matches ..-1 run scoreboard players operation #pos1yt worldtool = #corner2y_temp worldtool
+
+execute if score @s wt.amountZ matches 0.. run scoreboard players operation #pos1zt worldtool = #corner1z_temp worldtool
+execute if score @s wt.amountZ matches ..-1 run scoreboard players operation #pos1zt worldtool = #corner2z_temp worldtool
 
 data modify storage worldtool:storage Processes[0].AffectedArea.From set value [0d,0d,0d]
 execute store result storage worldtool:storage Processes[0].AffectedArea.From[0] double 1 run scoreboard players get #pos1xt worldtool
 execute store result storage worldtool:storage Processes[0].AffectedArea.From[1] double 1 run scoreboard players get #pos1yt worldtool
 execute store result storage worldtool:storage Processes[0].AffectedArea.From[2] double 1 run scoreboard players get #pos1zt worldtool
 
-execute if score @s wt.amountX matches 1.. run scoreboard players operation #pos2xt worldtool = #corner2x_temp worldtool
-execute if score @s wt.amountX matches -1.. run scoreboard players operation #pos2xt worldtool = #corner1x_temp worldtool
+execute if score @s wt.amountX matches 0.. run scoreboard players operation #pos2xt worldtool = #corner2x_temp worldtool
+execute if score @s wt.amountX matches ..-1 run scoreboard players operation #pos2xt worldtool = #corner1x_temp worldtool
 
-execute if score @s wt.amountY matches 1.. run scoreboard players operation #pos2yt worldtool = #corner2y_temp worldtool
-execute if score @s wt.amountY matches -1.. run scoreboard players operation #pos2yt worldtool = #corner1y_temp worldtool
+execute if score @s wt.amountY matches 0.. run scoreboard players operation #pos2yt worldtool = #corner2y_temp worldtool
+execute if score @s wt.amountY matches ..-1 run scoreboard players operation #pos2yt worldtool = #corner1y_temp worldtool
 
-execute if score @s wt.amountZ matches 1.. run scoreboard players operation #pos2zt worldtool = #corner2z_temp worldtool
-execute if score @s wt.amountZ matches -1.. run scoreboard players operation #pos2zt worldtool = #corner1z_temp worldtool
+execute if score @s wt.amountZ matches 0.. run scoreboard players operation #pos2zt worldtool = #corner2z_temp worldtool
+execute if score @s wt.amountZ matches ..-1 run scoreboard players operation #pos2zt worldtool = #corner1z_temp worldtool
 
 scoreboard players operation #temp worldtool = #sizeX worldtool
 scoreboard players operation #temp worldtool *= @s wt.amountX
@@ -90,6 +97,7 @@ scoreboard players operation #pos2xt worldtool += #temp worldtool
 scoreboard players operation #temp worldtool = @s wt.size
 scoreboard players operation #temp worldtool *= @s wt.amountX
 scoreboard players operation #pos2xt worldtool += #temp worldtool
+scoreboard players operation #pos2xt worldtool += #offsetX worldtool
 
 scoreboard players operation #temp worldtool = #sizeY worldtool
 scoreboard players operation #temp worldtool *= @s wt.amountY
@@ -97,6 +105,7 @@ scoreboard players operation #pos2yt worldtool += #temp worldtool
 scoreboard players operation #temp worldtool = @s wt.size
 scoreboard players operation #temp worldtool *= @s wt.amountY
 scoreboard players operation #pos2yt worldtool += #temp worldtool
+scoreboard players operation #pos2yt worldtool += #offsetY worldtool
 
 scoreboard players operation #temp worldtool = #sizeZ worldtool
 scoreboard players operation #temp worldtool *= @s wt.amountZ
@@ -104,6 +113,7 @@ scoreboard players operation #pos2zt worldtool += #temp worldtool
 scoreboard players operation #temp worldtool = @s wt.size
 scoreboard players operation #temp worldtool *= @s wt.amountZ
 scoreboard players operation #pos2zt worldtool += #temp worldtool
+scoreboard players operation #pos2zt worldtool += #offsetZ worldtool
 
 data modify storage worldtool:storage Processes[0].AffectedArea.To set value [0d,0d,0d]
 execute store result storage worldtool:storage Processes[0].AffectedArea.To[0] double 1 run scoreboard players get #pos2xt worldtool

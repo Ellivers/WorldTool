@@ -137,6 +137,7 @@ data modify storage worldtool:storage Translation."error.not_holding_brush_tool"
 data modify storage worldtool:storage Translation."error.invalid_structure" set value "Error: Invalid structure name"
 data modify storage worldtool:storage Translation."error.shape_position_duplicates" set value "Error: You appear to have duplicate positions set. Try setting a shape position again."
 data modify storage worldtool:storage Translation."error.shape_position_missing" set value "Error: You appear to not have set a shape position. Please do so before running the generator."
+data modify storage worldtool:storage Translation."error.shape_position_outside_world" set value "Error: The shape position is outside the world. Please set a new position."
 
 # Warnings
 data modify storage worldtool:storage Translation."warning.size" set value '["Warning: The size of the selected area is very big (",{"score":{"name": "#totalArea","objective": "worldtool"}}," blocks, to be exact). This may take a while to process. Do you wish to continue anyway?"]'
@@ -305,6 +306,15 @@ data modify storage worldtool:storage Translation."label.plugin_settings" set va
 data modify storage worldtool:storage Translation."button.available_plugins.name" set value "[Available Plugins...]"
 data modify storage worldtool:storage Translation."button.available_plugins.description" set value "Show the installed plugins"
 data modify storage worldtool:storage Translation."info.available_plugins" set value '[{"score":{"name":"$plugins","objective":"worldtool"}}," Available Plugins:"]'
+data modify storage worldtool:storage Translation."button.plugin_stats.name" set value "[Stats...]"
+data modify storage worldtool:storage Translation."button.plugin_stats.description" set value "Show the types of installed plugins"
+data modify storage worldtool:storage Translation."label.plugin_stats.plugins" set value "Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.general_tool_plugins" set value "General Tool Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.brush_tool_plugins" set value "Brush Tool Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.shape_tool_plugins" set value "Shape Generation Tool Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.setting_plugins" set value "Setting Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.language_plugins" set value "Language Plugins: "
+data modify storage worldtool:storage Translation."label.plugin_stats.greenery_plugins" set value "Greenery Plugins: "
 
 data modify storage worldtool:storage Translation."button.uninstall.name" set value "[Uninstall...]"
 data modify storage worldtool:storage Translation."button.uninstall.description" set value "Remove all entities, data, and scores added by WorldTool"

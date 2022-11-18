@@ -4,6 +4,12 @@
 execute at @s run clone ~ ~ ~ ~ ~ ~ 27451 1 19
 execute at 9880ccfe-fdf6-4538-838a-ddc75a54608e unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function worldtool:process/repeat/check_place
 
+scoreboard players set #temp worldtool 1
+execute if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosY worldtool = #repeatDestY worldtool if score #repeatPosZ worldtool = #repeatDestZ worldtool run scoreboard players set #temp worldtool 0
+execute if score #temp worldtool matches 1 run scoreboard players operation #pos2x worldtool = #pos2xo worldtool
+execute if score #temp worldtool matches 1 run scoreboard players operation #pos2y worldtool = #pos2yo worldtool
+execute if score #temp worldtool matches 1 run scoreboard players operation #pos2z worldtool = #pos2zo worldtool
+
 scoreboard players set #temp worldtool 0
 
 execute if score #repeatPosX worldtool < #repeatDestX worldtool store success score #temp worldtool run scoreboard players add #repeatPosX worldtool 1
@@ -57,7 +63,3 @@ scoreboard players operation #originPosZ worldtool = #pos1zo worldtool
 scoreboard players operation #pos1x worldtool = #pos1xo worldtool
 scoreboard players operation #pos1y worldtool = #pos1yo worldtool
 scoreboard players operation #pos1z worldtool = #pos1zo worldtool
-
-execute unless score #processPosX worldtool = #pos2x worldtool run scoreboard players operation #pos2x worldtool = #pos2xo worldtool
-execute unless score #processPosY worldtool = #pos2y worldtool run scoreboard players operation #pos2y worldtool = #pos2yo worldtool
-execute unless score #processPosZ worldtool = #pos2z worldtool run scoreboard players operation #pos2z worldtool = #pos2zo worldtool
