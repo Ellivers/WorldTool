@@ -1,4 +1,4 @@
-# Called by worldtool:particles/shape_preview/cone_vertical/full/base_circle and INSERT_FUNCTION
+# Called by various shape preview functions
 # Draws a line to the tip of the cone
 
 scoreboard players set #temp worldtool 0

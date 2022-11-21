@@ -13,6 +13,6 @@ execute if entity @s[tag=wt.process.shapes.hollow] if score #circleMode worldtoo
 execute if entity @s[tag=wt.process.shapes.replace.normal] unless blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all run scoreboard players set #placeShapeBlock worldtool 0
 execute if entity @s[tag=wt.process.shapes.replace.exclude] if blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all run scoreboard players set #placeShapeBlock worldtool 0
 
-execute if score #placeShapeBlock worldtool matches 1 run function worldtool:process/place_block.primary
+execute if score #placeShapeBlock worldtool matches 1 unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary
 
 execute unless score #temp worldtool >= #shapeRadius worldtool positioned ^ ^ ^1.00000000001 run function worldtool:process/shapes/line/loop1

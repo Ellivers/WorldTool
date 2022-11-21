@@ -80,6 +80,7 @@ scoreboard players set #5 worldtool 5
 scoreboard players set #10 worldtool 10
 scoreboard players set #20 worldtool 20
 scoreboard players set #60 worldtool 60
+scoreboard players set #90 worldtool 90
 scoreboard players set #100 worldtool 100
 scoreboard players set #200 worldtool 200
 scoreboard players set #360 worldtool 360

@@ -1,6 +1,6 @@
 # Called by worldtool:process/shapes/cylinder_horizontal, worldtool:process/shapes/cone_horizontal and worldtool:process/shapes/sphere
 
-scoreboard players set #processState worldtool 0
+scoreboard players set #processState worldtool 1
 scoreboard players set #circleRotations worldtool 0
 
 scoreboard players operation #baseRotation worldtool = #shape_x_rotation worldtool

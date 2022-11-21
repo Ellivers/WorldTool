@@ -22,6 +22,3 @@ function #worldtool:hooks/process_message/remove_tags
 
 tag @s remove wt.message.custom_display
 tag @s remove wt.message.default
-tag @s remove wt.message.non_default
-tag @s remove wt.message.measure
-tag @s remove wt.message.clone

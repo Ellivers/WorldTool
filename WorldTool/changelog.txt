@@ -1,10 +1,21 @@
-- Reworked all code
+- Rewrote everything - all code
 - Added undoing and redoing
 - Added copying and pasting
+- Many UI changes
+- Menus no longer close when starting something
+- Added translation/language support
+- Added plugin support
+- Improved shape previews
 - Several Clone rotations can now be used at once
+- New Clone mode: Template
+- Improved Clone overlap detection
+- Added Replace functionality to the Shape Generation Tool
 - Added distance checking to Measure
 - Added position checking to Measure
-- Added toggles for all sides of the selection with Hollow
+- Filtering with Measure now shows the matching blocks' volume
+- Renamed Destroy to Shatter
+- Renamed Hollow to Shell
+- Added a Swap Positions button in the Options menu
+- Added toggles for all sides of the selection with Shell
 - Added sounds for the UI
-- Fixed the brush item sometimes disappearing when not having a brush selected
-- Fixed some precision and overflowing issues with shape generation
+- Fixed a lot of bugs

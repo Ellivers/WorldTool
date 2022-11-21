@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"shapes\",Droppable:1b,Shape:\"cylinder\",ShapeSettings:{Orientation:\"up\",Diameter:3,Length:5,Precision:1,XRotation:0,YRotation:0,Degrees:360,SecondaryDegrees:360,Replace:\"none\"},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"shapes\",Droppable:1b,Shape:\"cylinder\",ShapeSettings:{Orientation:\"up\",Diameter:3,Length:5,Precision:1,XRotation:0,YRotation:0,Degrees:360,SecondaryDegrees:180,Replace:\"none\"},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
                         },
                         {
                             "function": "minecraft:set_name",

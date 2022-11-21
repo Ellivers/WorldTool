@@ -116,6 +116,7 @@ data modify storage worldtool:storage Translation."info.selected_replace_block.e
 data modify storage worldtool:storage Translation."info.item_position" set value "In order to open this menu, you must be holding the item in your hand."
 data modify storage worldtool:storage Translation."info.unavailable" set value "Unavailable"
 data modify storage worldtool:storage Translation."info.selected" set value "(Selected)"
+data modify storage worldtool:storage Translation."info.both_pos_unset" set value "No position has been set."
 
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
@@ -606,7 +607,7 @@ data modify storage worldtool:storage Translation."info.measure.multiple" set va
 data modify storage worldtool:storage Translation."info.measure.filter" set value '["This area contains ",{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," of the selected block(s),\\nwith the matching blocks making up an area of ",{"nbt":"Translation.\\"info.measure.dimensions\\"","storage":"worldtool:storage","interpret":true}]'
 data modify storage worldtool:storage Translation."info.measure.filter.none" set value "This area contains 0 of the selected block(s)"
 data modify storage worldtool:storage Translation."info.measure.distance" set value '["There is a distance of ~",{"score":{"name":"#sqrtOutput","objective":"worldtool"}},".",{"score":{"name":"#outputDecimals","objective":"worldtool"}}," blocks between the two selected positions"]'
-data modify storage worldtool:storage Translation."info.measure.position" set value '["Position : (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},")"]'
+data modify storage worldtool:storage Translation."info.measure.position" set value '["Position: (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},")"]'
 data modify storage worldtool:storage Translation."info.measure.positions" set value '["Position 1: (",{"score":{"name":"#pos1xt","objective":"worldtool"}},", ",{"score":{"name":"#pos1yt","objective":"worldtool"}},", ",{"score":{"name":"#pos1zt","objective":"worldtool"}},")\\nPosition 2: (",{"score":{"name":"#pos2xt","objective":"worldtool"}},", ",{"score":{"name":"#pos2yt","objective":"worldtool"}},", ",{"score":{"name":"#pos2zt","objective":"worldtool"}},")"]'
 
 # Brush Tool
@@ -707,7 +708,7 @@ data modify storage worldtool:storage Translation."button.brush.update_block.des
 # Shape Generation Tool
 data modify storage worldtool:storage Translation."button.change_shape.description" set value "Select another shape to use"
 data modify storage worldtool:storage Translation."button.generate_shape.enabled.description" set value "Generate the selected shape"
-data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "Place a shape position in order to generate the shape"
+data modify storage worldtool:storage Translation."button.generate_shape.disabled.description" set value "In order to generate a shape, a position must be selected"
 data modify storage worldtool:storage Translation."info.shape_position" set value '["Set shape generation position to ",{"score":{"name": "#pos1xt","objective": "worldtool"}}," ",{"score":{"name": "#pos1yt","objective": "worldtool"}}," ",{"score":{"name": "#pos1zt","objective": "worldtool"}}]'
 
 data modify storage worldtool:storage Translation."info.selected_shape.cone" set value "Selected shape: Cone"

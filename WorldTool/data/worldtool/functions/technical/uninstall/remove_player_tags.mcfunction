@@ -7,6 +7,7 @@ function worldtool:ui_general/remove_submenu_tags/visited
 function worldtool:ui_general/remove_submenu_tags/mandatory
 function worldtool:ui_general/remove_submenu_tags/other
 
-tag @s remove wt.visited_menu.greenery
+tag @s remove wt.user
+tag @s remove wt.helper_particles
 
 function #worldtool:hooks/remove_player_tags

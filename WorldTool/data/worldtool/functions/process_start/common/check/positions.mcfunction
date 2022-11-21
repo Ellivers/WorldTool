@@ -16,4 +16,4 @@ execute if score #pos2count worldtool matches 2.. if score #pos1count worldtool 
 execute if score #pos1count worldtool matches 2.. if score #pos2count worldtool matches 2.. run function worldtool:ui/error/both_pos_duplicates
 
 # Other
-execute unless score #pos1count worldtool matches 1 unless score #pos2count worldtool matches 1 run function worldtool:ui/error/pos_errors
+execute if score #success worldtool matches 1 unless score #pos1count worldtool matches 1 unless score #pos2count worldtool matches 1 run function worldtool:ui/error/pos_errors

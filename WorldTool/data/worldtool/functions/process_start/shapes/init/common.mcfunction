@@ -24,3 +24,5 @@ execute store result score #shape_y_rotation worldtool run data get storage worl
 
 scoreboard players set #circleMode worldtool 0
 execute if score #fullLength worldtool matches 1 run scoreboard players set #circleMode worldtool 1
+
+scoreboard players set #circleRotations worldtool 0

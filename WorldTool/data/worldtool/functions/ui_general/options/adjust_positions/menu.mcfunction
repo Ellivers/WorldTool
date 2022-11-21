@@ -1,9 +1,6 @@
 # Called by worldtool:ui_general/options/adjust_positions/load and by various other functions
 # Displays the menu for adjusting positions
 
-function worldtool:process_start/common/check/positions
-execute if score #success worldtool matches 0 run function worldtool:technical/common/stop
-
 execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
 
 function worldtool:ui/clear_chat
@@ -14,9 +11,14 @@ tag @s add wt.allow_input
 
 scoreboard players set #temp1 worldtool 0
 scoreboard players set #temp2 worldtool 0
+scoreboard players set #pos1xt worldtool -2147483648
+scoreboard players set #pos2xt worldtool -2147483648
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s wt.ID = #ID_temp worldtool run function worldtool:ui_general/options/adjust_positions/entity
 
-tellraw @s [{"nbt":"Translation.\"info.measure.positions\"","storage":"worldtool:storage","interpret":true},"\n"]
+scoreboard players set #temp3 worldtool 1
+execute if score #pos1xt worldtool matches -2147483648 if score #pos2xt worldtool matches -2147483648 run scoreboard players set #temp3 worldtool 0
+execute if score #temp3 worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.measure.positions\"","storage":"worldtool:storage","interpret":true},"\n"]
+execute if score #temp3 worldtool matches 0 run tellraw @s [{"nbt":"Translation.\"info.both_pos_unset\"","storage":"worldtool:storage","color": "red"},"\n"]
 
 tellraw @s [{"nbt":"Translation.\"button.set_positions.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "suggest_command","value": "/summon item ~ ~ ~ {Tags:[worldtool,wt.selected_data],PickupDelay:32767s,Item:{id:\"minecraft:stick\",Count:1b,tag:{WorldTool:{ Pos1:[0d,0d,0d], Pos2:[0d,0d,0d] }}}}"}}]
 tellraw @s [{"nbt":"Translation.\"button.swap_positions.name\"","storage": "worldtool:storage","color": "#4cd10f","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.swap_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/swap_positions"}},"\n"]

@@ -15,5 +15,6 @@ execute if entity @s[tag=wt.menu.greenery] run function worldtool:ui_general/gre
 execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/menu
 execute if entity @s[tag=wt.menu.shatter.replace] run function worldtool:ui_general/shatter/menu
 execute if entity @s[tag=wt.menu.smooth] run function worldtool:ui_general/smooth/menu
+execute if entity @s[tag=wt.menu.shapes] run function worldtool:ui_shapes/menu
 
 function #worldtool:hooks/ui/reopen_menu/after_starting

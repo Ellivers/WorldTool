@@ -17,9 +17,12 @@ execute store result entity @s Rotation[0] float 1 run scoreboard players get #s
 execute store result score #currentRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #currentRadius worldtool /= #2 worldtool
 scoreboard players operation #currentRadius worldtool *= #1000000 worldtool
+scoreboard players operation #shapeRadius worldtool = #currentRadius worldtool
+
 scoreboard players set #shrinkPerCircle worldtool -1
 scoreboard players operation #shrinkPerCircle worldtool *= #currentRadius worldtool
 scoreboard players operation #length_temp worldtool = #fullLength worldtool
+execute unless score #length_temp worldtool matches 1 run scoreboard players remove #length_temp worldtool 1
 scoreboard players operation #shrinkPerCircle worldtool /= #length_temp worldtool
 scoreboard players operation #shrinkPerCircle worldtool *= #-1 worldtool
 
