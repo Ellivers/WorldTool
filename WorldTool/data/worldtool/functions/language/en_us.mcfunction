@@ -329,7 +329,7 @@ data modify storage worldtool:storage Translation."button.settings.language.relo
 data modify storage worldtool:storage Translation."button.settings.language.reload.off" set value "[Reload: Off]"
 data modify storage worldtool:storage Translation."button.settings.language.reload.description" set value "Reload translations when the data pack is reloaded"
 
-data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per tick...]"
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.name" set value "[Blocks per Tick...]"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.description" set value "Change the speed of individual processes"
 data modify storage worldtool:storage Translation."label.blocks_per_tick.preset" set value "Preset: "
 data modify storage worldtool:storage Translation."preset.low" set value "Low"
@@ -337,7 +337,7 @@ data modify storage worldtool:storage Translation."preset.medium" set value "Med
 data modify storage worldtool:storage Translation."preset.high" set value "High (Default)"
 data modify storage worldtool:storage Translation."preset.maximum" set value "Maximum"
 data modify storage worldtool:storage Translation."preset.custom" set value "Custom"
-data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.load_area_help.description" set value '["The Load Area process\' speed is not measured in blocks per tick. It\'s measured in save regions (",{"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, " blocks)."]'
+data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.load_area_help.description" set value '["The Load Area process speed is not measured in blocks per tick. It\'s measured in save regions (",{"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, "x", {"score":{"name":"$templateSizeLimit","objective":"worldtool"}}, " blocks)."]'
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.shape_info.description" set value "Shape generation processes may use more than the specified limit"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.name" set value "[Plugin Processes...]"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.description" set value "Change blocks per tick values for plugin processes"
