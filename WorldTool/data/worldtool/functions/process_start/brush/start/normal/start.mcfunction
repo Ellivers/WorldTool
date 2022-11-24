@@ -10,7 +10,7 @@ execute if predicate worldtool:brush_tool/brushes/place run function worldtool:p
 execute if predicate worldtool:brush_tool/brushes/replace run function worldtool:process_start/brush/start/normal/setup_process/replace
 execute if predicate worldtool:brush_tool/brushes/greenery run function worldtool:process_start/brush/start/normal/setup_process/greenery
 
-function #worldtool:hooks/use_brush/normal_start/processes
+function #worldtool:hooks/process_start/brush/normal_start/processes
 
 execute if score #success worldtool matches 0 run tellraw @s {"nbt":"Translation.\"error.no_process_selected\"","storage": "worldtool:storage","color": "red"}
 execute if score #success worldtool matches 1 run function worldtool:process_start/start

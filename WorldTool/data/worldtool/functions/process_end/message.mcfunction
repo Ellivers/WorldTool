@@ -18,7 +18,5 @@ execute if entity @s[tag=!wt.message.custom_display] unless score #blocksPlaced 
 execute if data storage worldtool:storage Temp{Tags:["wt.message.command_list"]} unless data storage worldtool:storage Processes[-1].Output.CommandLists[0] run tellraw @s {"nbt":"Translation.\"info.command_list.none_found\"","storage": "worldtool:storage","color": "red"}
 execute if data storage worldtool:storage Temp{Tags:["wt.message.command_list"]} if data storage worldtool:storage Processes[-1].Output.CommandLists[0] run function worldtool:ui_general/command_list/message_load
 
-function #worldtool:hooks/process_message/remove_tags
-
 tag @s remove wt.message.custom_display
 tag @s remove wt.message.default
