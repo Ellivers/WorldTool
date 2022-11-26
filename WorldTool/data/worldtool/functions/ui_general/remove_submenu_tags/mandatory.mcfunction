@@ -8,4 +8,4 @@ tag @s remove wt.randomize.replace
 tag @s remove wt.randomize.replace.normal
 tag @s remove wt.randomize.replace.exclude
 
-function #worldtool:hooks/ui_general/remove_submenu_tags_mandatory
+function #worldtool:hooks/ui_general/remove_submenu_tags.mandatory

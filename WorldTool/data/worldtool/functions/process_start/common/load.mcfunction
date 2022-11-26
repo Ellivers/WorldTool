@@ -10,7 +10,7 @@ function worldtool:process_start/common/check/size
 
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/check/positions
 
-function #worldtool:hooks/process_start/common_load
+function #worldtool:hooks/process_start/common/load
 
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/setup_process
 

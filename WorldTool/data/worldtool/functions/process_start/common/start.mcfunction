@@ -4,7 +4,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
-function #worldtool:hooks/process_start/common_start
+function #worldtool:hooks/process_start/common/start
 
 function worldtool:process_start/common/start.input
 

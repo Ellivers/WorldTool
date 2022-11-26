@@ -23,4 +23,4 @@ execute if entity @s[tag=wt.randomization_source_corner.2,tag=wt.not_used_yet] r
 execute if entity @s[tag=wt.paste_marker] run data modify storage worldtool:storage Processes[0].Positions.1 set from entity @s Pos
 kill @s[tag=wt.paste_marker]
 
-function #worldtool:hooks/process_start/setup_process.entity
+function #worldtool:hooks/process_start/common/setup_process.entity

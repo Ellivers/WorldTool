@@ -21,7 +21,7 @@ execute if entity @s[tag=wt.setup.repeat] run function worldtool:ui_general/repe
 execute if entity @s[tag=wt.setup.smooth] run function worldtool:ui_general/smooth/setup/process
 execute if entity @s[tag=wt.setup.command_list] run function worldtool:ui_general/command_list/setup_process
 
-function #worldtool:hooks/process_start/setup_process
+function #worldtool:hooks/process_start/common/setup_process
 
 execute if score #success worldtool matches 0 run function worldtool:ui/error/no_process_selected
 
