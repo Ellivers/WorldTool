@@ -24,7 +24,7 @@ execute store result storage worldtool:storage Processes[0].Input.Rotation.X int
 execute store result storage worldtool:storage Processes[0].Input.Rotation.Y int 1 run scoreboard players get @s wt.rotY
 execute store result storage worldtool:storage Processes[0].Input.Rotation.Z int 1 run scoreboard players get @s wt.rotZ
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 function worldtool:process_start/common/lock_direction/from_bottom
 scoreboard players operation #diffY worldtool = #pos1yt worldtool

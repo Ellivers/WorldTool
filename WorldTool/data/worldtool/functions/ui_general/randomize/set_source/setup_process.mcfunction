@@ -8,7 +8,7 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 execute if entity @s[tag=wt.randomize.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.randomization_source.exclude"
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.randomization_source
 tag @s remove wt.randomize.exclude

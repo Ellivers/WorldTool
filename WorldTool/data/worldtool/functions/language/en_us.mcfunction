@@ -118,6 +118,12 @@ data modify storage worldtool:storage Translation."info.unavailable" set value "
 data modify storage worldtool:storage Translation."info.selected" set value "(Selected)"
 data modify storage worldtool:storage Translation."info.both_pos_unset" set value "No position has been set."
 
+# Operator verification
+data modify storage worldtool:storage Translation."info.verify_operator" set value "For security reasons, you need to verify that you are an operator before you can use this tool."
+data modify storage worldtool:storage Translation."button.verify_operator.name" set value "[Verify]"
+data modify storage worldtool:storage Translation."button.verify_operator.description" set value "This button only works for operators"
+data modify storage worldtool:storage Translation."info.verify_operator_success" set value "Successfully verified!"
+
 # Errors
 data modify storage worldtool:storage Translation."error.both_pos_duplicates" set value "Error: You appear to have duplicate positions set. Try setting both positions 1 and 2 again."
 data modify storage worldtool:storage Translation."error.both_pos_missing" set value "Error: You appear to not have any set positions. Positions 1 and 2 are needed to access this function."
@@ -127,6 +133,7 @@ data modify storage worldtool:storage Translation."error.pos1_missing" set value
 data modify storage worldtool:storage Translation."error.pos2_duplicates" set value "Error: You appear to have a duplicated position 2. Try setting position 2 again."
 data modify storage worldtool:storage Translation."error.pos2_missing" set value "Error: You appear to not have a position 2. Positions 1 and 2 are needed to access this function."
 data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
+data modify storage worldtool:storage Translation."error.no_brush" set value "Error: Please select a brush"
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using <Select a Block> instead."
 data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected"
@@ -297,6 +304,23 @@ data modify storage worldtool:storage Translation."button.paste_area.player_pos.
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.name" set value "[Select New Position...]"
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
+data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[✏Adjust Positions...]"
+data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
+data modify storage worldtool:storage Translation."button.position_1.name" set value "[Position 1]"
+data modify storage worldtool:storage Translation."button.position_1.description" set value "Select/deselect the first position"
+data modify storage worldtool:storage Translation."button.position_2.name" set value "[Position 2]"
+data modify storage worldtool:storage Translation."button.position_2.description" set value "Select/deselect the second position"
+data modify storage worldtool:storage Translation."button.set_positions.name" set value "<Set Positions>"
+data modify storage worldtool:storage Translation."button.set_positions.description" set value "Enter the positions manually"
+data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
+data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_x.description" set value "Nudge the selected position(s) one block east"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_y.description" set value "Nudge the selected position(s) one block up"
+data modify storage worldtool:storage Translation."button.nudge_positions.positive_z.description" set value "Nudge the selected position(s) one block south"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_x.description" set value "Nudge the selected position(s) one block west"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_y.description" set value "Nudge the selected position(s) one block down"
+data modify storage worldtool:storage Translation."button.nudge_positions.negative_z.description" set value "Nudge the selected position(s) one block north"
+
 # Settings
 data modify storage worldtool:storage Translation."button.settings.name" set value "[⚙Settings...]"
 data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
@@ -363,23 +387,6 @@ data modify storage worldtool:storage Translation."label.setting.log_limit" set 
 data modify storage worldtool:storage Translation."label.setting.log_limit.description" set value "The maximum number of log entries to keep."
 data modify storage worldtool:storage Translation."label.setting.max_backups" set value "Max Backups: "
 data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once."
-
-data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[✏Adjust Positions...]"
-data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
-data modify storage worldtool:storage Translation."button.position_1.name" set value "[Position 1]"
-data modify storage worldtool:storage Translation."button.position_1.description" set value "Select/deselect the first position"
-data modify storage worldtool:storage Translation."button.position_2.name" set value "[Position 2]"
-data modify storage worldtool:storage Translation."button.position_2.description" set value "Select/deselect the second position"
-data modify storage worldtool:storage Translation."button.set_positions.name" set value "<Set Positions>"
-data modify storage worldtool:storage Translation."button.set_positions.description" set value "Enter the positions manually"
-data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
-data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
-data modify storage worldtool:storage Translation."button.nudge_positions.positive_x.description" set value "Nudge the selected position(s) one block east"
-data modify storage worldtool:storage Translation."button.nudge_positions.positive_y.description" set value "Nudge the selected position(s) one block up"
-data modify storage worldtool:storage Translation."button.nudge_positions.positive_z.description" set value "Nudge the selected position(s) one block south"
-data modify storage worldtool:storage Translation."button.nudge_positions.negative_x.description" set value "Nudge the selected position(s) one block west"
-data modify storage worldtool:storage Translation."button.nudge_positions.negative_y.description" set value "Nudge the selected position(s) one block down"
-data modify storage worldtool:storage Translation."button.nudge_positions.negative_z.description" set value "Nudge the selected position(s) one block north"
 
 # General Tool
 data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set Position 1 Here]"

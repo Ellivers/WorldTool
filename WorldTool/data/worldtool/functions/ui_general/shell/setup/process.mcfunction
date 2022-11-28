@@ -17,7 +17,7 @@ execute if entity @s[tag=wt.shell.side.south] run data modify storage worldtool:
 execute if entity @s[tag=wt.shell.side.east] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shell.side.east"
 execute if entity @s[tag=wt.shell.side.west] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shell.side.west"
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.shell
 

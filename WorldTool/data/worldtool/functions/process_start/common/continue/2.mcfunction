@@ -1,7 +1,4 @@
-# Called by worldtool:ui/warning/size
 # Continue point 2 for starting the process
-
-function worldtool:process_start/common/check/positions
 
 function #worldtool:hooks/process_start/common/continue2
 

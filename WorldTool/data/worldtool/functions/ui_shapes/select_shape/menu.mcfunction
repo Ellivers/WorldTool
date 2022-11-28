@@ -1,6 +1,8 @@
 # Called by worldtool:ui_shapes/menu
 # Menu for selecting a shape
 
+tag @s add wt.user
+
 function worldtool:ui/clear_chat
 function worldtool:ui_shapes/back_button
 

@@ -9,7 +9,7 @@ scoreboard players operation @e[type=minecraft:marker,tag=worldtool,tag=wt.recie
 
 tag @s add wt.setup.clone
 function worldtool:ui_general/clone/calculate_overlap
-execute if score #success worldtool matches 1 run function worldtool:process_start/common/load
+execute if score #success worldtool matches 1 run function worldtool:process_start/general/load
 
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

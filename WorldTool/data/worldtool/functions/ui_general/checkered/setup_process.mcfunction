@@ -15,7 +15,7 @@ execute if entity @s[tag=wt.checkered.alternate.x] run data modify storage world
 execute if entity @s[tag=wt.checkered.alternate.y] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.alternate.y"
 execute if entity @s[tag=wt.checkered.alternate.z] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.alternate.z"
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.checkered
 

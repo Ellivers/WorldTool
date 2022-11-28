@@ -10,7 +10,7 @@ execute if entity @s[tag=wt.two_block_query.normal] run data modify storage worl
 execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.replace.exclude"
 
 tag @s remove wt.keep
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.replace
 

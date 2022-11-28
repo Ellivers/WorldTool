@@ -26,7 +26,8 @@ scoreboard players operation #pos2xo worldtool = #pos2x worldtool
 scoreboard players operation #pos2yo worldtool = #pos2y worldtool
 scoreboard players operation #pos2zo worldtool = #pos2z worldtool
 
-# Process-specific variables
+
+## Process-specific variables ##
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
 
 scoreboard players set #minX worldtool 2147483647

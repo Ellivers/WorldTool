@@ -8,7 +8,7 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 execute store result storage worldtool:storage Processes[0].Input.Size int 1 run scoreboard players get @s wt.size
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.outline
 

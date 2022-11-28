@@ -8,4 +8,4 @@ tag @s add wt.menu.copy_area
 tag @s add wt.save_area.copy
 tag @s add wt.setup.save_area
 
-function worldtool:process_start/common/load
+function worldtool:process_start/general/load

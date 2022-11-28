@@ -9,7 +9,7 @@ execute if score #shapeStartSuccess worldtool matches 1 run function worldtool:p
 
 execute if score #shapeStartSuccess worldtool matches 1 if score #success worldtool matches 1 run function worldtool:process_start/shapes/check_process
 
-scoreboard players set #temp worldtool 0
-execute if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run scoreboard players set #temp worldtool 1
-execute if score #success worldtool matches 1 if score #temp worldtool matches 1 run function worldtool:process_start/start
-execute if score #success worldtool matches 1 if score #temp worldtool matches 0 run function worldtool:process_start/shapes/start
+scoreboard players set #shapeLoadTemp worldtool 0
+execute if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run scoreboard players set #shapeLoadTemp worldtool 1
+execute if score #success worldtool matches 1 if score #shapeLoadTemp worldtool matches 1 run function worldtool:process_start/start
+execute if score #success worldtool matches 1 if score #shapeLoadTemp worldtool matches 0 run function worldtool:process_start/shapes/start

@@ -16,6 +16,7 @@ function worldtool:ui/clear_chat
 tellraw @s [{"nbt":"Translation.\"button.help.spacer\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.help.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.help.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "open_url","value": "https://github.com/Ellivers/WorldTool/wiki"}}]
 function worldtool:ui/back_button
 
+tag @s add wt.user
 tag @s add wt.menu.options
 tag @s add wt.reopen_after_reload
 

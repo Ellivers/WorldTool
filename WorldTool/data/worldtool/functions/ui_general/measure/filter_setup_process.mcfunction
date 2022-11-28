@@ -11,6 +11,6 @@ execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage wor
 tag @s remove wt.two_block_query.normal
 tag @s remove wt.two_block_query.exclude
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 tag @s remove wt.setup.filter_measure

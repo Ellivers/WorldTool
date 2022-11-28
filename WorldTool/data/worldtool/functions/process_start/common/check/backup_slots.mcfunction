@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/common/load
+# Called by worldtool:process_start/general/load
 # Checks if enough backup slots are available
 
 scoreboard players set #success worldtool 1

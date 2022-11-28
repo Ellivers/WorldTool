@@ -6,7 +6,7 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.greenery\\"","storage":"worldtool:storage"}',ID:"worldtool:fill",Tags:["wt.process.greenery"],Input:{Rate:100}}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:greenery"}].Value
 
-function worldtool:process_start/common/set_process_values
+function worldtool:process_start/general/set_process_values
 
 execute store result storage worldtool:storage Processes[0].Input.Rate int 1 run scoreboard players get @s wt.greenery_rate
 
