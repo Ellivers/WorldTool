@@ -1,5 +1,7 @@
 # Called by worldtool:ui_general/randomize/pos2
 
+function worldtool:ui_general/check_tool
+
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 tag @s add wt.menu.randomize.set_source.confirm

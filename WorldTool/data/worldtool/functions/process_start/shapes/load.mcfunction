@@ -9,6 +9,7 @@ execute if score #shapeStartSuccess worldtool matches 1 run function worldtool:p
 
 execute if score #shapeStartSuccess worldtool matches 1 if score #success worldtool matches 1 run function worldtool:process_start/shapes/check_process
 
+# If backups are available, run the backup process first and then let the shape block set up automatically after it's finished
 scoreboard players set #shapeLoadTemp worldtool 0
 execute if score $enableBackups worldtool matches 1 if score $playerdbAvailable worldtool matches 1 run scoreboard players set #shapeLoadTemp worldtool 1
 execute if score #success worldtool matches 1 if score #shapeLoadTemp worldtool matches 1 run function worldtool:process_start/start

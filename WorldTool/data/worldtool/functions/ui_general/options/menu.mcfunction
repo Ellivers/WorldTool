@@ -11,6 +11,7 @@ execute if predicate worldtool:tools/general/pastepos run function worldtool:ui/
 execute if predicate worldtool:tools/general/pastepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
 function worldtool:ui/open_tool
+function worldtool:ui/back_button
 
 execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
 

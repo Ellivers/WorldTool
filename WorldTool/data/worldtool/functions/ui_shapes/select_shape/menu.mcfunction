@@ -3,6 +3,8 @@
 
 tag @s add wt.user
 
+function worldtool:ui_shapes/check_tool
+
 function worldtool:ui/clear_chat
 function worldtool:ui_shapes/back_button
 

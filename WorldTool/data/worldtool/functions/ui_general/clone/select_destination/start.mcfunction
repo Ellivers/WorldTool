@@ -8,7 +8,7 @@ function worldtool:ui/sound.change_item
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 
-function worldtool:ui/reopen_menu/from_submenu.back_button
+function worldtool:ui_general/back/from_inworld_select.button
 
 tellraw @s {"nbt":"Translation.\"info.select_clone_destination\"","storage": "worldtool:storage","color": "aqua"}
 

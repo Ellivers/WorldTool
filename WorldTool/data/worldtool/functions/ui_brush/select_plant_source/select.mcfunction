@@ -1,6 +1,8 @@
 # Called by worldtool:ui_brush/menu
 # Hacky way to reuse the same menu lol
 
+function worldtool:ui_brush/check_tool
+
 function worldtool:ui_general/greenery/plant_sources/remove_all
 tag @s[predicate=worldtool:brush_tool/settings/plant_source/plains] add wt.greenery.source.plains
 tag @s[predicate=worldtool:brush_tool/settings/plant_source/sunflower_plains] add wt.greenery.source.sunflower_plains

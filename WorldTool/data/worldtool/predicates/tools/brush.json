@@ -4,7 +4,10 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{WorldTool:{Tool:\"brush\"}}"
+                "nbt": "{WorldTool:{Tool:\"brush\"}}",
+                "items": [
+                    "minecraft:carrot_on_a_stick"
+                ]
             }
         }
     }

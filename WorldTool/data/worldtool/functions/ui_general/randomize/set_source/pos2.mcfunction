@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/randomize/pos1 and worldtool:ui_general/randomize/set_source/confirm
 # Prompts the user to select a source for the randomization
 
+function worldtool:ui_general/check_tool
+
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 tag @s add wt.menu.randomize.set_source.pos2

@@ -1,11 +1,6 @@
 # Called by worldtool:ui_general/pick_block/primary, worldtool:ui_general/pick_block/secondary, and various [Pick block] buttons in the general tool's menu
 # Displays the pick block message and adds a tag that lets you pick a block
 
-execute unless predicate worldtool:tools/general run function worldtool:ui_general/pick_block/back
-execute unless predicate worldtool:tools/general run function worldtool:ui/error/not_holding_general_tool
-
-execute unless predicate worldtool:tools/general run function worldtool:technical/common/stop
-
 item modify entity @s weapon.mainhand worldtool:general_tool/pick_block
 function worldtool:ui/sound.change_item
 

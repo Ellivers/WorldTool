@@ -1,9 +1,9 @@
 # Called by worldtool:drop_tool/tools/brush and various other functions
 # The main brush menu
 
-function worldtool:ui_brush/remove_tags
-
 function worldtool:ui_brush/check_tool
+
+function worldtool:ui_brush/remove_tags
 
 function worldtool:ui/open_tool
 
