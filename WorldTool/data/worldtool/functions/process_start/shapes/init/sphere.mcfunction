@@ -20,7 +20,7 @@ execute store result score #shapeRadius worldtool run data get storage worldtool
 scoreboard players operation #shapeRadius worldtool /= #2 worldtool
 
 
-scoreboard players set #shapeRaycastType worldtool 1
+scoreboard players set #shapeRaycastType worldtool 3
 
 scoreboard players set #sphereRotations worldtool 0
 

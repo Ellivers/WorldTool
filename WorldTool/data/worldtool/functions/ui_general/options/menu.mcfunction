@@ -3,8 +3,6 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
-
 scoreboard players set #temp3 worldtool 0
 function worldtool:technical/common/get_position_counts
 execute if score #pos1count worldtool matches 1 if score #pos2count worldtool matches 1 run scoreboard players set #temp3 worldtool -1
@@ -12,9 +10,9 @@ execute if score #pos1count worldtool matches 1 if score #pos2count worldtool ma
 execute if predicate worldtool:tools/general/pastepos run function worldtool:ui/sound.change_item
 execute if predicate worldtool:tools/general/pastepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
-function worldtool:ui/clear_chat
-tellraw @s [{"nbt":"Translation.\"button.help.spacer\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.help.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.help.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "open_url","value": "https://github.com/Ellivers/WorldTool/wiki"}}]
-function worldtool:ui/back_button
+function worldtool:ui/open_tool
+
+execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
 
 tag @s add wt.user
 tag @s add wt.menu.options

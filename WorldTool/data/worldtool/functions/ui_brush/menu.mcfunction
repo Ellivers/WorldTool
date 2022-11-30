@@ -32,8 +32,8 @@ execute unless score #temp worldtool matches 0 unless score #temp2 worldtool mat
 execute if entity @s[tag=!wt.brush.structure] run tag @s add wt.setting.brush_size
 execute if entity @s[tag=wt.brush.sphere] run tag @s add wt.setting.hollow
 execute if entity @s[tag=wt.brush.place] run tag @s add wt.setting.overwrite
+execute if entity @s[tag=!wt.brush.paint,tag=!wt.brush.greenery] run tag @s add wt.setting.before_block
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure
-execute unless entity @s[tag=!wt.brush.circle,tag=!wt.brush.place,tag=!wt.brush.replace,tag=!wt.brush.sphere,tag=!wt.brush.structure] run tag @s add wt.setting.before_block
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_rotation
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_mirror
 execute if entity @s[tag=wt.brush.structure] run tag @s add wt.setting.structure_offset

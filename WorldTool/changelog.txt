@@ -13,9 +13,14 @@
 - Added distance checking to Measure
 - Added position checking to Measure
 - Filtering with Measure now shows the matching blocks' volume
+- Added Smoothing
+- Renamed Command block list to Command List
+- Added Structure Name option to Command List
 - Renamed Destroy to Shatter
 - Renamed Hollow to Shell
-- Added a Swap Positions button in the Options menu
 - Added toggles for all sides of the selection with Shell
+- Added a Swap Positions button in the Options menu
 - Added sounds for the UI
+- Security improvements
 - Fixed a lot of bugs
+- Much more
