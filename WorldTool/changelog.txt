@@ -19,7 +19,8 @@
 - Renamed Destroy to Shatter
 - Renamed Hollow to Shell
 - Added toggles for all sides of the selection with Shell
-- Added a Swap Positions button in the Options menu
+- Added a Swap Positions button in the Adjust Positions menu
+- Added shrink and grow buttons in the Adjust Positions menu
 - Added sounds for the UI
 - Security improvements
 - Fixed a lot of bugs

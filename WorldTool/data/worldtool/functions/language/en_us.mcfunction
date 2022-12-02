@@ -1,5 +1,5 @@
 # Called by worldtool:language/reload, worldtool:technical/load, and a future options button for English
-# Translations for English
+# Translations for English (US)
 
 data modify storage worldtool:storage Language set value "worldtool:en_us"
 
@@ -308,6 +308,10 @@ data modify storage worldtool:storage Translation."button.set_positions.name" se
 data modify storage worldtool:storage Translation."button.set_positions.description" set value "Enter the positions manually"
 data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
 data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
+data modify storage worldtool:storage Translation."button.shrink_area.name" set value "[Shrink Area]"
+data modify storage worldtool:storage Translation."button.shrink_area.description" set value "Shrink the selected area by 1 block"
+data modify storage worldtool:storage Translation."button.grow_area.name" set value "[Grow Area]"
+data modify storage worldtool:storage Translation."button.grow_area.description" set value "Grow the selected area by 1 block"
 data modify storage worldtool:storage Translation."button.nudge_positions.positive_x.description" set value "Nudge the selected position(s) one block east"
 data modify storage worldtool:storage Translation."button.nudge_positions.positive_y.description" set value "Nudge the selected position(s) one block up"
 data modify storage worldtool:storage Translation."button.nudge_positions.positive_z.description" set value "Nudge the selected position(s) one block south"
