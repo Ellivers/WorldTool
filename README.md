@@ -4,6 +4,8 @@ WorldTool is a world-editing Minecraft data pack, with functionality similar to 
 
 Here you can download non-full releases (experimental versions) to try out.
 
+To make some neat features possible, WorldTool uses [PlayerDB](https://github.com/rx-modules/PlayerDB).
+
 # Usage
 
 Type `/function worldtool:give` to give yourself both tools; the general tool and the brush.
