@@ -2,4 +2,4 @@
 # Starts the randomization source marking process
 
 tag @s add wt.setup.randomization_source
-function worldtool:process_start/general/load
+function worldtool:process_start/common/load

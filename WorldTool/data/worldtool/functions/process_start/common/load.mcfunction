@@ -8,7 +8,7 @@ execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.input] if 
 
 function #worldtool:hooks/process_start/common/load
 
-execute if score #success worldtool matches 1 run function worldtool:process_start/common/setup_process
+function worldtool:process_start/common/setup_process
 
 execute if score #success worldtool matches 1 run function worldtool:process_start/common/check/process
 

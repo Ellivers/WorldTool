@@ -8,5 +8,6 @@ function worldtool:ui_general/input/start/secondary
 execute if score $keepMenuOptions worldtool matches 0 run tag @s remove wt.greenery.remove_current
 
 function worldtool:ui_general/greenery/plant_sources/remove_all
+tag @s add wt.greenery.source.plains
 
 function worldtool:ui_general/greenery/menu

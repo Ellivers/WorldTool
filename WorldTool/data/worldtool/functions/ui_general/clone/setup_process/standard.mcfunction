@@ -33,6 +33,9 @@ execute store result score #pos1yt worldtool run data get storage worldtool:stor
 scoreboard players operation #pos1yt worldtool -= #diffY worldtool
 execute if score #diffY worldtool matches 1.. store result storage worldtool:storage Processes[0].Positions.Secondary[1] double 1 run scoreboard players get #pos1yt worldtool
 
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions set value [{}]
+execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions[0] set from storage worldtool:storage Processes[0].Positions
+
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
 execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.1[2]
@@ -61,11 +64,10 @@ scoreboard players operation #pos2yt worldtool += #offsetY worldtool
 scoreboard players operation #pos2zt worldtool = #pos1zt worldtool
 scoreboard players operation #pos2zt worldtool += #offsetZ worldtool
 
-execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions set value [{2:[0d,0d,0d]}]
-execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions[0].1 set from storage worldtool:storage Processes[0].Positions.Secondary
-execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[0] double 1 run scoreboard players get #pos2xt worldtool
-execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[1] double 1 run scoreboard players get #pos2yt worldtool
-execute if entity @s[tag=wt.clone.move] store result storage worldtool:storage Temp.NextPositions[0].2[2] double 1 run scoreboard players get #pos2zt worldtool
-
+data modify storage worldtool:storage Processes[0].AffectedArea set value {To:[0d,0d,0d]}
+data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.Secondary
+execute store result storage worldtool:storage Processes[0].AffectedArea.To[0] double 1 run scoreboard players get #pos2xt worldtool
+execute store result storage worldtool:storage Processes[0].AffectedArea.To[1] double 1 run scoreboard players get #pos2yt worldtool
+execute store result storage worldtool:storage Processes[0].AffectedArea.To[2] double 1 run scoreboard players get #pos2zt worldtool
 
 function worldtool:technical/save_load/backup/load
