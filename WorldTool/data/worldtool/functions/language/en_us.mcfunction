@@ -396,6 +396,8 @@ data modify storage worldtool:storage Translation."button.use.name" set value "[
 data modify storage worldtool:storage Translation."button.use.description" set value "Open the main menu"
 data modify storage worldtool:storage Translation."button.options.name" set value "[Options...]"
 data modify storage worldtool:storage Translation."button.options.description" set value "Open the options menu"
+data modify storage worldtool:storage Translation."button.plugins.name" set value "[Plugins...]"
+data modify storage worldtool:storage Translation."button.plugins.description" set value "Open the plugin page"
 
 data modify storage worldtool:storage Translation."button.next_page.description" set value "Go to the next page"
 data modify storage worldtool:storage Translation."button.previous_page.description" set value "Go to the previous page"

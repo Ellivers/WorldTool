@@ -28,7 +28,8 @@ tag @s remove wt.two_block_query.secondary
 tag @s remove wt.two_block_query.primary
 tag @s remove wt.two_block_query.locked_rule
 tag @s remove wt.two_block_query.text.replace
-tag @s remove wt.two_block_query.text.standard
+tag @s remove wt.two_block_query.text.primary.standard
+tag @s remove wt.two_block_query.text.secondary.standard
 tag @s remove wt.two_block_query.text.greenery_replace
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
