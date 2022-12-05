@@ -46,3 +46,5 @@ data remove storage worldtool:storage BlocksPerTick
 data remove storage worldtool:storage Temp
 data remove storage worldtool:storage Language
 data remove storage worldtool:storage Processes
+
+function #worldtool:hooks/uninstall

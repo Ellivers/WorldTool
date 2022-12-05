@@ -16,7 +16,7 @@
 
 
 # Detect an older version
-execute if score $version worldtool matches ..3 run function worldtool:technical/upgrade_version
+execute unless score $version worldtool >= $latestVersion worldtool run function worldtool:technical/upgrade_version
 
 ## Objectives ##
 scoreboard objectives add worldtool dummy
@@ -39,15 +39,17 @@ scoreboard objectives add wt.amountX dummy
 scoreboard objectives add wt.amountY dummy
 scoreboard objectives add wt.amountZ dummy
 
-# Set the current version
-scoreboard players set $version worldtool 4
-
 # Default language
 # Copy langugae reloading to worldtool:technical/upgrade_version in future releases
 # Change the following line this release to default to false
 execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 1
 execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
+execute if score $reloadLanguage worldtool matches 0 if score $version worldtool < $latestVersion worldtool if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
+
+# Set the current version
+scoreboard players set $latestVersion worldtool 4
+scoreboard players operation $version worldtool = $latestVersion worldtool
 
 ## Default blocks per tick ##
 function worldtool:technical/load/setup_blocks_per_tick

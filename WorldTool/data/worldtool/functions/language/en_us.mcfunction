@@ -30,12 +30,17 @@ data modify storage worldtool:storage Translation."lore.selected_brush.sphere" s
 data modify storage worldtool:storage Translation."lore.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."lore.selected_brush.structure" set value "Selected brush: Structure"
 data modify storage worldtool:storage Translation."lore.selected_brush.greenery" set value "Selected brush: Greenery"
+
 data modify storage worldtool:storage Translation."item.shape_tool" set value "Shape Generation Tool"
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set value '"& open the menu"'
 data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.shape_tool.continuous.1" set value '["",{"keybind":"key.use","color":"gold"}," to generate a shape"]'
 data modify storage worldtool:storage Translation."lore.shape_tool.continuous.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+
+data modify storage worldtool:storage Translation."lore.selected_shape.cone" set value "Selected brush: Cone"
+data modify storage worldtool:storage Translation."lore.selected_shape.cylinder" set value "Selected shape: Cylinder"
+data modify storage worldtool:storage Translation."lore.selected_shape.sphere" set value "Selected brush: Sphere"
 
 data modify storage worldtool:storage Translation."lore.selected_block" set value "Selected block:"
 data modify storage worldtool:storage Translation."lore.selected_structure" set value "Selected structure:"
@@ -225,7 +230,7 @@ data modify storage worldtool:storage Translation."button.replace.off" set value
 data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
 data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
-data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]  "
+data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]"
 data modify storage worldtool:storage Translation."button.select_new_block.description" set value "Select a new block to use"
 data modify storage worldtool:storage Translation."button.change.name" set value "[Change...]"
 data modify storage worldtool:storage Translation."button.filter.name" set value "[Filter...]"
@@ -329,7 +334,7 @@ data modify storage worldtool:storage Translation."button.plugin_settings.descri
 data modify storage worldtool:storage Translation."label.plugin_settings" set value "Plugin Settings:"
 data modify storage worldtool:storage Translation."button.available_plugins.name" set value "[Available Plugins...]"
 data modify storage worldtool:storage Translation."button.available_plugins.description" set value "Show the installed plugins"
-data modify storage worldtool:storage Translation."info.available_plugins" set value '[{"score":{"name":"$plugins","objective":"worldtool"}}," Available Plugins:"]'
+data modify storage worldtool:storage Translation."info.available_plugins" set value '["Available Plugins (",{"score":{"name":"$plugins","objective":"worldtool"}},"):"]'
 data modify storage worldtool:storage Translation."button.plugin_stats.name" set value "[Stats...]"
 data modify storage worldtool:storage Translation."button.plugin_stats.description" set value "Show the types of installed plugins"
 data modify storage worldtool:storage Translation."label.plugin_stats.plugins" set value "Plugins: "
@@ -626,11 +631,11 @@ data modify storage worldtool:storage Translation."info.no_brush_selected" set v
 
 data modify storage worldtool:storage Translation."button.brush.select_brush.name" set value "[Select New Brush...]"
 data modify storage worldtool:storage Translation."button.brush.select_brush.description" set value "Select a new brush to use"
-data modify storage worldtool:storage Translation."button.brush.replace_block.name" set value "[Replace New Block...]  "
+data modify storage worldtool:storage Translation."button.brush.replace_block.name" set value "[Replace New Block...]"
 data modify storage worldtool:storage Translation."button.brush.replace_block.description" set value "Select a new block to replace"
-data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]  "
+data modify storage worldtool:storage Translation."button.brush.select_structure.name" set value "[Select New Structure...]"
 data modify storage worldtool:storage Translation."button.brush.select_structure.description" set value "Select a new structure to place"
-data modify storage worldtool:storage Translation."button.brush.select_plant_source.name" set value "[Select Plant Source...]  "
+data modify storage worldtool:storage Translation."button.brush.select_plant_source.name" set value "[Select Plant Source...]"
 data modify storage worldtool:storage Translation."button.brush.select_plant_source.description" set value "Select the source from which to get plants from"
 data modify storage worldtool:storage Translation."button.select_structure.name" set value "<Select a Structure to Place>"
 data modify storage worldtool:storage Translation."info.selected_structure" set value "Selected Structure: "
@@ -659,16 +664,6 @@ data modify storage worldtool:storage Translation."button.brush.structure.descri
 data modify storage worldtool:storage Translation."button.brush.greenery.name" set value "[Greenery]"
 data modify storage worldtool:storage Translation."button.brush.greenery.description" set value "Place plants on supported plant blocks"
 data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
-
-data modify storage worldtool:storage Translation."info.selected_brush" set value "Selected brush: "
-data modify storage worldtool:storage Translation."brush.none" set value "None"
-data modify storage worldtool:storage Translation."brush.paint" set value "Paint"
-data modify storage worldtool:storage Translation."brush.place" set value "Place"
-data modify storage worldtool:storage Translation."brush.replace" set value "Replace"
-data modify storage worldtool:storage Translation."brush.sphere" set value "Sphere"
-data modify storage worldtool:storage Translation."brush.circle" set value "Circle"
-data modify storage worldtool:storage Translation."brush.structure" set value "Structure"
-data modify storage worldtool:storage Translation."brush.structure" set value "Structure"
 
 
 # Brush settings
