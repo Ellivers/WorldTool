@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/shapes/load and worldtool:process_start/shapes/block_updated
-# Checks if a function is running
+# Checks if a process is running
 
 scoreboard players set #success worldtool 1
 

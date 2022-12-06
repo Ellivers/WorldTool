@@ -1,4 +1,5 @@
 # Called by worldtool:process_start/brush/area/load and worldtool:process_start/brush/check
+# Different start actions depending on the selected brush
 
 execute if predicate worldtool:brush_tool/brushes/paint run function worldtool:process_start/brush/start/normal/start
 execute if predicate worldtool:brush_tool/brushes/place run function worldtool:process_start/brush/start/normal/start

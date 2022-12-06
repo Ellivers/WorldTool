@@ -1,4 +1,5 @@
 # Called by worldtool:process_start/brush/area/flat/load and worldtool:process_start/brush/start/shapes/circle
+# Gets the axis to use for flat areas
 
 scoreboard players set #temp.X worldtool 0
 scoreboard players set #temp.Y worldtool 0

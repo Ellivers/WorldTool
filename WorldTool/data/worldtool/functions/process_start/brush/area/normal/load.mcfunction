@@ -1,4 +1,5 @@
 # Called by worldtool:process_start/brush/area/load
+# Preparations for selecting the area
 
 scoreboard players set #temp3 worldtool 1
 

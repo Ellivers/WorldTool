@@ -1,6 +1,6 @@
 # Called by worldtool:technical/tick
 
-# The block selection system
+# The (General Tool) block selection system
 # Hmm... could there be a block here?
 
 # Splits up checks for the primary block and the secondary block

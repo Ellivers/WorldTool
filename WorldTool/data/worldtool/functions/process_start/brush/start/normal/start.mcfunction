@@ -1,4 +1,5 @@
 # Called by worldtool:process_start/brush/start/load
+# Sets up the processes for a normal start
 
 scoreboard players set #success worldtool 0
 

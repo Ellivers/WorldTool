@@ -1,5 +1,5 @@
 # Called by worldtool:use_tool/ray_hit/load
-# Selects the block you're looking at
+# Selects the block the user is looking at
 
 scoreboard players set #success worldtool 1
 

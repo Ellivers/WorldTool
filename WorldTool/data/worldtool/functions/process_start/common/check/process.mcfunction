@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/general/load
-# Checks if a function is running
+# Checks if a process is running
 
 scoreboard players set #success worldtool 1
 

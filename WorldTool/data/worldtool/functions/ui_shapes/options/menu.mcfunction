@@ -4,6 +4,7 @@
 function worldtool:ui/clear_chat
 function worldtool:ui_shapes/back_button
 tag @s add wt.menu.shapes.options
+tag @s add wt.reopen_after_reload
 
 function #rx.playerdb:api/v2/get/self
 function worldtool:ui/undo_redo/display

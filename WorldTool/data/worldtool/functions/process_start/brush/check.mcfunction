@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/brush/load
-# Different brush functions
+# Different brush functionalities
 
 scoreboard players set #temp worldtool 0
 execute if predicate worldtool:brush_tool/settings/requires/block if predicate worldtool:brush_tool/settings/update_block run scoreboard players set #temp worldtool 1

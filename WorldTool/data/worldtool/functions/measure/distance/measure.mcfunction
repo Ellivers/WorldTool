@@ -1,4 +1,4 @@
-# Called by worldtool:measure/distance/load
+# Called by worldtool:measure/distance/load and various shape preview functions
 # Gets the distance between two positions
 
 scoreboard players operation #temp worldtool = #pos1xt worldtool

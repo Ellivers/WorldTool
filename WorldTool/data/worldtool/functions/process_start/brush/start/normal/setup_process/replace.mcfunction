@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/brush/start/normal/start
-# Sets up the place process
+# Sets up the replace process
 
 scoreboard players set #success worldtool 1
 

@@ -1,5 +1,5 @@
 # Called by worldtool:pick_block/other/attempt1_scheduled
-# Checks if everything is going correctly. If not, do plan 2
+# Checks if everything is going correctly. If not, do plan (attempt) 2
 
 data remove storage worldtool:storage Temp
 data modify storage worldtool:storage Temp.Block.Data set from block ~ ~ ~

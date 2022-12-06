@@ -1,4 +1,4 @@
-# Called by worldtool:language/reload, worldtool:technical/load, and a future options button for English
+# Called by worldtool:language/reload, worldtool:technical/load, and worldtool:ui/settings/language/set/en_us
 # Translations for English (US)
 
 data modify storage worldtool:storage Language set value "worldtool:en_us"
@@ -286,7 +286,9 @@ data modify storage worldtool:storage Translation."button.queue.leave.descriptio
 data modify storage worldtool:storage Translation."info.queue.from_command" set value " (Command)"
 
 # Options
-data modify storage worldtool:storage Translation."info.emptied_queue" set value "The queue has been emptied"
+data modify storage worldtool:storage Translation."button.empty_queue.name" set value "[Empty Queue]"
+data modify storage worldtool:storage Translation."button.empty_queue.description" set value "Empty the current process queue"
+data modify storage worldtool:storage Translation."info.emptied_queue" set value "The process queue has been emptied"
 
 data modify storage worldtool:storage Translation."button.copy_area.name" set value "[▶Copy Area]"
 data modify storage worldtool:storage Translation."button.copy_area.description" set value "Copy this area to the clipboard"

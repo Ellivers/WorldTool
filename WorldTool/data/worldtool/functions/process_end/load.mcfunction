@@ -1,4 +1,4 @@
-# Called by worldtool:technical/tick
+# Called by worldtool:technical/tick/process
 # Checks if the process is to end or not, and does some stuff before it ends
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

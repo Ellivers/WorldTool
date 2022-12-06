@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/brush/start/load
-# Places a structure (structure brush)
+# Places a template (structure brush)
 
 clone ~ ~ ~ ~ ~ ~ 27451 1 19
 clone ~ ~1 ~ ~ ~1 ~ 27449 1 19

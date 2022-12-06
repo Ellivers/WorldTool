@@ -1,5 +1,5 @@
 # Called by worldtool:ui/warning/insufficient_backup_slots
-# Continues starting the shape process
+# Continue point 1 for starting a shape process
 
 function worldtool:ui_shapes/check_tool
 

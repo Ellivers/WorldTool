@@ -1,4 +1,4 @@
-# Called by various functions
+# Called by various functions, including worldtool:measure/area/load
 # Measures the area
 
 # 't' = temporary

@@ -1,5 +1,5 @@
 # Called by worldtool:process/load.tags
-# Messages that the process entity has been found again
+# Informs that the process entity has been found again
 
 scoreboard players set #processEntityNotFound worldtool 0
 

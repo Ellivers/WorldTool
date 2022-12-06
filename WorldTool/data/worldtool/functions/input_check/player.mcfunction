@@ -1,5 +1,5 @@
 # Called by worldtool:player_tick
-# Separated from the others because these use entities instead of blocks
+# Separated from the others because this detects entities instead of blocks
 
 execute if entity @s[tag=wt.menu.adjust_positions] if entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1] run function worldtool:ui_general/options/adjust_positions/set_positions
 execute if entity @s[tag=wt.menu.shell.side_settings] if entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1] run function worldtool:ui_general/shell/side_settings/size_set

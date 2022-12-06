@@ -1,5 +1,5 @@
 # Called by worldtool:process_end/load
-# Displays how many blocks were affected by the process
+# Displays how many blocks were affected by the process, or other end-of-process info
 
 execute unless data storage worldtool:storage Temp{Tags:["wt.message.non_default"]} run tag @s add wt.message.default
 

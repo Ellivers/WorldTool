@@ -1,5 +1,5 @@
 # Called by worldtool:process_start/variables
-# Initiates a vertical cylinder process
+# Initiates a vertical cylinder
 
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"up"} run tag @s add wt.orientation.up
 execute if data storage worldtool:storage Processes[-1].Input.ShapeSettings{Orientation:"down"} run tag @s add wt.orientation.down
