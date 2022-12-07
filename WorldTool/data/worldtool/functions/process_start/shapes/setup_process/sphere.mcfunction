@@ -11,9 +11,9 @@ function worldtool:process_start/shapes/setup_process/set_process_values
 execute store result score #radius worldtool run data get storage worldtool:storage Processes[0].Input.ShapeSettings.Diameter
 scoreboard players operation #radius worldtool /= #2 worldtool
 
-execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
-execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
-execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.1[2]
+execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Position[0]
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Position[1]
+execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Position[2]
 
 scoreboard players operation #pos2xt worldtool = #pos1xt worldtool
 scoreboard players operation #pos2yt worldtool = #pos1yt worldtool

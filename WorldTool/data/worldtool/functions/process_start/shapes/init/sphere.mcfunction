@@ -16,6 +16,9 @@ scoreboard players operation #sphereMaxRotations worldtool = #shapeDegreesSphere
 execute if score #precision_temp worldtool matches 1.. run scoreboard players operation #sphereMaxRotations worldtool *= #precision_positive_temp worldtool
 execute if score #precision_temp worldtool matches ..-1 run scoreboard players operation #sphereMaxRotations worldtool /= #precision_positive_temp worldtool
 
+scoreboard players operation #sphereMaxRotationsMinusOne worldtool = #sphereMaxRotations worldtool
+scoreboard players remove #sphereMaxRotationsMinusOne worldtool 1
+
 execute store result score #shapeRadius worldtool run data get storage worldtool:storage Processes[-1].Input.ShapeSettings.Diameter
 scoreboard players operation #shapeRadius worldtool /= #2 worldtool
 
