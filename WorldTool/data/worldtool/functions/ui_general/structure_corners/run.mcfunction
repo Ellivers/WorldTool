@@ -61,5 +61,11 @@ execute if score #temp worldtool matches 0 run tellraw @s {"nbt":"Translation.\"
 execute if score #temp worldtool matches 1 run tellraw @s {"nbt":"Translation.\"info.structure_corners.some_placed\"","storage": "worldtool:storage","color": "gold"}
 execute if score #temp worldtool matches 2 run tellraw @s {"nbt":"Translation.\"info.structure_corners.placed\"","storage": "worldtool:storage"}
 
+tag @s add wt.no_message
+function worldtool:measure/area/load
+scoreboard players set #temp worldtool 0
+execute if score #sizeX worldtool <= $templateSizeLimit worldtool if score #sizeY worldtool <= $templateSizeLimit worldtool if score #sizeZ worldtool <= $templateSizeLimit worldtool run scoreboard players set #temp worldtool 1
+execute if score #temp worldtool matches 0 run tellraw @s {"nbt":"Translation.\"warning.structure_corners.too_big\"","storage": "worldtool:storage","color": "gold"}
+
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

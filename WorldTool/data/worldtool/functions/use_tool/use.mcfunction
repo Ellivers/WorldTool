@@ -21,8 +21,8 @@ execute if predicate worldtool:tools/shapes run tag @s add wt.tool.shapes
 execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other] run tag @s remove wt.raycast_normal
 execute if entity @s[tag=wt.tool.shapes,tag=!wt.pick_block.other] run tag @s add wt.raycast_before
 
-execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s remove wt.raycast_normal
-execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.brush.pick_block] run tag @s add wt.raycast_before
+execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.pick_block.other] run tag @s remove wt.raycast_normal
+execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.pick_block.other] run tag @s add wt.raycast_before
 
 function #worldtool:hooks/use_tool/add_tags
 

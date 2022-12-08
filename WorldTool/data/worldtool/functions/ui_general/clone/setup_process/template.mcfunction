@@ -120,8 +120,8 @@ execute if score @s wt.rotY matches 90 run data modify storage worldtool:storage
 execute if score @s wt.rotY matches 180 run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.rotation set value "CLOCKWISE_180"
 execute if score @s wt.rotY matches 270 run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.rotation set value "COUNTERCLOCKWISE_90"
 
-execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "LEFT_RIGHT"
-execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "FRONT_BACK"
+execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "FRONT_BACK"
+execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "LEFT_RIGHT"
 
 function worldtool:technical/save_load/setup_load_process
 

@@ -603,6 +603,7 @@ data modify storage worldtool:storage Translation."button.structure_corners.chan
 data modify storage worldtool:storage Translation."info.structure_corners.none_placed" set value "No structure blocks were placed because Keep is on."
 data modify storage worldtool:storage Translation."info.structure_corners.some_placed" set value "One structure block was not placed because Keep is on."
 data modify storage worldtool:storage Translation."info.structure_corners.placed" set value "Placed 2 structure blocks"
+data modify storage worldtool:storage Translation."warning.structure_corners.too_big" set value "Warning: This area's dimensions exceed the maximum template size. The area may not be saveable in one file."
 
 data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
 data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
