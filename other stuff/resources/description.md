@@ -1,4 +1,4 @@
-# WorldTool
+# <img src="https://raw.githubusercontent.com/Ellivers/WorldTool/master/other%20stuff/resources/icon.svg" style="max-width:50px;"></img> WorldTool
 
 WorldTool is a powerful and feature-rich world editing data pack.
 
