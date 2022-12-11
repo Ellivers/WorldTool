@@ -16,7 +16,7 @@ When the data pack has been installed, make sure you either have cheats enabled 
 For more info, consult the full documentation:<br>
 https://ellivers.github.io/worldtool-docs
 
-There is also a [youtube video](https://youtu.be/XN6L_cHDODM) that can help introduce you to WorldTool.
+There is also a [youtube video](https://youtu.be/xXa6GvyabZk) that can help introduce you to WorldTool.
 <br>
 <br>
 <br>
