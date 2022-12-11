@@ -16,7 +16,7 @@
 
 
 # Detect an older version
-execute unless score $version worldtool >= $latestVersion worldtool run function worldtool:technical/upgrade_version
+execute if score $version worldtool < $latestVersion worldtool run function worldtool:technical/upgrade_version
 
 ## Objectives ##
 scoreboard objectives add worldtool dummy
@@ -40,15 +40,16 @@ scoreboard objectives add wt.amountY dummy
 scoreboard objectives add wt.amountZ dummy
 
 # Default language
-# Copy langugae reloading to worldtool:technical/upgrade_version in future releases
-# Change the following line this release to default to false
-execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 1
+# When releasing, change the following line to:
+#execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 0
+scoreboard players set $reloadLanguage worldtool 1
 execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
 execute if score $reloadLanguage worldtool matches 0 if score $version worldtool < $latestVersion worldtool if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
-scoreboard players set $latestVersion worldtool 4
+# Current version: 0.6.1
+scoreboard players set $latestVersion worldtool 5
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
 ## Default blocks per tick ##
@@ -57,7 +58,6 @@ function worldtool:technical/load/setup_blocks_per_tick
 ## Default settings ##
 execute unless score $forceLoadPositions worldtool matches 0..1 run scoreboard players set $forceLoadPositions worldtool 1
 execute unless score $progressBar worldtool matches 0..1 run scoreboard players set $progressBar worldtool 1
-#execute unless score $monitorPerformance worldtool matches 0..1 run scoreboard players set $monitorPerformance worldtool 0
 execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
 execute unless score $sizeWarnLimit worldtool matches 0.. run scoreboard players set $sizeWarnLimit worldtool 100000
 execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
@@ -96,11 +96,6 @@ scoreboard players set #pi worldtool 31416
 gamerule commandBlockOutput false
 
 bossbar add worldtool:progress {"nbt":"Translation.\"progress.default\"","storage": "worldtool:storage"}
-
-#execute unless score #defaultWorldborderSize worldtool matches 1.. store result score #defaultWorldborderSize worldtool run worldborder get
-#scoreboard players operation #minWorldborderSize worldtool = #defaultWorldborderSize worldtool
-#scoreboard players remove #minWorldborderSize worldtool 20
-#scoreboard players set #displayLagWarning worldtool 1
 
 ## LCG ##
 scoreboard players set #lcgMultiplier worldtool 1664525
