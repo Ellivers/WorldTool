@@ -2,6 +2,7 @@
 # Starts a process, creating the process entity/entities
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
+execute unless entity @s run scoreboard players set #ID_temp worldtool 0
 
 kill 35c1ab68-9d4c-11eb-a8b3-0242ac130003
 kill 9880ccfe-fdf6-4538-838a-ddc75a54608e

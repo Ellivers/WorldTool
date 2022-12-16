@@ -124,10 +124,10 @@ scoreboard players set $languagePlugins worldtool 0
 scoreboard players set $greeneryPlugins worldtool 0
 function #worldtool:hooks/load
 
-# Forceload for access to storing blocks at 27450 19
-execute in minecraft:overworld run forceload add 27450 19
-execute in minecraft:the_nether run forceload add 27450 19
-execute in minecraft:the_end run forceload add 27450 19
+# Force load for access to storing blocks at 27450 19
+execute in minecraft:overworld positioned 27450 0 19 run function worldtool:technical/common/forceload/add
+execute in minecraft:the_nether positioned 27450 0 19 run function worldtool:technical/common/forceload/add
+execute in minecraft:the_end positioned 27450 0 19 run function worldtool:technical/common/forceload/add
 scoreboard players set #overworldLoadWaitTime worldtool 0
 execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_dimension/overworld
 scoreboard players set #theNetherLoadWaitTime worldtool 0

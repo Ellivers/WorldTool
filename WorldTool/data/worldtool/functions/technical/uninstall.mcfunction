@@ -29,9 +29,11 @@ scoreboard objectives remove wt.amountX
 scoreboard objectives remove wt.amountY
 scoreboard objectives remove wt.amountZ
 
-forceload remove 27450 19
+execute in minecraft:overworld positioned 27450 0 19 run function worldtool:technical/common/forceload/remove
+execute in minecraft:the_nether positioned 27450 0 19 run function worldtool:technical/common/forceload/remove
+execute in minecraft:the_end positioned 27450 0 19 run function worldtool:technical/common/forceload/remove
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload] if score @s worldtool matches 1.. at @s run forceload remove ~ ~
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload,scores={worldtool=1..}] at @s run function worldtool:technical/common/forceload/remove
 kill @e[tag=worldtool]
 
 tellraw @s ["\n\n",{"nbt":"Translation.\"info.uninstall\"","storage": "worldtool:storage","color": "green"}]

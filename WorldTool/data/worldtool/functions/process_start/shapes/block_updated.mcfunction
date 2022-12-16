@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/update_block/finish
+# Called by worldtool:process_start/common/block_from_data/finish
 # The final code before the process starts for real
 
 tag @s remove wt.update_block.shape_tool
