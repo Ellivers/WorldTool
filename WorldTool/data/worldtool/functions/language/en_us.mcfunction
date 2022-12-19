@@ -610,8 +610,9 @@ data modify storage worldtool:storage Translation."button.general.particles.on" 
 data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show assisting particles"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
-data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Go to page 2"
-data modify storage worldtool:storage Translation."button.general.previous_page.description" set value "Go to page 1"
+data modify storage worldtool:storage Translation."info.page_number" set value '[{"score":{"name":"#currentPage","objective":"worldtool"}},"/",{"score":{"name":"#pageCount","objective":"worldtool"}}]'
+data modify storage worldtool:storage Translation."button.general.next_page.description" set value "Next page"
+data modify storage worldtool:storage Translation."button.general.previous_page.description" set value "Previous page"
 data modify storage worldtool:storage Translation."button.fill.select_block.description" set value "Select a block to fill with"
 data modify storage worldtool:storage Translation."button.fill.air.description" set value "Fill with air"
 

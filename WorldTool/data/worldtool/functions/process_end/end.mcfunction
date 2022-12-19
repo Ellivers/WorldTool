@@ -15,4 +15,4 @@ function #worldtool:hooks/process/end
 kill @s
 
 
-function worldtool:ui/queue/move
+function worldtool:technical/queue/move

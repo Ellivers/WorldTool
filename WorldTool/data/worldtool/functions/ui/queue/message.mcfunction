@@ -1,25 +1,25 @@
-# Called by worldtool:ui/queue/load and worldtool:ui/queue/move
+# Called by worldtool:ui/queue/load and worldtool:technical/queue/move
 # Displays the queue message
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 
-execute store result score #temp worldtool run data get storage worldtool:storage Processes
-execute if score #temp worldtool matches 1 store result score #temp6 worldtool run data get storage worldtool:storage Processes[0].Hidden
+execute store result score #queueProcessCount worldtool run data get storage worldtool:storage Processes
+execute if score #queueProcessCount worldtool matches 1 store result score #queueHiddenProcesses worldtool run data get storage worldtool:storage Processes[0].Hidden
 
-execute unless score #temp6 worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:storage","color": "gold"},"\n"]
-execute if score #temp6 worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue.hidden_process\"","storage": "worldtool:storage","color": "gold"},"\n"]
+execute unless score #queueHiddenProcesses worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue\"","storage": "worldtool:storage","color": "gold"},"\n"]
+execute if score #queueHiddenProcesses worldtool matches 1 run tellraw @s [{"nbt":"Translation.\"info.queue.in_queue.hidden_process\"","storage": "worldtool:storage","color": "gold"},"\n"]
 
-execute unless score #temp worldtool matches 2.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
+execute unless score #queueProcessCount worldtool matches 2.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
 
-scoreboard players operation #temp3 worldtool = #temp worldtool
-scoreboard players set #temp4 worldtool 0
-scoreboard players set #temp5 worldtool 0
+scoreboard players operation #queuePos worldtool = #queueProcessCount worldtool
+scoreboard players set #temp worldtool 0
+scoreboard players set #temp2 worldtool 0
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 function worldtool:ui/queue/get_queue_position
 
-scoreboard players set #temp2 worldtool 0
-execute if score #temp worldtool matches 1.. run function worldtool:ui/queue/list
+scoreboard players set #temp worldtool 0
+execute if score #queueProcessCount worldtool matches 1.. run function worldtool:ui/queue/list
 
 tellraw @s ["\n",{"nbt":"Translation.\"info.queue.position\"","storage": "worldtool:storage","interpret": true},"\n"]
 

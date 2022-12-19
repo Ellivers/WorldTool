@@ -1,4 +1,5 @@
 - Improved force loading logic and fixed some related bugs
+- Changed the Page UI element
 - Fixed the block to replace not updating if the user is no longer holding the same item when a queued shape process is started
 - Fixed General Tool block picking not working in certain customized dimensions
 Plugin changes:
