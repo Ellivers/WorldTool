@@ -1,7 +1,8 @@
 # Called by worldtool:ui_general/arrange_positions/pos1 worldtool:ui_general/arrange_positions/pos2
 # Arranges the positions and sets positioning tags
 
-tag @s add wt.particles
+execute unless score #pos2yt worldtool matches -2147483648 run tag @s add wt.particles
+execute if score #pos2yt worldtool matches -2147483648 run tag @s remove wt.particles
 
 tag @s remove wt.particle_direction.x.positive
 tag @s remove wt.particle_direction.x.negative

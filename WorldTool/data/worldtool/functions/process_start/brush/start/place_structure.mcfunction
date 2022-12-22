@@ -31,4 +31,6 @@ execute if block ~ ~ ~ minecraft:structure_block{metadata:"worldtool:structure_b
 execute if score #temp worldtool matches 1.. run clone 27451 1 19 27451 1 19 ~ ~ ~
 execute if score #temp2 worldtool matches 1 run clone 27451 1 19 27451 1 19 ~ ~ ~
 execute if score #offsetY worldtool matches 2.. run clone 27449 1 19 27449 1 19 ~ ~1 ~
+execute if score #offsetX worldtool matches 1.. run clone 27449 1 19 27449 1 19 ~ ~1 ~
+execute if score #offsetZ worldtool matches 1.. run clone 27449 1 19 27449 1 19 ~ ~1 ~
 execute if score #temp2 worldtool matches 1 run clone 27449 1 19 27449 1 19 ~ ~1 ~

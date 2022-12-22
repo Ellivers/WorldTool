@@ -15,7 +15,8 @@ execute if data storage worldtool:storage Temp.AffectedArea run data modify stor
 data remove storage worldtool:storage Temp.AffectedArea
 
 function worldtool:process_start/common/lock_direction/from_bottom
-function worldtool:process_start/common/lock_direction/from_northwest
+function worldtool:process_start/common/lock_direction/from_north
+function worldtool:process_start/common/lock_direction/from_west
 
 execute store result score #temp worldtool if data storage worldtool:storage Processes[0].Input.NextPositions[]
 scoreboard players set #temp2 worldtool 0

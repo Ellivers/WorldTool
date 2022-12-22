@@ -1,6 +1,7 @@
 # Called by worldtool:ui_general/arrange_positions/load
 # Sets the variables and stuff
 
+scoreboard players set #pos2yt worldtool -2147483648
 function worldtool:technical/common/temp_pos1
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos2
 

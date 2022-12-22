@@ -1,7 +1,12 @@
 - Improved force loading logic and fixed some related bugs
 - Changed the Page UI element
-- Fixed the block to replace not updating if the user is no longer holding the same item when a queued shape process is started
+- The Shrink Area and Grow Area buttons now only affect the positions on axes where there already is a difference
+- Fixed the Structure brush leaving a redstone block when placing a structure with an X or Z offset of more than 0
+- Fixed the queue menu not displaying the correct queue position
 - Fixed General Tool block picking not working in certain customized dimensions
+- Fixed the block to replace not updating if the user is no longer holding the same item when a queued shape process is started
+- Fixed particles displaying even if only one position was selected with the General Tool
+- Fixed the Adjust Positions menu showing certain buttons it shouldn't when both positions were not selected
 Plugin changes:
 - Added a process_start/block_from_data/finish.user hook
 - Renamed the process_start/update_block/finish hook to process_start/block_from_data/finish

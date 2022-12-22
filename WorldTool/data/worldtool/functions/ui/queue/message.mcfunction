@@ -12,13 +12,13 @@ execute if score #queueHiddenProcesses worldtool matches 1 run tellraw @s [{"nbt
 
 execute unless score #queueProcessCount worldtool matches 2.. run tellraw @s {"nbt":"Translation.\"error.queue.no_processes\"","storage": "worldtool:storage","color": "red"}
 
-scoreboard players operation #queuePos worldtool = #queueProcessCount worldtool
+scoreboard players set #queuePos worldtool 0
 scoreboard players set #temp worldtool 0
 scoreboard players set #temp2 worldtool 0
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 function worldtool:ui/queue/get_queue_position
 
-scoreboard players set #temp worldtool 0
+scoreboard players operation #temp worldtool = #queueProcessCount worldtool
 execute if score #queueProcessCount worldtool matches 1.. run function worldtool:ui/queue/list
 
 tellraw @s ["\n",{"nbt":"Translation.\"info.queue.position\"","storage": "worldtool:storage","interpret": true},"\n"]
