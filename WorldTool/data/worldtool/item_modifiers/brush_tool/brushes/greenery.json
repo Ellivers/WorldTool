@@ -1,14 +1,14 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{Brush:\"greenery\",BrushSettings:{Requires:[\"area\"],MaxSize:39}}}"
+        "tag": "{WorldTool:{Brush:\"greenery\",BrushSettings:{Requires:[\"area\"],MinSize:1,MaxSize:39}}}"
     },
     {
         "function": "minecraft:set_lore",
         "lore": [
             {"nbt":"Translation.\"lore.selected_brush.greenery\"","storage": "worldtool:storage","color": "yellow","italic": false},
             {"nbt":"Translation.\"lore.current_plant_source\"","storage": "worldtool:storage","color": "light_purple","italic": false},
-            {"nbt":"Translation.\"plant_source.plains\"", "storage": "worldtool:storage","italic": false},
+            {"nbt":"Translation.\"plant_source.plains\"","color": "aqua","storage": "worldtool:storage","italic": false},
             "",
             {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
             {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}

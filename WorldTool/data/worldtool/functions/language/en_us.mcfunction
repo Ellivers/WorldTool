@@ -226,6 +226,7 @@ data modify storage worldtool:storage Translation."button.negative_x.name" set v
 data modify storage worldtool:storage Translation."button.negative_y.name" set value "[-Y]"
 data modify storage worldtool:storage Translation."button.negative_z.name" set value "[-Z]"
 data modify storage worldtool:storage Translation."button.replace.on" set value "[Replace: On]"
+data modify storage worldtool:storage Translation."button.replace.on_more" set value "[Replace: On...]"
 data modify storage worldtool:storage Translation."button.replace.off" set value "[Replace: Off...]"
 data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
