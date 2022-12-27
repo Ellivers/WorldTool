@@ -10,9 +10,7 @@ execute if entity @s[tag=!wt.process.randomize.replace.normal,tag=!wt.process.ra
 execute if entity @s[tag=wt.process.randomize.replace.normal] if blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all run scoreboard players set #temp worldtool 1
 execute if entity @s[tag=wt.process.randomize.replace.exclude] unless blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all run scoreboard players set #temp worldtool 1
 
-execute if score #temp worldtool matches 1 as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] if score @s wt.ID = #ID_temp worldtool run tag @s add wt.temp
-execute if score #temp worldtool matches 1 as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source,tag=wt.temp,sort=random,limit=1] at @s run clone ~ ~ ~ ~ ~ ~ 27451 1 19 replace force
-execute if score #temp worldtool matches 1 run tag @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source,tag=wt.temp] remove wt.temp
+execute if score #temp worldtool matches 1 at @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source,tag=wt.select_random,sort=random,limit=1] run clone ~ ~ ~ ~ ~ ~ 27451 1 19 replace force
 execute if score #temp worldtool matches 1 unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary
 
 # Move the process entity

@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.load_area\\"","storage":"worldtool:storage"}',ID:"worldtool:load_area",Tags:["wt.process.load_area","wt.no_message","wt.dont_reopen_menu"],Input:{AreaList:[]}}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.load_area\\"","storage":"worldtool:storage"}',ID:"worldtool:load_area",Tags:["wt.process.load_area","wt.no_message"],Input:{AreaList:[]}}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:load_area"}].Value
 
 function worldtool:process_start/common/set_process_values

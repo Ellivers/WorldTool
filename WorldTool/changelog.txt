@@ -8,8 +8,13 @@
 - Fixed particles displaying even if only one position was selected with the General Tool
 - Fixed the Adjust Positions menu showing certain buttons it shouldn't when both positions were not selected
 - Fixed some Brush Tool item lore consistency issues
+- Fixed the Shape Generation Tool menu not re-opening after being in the queue
+- Fixed undoing and redoing not working while another process was running
+- Performance improvements
 Plugin changes:
 - Added a process_start/block_from_data/finish.user hook
 - Renamed the process_start/update_block/finish hook to process_start/block_from_data/finish
 - Removed the process_start/update_block/add_tags hook
 - Removed the process_start/update_block/remove_tags hook
+- Removed the ui/undo_redo/redo hook
+- Removed the ui/undo_redo/undo hook
