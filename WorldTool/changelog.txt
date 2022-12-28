@@ -9,6 +9,7 @@
 - Fixed the Adjust Positions menu showing certain buttons it shouldn't when both positions were not selected
 - Fixed some Brush Tool item lore consistency issues
 - Fixed the Shape Generation Tool menu not re-opening after being in the queue
+- Fixed the Paste Area menu not re-opening after being in the queue
 - Fixed undoing and redoing not working while another process was running
 - Performance improvements
 Plugin changes:
