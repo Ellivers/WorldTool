@@ -4,22 +4,22 @@
 scoreboard players set #success worldtool 0
 scoreboard players set #amount worldtool 0
 
-execute if entity @s[tag=wt.setup.fill] run function worldtool:ui_general/fill/setup_process
-execute if entity @s[tag=wt.setup.replace] run function worldtool:ui_general/replace/setup_process
-execute if entity @s[tag=wt.setup.filter_measure] run function worldtool:ui_general/measure/filter_setup_process
-execute if entity @s[tag=wt.setup.clone] run function worldtool:ui_general/clone/setup_process/load
-execute if entity @s[tag=wt.setup.randomization_source] run function worldtool:ui_general/randomize/set_source/setup_process
-execute if entity @s[tag=wt.setup.randomize] run function worldtool:ui_general/randomize/setup/process
+execute if entity @s[tag=wt.setup.fill] run function worldtool:process_start/general/setup_process/fill
+execute if entity @s[tag=wt.setup.replace] run function worldtool:process_start/general/setup_process/replace
+execute if entity @s[tag=wt.setup.filter_measure] run function worldtool:process_start/general/setup_process/filter_measure
+execute if entity @s[tag=wt.setup.clone] run function worldtool:process_start/general/setup_process/clone/load
+execute if entity @s[tag=wt.setup.randomization_source] run function worldtool:process_start/general/setup_process/randomization_source
+execute if entity @s[tag=wt.setup.randomize] run function worldtool:process_start/general/setup_process/randomize/process
 execute if entity @s[tag=wt.setup.save_area] run function worldtool:technical/save_load/setup_save_process/setup
 execute if entity @s[tag=wt.setup.load_area] run function worldtool:technical/save_load/setup_load_process
-execute if entity @s[tag=wt.setup.checkered] run function worldtool:ui_general/checkered/setup_process
-execute if entity @s[tag=wt.setup.shell] run function worldtool:ui_general/shell/setup/process
-execute if entity @s[tag=wt.setup.outline] run function worldtool:ui_general/outline/setup/process
-execute if entity @s[tag=wt.setup.greenery] run function worldtool:ui_general/greenery/setup_process
-execute if entity @s[tag=wt.setup.shatter] run function worldtool:ui_general/shatter/setup_process
-execute if entity @s[tag=wt.setup.repeat] run function worldtool:ui_general/repeat/setup/process
-execute if entity @s[tag=wt.setup.smooth] run function worldtool:ui_general/smooth/setup/process
-execute if entity @s[tag=wt.setup.command_list] run function worldtool:ui_general/command_list/setup_process
+execute if entity @s[tag=wt.setup.checkered] run function worldtool:process_start/general/setup_process/checkered
+execute if entity @s[tag=wt.setup.shell] run function worldtool:process_start/general/setup_process/shell/process
+execute if entity @s[tag=wt.setup.outline] run function worldtool:process_start/general/setup_process/outline/process
+execute if entity @s[tag=wt.setup.greenery] run function worldtool:process_start/general/setup_process/greenery
+execute if entity @s[tag=wt.setup.shatter] run function worldtool:process_start/general/setup_process/shatter
+execute if entity @s[tag=wt.setup.repeat] run function worldtool:process_start/general/setup_process/repeat/process
+execute if entity @s[tag=wt.setup.smooth] run function worldtool:process_start/general/setup_process/smooth/process
+execute if entity @s[tag=wt.setup.command_list] run function worldtool:process_start/general/setup_process/command_list
 
 function #worldtool:hooks/process_start/common/setup_process
 

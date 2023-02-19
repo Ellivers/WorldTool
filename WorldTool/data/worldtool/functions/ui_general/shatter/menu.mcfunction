@@ -1,8 +1,6 @@
 # Called by worldtool:ui_general/shatter/load
 # Displays the shatter menu
 
-function worldtool:ui_general/input/start/primary
-
 function worldtool:ui/clear_chat
 tag @s add wt.menu.shatter
 
@@ -16,3 +14,4 @@ tellraw @s ["\n",{"nbt":"Translation.\"button.select_block.name\"","storage": "w
 function worldtool:ui/close_button
 
 function worldtool:ui/anti_feedback_chat_message/load
+function worldtool:ui_general/input/start/primary

@@ -1,4 +1,4 @@
-# Called recursively and by worldtool:ui_general/clone/setup_process/setup_template_load/load
+# Called recursively and by worldtool:ui_general/clone/setup_template_load/load
 # Applies the rotational data
 
 scoreboard players add #temp2 worldtool 1
@@ -15,4 +15,4 @@ execute store result storage worldtool:storage Processes[-1].Output.SavedAreas[0
 data modify storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList append from storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList[0]
 data remove storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList[0]
 
-execute unless score #temp2 worldtool >= #temp3 worldtool run function worldtool:ui_general/clone/setup_process/setup_template_load/rotate
+execute unless score #temp2 worldtool >= #temp3 worldtool run function worldtool:ui_general/clone/setup_template_load/rotate

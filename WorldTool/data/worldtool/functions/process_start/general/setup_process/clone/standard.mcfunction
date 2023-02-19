@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/setup_process/load
+# Called by worldtool:process_start/general/setup_process/clone/load
 # Sets up the clone process in standard mode
 
 scoreboard players set #success worldtool 1

@@ -1,4 +1,4 @@
-# Called by worldtool:pick_block/other/load_brush and worldtool:pick_block/other/load_shapes
+# Called by worldtool:use_tool/ray_hit/load
 # Picks a block
 
 function worldtool:technical/common/get_dim_top/load

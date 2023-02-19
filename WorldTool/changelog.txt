@@ -11,6 +11,8 @@
 - Fixed the Shape Generation Tool menu not re-opening after being in the queue
 - Fixed the Paste Area menu not re-opening after being in the queue
 - Fixed undoing and redoing not working while another process was running
+- Fixed incorrect description for the Pick Block button in the Shell and Outline menus
+- Fixed menus displaying even if there was an outside world error
 - Performance improvements
 Plugin changes:
 - Added a process_start/block_from_data/finish.user hook

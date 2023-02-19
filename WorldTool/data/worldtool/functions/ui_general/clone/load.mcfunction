@@ -11,5 +11,5 @@ execute if score #temp worldtool matches 1 run tag @s add wt.clone.mode.standard
 execute if score #temp worldtool matches 1 run tag @s remove wt.clone.mode.template
 
 # set to "both" so that the fill process uses air when move is on
-function worldtool:ui_general/input/start/both
 function worldtool:ui_general/clone/menu
+function worldtool:ui_general/input/start/both

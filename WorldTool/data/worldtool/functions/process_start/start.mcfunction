@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/common/start and various functions (probably)
+# Called by worldtool:process_start/common/start and various other functions
 # Common starting function for processes
 
 function worldtool:process_start/positions

@@ -8,8 +8,6 @@ tag @s add wt.in_menu
 tag @s add wt.menu.general.page1
 function worldtool:ui_general/remove_submenu_tags/load
 
-function worldtool:ui_general/input/start/primary
-
 # Particles
 execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
 
@@ -24,7 +22,9 @@ tellraw @s ["",{"nbt":"Translation.\"button.replace.name\"","storage": "worldtoo
 
 scoreboard players set #currentPage worldtool 1
 scoreboard players set #pageCount worldtool 2
-tellraw @s ["\n",{"nbt":"Translation.\"label.page\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.left.name\"","storage": "worldtool:storage","bold": true,"color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.previous_page.description\"","storage": "worldtool:storage"}}},{"nbt":"Translation.\"info.page_number\"","storage": "worldtool:storage","interpret": true},{"nbt":"Translation.\"button.right.name\"","storage": "worldtool:storage","bold": true,"color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.next_page.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/page2"}},"    ",{"nbt":"Translation.\"button.close.name\"","storage": "worldtool:storage","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.close.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/close"}}]
+tellraw @s ["\n",{"nbt":"Translation.\"label.page\"","storage": "worldtool:storage"},{"nbt":"Translation.\"button.left.name\"","storage": "worldtool:storage","bold": true,"color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.previous_page.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/page2"}},{"nbt":"Translation.\"info.page_number\"","storage": "worldtool:storage","interpret": true},{"nbt":"Translation.\"button.right.name\"","storage": "worldtool:storage","bold": true,"color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.next_page.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/page2"}},"    ",{"nbt":"Translation.\"button.close.name\"","storage": "worldtool:storage","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.close.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/close"}}]
 
 
 function worldtool:ui/anti_feedback_chat_message/load
+
+function worldtool:ui_general/input/start/primary

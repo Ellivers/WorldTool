@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/setup_process/load
+# Called by worldtool:process_start/general/setup_process/clone/load
 # Sets up the clone process in template mode
 
 # Save area process
@@ -129,4 +129,4 @@ function worldtool:technical/save_load/setup_load_process
 
 tag @s remove wt.keep
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.AdditionalTags set value ["wt.no_message"]
-execute if entity @s[tag=wt.clone.move] run function worldtool:ui_general/fill/setup_process
+execute if entity @s[tag=wt.clone.move] run function worldtool:process_start/general/setup_process/fill
