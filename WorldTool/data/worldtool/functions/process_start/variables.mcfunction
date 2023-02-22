@@ -48,7 +48,7 @@ execute store result score #rotationZ worldtool run data get storage worldtool:s
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:shell"} run function worldtool:process_start/general/setup_process/shell/variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:outline"} run function worldtool:process_start/general/setup_process/outline/variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:repeat"} run function worldtool:process_start/general/setup_process/repeat/variables
-execute if data storage worldtool:storage Temp.Process{ID:"worldtool:smooth"} run function worldtool:process_start/general/setup_process/smooth/variables
+execute if data storage worldtool:storage Temp.Process{ID:"worldtool:smooth_calculate"} run function worldtool:process_start/general/setup_process/smooth/calculation_variables
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:randomize"} as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] run function worldtool:process_start/general/setup_process/randomize/variables
 
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.vertical"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cylinder_vertical
