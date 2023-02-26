@@ -31,7 +31,6 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 function worldtool:process_start/general/set_process_values
 data modify storage worldtool:storage Processes[0].Tags append from storage worldtool:storage Temp.CommonTags[]
 
-# CURRENT BUG: Can't undo for some reason
 function worldtool:technical/save_load/backup/load
 #
 

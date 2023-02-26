@@ -8,6 +8,13 @@ function #rx.playerdb:api/v2/get/self
 
 execute unless data storage rx.playerdb:io player.data.WorldTool.Future run data modify storage rx.playerdb:io player.data.WorldTool.Future set value []
 
+# New idea:
+# Add a 'before' or 'after' tag to each backup
+# If 'after' and the previous backup is of the same area, go back once
+# If 'after' and the previous backup is of a different area, go back twice
+# If 'before', go back/forward two steps, unless there's only 1 backup available to go to
+# ^ NEEDS TESTING
+
 scoreboard players set #temp worldtool -1
 scoreboard players set #temp2 worldtool -1
 scoreboard players set #temp3 worldtool -1

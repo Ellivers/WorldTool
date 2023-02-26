@@ -15,6 +15,13 @@ execute unless score #temp2 worldtool matches 0 if score #pos1yo worldtool > #po
 scoreboard players operation #diff worldtool += #temp worldtool
 execute unless score #temp worldtool matches 0 run scoreboard players operation #divisionNum worldtool += #smoothDivision worldtool
 
+# THIS IS THE AFFECTED ONE:
+# Also affects other directions, might even affect Up
+# It makes it extend to max length when it shouldn't
+# OXO
+# XXX
+# XXX
+# O = air, X = any other block
 scoreboard players operation #pos1yt worldtool = #processPosY worldtool
 scoreboard players remove #pos1yt worldtool 1
 scoreboard players set #temp worldtool 0
