@@ -1,6 +1,8 @@
 # Called by worldtool:process_start/general/setup_process/clone/load
 # Sets up the clone process in standard mode
 
+# Well, this doesn't work properly with rotation right now...
+
 scoreboard players set #success worldtool 1
 
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.clone\\"","storage":"worldtool:storage"}',ID:"worldtool:clone",Tags:["wt.process.clone","wt.message.clone","wt.message.non_default","wt.secondary_process_entity"]}

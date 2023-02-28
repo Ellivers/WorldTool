@@ -1,5 +1,15 @@
 # Called by worldtool:process/smooth_calculate/main
 
+# Get the smallest and largest end point differences
+scoreboard players operation #diff1 worldtool = #pos1xo worldtool
+scoreboard players operation #diff1 worldtool -= #processPosX worldtool
+scoreboard players operation #diff2 worldtool = #pos2xo worldtool
+scoreboard players operation #diff2 worldtool -= #processPosX worldtool
+execute if score #diff1 worldtool matches ..-1 run scoreboard players operation #pos1xt worldtool = #diff1 worldtool
+execute if score #diff2 worldtool matches ..-1 run scoreboard players operation #pos1xt worldtool = #diff2 worldtool
+execute if score #diff1 worldtool matches 1.. run scoreboard players operation #pos2xt worldtool = #diff1 worldtool
+execute if score #diff2 worldtool matches 1.. run scoreboard players operation #pos2xt worldtool = #diff2 worldtool
+
 scoreboard players set #diff worldtool 0
 scoreboard players set #divisionNum worldtool 0
 
@@ -51,10 +61,10 @@ execute unless score #temp2 worldtool matches 0 if score #pos1zo worldtool < #po
 scoreboard players operation #diff worldtool += #temp worldtool
 execute unless score #temp worldtool matches 0 run scoreboard players operation #divisionNum worldtool += #smoothDivision worldtool
 
-scoreboard players operation #diff worldtool /= #divisionNum worldtool
+function worldtool:process/smooth_calculate/directions/round
 
-execute unless score #diff worldtool matches 0 run data modify storage worldtool:storage Processes[-1].Generated.East append value {Pos:[0,0,0],Diff:0}
-execute unless score #diff worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[0] int 1 run scoreboard players get #processPosX worldtool
-execute unless score #diff worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[1] int 1 run scoreboard players get #processPosY worldtool
-execute unless score #diff worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[2] int 1 run scoreboard players get #processPosZ worldtool
-execute unless score #diff worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Diff int 1 run scoreboard players get #diff worldtool
+execute unless score #temp worldtool matches 0 run data modify storage worldtool:storage Processes[-1].Generated.East append value {Pos:[0,0,0],Diff:0}
+execute unless score #temp worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[0] int 1 run scoreboard players get #processPosX worldtool
+execute unless score #temp worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[1] int 1 run scoreboard players get #processPosY worldtool
+execute unless score #temp worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Pos[2] int 1 run scoreboard players get #processPosZ worldtool
+execute unless score #temp worldtool matches 0 store result storage worldtool:storage Processes[-1].Generated.East[-1].Diff int 1 run scoreboard players get #temp worldtool

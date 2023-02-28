@@ -3,5 +3,5 @@
 
 scoreboard players operation #temp worldtool += #temp2 worldtool
 
-execute if score #temp2 worldtool matches 1 unless score #temp worldtool >= #diffThreshold worldtool positioned ~1 ~ ~ unless block ~ ~ ~ #worldtool:air run function worldtool:process/smooth_calculate/directions/east/search
-execute if score #temp2 worldtool matches -1 unless score #temp worldtool <= #diffThresholdNegative worldtool positioned ~-1 ~ ~ if block ~ ~ ~ #worldtool:air run function worldtool:process/smooth_calculate/directions/east/search
+execute if score #temp2 worldtool matches 1 unless score #temp worldtool > #pos2xt worldtool unless score #temp worldtool >= #diffThreshold worldtool positioned ~1 ~ ~ unless block ~ ~ ~ #worldtool:air run function worldtool:process/smooth_calculate/directions/east/search
+execute if score #temp2 worldtool matches -1 unless score #temp worldtool < #pos1xt worldtool unless score #temp worldtool <= #diffThresholdNegative worldtool positioned ~-1 ~ ~ if block ~ ~ ~ #worldtool:air run function worldtool:process/smooth_calculate/directions/east/search

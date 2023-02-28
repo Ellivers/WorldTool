@@ -592,6 +592,7 @@ data modify storage worldtool:storage Translation."button.smooth.direction.north
 data modify storage worldtool:storage Translation."button.smooth.direction.south.description" set value "Toggle smoothing relative to the positive Z direction"
 data modify storage worldtool:storage Translation."info.smoothed_block" set value "1 smoothed block"
 data modify storage worldtool:storage Translation."info.smoothed_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," smoothed blocks"]'
+data modify storage worldtool:storage Translation."info.smooth.no_directions" set value "Please select at least one direction (in Settings) to smooth the area through."
 
 data modify storage worldtool:storage Translation."button.command_list.name" set value "[▶Command List]"
 data modify storage worldtool:storage Translation."button.command_list.description" set value "List all commands from all command block chains in the selected area, for easy copying to function files"
