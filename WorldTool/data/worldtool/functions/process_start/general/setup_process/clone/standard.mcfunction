@@ -28,15 +28,32 @@ execute store result storage worldtool:storage Processes[0].Input.Rotation.Z int
 
 function worldtool:process_start/general/set_process_values
 
-function worldtool:process_start/common/lock_direction/from_bottom
-scoreboard players operation #diffY worldtool = #pos1yt worldtool
-scoreboard players operation #diffY worldtool -= #pos2yt worldtool
+# Change the starting position based on rotation and direction locking
+scoreboard players set #offsetX worldtool 0
+scoreboard players set #offsetZ worldtool 0
+
+scoreboard players operation #offsetY worldtool = #pos1yt worldtool
+scoreboard players operation #offsetY worldtool -= #pos2yt worldtool
+
+execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
-scoreboard players operation #pos1yt worldtool -= #diffY worldtool
-execute if score #diffY worldtool matches 1.. store result storage worldtool:storage Processes[0].Positions.Secondary[1] double 1 run scoreboard players get #pos1yt worldtool
+execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[2]
+
+execute store success score #temp worldtool if score #offsetY worldtool matches 1..
+
+function worldtool:ui_general/clone/get_rotation_offset/get_rot_selection
+function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
+scoreboard players operation #pos1xt worldtool -= #offsetX worldtool
+scoreboard players operation #pos1yt worldtool -= #offsetY worldtool
+scoreboard players operation #pos1zt worldtool -= #offsetZ worldtool
+execute if score #temp worldtool matches 1 store result storage worldtool:storage Processes[0].Positions.Secondary[0] double 1 run scoreboard players get #pos1xt worldtool
+execute if score #temp worldtool matches 1 store result storage worldtool:storage Processes[0].Positions.Secondary[1] double 1 run scoreboard players get #pos1yt worldtool
+execute if score #temp worldtool matches 1 store result storage worldtool:storage Processes[0].Positions.Secondary[2] double 1 run scoreboard players get #pos1zt worldtool
 
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions set value [{}]
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Temp.NextPositions[0] set from storage worldtool:storage Processes[0].Positions
+
+function worldtool:process_start/common/lock_direction/from_bottom
 
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.1[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
@@ -53,8 +70,9 @@ scoreboard players operation #offsetY worldtool -= #pos1yt worldtool
 scoreboard players operation #offsetZ worldtool = #pos2zt worldtool
 scoreboard players operation #offsetZ worldtool -= #pos1zt worldtool
 
-function worldtool:ui_general/clone/get_rotation_offset/load
+function worldtool:ui_general/clone/get_rotation_offset/rotate_offsets
 
+# Change the starting position based on rotation
 execute store result score #pos1xt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[0]
 execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[1]
 execute store result score #pos1zt worldtool run data get storage worldtool:storage Processes[0].Positions.Secondary[2]

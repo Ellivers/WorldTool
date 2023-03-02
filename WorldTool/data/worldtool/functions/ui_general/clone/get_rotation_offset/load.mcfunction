@@ -6,13 +6,7 @@ scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos1
 execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos2] if score @s wt.ID = #ID_temp worldtool run function worldtool:technical/common/temp_pos2
 
-scoreboard players operation #tempRotX worldtool = @s wt.rotX
-scoreboard players operation #tempRotY worldtool = @s wt.rotY
-scoreboard players operation #tempRotZ worldtool = @s wt.rotZ
-
-execute store success score #mirrorX worldtool if entity @s[tag=wt.clone.mirror.x]
-execute store success score #mirrorY worldtool if entity @s[tag=wt.clone.mirror.y]
-execute store success score #mirrorZ worldtool if entity @s[tag=wt.clone.mirror.z]
+function worldtool:ui_general/clone/get_rotation_offset/get_rot_selection
 
 scoreboard players operation #baseOffsetX worldtool = #pos2xt worldtool
 scoreboard players operation #baseOffsetX worldtool -= #pos1xt worldtool
