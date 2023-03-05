@@ -1,4 +1,4 @@
-# Called recursively and by worldtool:process_start/general/clone/template_transfer/load
+# Called recursively and by worldtool:process_start/general/setup_process/clone/template_transfer/load
 # Applies the rotational data
 
 scoreboard players add #temp2 worldtool 1

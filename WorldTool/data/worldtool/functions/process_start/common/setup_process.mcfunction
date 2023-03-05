@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/general/load and worldtool:process_start/common/continue/1
+# Called by worldtool:process_start/common/setup_process, worldtool:process_start/general/load, and worldtool:process_start/common/continue/1
 # Sets up the process data
 
 scoreboard players set #success worldtool 0
