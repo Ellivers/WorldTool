@@ -14,6 +14,7 @@ execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.no
 execute if score #temp worldtool matches 1 run tag @s add wt.smooth.direction.south
 
 scoreboard players set @s wt.size 20
+scoreboard players set @s wt.size2 5
 
 function worldtool:ui_general/smooth/menu
 function worldtool:ui_general/input/start/secondary

@@ -21,6 +21,9 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 function worldtool:process_start/general/set_process_values
 execute store result storage worldtool:storage Processes[0].Input.Threshold int 1 run scoreboard players get @s wt.size
+scoreboard players set #temp worldtool 10
+scoreboard players operation #temp worldtool -= @s wt.size2
+execute store result storage worldtool:storage Processes[0].Input.Intensity int 1 run scoreboard players get #temp worldtool
 data modify storage worldtool:storage Processes[0].Tags append from storage worldtool:storage Temp.CommonTags[]
 #
 

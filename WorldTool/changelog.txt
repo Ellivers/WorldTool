@@ -1,7 +1,9 @@
 - Improved force loading logic and fixed some related bugs
 - Changed the Page UI element
+- Added an Intensity option to Smoothing
 - Reworked Smoothing. The results are now more in line with what you would expect.
 - The Shrink Area and Grow Area buttons now only affect the positions on axes where there already is a difference, with the exception of 1x1x1 areas
+- Split the settings list into two pages, because it took up too much space
 - Fixed cloning with rotation on the X or Z axes sometimes ending up in the wrong location
 - Fixed the Structure brush leaving a redstone block when placing a structure with an X or Z offset of more than 0
 - Fixed the queue menu not displaying the correct queue position

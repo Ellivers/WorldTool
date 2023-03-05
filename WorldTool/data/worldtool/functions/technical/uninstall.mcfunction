@@ -22,6 +22,7 @@ scoreboard objectives remove wt.pos2y
 scoreboard objectives remove wt.pos2z
 scoreboard objectives remove wt.greenery_rate
 scoreboard objectives remove wt.size
+scoreboard objectives remove wt.size2
 scoreboard objectives remove wt.rotX
 scoreboard objectives remove wt.rotY
 scoreboard objectives remove wt.rotZ

@@ -397,7 +397,7 @@ data modify storage worldtool:storage Translation."label.setting.size_warn_limit
 data modify storage worldtool:storage Translation."label.setting.log_limit" set value "Log Limit: "
 data modify storage worldtool:storage Translation."label.setting.log_limit.description" set value "The maximum number of log entries to keep."
 data modify storage worldtool:storage Translation."label.setting.max_backups" set value "Max Backups: "
-data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once."
+data modify storage worldtool:storage Translation."label.setting.max_backups.description" set value "The maximum number of backups each player can have at once (for undoing)."
 
 # General Tool
 data modify storage worldtool:storage Translation."button.set_pos1.name" set value "[Set Position 1 Here]"
@@ -584,6 +584,8 @@ data modify storage worldtool:storage Translation."button.smooth.settings.name" 
 data modify storage worldtool:storage Translation."button.smooth.settings.description" set value "Adjust other smoothing settings"
 data modify storage worldtool:storage Translation."label.smooth.edge_detection_limit" set value "Edge detection limit: "
 data modify storage worldtool:storage Translation."label.smooth.edge_detection_limit.description" set value "The maximum distance in blocks to check for an edge's size"
+data modify storage worldtool:storage Translation."label.smooth.intensity" set value "Intensity: "
+data modify storage worldtool:storage Translation."label.smooth.intensity.description" set value "How aggressively corner difference calculations are rounded"
 data modify storage worldtool:storage Translation."button.smooth.direction.up.description" set value "Toggle smoothing relative to the positive Y direction"
 data modify storage worldtool:storage Translation."button.smooth.direction.down.description" set value "Toggle smoothing relative to the negative Y direction"
 data modify storage worldtool:storage Translation."button.smooth.direction.east.description" set value "Toggle smoothing relative to the positive X direction"

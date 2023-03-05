@@ -32,6 +32,7 @@ scoreboard objectives add wt.pos2z dummy
 # Menu-specific objectives
 scoreboard objectives add wt.greenery_rate dummy
 scoreboard objectives add wt.size dummy
+scoreboard objectives add wt.size2 dummy
 scoreboard objectives add wt.rotX dummy
 scoreboard objectives add wt.rotY dummy
 scoreboard objectives add wt.rotZ dummy

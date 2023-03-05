@@ -82,8 +82,9 @@ tag @s remove wt.setup.smooth
 
 tag @s remove wt.menu.settings.blocks_per_tick.page.1
 tag @s remove wt.menu.settings.blocks_per_tick.page.2
-tag @s remove wt.menu.settings.blocks_per_tick.page.3
 tag @s remove wt.menu.settings.blocks_per_tick.page.plugin
+tag @s remove wt.menu.settings.list.1
+tag @s remove wt.menu.settings.list.2
 
 tag @s remove wt.reopen_after_reload
 

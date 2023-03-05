@@ -9,6 +9,6 @@ scoreboard players operation #temp2 worldtool *= #10 worldtool
 scoreboard players operation #temp2 worldtool /= #divisionNum worldtool
 scoreboard players operation #temp2 worldtool %= #10 worldtool
 scoreboard players operation #temp worldtool /= #divisionNum worldtool
-execute if score #temp2 worldtool matches 5.. run scoreboard players add #temp worldtool 1
+execute if score #temp2 worldtool >= #roundingThreshold worldtool run scoreboard players add #temp worldtool 1
 
 execute if score #diff worldtool matches ..-1 run scoreboard players operation #temp worldtool *= #-1 worldtool
