@@ -15,4 +15,4 @@ execute store result storage worldtool:storage Processes[-1].Output.SavedAreas[0
 data modify storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList append from storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList[0]
 data remove storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList[0]
 
-execute unless score #temp2 worldtool >= #temp3 worldtool run function worldtool:process_start/general/clone/template_transfer/rotate
+execute unless score #temp2 worldtool >= #temp3 worldtool run function worldtool:process_start/general/setup_process/clone/template_transfer/rotate

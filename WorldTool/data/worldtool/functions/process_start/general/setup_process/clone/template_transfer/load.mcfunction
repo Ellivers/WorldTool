@@ -15,8 +15,8 @@ scoreboard players operation #temp worldtool += #mirrorZ worldtool
 
 scoreboard players set #temp2 worldtool 0
 execute store result score #temp3 worldtool if data storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList[]
-execute unless score #temp worldtool matches 0 run function worldtool:process_start/general/clone/template_transfer/rotate
+execute unless score #temp worldtool matches 0 run function worldtool:process_start/general/setup_process/clone/template_transfer/rotate
 
-data modify storage worldtool:storage Temp.ToNext set value {}
+data modify storage worldtool:storage Temp.ToNext set value {AreaList:[{}]}
 data modify storage worldtool:storage Temp.ToNext.AreaList[0].TemplateList set from storage worldtool:storage Processes[-1].Output.SavedAreas[0].TemplateList
 function worldtool:technical/common/transfer_to_next
