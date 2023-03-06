@@ -123,6 +123,7 @@ scoreboard players set $shapeToolPlugins worldtool 0
 scoreboard players set $settingPlugins worldtool 0
 scoreboard players set $languagePlugins worldtool 0
 scoreboard players set $greeneryPlugins worldtool 0
+scoreboard players set $blocksPerTickPlugins worldtool 0
 function #worldtool:hooks/load
 
 # Force load for access to storing blocks at 27450 19

@@ -122,6 +122,7 @@ data modify storage worldtool:storage Translation."info.item_position" set value
 data modify storage worldtool:storage Translation."info.unavailable" set value "Unavailable"
 data modify storage worldtool:storage Translation."info.selected" set value "(Selected)"
 data modify storage worldtool:storage Translation."info.both_pos_unset" set value "No position has been set."
+data modify storage worldtool:storage Translation."info.pos_unset" set value "No position has been set."
 
 # Operator verification
 data modify storage worldtool:storage Translation."info.verify_operator" set value "For security reasons, you need to verify that you are an operator before you can use this tool."
@@ -319,6 +320,8 @@ data modify storage worldtool:storage Translation."button.position_2.name" set v
 data modify storage worldtool:storage Translation."button.position_2.description" set value "Select/deselect the second position"
 data modify storage worldtool:storage Translation."button.set_positions.name" set value "<Set Positions>"
 data modify storage worldtool:storage Translation."button.set_positions.description" set value "Enter the positions manually"
+data modify storage worldtool:storage Translation."button.teleport.name" set value "[Teleport]"
+data modify storage worldtool:storage Translation."button.teleport.description" set value "Teleport yourself to this position"
 data modify storage worldtool:storage Translation."button.swap_positions.name" set value "[Swap Positions]"
 data modify storage worldtool:storage Translation."button.swap_positions.description" set value "Swap the two positions"
 data modify storage worldtool:storage Translation."button.shrink_area.name" set value "[Shrink Area]"
