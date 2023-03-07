@@ -2,11 +2,13 @@
 - Changed the Page UI element
 - Added an Intensity option to Smoothing
 - Reworked Smoothing. The results are now more in line with what you would expect.
+- Added an option in position adjustment menus for how many blocks to move the selected position(s) at a time
 - Added buttons in position adjustment menus to teleport yourself to selected positions
+- In the General Tool's position adjustment menu, the position toggle buttons now look more like toggles
 - The Shrink Area and Grow Area buttons now only affect the positions on axes where there already is a difference, with the exception of 1x1x1 areas
 - Split the settings list into two pages, because it took up too much space
 - The Shape Generation Tool's menu for adjusting the position now displays a message when no position is selected
-- Fixed cloning with rotation on the X or Z axes sometimes ending up in the wrong location
+- Fixed cloning in Standard mode with rotation on the X or Z axes sometimes ending up in the wrong location
 - Fixed the Structure brush leaving a redstone block when placing a structure with an X or Z offset of more than 0
 - Fixed the queue menu not displaying the correct queue position
 - Fixed General Tool block picking not working in certain customized dimensions
@@ -19,6 +21,7 @@
 - Fixed undoing and redoing not working while another process was running
 - Fixed incorrect description for the Pick Block button in the Shell and Outline menus
 - Fixed menus displaying even if there was an outside world error
+- Fixed users' IDs being able to be temporarily set to 0 before they are properly assigned an ID
 - Multiplayer compatibility fixes
 - Performance improvements
 Plugin changes:
