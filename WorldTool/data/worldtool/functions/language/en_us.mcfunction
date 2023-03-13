@@ -9,8 +9,9 @@ data modify storage worldtool:storage Language set value "worldtool:en_us"
 data modify storage worldtool:storage Translation."item.general.pos1" set value "Set Position 1"
 data modify storage worldtool:storage Translation."item.general.pos2" set value "Set Position 2"
 data modify storage worldtool:storage Translation."lore.general.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
-data modify storage worldtool:storage Translation."lore.general.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
-data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"text":"Sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.general.normal.2" set value '"& open the menu"'
+data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
+data modify storage worldtool:storage Translation."lore.general.normal.4" set value '["",{"text":"Sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
 data modify storage worldtool:storage Translation."lore.general.sourcepos" set value '["",{"keybind":"key.use","color":"gold"}," to set a corner position"]'
@@ -102,6 +103,7 @@ data modify storage worldtool:storage Translation."label.process.shape.sphere" s
 data modify storage worldtool:storage Translation."label.process.shape.cone" set value "Generate Cone: "
 
 # Info
+data modify storage worldtool:storage Translation."info.language_selected" set value "The language English (US) has been selected. You may need to re-give yourself the WorldTool tool items in order to update their translations."
 data modify storage worldtool:storage Translation."info.uninstall" set value "WorldTool has been uninstalled. Using the reload command or restarting the world will install it again."
 data modify storage worldtool:storage Translation."info.affected_block" set value "1 affected block"
 data modify storage worldtool:storage Translation."info.affected_blocks" set value '[{"score":{"name":"#blocksPlaced","objective":"worldtool"}}," affected blocks"]'
@@ -312,7 +314,7 @@ data modify storage worldtool:storage Translation."button.paste_area.player_pos.
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.name" set value "[Select New Position...]"
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
-data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[✏Adjust Positions...]"
+data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[⇆Adjust Positions...]"
 data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"
 data modify storage worldtool:storage Translation."button.position_1.on" set value "[Position 1 ✔]"
 data modify storage worldtool:storage Translation."button.position_1.off" set value "[Position 1   ]"
@@ -363,7 +365,7 @@ data modify storage worldtool:storage Translation."button.uninstall.name" set va
 data modify storage worldtool:storage Translation."button.uninstall.description" set value "Remove all entities, data, and scores added by WorldTool"
 data modify storage worldtool:storage Translation."warning.uninstall" set value "Are you sure you want to uninstall WorldTool?"
 
-data modify storage worldtool:storage Translation."button.settings.language.name" set value "[Language...]"
+data modify storage worldtool:storage Translation."button.settings.language.name" set value "[Ⓐ Language...]"
 data modify storage worldtool:storage Translation."button.settings.language.description" set value "Change the language"
 data modify storage worldtool:storage Translation."button.settings.select_language.description" set value "Select this language"
 data modify storage worldtool:storage Translation."button.settings.selected_language.description" set value "This language is currently selected"
@@ -411,9 +413,9 @@ data modify storage worldtool:storage Translation."button.set_pos1.name" set val
 data modify storage worldtool:storage Translation."button.set_pos1.description" set value "Set position 1 at your position"
 data modify storage worldtool:storage Translation."button.set_pos2.name" set value "[Set Position 2 Here]"
 data modify storage worldtool:storage Translation."button.set_pos2.description" set value "Set position 2 at your position"
-data modify storage worldtool:storage Translation."button.use.name" set value "[Use...]  "
+data modify storage worldtool:storage Translation."button.use.name" set value "[➤Use...]  "
 data modify storage worldtool:storage Translation."button.use.description" set value "Open the main menu"
-data modify storage worldtool:storage Translation."button.options.name" set value "[Options...]"
+data modify storage worldtool:storage Translation."button.options.name" set value "[✎Options...]"
 data modify storage worldtool:storage Translation."button.options.description" set value "Open the options menu"
 data modify storage worldtool:storage Translation."button.plugins.name" set value "[Plugins...]"
 data modify storage worldtool:storage Translation."button.plugins.description" set value "Open the plugin page"
@@ -745,7 +747,7 @@ data modify storage worldtool:storage Translation."button.shape.sphere.name" set
 data modify storage worldtool:storage Translation."button.shape.sphere.description" set value "Select the sphere shape"
 data modify storage worldtool:storage Translation."button.shape.already_selected.description" set value "This shape is already selected"
 
-data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[✏Adjust Position...]"
+data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[⇆Adjust Position...]"
 data modify storage worldtool:storage Translation."button.adjust_position.description" set value "Edit the selected position"
 data modify storage worldtool:storage Translation."button.preview_shape.on" set value "[Preview Shape: On]"
 data modify storage worldtool:storage Translation."button.preview_shape.off" set value "[Preview Shape: Off]"

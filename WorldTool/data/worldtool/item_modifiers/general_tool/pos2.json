@@ -17,7 +17,8 @@
         "lore": [
             {"nbt":"Translation.\"lore.general.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
             {"nbt":"Translation.\"lore.general.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
-            {"nbt":"Translation.\"lore.general.normal.3\"","storage": "worldtool:storage","interpret": true,"italic": false}
+            {"nbt":"Translation.\"lore.general.normal.3\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.general.normal.4\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
         "replace": true
