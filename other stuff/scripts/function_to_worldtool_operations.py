@@ -1,4 +1,3 @@
-
 from genericpath import exists;
 import os;
 import re;
@@ -18,7 +17,7 @@ os.mkdir('output')
 output = open('output/result.mcfunction', 'w')
 output.write('function worldtool:technical/common/temp_pos1')
 
-input = open('input.mcfunction','r').read().splitlines()
+input = open('input/input.mcfunction','r').read().splitlines()
 
 for i in range(0, len(input)):
     fillparts = re.match('^\s*fill ~(-?\d+)? ~(-?\d+)? ~(-?\d+)? ~(-?\d+)? ~(-?\d+)? ~(-?\d+)?', input[i])

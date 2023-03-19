@@ -3,6 +3,7 @@
         "minecraft:dirt",
         "minecraft:grass_block",
         "minecraft:podzol",
-        "minecraft:coarse_dirt"
+        "minecraft:coarse_dirt",
+        "minecraft:moss_block"
     ]
 }

@@ -1,9 +1,9 @@
-- Improved force loading logic and fixed some related bugs
 - Changed the Page UI element
 - Added an Intensity option to Smoothing
 - Reworked Smoothing. The results are now more in line with what you would expect.
 - Added an option in position adjustment menus for how many blocks to move the selected position(s) at a time
 - Added buttons in position adjustment menus to teleport yourself to selected positions
+- Improved force loading logic and fixed some related bugs
 - In the General Tool's position adjustment menu, the position toggle buttons now look more like toggles
 - The Shrink Area and Grow Area buttons now only affect the positions on axes where there already is a difference, with the exception of 1x1x1 areas
 - Split the settings list into two pages, because it took up too much space
@@ -28,8 +28,8 @@
 - Performance improvements
 Plugin changes:
 - Added a process_start/block_from_data/finish.user hook
-- Renamed the process_start/update_block/finish hook to process_start/block_from_data/finish
-- Removed the process_start/update_block/add_tags hook
-- Removed the process_start/update_block/remove_tags hook
+- Renamed the use_tool/update_block/finish hook to process_start/block_from_data/finish
+- Removed the use_tool/update_block/add_tags hook
+- Removed the use_tool/update_block/remove_tags hook
 - Removed the ui/undo_redo/redo hook
 - Removed the ui/undo_redo/undo hook

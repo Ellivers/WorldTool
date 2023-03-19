@@ -21,7 +21,7 @@ execute if predicate worldtool:brush_tool/settings/plant_source/taiga run data m
 execute if predicate worldtool:brush_tool/settings/plant_source/desert run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.desert"
 execute if predicate worldtool:brush_tool/settings/plant_source/desert run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.desert"
 execute if predicate worldtool:brush_tool/settings/plant_source/desert run tag @s remove wt.greenery.standard_base
-execute unless entity @s[predicate=!worldtool:brush_tool/settings/plant_source/ocean,predicate=!worldtool:brush_tool/settings/plant_source/warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.ocean"
+execute unless entity @s[predicate=!worldtool:brush_tool/settings/plant_source/ocean,predicate=!worldtool:brush_tool/settings/plant_source/warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.all"
 execute unless entity @s[predicate=!worldtool:brush_tool/settings/plant_source/ocean,predicate=!worldtool:brush_tool/settings/plant_source/warm_ocean] run tag @s remove wt.greenery.standard_base
 execute if predicate worldtool:brush_tool/settings/plant_source/ocean run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.ocean"
 execute if predicate worldtool:brush_tool/settings/plant_source/warm_ocean run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.warm_ocean"

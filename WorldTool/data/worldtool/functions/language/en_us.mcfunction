@@ -233,7 +233,7 @@ data modify storage worldtool:storage Translation."button.replace.on" set value 
 data modify storage worldtool:storage Translation."button.replace.on_more" set value "[Replace: On...]"
 data modify storage worldtool:storage Translation."button.replace.off" set value "[Replace: Off]"
 data modify storage worldtool:storage Translation."button.replace.off_more" set value "[Replace: Off...]"
-data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
+data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
 data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
 data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]"
@@ -423,9 +423,6 @@ data modify storage worldtool:storage Translation."button.plugins.description" s
 data modify storage worldtool:storage Translation."button.next_page.description" set value "Go to the next page"
 data modify storage worldtool:storage Translation."button.previous_page.description" set value "Go to the previous page"
 
-data modify storage worldtool:storage Translation."button.replace.name" set value "[Replace...]"
-data modify storage worldtool:storage Translation."button.replace.description" set value "Replace certain blocks with another block"
-
 data modify storage worldtool:storage Translation."button.measure.name" set value "[Measure...]"
 data modify storage worldtool:storage Translation."button.measure.description" set value "Various info such as block count, dimensions, and distance"
 data modify storage worldtool:storage Translation."button.measure.size.name" set value "[▶Size]"
@@ -533,7 +530,7 @@ data modify storage worldtool:storage Translation."button.outline.size.decrease.
 data modify storage worldtool:storage Translation."button.outline.size.increase.description" set value "Increase line size"
 
 data modify storage worldtool:storage Translation."button.greenery.name" set value "[Greenery...]"
-data modify storage worldtool:storage Translation."button.greenery.description" set value "Place plants on top of the selected blocks"
+data modify storage worldtool:storage Translation."button.greenery.description" set value "Place plants on the selected blocks"
 data modify storage worldtool:storage Translation."button.greenery.run.description" set value "Start the greenery process"
 data modify storage worldtool:storage Translation."button.greenery.remove_current.off" set value "[Remove Current Greenery: Off]"
 data modify storage worldtool:storage Translation."button.greenery.remove_current.on" set value "[Remove Current Greenery: On]"
@@ -560,7 +557,6 @@ data modify storage worldtool:storage Translation."label.greenery.rate" set valu
 data modify storage worldtool:storage Translation."label.greenery.rate.description" set value "How big of a chance there is for a plant to be placed on each block"
 data modify storage worldtool:storage Translation."button.greenery.rate.decrease.description" set value "Decrease the rate at which plants appear"
 data modify storage worldtool:storage Translation."button.greenery.rate.increase.description" set value "Increase the rate at which plants appear"
-data modify storage worldtool:storage Translation."button.greenery.replace.description" set value "Choose which block(s) to replace/not replace with plants"
 
 data modify storage worldtool:storage Translation."button.shatter.name" set value "[Shatter...]"
 data modify storage worldtool:storage Translation."button.shatter.description" set value "Destroy blocks and replace them with a new block"

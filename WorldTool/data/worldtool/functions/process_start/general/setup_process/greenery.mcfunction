@@ -23,7 +23,7 @@ execute if entity @s[tag=wt.greenery.source.taiga] run data modify storage world
 execute if entity @s[tag=wt.greenery.source.desert] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.desert"
 execute if entity @s[tag=wt.greenery.source.desert] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.desert"
 execute if entity @s[tag=wt.greenery.source.desert] run tag @s remove wt.greenery.standard_base
-execute unless entity @s[tag=!wt.greenery.source.ocean,tag=!wt.greenery.source.warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.ocean"
+execute unless entity @s[tag=!wt.greenery.source.ocean,tag=!wt.greenery.source.warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.all"
 execute unless entity @s[tag=!wt.greenery.source.ocean,tag=!wt.greenery.source.warm_ocean] run tag @s remove wt.greenery.standard_base
 execute if entity @s[tag=wt.greenery.source.ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.ocean"
 execute if entity @s[tag=wt.greenery.source.warm_ocean] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.plant_table.warm_ocean"
