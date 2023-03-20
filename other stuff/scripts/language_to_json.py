@@ -54,6 +54,7 @@ for i in range(0, len(lines)):
         finished = converted_value
     elif isinstance(converted_value, list):
         d = 0
+        k = 0
         for i2 in range(0, len(converted_value)):
             obj = converted_value[i2]
             if isinstance(obj, str):
@@ -62,9 +63,11 @@ for i in range(0, len(lines)):
 
             if not 'text' in obj:
                 d += 1
+            else:
+                k += 1
             finishedval = get_obj_value(obj, d)
             if isinstance(obj, dict) and 'text' in obj:
-                finishedval = '{' + finishedval + '}'
+                finishedval = '%' + str(k) + '{' + finishedval + '}'
             finished += finishedval
 
     if key in finished_obj:

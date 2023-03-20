@@ -39,19 +39,14 @@ def get_value(obj, value):
         return obj
 
 def doublestring(string):
-    return json.dumps(json.dumps(string))
+    return json.dumps(json.dumps(string, separators=(',',':')))
 
 output = open('output/result.mcfunction','w',encoding='utf-8')
 def writeoutput(key: str, string: str):
-    # unicode_chars = re.findall(r'\\u[\da-f]{4}', string)
-    # if len(unicode_chars) > 0:
-    #     print(unicode_chars)
-    #     for o in range(0, len(unicode_chars)):
-    #         string.replace(unicode_chars[o], literal_eval(unicode_chars[o]))
     output.write(template.replace('%1s', key).replace('%2s', string) + '\n')
 
 reindex = r'%\ds'
-reobj = r'\{[^\}]+\}'
+reobj = r'%\d\{[^\}]+\}'
 
 q = -1
 for key, value in obj.items():
@@ -99,7 +94,6 @@ for key, value in obj.items():
             outarr.append('')
             del jsonval[0]
         
-        textobj_i = 0
         for d in range(0, len(valarr)):
             valpart = valarr[d]
             objpart = jsonval[d]
@@ -113,15 +107,14 @@ for key, value in obj.items():
                     print('Error: Key "' + key + '" has an out-of-bounds reference')
                 outarr.append(objtoadd)
                 continue
-            mat = re.match(r'^\{([^\{])\}$', valpart)
+            mat = re.match(r'^%(\d)\{([^\{]+)\}$', valpart)
             if mat:
-                textobj_i += 1
                 objtoadd = {}
                 try:
-                    objtoadd = objtexts[textobj_i]
+                    objtoadd = objtexts[int(mat[1])-1]
                 except:
-                    print('Error: Key "' + key + '" has a non-existant text object')
-                objtoadd["text"] = mat[1]
+                    print('Error: Key "' + key + '" has a out-of-bounds text object')
+                objtoadd["text"] = mat[2]
                 outarr.append(objtoadd)
                 continue
             outarr.append(valpart)
