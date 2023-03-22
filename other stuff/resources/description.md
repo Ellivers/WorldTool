@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Ellivers/WorldTool/master/other%20stuff/resources/logo.png" style="max-width:50px;"></img> WorldTool
+# <img src="https://raw.githubusercontent.com/Ellivers/WorldTool/master/other%20stuff/resources/logo.png" style="max-width:60px;"></img> WorldTool
 
 Introducing WorldTool, the essential world editing data pack for Minecraft. With three powerful and easy-to-use tools, you can modify large areas, perform block editing tricks, and generate 3D shapes. WorldTool supports all Minecraft versions 1.17 and up and has undo and redo support, making editing hassle-free. Plus, it works with all blocks, including modded ones. All WorldTool functionality can be automated with commands, and it can even be used as a library.
 
