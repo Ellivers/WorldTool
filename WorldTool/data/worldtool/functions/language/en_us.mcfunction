@@ -231,7 +231,7 @@ data modify storage worldtool:storage Translation."button.replace.on" set value 
 data modify storage worldtool:storage Translation."button.replace.on_more" set value "[Replace: On...]"
 data modify storage worldtool:storage Translation."button.replace.off" set value "[Replace: Off]"
 data modify storage worldtool:storage Translation."button.replace.off_more" set value "[Replace: Off...]"
-data modify storage worldtool:storage Translation."button.replace.description" set value "Choose block(s) to replace"
+data modify storage worldtool:storage Translation."button.replace.description" set value "Choose which block(s) to replace"
 data modify storage worldtool:storage Translation."button.run.name" set value "[▶Run]"
 data modify storage worldtool:storage Translation."button.no_positions.description" set value "You cannot use this without positions 1 and 2"
 data modify storage worldtool:storage Translation."button.select_new_block.name" set value "[Select New Block...]"
