@@ -67,6 +67,7 @@ tag @s remove wt.select_block.other.replace
 tag @s remove wt.menu.shapes
 tag @s remove wt.menu.shapes.options
 tag @s remove wt.menu.shapes.adjust_position
+tag @s remove wt.menu.brush.plugin_brushes
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

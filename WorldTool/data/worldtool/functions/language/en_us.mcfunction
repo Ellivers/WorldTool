@@ -383,7 +383,7 @@ data modify storage worldtool:storage Translation."button.settings.blocks_per_ti
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.shape_info.description" set value "Shape generation processes may use more than the specified limit"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.name" set value "[Plugin Processes...]"
 data modify storage worldtool:storage Translation."button.settings.blocks_per_tick.plugin_processes.description" set value "Change blocks per tick values for plugin processes"
-data modify storage worldtool:storage Translation."info.settings.blocks_per_tick.plugin_processes" set value "Plugin processes"
+data modify storage worldtool:storage Translation."info.settings.blocks_per_tick.plugin_processes" set value "Plugin processes:"
 
 data modify storage worldtool:storage Translation."label.setting.force_load_positions" set value "Force Load Positions: "
 data modify storage worldtool:storage Translation."label.setting.force_load_positions.description" set value "If enabled, positions will be loaded even if they are not in the loaded chunks."
@@ -417,6 +417,7 @@ data modify storage worldtool:storage Translation."button.options.name" set valu
 data modify storage worldtool:storage Translation."button.options.description" set value "Open the options menu"
 data modify storage worldtool:storage Translation."button.plugins.name" set value "[Plugins...]"
 data modify storage worldtool:storage Translation."button.plugins.description" set value "Open the plugin page"
+data modify storage worldtool:storage Translation."info.general.plugins" set value "Plugin operations:"
 
 data modify storage worldtool:storage Translation."button.next_page.description" set value "Go to the next page"
 data modify storage worldtool:storage Translation."button.previous_page.description" set value "Go to the previous page"
@@ -682,6 +683,9 @@ data modify storage worldtool:storage Translation."button.brush.greenery.name" s
 data modify storage worldtool:storage Translation."button.brush.greenery.description" set value "Place plants on supported plant blocks"
 data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
 
+data modify storage worldtool:storage Translation."button.brush.plugin_brushes.name" set value "[Plugin Brushes...]"
+data modify storage worldtool:storage Translation."button.brush.plugin_brushes.description" set value "Show brushes added by plugins"
+data modify storage worldtool:storage Translation."info.brush.plugin_brushes" set value "Plugin brushes:"
 
 # Brush settings
 data modify storage worldtool:storage Translation."button.brush.hollow.on" set value "[Hollow: On]"
