@@ -3,6 +3,7 @@
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
+tag @s remove wt.dont_reopen_menu
 
 execute store result score #queueProcessCount worldtool run data get storage worldtool:storage Processes
 execute if score #queueProcessCount worldtool matches 1 store result score #queueHiddenProcesses worldtool run data get storage worldtool:storage Processes[0].Hidden

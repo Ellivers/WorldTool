@@ -5,6 +5,7 @@ execute if entity @s[tag=wt.menu.queue] run function worldtool:ui/queue/leave
 
 tag @s remove wt.menu.general.page1
 tag @s remove wt.menu.general.page2
+tag @s remove wt.menu.general.plugins
 tag @s remove wt.menu.options
 tag @s remove wt.menu.settings
 tag @s remove wt.menu.adjust_positions

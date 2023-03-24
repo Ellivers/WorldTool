@@ -11,6 +11,7 @@
 - Fixed cloning with rotation in Template mode sometimes ending up in the wrong location
 - Fixed cloning with rotation in Template mode not being undone correctly
 - Fixed cloning in Standard mode with rotation on the X or Z axes sometimes ending up in the wrong location
+- Fixed not being able to undo Greenery
 - Fixed the Structure brush leaving a redstone block when placing a structure with an X or Z offset of more than 0
 - Fixed the queue menu not displaying the correct queue position
 - Fixed General Tool block picking not working in certain customized dimensions
@@ -18,8 +19,7 @@
 - Fixed particles displaying even if only one position was selected with the General Tool
 - Fixed the Adjust Positions menu showing certain buttons it shouldn't when both positions were not selected
 - Fixed some Brush Tool item lore consistency issues
-- Fixed the Shape Generation Tool menu not re-opening after being in the queue
-- Fixed the Paste Area menu not re-opening after being in the queue
+- Fixed some menus not re-opening after being in the queue
 - Fixed undoing and redoing not working while another process was running
 - Fixed incorrect description for the Pick Block button in the Shell and Outline menus
 - Fixed menus displaying even if there was an outside world error

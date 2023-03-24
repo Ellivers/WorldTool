@@ -1,4 +1,4 @@
-# Called by worldtool:ui_general/clone/select_destination/selected, worldtool:ui_general/clone/menu and worldtool:ui_general/clone/start_rotated
+# Called by worldtool:ui_general/clone/select_destination/selected, worldtool:ui_general/clone/menu and worldtool:ui_general/clone/start_move
 # Starts the clone process
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

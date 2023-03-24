@@ -33,6 +33,22 @@ execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:
 execute if entity @s[tag=wt.greenery.standard_base] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.base.standard"
 tag @s remove wt.greenery.standard_base
 
+# Expand the affected area 3 blocks above and below
+
+data modify storage worldtool:storage Processes[0].AffectedArea.From set from storage worldtool:storage Processes[0].Positions.1
+data modify storage worldtool:storage Processes[0].AffectedArea.To set from storage worldtool:storage Processes[0].Positions.2
+
+execute store result score #pos1yt worldtool run data get storage worldtool:storage Processes[0].Positions.1[1]
+execute store result score #pos2yt worldtool run data get storage worldtool:storage Processes[0].Positions.2[1]
+
+execute if score #pos1yt worldtool >= #pos2yt worldtool run scoreboard players add #pos1yt worldtool 3
+execute if score #pos1yt worldtool < #pos2yt worldtool run scoreboard players remove #pos1yt worldtool 3
+execute if score #pos2yt worldtool <= #pos1yt worldtool run scoreboard players remove #pos2yt worldtool 3
+execute if score #pos2yt worldtool > #pos1yt worldtool run scoreboard players add #pos2yt worldtool 3
+
+execute store result storage worldtool:storage Processes[0].AffectedArea.From[1] double 1 run scoreboard players get #pos1yt worldtool
+execute store result storage worldtool:storage Processes[0].AffectedArea.To[1] double 1 run scoreboard players get #pos2yt worldtool
+
 tag @s remove wt.setup.greenery
 
 function worldtool:technical/save_load/backup/load
