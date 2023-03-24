@@ -19,11 +19,15 @@ For more info, consult the full documentation:<br>
 https://ellivers.github.io/worldtool-docs
 
 There is also a [youtube video](https://youtu.be/xXa6GvyabZk) that can help introduce you to WorldTool.
-<br>
-<br>
+
+Some plugins to check out:
+* [Biome plugin](https://github.com/Ellivers/worldtool-biome-plugin/releases)
+* [Example plugin](https://github.com/Ellivers/worldtool-example-plugin/releases)
+
+­<br>
 <br>
 Report any bugs you find, and get the latest experimental versions from [GitHub](https://github.com/Ellivers/WorldTool) (note that these versions are not documented and may not function correctly).
 
-If you would like to help translating WorldTool, you can do so on [Crowdin](https://crowdin.com/project/worldtool)
+If you would like to help translating WorldTool, you can do so on [Crowdin](https://crowdin.com/project/worldtool).
 
 If you have any more questions, feel free to join the [Discord server](https://discord.gg/jn8d4zb).
