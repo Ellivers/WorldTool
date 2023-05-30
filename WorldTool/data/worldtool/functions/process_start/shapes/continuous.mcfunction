@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/ray_hit/load
+# Called by worldtool:use_tool/click/ray_hit/load
 # Places a shape, but like a brush
 
 function worldtool:ui_shapes/summon_position

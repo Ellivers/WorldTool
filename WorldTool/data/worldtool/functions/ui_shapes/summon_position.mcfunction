@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/ray_hit/shape_tool_pos, worldtool:ui_shapes/adjust_position/set_position, and worldtool:process_start/shapes/continuous
+# Called by worldtool:use_tool/click/ray_hit/shape_tool_pos, worldtool:ui_shapes/adjust_position/set_position, and worldtool:process_start/shapes/continuous
 # Summons the shape position
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

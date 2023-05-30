@@ -3,7 +3,7 @@
 
 function worldtool:ui_shapes/check_tool
 
-execute unless score @s wt.ID matches 1.. run function worldtool:use_tool/assign_id
+execute unless score @s wt.ID matches 1.. run function worldtool:technical/common/assign_id
 
 function worldtool:ui_shapes/remove_tags
 

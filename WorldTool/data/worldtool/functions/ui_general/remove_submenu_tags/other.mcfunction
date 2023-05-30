@@ -1,6 +1,8 @@
 # Called by worldtool:ui_general/remove_submenu_tags
 # Removes other tags that do not *need* to be removed
 
+function worldtool:ui_general/remove_submenu_tags/visited
+
 tag @s remove wt.clone.mode.standard
 tag @s remove wt.clone.mode.template
 tag @s remove wt.clone.at_player

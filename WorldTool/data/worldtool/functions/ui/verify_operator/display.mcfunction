@@ -1,4 +1,4 @@
-# Called by worldtool:process_start/brush/load and worldtool:use_tool/ray_hit/load
+# Called by worldtool:process_start/brush/load and worldtool:use_tool/click/ray_hit/load
 # Displays a menu that allows you to verify yourself as an operator
 
 tellraw @s {"nbt":"Translation.\"info.verify_operator\"","storage": "worldtool:storage","color": "gold"}

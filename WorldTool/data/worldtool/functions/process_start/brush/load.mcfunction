@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/ray_hit/load
+# Called by worldtool:use_tool/click/ray_hit/load
 # Makes sure no process is running, then does some brush stuff
 
 function worldtool:use_tool/remove_tags

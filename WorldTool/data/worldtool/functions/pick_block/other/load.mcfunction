@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/ray_hit/load
+# Called by worldtool:use_tool/click/ray_hit/load
 # Picks a block
 
 function worldtool:technical/common/get_dim_top/load

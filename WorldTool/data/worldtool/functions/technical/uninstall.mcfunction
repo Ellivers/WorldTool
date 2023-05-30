@@ -34,6 +34,10 @@ execute in minecraft:overworld positioned 27450 0 19 run function worldtool:tech
 execute in minecraft:the_nether positioned 27450 0 19 run function worldtool:technical/common/forceload/remove
 execute in minecraft:the_end positioned 27450 0 19 run function worldtool:technical/common/forceload/remove
 
+team remove wt.pos
+team remove wt.pos1
+team remove wt.pos2
+
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.can_forceload,scores={worldtool=1..}] at @s run function worldtool:technical/common/forceload/remove
 kill @e[tag=worldtool]
 

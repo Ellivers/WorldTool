@@ -29,6 +29,7 @@ scoreboard objectives add wt.pos1z dummy
 scoreboard objectives add wt.pos2x dummy
 scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
+scoreboard objectives add wt.reach_dist dummy
 # Menu-specific objectives
 scoreboard objectives add wt.greenery_rate dummy
 scoreboard objectives add wt.size dummy
@@ -49,8 +50,8 @@ execute if score $reloadLanguage worldtool matches 0 if score $version worldtool
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
-# Current version: 0.6.1, AKA 5
-scoreboard players set $latestVersion worldtool 5
+# Current version: 0.7, AKA 6
+scoreboard players set $latestVersion worldtool 6
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
 ## Default blocks per tick ##
@@ -102,6 +103,14 @@ bossbar add worldtool:progress {"nbt":"Translation.\"progress.default\"","storag
 scoreboard players set #lcgMultiplier worldtool 1664525
 scoreboard players set #lcgIncrement worldtool 1013904223
 execute unless score #rng worldtool = #rng worldtool store result score #rng worldtool run seed
+
+## Teams ##
+team add wt.pos
+team modify wt.pos color green
+team add wt.pos1
+team modify wt.pos1 color aqua
+team add wt.pos2
+team modify wt.pos2 color gold
 
 # Add 1000 slots for area backups
 function worldtool:technical/load/set_backup_slots

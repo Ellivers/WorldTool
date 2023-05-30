@@ -17,6 +17,6 @@ execute if entity @s[tag=wt.helper_particles] as @e[type=minecraft:marker,tag=wo
 execute if score #temp worldtool matches 2.. if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
 
 tellraw @s {"nbt":"Translation.\"info.randomize.select_source\"","storage": "worldtool:storage","color": "gold"}
-tellraw @s ["",{"nbt":"Translation.\"info.randomize.select_position.1\"","storage": "worldtool:storage"},"\n\n",{"nbt":"Translation.\"button.set_pos1.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_pos1.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:use_tool/ray_hit/general/randomization_source/pos1"}}]
+tellraw @s ["",{"nbt":"Translation.\"info.randomize.select_position.1\"","storage": "worldtool:storage"},"\n\n",{"nbt":"Translation.\"button.set_pos1.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_pos1.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:use_tool/click/ray_hit/general/randomization_source/pos1"}}]
 
 function worldtool:ui/anti_feedback_chat_message/load

@@ -18,6 +18,6 @@ execute if score #temp worldtool matches 2.. if entity @s[tag=wt.helper_particle
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] if score @s wt.ID = #ID_temp worldtool run kill @s
 
 tellraw @s {"nbt":"Translation.\"info.randomize.select_source\"","storage": "worldtool:storage","color": "gold"}
-tellraw @s ["",{"nbt":"Translation.\"info.randomize.select_position.2\"","storage": "worldtool:storage"},"\n\n",{"nbt":"Translation.\"button.set_pos2.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_pos2.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:use_tool/ray_hit/general/randomization_source/pos2"}}]
+tellraw @s ["",{"nbt":"Translation.\"info.randomize.select_position.2\"","storage": "worldtool:storage"},"\n\n",{"nbt":"Translation.\"button.set_pos2.name\"","storage": "worldtool:storage","color": "yellow","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.set_pos2.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:use_tool/click/ray_hit/general/randomization_source/pos2"}}]
 
 function worldtool:ui/anti_feedback_chat_message/load

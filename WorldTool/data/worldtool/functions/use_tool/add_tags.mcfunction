@@ -1,12 +1,5 @@
-# Called by worldtool:use_tool/load
-# Commands for right-clicking a worldtool tool
+# Called by worldtool:use_tool/click/use and worldtool:use_tool/hold/load
 
-execute unless score @s wt.ID matches 1.. run function worldtool:use_tool/assign_id
-
-## Remove tags ##
-function worldtool:use_tool/remove_tags
-
-## Add tags ##
 tag @s add wt.raycast_normal
 execute if predicate worldtool:tools/general/pos1 run tag @s add wt.tool.general.pos1
 execute if predicate worldtool:tools/general/pos2 run tag @s add wt.tool.general.pos2
@@ -25,23 +18,3 @@ execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/b
 execute if entity @s[tag=wt.tool.brush,predicate=worldtool:brush_tool/settings/before_block,tag=!wt.pick_block.other] run tag @s add wt.raycast_before
 
 function #worldtool:hooks/use_tool/add_tags
-
-tag @s[tag=!wt.user,predicate=worldtool:tools/general] remove wt.raycast_normal
-tag @s[tag=!wt.user,predicate=worldtool:tools/general] remove wt.raycast_before
-
-## Raycasting stuff ##
-# temp = distance raycasted
-# temp2 = max raycast distance
-# both of these are measured in half blocks
-scoreboard players operation #temp2 worldtool = $maxRaycastingDistance worldtool
-scoreboard players operation #temp2 worldtool *= #2 worldtool
-scoreboard players set #temp3 worldtool 0
-scoreboard players set #temp worldtool 0
-execute unless entity @s[tag=!wt.raycast_normal,tag=!wt.raycast_before] anchored eyes positioned ^ ^ ^ run function worldtool:use_tool/raycast
-
-## Menu stuff ##
-execute unless entity @s[tag=!wt.tool.general.pos1,tag=!wt.tool.general.pos2] if entity @s[tag=!wt.user] run function worldtool:ui/verify_operator/display
-execute unless entity @s[tag=!wt.tool.general.pos1,tag=!wt.tool.general.pos2] if entity @s[tag=wt.user] run function worldtool:ui_general/click/display
-
-## Remove tags ##
-function worldtool:use_tool/remove_tags

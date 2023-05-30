@@ -3,7 +3,6 @@
 
 function worldtool:ui/remove_menu_tags
 function worldtool:ui/remove_return_tags
-function worldtool:ui_general/remove_submenu_tags/visited
 function worldtool:ui_general/remove_submenu_tags/mandatory
 function worldtool:ui_general/remove_submenu_tags/other
 
