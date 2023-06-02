@@ -12,6 +12,6 @@
     },
 
     "rewards": {
-        "function": "worldtool:drop_tool/tools/general/picked_up"
+        "function": "worldtool:use_tool/drop/tools/general/picked_up/load"
     }
 }

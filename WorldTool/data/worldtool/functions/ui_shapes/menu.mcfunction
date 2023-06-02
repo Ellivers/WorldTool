@@ -1,4 +1,4 @@
-# Called by worldtool:drop_tool/tools/shapes and various other functions
+# Called by worldtool:use_tool/drop/tools/shapes and various other functions
 # The main menu for the shape generation tool
 
 function worldtool:ui_shapes/check_tool

@@ -7,3 +7,4 @@ Plugin changes:
 - Added a use_tool/hold/get_highlight_color hook
 - Added a use_tool/raycast/done hook
 - Added a use_tool/raycast/after hook
+- Added a use_tool/raycast/get_type hook

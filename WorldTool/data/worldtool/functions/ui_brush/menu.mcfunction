@@ -1,4 +1,4 @@
-# Called by worldtool:drop_tool/tools/brush and various other functions
+# Called by worldtool:use_tool/drop/tools/brush and various other functions
 # The main brush menu
 
 function worldtool:ui_brush/check_tool

@@ -1,5 +1,5 @@
-# Called by worldtool:drop_tool/check
+# Called by worldtool:use_tool/drop/check
 # Opens the Brush Tool menu
 
-function worldtool:drop_tool/give_back
+function worldtool:use_tool/drop/give_back
 execute as @p[scores={wt.drop_coas=1..}] at @s run function worldtool:ui_brush/schedule_menu/load

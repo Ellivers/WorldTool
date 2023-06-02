@@ -1,4 +1,4 @@
-# Called by worldtool:drop_tool/tools/brush
+# Called by worldtool:use_tool/drop/tools/brush
 # Makes the menu appear next tick
 
 tag @s add wt.schedule_menu.brush

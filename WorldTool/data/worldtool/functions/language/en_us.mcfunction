@@ -11,7 +11,12 @@ data modify storage worldtool:storage Translation."item.general.pos2" set value 
 data modify storage worldtool:storage Translation."lore.general.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
 data modify storage worldtool:storage Translation."lore.general.normal.2" set value '"& open the menu"'
 data modify storage worldtool:storage Translation."lore.general.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to toggle which position to set"]'
-data modify storage worldtool:storage Translation."lore.general.normal.4" set value '["",{"text":"Sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.general.normal.4" set value '["",{"keybind":"key.swapOffhand","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.general.limited.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
+data modify storage worldtool:storage Translation."lore.general.limited.2" set value '"& open the menu"'
+data modify storage worldtool:storage Translation."lore.general.limited.3" set value '["",{"keybind":"key.drop","color":"gold"}," to cycle the tool range"]'
+data modify storage worldtool:storage Translation."lore.general.limited.4" set value '["",{"keybind":"key.swapOffhand","color":"gold"}," to toggle which position to set"]'
+data modify storage worldtool:storage Translation."lore.general.limited.5" set value '["",{"keybind":"key.sneak","color":"gold"}," + ",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
 data modify storage worldtool:storage Translation."lore.general.pick_block" set value '["",{"keybind":"key.use","color":"gold"}," to pick a block"]'
 data modify storage worldtool:storage Translation."lore.general.clonepos" set value '["",{"keybind":"key.use","color":"gold"}," to select a destination"]'
 data modify storage worldtool:storage Translation."lore.general.sourcepos" set value '["",{"keybind":"key.use","color":"gold"}," to set a corner position"]'
@@ -315,15 +320,17 @@ data modify storage worldtool:storage Translation."button.paste_area.select_pos.
 data modify storage worldtool:storage Translation."button.selection_options.name" set value "[Selection Options...]"
 data modify storage worldtool:storage Translation."button.selection_options.description" set value "Options for how tool selection works"
 data modify storage worldtool:storage Translation."label.control_scheme" set value "Control Scheme: "
-data modify storage worldtool:storage Translation."control_scheme.infinite_range" set value "Infinite Range (Default)"
-data modify storage worldtool:storage Translation."control_scheme.limited_range" set value "Limited Range"
 data modify storage worldtool:storage Translation."label.control_scheme.description" set value "Choose which type of controls you would like to use for this tool"
+data modify storage worldtool:storage Translation."control_scheme.normal" set value "Long Range (Default)"
+data modify storage worldtool:storage Translation."control_scheme.limited" set value "Limited Range"
 data modify storage worldtool:storage Translation."button.highlight_block.on" set value "[Highlight Block: On]"
 data modify storage worldtool:storage Translation."button.highlight_block.off" set value "[Highlight Block: Off]"
-data modify storage worldtool:storage Translation."button.highlight_block.description" set value "Highlight the targetted block when holding a tool"
+data modify storage worldtool:storage Translation."button.highlight_block.description" set value "Highlight the targetted block when holding a tool (visible to all players)"
+data modify storage worldtool:storage Translation."button.stop_at_block.on" set value "[Stop at Block: On]"
+data modify storage worldtool:storage Translation."button.stop_at_block.off" set value "[Stop at Block: Off]"
+data modify storage worldtool:storage Translation."button.stop_at_block.description" set value "Decides whether to highlight the first targetted block or to always continue until the max reach distance"
 data modify storage worldtool:storage Translation."button.setting_locked.description" set value "This option is locked because of other settings"
-data modify storage worldtool:storage Translation."info.tool_specific" set value " (Tool-specific)"
-data modify storage worldtool:storage Translation."info.item_specific" set value " (Item-specific)"
+data modify storage worldtool:storage Translation."label.range" set value "Range: "
 
 data modify storage worldtool:storage Translation."button.adjust_positions.name" set value "[⇆Adjust Positions...]"
 data modify storage worldtool:storage Translation."button.adjust_positions.description" set value "Adjust the positions of the two positions"

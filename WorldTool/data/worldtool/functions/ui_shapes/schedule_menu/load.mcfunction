@@ -1,4 +1,4 @@
-# Called by worldtool:drop_tool/tools/shapes
+# Called by worldtool:use_tool/drop/tools/shapes
 # Makes the menu appear next tick
 
 tag @s add wt.schedule_menu.shapes

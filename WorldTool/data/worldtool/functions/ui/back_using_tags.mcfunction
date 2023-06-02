@@ -7,6 +7,7 @@ execute if entity @s[tag=wt.menu.general.page1] run function worldtool:ui_genera
 execute if entity @s[tag=wt.menu.general.page2] run function worldtool:ui_general/click/backto
 execute if entity @s[tag=wt.menu.options] run function worldtool:ui_general/click/backto
 execute if entity @s[tag=wt.menu.settings] run function worldtool:ui_general/options/menu
+execute if entity @s[tag=wt.menu.general.selection] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.adjust_positions] run function worldtool:ui_general/options/menu
 execute if entity @s[tag=wt.menu.clone.rotate] run function worldtool:ui_general/clone/menu
 execute if entity @s[tag=wt.menu.clone.select_mode] run function worldtool:ui_general/clone/menu

@@ -4,10 +4,8 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{WorldTool:{Tool:\"general\"}}",
-                "items": [
-                    "minecraft:carrot_on_a_stick"
-                ]
+                "tag": "worldtool:valid_tool",
+                "nbt": "{WorldTool:{Tool:\"general\"}}"
             }
         }
     }

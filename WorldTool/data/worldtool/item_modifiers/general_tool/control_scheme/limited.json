@@ -1,0 +1,18 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+       "tag": "{WorldTool:{Controls:\"worldtool:limited\"}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"lore.general.limited.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.general.limited.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.general.limited.3\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.general.limited.4\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.general.limited.5\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "siw": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "worldtool:valid_tool",
+                        "nbt": "{WorldTool:{}}"
+                    }
+                ],
+                "player": {
+                    "equipment": {
+                        "offhand": {
+                            "tag": "worldtool:valid_tool",
+                            "nbt": "{WorldTool:{}}"
+                        }
+                    }
+                }
+            }
+        }
+    },
+
+    "rewards": {
+        "function": "worldtool:use_tool/offhand/load"
+    }
+}

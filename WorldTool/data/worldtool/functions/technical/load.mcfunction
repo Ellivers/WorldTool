@@ -29,7 +29,7 @@ scoreboard objectives add wt.pos1z dummy
 scoreboard objectives add wt.pos2x dummy
 scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
-scoreboard objectives add wt.reach_dist dummy
+scoreboard objectives add wt.sneak custom:sneak_time
 # Menu-specific objectives
 scoreboard objectives add wt.greenery_rate dummy
 scoreboard objectives add wt.size dummy
