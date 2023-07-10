@@ -25,6 +25,7 @@ execute if entity @s[tag=wt.menu.brush.greenery.select_source] run function worl
 execute if entity @s[tag=wt.menu.shatter.tile_drops_error] run function worldtool:ui_general/shatter/menu
 execute if entity @s[tag=wt.menu.smooth.settings] run function worldtool:ui_general/smooth/menu
 execute if entity @s[tag=wt.menu.brush.plugin_brushes] run function worldtool:ui_brush/select_brush/menu
+execute if entity @s[tag=wt.menu.brush.selection] run function worldtool:ui_brush/options/menu
 
 function #worldtool:hooks/ui/back_using_tags
 

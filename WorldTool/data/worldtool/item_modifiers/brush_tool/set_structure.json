@@ -20,8 +20,8 @@
           {"nbt":"Translation.\"lore.selected_structure\"","storage": "worldtool:storage","color": "light_purple","italic": false},
           {"nbt":"Temp.Structure","storage": "worldtool:storage","color": "aqua","italic": false},
           "",
-          {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
-          {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
+          {"nbt":"Translation.\"lore.brush.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+          {"nbt":"Translation.\"lore.brush.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
         "replace": true

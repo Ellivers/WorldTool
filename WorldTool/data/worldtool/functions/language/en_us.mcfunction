@@ -24,9 +24,13 @@ data modify storage worldtool:storage Translation."item.general.clonepos" set va
 data modify storage worldtool:storage Translation."item.general.sourcepos" set value "Set Source Corner"
 data modify storage worldtool:storage Translation."item.general.pastepos" set value "Set Paste Position"
 data modify storage worldtool:storage Translation."item.general.pick_block" set value "Pick a Block"
+
 data modify storage worldtool:storage Translation."item.brush" set value "Brush Tool"
-data modify storage worldtool:storage Translation."lore.brush.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
-data modify storage worldtool:storage Translation."lore.brush.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.brush.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
+data modify storage worldtool:storage Translation."lore.brush.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.brush.limited.1" set value '["",{"keybind":"key.use","color":"gold"}," to use the brush"]'
+data modify storage worldtool:storage Translation."lore.brush.limited.2" set value '["",{"keybind":"key.drop","color":"gold"}," to cycle the tool range"]'
+data modify storage worldtool:storage Translation."lore.brush.limited.3" set value '["",{"keybind":"key.swapOffhand","color":"gold"}," to open the menu"]'
 
 data modify storage worldtool:storage Translation."lore.selected_brush.none" set value "Selected brush: None"
 data modify storage worldtool:storage Translation."lore.selected_brush.paint" set value "Selected brush: Paint"

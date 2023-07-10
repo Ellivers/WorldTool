@@ -1,5 +1,5 @@
-# Called by worldtool:use_tool/drop/tools/general/picked_up/load
-# Commands to run when picking up a General Tool with the limited control scheme
+# Called by worldtool:use_tool/drop/picked_up/tools/general, worldtool:use_tool/drop/picked_up/tools/brush, and worldtool:use_tool/drop/picked_up/tools/shapes
+# Cycles the tool's range value
 
 execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.Reach
 scoreboard players add #temp worldtool 10

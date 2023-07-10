@@ -1,4 +1,6 @@
 - Added an option to highlight targetted blocks
+- Added an option for a limited range control scheme
+- Added an options menu to the Brush Tool
 
 Plugin changes:
 - Renamed the use_tool/ray_hit/all hook to use_tool/click/ray_hit/all

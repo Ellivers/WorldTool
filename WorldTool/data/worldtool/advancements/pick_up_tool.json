@@ -5,13 +5,13 @@
             "conditions": {
                 "entity": {
                     "type": "minecraft:player",
-                    "nbt": "{Tags:[\"wt.general_tool_thrown\"]}"
+                    "nbt": "{Tags:[\"wt.tool_thrown\"]}"
                 }
             }
         }
     },
 
     "rewards": {
-        "function": "worldtool:use_tool/drop/tools/general/picked_up/load"
+        "function": "worldtool:use_tool/drop/picked_up/load"
     }
 }

@@ -9,4 +9,4 @@ execute if entity @s[tag=!wt.temp,predicate=!worldtool:brush_tool/settings/updat
 
 tag @s remove wt.temp
 
-function worldtool:ui_brush/menu
+function worldtool:ui_brush/options/menu
