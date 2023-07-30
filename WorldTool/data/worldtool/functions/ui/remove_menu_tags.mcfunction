@@ -70,6 +70,7 @@ tag @s remove wt.menu.shapes.options
 tag @s remove wt.menu.shapes.adjust_position
 tag @s remove wt.menu.brush.plugin_brushes
 tag @s remove wt.menu.brush.selection
+tag @s remove wt.menu.brush.options
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

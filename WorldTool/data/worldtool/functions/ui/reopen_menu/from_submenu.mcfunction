@@ -12,5 +12,6 @@ execute if entity @s[tag=wt.menu.shapes.options] run function worldtool:ui_shape
 execute if entity @s[tag=wt.menu.shatter] run function worldtool:ui_general/shatter/menu
 execute if entity @s[tag=wt.menu.randomize.set_source.pos1] run function worldtool:ui_general/randomize/menu
 execute if entity @s[tag=wt.menu.select_paste_pos] run function worldtool:ui_general/options/paste/menu
+execute if entity @s[tag=wt.menu.brush.options] run function worldtool:ui_brush/options/menu
 
 function #worldtool:hooks/ui/reopen_menu/from_submenu

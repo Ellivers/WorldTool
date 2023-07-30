@@ -12,3 +12,5 @@ scoreboard players add #temp worldtool 1
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/general,predicate=worldtool:tools/settings/control_scheme/normal] run function worldtool:ui_general/click/load
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/general,predicate=worldtool:tools/settings/control_scheme/limited] run function worldtool:ui_general/set_tool/switch
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/general,predicate=worldtool:tools/settings/control_scheme/limited] run function worldtool:ui/sound.change_item
+
+execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/brush,predicate=worldtool:tools/settings/control_scheme/limited] run function worldtool:ui_brush/menu
