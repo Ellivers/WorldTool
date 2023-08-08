@@ -42,11 +42,18 @@ data modify storage worldtool:storage Translation."lore.selected_brush.structure
 data modify storage worldtool:storage Translation."lore.selected_brush.greenery" set value "Selected brush: Greenery"
 
 data modify storage worldtool:storage Translation."item.shape_tool" set value "Shape Generation Tool"
-data modify storage worldtool:storage Translation."lore.shape_tool.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
-data modify storage worldtool:storage Translation."lore.shape_tool.normal.2" set value '"& open the menu"'
-data modify storage worldtool:storage Translation."lore.shape_tool.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
-data modify storage worldtool:storage Translation."lore.shape_tool.continuous.1" set value '["",{"keybind":"key.use","color":"gold"}," to generate a shape"]'
-data modify storage worldtool:storage Translation."lore.shape_tool.continuous.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.normal.2" set value '"& open the menu"'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.normal.3" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.limited.1" set value '["",{"keybind":"key.use","color":"gold"}," to set a position"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.limited.2" set value '"& open the menu"'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.limited.3" set value '["",{"keybind":"key.drop","color":"gold"}," to cycle the tool range"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.normal.limited.4" set value '["",{"keybind":"key.swapOffhand","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.normal.1" set value '["",{"keybind":"key.use","color":"gold"}," to generate a shape"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.normal.2" set value '["",{"keybind":"key.drop","color":"gold"}," to open the menu"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.limited.1" set value '["",{"keybind":"key.use","color":"gold"}," to generate a shape"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.limited.2" set value '["",{"keybind":"key.drop","color":"gold"}," to cycle the tool range"]'
+data modify storage worldtool:storage Translation."lore.shape_tool.continuous.limited.3" set value '["",{"keybind":"key.swapOffhand","color":"gold"}," to open the menu"]'
 
 data modify storage worldtool:storage Translation."lore.selected_shape.cone" set value "Selected brush: Cone"
 data modify storage worldtool:storage Translation."lore.selected_shape.cylinder" set value "Selected shape: Cylinder"
@@ -280,6 +287,8 @@ data modify storage worldtool:storage Translation."button.keep.off" set value "[
 data modify storage worldtool:storage Translation."button.keep.description" set value "Toggle keeping existing blocks. With this on, only blocks such as air and water will be replaced."
 data modify storage worldtool:storage Translation."button.set_value.name" set value "<Set Value>"
 data modify storage worldtool:storage Translation."button.set_value.description" set value "Input this value manually"
+data modify storage worldtool:storage Translation."button.before_block.on" set value "[Placement: On Block]"
+data modify storage worldtool:storage Translation."button.before_block.off" set value "[Placement: In Block]"
 
 # Other common stuff
 data modify storage worldtool:storage Translation."axis.x" set value "X"
@@ -364,8 +373,8 @@ data modify storage worldtool:storage Translation."button.nudge_positions.negati
 data modify storage worldtool:storage Translation."button.nudge_positions.negative_z.description" set value "Nudge the selected position(s) one block north"
 
 # Settings
-data modify storage worldtool:storage Translation."button.settings.name" set value "[⚙Settings...]"
-data modify storage worldtool:storage Translation."button.settings.description" set value "Open the settings menu"
+data modify storage worldtool:storage Translation."button.settings.name" set value "[⚙Global Settings...]"
+data modify storage worldtool:storage Translation."button.settings.description" set value "Open the global settings menu"
 
 data modify storage worldtool:storage Translation."button.plugin_settings.name" set value "[Plugin Settings...]"
 data modify storage worldtool:storage Translation."button.plugin_settings.description" set value "Show settings added by plugins"
@@ -718,8 +727,6 @@ data modify storage worldtool:storage Translation."button.brush.hollow.descripti
 data modify storage worldtool:storage Translation."button.brush.overwrite_blocks.on" set value "[Replace Existing Blocks: On]"
 data modify storage worldtool:storage Translation."button.brush.overwrite_blocks.off" set value "[Replace Existing Blocks: Off]"
 data modify storage worldtool:storage Translation."button.brush.overwrite_blocks.description" set value "Toggle between replacing all blocks and only replacing air/water"
-data modify storage worldtool:storage Translation."button.brush.before_block.on" set value "[Placement: On Block]"
-data modify storage worldtool:storage Translation."button.brush.before_block.off" set value "[Placement: In Block]"
 data modify storage worldtool:storage Translation."button.brush.before_block.description" set value "Toggle between centering the brush placement inside or outside the targetted block"
 data modify storage worldtool:storage Translation."label.brush.structure_rotation.name" set value "Structure Rotation: "
 data modify storage worldtool:storage Translation."label.brush.structure_rotation.description" set value "Choose the structure's Y rotation"
@@ -793,6 +800,8 @@ data modify storage worldtool:storage Translation."button.shapes.hollow.descript
 data modify storage worldtool:storage Translation."button.shapes.continuous_place.on" set value "[Continuous Mode: On]"
 data modify storage worldtool:storage Translation."button.shapes.continuous_place.off" set value "[Continuous Mode: Off]"
 data modify storage worldtool:storage Translation."button.shapes.continuous_place.description" set value "Place shapes with the already-selected settings quickly by right-clicking with the Shape Generation Tool"
+
+data modify storage worldtool:storage Translation."button.shapes.before_block.description" set value "Toggle between the base center of the shape being inside or outside the targetted block"
 
 data modify storage worldtool:storage Translation."label.shapes.diameter.name" set value "Diameter: "
 data modify storage worldtool:storage Translation."label.shapes.diameter.description" set value "The shape's diameter in blocks"

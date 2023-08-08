@@ -10,8 +10,8 @@
             {"nbt":"Translation.\"lore.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
             {"nbt":"SelectedItem.tag.WorldTool.PrimaryBlock.State.Name", "entity": "@s","color": "aqua","italic": false},
             "",
-            {"nbt":"Translation.\"lore.shape_tool.continuous.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
-            {"nbt":"Translation.\"lore.shape_tool.continuous.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
+            {"nbt":"Translation.\"lore.shape_tool.continuous.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.shape_tool.continuous.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
         "replace": true

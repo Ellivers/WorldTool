@@ -5,6 +5,7 @@ function worldtool:ui_brush/check_tool
 
 item modify entity @s weapon.mainhand worldtool:brush_tool/brushes/structure
 function worldtool:ui/sound.change_item
+function worldtool:ui_brush/set_tooltip
 
 execute unless data entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureRotation run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_rotation/none
 execute unless data entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureMirror run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_mirror/none

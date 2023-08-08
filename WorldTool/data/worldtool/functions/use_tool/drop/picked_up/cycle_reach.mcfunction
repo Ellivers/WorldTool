@@ -8,4 +8,4 @@ execute if score #temp worldtool matches 40.. run scoreboard players set #temp w
 title @s actionbar [{"nbt":"Translation.\"label.range\"","storage": "worldtool:storage","color": "light_purple"},{"score":{"name": "#temp","objective": "worldtool"}}]
 
 execute store result storage worldtool:storage Temp.Reach int 1 run scoreboard players get #temp worldtool
-item modify entity @s weapon.mainhand worldtool:settings/set_reach
+item modify entity @s weapon.mainhand worldtool:common_settings/set_reach

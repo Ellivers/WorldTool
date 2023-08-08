@@ -1,0 +1,20 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+       "tag": "{WorldTool:{Controls:\"worldtool:limited\"}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+          {"nbt":"SelectedItem.tag.display.Lore[0]","entity": "@s","interpret": true},
+          {"nbt":"Translation.\"lore.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
+          {"nbt":"SelectedItem.tag.WorldTool.PrimaryBlock.State.Name", "entity": "@s","color": "aqua","italic": false},
+          "",
+          {"nbt":"Translation.\"lore.shape_tool.continuous.limited.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+          {"nbt":"Translation.\"lore.shape_tool.continuous.limited.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
+          {"nbt":"Translation.\"lore.shape_tool.continuous.limited.3\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "replace": true
+    }
+]

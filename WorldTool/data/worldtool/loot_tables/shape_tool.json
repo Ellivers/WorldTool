@@ -27,9 +27,9 @@
                                 {"nbt":"Translation.\"lore.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
                                 {"text": "minecraft:stone","color": "aqua","italic": false},
                                 "",
-                                {"nbt":"Translation.\"lore.shape_tool.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
-                                {"nbt":"Translation.\"lore.shape_tool.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
-                                {"nbt":"Translation.\"lore.shape_tool.normal.3\"","storage": "worldtool:storage","interpret": true,"italic": false}
+                                {"nbt":"Translation.\"lore.shape_tool.normal.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+                                {"nbt":"Translation.\"lore.shape_tool.normal.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false},
+                                {"nbt":"Translation.\"lore.shape_tool.normal.normal.3\"","storage": "worldtool:storage","interpret": true,"italic": false}
                             ],
                             "entity": "this"
                         }

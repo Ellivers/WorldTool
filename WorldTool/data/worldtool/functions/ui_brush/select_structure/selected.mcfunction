@@ -7,5 +7,6 @@ kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limi
 function worldtool:ui_brush/check_tool
 
 item modify entity @s weapon.mainhand worldtool:brush_tool/set_structure
+function worldtool:ui_brush/set_tooltip
 
 function worldtool:ui_brush/menu

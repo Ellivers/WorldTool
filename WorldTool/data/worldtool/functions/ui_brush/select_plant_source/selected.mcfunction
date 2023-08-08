@@ -13,6 +13,8 @@ item modify entity @s[tag=wt.greenery.source.warm_ocean] weapon.mainhand worldto
 
 execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/greenery/brush/set_source
 
+function worldtool:ui_brush/set_tooltip
+
 function worldtool:ui_general/greenery/plant_sources/remove_all
 
 function worldtool:ui_brush/menu

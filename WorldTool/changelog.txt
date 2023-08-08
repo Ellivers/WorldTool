@@ -1,5 +1,6 @@
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
+- You can now switch the target placement for the General Tool and Shape Generation Tool
 - Added an options menu to the Brush Tool
 
 Plugin changes:

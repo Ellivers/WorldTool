@@ -6,38 +6,14 @@
     {
         "function": "minecraft:set_lore",
         "lore": [
-          {"nbt":"Translation.\"lore.selected_brush.none\"","storage": "worldtool:storage","color": "yellow","italic": false},
-          {"nbt":"Translation.\"lore.selected_block\"","storage": "worldtool:storage","color": "light_purple","italic": false},
-          {"nbt":"SelectedItem.tag.WorldTool.PrimaryBlock.State.Name", "entity": "@s","color": "aqua","italic": false},
+          {"nbt":"SelectedItem.tag.display.Lore[0]","entity": "@s","interpret": true},
+          {"nbt":"SelectedItem.tag.display.Lore[1]","entity": "@s","interpret": true},
+          {"nbt":"SelectedItem.tag.display.Lore[2]","entity": "@s","interpret": true},
           "",
           {"nbt":"Translation.\"lore.brush.normal.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
           {"nbt":"Translation.\"lore.brush.normal.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
         "replace": true
-    },
-    {
-      "function": "copy_nbt",
-      "source": {
-        "type":"minecraft:context",
-        "target": "this"
-      },
-      "ops": [
-        {
-            "op": "replace",
-            "source": "SelectedItem.tag.display.Lore[0]",
-            "target": "display.Lore[0]"
-        },
-        {
-            "op": "replace",
-            "source": "SelectedItem.tag.display.Lore[1]",
-            "target": "display.Lore[1]"
-        },
-        {
-            "op": "replace",
-            "source": "SelectedItem.tag.display.Lore[2]",
-            "target": "display.Lore[2]"
-        }
-      ]
     }
 ]

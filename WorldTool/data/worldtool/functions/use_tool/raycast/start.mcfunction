@@ -2,12 +2,12 @@
 
 tag @s remove wt.raycast_type.through
 tag @s remove wt.raycast_type.hybrid
-tag @s[predicate=worldtool:tools/general,predicate=worldtool:tools/settings/control_scheme/limited,predicate=!worldtool:tools/settings/stop_at_block] add wt.raycast_type.through
-tag @s[predicate=worldtool:tools/general,predicate=worldtool:tools/settings/control_scheme/limited,predicate=worldtool:tools/settings/stop_at_block] add wt.raycast_type.hybrid
-tag @s[tag=wt.tool.brush,predicate=worldtool:tools/settings/control_scheme/limited,predicate=!worldtool:tools/settings/stop_at_block] add wt.raycast_type.through
-tag @s[tag=wt.tool.brush,predicate=worldtool:tools/settings/control_scheme/limited,predicate=worldtool:tools/settings/stop_at_block] add wt.raycast_type.hybrid
-tag @s[tag=wt.tool.shapes,predicate=worldtool:tools/settings/control_scheme/limited,predicate=!worldtool:tools/settings/stop_at_block] add wt.raycast_type.through
-tag @s[tag=wt.tool.shapes,predicate=worldtool:tools/settings/control_scheme/limited,predicate=worldtool:tools/settings/stop_at_block] add wt.raycast_type.hybrid
+tag @s[predicate=worldtool:tools/general,predicate=worldtool:common_settings/control_scheme/limited,predicate=!worldtool:common_settings/stop_at_block] add wt.raycast_type.through
+tag @s[predicate=worldtool:tools/general,predicate=worldtool:common_settings/control_scheme/limited,predicate=worldtool:common_settings/stop_at_block] add wt.raycast_type.hybrid
+tag @s[tag=wt.tool.brush,predicate=worldtool:common_settings/control_scheme/limited,predicate=!worldtool:common_settings/stop_at_block] add wt.raycast_type.through
+tag @s[tag=wt.tool.brush,predicate=worldtool:common_settings/control_scheme/limited,predicate=worldtool:common_settings/stop_at_block] add wt.raycast_type.hybrid
+tag @s[tag=wt.tool.shapes,predicate=worldtool:common_settings/control_scheme/limited,predicate=!worldtool:common_settings/stop_at_block] add wt.raycast_type.through
+tag @s[tag=wt.tool.shapes,predicate=worldtool:common_settings/control_scheme/limited,predicate=worldtool:common_settings/stop_at_block] add wt.raycast_type.hybrid
 
 function #worldtool:hooks/use_tool/raycast/get_type
 

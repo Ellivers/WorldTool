@@ -9,9 +9,9 @@ function worldtool:use_tool/remove_tags
 ## Add tags ##
 function worldtool:use_tool/add_tags
 
-execute if entity @s[predicate=worldtool:tools/general] unless entity @s[predicate=!worldtool:tools/settings/highlight,predicate=!worldtool:tools/settings/control_scheme/limited] run tag @s add wt.raycast.hold
-execute if entity @s[tag=wt.tool.brush] unless entity @s[predicate=!worldtool:tools/settings/highlight,predicate=!worldtool:tools/settings/control_scheme/limited] run tag @s add wt.raycast.hold
-execute if entity @s[tag=wt.tool.shapes] unless entity @s[predicate=!worldtool:tools/settings/highlight,predicate=!worldtool:tools/settings/control_scheme/limited] run tag @s add wt.raycast.hold
+execute if entity @s[predicate=worldtool:tools/general] unless entity @s[predicate=!worldtool:common_settings/highlight,predicate=!worldtool:common_settings/control_scheme/limited] run tag @s add wt.raycast.hold
+execute if entity @s[tag=wt.tool.brush] unless entity @s[predicate=!worldtool:common_settings/highlight,predicate=!worldtool:common_settings/control_scheme/limited] run tag @s add wt.raycast.hold
+execute if entity @s[tag=wt.tool.shapes] unless entity @s[predicate=!worldtool:common_settings/highlight,predicate=!worldtool:common_settings/control_scheme/limited] run tag @s add wt.raycast.hold
 function #worldtool:hooks/use_tool/hold/get_highlight
 
 ## Raycasting ##
