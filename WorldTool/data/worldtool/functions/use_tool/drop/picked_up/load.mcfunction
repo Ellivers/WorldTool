@@ -7,3 +7,5 @@ tag @s remove wt.tool_thrown
 execute if entity @s[tag=wt.general_tool_thrown] run function worldtool:use_tool/drop/picked_up/tools/general
 execute if entity @s[tag=wt.brush_tool_thrown] run function worldtool:use_tool/drop/picked_up/tools/brush
 execute if entity @s[tag=wt.shape_tool_thrown] run function worldtool:use_tool/drop/picked_up/tools/shapes
+
+function #worldtool:hooks/use_tool/picked_up

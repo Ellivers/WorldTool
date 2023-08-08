@@ -16,3 +16,5 @@ execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tool
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/brush,predicate=worldtool:common_settings/control_scheme/limited] run function worldtool:ui_brush/menu
 
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/shapes,predicate=worldtool:common_settings/control_scheme/limited] run function worldtool:ui_shapes/menu
+
+function #worldtool:hooks/use_tool/offhand

@@ -6,8 +6,11 @@
 Plugin changes:
 - Renamed the use_tool/ray_hit/all hook to use_tool/click/ray_hit/all
 - Renamed the use_tool/ray_hit/general hook to use_tool/click/ray_hit/general
+- Renamed the drop_tool hook to use_tool/dropped
 - Added a use_tool/hold/get_highlight hook
 - Added a use_tool/hold/get_highlight_color hook
 - Added a use_tool/raycast/done hook
 - Added a use_tool/raycast/after hook
 - Added a use_tool/raycast/get_type hook
+- Added a use_tool/picked_up hook
+- Added a use_tool/offhand hook

@@ -17,4 +17,4 @@ execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"brush"} 
 execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"shapes"} run function worldtool:use_tool/drop/tools/shapes
 
 
-function #worldtool:hooks/drop_tool
+function #worldtool:hooks/use_tool/dropped
