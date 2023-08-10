@@ -651,9 +651,11 @@ data modify storage worldtool:storage Translation."info.structure_corners.some_p
 data modify storage worldtool:storage Translation."info.structure_corners.placed" set value "Placed 2 structure blocks"
 data modify storage worldtool:storage Translation."warning.structure_corners.too_big" set value "Warning: This area's dimensions exceed the maximum template size. The area may not be saveable in one file."
 
-data modify storage worldtool:storage Translation."button.general.particles.off" set value "[Particle Outline: Off]"
-data modify storage worldtool:storage Translation."button.general.particles.on" set value "[Particle Outline: On]"
-data modify storage worldtool:storage Translation."button.general.particles.description" set value "Show assisting particles"
+data modify storage worldtool:storage Translation."label.general.particles" set value "Particle Outline: "
+data modify storage worldtool:storage Translation."label.general.particles.description" set value "Show assisting particles"
+data modify storage worldtool:storage Translation."general.particles.off" set value "Off"
+data modify storage worldtool:storage Translation."general.particles.always_on" set value "[Particle Outline: On]"
+data modify storage worldtool:storage Translation."general.particles.in_menu" set value "[Particle Outline: On]"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."info.page_number" set value '[{"score":{"name":"#currentPage","objective":"worldtool"}},"/",{"score":{"name":"#pageCount","objective":"worldtool"}}]'

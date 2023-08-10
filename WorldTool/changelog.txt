@@ -1,7 +1,9 @@
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
+- General Tool particles now have an option to be shown at all times
 - You can now switch the target placement for the General Tool and Shape Generation Tool
 - Added an options menu to the Brush Tool
+- Particles are now displayed when setting position 1 or 2 with the General Tool
 
 Plugin changes:
 - Renamed the use_tool/ray_hit/all hook to use_tool/click/ray_hit/all

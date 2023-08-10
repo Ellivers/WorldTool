@@ -1,13 +1,11 @@
 # Called by the advancement worldtool:switch_to_offhand
 # Commands for when a WorldTool tool is put in the offhand
 
-advancement revoke @s only worldtool:switch_to_offhand
-
-scoreboard players set #temp worldtool 0
+execute store success score #temp worldtool if predicate worldtool:tools/in_offhand
 item replace entity @s weapon.mainhand from entity @s weapon.offhand
 item replace entity @s weapon.offhand with minecraft:air
 
-scoreboard players add #temp worldtool 1
+advancement revoke @s only worldtool:switch_to_offhand
 
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/general,predicate=worldtool:common_settings/control_scheme/normal] run function worldtool:ui_general/click/load
 execute if score #temp worldtool matches 1 if entity @s[predicate=worldtool:tools/general,predicate=worldtool:common_settings/control_scheme/limited] run function worldtool:ui_general/set_tool/switch

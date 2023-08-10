@@ -11,6 +11,15 @@ execute if score $forceLoadPositions worldtool matches 1.. as @e[type=minecraft:
 summon minecraft:marker ~ ~ ~ {Tags: ["worldtool", "wt.can_forceload", "wt.pos1", "wt.position"]}
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos1,sort=nearest,limit=1] at @s run function worldtool:use_tool/click/ray_hit/general/common
 
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~-.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~-.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~-.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~.5 ~.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0 0.3176470588235294 1 1.5 ~-.5 ~.5 ~.5 0 -1 0 2 0 normal @s
+
 tellraw @s ["\n",{"nbt":"Translation.\"info.set_pos1\"","storage": "worldtool:storage","interpret": true}]
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
