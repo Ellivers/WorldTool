@@ -7,7 +7,7 @@ function worldtool:ui/sound.change_item
 
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
-tag @s[tag=wt.helper_particles] add wt.particles
+execute unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] run tag @s add wt.particles
 tag @s add wt.menu.select_paste_pos
 tag @s add wt.reopen_after_reload
 

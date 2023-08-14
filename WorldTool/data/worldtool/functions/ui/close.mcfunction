@@ -3,7 +3,7 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.input] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:input_check/stop
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s wt.ID = #ID_temp worldtool run tag @s remove wt.particles
+execute if entity @s[tag=wt.helper_particles.in_menu] run function worldtool:ui_general/arrange_positions/remove_particles
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run kill @s
 execute as @e[type=minecraft:armor_stand,tag=worldtool,tag=wt.rotation_preview] if score @s wt.ID = #ID_temp worldtool run kill @s
 function worldtool:ui_general/clone/settings/reset_rotation

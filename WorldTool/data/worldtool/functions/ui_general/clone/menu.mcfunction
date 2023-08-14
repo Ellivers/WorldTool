@@ -8,7 +8,7 @@ tag @s remove wt.clone.move
 tag @s add wt.menu.clone
 execute if score $keepMenuOptions worldtool matches 1 run tag @s add wt.visited_menu.clone
 
-execute if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
+execute unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] run tag @s add wt.particles
 
 tag @s[tag=wt.clone.mode.template] remove wt.clone.mirror.y
 execute if entity @s[tag=wt.clone.mode.template] run scoreboard players set @s wt.rotX 0

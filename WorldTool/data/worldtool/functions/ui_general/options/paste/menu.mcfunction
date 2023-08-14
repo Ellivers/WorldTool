@@ -1,15 +1,13 @@
 # Called by worldtool:ui_general/options/menu
 # Menu for pasting an area from the clipboard
 
-function worldtool:ui_general/arrange_positions/remove_particles
-
 function worldtool:ui/clear_chat
 function worldtool:ui/back_button
 
 execute if predicate worldtool:tools/general/pastepos run function worldtool:ui/sound.change_item
 execute if predicate worldtool:tools/general/pastepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1
 
-tag @s[tag=wt.helper_particles] add wt.particles
+execute unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] run tag @s add wt.particles
 tag @s add wt.menu.paste_area
 tag @s add wt.reopen_after_reload
 

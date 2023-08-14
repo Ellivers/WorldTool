@@ -7,7 +7,8 @@ function worldtool:ui_general/remove_submenu_tags/mandatory
 function worldtool:ui_general/remove_submenu_tags/other
 
 tag @s remove wt.user
-tag @s remove wt.helper_particles
+tag @s remove wt.helper_particles.always
+tag @s remove wt.helper_particles.in_menu
 tag @s remove wt.opened_tool
 
 function #worldtool:hooks/remove_player_tags

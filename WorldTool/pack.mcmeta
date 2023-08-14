@@ -5,15 +5,15 @@
 
     "supported_formats": {
       "min_inclusive": 7,
-      "max_inclusive": 16
+      "max_inclusive": 17
     }
   },
 
   "overlays": {
     "entries": [
       {
-        "formats": [16],
-        "directory": "new"
+        "formats": 17,
+        "directory": "v17"
       }
     ]
   }

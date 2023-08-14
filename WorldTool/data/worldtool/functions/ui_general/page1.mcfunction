@@ -9,7 +9,7 @@ tag @s add wt.menu.general.page1
 function worldtool:ui_general/remove_submenu_tags/load
 
 # Particles
-execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
+execute if entity @s[tag=wt.helper_particles.in_menu] run function worldtool:ui_general/arrange_positions/load
 
 # Display
 

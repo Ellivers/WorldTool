@@ -1,6 +1,6 @@
 # Called by various functions
 
-tag @s[tag=!wt.opened_tool] add wt.helper_particles
+tag @s[tag=!wt.opened_tool] add wt.helper_particles.in_menu
 tag @s add wt.opened_tool
 
 function worldtool:ui/clear_chat

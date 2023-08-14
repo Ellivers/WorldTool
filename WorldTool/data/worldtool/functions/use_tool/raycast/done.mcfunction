@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/raycast/ray
+# Called by worldtool:use_tool/raycast/ray_through, worldtool:use_tool/raycast/ray_hybrid, and worldtool:use_tool/raycast/ray_stop
 # Commands for when the ray reaches its destination
 
 scoreboard players set #raycastComplete worldtool 1

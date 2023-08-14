@@ -8,7 +8,7 @@ tag @s add wt.allow_input
 
 scoreboard players set #temp worldtool 1
 execute if score @s wt.amountX matches 0 if score @s wt.amountY matches 0 if score @s wt.amountZ matches 0 run scoreboard players set #temp worldtool 0
-execute if score #temp worldtool matches 1 run tag @s[tag=wt.helper_particles] add wt.particles
+execute if score #temp worldtool matches 1 unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] run tag @s add wt.particles
 
 function worldtool:ui_general/back_button
 

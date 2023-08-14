@@ -330,6 +330,12 @@ data modify storage worldtool:storage Translation."button.paste_area.player_pos.
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.name" set value "[Select New Position...]"
 data modify storage worldtool:storage Translation."button.paste_area.select_pos.description" set value "Select a new position to paste the clipboard at"
 
+data modify storage worldtool:storage Translation."label.particles" set value "Particle Indicators: "
+data modify storage worldtool:storage Translation."label.particles.description" set value "Show assisting particles (recommended)"
+data modify storage worldtool:storage Translation."particles.off" set value "Off"
+data modify storage worldtool:storage Translation."particles.in_menu" set value "In Menus (Default)"
+data modify storage worldtool:storage Translation."particles.always" set value "Always On"
+
 data modify storage worldtool:storage Translation."button.selection_options.name" set value "[Selection Options...]"
 data modify storage worldtool:storage Translation."button.selection_options.description" set value "Options for how tool selection works"
 data modify storage worldtool:storage Translation."label.control_scheme" set value "Control Scheme: "
@@ -651,11 +657,6 @@ data modify storage worldtool:storage Translation."info.structure_corners.some_p
 data modify storage worldtool:storage Translation."info.structure_corners.placed" set value "Placed 2 structure blocks"
 data modify storage worldtool:storage Translation."warning.structure_corners.too_big" set value "Warning: This area's dimensions exceed the maximum template size. The area may not be saveable in one file."
 
-data modify storage worldtool:storage Translation."label.general.particles" set value "Particle Outline: "
-data modify storage worldtool:storage Translation."label.general.particles.description" set value "Show assisting particles"
-data modify storage worldtool:storage Translation."general.particles.off" set value "Off"
-data modify storage worldtool:storage Translation."general.particles.always_on" set value "[Particle Outline: On]"
-data modify storage worldtool:storage Translation."general.particles.in_menu" set value "[Particle Outline: On]"
 data modify storage worldtool:storage Translation."label.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.page" set value "Page: "
 data modify storage worldtool:storage Translation."info.page_number" set value '[{"score":{"name":"#currentPage","objective":"worldtool"}},"/",{"score":{"name":"#pageCount","objective":"worldtool"}}]'

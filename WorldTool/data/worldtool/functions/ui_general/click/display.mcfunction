@@ -1,7 +1,7 @@
 # Called by worldtool:use_tool/click/use
 # Displays the menu that appears when you click with the general tool
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s wt.ID = #ID_temp worldtool run tag @s remove wt.particles
+execute if entity @s[tag=wt.helper_particles.in_menu] run function worldtool:ui_general/arrange_positions/remove_particles
 tag @s remove wt.particles
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID

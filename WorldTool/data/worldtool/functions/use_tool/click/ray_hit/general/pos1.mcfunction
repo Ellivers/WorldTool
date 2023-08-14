@@ -23,3 +23,5 @@ particle minecraft:dust 0 0.3176470588235294 1 1.5 ~-.5 ~.5 ~.5 0 -1 0 2 0 norma
 tellraw @s ["\n",{"nbt":"Translation.\"info.set_pos1\"","storage": "worldtool:storage","interpret": true}]
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
+
+execute if entity @s[tag=wt.helper_particles.always] as @e[type=minecraft:marker,tag=worldtool,tag=wt.position] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:ui_general/arrange_positions/as_entity

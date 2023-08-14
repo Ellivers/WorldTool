@@ -6,9 +6,12 @@
 - Particles are now displayed when setting position 1 or 2 with the General Tool
 
 Plugin changes:
+- Removed the particles/on hook
+- Removed the particles/off hook
 - Renamed the use_tool/ray_hit/all hook to use_tool/click/ray_hit/all
 - Renamed the use_tool/ray_hit/general hook to use_tool/click/ray_hit/general
 - Renamed the drop_tool hook to use_tool/dropped
+- Added a particles/back hook
 - Added a use_tool/hold/get_highlight hook
 - Added a use_tool/hold/get_highlight_color hook
 - Added a use_tool/raycast/done hook

@@ -1,7 +1,7 @@
-# Called by worldtool:ui_general/options/menu and by setting-chaning functions
+# Called by worldtool:ui_general/options/menu and by setting-changing functions
 # Displays the settings menu
 
-function worldtool:ui_general/arrange_positions/remove_particles
+execute if entity @s[tag=wt.helper_particles.in_menu] run function worldtool:ui_general/arrange_positions/remove_particles
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat

@@ -12,8 +12,8 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source] i
 execute if score #temp worldtool matches 0 as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] if score @s wt.ID = #ID_temp worldtool run kill @s
 
 scoreboard players set #temp2 worldtool 0
-execute if entity @s[tag=wt.helper_particles] as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] run scoreboard players add #temp2 worldtool 1
-execute if score #temp2 worldtool matches 2.. if entity @s[tag=wt.helper_particles] run tag @s add wt.particles
+execute unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner] run scoreboard players add #temp2 worldtool 1
+execute if score #temp2 worldtool matches 2.. run tag @s add wt.particles
 
 execute if predicate worldtool:tools/general/sourcepos run function worldtool:ui/sound.change_item
 execute if predicate worldtool:tools/general/sourcepos run item modify entity @s weapon.mainhand worldtool:general_tool/pos1

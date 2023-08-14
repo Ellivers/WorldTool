@@ -10,6 +10,6 @@ function #worldtool:hooks/ui_shapes/set_preview_axes
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute store success score #updatePreview worldtool if entity @s[tag=wt.helper_particles]
+execute store success score #updatePreview worldtool unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always]
 
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool at @s run function worldtool:ui_shapes/update_preview/pos

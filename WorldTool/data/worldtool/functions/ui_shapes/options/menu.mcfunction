@@ -11,8 +11,7 @@ function worldtool:ui/undo_redo/display
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.selection_options.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.selection_options.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/options/selection/menu"}},"\n"]
 
-execute if entity @s[tag=!wt.helper_particles] run tellraw @s {"nbt":"Translation.\"button.preview_shape.off\"","storage": "worldtool:storage","color": "#9729ff","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.preview_shape.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/particles/on"}}
-execute if entity @s[tag=wt.helper_particles] run tellraw @s {"nbt":"Translation.\"button.preview_shape.on\"","storage": "worldtool:storage","color": "#9729ff","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.preview_shape.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/particles/off"}}
+function worldtool:ui/particles/display_option
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.settings.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/settings/menu"}}]
 

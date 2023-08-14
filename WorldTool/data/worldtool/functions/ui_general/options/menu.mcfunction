@@ -13,7 +13,7 @@ execute if predicate worldtool:tools/general/pastepos run item modify entity @s 
 function worldtool:ui/open_tool
 function worldtool:ui/back_button
 
-execute if entity @s[tag=wt.helper_particles] run function worldtool:ui_general/arrange_positions/load
+execute unless entity @s[tag=!wt.helper_particles.in_menu,tag=!wt.helper_particles.always] run function worldtool:ui_general/arrange_positions/load
 
 tag @s add wt.user
 tag @s add wt.menu.options
@@ -29,8 +29,8 @@ execute unless score #temp3 worldtool matches -1 if score $playerdbAvailable wor
 execute unless score #temp3 worldtool matches -1 if score $playerdbAvailable worldtool matches 1 unless data storage rx.playerdb:io player.data.WorldTool.Clipboard run tellraw @s ["",{"nbt":"Translation.\"button.copy_area.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.no_positions.description\"","storage": "worldtool:storage"}}}," ",{"nbt":"Translation.\"button.paste_area.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.paste_area.description\"","storage": "worldtool:storage"}}}]
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.selection_options.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.selection_options.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/selection/menu"}}]
-execute if entity @s[tag=!wt.helper_particles] run tellraw @s {"nbt":"Translation.\"button.general.particles.off\"","storage": "worldtool:storage","color": "#9729ff","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.general.particles.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/particles/on"}}
-execute if entity @s[tag=wt.helper_particles] run tellraw @s {"nbt":"Translation.\"button.general.particles.on\"","storage": "worldtool:storage","color": "#9729ff","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.general.particles.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/particles/off"}}
+
+function worldtool:ui/particles/display_option
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.settings.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.settings.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/settings/menu"}}," ",{"nbt":"Translation.\"button.adjust_positions.name\"","storage": "worldtool:storage","color": "gold","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.adjust_positions.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_general/options/adjust_positions/load"}}]
 

@@ -1,4 +1,4 @@
-# Called by worldtool:use_tool/click/raycast and worldtool:use_tool/click/raycast_v2
+# Called by worldtool:use_tool/raycast/done
 # Different actions raycast tools
 
 execute if predicate worldtool:tools/general align xyz positioned ~.5 ~.5 ~.5 run function worldtool:use_tool/click/ray_hit/general/load
