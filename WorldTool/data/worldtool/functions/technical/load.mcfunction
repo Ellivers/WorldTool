@@ -75,6 +75,10 @@ execute unless score $maxRaycastingDistance worldtool matches 1.. run scoreboard
 execute unless score $playerdbAvailable worldtool matches 0..1 run scoreboard players set $playerdbAvailable worldtool 1
 execute unless score $playerInput worldtool matches 0..1 run scoreboard players set $playerInput worldtool 1
 
+execute unless score $outlineLengthLimit worldtool matches 1.. run scoreboard players set $outlineLengthLimit worldtool 500
+scoreboard players operation $outlineLengthLimitNegative worldtool = $outlineLengthLimit worldtool
+scoreboard players operation $outlineLengthLimitNegative worldtool *= #-1 worldtool
+
 ## Constants ##
 scoreboard players set #-1 worldtool -1
 scoreboard players set #2 worldtool 2
