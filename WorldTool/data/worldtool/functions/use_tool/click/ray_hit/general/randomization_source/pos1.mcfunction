@@ -12,3 +12,12 @@ summon minecraft:marker ~ ~ ~ {Tags: ["worldtool", "wt.can_forceload", "wt.rando
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner.1,sort=nearest,limit=1] at @s run function worldtool:use_tool/click/ray_hit/general/common
 
 function worldtool:ui_general/randomize/set_source/pos2
+
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~.5 ~.5 0 -1 0 2 0 normal @s
+particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~.5 ~.5 0 -1 0 2 0 normal @s

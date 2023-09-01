@@ -31,3 +31,5 @@ data modify storage worldtool:storage Processes[0].Positions.2 set value [0d,0d,
 execute store result storage worldtool:storage Processes[0].Positions.2[0] double 1 run scoreboard players get #pos2xt worldtool
 execute store result storage worldtool:storage Processes[0].Positions.2[1] double 1 run scoreboard players get #pos2yt worldtool
 execute store result storage worldtool:storage Processes[0].Positions.2[2] double 1 run scoreboard players get #pos2zt worldtool
+
+execute unless data storage worldtool:storage Processes[0].LogStart run data modify storage worldtool:storage Processes[0].LogStart set value 1b

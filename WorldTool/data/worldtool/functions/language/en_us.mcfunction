@@ -67,6 +67,8 @@ data modify storage worldtool:storage Translation."lore.current_plant_source" se
 data modify storage worldtool:storage Translation."progress.default" set value "WorldTool Progress"
 
 # Processes
+data modify storage worldtool:storage Translation."process.unnamed" set value "Unnamed Process"
+
 data modify storage worldtool:storage Translation."process.fill" set value "Fill Area"
 data modify storage worldtool:storage Translation."process.replace" set value "Replace"
 data modify storage worldtool:storage Translation."process.filter_measure" set value "Measure"
@@ -84,9 +86,9 @@ data modify storage worldtool:storage Translation."process.repeat" set value "Re
 data modify storage worldtool:storage Translation."process.smooth" set value "Smooth Area"
 data modify storage worldtool:storage Translation."process.command_list" set value "Search Command Block Chains"
 
-data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint"
-data modify storage worldtool:storage Translation."process.brush.place" set value "Place"
-data modify storage worldtool:storage Translation."process.brush.replace" set value "Replace"
+data modify storage worldtool:storage Translation."process.brush.paint" set value "Paint (Brush)"
+data modify storage worldtool:storage Translation."process.brush.place" set value "Place (Brush)"
+data modify storage worldtool:storage Translation."process.brush.replace" set value "Replace (Brush)"
 
 data modify storage worldtool:storage Translation."process.shape.cylinder" set value "Generate Cylinder"
 data modify storage worldtool:storage Translation."process.shape.sphere" set value "Generate Sphere"
@@ -178,6 +180,7 @@ data modify storage worldtool:storage Translation."warning.insufficient_backup_s
 
 # Command log
 data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
+data modify storage worldtool:storage Translation."info.log_empty" set value "The log is empty."
 data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared all log entries."
 data modify storage worldtool:storage Translation."info.log.time.seconds" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," seconds ago] "]'
 data modify storage worldtool:storage Translation."info.log.time.second" set value "[1 second ago] "
@@ -189,6 +192,14 @@ data modify storage worldtool:storage Translation."info.log.time.days" set value
 data modify storage worldtool:storage Translation."info.log.time.day" set value "[1 day ago] "
 data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value "Another process is already running. The specified process has been added to the queue."
 data modify storage worldtool:storage Translation."error.log.invalid_process" set value '{"text":"Error: The selected process is invalid and was not started.","color":"red"}'
+data modify storage worldtool:storage Translation."label.log_view" set value "Log filters: "
+data modify storage worldtool:storage Translation."button.log_view.error.on" set value "[Errors: On]"
+data modify storage worldtool:storage Translation."button.log_view.error.off" set value "[Errors: Off]"
+data modify storage worldtool:storage Translation."button.log_view.warning.on" set value "[Warnings: On]"
+data modify storage worldtool:storage Translation."button.log_view.warning.off" set value "[Warnings: Off]"
+data modify storage worldtool:storage Translation."button.log_view.info.on" set value "[Info: On]"
+data modify storage worldtool:storage Translation."button.log_view.info.off" set value "[Info: Off]"
+data modify storage worldtool:storage Translation."button.log_view.toggle.description" set value "Toggle this filter"
 
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"

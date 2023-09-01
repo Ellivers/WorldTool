@@ -29,6 +29,7 @@ scoreboard objectives add wt.pos1z dummy
 scoreboard objectives add wt.pos2x dummy
 scoreboard objectives add wt.pos2y dummy
 scoreboard objectives add wt.pos2z dummy
+scoreboard objectives add wt.version dummy
 scoreboard objectives add wt.sneak custom:sneak_time
 # Menu-specific objectives
 scoreboard objectives add wt.greenery_rate dummy
@@ -51,6 +52,7 @@ execute unless data storage worldtool:storage Language run function worldtool:la
 
 # Set the current version
 # Current version: 0.7, AKA 6
+# Don't forget to update pack.mcmeta and debug message!
 scoreboard players set $latestVersion worldtool 6
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
@@ -63,7 +65,7 @@ execute unless score $progressBar worldtool matches 0..1 run scoreboard players 
 execute unless score $clearChat worldtool matches 0..1 run scoreboard players set $clearChat worldtool 1
 execute unless score $sizeWarnLimit worldtool matches 0.. run scoreboard players set $sizeWarnLimit worldtool 100000
 execute unless score $playUISounds worldtool matches 0..1 run scoreboard players set $playUISounds worldtool 1
-execute unless score $logLimit worldtool matches -2147483648.. run scoreboard players set $logLimit worldtool 100
+execute unless score $logLimit worldtool matches -2147483648.. run scoreboard players set $logLimit worldtool 150
 execute unless score $reloadMessage worldtool matches 0..1 run scoreboard players set $reloadMessage worldtool 0
 execute unless score $randomizationSourceSizeWarnLimit worldtool matches 0.. run scoreboard players set $randomizationSourceSizeWarnLimit worldtool 60000
 execute unless score $maxBackups worldtool matches 2.. run scoreboard players set $maxBackups worldtool 6
@@ -151,6 +153,6 @@ scoreboard players set #theEndLoadWaitTime worldtool 0
 execute unless score $processRunning worldtool matches 1.. run function worldtool:technical/load/wait_for_dimension/the_end
 function #worldtool:hooks/init_dimensions/forceload
 
-execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.6-experimental"}},{"text": "Data reloaded!","color": "green"}]
+execute if score $reloadMessage worldtool matches 1 run tellraw @a ["",{"text": "[WorldTool]: ","hoverEvent": {"action": "show_text","value": "Version 0.7-experimental"}},{"text": "Data reloaded!","color": "green"}]
 
 function worldtool:particles/clock

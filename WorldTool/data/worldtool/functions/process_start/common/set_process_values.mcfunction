@@ -9,5 +9,6 @@ execute if data storage worldtool:storage Temp.AdditionalTags run data modify st
 data remove storage worldtool:storage Temp.AdditionalTags
 execute if data storage worldtool:storage Temp.AdditionalData run data modify storage worldtool:storage Processes[0] merge from storage worldtool:storage Temp.AdditionalData
 data remove storage worldtool:storage Temp.AdditionalData
+execute unless data storage worldtool:storage Processes[0].LogStart run data modify storage worldtool:storage Processes[0].LogStart set value 1b
 execute store result storage worldtool:storage Processes[0].Owner int 1 run scoreboard players get #ID_temp worldtool
 execute as @e[type=minecraft:marker,tag=worldtool] if score @s wt.ID = #ID_temp worldtool run function worldtool:process_start/common/setup_process.entity

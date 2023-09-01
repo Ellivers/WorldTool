@@ -22,6 +22,13 @@ execute unless score #blocksPerTick worldtool matches 2.. run scoreboard players
 ## Process-specific variables ##
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
 
+execute store success score #temp worldtool if data storage worldtool:storage Temp.Process{LogStart:1b}
+execute if score #temp worldtool matches 1 run data modify storage worldtool:storage Temp.LogEntry set value {Type:"info"}
+execute if score #temp worldtool matches 1 store result score #temp2 worldtool run data get storage worldtool:storage Temp.Process.DisplayName
+execute if score #temp worldtool matches 1 if score #temp2 worldtool matches 4.. run data modify storage worldtool:storage Temp.LogEntry.Message set from storage worldtool:storage Temp.Process.DisplayName
+execute if score #temp worldtool matches 1 if score #temp2 worldtool matches 0..3 run data modify storage worldtool:storage Temp.LogEntry.Message set value '{"nbt":"Translation.\\"process.unnamed\\"","storage":"worldtool:storage"}'
+execute if score #temp worldtool matches 1 run function worldtool:technical/cmd/log/add
+
 scoreboard players set #minX worldtool 2147483647
 scoreboard players set #maxX worldtool -2147483648
 scoreboard players set #minY worldtool 2147483647

@@ -5,7 +5,7 @@
 - Added an options menu to the Brush Tool
 - Particles are now displayed when setting position 1 or 2 with the General Tool
 
-Plugin changes:
+Plugin & technical changes:
 - Removed the particles/on hook
 - Removed the particles/off hook
 - Renamed the use_tool/ray_hit/all hook to use_tool/click/ray_hit/all

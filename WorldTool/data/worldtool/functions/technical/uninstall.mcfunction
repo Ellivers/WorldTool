@@ -20,6 +20,7 @@ scoreboard objectives remove wt.pos1z
 scoreboard objectives remove wt.pos2x
 scoreboard objectives remove wt.pos2y
 scoreboard objectives remove wt.pos2z
+scoreboard objectives remove wt.version
 scoreboard objectives remove wt.sneak
 scoreboard objectives remove wt.greenery_rate
 scoreboard objectives remove wt.size

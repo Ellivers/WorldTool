@@ -21,6 +21,12 @@
         }
     },
 
+    "requirements": [
+        [
+            "siw"
+        ]
+    ],
+
     "rewards": {
         "function": "worldtool:use_tool/offhand/load"
     }

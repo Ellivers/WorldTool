@@ -11,6 +11,12 @@
         }
     },
 
+    "requirements": [
+        [
+            "pci"
+        ]
+    ],
+
     "rewards": {
         "function": "worldtool:use_tool/drop/picked_up/load"
     }
