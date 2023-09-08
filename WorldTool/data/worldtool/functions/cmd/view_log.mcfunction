@@ -3,10 +3,10 @@
 
 function worldtool:ui/clear_chat
 
-function #rx.playerdb:api/v2/get
+function #rx.playerdb:api/v2/get/self
 execute store success score #temp worldtool if data storage rx.playerdb:io player.data.WorldTool.LogView
 execute if score #temp worldtool matches 0 run data modify storage rx.playerdb:io player.data.WorldTool.LogView set value {info:1b,warning:1b,error:1b}
-execute if score #temp worldtool matches 0 run function #rx.playerdb:api/v2/save
+execute if score #temp worldtool matches 0 run function #rx.playerdb:api/v2/save/self
 
 tellraw @s [{"nbt":"Translation.\"info.log_title\"","storage": "worldtool:storage","color": "gold"},"\n"]
 
