@@ -1,4 +1,4 @@
-# Called by worldtool:ui_brush/menu
+# Called by worldtool:ui_brush/options/menu
 # Toggles the update block setting
 
 function worldtool:ui_brush/check_tool

@@ -7,4 +7,5 @@ tag @s remove wt.highlight_color.0
 tag @s remove wt.highlight_color.1
 tag @s remove wt.highlight_color.2
 
+scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:shulker,tag=worldtool,tag=wt.highlight_entity] if score @s wt.ID = #ID_temp worldtool run function worldtool:use_tool/hold/remove_highlight.entity

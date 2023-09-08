@@ -3,5 +3,5 @@
 
 function worldtool:ui/remove_menu_tags
 tag @s add wt.menu.measure.filter
-tag @s add wt.two_block_query.text.filter
+tag @s add wt.two_block_query.text.filter.run
 function worldtool:ui_general/two_block_query/load/secondary

@@ -30,12 +30,14 @@ tag @s remove wt.two_block_query.secondary
 tag @s remove wt.two_block_query.primary
 tag @s remove wt.two_block_query.locked_rule
 tag @s remove wt.two_block_query.text.replace
+tag @s remove wt.two_block_query.text.replace.run
 tag @s remove wt.two_block_query.text.primary.standard
 tag @s remove wt.two_block_query.text.secondary.standard
 tag @s remove wt.two_block_query.text.greenery_replace
 tag @s remove wt.menu.measure
 tag @s remove wt.menu.measure.filter
 tag @s remove wt.two_block_query.text.filter
+tag @s remove wt.two_block_query.text.filter.run
 tag @s remove wt.pick_block.primary
 tag @s remove wt.pick_block.secondary
 tag @s remove wt.dont_start_input

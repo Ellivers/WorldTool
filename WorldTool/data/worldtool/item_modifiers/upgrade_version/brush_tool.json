@@ -1,0 +1,4 @@
+{
+    "function": "minecraft:set_nbt",
+    "tag": "{WorldTool:{Controls:\"worldtool:normal\",Highlight:1b}}"
+}

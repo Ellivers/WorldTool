@@ -1,9 +1,12 @@
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
 - General Tool particles now have an option to be shown at all times
+- All buttons that cause an operation to start are now marked as such
 - You can now switch the target placement for the General Tool and Shape Generation Tool
 - Added an options menu to the Brush Tool
-- Particles are now displayed when setting position 1 or 2 with the General Tool
+- Particles are now displayed when a position is set with the General Tool
+- The log can now be filtered to only show certain types of messages
+- The log now logs processes that have started
 
 Plugin & technical changes:
 - Removed the particles/on hook
