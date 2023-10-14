@@ -1,7 +1,7 @@
 # WorldTool
 
 WorldTool is a powerful and feature-rich world-editing Minecraft data pack.<br>
-Here, you can download non-full releases (experimental versions) to try out.
+This branch (main) is for full releases.
 
 To make some neat features possible, such as undoing, WorldTool uses [PlayerDB](https://github.com/rx-modules/PlayerDB).
 
@@ -9,7 +9,7 @@ To make some neat features possible, such as undoing, WorldTool uses [PlayerDB](
 
 Type `/function worldtool:give` to give yourself all tools.
 
-More info in the full documentation (not up-to-date with experimental versions):<br>
+More info in the full documentation:<br>
 https://ellivers.github.io/worldtool-docs
 
 If you want to help translating WorldTool to other languages, you can do so here:<br>
