@@ -93,6 +93,7 @@ data modify storage worldtool:storage Translation."process.brush.replace" set va
 data modify storage worldtool:storage Translation."process.shape.cylinder" set value "Generate Cylinder"
 data modify storage worldtool:storage Translation."process.shape.sphere" set value "Generate Sphere"
 data modify storage worldtool:storage Translation."process.shape.cone" set value "Generate Cone"
+data modify storage worldtool:storage Translation."process.shape.2d_fill" set value "2D Fill"
 
 data modify storage worldtool:storage Translation."label.process.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.process.replace" set value "Replace: "
@@ -119,6 +120,7 @@ data modify storage worldtool:storage Translation."label.process.brush.greenery"
 data modify storage worldtool:storage Translation."label.process.shape.cylinder" set value "Generate Cylinder: "
 data modify storage worldtool:storage Translation."label.process.shape.sphere" set value "Generate Sphere: "
 data modify storage worldtool:storage Translation."label.process.shape.cone" set value "Generate Cone: "
+data modify storage worldtool:storage Translation."label.process.shape.2d_fill" set value "2D Fill: "
 
 # Info
 data modify storage worldtool:storage Translation."info.language_selected" set value "The language English (US) has been selected. You may need to re-give yourself the WorldTool tool items in order to update their translations."
@@ -718,6 +720,7 @@ data modify storage worldtool:storage Translation."info.selected_brush.sphere" s
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Structure"
 data modify storage worldtool:storage Translation."info.selected_brush.greenery" set value "Selected brush: Greenery"
+data modify storage worldtool:storage Translation."info.selected_brush.2d_fill" set value "Selected brush: 2D Fill"
 
 data modify storage worldtool:storage Translation."button.brush.paint.name" set value "[Paint]"
 data modify storage worldtool:storage Translation."button.brush.paint.description" set value "Paint existing blocks"
@@ -733,6 +736,8 @@ data modify storage worldtool:storage Translation."button.brush.structure.name" 
 data modify storage worldtool:storage Translation."button.brush.structure.description" set value "Place a structure"
 data modify storage worldtool:storage Translation."button.brush.greenery.name" set value "[Greenery]"
 data modify storage worldtool:storage Translation."button.brush.greenery.description" set value "Place plants on supported plant blocks"
+data modify storage worldtool:storage Translation."button.brush.2d_fill.name" set value "[2D Fill]"
+data modify storage worldtool:storage Translation."button.brush.2d_fill.description" set value "Fill all blocks until edges are reached (2D)"
 data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
 
 data modify storage worldtool:storage Translation."button.brush.plugin_brushes.name" set value "[Plugin Brushes...]"

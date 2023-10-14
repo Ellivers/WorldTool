@@ -29,5 +29,6 @@ execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"world
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cylinder"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:cylinder",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cone"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:cone",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:sphere"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:sphere",Value:4000,Presets:{Low:600,Medium:2000,High:4000}}
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:2d_fill"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:2d_fill",Value:3500,Presets:{Low:600,Medium:1800,High:3500}}
 
 function #worldtool:hooks/setup_blocks_per_tick

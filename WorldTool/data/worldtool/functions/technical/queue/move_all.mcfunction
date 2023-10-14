@@ -1,5 +1,5 @@
 # Called recursively and by worldtool:technical/queue/move
-# Moves the queue until it finds the first player in the queue that's online
+# Moves the queue until it finds either the first player in the queue that's online, or a process that isn't owned by a player
 
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
 

@@ -5,7 +5,7 @@
 
     "supported_formats": {
       "min_inclusive": 7,
-      "max_inclusive": 18
+      "max_inclusive": 19
     }
   },
 
@@ -14,7 +14,7 @@
       {
         "formats": {
           "min_inclusive": 17,
-          "max_inclusive": 18
+          "max_inclusive": 999999
         },
         "directory": "v17"
       }

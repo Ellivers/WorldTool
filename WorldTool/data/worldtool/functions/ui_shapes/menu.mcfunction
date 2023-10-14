@@ -17,25 +17,27 @@ data modify storage worldtool:storage Temp.ShapeTool set from entity @s Selected
 execute if predicate worldtool:shape_tool/shapes/cone run tag @s add wt.shape.cone
 execute if predicate worldtool:shape_tool/shapes/cylinder run tag @s add wt.shape.cylinder
 execute if predicate worldtool:shape_tool/shapes/sphere run tag @s add wt.shape.sphere
+execute if predicate worldtool:shape_tool/shapes/2d_fill run tag @s add wt.shape.2d_fill
 
-tag @s add wt.setting.diameter
-tag @s add wt.setting.precision
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.diameter
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.precision
 tag @s[predicate=worldtool:shape_tool/settings/orientation/down] add wt.setting.orientation.down
 tag @s[predicate=worldtool:shape_tool/settings/orientation/up] add wt.setting.orientation.up
 tag @s[predicate=worldtool:shape_tool/settings/orientation/south] add wt.setting.orientation.south
 tag @s[predicate=worldtool:shape_tool/settings/orientation/north] add wt.setting.orientation.north
 tag @s[predicate=worldtool:shape_tool/settings/orientation/west] add wt.setting.orientation.west
 tag @s[predicate=worldtool:shape_tool/settings/orientation/east] add wt.setting.orientation.east
-execute if entity @s[tag=!wt.shape.sphere] run tag @s add wt.setting.orientation
-tag @s add wt.setting.degrees
-execute unless entity @s[tag=!wt.shape.cone,tag=!wt.shape.cylinder] run tag @s add wt.setting.length
-tag @s add wt.setting.y_rotation
-execute unless entity @s[tag=!wt.setting.orientation.north,tag=!wt.setting.orientation.south] run tag @s[tag=!wt.shape.sphere] add wt.setting.z_rotation
-execute unless entity @s[tag=!wt.setting.orientation.east,tag=!wt.setting.orientation.west,tag=!wt.shape.sphere] run tag @s add wt.setting.x_rotation
-tag @s add wt.setting.hollow
-tag @s add wt.setting.keep
+execute if entity @s[tag=!wt.shape.sphere,tag=!wt.shape.2d_fill] run tag @s add wt.setting.orientation
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.degrees
+execute unless entity @s[tag=!wt.shape.cone,tag=!wt.shape.cylinder,tag=!wt.shape.2d_fill] run tag @s add wt.setting.length
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.y_rotation
+execute unless entity @s[tag=!wt.setting.orientation.north,tag=!wt.setting.orientation.south] run tag @s[tag=!wt.shape.sphere,tag=!wt.shape.2d_fill] add wt.setting.z_rotation
+execute unless entity @s[tag=!wt.setting.orientation.east,tag=!wt.setting.orientation.west,tag=!wt.shape.sphere] run tag @s[tag=!wt.shape.2d_fill] add wt.setting.x_rotation
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.hollow
+tag @s[tag=!wt.shape.2d_fill] add wt.setting.keep
 tag @s add wt.setting.continuous
 tag @s[tag=wt.shape.sphere] add wt.setting.secondary_degrees
+tag @s[tag=wt.shape.2d_fill] add wt.setting.axis
 
 execute if score $shapeToolPlugins worldtool matches 1.. run function #worldtool:hooks/ui_shapes/menu/add_tags
 

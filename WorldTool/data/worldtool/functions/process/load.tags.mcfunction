@@ -9,6 +9,7 @@ execute if entity @s[tag=wt.process.cylinder.horizontal] run function worldtool:
 execute if entity @s[tag=wt.process.cone.vertical] run function worldtool:process/shapes/cone_vertical/load
 execute if entity @s[tag=wt.process.cone.horizontal] run function worldtool:process/shapes/cone_horizontal/load
 execute if entity @s[tag=wt.process.sphere] run function worldtool:process/shapes/sphere/load
+execute if entity @s[tag=wt.process.2d_fill] run function worldtool:process/2d_fill/main
 
 execute if entity @s[tag=wt.process.paint] run function worldtool:process/brush/paint/main
 execute if entity @s[tag=wt.process.replace_brush] run function worldtool:process/brush/replace/main

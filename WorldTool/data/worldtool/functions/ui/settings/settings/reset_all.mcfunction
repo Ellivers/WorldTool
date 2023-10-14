@@ -10,6 +10,6 @@ scoreboard players set $enableBackups worldtool 1
 scoreboard players set $keepMenuOptions worldtool 1
 scoreboard players set $sizeWarnLimit worldtool 100000
 scoreboard players set $logLimit worldtool 150
-scoreboard players set $maxBackups worldtool 6
+scoreboard players set $maxBackups worldtool 8
 
 function worldtool:ui/settings/menu

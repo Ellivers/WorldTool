@@ -6,6 +6,7 @@ tag @s remove wt.shapes.select_block
 tag @s remove wt.shape.cone
 tag @s remove wt.shape.cylinder
 tag @s remove wt.shape.sphere
+tag @s remove wt.shape.2d_fill
 
 tag @s remove wt.setting.diameter
 tag @s remove wt.setting.precision
@@ -25,5 +26,6 @@ tag @s remove wt.setting.z_rotation
 tag @s remove wt.setting.hollow
 tag @s remove wt.setting.keep
 tag @s remove wt.setting.continuous
+tag @s remove wt.setting.axis
 
 function #worldtool:hooks/ui_shapes/remove_ui_tags

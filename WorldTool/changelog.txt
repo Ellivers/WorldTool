@@ -1,3 +1,4 @@
+- Added a 2D filling shape to the Shape Tool
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
 - General Tool particles now have an option to be shown at all times
@@ -7,6 +8,7 @@
 - Particles are now displayed when a position is set with the General Tool
 - The log can now be filtered to only show certain types of messages
 - The log now logs processes that have started
+- Increased the default amount of max backups per player to 8
 
 Plugin & technical changes:
 - Removed the particles/on hook
@@ -22,3 +24,6 @@ Plugin & technical changes:
 - Added a use_tool/raycast/get_type hook
 - Added a use_tool/picked_up hook
 - Added a use_tool/offhand hook
+- Added a ui_shapes/before_block_option hook
+- Added a process_start/shapes/get_direction_format hook
+- Increased maximum backup slots to 1500

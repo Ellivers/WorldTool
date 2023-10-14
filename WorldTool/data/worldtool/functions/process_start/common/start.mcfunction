@@ -15,4 +15,4 @@ execute if score #success worldtool matches 1 run function worldtool:process_sta
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.dont_reopen_menu"]} run tag @s add wt.dont_reopen_menu
 execute unless entity @s[tag=wt.dont_reopen_menu] if data storage worldtool:storage Temp.Process.Owner run function worldtool:ui/reopen_menu/after_starting
 tag @s remove wt.dont_reopen_menu
-execute if score $progressBar worldtool matches 1 if data storage worldtool:storage Temp.Process.Owner run function worldtool:process_start/common/setup_progress_bar
+execute if score $progressBar worldtool matches 1 if data storage worldtool:storage Temp.Process.Owner unless data storage worldtool:storage Temp.Process{Tags:["wt.no_progress_bar"]} run function worldtool:process_start/common/setup_progress_bar

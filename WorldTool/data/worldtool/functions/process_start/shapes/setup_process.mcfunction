@@ -6,6 +6,7 @@ scoreboard players set #success worldtool 0
 execute if predicate worldtool:shape_tool/shapes/cylinder run function worldtool:process_start/shapes/setup_process/cylinder
 execute if predicate worldtool:shape_tool/shapes/cone run function worldtool:process_start/shapes/setup_process/cone
 execute if predicate worldtool:shape_tool/shapes/sphere run function worldtool:process_start/shapes/setup_process/sphere
+execute if predicate worldtool:shape_tool/shapes/2d_fill run function worldtool:process_start/shapes/setup_process/2d_fill/setup
 
 function #worldtool:hooks/process_start/shapes/processes
 
