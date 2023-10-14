@@ -3,8 +3,12 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position,tag=wt.nudge_selected] if score @s wt.ID = #ID_temp worldtool store result score #tempPos worldtool run data get entity @s Pos[0]
-scoreboard players operation #tempPos worldtool -= @s wt.size
-execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position,tag=wt.nudge_selected] if score @s wt.ID = #ID_temp worldtool store result entity @s Pos[0] double 1 run scoreboard players get #tempPos worldtool
+scoreboard players set #temp.X worldtool -1
+scoreboard players set #temp.Y worldtool 0
+scoreboard players set #temp.Z worldtool 0
+
+scoreboard players operation #stepSize worldtool = @s wt.size
+
+execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.position,tag=wt.nudge_selected] if score @s wt.ID = #ID_temp worldtool run function worldtool:ui_general/options/adjust_positions/nudge/nudge
 
 function worldtool:ui_general/options/adjust_positions/menu
