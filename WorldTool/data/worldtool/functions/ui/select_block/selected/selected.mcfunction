@@ -11,7 +11,7 @@ execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools
 execute if predicate worldtool:tools/brush run function worldtool:ui_brush/set_tooltip
 execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/set_primary_block
 execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
-execute if predicate worldtool:tools/shapes run function worldtool:ui_brush/set_tooltip
+execute if predicate worldtool:tools/shapes run function worldtool:ui_shapes/set_tooltip
 
 function #worldtool:hooks/ui/block_selected
 
