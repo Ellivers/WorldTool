@@ -282,6 +282,14 @@ data modify storage worldtool:storage Translation."button.direction.east.name" s
 data modify storage worldtool:storage Translation."button.direction.west.name" set value "[West]"
 data modify storage worldtool:storage Translation."button.direction.north.name" set value "[North]"
 data modify storage worldtool:storage Translation."button.direction.south.name" set value "[South]"
+data modify storage worldtool:storage Translation."button.auto.name" set value "[Auto]"
+data modify storage worldtool:storage Translation."button.direction.up.selected.name" set value "[Up✔]"
+data modify storage worldtool:storage Translation."button.direction.down.selected.name" set value "[Down✔]"
+data modify storage worldtool:storage Translation."button.direction.east.selected.name" set value "[East✔]"
+data modify storage worldtool:storage Translation."button.direction.west.selected.name" set value "[West✔]"
+data modify storage worldtool:storage Translation."button.direction.north.selected.name" set value "[North✔]"
+data modify storage worldtool:storage Translation."button.direction.south.selected.name" set value "[South✔]"
+data modify storage worldtool:storage Translation."button.auto.selected.name" set value "[Auto✔]"
 
 # Common option buttons
 data modify storage worldtool:storage Translation."button.decrease.name" set value "- "
@@ -312,6 +320,7 @@ data modify storage worldtool:storage Translation."button.before_block.off" set 
 data modify storage worldtool:storage Translation."axis.x" set value "X"
 data modify storage worldtool:storage Translation."axis.y" set value "Y"
 data modify storage worldtool:storage Translation."axis.z" set value "Z"
+data modify storage worldtool:storage Translation."value.auto" set value "Auto"
 data modify storage worldtool:storage Translation."prefix.fraction" set value "1/"
 
 
@@ -777,7 +786,6 @@ data modify storage worldtool:storage Translation."button.brush.flat.off" set va
 data modify storage worldtool:storage Translation."button.brush.flat.description" set value "Toggle between a cube shape (default) and a square shape"
 data modify storage worldtool:storage Translation."label.brush.axis.name" set value "Axis: "
 data modify storage worldtool:storage Translation."label.brush.axis.description" set value "Choose which axis to place the shape on"
-data modify storage worldtool:storage Translation."axis.brush.auto" set value "Auto"
 data modify storage worldtool:storage Translation."button.brush.update_block.on" set value "[Update Block: On]"
 data modify storage worldtool:storage Translation."button.brush.update_block.off" set value "[Update Block: Off]"
 data modify storage worldtool:storage Translation."button.brush.update_block.description" set value "Update the process block every time the brush is used (recommended)"
@@ -835,6 +843,7 @@ data modify storage worldtool:storage Translation."label.shapes.length.name" set
 data modify storage worldtool:storage Translation."label.shapes.length.description" set value "The shape's length in blocks"
 data modify storage worldtool:storage Translation."label.shapes.orientation.name" set value "Orientation: "
 data modify storage worldtool:storage Translation."label.shapes.orientation.description" set value "The way the shape is facing"
+data modify storage worldtool:storage Translation."button.shapes.select_orientation.description" set value "Select this orientation"
 data modify storage worldtool:storage Translation."label.shapes.degrees.name" set value "Degrees: "
 data modify storage worldtool:storage Translation."label.shapes.degrees.description" set value "How many degrees of a circle the shape is drawn. 360 degrees is a full circle."
 data modify storage worldtool:storage Translation."label.shapes.secondary_degrees.name" set value "Secondary Degrees: "

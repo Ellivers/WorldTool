@@ -54,7 +54,7 @@ execute if entity @s[tag=wt.setting.structure_mirror,predicate=worldtool:brush_t
 execute if entity @s[tag=wt.setting.structure_mirror,predicate=worldtool:brush_tool/settings/structure_mirror/front_back] run data modify storage worldtool:storage Temp.StructureMirror set value '{"nbt":"Translation.\\"structure_mirror.front_back\\"","storage":"worldtool:storage"}'
 execute if entity @s[tag=wt.setting.structure_mirror,predicate=worldtool:brush_tool/settings/structure_mirror/left_right] run data modify storage worldtool:storage Temp.StructureMirror set value '{"nbt":"Translation.\\"structure_mirror.left_right\\"","storage":"worldtool:storage"}'
 
-execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/auto] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.brush.auto\\"","storage":"worldtool:storage"}'
+execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/auto] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"value.auto\\"","storage":"worldtool:storage"}'
 execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/x] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.x\\"","storage":"worldtool:storage"}'
 execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/y] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.y\\"","storage":"worldtool:storage"}'
 execute if entity @s[tag=wt.setting.axis,predicate=worldtool:brush_tool/settings/axis/z] run data modify storage worldtool:storage Temp.Axis set value '{"nbt":"Translation.\\"axis.z\\"","storage":"worldtool:storage"}'

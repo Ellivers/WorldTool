@@ -3,7 +3,8 @@
 - Added an option for a limited range control scheme
 - General Tool particles now have an option to be shown at all times
 - All buttons that cause an operation to start are now marked as such
-- You can now switch the target placement for the General Tool and Shape Generation Tool
+- You can now switch the block-relative placement for the General Tool and Shape Generation Tool
+- Axis auto detection is now more accurate
 - Added an options menu to the Brush Tool
 - Particles are now displayed when a position is set with the General Tool
 - The log can now be filtered to only show certain types of messages
@@ -25,5 +26,6 @@ Plugin & technical changes:
 - Added a use_tool/picked_up hook
 - Added a use_tool/offhand hook
 - Added a ui_shapes/before_block_option hook
-- Added a process_start/shapes/get_direction_format hook
+- Added a ui_shapes/direction_format/get hook
+- Added a ui_shapes/direction_format/remove_tags hook
 - Increased maximum backup slots to 1500
