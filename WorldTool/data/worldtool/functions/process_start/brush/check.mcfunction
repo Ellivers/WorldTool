@@ -11,5 +11,6 @@ execute if score #brushLoadTemp worldtool matches 1 run data modify storage worl
 execute if score #brushLoadTemp worldtool matches 1 run data modify storage worldtool:storage Temp.Blocks.Secondary set from entity @s SelectedItem.tag.WorldTool.SecondaryBlock
 execute if score #brushLoadTemp worldtool matches 1 run function worldtool:process_start/common/block_from_data/load
 
+# Thes following commands WILL NOT RUN if a block is required
 execute if score #brushLoadTemp worldtool matches 0 if predicate worldtool:brush_tool/settings/requires/area run function worldtool:process_start/brush/area/load
 execute if score #brushLoadTemp worldtool matches 0 unless predicate worldtool:brush_tool/settings/requires/area run function worldtool:process_start/brush/start/load
