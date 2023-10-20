@@ -1,7 +1,7 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{Shape:\"cone\"}}"
+        "tag": "{WorldTool:{Shape:\"cone\",AcceptedOrientation:\"standard\"}}"
     },
     {
         "function": "minecraft:set_lore",

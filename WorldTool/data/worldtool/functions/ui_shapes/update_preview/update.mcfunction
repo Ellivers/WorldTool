@@ -16,22 +16,34 @@ tag @s remove wt.shape.cone.south
 tag @s remove wt.shape.cone.north
 tag @s remove wt.shape.cone.horizontal
 tag @s remove wt.shape.sphere
+tag @s remove wt.shape.2d_fill
 
 function #worldtool:hooks/ui_shapes/remove_preview_tags
 
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder",ShapeSettings:{Orientation:"up"}} run tag @s add wt.shape.cylinder.up
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder",ShapeSettings:{Orientation:"down"}} run tag @s add wt.shape.cylinder.down
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"up"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"down"} run tag @s add wt.shape.cylinder.horizontal
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"auto"} run tag @s add wt.temp
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"auto"} run tag @s add wt.temp
 
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"up"}} run tag @s add wt.shape.cone.up
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"down"}} run tag @s add wt.shape.cone.down
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"east"}} run tag @s add wt.shape.cone.east
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"west"}} run tag @s add wt.shape.cone.west
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"south"}} run tag @s add wt.shape.cone.south
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone",ShapeSettings:{Orientation:"north"}} run tag @s add wt.shape.cone.north
+execute if entity @s[tag=!wt.temp] unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"auto"} run data modify storage worldtool:storage Temp.CurrentOrientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Orientation
+execute if entity @s[tag=!wt.temp] unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"auto"} run data modify storage worldtool:storage Temp.CurrentOrientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Axis
+execute if entity @s[tag=!wt.temp] run data modify entity @s data.WorldTool.CurrentOrientation set from storage worldtool:storage Temp.CurrentOrientation
+execute if entity @s[tag=wt.temp] run data modify storage worldtool:storage Temp.CurrentOrientation set from entity @s data.WorldTool.CurrentOrientation
+
+tag @s remove wt.temp
+
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder"} if data storage worldtool:storage Temp{CurrentOrientation:"up"} run tag @s add wt.shape.cylinder.up
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder"} if data storage worldtool:storage Temp{CurrentOrientation:"down"} run tag @s add wt.shape.cylinder.down
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cylinder"} run tag @s[tag=!wt.shape.cylinder.up,tag=!wt.shape.cylinder.down] add wt.shape.cylinder.horizontal
+
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"up"} run tag @s add wt.shape.cone.up
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"down"} run tag @s add wt.shape.cone.down
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"east"} run tag @s add wt.shape.cone.east
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"west"} run tag @s add wt.shape.cone.west
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"south"} run tag @s add wt.shape.cone.south
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} if data storage worldtool:storage Temp{CurrentOrientation:"north"} run tag @s add wt.shape.cone.north
 execute unless entity @s[tag=!wt.shape.cone.up,tag=!wt.shape.cone.down] run tag @s add wt.shape.cone.vertical
-execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"up"} unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"down"} run tag @s add wt.shape.cone.horizontal
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} run tag @s[tag=!wt.shape.cone.up,tag=!wt.shape.cone.down] add wt.shape.cone.horizontal
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"sphere"} run tag @s add wt.shape.sphere
+execute if data storage worldtool:storage Temp.ShapeTool{Shape:"2d_fill"} run tag @s add wt.shape.2d_fill
 
 function #worldtool:hooks/ui_shapes/add_preview_tags
 
@@ -41,8 +53,11 @@ execute if score #yRotEnabled worldtool matches 1 store result entity @s Rotatio
 execute unless score #xRotEnabled worldtool matches 1 run data remove entity @s data.WorldTool.XRotation
 execute if score #xRotEnabled worldtool matches 1 run data modify entity @s data.WorldTool.XRotation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.XRotation
 
-execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
-execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~
-execute if entity @s[tag=!wt.shape.sphere] if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"north"} at @s run tp @s ~ ~ ~ ~-90 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"south"} at @s run tp @s ~ ~ ~ ~90 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"west"} at @s run tp @s ~ ~ ~ ~180 ~
+
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"z"} at @s run tp @s ~ ~ ~ ~-90 ~
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"x"} at @s run tp @s ~ ~ ~ ~180 ~
 
 execute if data storage worldtool:storage Temp.ShapeTool run tag @s add wt.particles

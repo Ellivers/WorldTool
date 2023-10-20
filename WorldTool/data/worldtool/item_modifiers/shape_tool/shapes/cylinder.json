@@ -1,7 +1,7 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{Shape:\"cylinder\"}}"
+        "tag": "{WorldTool:{Shape:\"cylinder\",AcceptedOrientation:\"standard\"}}"
     },
     {
         "function": "minecraft:set_lore",

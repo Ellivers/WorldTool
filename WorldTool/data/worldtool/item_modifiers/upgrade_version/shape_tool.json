@@ -1,4 +1,4 @@
 {
     "function": "minecraft:set_nbt",
-    "tag": "{WorldTool:{Controls:\"worldtool:normal\",BeforeBlock:1b,Highlight:1b}}"
+    "tag": "{WorldTool:{Controls:\"worldtool:normal\",BeforeBlock:1b,Highlight:1b,ShapeSettings:{Axis:\"auto\",AcceptedOrientation:\"standard\"}}}"
 }

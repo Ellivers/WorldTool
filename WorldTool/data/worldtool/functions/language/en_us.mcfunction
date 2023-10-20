@@ -93,7 +93,7 @@ data modify storage worldtool:storage Translation."process.brush.replace" set va
 data modify storage worldtool:storage Translation."process.shape.cylinder" set value "Generate Cylinder"
 data modify storage worldtool:storage Translation."process.shape.sphere" set value "Generate Sphere"
 data modify storage worldtool:storage Translation."process.shape.cone" set value "Generate Cone"
-data modify storage worldtool:storage Translation."process.shape.2d_fill" set value "2D Fill"
+data modify storage worldtool:storage Translation."process.shape.2d_fill" set value "Fill Bucket"
 
 data modify storage worldtool:storage Translation."label.process.fill" set value "Fill: "
 data modify storage worldtool:storage Translation."label.process.replace" set value "Replace: "
@@ -729,7 +729,6 @@ data modify storage worldtool:storage Translation."info.selected_brush.sphere" s
 data modify storage worldtool:storage Translation."info.selected_brush.circle" set value "Selected brush: Circle"
 data modify storage worldtool:storage Translation."info.selected_brush.structure" set value "Selected brush: Structure"
 data modify storage worldtool:storage Translation."info.selected_brush.greenery" set value "Selected brush: Greenery"
-data modify storage worldtool:storage Translation."info.selected_brush.2d_fill" set value "Selected brush: 2D Fill"
 
 data modify storage worldtool:storage Translation."button.brush.paint.name" set value "[Paint]"
 data modify storage worldtool:storage Translation."button.brush.paint.description" set value "Paint existing blocks"
@@ -745,8 +744,6 @@ data modify storage worldtool:storage Translation."button.brush.structure.name" 
 data modify storage worldtool:storage Translation."button.brush.structure.description" set value "Place a structure"
 data modify storage worldtool:storage Translation."button.brush.greenery.name" set value "[Greenery]"
 data modify storage worldtool:storage Translation."button.brush.greenery.description" set value "Place plants on supported plant blocks"
-data modify storage worldtool:storage Translation."button.brush.2d_fill.name" set value "[2D Fill]"
-data modify storage worldtool:storage Translation."button.brush.2d_fill.description" set value "Fill all blocks until edges are reached (2D)"
 data modify storage worldtool:storage Translation."button.brush.already_selected.description" set value "This brush is already selected"
 
 data modify storage worldtool:storage Translation."button.brush.plugin_brushes.name" set value "[Plugin Brushes...]"
@@ -800,6 +797,7 @@ data modify storage worldtool:storage Translation."info.shape_position" set valu
 data modify storage worldtool:storage Translation."info.selected_shape.cone" set value "Selected shape: Cone"
 data modify storage worldtool:storage Translation."info.selected_shape.cylinder" set value "Selected shape: Cylinder"
 data modify storage worldtool:storage Translation."info.selected_shape.sphere" set value "Selected shape: Sphere"
+data modify storage worldtool:storage Translation."info.selected_shape.2d_fill" set value "Selected shape: Fill Bucket"
 
 data modify storage worldtool:storage Translation."button.shape.cone.name" set value "[Cone]"
 data modify storage worldtool:storage Translation."button.shape.cone.description" set value "Select the cone shape"
@@ -807,6 +805,8 @@ data modify storage worldtool:storage Translation."button.shape.cylinder.name" s
 data modify storage worldtool:storage Translation."button.shape.cylinder.description" set value "Select the cylinder shape"
 data modify storage worldtool:storage Translation."button.shape.sphere.name" set value "[Sphere]"
 data modify storage worldtool:storage Translation."button.shape.sphere.description" set value "Select the sphere shape"
+data modify storage worldtool:storage Translation."button.shape.2d_fill.name" set value "[Fill Bucket]"
+data modify storage worldtool:storage Translation."button.shape.2d_fill.description" set value "Fill all blocks until edges are reached (2D)"
 data modify storage worldtool:storage Translation."button.shape.already_selected.description" set value "This shape is already selected"
 
 data modify storage worldtool:storage Translation."button.adjust_position.name" set value "[⇆Adjust Position...]"

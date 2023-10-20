@@ -1,7 +1,7 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{WorldTool:{Shape:\"sphere\"}}"
+        "tag": "{WorldTool:{Shape:\"sphere\",AcceptedOrientation:\"none\"}}"
     },
     {
         "function": "minecraft:set_lore",
