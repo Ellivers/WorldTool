@@ -4,6 +4,8 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run kill @s
 
+
+
 function worldtool:ui_shapes/summon_position
 
 function worldtool:ui_shapes/menu

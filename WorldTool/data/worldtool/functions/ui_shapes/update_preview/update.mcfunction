@@ -20,13 +20,14 @@ tag @s remove wt.shape.2d_fill
 
 function #worldtool:hooks/ui_shapes/remove_preview_tags
 
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"auto"} run tag @s add wt.temp
-execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"auto"} run tag @s add wt.temp
+execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"auto"} run tag @s add wt.temp
 
-execute if entity @s[tag=!wt.temp] unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"standard",Orientation:"auto"} run data modify storage worldtool:storage Temp.CurrentOrientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Orientation
-execute if entity @s[tag=!wt.temp] unless data storage worldtool:storage Temp.ShapeTool.ShapeSettings{AcceptedOrientation:"axis",Axis:"auto"} run data modify storage worldtool:storage Temp.CurrentOrientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Axis
+execute if entity @s[tag=!wt.temp] run data modify storage worldtool:storage Temp.CurrentOrientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Orientation
 execute if entity @s[tag=!wt.temp] run data modify entity @s data.WorldTool.CurrentOrientation set from storage worldtool:storage Temp.CurrentOrientation
-execute if entity @s[tag=wt.temp] run data modify storage worldtool:storage Temp.CurrentOrientation set from entity @s data.WorldTool.CurrentOrientation
+execute if entity @s[tag=wt.temp] unless data storage worldtool:storage Temp.InitialOrientation run data modify storage worldtool:storage Temp.CurrentOrientation set from entity @s data.WorldTool.CurrentOrientation
+execute if entity @s[tag=wt.temp] if data storage worldtool:storage Temp.InitialOrientation run data modify entity @s data.WorldTool.öCurrentOrientation set from storage worldtool:storage Temp.InitialOrientation
+
+data remove storage worldtool:storage Temp.InitialOrientation
 
 tag @s remove wt.temp
 

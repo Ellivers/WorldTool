@@ -1,4 +1,4 @@
-# Called by shape process adder functions
+# Called by shape process setup functions
 # Sets base data for new shape processes
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
