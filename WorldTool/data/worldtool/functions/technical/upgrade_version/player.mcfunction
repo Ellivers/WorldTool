@@ -1,5 +1,7 @@
 # Upgrades player-specific data
 
+execute if score @s wt.version > $latestVersion worldtool run tellraw @s {"nbt":"Translation.\"warning.downgrade\"","storage": "worldtool:storage","color": "gold"}
+
 execute if entity @s[tag=wt.helper_particles] run tag @s add wt.helper_particles.in_menu
 tag @s remove wt.helper_particles
 
