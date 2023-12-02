@@ -49,7 +49,7 @@ execute if score $reloadLanguage worldtool matches 0 if score $version worldtool
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
-# Current version: 0.6.1, AKA 5
+# Current version: 0.6.1 (0.6.2), AKA 5
 scoreboard players set $latestVersion worldtool 5
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
