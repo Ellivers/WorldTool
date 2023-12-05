@@ -14,10 +14,6 @@
 #define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Top or Bottom
 #define entity d43b8e30-51cc-4da0-918a-60a557ae676f Temporary Entity
 
-
-# Detect an older version
-execute if score $version worldtool < $latestVersion worldtool run function worldtool:technical/upgrade_version
-
 ## Objectives ##
 scoreboard objectives add worldtool dummy
 scoreboard objectives add wt.use_coas used:minecraft.carrot_on_a_stick
@@ -42,18 +38,23 @@ scoreboard objectives add wt.amountX dummy
 scoreboard objectives add wt.amountY dummy
 scoreboard objectives add wt.amountZ dummy
 
+# Current version: 0.7, AKA 6
+# Don't forget to update pack.mcmeta and debug message!
+scoreboard players set $latestVersion worldtool 6
+execute unless score $version worldtool matches -2147483648..2147483647 run scoreboard players operation $version worldtool = $latestVersion worldtool
+
+# Detect an older version
+execute unless score $version worldtool = $latestVersion worldtool run function worldtool:technical/upgrade_version
+
 # Default language
 # When releasing, change the following line to:
 #execute unless score $reloadLanguage worldtool matches 0..1 run scoreboard players set $reloadLanguage worldtool 0
 scoreboard players set $reloadLanguage worldtool 1
 execute if score $reloadLanguage worldtool matches 1 if data storage worldtool:storage Language run function worldtool:language/reload
-execute if score $reloadLanguage worldtool matches 0 if score $version worldtool < $latestVersion worldtool if data storage worldtool:storage Language run function worldtool:language/reload
+execute if score $reloadLanguage worldtool matches 0 unless score $version worldtool = $latestVersion worldtool if data storage worldtool:storage Language run function worldtool:language/reload
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
-# Current version: 0.7, AKA 6
-# Don't forget to update pack.mcmeta and debug message!
-scoreboard players set $latestVersion worldtool 6
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
 ## Default blocks per tick ##

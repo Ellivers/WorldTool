@@ -181,7 +181,7 @@ data modify storage worldtool:storage Translation."warning.clone_overlap" set va
 data modify storage worldtool:storage Translation."warning.insufficient_backup_slots" set value "Warning: There are no more backup slots available, meaning you will not be able to properly undo this action. Do you wish to continue anyway?"
 data modify storage worldtool:storage Translation."warning.downgrade" set value "Warning: WorldTool has been (improperly) downgraded, since the currently installed version is older than the previously installed one."
 
-# Command log
+# Log
 data modify storage worldtool:storage Translation."info.log_title" set value "Log entries:"
 data modify storage worldtool:storage Translation."info.log_empty" set value "The log is empty."
 data modify storage worldtool:storage Translation."info.log_cleared" set value "Cleared all log entries."
@@ -193,8 +193,6 @@ data modify storage worldtool:storage Translation."info.log.time.hours" set valu
 data modify storage worldtool:storage Translation."info.log.time.hour" set value "[1 hour ago] "
 data modify storage worldtool:storage Translation."info.log.time.days" set value '["[",{"score":{"name": "#timeDifference","objective": "worldtool"}}," days ago] "]'
 data modify storage worldtool:storage Translation."info.log.time.day" set value "[1 day ago] "
-data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value "Another process is already running. The specified process has been added to the queue."
-data modify storage worldtool:storage Translation."error.log.invalid_process" set value '{"text":"Error: The selected process is invalid and was not started.","color":"red"}'
 data modify storage worldtool:storage Translation."label.log_view" set value "Log filters: "
 data modify storage worldtool:storage Translation."button.log_view.error.on" set value "[Errors: On]"
 data modify storage worldtool:storage Translation."button.log_view.error.off" set value "[Errors: Off]"
@@ -203,6 +201,11 @@ data modify storage worldtool:storage Translation."button.log_view.warning.off" 
 data modify storage worldtool:storage Translation."button.log_view.info.on" set value "[Info: On]"
 data modify storage worldtool:storage Translation."button.log_view.info.off" set value "[Info: Off]"
 data modify storage worldtool:storage Translation."button.log_view.toggle.description" set value "Toggle this filter"
+
+data modify storage worldtool:storage Translation."info.log.process_already_running.queue" set value "Another process is already running. The specified process has been added to the queue."
+data modify storage worldtool:storage Translation."error.log.invalid_process" set value "Error: The selected process is invalid and was not started."
+data modify storage worldtool:storage Translation."info.log.version_upgraded" set value "Data has been upgraded to the latest version."
+data modify storage worldtool:storage Translation."warning.log.version_downgraded" set value "Warning: The version was downgraded from a newer version to an older one."
 
 # Common buttons
 data modify storage worldtool:storage Translation."button.close.name" set value "[Close]"
