@@ -846,6 +846,7 @@ data modify storage worldtool:storage Translation."label.shapes.precision.descri
 data modify storage worldtool:storage Translation."label.shapes.length.name" set value "Length: "
 data modify storage worldtool:storage Translation."label.shapes.length.description" set value "The shape's length in blocks"
 data modify storage worldtool:storage Translation."label.shapes.orientation.name" set value "Orientation: "
+data modify storage worldtool:storage Translation."label.shapes.orientation.spacer" set value "               "
 data modify storage worldtool:storage Translation."label.shapes.orientation.description" set value "The way the shape is facing"
 data modify storage worldtool:storage Translation."button.shapes.select_orientation.description" set value "Select this orientation"
 data modify storage worldtool:storage Translation."label.shapes.degrees.name" set value "Degrees: "
@@ -859,11 +860,12 @@ data modify storage worldtool:storage Translation."label.shapes.y_rotation.descr
 data modify storage worldtool:storage Translation."label.shapes.z_rotation.name" set value "Z Rotation: "
 data modify storage worldtool:storage Translation."label.shapes.z_rotation.description" set value "The shape's rotation around the Z axis"
 
-data modify storage worldtool:storage Translation."orientation.up" set value "Up"
-data modify storage worldtool:storage Translation."orientation.down" set value "Down"
-data modify storage worldtool:storage Translation."orientation.north" set value "North"
-data modify storage worldtool:storage Translation."orientation.south" set value "South"
-data modify storage worldtool:storage Translation."orientation.west" set value "West"
-data modify storage worldtool:storage Translation."orientation.east" set value "East"
+data modify storage worldtool:storage Translation."button.shapes.orientation.east.description" set value "+X"
+data modify storage worldtool:storage Translation."button.shapes.orientation.west.description" set value "-X"
+data modify storage worldtool:storage Translation."button.shapes.orientation.up.description" set value "+Y"
+data modify storage worldtool:storage Translation."button.shapes.orientation.down.description" set value "-Y"
+data modify storage worldtool:storage Translation."button.shapes.orientation.south.description" set value "+Z"
+data modify storage worldtool:storage Translation."button.shapes.orientation.north.description" set value "-Z"
+data modify storage worldtool:storage Translation."button.shapes.orientation.auto.description" set value "Chooses an orientation automatically when a position is set"
 
 function #worldtool:hooks/language/en_us

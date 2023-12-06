@@ -1,0 +1,16 @@
+[
+    {
+      "function": "copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "worldtool:storage"
+      },
+      "ops": [
+        {
+          "op": "replace",
+          "source": "Temp.ShapeTool.Temp.Orientation",
+          "target": "WorldTool.ShapeTool.Temp.Orientation"
+        }
+      ]
+    }
+]
