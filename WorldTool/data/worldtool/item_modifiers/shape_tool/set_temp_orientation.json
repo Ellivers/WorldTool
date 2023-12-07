@@ -8,7 +8,7 @@
       "ops": [
         {
           "op": "replace",
-          "source": "Temp.ShapeTool.Temp.Orientation",
+          "source": "Temp.ShapeTool.ShapeTool.Temp.Orientation",
           "target": "WorldTool.ShapeTool.Temp.Orientation"
         }
       ]

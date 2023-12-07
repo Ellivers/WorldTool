@@ -10,8 +10,8 @@ function #worldtool:hooks/ui_shapes/set_preview_axes
 
 execute if data storage worldtool:storage Temp.ShapeTool.ShapeSettings{Orientation:"auto"} run tag @s add wt.temp
 
-execute if entity @s[tag=!wt.temp] run data modify storage worldtool:storage Temp.ShapeTool.Temp.Orientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Orientation
-execute if entity @s[tag=wt.temp] if data storage worldtool:storage Temp.InitialOrientation run data modify storage worldtool:storage Temp.ShapeTool.Temp.Orientation set from storage worldtool:storage Temp.InitialOrientation
+execute if entity @s[tag=!wt.temp] run data modify storage worldtool:storage Temp.ShapeTool.ShapeTool.Temp.Orientation set from storage worldtool:storage Temp.ShapeTool.ShapeSettings.Orientation
+execute if entity @s[tag=wt.temp] if data storage worldtool:storage Temp.InitialOrientation run data modify storage worldtool:storage Temp.ShapeTool.ShapeTool.Temp.Orientation set from storage worldtool:storage Temp.InitialOrientation
 data remove storage worldtool:storage Temp.InitialOrientation
 item modify entity @s weapon.mainhand worldtool:shape_tool/set_temp_orientation
 

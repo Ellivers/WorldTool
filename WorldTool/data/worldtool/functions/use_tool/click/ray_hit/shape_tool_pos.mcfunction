@@ -4,9 +4,9 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run kill @s
 
-
-
 function worldtool:ui_shapes/summon_position
+
+execute if entity @s[predicate=!worldtool:shape_tool/settings/accepted_orientation/none,predicate=worldtool:shape_tool/settings/orientation/auto] run function worldtool:ui_shapes/get_direction/get
 
 function worldtool:ui_shapes/menu
 
