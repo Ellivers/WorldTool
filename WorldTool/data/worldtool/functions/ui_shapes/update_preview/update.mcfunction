@@ -35,8 +35,6 @@ execute if data storage worldtool:storage Temp.ShapeTool{Shape:"cone"} run tag @
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"sphere"} run tag @s add wt.shape.sphere
 execute if data storage worldtool:storage Temp.ShapeTool{Shape:"2d_fill"} run tag @s add wt.shape.2d_fill
 
-tellraw @a {"nbt":"Temp.ShapeTool.ShapeTool.Temp","storage": "worldtool:storage"}
-
 function #worldtool:hooks/ui_shapes/add_preview_tags
 
 tp @s ~ ~ ~ 0 0

@@ -5,6 +5,8 @@ function worldtool:ui_shapes/summon_position
 
 execute if score $processRunning worldtool matches 1.. run tellraw @s {"nbt":"Translation.\"error.process_running\"","storage": "worldtool:storage","color": "red"}
 
+execute if entity @s[predicate=!worldtool:shape_tool/settings/accepted_orientation/none,predicate=worldtool:shape_tool/settings/orientation/auto] run function worldtool:ui_shapes/get_direction/get
+
 execute unless score $processRunning worldtool matches 1.. run function worldtool:process_start/shapes/setup_process
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.shape_position] if score @s wt.ID = #ID_temp worldtool run kill @s
 

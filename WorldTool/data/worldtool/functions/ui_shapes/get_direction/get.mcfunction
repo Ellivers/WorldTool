@@ -1,3 +1,5 @@
+# Called by worldtool:use_tool/click/ray_hit/shape_tool_pos and worldtool:process_start/shapes/setup_process/continuous
+# Automatically gets a fitting orientation
 
 scoreboard players set #temp.X worldtool 0
 scoreboard players set #temp.Y worldtool 0

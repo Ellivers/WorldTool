@@ -6,8 +6,9 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.cylinder\\"","storage":"worldtool:storage"}',ID:"worldtool:cylinder",Tags:[]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cylinder"}].Value
 
-execute unless entity @s[predicate=!worldtool:shape_tool/settings/orientation/up,predicate=!worldtool:shape_tool/settings/orientation/down] run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cylinder.vertical"
-execute if entity @s[predicate=!worldtool:shape_tool/settings/orientation/up,predicate=!worldtool:shape_tool/settings/orientation/down] run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cylinder.horizontal"
+execute unless data storage worldtool:storage Temp{ProcessOrientation:"up"} unless data storage worldtool:storage Temp{ProcessOrientation:"down"} run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cylinder.horizontal"
+data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[0]
+execute unless data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinder.horizontal"]} run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cylinder.vertical"
 
 function worldtool:process_start/shapes/setup_process/set_process_values
 

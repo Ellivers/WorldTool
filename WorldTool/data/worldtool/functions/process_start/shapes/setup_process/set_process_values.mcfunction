@@ -6,6 +6,7 @@ scoreboard players operation #ID_temp worldtool = @s wt.ID
 execute store result storage worldtool:storage Processes[0].Owner int 1 run scoreboard players get #ID_temp worldtool
 data modify storage worldtool:storage Processes[0].StartType set value "worldtool:shape"
 data modify storage worldtool:storage Processes[0].Input.ShapeSettings set from entity @s SelectedItem.tag.WorldTool.ShapeSettings
+data modify storage worldtool:storage Processes[0].Input.ShapeSettings.Orientation set from storage worldtool:storage Temp.ProcessOrientation
 data modify storage worldtool:storage Processes[0].Blocks.Primary set from entity @s SelectedItem.tag.WorldTool.PrimaryBlock
 data modify storage worldtool:storage Processes[0].Blocks.Secondary set from entity @s SelectedItem.tag.WorldTool.SecondaryBlock
 execute if predicate worldtool:shape_tool/settings/replace/normal run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shapes.replace.normal"

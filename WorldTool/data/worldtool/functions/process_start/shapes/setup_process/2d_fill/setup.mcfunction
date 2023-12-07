@@ -6,9 +6,9 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.2d_fill\\"","storage":"worldtool:storage"}',ID:"worldtool:2d_fill",Tags:["wt.process.2d_fill","wt.process.2d_fill.with_block","wt.no_message"]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:2d_fill"}].Value
 
-execute if predicate worldtool:shape_tool/settings/axis/x run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.x"
-execute if predicate worldtool:shape_tool/settings/axis/y run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.y"
-execute if predicate worldtool:shape_tool/settings/axis/z run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.z"
+execute if data storage worldtool:storage Temp{ProcessOrientation:"x"} run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.x"
+execute if data storage worldtool:storage Temp{ProcessOrientation:"y"} run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.y"
+execute if data storage worldtool:storage Temp{ProcessOrientation:"z"} run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.2d_fill.axis.z"
 
 function worldtool:process_start/shapes/setup_process/set_process_values
 

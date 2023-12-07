@@ -15,12 +15,12 @@ scoreboard players operation #pos2xt worldtool = #pos1xt worldtool
 scoreboard players operation #pos2yt worldtool = #pos1yt worldtool
 scoreboard players operation #pos2zt worldtool = #pos1zt worldtool
 
-execute if predicate worldtool:shape_tool/settings/orientation/up run function worldtool:process_start/shapes/get_corners/up
-execute if predicate worldtool:shape_tool/settings/orientation/down run function worldtool:process_start/shapes/get_corners/down
-execute if predicate worldtool:shape_tool/settings/orientation/north run function worldtool:process_start/shapes/get_corners/north
-execute if predicate worldtool:shape_tool/settings/orientation/south run function worldtool:process_start/shapes/get_corners/south
-execute if predicate worldtool:shape_tool/settings/orientation/west run function worldtool:process_start/shapes/get_corners/west
-execute if predicate worldtool:shape_tool/settings/orientation/east run function worldtool:process_start/shapes/get_corners/east
+execute if data storage worldtool:storage Temp{ProcessOrientation:"up"} run function worldtool:process_start/shapes/get_corners/up
+execute if data storage worldtool:storage Temp{ProcessOrientation:"down"} run function worldtool:process_start/shapes/get_corners/down
+execute if data storage worldtool:storage Temp{ProcessOrientation:"north"} run function worldtool:process_start/shapes/get_corners/north
+execute if data storage worldtool:storage Temp{ProcessOrientation:"south"} run function worldtool:process_start/shapes/get_corners/south
+execute if data storage worldtool:storage Temp{ProcessOrientation:"west"} run function worldtool:process_start/shapes/get_corners/west
+execute if data storage worldtool:storage Temp{ProcessOrientation:"east"} run function worldtool:process_start/shapes/get_corners/east
 
 data modify storage worldtool:storage Processes[0].AffectedArea.From set value [0d,0d,0d]
 execute store result storage worldtool:storage Processes[0].AffectedArea.From[0] double 1 run scoreboard players get #pos1xt worldtool

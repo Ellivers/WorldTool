@@ -6,8 +6,9 @@ scoreboard players set #success worldtool 1
 data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.cone\\"","storage":"worldtool:storage"}',ID:"worldtool:cone",Tags:[]}
 data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:cone"}].Value
 
-execute unless entity @s[predicate=!worldtool:shape_tool/settings/orientation/up,predicate=!worldtool:shape_tool/settings/orientation/down] run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cone.vertical"
-execute if entity @s[predicate=!worldtool:shape_tool/settings/orientation/up,predicate=!worldtool:shape_tool/settings/orientation/down] run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cone.horizontal"
+execute unless data storage worldtool:storage Temp{ProcessOrientation:"up"} unless data storage worldtool:storage Temp{ProcessOrientation:"down"} run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cone.horizontal"
+data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[0]
+execute unless data storage worldtool:storage Temp.Process{Tags:["wt.process.cone.horizontal"]} run data modify storage worldtool:storage Processes[0].Tags prepend value "wt.process.cone.vertical"
 
 function worldtool:process_start/shapes/setup_process/set_process_values
 

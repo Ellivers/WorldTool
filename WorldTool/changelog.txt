@@ -1,6 +1,8 @@
-- Added a 2D filling shape to the Shape Tool
+- Added a fill bucket shape to the Shape Tool
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
+- Changed the UI for selecting an orientation with the Shape Tool
+- Added an auto orientation mode for the Shape Tool
 - General Tool particles now have an option to be shown at all times
 - All buttons that cause an operation to start are now marked as such
 - You can now switch the block-relative placement for the General Tool and Shape Generation Tool
@@ -10,6 +12,7 @@
 - The log can now be filtered to only show certain types of messages
 - The log now logs processes that have started
 - Increased the default amount of max backups per player to 8
+- The Shape Tool menu no longer opens when using the tool in Continuous mode
 
 Plugin & technical changes:
 - Removed the particles/on hook

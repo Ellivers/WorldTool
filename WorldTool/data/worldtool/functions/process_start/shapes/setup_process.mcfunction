@@ -1,6 +1,12 @@
 # Called by worldtool:process_start/shapes/load
 # Sets up the shape processes
 
+execute if data storage worldtool:storage Temp.InitialOrientation run data modify storage worldtool:storage Temp.ProcessOrientation set from storage worldtool:storage Temp.InitialOrientation
+execute unless data storage worldtool:storage Temp.InitialOrientation if entity @s[predicate=!worldtool:shape_tool/settings/accepted_orientation/none,predicate=worldtool:shape_tool/settings/orientation/auto] run data modify storage worldtool:storage Temp.ProcessOrientation set from entity @s SelectedItem.tag.WorldTool.ShapeTool.Temp.Orientation
+execute unless data storage worldtool:storage Temp.InitialOrientation if entity @s[predicate=!worldtool:shape_tool/settings/accepted_orientation/none,predicate=!worldtool:shape_tool/settings/orientation/auto] run data modify storage worldtool:storage Temp.ProcessOrientation set from entity @s SelectedItem.tag.WorldTool.ShapeSettings.Orientation
+
+data remove storage worldtool:storage Temp.InitialOrientation
+
 scoreboard players set #success worldtool 0
 
 execute if predicate worldtool:shape_tool/shapes/cylinder run function worldtool:process_start/shapes/setup_process/cylinder
