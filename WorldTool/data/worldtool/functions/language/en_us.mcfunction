@@ -120,7 +120,7 @@ data modify storage worldtool:storage Translation."label.process.brush.greenery"
 data modify storage worldtool:storage Translation."label.process.shape.cylinder" set value "Generate Cylinder: "
 data modify storage worldtool:storage Translation."label.process.shape.sphere" set value "Generate Sphere: "
 data modify storage worldtool:storage Translation."label.process.shape.cone" set value "Generate Cone: "
-data modify storage worldtool:storage Translation."label.process.shape.2d_fill" set value "2D Fill: "
+data modify storage worldtool:storage Translation."label.process.shape.2d_fill" set value "Fill Bucket: "
 
 # Info
 data modify storage worldtool:storage Translation."info.language_selected" set value "The language English (US) has been selected. You may need to re-give yourself the WorldTool tool items in order to update their translations."
@@ -848,6 +848,8 @@ data modify storage worldtool:storage Translation."label.shapes.length.descripti
 data modify storage worldtool:storage Translation."label.shapes.orientation.name" set value "Orientation: "
 data modify storage worldtool:storage Translation."label.shapes.orientation.spacer" set value "               "
 data modify storage worldtool:storage Translation."label.shapes.orientation.description" set value "The way the shape is facing"
+data modify storage worldtool:storage Translation."label.shapes.axis.name" set value "Axis: "
+data modify storage worldtool:storage Translation."label.shapes.axis.description" set value "The way the shape is facing"
 data modify storage worldtool:storage Translation."button.shapes.select_orientation.description" set value "Select this orientation"
 data modify storage worldtool:storage Translation."label.shapes.degrees.name" set value "Degrees: "
 data modify storage worldtool:storage Translation."label.shapes.degrees.description" set value "How many degrees of a circle the shape is drawn. 360 degrees is a full circle."

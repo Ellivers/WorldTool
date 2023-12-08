@@ -63,5 +63,6 @@ execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cylinde
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cone.vertical"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cone_vertical
 execute if data storage worldtool:storage Temp.Process{Tags:["wt.process.cone.horizontal"]} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/cone_horizontal
 execute if data storage worldtool:storage Temp.Process{ID:"worldtool:sphere"} as 35c1ab68-9d4c-11eb-a8b3-0242ac130003 run function worldtool:process_start/shapes/init/sphere
+execute if data storage worldtool:storage Temp.Process{ID:"worldtool:2d_fill"} run function worldtool:process_start/shapes/init/2d_fill
 
 function #worldtool:hooks/process_start/variables

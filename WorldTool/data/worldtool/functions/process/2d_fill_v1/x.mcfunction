@@ -2,4 +2,4 @@ execute unless entity @s[tag=!wt.process.2d_fill.axis.y,tag=!wt.process.2d_fill.
 execute if entity @s[tag=wt.process.2d_fill.axis.x] run scoreboard players add #processPosZ worldtool 1
 
 tp ^1 ^ ^
-execute positioned ^ ^ ^ run function worldtool:process/2d_fill/main
+execute positioned ^1 ^ ^ run function worldtool:process/2d_fill/main
