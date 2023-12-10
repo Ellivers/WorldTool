@@ -3,7 +3,7 @@
 
 scoreboard players set #success worldtool 1
 
-data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.2d_fill\\"","storage":"worldtool:storage"}',ID:"worldtool:2d_fill",Tags:["wt.process.2d_fill","wt.process.2d_fill.with_block","wt.no_message"]}
+data modify storage worldtool:storage Processes prepend value {DisplayName:'{"nbt":"Translation.\\"process.shape.2d_fill\\"","storage":"worldtool:storage"}',ID:"worldtool:2d_fill",Tags:["wt.process.2d_fill","wt.process.2d_fill.with_block","wt.no_message"],Vars:{LatestPositions:[]}}
 #data modify storage worldtool:storage Processes[0].BlocksPerTick set from storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:2d_fill"}].Value
 data modify storage worldtool:storage Processes[0].BlocksPerTick set value 2
 
