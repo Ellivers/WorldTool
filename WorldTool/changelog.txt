@@ -1,4 +1,3 @@
-- Added a fill bucket shape to the Shape Tool
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
 - Changed the UI for selecting an orientation with the Shape Tool
