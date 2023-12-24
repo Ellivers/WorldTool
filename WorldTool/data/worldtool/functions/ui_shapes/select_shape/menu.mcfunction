@@ -21,8 +21,8 @@ execute if predicate worldtool:shape_tool/shapes/sphere run tellraw @s {"nbt":"T
 execute unless predicate worldtool:shape_tool/shapes/sphere run tellraw @s {"nbt":"Translation.\"button.shape.sphere.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.sphere.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/select_shape/sphere"}}
 
 # 2D Fill
-execute if predicate worldtool:shape_tool/shapes/2d_fill run tellraw @s {"nbt":"Translation.\"button.shape.2d_fill.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.already_selected.description\"","storage": "worldtool:storage"}}}
-execute unless predicate worldtool:shape_tool/shapes/2d_fill run tellraw @s {"nbt":"Translation.\"button.shape.2d_fill.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.2d_fill.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/select_shape/2d_fill"}}
+#execute if predicate worldtool:shape_tool/shapes/2d_fill run tellraw @s {"nbt":"Translation.\"button.shape.2d_fill.name\"","storage": "worldtool:storage","color": "gray","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.already_selected.description\"","storage": "worldtool:storage"}}}
+#execute unless predicate worldtool:shape_tool/shapes/2d_fill run tellraw @s {"nbt":"Translation.\"button.shape.2d_fill.name\"","storage": "worldtool:storage","color": "green","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.shape.2d_fill.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/select_shape/2d_fill"}}
 
 function #worldtool:hooks/ui_shapes/shape_list
 
