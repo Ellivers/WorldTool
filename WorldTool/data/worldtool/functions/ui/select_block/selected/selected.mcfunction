@@ -1,10 +1,7 @@
 # Called by worldtool:input_check/player and worldtool:ui/select_block/selected/air
 # Sets the block to what you selected
 
-execute if entity @s[tag=wt.replace.normal,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/replace/normal
-execute if entity @s[tag=wt.replace.exclude,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/replace/exclude
-execute if entity @s[tag=wt.replace.normal,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/settings/replace/normal
-execute if entity @s[tag=wt.replace.exclude,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/settings/replace/exclude
+execute if entity @s[tag=wt.replace.first_time] run function worldtool:ui/select_block/replace/apply_mode
 
 execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/set_primary_block
 execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
@@ -21,8 +18,7 @@ tag @s remove wt.allow_input
 tag @s remove wt.select_block.other
 tag @s remove wt.select_block.other.replace
 
-tag @s remove wt.replace.normal
-tag @s remove wt.replace.exclude
+function worldtool:ui/remove_return_tags
 
 function worldtool:ui/return
 

@@ -25,7 +25,6 @@ tag @s remove wt.menu.randomize.replace
 tag @s remove wt.two_block_query.text.randomize_exclude
 tag @s remove wt.menu.two_block_query.1
 tag @s remove wt.menu.two_block_query.2
-tag @s remove wt.menu.two_block_query.3
 tag @s remove wt.two_block_query.secondary
 tag @s remove wt.two_block_query.primary
 tag @s remove wt.two_block_query.locked_rule
@@ -74,6 +73,9 @@ tag @s remove wt.menu.shapes.selection
 tag @s remove wt.menu.brush.plugin_brushes
 tag @s remove wt.menu.brush.selection
 tag @s remove wt.menu.brush.options
+
+function worldtool:ui_brush/remove_tags
+function worldtool:ui_shapes/remove_tags
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace

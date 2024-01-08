@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"general\",Droppable:1b,Controls:\"worldtool:normal\",Highlight:1b,BeforeBlock:0b,ToolState:\"pos1\"}}"
+                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"general\",Droppable:1b,Controls:\"worldtool:normal\",Highlight:1b,BeforeBlock:0b,StopAtBlock:1b,ToolState:\"pos1\"}}"
                         },
                         {
                             "function": "minecraft:set_name",

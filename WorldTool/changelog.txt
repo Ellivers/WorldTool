@@ -8,6 +8,8 @@
 - Axis auto detection is now more accurate
 - Added an options menu to the Brush Tool
 - Particles are now displayed when a position is set with the General Tool
+- You can now change the Brush Tool replace mode without choosing a new block
+- Made replace/filter menus quicker to navigate
 - The log can now be filtered to only show certain types of messages
 - The log now logs processes that have started
 - Increased the default amount of max backups per player to 8
@@ -30,4 +32,6 @@ Plugin & technical changes:
 - Added a ui_shapes/before_block_option hook
 - Added a ui_shapes/direction_format/get hook
 - Added a ui_shapes/direction_format/remove_tags hook
-- Increased maximum backup slots to 1500
+- Added a ui/replace/get_mode hook
+- Added a ui/replace/set_mode hook
+- Increased maximum backup slots from 1000 to 1500

@@ -9,4 +9,4 @@ tag @s add wt.two_block_query.text.secondary.standard
 tag @s add wt.dont_start_input
 tag @s add wt.two_block_query.locked_rule
 tag @s add wt.two_block_query.secondary
-function worldtool:ui_general/two_block_query/display/2
+function worldtool:ui_general/two_block_query/load/secondary
