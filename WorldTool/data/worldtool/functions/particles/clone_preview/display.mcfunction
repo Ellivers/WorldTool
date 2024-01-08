@@ -1,6 +1,8 @@
 # Called by worldtool:particles/clone_preview/load and worldtool:particles/clone_preview/raycast
 # Displays clone preview particles
 
+tag @s remove wt.raycast.clone_preview
+
 function worldtool:ui_general/clone/get_rotation_offset/load
 
 function worldtool:technical/common/temp_entity
