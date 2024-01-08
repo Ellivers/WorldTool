@@ -1,7 +1,7 @@
 # Called by worldtool:input_check/player and worldtool:ui/select_block/selected/air
 # Sets the block to what you selected
 
-execute if entity @s[tag=wt.replace.first_time] run function worldtool:ui/select_block/replace/apply_mode
+execute if entity @s[tag=!wt.replace.editable] run function worldtool:ui/select_block/replace/apply_mode
 
 execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/set_primary_block
 execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:set_secondary_block

@@ -11,6 +11,6 @@ tag @s[tag=!wt.temp] add wt.replace.normal
 
 tag @s remove wt.temp
 
-execute if entity @s[tag=!wt.replace.first_time] run function worldtool:ui/select_block/replace/apply_mode
+execute if entity @s[tag=wt.replace.editable] run function worldtool:ui/select_block/replace/apply_mode
 
 function worldtool:ui/select_block/replace/display

@@ -10,18 +10,17 @@ tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat
 function worldtool:ui/return.back_button
 
-tag @s[tag=!wt.replace.first_time] remove wt.replace.normal
-tag @s[tag=!wt.replace.first_time] remove wt.replace.exclude
+tag @s[tag=wt.replace.editable] remove wt.replace.normal
+tag @s[tag=wt.replace.editable] remove wt.replace.exclude
 
-execute unless entity @s[predicate=!worldtool:brush_tool/settings/replace/normal,predicate=!worldtool:shape_tool/settings/replace/normal] run tag @s add wt.replace.normal
-execute unless entity @s[predicate=!worldtool:brush_tool/settings/replace/exclude,predicate=!worldtool:shape_tool/settings/replace/exclude] run tag @s add wt.replace.exclude
+tag @s[predicate=worldtool:brush_tool/settings/replace/normal] add wt.replace.normal
+tag @s[predicate=worldtool:brush_tool/settings/replace/exclude] add wt.replace.exclude
 function #worldtool:hooks/ui/replace/get_mode
 
-tellraw @s[tag=wt.replace.normal,tag=!wt.replace.first_time] [{"nbt":"Translation.\"info.selected_replace_block.normal\"","color": "gray","storage": "worldtool:storage"},{"nbt":"SelectedItem.tag.WorldTool.SecondaryBlock.State.Name","entity": "@s","color": "green"},"\n"]
-tellraw @s[tag=wt.replace.exclude,tag=!wt.replace.first_time] [{"nbt":"Translation.\"info.selected_replace_block.exclude\"","color": "gray","storage": "worldtool:storage"},{"nbt":"SelectedItem.tag.WorldTool.SecondaryBlock.State.Name","entity": "@s","color": "green"},"\n"]
-
-tag @s[tag=!wt.replace.normal,tag=!wt.replace.exclude] add wt.replace.first_time
 tag @s[tag=!wt.replace.normal,tag=!wt.replace.exclude] add wt.replace.normal
+
+tellraw @s[tag=wt.replace.normal,tag=wt.replace.editable] [{"nbt":"Translation.\"info.selected_replace_block.normal\"","color": "gray","storage": "worldtool:storage"},{"nbt":"SelectedItem.tag.WorldTool.SecondaryBlock.State.Name","entity": "@s","color": "green"},"\n"]
+tellraw @s[tag=wt.replace.exclude,tag=wt.replace.editable] [{"nbt":"Translation.\"info.selected_replace_block.exclude\"","color": "gray","storage": "worldtool:storage"},{"nbt":"SelectedItem.tag.WorldTool.SecondaryBlock.State.Name","entity": "@s","color": "green"},"\n"]
 
 tellraw @s[tag=wt.replace.normal] [{"nbt":"Translation.\"label.replace_mode\"","storage": "worldtool:storage","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"label.replace_mode.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/select_block/replace/toggle_mode"}},{"nbt":"Translation.\"replace_mode.normal\"","storage": "worldtool:storage","color": "green"},"\n"]
 tellraw @s[tag=wt.replace.exclude] [{"nbt":"Translation.\"label.replace_mode\"","storage": "worldtool:storage","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"label.replace_mode.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui/select_block/replace/toggle_mode"}},{"nbt":"Translation.\"replace_mode.exclude\"","storage": "worldtool:storage","color": "gold"},"\n"]

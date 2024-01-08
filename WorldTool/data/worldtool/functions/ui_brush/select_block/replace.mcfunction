@@ -3,5 +3,6 @@
 
 function worldtool:ui_brush/check_tool
 
+tag @s add wt.replace.editable
 tag @s add wt.brush.select_block
 function worldtool:ui/select_block/replace/display

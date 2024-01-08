@@ -7,6 +7,6 @@ tag @s remove wt.two_block_query.exclude
 
 tag @s remove wt.replace.normal
 tag @s remove wt.replace.exclude
-tag @s remove wt.replace.first_time
+tag @s remove wt.replace.editable
 
 function #worldtool:hooks/ui/remove_return_tags
