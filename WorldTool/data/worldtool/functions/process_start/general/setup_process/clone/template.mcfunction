@@ -8,6 +8,7 @@ tag @s add wt.save_area.clone
 function worldtool:technical/save_load/setup_save_process/setup
 
 execute if entity @s[tag=wt.clone.move] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.move"
+execute if entity @s[tag=wt.clone.include_entities] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.save_area.include_entities"
 execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.mirror.x"
 execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Processes[0].Tags append value "wt.clone.mirror.z"
 execute store result storage worldtool:storage Processes[0].Input.Rotation.Y int 1 run scoreboard players get @s wt.rotY
@@ -138,6 +139,8 @@ execute if score @s wt.rotY matches 270 run data modify storage worldtool:storag
 
 execute if entity @s[tag=wt.clone.mirror.x] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "FRONT_BACK"
 execute if entity @s[tag=wt.clone.mirror.z] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.mirror set value "LEFT_RIGHT"
+
+execute if entity @s[tag=wt.clone.include_entities] run data modify storage worldtool:storage Temp.AdditionalData.Input.AdditionalData.ignoreEntities set value 0b
 
 function worldtool:technical/save_load/setup_load_process
 

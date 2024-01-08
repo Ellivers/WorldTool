@@ -34,6 +34,7 @@ scoreboard players operation #sizeZ worldtool < $templateSizeLimit worldtool
 
 setblock ~-1 ~-1 ~-1 minecraft:structure_block{mode:"SAVE",ignoreEntities:1b,author:"worldtool:save_area"}
 data modify block ~-1 ~-1 ~-1 name set from storage worldtool:storage Processes[-1].Input.BackupSlots[0]
+execute if entity @s[tag=wt.process.save_area.include_entities] run data modify block ~-1 ~-1 ~-1 ignoreEntities set value 0b
 data modify block ~-1 ~-1 ~-1 posX set value 1
 data modify block ~-1 ~-1 ~-1 posY set value 1
 data modify block ~-1 ~-1 ~-1 posZ set value 1

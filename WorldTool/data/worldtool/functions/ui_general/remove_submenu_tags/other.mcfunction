@@ -6,6 +6,7 @@ function worldtool:ui_general/remove_submenu_tags/visited
 tag @s remove wt.clone.mode.standard
 tag @s remove wt.clone.mode.template
 tag @s remove wt.clone.at_player
+tag @s remove wt.clone.include_entities
 
 tag @s remove wt.checkered.alternate.x
 tag @s remove wt.checkered.alternate.y
