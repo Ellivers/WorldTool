@@ -1,5 +1,6 @@
 - Added an option to highlight targetted blocks
 - Added an option for a limited range control scheme
+- Added an option to include entities for Clone in Template mode
 - Changed the UI for selecting an orientation with the Shape Tool
 - Added an auto orientation mode for the Shape Tool
 - General Tool particles now have an option to be shown at all times
