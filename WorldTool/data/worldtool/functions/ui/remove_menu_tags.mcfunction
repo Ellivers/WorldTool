@@ -75,7 +75,7 @@ tag @s remove wt.menu.brush.selection
 tag @s remove wt.menu.brush.options
 
 function worldtool:ui_brush/remove_tags
-function worldtool:ui_shapes/remove_tags
+tag @s remove wt.shapes.select_block
 
 tag @s remove wt.setup.fill
 tag @s remove wt.setup.replace
