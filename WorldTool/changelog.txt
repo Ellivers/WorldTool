@@ -36,3 +36,4 @@ Plugin & technical changes:
 - Added a ui/replace/get_mode hook
 - Added a ui/replace/set_mode hook
 - Increased maximum backup slots from 1000 to 1500
+- Added a wt.process.save_area.include_entities tag to the save_area process
