@@ -35,5 +35,6 @@ Plugin & technical changes:
 - Added a ui_shapes/direction_format/remove_tags hook
 - Added a ui/replace/get_mode hook
 - Added a ui/replace/set_mode hook
+- Added a ui_brush/no_brush_message hook
 - Increased maximum backup slots from 1000 to 1500
 - Added a wt.process.save_area.include_entities tag to the save_area process

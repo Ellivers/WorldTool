@@ -161,7 +161,8 @@ data modify storage worldtool:storage Translation."error.pos1_missing" set value
 data modify storage worldtool:storage Translation."error.pos2_duplicates" set value "Error: You appear to have a duplicated position 2. Try setting position 2 again."
 data modify storage worldtool:storage Translation."error.pos2_missing" set value "Error: You appear to not have a position 2. Positions 1 and 2 are needed to access this function."
 data modify storage worldtool:storage Translation."error.process_running" set value "Error: Another process is currently running"
-data modify storage worldtool:storage Translation."error.no_brush" set value "Please select a brush (drop item)"
+data modify storage worldtool:storage Translation."error.no_brush.normal" set value '["Please select a brush (press ",{"keybind":"key.drop","color":"red"},")"]'
+data modify storage worldtool:storage Translation."error.no_brush.limited" set value '["Please select a brush (press ",{"keybind":"key.swapOffhand","color":"red"},")"]'
 data modify storage worldtool:storage Translation."error.outside_world" set value "Error: At some point, the position ended up outside the world."
 data modify storage worldtool:storage Translation."error.block_not_picked" set value "Error: The selected block could not be picked. Try using <Select a Block> instead."
 data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected"
