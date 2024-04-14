@@ -1,4 +1,4 @@
-# Called by worldtool:process/load_area/main
+# Called by worldtool:process/load_area/place
 # Error that occurs when the process attempts to load a non-existent template
 
 clone 27451 1 19 27451 1 19 ~ ~ ~

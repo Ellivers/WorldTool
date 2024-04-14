@@ -168,6 +168,7 @@ data modify storage worldtool:storage Translation."error.block_not_picked" set v
 data modify storage worldtool:storage Translation."error.no_process_selected" set value "Error: No process is currently selected"
 data modify storage worldtool:storage Translation."error.process_entity_not_found" set value "Error: The process entity could not be found. It may have been killed or been unloaded. The process will resume when the entity is found again."
 data modify storage worldtool:storage Translation."error.template_not_found" set value "Error: The area could not be loaded due to a missing template (structure)"
+data modify storage worldtool:storage Translation."error.out_of_bounds_place" set value "Error: The area could not be loaded due to being too close to outside the world."
 data modify storage worldtool:storage Translation."error.not_holding_general_tool" set value "Error: Please hold the General Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.not_holding_shape_tool" set value "Error: Please hold a Shape Generation Tool in your main hand before doing this"
 data modify storage worldtool:storage Translation."error.not_holding_brush_tool" set value "Error: Please hold a Brush Tool in your main hand before doing this"

@@ -14,7 +14,7 @@
 - The log can now be filtered to only show certain types of messages
 - The log now logs processes that have started
 - Increased the default amount of max backups per player to 8
-- The Shape Tool menu no longer opens when using the tool in Continuous mode
+- Fixed the Shape Tool menu opening when using the tool in Continuous mode
 
 Plugin & technical changes:
 - Removed the particles/on hook

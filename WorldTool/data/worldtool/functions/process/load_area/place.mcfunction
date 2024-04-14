@@ -12,4 +12,8 @@ execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} r
 
 clone 27449 1 19 27449 1 19 ~ ~-1 ~
 
-execute if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} run function worldtool:process/load_area/error
+execute positioned ~ ~-1 ~ run function worldtool:technical/common/is_inside_world
+scoreboard players operation #temp worldtool = #success worldtool
+
+execute if score #temp worldtool matches 0 run function worldtool:process/load_area/error/out_of_bounds
+execute if score #temp worldtool matches 1 if block ~ ~ ~ minecraft:structure_block{author:"worldtool:load_area"} run function worldtool:process/load_area/error/template_not_found
