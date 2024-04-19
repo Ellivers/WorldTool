@@ -2,7 +2,7 @@
 
 function #worldtool:hooks/process_start/common/continue2
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 data modify storage worldtool:storage Processes prepend from storage rx.playerdb:io player.data.WorldTool.SavedProcesses[]
 

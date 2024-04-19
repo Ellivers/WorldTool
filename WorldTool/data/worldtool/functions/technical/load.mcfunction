@@ -14,6 +14,10 @@
 #define entity fe66c968-8ef7-4f14-b6e2-44faa2083170 World Top or Bottom
 #define entity d43b8e30-51cc-4da0-918a-60a557ae676f Temporary Entity
 
+# Current version: 0.6.3, AKA 6
+# Don't forget to update pack.mcmeta and debug message!
+scoreboard players set $latestVersion worldtool 6
+execute unless score $version worldtool matches -2147483648..2147483647 run scoreboard players operation $version worldtool = $latestVersion worldtool
 
 # Detect an older version
 execute if score $version worldtool < $latestVersion worldtool run function worldtool:technical/upgrade_version
@@ -49,8 +53,6 @@ execute if score $reloadLanguage worldtool matches 0 if score $version worldtool
 execute unless data storage worldtool:storage Language run function worldtool:language/en_us
 
 # Set the current version
-# Current version: 0.6.1 (0.6.2), AKA 5
-scoreboard players set $latestVersion worldtool 5
 scoreboard players operation $version worldtool = $latestVersion worldtool
 
 ## Default blocks per tick ##
@@ -110,6 +112,7 @@ execute store result score #temp worldtool if data storage rx.playerdb:main play
 execute if score #temp worldtool matches 1.. store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
 execute if score #temp worldtool matches 1.. run scoreboard players set #temp2 worldtool 0
 execute if score #temp worldtool matches 1.. run function worldtool:technical/load/remove_player_data
+data remove storage worldtool:storage Database
 
 execute as @a[tag=wt.reopen_after_reload] run function worldtool:ui/reopen_menu/after_reload
 

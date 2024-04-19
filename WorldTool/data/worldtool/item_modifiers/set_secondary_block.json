@@ -1,4 +1,4 @@
-{
+[{
     "function": "copy_nbt",
     "source": {
         "type": "minecraft:storage",
@@ -11,4 +11,4 @@
             "target": "WorldTool.SecondaryBlock"
         }
     ]
-}
+}]

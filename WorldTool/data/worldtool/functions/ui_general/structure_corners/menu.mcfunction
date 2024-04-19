@@ -7,7 +7,7 @@ tag @s add wt.allow_input
 
 function worldtool:ui_general/back_button
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 execute if score $playerdbAvailable worldtool matches 1 run tellraw @s ["",{"nbt":"Translation.\"label.structure_corners.structure_name\"","storage": "worldtool:storage"},{"nbt":"player.data.WorldTool.StructureCornerName","storage": "rx.playerdb:io","color": "green"}," ",{"nbt":"Translation.\"button.structure_corners.change.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.structure_corners.change.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "suggest_command","value": "/summon item ~ ~ ~ {Tags:[worldtool,wt.selected_data],PickupDelay:32767s,Item:{id:\"minecraft:stick\",Count:1b,tag:{WorldTool:{ StructureName:\"worldtool:example\" }}}}"}},"\n"]
 

@@ -1,0 +1,2 @@
+data modify storage worldtool:storage Temp.Macro.CustomData.ShapeSettings.Degrees set from storage worldtool:storage Temp.Degrees
+function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

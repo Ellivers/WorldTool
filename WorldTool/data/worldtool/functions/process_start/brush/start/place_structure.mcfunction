@@ -6,11 +6,12 @@ clone ~ ~1 ~ ~ ~1 ~ 27449 1 19
 
 setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",metadata:"worldtool:structure_brush"}
 
-data modify block ~ ~ ~ name set from entity @s SelectedItem.tag.WorldTool.BrushSettings.Structure
+function worldtool:technical/common/get_item_data
+data modify block ~ ~ ~ name set from storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.Structure
 
-data modify block ~ ~ ~ {} merge from entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureOffset
-data modify block ~ ~ ~ rotation set from entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureRotation
-data modify block ~ ~ ~ mirror set from entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureMirror
+data modify block ~ ~ ~ {} merge from storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureOffset
+data modify block ~ ~ ~ rotation set from storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureRotation
+data modify block ~ ~ ~ mirror set from storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureMirror
 
 scoreboard players set #temp worldtool 0
 execute store result score #offsetX worldtool run data get block ~ ~ ~ posX

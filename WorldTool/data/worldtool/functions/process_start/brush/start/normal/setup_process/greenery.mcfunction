@@ -8,7 +8,8 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 function worldtool:process_start/brush/start/normal/setup_process/set_process_values
 
-data modify storage worldtool:storage Processes[0].Input.Rate set from entity @s SelectedItem.tag.WorldTool.BrushSettings.GreeneryRate
+function worldtool:technical/common/get_item_data
+data modify storage worldtool:storage Processes[0].Input.Rate set from storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.GreeneryRate
 
 execute if predicate worldtool:brush_tool/settings/remove_current_greenery run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.greenery.remove_current"
 

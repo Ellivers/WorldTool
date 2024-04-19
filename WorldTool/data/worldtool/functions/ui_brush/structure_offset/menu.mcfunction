@@ -9,9 +9,10 @@ function worldtool:ui_brush/back_button
 tag @s add wt.allow_input
 tag @s add wt.brush.select_structure_offset
 
-execute store result score #offsetX worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureOffset.posX
-execute store result score #offsetY worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureOffset.posY
-execute store result score #offsetZ worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.StructureOffset.posZ
+function worldtool:technical/common/get_item_data
+execute store result score #offsetX worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureOffset.posX
+execute store result score #offsetY worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureOffset.posY
+execute store result score #offsetZ worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.StructureOffset.posZ
 
 tellraw @s [{"nbt":"Translation.\"info.brush.structure_offset\"","storage": "worldtool:storage","interpret": true},"\n"]
 

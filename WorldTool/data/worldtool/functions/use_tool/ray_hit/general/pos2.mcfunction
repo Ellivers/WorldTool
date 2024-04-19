@@ -11,6 +11,8 @@ execute if score $forceLoadPositions worldtool matches 1.. as @e[type=minecraft:
 summon minecraft:marker ~ ~ ~ {Tags: ["worldtool", "wt.can_forceload", "wt.pos2", "wt.position"]}
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.pos2,sort=nearest,limit=1] at @s run function worldtool:use_tool/ray_hit/general/common
 
+function worldtool:use_tool/ray_hit/general/particles/pos2
+
 tellraw @s ["\n",{"nbt":"Translation.\"info.set_pos2\"","storage": "worldtool:storage","interpret": true}]
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load

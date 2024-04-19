@@ -3,7 +3,7 @@
 
 data modify storage worldtool:storage Temp.ShapeSettings set from entity @s data.WorldTool.ShapeSettings
 
-particle minecraft:dust 0.671 0.161 0.875 1.5 ~ ~ ~ 0 .3 0 2 3 force @a[tag=wt.shape_preview_temp]
+function worldtool:particles/colors/shape
 
 scoreboard players set #degrees_temp worldtool 360
 #execute store result score #degrees_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Degrees

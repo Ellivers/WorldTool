@@ -1,0 +1,1 @@
+function #rx.playerdb:api/v2/get/self

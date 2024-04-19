@@ -3,11 +3,13 @@
 
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
+function worldtool:technical/common/get_item_data
+
 execute store result storage worldtool:storage Processes[0].Owner int 1 run scoreboard players get #ID_temp worldtool
 data modify storage worldtool:storage Processes[0].StartType set value "worldtool:shape"
-data modify storage worldtool:storage Processes[0].Input.ShapeSettings set from entity @s SelectedItem.tag.WorldTool.ShapeSettings
-data modify storage worldtool:storage Processes[0].Blocks.Primary set from entity @s SelectedItem.tag.WorldTool.PrimaryBlock
-data modify storage worldtool:storage Processes[0].Blocks.Secondary set from entity @s SelectedItem.tag.WorldTool.SecondaryBlock
+data modify storage worldtool:storage Processes[0].Input.ShapeSettings set from storage worldtool:storage Temp.ItemData.WorldTool.ShapeSettings
+data modify storage worldtool:storage Processes[0].Blocks.Primary set from storage worldtool:storage Temp.ItemData.WorldTool.PrimaryBlock
+data modify storage worldtool:storage Processes[0].Blocks.Secondary set from storage worldtool:storage Temp.ItemData.WorldTool.SecondaryBlock
 execute if predicate worldtool:shape_tool/settings/replace/normal run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shapes.replace.normal"
 execute if predicate worldtool:shape_tool/settings/replace/exclude run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.shapes.replace.exclude"
 execute if predicate worldtool:shape_tool/settings/keep run data modify storage worldtool:storage Processes[0].Tags append value "wt.keep"

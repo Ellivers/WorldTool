@@ -6,9 +6,10 @@ function worldtool:ui_brush/check_tool
 item modify entity @s weapon.mainhand worldtool:brush_tool/brushes/greenery
 function worldtool:ui/sound.change_item
 
-execute unless data entity @s SelectedItem.tag.WorldTool.BrushSettings.GreeneryRate run data modify storage worldtool:storage Temp.GreeneryRate set value 50
-execute unless data entity @s SelectedItem.tag.WorldTool.BrushSettings.GreeneryRate run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/set_greenery_rate
-execute unless data entity @s SelectedItem.tag.WorldTool.BrushSettings.PlantSource run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/plant_source/plains
+function worldtool:technical/common/get_item_data
+execute unless data storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.GreeneryRate run data modify storage worldtool:storage Temp.GreeneryRate set value 50
+execute unless data storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.GreeneryRate run function worldtool:modify_item/brush_tool/settings/set_greenery_rate
+execute unless data storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.PlantSource run item modify entity @s weapon.mainhand worldtool:brush_tool/settings/plant_source/plains
 
 item modify entity @s[predicate=worldtool:brush_tool/settings/plant_source/sunflower_plains] weapon.mainhand worldtool:brush_tool/settings/plant_source/sunflower_plains
 item modify entity @s[predicate=worldtool:brush_tool/settings/plant_source/flower_forest] weapon.mainhand worldtool:brush_tool/settings/plant_source/flower_forest

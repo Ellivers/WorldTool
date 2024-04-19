@@ -1,2 +1,3 @@
-- Fixed compatibility issues Greenery in 1.20.3+
-- Fixed nudging the General Tool position not moving both positions correctly
+- Fixed compatibility issues in 1.20.5+
+- Added particles when selecting a position
+- Tweaked the color of the Paste Area outline

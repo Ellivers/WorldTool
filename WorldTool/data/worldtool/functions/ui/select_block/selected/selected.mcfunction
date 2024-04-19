@@ -6,10 +6,10 @@ execute if entity @s[tag=wt.replace.exclude,predicate=worldtool:tools/brush] run
 execute if entity @s[tag=wt.replace.normal,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/settings/replace/normal
 execute if entity @s[tag=wt.replace.exclude,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/settings/replace/exclude
 
-execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:brush_tool/set_primary_block
-execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/brush] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
-execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:shape_tool/set_primary_block
-execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/shapes] run item modify entity @s weapon.mainhand worldtool:set_secondary_block
+execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/brush] run function worldtool:modify_item/brush_tool/set_primary_block
+execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/brush] run function worldtool:modify_item/set_secondary_block
+execute if entity @s[tag=!wt.select_block.other.replace,predicate=worldtool:tools/shapes] run function worldtool:modify_item/shape_tool/set_primary_block
+execute if entity @s[tag=wt.select_block.other.replace,predicate=worldtool:tools/shapes] run function worldtool:modify_item/set_secondary_block
 
 function #worldtool:hooks/ui/block_selected
 

@@ -19,7 +19,7 @@ tag @s add wt.user
 tag @s add wt.menu.options
 tag @s add wt.reopen_after_reload
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 function worldtool:ui/undo_redo/display
 

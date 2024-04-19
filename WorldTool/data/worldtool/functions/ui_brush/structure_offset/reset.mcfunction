@@ -4,12 +4,12 @@
 function worldtool:ui_brush/check_tool
 
 data modify storage worldtool:storage Temp.Offset set value 0
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_x
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_x
 
 data modify storage worldtool:storage Temp.Offset set value 0
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_y
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_y
 
 data modify storage worldtool:storage Temp.Offset set value 0
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_z
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_z
 
 function worldtool:ui_brush/structure_offset/menu

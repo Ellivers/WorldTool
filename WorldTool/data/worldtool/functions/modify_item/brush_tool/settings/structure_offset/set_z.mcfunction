@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_z

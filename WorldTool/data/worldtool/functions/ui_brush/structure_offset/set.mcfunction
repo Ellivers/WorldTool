@@ -7,12 +7,12 @@ kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limi
 function worldtool:ui_brush/check_tool
 
 data modify storage worldtool:storage Temp.Offset set from storage worldtool:storage Temp.OffsetValues.posX
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_x
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_x
 
 data modify storage worldtool:storage Temp.Offset set from storage worldtool:storage Temp.OffsetValues.posY
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_y
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_y
 
 data modify storage worldtool:storage Temp.Offset set from storage worldtool:storage Temp.OffsetValues.posZ
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_z
+function worldtool:modify_item/brush_tool/settings/structure_offset/set_z
 
 function worldtool:ui_brush/structure_offset/menu
