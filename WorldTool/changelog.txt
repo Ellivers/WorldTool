@@ -1,3 +1,5 @@
-- Fixed compatibility issues in 1.20.5+
-- Added particles when selecting a General Tool position
+- Particles are now displayed when a position is set with the General Tool
+- Changed the message that appears when using a Brush Tool with no brush
 - Tweaked the color of the Paste Area outline
+- Fixed compatibility issues in 1.20.5+
+- Fixed the Shape Tool menu opening when using the tool in Continuous mode
