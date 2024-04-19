@@ -38,9 +38,9 @@ scoreboard objectives add wt.amountX dummy
 scoreboard objectives add wt.amountY dummy
 scoreboard objectives add wt.amountZ dummy
 
-# Current version: 0.7, AKA 6
+# Current version: 0.7, AKA 7
 # Don't forget to update pack.mcmeta and debug message!
-scoreboard players set $latestVersion worldtool 6
+scoreboard players set $latestVersion worldtool 7
 execute unless score $version worldtool matches -2147483648..2147483647 run scoreboard players operation $version worldtool = $latestVersion worldtool
 
 # Detect an older version
