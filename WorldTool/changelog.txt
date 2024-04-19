@@ -8,13 +8,11 @@
 - You can now switch the block-relative placement for the General Tool and Shape Generation Tool
 - Axis auto detection is now more accurate
 - Added an options menu to the Brush Tool
-- Particles are now displayed when a position is set with the General Tool
 - You can now change the Brush Tool replace mode without choosing a new block
 - Made replace/filter menus quicker to navigate
 - The log can now be filtered to only show certain types of messages
 - The log now logs processes that have started
 - Increased the default amount of max backups per player to 8
-- Fixed the Shape Tool menu opening when using the tool in Continuous mode
 
 Plugin & technical changes:
 - Removed the particles/on hook
