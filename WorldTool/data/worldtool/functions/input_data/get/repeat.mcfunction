@@ -1,0 +1,1 @@
+data modify storage worldtool:storage Temp.Values set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1] Item.tag.WorldTool

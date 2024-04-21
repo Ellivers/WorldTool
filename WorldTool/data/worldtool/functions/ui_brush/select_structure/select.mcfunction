@@ -14,5 +14,6 @@ tag @s add wt.brush.select_structure
 function worldtool:technical/common/get_item_data
 execute if data storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.Structure run tellraw @s [{"nbt":"Translation.\"info.selected_structure\"","storage": "worldtool:storage"},{"nbt":"Temp.ItemData.WorldTool.BrushSettings.Structure","storage": "worldtool:storage","color": "green"}]
 
-tellraw @s ["\n",{"nbt":"Translation.\"button.select_structure.name\"","storage": "worldtool:storage","color": "aqua","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.brush.select_structure.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "suggest_command","value": "/summon item ~ ~ ~ {Tags:[worldtool,wt.selected_data],PickupDelay:32767s,Item:{id:\"minecraft:stick\",Count:1b,tag:{WorldTool:{Structure:\"NAME_HERE\"}}}}"}}]
+function worldtool:input_data/message/structure_brush
+
 function worldtool:ui/anti_feedback_chat_message/load

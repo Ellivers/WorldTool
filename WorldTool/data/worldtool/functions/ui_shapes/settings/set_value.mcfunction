@@ -1,7 +1,7 @@
 # Called by worldtool:input_check/player
 # Sets a number value option to the value entered by the player
 
-data modify storage worldtool:storage Temp.ShapeSettings set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1] Item.tag.WorldTool
+function worldtool:input_data/get/shape_settings
 kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1]
 
 function worldtool:ui_shapes/check_tool

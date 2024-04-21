@@ -1,7 +1,7 @@
 # Called by worldtool:ui_brush/structure_offset/menu
 # Sets the structure offset values
 
-data modify storage worldtool:storage Temp.OffsetValues set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1] Item.tag.WorldTool
+function worldtool:input_data/get/structure_brush_offset
 kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1]
 
 function worldtool:ui_brush/check_tool
