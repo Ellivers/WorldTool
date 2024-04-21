@@ -3,4 +3,5 @@
 - Changed the message that appears when using a Brush Tool with no brush
 - Tweaked the color of the Paste Area outline
 - Fixed compatibility issues in 1.20.5+
+- Fixed General Tool positions moving incorrectly when nudged with a step size of more than 1
 - Fixed the Shape Tool menu opening when using the tool in Continuous mode
