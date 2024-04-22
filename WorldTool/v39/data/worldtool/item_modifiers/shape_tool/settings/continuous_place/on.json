@@ -1,0 +1,17 @@
+[
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{WorldTool:{ShapeSettings:{Continuous:1b}}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"lore.shape_tool.continuous.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
+            {"nbt":"Translation.\"lore.shape_tool.continuous.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
+        ],
+        "entity": "this",
+        "mode": "replace_section",
+        "offset": 4,
+        "size": 3
+    }
+]

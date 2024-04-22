@@ -3,7 +3,7 @@
 
 data modify storage worldtool:storage Temp.ShapeSettings set from entity @s data.WorldTool.ShapeSettings
 
-particle minecraft:dust 0.671 0.161 0.875 1.5 ~ ~ ~ 0 .3 0 2 3 force @a[tag=wt.shape_preview_temp]
+function worldtool:particles/colors/shape
 
 execute store result score #degrees_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Degrees
 execute store result score #length_temp worldtool run data get storage worldtool:storage Temp.ShapeSettings.Length
@@ -34,5 +34,5 @@ scoreboard players operation #halfStepDistance worldtool /= #5 worldtool
 execute if score #degrees_temp worldtool matches 360.. run function worldtool:particles/shape_preview/cone_vertical/full/main
 execute unless score #degrees_temp worldtool matches 360.. run function worldtool:particles/shape_preview/cone_vertical/partial/main
 
-execute at d43b8e30-51cc-4da0-918a-60a557ae676f run particle minecraft:dust 0.671 0.161 0.875 1.5 ~ ~ ~ 0 .3 0 2 3 force @a[tag=wt.shape_preview_temp]
+execute at d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:particles/colors/shape
 kill d43b8e30-51cc-4da0-918a-60a557ae676f

@@ -3,7 +3,8 @@
 
 function worldtool:process_start/brush/get_axis/load
 
-execute store result score #brushSize_temp worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.Size
+function worldtool:technical/common/get_item_data
+execute store result score #brushSize_temp worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.Size
 
 execute if score #brushSize_temp worldtool matches ..1 run clone 27451 1 19 27451 1 19 ~ ~ ~
 execute if score #brushSize_temp worldtool matches 3 unless score #temp.X worldtool matches 0 run setblock ~ ~ ~ minecraft:structure_block{mode:"LOAD",author:"worldtool:circle",name:"worldtool:circles/3_side",posX:0,posY:-1,posZ:-1}

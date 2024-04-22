@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand worldtool:set_secondary_block

@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_length

@@ -1,7 +1,7 @@
 # Called by worldtool:ui_general/options/menu
 # Starts the redo process
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 scoreboard players set #temp worldtool -1
 scoreboard players set #temp2 worldtool -1
@@ -29,7 +29,7 @@ execute if score #temp5 worldtool matches 1.. run scoreboard players set #temp6 
 
 execute if score #temp6 worldtool matches 1 run function worldtool:technical/save_load/redo/move_history
 
-function #rx.playerdb:api/v2/save/self
+function worldtool:database/save
 
 function worldtool:technical/save_load/remove_load_tags
 

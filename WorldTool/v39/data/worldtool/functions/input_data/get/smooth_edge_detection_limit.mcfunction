@@ -1,0 +1,1 @@
+execute store result score @s wt.size run data get entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1] Item.components."minecraft:custom_data".WorldTool.EdgeDetectionLimit

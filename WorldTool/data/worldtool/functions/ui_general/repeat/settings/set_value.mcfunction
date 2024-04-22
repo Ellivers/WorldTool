@@ -1,7 +1,7 @@
 # Called by worldtool:input_check/player
 # Sets an option to a manually entered value
 
-data modify storage worldtool:storage Temp.Values set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1] Item.tag.WorldTool
+function worldtool:input_data/get/repeat
 kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,distance=..1,limit=1]
 
 execute if data storage worldtool:storage Temp.Values.AmountX store result score @s wt.amountX run data get storage worldtool:storage Temp.Values.AmountX

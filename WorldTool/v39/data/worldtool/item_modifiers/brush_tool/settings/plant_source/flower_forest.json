@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{WorldTool:{BrushSettings:{PlantSource:\"flower_forest\"}}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {"nbt":"Translation.\"plant_source.flower_forest\"","color": "aqua","storage": "worldtool:storage","italic": false}
+        ],
+        "entity": "this",
+        "mode": "replace_section",
+        "offset": 2,
+        "size": 1
+    }
+]

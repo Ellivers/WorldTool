@@ -5,7 +5,7 @@ function worldtool:technical/common/temp_entity
 
 execute as d43b8e30-51cc-4da0-918a-60a557ae676f run function worldtool:technical/common/temp_pos1
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 execute store result score #pos2xt worldtool run data get storage rx.playerdb:io player.data.WorldTool.Clipboard[0].Size[0]
 scoreboard players operation #pos2xt worldtool += #pos1xt worldtool

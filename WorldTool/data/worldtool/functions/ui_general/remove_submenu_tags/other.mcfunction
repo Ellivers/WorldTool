@@ -33,9 +33,9 @@ tag @s remove wt.smooth.direction.west
 tag @s remove wt.smooth.direction.north
 tag @s remove wt.smooth.direction.south
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 data remove storage rx.playerdb:io player.data.WorldTool.StructureCornerName
 
 function #worldtool:hooks/ui_general/remove_submenu_tags.other
 
-function #rx.playerdb:api/v2/save/self
+function worldtool:database/save

@@ -22,7 +22,7 @@ execute if score #pos2xt worldtool > #pos1xt worldtool run scoreboard players ad
 execute if score #pos2yt worldtool > #pos1yt worldtool run scoreboard players add #pos2yt worldtool 1
 execute if score #pos2zt worldtool > #pos1zt worldtool run scoreboard players add #pos2zt worldtool 1
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 kill d43b8e30-51cc-4da0-918a-60a557ae676f
 function worldtool:technical/common/temp_entity

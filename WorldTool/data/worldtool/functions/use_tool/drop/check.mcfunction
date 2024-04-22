@@ -2,16 +2,16 @@
 # Different actions depending on the tool
 
 data remove storage worldtool:storage Temp
-data modify storage worldtool:storage Temp.Item set from entity @s Item
+function worldtool:use_tool/drop/get_item_data
 
 # General Tool
-execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"general"} run function worldtool:use_tool/drop/tools/general
+execute if data storage worldtool:storage Temp.ItemData.WorldTool{Tool:"general"} run function worldtool:use_tool/drop/tools/general
 
 # Brush Tool
-execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"brush"} run function worldtool:use_tool/drop/tools/brush
+execute if data storage worldtool:storage Temp.ItemData.WorldTool{Tool:"brush"} run function worldtool:use_tool/drop/tools/brush
 
 # Shape Generation Tool
-execute if data storage worldtool:storage Temp.Item.tag.WorldTool{Tool:"shapes"} run function worldtool:use_tool/drop/tools/shapes
+execute if data storage worldtool:storage Temp.ItemData.WorldTool{Tool:"shapes"} run function worldtool:use_tool/drop/tools/shapes
 
 
 function #worldtool:hooks/use_tool/dropped

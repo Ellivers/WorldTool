@@ -8,7 +8,7 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 
 function worldtool:process_start/common/set_process_values
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 # Set the area data
 execute if entity @s[tag=wt.load_area.paste] run data modify storage worldtool:storage Processes[0].Input.AreaList set from storage rx.playerdb:io player.data.WorldTool.Clipboard

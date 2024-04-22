@@ -126,6 +126,7 @@ execute store result score #temp worldtool if data storage rx.playerdb:main play
 execute if score #temp worldtool matches 1.. store result score #temp worldtool if data storage rx.playerdb:main players[{data:{WorldTool:{}}}]
 execute if score #temp worldtool matches 1.. run scoreboard players set #temp2 worldtool 0
 execute if score #temp worldtool matches 1.. run function worldtool:technical/load/remove_player_data
+data remove storage worldtool:storage Database
 
 execute as @a[tag=wt.reopen_after_reload] run function worldtool:ui/reopen_menu/after_reload
 

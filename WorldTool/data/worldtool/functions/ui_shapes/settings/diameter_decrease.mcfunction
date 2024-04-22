@@ -3,7 +3,8 @@
 
 function worldtool:ui_shapes/check_tool
 
-execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.ShapeSettings.Diameter
+function worldtool:technical/common/get_item_data
+execute store result score #temp worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.ShapeSettings.Diameter
 
 scoreboard players remove #temp worldtool 2
 
@@ -14,6 +15,6 @@ execute if score #temp2 worldtool matches 0 run scoreboard players remove #temp 
 execute if score #temp worldtool matches ..2 run scoreboard players set #temp worldtool 3
 
 execute store result storage worldtool:storage Temp.Diameter int 1 run scoreboard players get #temp worldtool
-item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_diameter
+function worldtool:modify_item/shape_tool/settings/set_diameter
 
 function worldtool:ui_shapes/menu

@@ -1,0 +1,1 @@
+particle minecraft:dust 0 0.686 0.608 1.5 ~ ~ ~ 0 -1 0 2 0 force @s

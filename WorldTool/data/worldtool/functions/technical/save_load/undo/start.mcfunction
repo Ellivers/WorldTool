@@ -4,7 +4,7 @@
 tag @s add wt.no_space
 function worldtool:ui/anti_feedback_chat_message/load
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 execute unless data storage rx.playerdb:io player.data.WorldTool.Future run data modify storage rx.playerdb:io player.data.WorldTool.Future set value []
 
@@ -41,7 +41,7 @@ execute if score #temp5 worldtool matches 1.. run scoreboard players set #temp6 
 
 execute if score #temp6 worldtool matches 1 run function worldtool:technical/save_load/undo/move_history
 
-function #rx.playerdb:api/v2/save/self
+function worldtool:database/save
 
 function worldtool:technical/save_load/remove_load_tags
 

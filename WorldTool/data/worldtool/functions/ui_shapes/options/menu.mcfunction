@@ -6,7 +6,7 @@ function worldtool:ui_shapes/back_button
 tag @s add wt.menu.shapes.options
 tag @s add wt.reopen_after_reload
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 function worldtool:ui/undo_redo/display
 
 tellraw @s ["\n",{"nbt":"Translation.\"button.selection_options.name\"","storage": "worldtool:storage","color": "light_purple","hoverEvent": {"action": "show_text","contents": {"nbt":"Translation.\"button.selection_options.description\"","storage": "worldtool:storage"}},"clickEvent": {"action": "run_command","value": "/function worldtool:ui_shapes/options/selection/menu"}},"\n"]

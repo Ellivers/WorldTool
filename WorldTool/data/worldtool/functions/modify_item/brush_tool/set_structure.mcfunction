@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand worldtool:brush_tool/set_structure

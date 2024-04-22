@@ -4,8 +4,7 @@
 scoreboard players operation #ID_temp worldtool = @s wt.ID
 
 setblock ~ ~-1 ~ minecraft:light_blue_shulker_box
-loot replace block ~ ~-1 ~ container.0 mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
-loot replace block ~ ~-1 ~ container.1 mine ~ ~ ~ minecraft:shears{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
+function worldtool:pick_block/other/loot_mine
 data remove storage worldtool:storage Temp
 data modify storage worldtool:storage Temp.Block.Data set from block ~ ~ ~
 data modify storage worldtool:storage Temp.Block.State.Name set from block ~ ~-1 ~ Items[0].id

@@ -7,8 +7,9 @@ execute if predicate worldtool:brush_tool/settings/requires/block if predicate w
 function #worldtool:hooks/process_start/brush/check
 
 execute if score #brushLoadTemp worldtool matches 1 run data remove storage worldtool:storage Temp.Blocks
-execute if score #brushLoadTemp worldtool matches 1 run data modify storage worldtool:storage Temp.Blocks.Primary set from entity @s SelectedItem.tag.WorldTool.PrimaryBlock
-execute if score #brushLoadTemp worldtool matches 1 run data modify storage worldtool:storage Temp.Blocks.Secondary set from entity @s SelectedItem.tag.WorldTool.SecondaryBlock
+execute if score #brushLoadTemp worldtool matches 1 run function worldtool:technical/common/get_item_data
+execute if score #brushLoadTemp worldtool matches 1 run data modify storage worldtool:storage Temp.Blocks.Primary set from storage worldtool:storage Temp.ItemData.WorldTool.PrimaryBlock
+execute if score #brushLoadTemp worldtool matches 1 run data modify storage worldtool:storage Temp.Blocks.Secondary set from storage worldtool:storage Temp.ItemData.WorldTool.SecondaryBlock
 execute if score #brushLoadTemp worldtool matches 1 run function worldtool:process_start/common/block_from_data/load
 
 # Thes following commands WILL NOT RUN if a block is required

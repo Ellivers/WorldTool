@@ -1,0 +1,1 @@
+item modify entity @s weapon.mainhand worldtool:shape_tool/set_primary_block

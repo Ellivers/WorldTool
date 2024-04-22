@@ -1,12 +1,12 @@
 # Called by worldtool:process_start/common/check/backup_slots
 # Displays a warning
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 data modify storage rx.playerdb:io player.data.WorldTool.SavedProcesses set value []
 function worldtool:technical/save_load/backup/save_processes
 
-function #rx.playerdb:api/v2/save/self
+function worldtool:database/save
 
 tag @s add wt.dont_clear_tags
 function worldtool:ui/clear_chat

@@ -3,10 +3,11 @@
 
 function worldtool:ui_brush/check_tool
 
-execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.MaxSize
-execute store result score #temp2 worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.MinSize
+function worldtool:technical/common/get_item_data
+execute store result score #temp worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.MaxSize
+execute store result score #temp2 worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.MinSize
 
-execute store result score #brushSize_temp worldtool run data get entity @s SelectedItem.tag.WorldTool.BrushSettings.Size
+execute store result score #brushSize_temp worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.BrushSettings.Size
 
 scoreboard players add #brushSize_temp worldtool 2
 scoreboard players operation #temp3 worldtool = #brushSize_temp worldtool
@@ -15,6 +16,6 @@ execute if score #temp3 worldtool matches 0 run scoreboard players add #brushSiz
 execute if score #brushSize_temp worldtool > #temp worldtool run scoreboard players operation #brushSize_temp worldtool = #temp2 worldtool
 
 execute store result storage worldtool:storage Temp.BrushSize int 1 run scoreboard players get #brushSize_temp worldtool
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/set_size
+function worldtool:modify_item/brush_tool/settings/set_size
 
 function worldtool:ui_brush/menu

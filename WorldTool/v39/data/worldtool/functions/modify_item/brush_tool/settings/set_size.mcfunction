@@ -1,0 +1,2 @@
+data modify storage worldtool:storage Temp.Macro.CustomData.BrushSettings.Size set from storage worldtool:storage Temp.BrushSize
+function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

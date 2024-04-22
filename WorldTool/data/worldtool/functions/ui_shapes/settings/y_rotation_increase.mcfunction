@@ -3,12 +3,13 @@
 
 function worldtool:ui_shapes/check_tool
 
-execute store result score #temp worldtool run data get entity @s SelectedItem.tag.WorldTool.ShapeSettings.YRotation
+function worldtool:technical/common/get_item_data
+execute store result score #temp worldtool run data get storage worldtool:storage Temp.ItemData.WorldTool.ShapeSettings.YRotation
 
 scoreboard players add #temp worldtool 5
 execute if score #temp worldtool matches 356.. run scoreboard players set #temp worldtool 0
 
 execute store result storage worldtool:storage Temp.YRotation int 1 run scoreboard players get #temp worldtool
-item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_y_rotation
+function worldtool:modify_item/shape_tool/settings/set_y_rotation
 
 function worldtool:ui_shapes/menu

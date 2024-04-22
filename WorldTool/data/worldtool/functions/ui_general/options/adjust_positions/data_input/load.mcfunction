@@ -1,7 +1,7 @@
 # Called by worldtool:ui_general/options/adjust_positions/menu
 # Gets the inputted data
 
-data modify storage worldtool:storage Temp.Data set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1] Item.tag.WorldTool
+function worldtool:input_data/get/set_positions_data
 kill @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1]
 
 scoreboard players set #temp worldtool 0

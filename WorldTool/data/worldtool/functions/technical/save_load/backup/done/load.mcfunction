@@ -1,7 +1,7 @@
 # Called by worldtool:technical/common/save_load/area_saved
 # Saves the area data
 
-function #rx.playerdb:api/v2/get/self
+function worldtool:database/get
 
 data modify storage worldtool:storage Temp.AreaListList set from storage rx.playerdb:io player.data.WorldTool.Future
 execute if data storage rx.playerdb:io player.data.WorldTool.Future[0] run function worldtool:technical/common/save_load/restock_from_area_list_list
@@ -20,4 +20,4 @@ execute if score #temp worldtool >= #temp2 worldtool run data remove storage rx.
 data modify storage rx.playerdb:io player.data.WorldTool.Current set value []
 function worldtool:technical/save_load/backup/done/set_area_data_values
 
-function #rx.playerdb:api/v2/save/self
+function worldtool:database/save

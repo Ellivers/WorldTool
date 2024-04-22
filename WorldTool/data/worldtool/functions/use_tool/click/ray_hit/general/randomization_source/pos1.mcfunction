@@ -13,11 +13,4 @@ execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_co
 
 function worldtool:ui_general/randomize/set_source/pos2
 
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~-.5 ~-.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~-.5 ~.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~.5 ~-.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~.5 ~.5 ~.5 0 -1 0 2 0 normal @s
-particle minecraft:dust 0.918 0.965 0.078 1.5 ~-.5 ~.5 ~.5 0 -1 0 2 0 normal @s
+function worldtool:use_tool/click/ray_hit/general/particles/randomization_source_pos1
