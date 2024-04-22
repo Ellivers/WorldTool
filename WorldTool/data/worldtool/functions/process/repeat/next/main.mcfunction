@@ -15,11 +15,11 @@ scoreboard players set #temp worldtool 0
 execute if score #repeatPosX worldtool < #repeatDestX worldtool store success score #temp worldtool run scoreboard players add #repeatPosX worldtool 1
 execute if score #repeatPosX worldtool > #repeatDestX worldtool store success score #temp worldtool run scoreboard players remove #repeatPosX worldtool 1
 
-execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool < #repeatDestZ worldtool store success score #temp worldtool run function worldtool:process/repeat/next/z
-execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool > #repeatDestZ worldtool store success score #temp worldtool run function worldtool:process/repeat/next/-z
+execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool < #repeatDestZ worldtool run function worldtool:process/repeat/next/z
+execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool > #repeatDestZ worldtool run function worldtool:process/repeat/next/-z
 
-execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool = #repeatDestZ worldtool if score #repeatPosY worldtool < #repeatDestY worldtool store success score #temp worldtool run function worldtool:process/repeat/next/y
-execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool = #repeatDestZ worldtool if score #repeatPosY worldtool > #repeatDestY worldtool store success score #temp worldtool run function worldtool:process/repeat/next/-y
+execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool = #repeatDestZ worldtool if score #repeatPosY worldtool < #repeatDestY worldtool run function worldtool:process/repeat/next/y
+execute if score #temp worldtool matches 0 if score #repeatPosX worldtool = #repeatDestX worldtool if score #repeatPosZ worldtool = #repeatDestZ worldtool if score #repeatPosY worldtool > #repeatDestY worldtool run function worldtool:process/repeat/next/-y
 
 execute if score #temp worldtool matches 0 run function worldtool:process/complete
 
