@@ -1,6 +1,7 @@
 - Fixed Repeat not working in 1.20.3+. Oops.
 - Particles are now displayed when a position is set with the General Tool
 - Position input values are now auto-filled in 1.20.5+, making them quicker to input
+- The Structure brush now has less cases of leftover redstone blocks
 - Changed the message that appears when using a Brush Tool with no brush
 - Tweaked the color of the Paste Area outline
 - Fixed compatibility issues in 1.20.5+
