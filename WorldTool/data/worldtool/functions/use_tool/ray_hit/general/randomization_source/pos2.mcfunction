@@ -12,3 +12,5 @@ summon minecraft:marker ~ ~ ~ {Tags: ["worldtool", "wt.can_forceload", "wt.rando
 execute as @e[type=minecraft:marker,tag=worldtool,tag=wt.randomization_source_corner.2,sort=nearest,limit=1] at @s run function worldtool:use_tool/ray_hit/general/common
 
 function worldtool:ui_general/randomize/set_source/confirm
+
+function worldtool:use_tool/ray_hit/general/particles/randomization_source_pos2
