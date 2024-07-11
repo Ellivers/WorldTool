@@ -1,1 +1,2 @@
-item modify entity @s weapon.mainhand worldtool:brush_tool/settings/structure_offset/set_y
+data modify storage worldtool:storage Temp.Macro.CustomData.BrushSettings.StructureOffset.posY set from storage worldtool:storage Temp.Offset
+function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

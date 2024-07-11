@@ -1,1 +1,0 @@
-data modify storage worldtool:storage Temp.ItemData set from entity @s Item.components."minecraft:custom_data"

@@ -1,2 +1,0 @@
-data modify storage worldtool:storage Temp.Macro.CustomData.ShapeSettings.Diameter set from storage worldtool:storage Temp.Diameter
-function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

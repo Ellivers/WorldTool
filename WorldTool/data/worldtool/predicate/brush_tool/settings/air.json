@@ -4,8 +4,12 @@
     "entity": "this",
     "predicate": {
         "equipment": {
-            "mainhand": {
-                "nbt": "{WorldTool:{Block:{BlockState:{Name:\"minecraft:air\"}}}}"
+            "slots": {
+                "weapon.mainhand": {
+                    "predicates": {
+                    "minecraft:custom_data": "{WorldTool:{Block:{BlockState:{Name:\"minecraft:air\"}}}}"
+                }
+                }
             }
         }
     }

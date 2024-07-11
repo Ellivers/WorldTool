@@ -3,9 +3,11 @@
 
     "entity": "this",
     "predicate": {
-        "equipment": {
-            "mainhand": {
-                "nbt": "{WorldTool:{ShapeSettings:{Orientation:\"west\"}}}"
+        "slots": {
+            "weapon.mainhand": {
+                "predicates": {
+                    "minecraft:custom_data": "{WorldTool:{ShapeSettings:{Orientation:\"west\"}}}"
+                }
             }
         }
     }

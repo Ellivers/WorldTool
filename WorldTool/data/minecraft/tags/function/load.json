@@ -1,7 +1,5 @@
 {
 	"values": [
-		"#load:_private/load",
-		
 		"worldtool:technical/load"
 	]
 }

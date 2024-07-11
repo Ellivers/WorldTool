@@ -1,14 +1,1 @@
-{
-    "function": "copy_nbt",
-    "source": {
-      "type": "minecraft:storage",
-      "source": "worldtool:storage"
-    },
-    "ops": [
-      {
-        "op": "replace",
-        "source": "Temp.Degrees",
-        "target": "WorldTool.ShapeSettings.Degrees"
-      }
-    ]
-}
+[]

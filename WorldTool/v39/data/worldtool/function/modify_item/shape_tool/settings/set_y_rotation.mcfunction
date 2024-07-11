@@ -1,2 +1,0 @@
-data modify storage worldtool:storage Temp.Macro.CustomData.ShapeSettings.YRotation set from storage worldtool:storage Temp.YRotation
-function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

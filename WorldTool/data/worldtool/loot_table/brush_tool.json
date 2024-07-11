@@ -8,8 +8,16 @@
                     "name": "minecraft:carrot_on_a_stick",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{}],Unbreakable:1b,WorldTool:{Tool:\"brush\",Droppable:1b,Brush:\"none\",BrushSettings:{UpdateBlock:1b,MinSize:1,MaxSize:39,Size:3},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{WorldTool:{Tool:\"brush\",Droppable:1b,Brush:\"none\",BrushSettings:{UpdateBlock:1b,MinSize:1,MaxSize:39,Size:3},PrimaryBlock:{State:{Name:\"minecraft:stone\"}}}}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:unbreakable": {},
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare"
+                            }
                         },
                         {
                             "function": "minecraft:set_name",
@@ -30,7 +38,8 @@
                                 {"nbt":"Translation.\"lore.brush.1\"","storage": "worldtool:storage","interpret": true,"italic": false},
                                 {"nbt":"Translation.\"lore.brush.2\"","storage": "worldtool:storage","interpret": true,"italic": false}
                             ],
-                            "entity": "this"
+                            "entity": "this",
+                            "mode": "replace_all"
                         }
                     ]
                 }

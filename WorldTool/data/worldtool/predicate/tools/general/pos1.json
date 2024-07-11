@@ -2,9 +2,11 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "equipment": {
-            "mainhand": {
-                "nbt": "{WorldTool:{Tool:\"general\",ToolState:\"pos1\"}}"
+        "slots": {
+            "weapon.mainhand": {
+                "predicates": {
+                    "minecraft:custom_data": "{WorldTool:{Tool:\"general\",ToolState:\"pos1\"}}"
+                }
             }
         }
     }

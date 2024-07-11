@@ -3,9 +3,11 @@
 
     "entity": "this",
     "predicate": {
-        "equipment": {
-            "mainhand": {
-                "nbt": "{WorldTool:{BrushSettings:{StructureRotation:\"CLOCKWISE_180\"}}}"
+        "slots": {
+            "weapon.mainhand": {
+                "predicates": {
+                    "minecraft:custom_data": "{WorldTool:{BrushSettings:{StructureRotation:\"CLOCKWISE_180\"}}}"
+                }
             }
         }
     }

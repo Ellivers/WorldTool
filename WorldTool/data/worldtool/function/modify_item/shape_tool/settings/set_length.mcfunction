@@ -1,1 +1,2 @@
-item modify entity @s weapon.mainhand worldtool:shape_tool/settings/set_length
+data modify storage worldtool:storage Temp.Macro.CustomData.ShapeSettings.Length set from storage worldtool:storage Temp.Length
+function worldtool:modify_item/set_custom_data with storage worldtool:storage Temp.Macro

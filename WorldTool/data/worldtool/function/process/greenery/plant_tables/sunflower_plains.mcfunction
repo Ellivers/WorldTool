@@ -11,7 +11,7 @@ execute if score #plantType worldtool matches 0 run scoreboard players set #lcgM
 execute if score #plantType worldtool matches 1..6 run scoreboard players set #lcgMax worldtool 4
 function worldtool:technical/common/lcg
 
-execute if score #plantType worldtool matches 1..6 if score #lcgResult worldtool matches 0..2 run setblock ~ ~ ~ minecraft:grass
+execute if score #plantType worldtool matches 1..6 if score #lcgResult worldtool matches 0..2 run setblock ~ ~ ~ minecraft:short_grass
 execute if score #plantType worldtool matches 1..6 if score #lcgResult worldtool matches 3 if block ~ ~1 ~ #worldtool:air run function worldtool:process/greenery/double_plants/tall_grass
 
 execute if score #plantType worldtool matches 7 if block ~ ~1 ~ #worldtool:air run function worldtool:process/greenery/double_plants/sunflower

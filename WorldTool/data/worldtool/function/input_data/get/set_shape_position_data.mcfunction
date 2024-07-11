@@ -1,1 +1,1 @@
-data modify storage worldtool:storage Temp.Data set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1] Item.tag.WorldTool
+data modify storage worldtool:storage Temp.Data set from entity @e[type=minecraft:item,tag=worldtool,tag=wt.selected_data,sort=nearest,limit=1] Item.components."minecraft:custom_data".WorldTool

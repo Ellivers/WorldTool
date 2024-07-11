@@ -1,6 +1,6 @@
 [
     {
-        "function": "minecraft:set_nbt",
+        "function": "minecraft:set_custom_data",
         "tag": "{WorldTool:{ToolState:\"pos1\"}}"
     },
     {
@@ -21,6 +21,6 @@
             {"nbt":"Translation.\"lore.general.normal.4\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
-        "replace": true
+        "mode": "replace_all"
     }
 ]

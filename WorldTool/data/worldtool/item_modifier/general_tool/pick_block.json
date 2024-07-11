@@ -1,6 +1,6 @@
 [
     {
-        "function": "minecraft:set_nbt",
+        "function": "minecraft:set_custom_data",
         "tag": "{WorldTool:{ToolState:\"pick_block\"}}"
     },
     {
@@ -18,6 +18,6 @@
             {"nbt":"Translation.\"lore.general.pick_block\"","storage": "worldtool:storage","interpret": true,"italic": false}
         ],
         "entity": "this",
-        "replace": true
+        "mode": "replace_all"
     }
 ]

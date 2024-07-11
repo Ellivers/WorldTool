@@ -1,1 +1,0 @@
-particle minecraft:dust{scale:1.5,color:[0.671,0.161,0.875]} ~ ~ ~ 0 .3 0 2 3 force @a[tag=wt.shape_preview_temp]

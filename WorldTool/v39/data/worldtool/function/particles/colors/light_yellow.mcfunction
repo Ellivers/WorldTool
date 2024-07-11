@@ -1,1 +1,0 @@
-particle minecraft:dust{scale:1.5,color:[0.918,0.965,0.078]} ~ ~ ~ 0 -1 0 2 0 force @s

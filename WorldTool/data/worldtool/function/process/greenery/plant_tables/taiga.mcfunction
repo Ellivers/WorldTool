@@ -10,4 +10,4 @@ execute if score #lcgResult worldtool matches 2..3 run setblock ~ ~ ~ minecraft:
 execute if score #lcgResult worldtool matches 4 run setblock ~ ~ ~ minecraft:poppy
 execute if score #lcgResult worldtool matches 5..7 if block ~ ~1 ~ #worldtool:air run function worldtool:process/greenery/double_plants/large_fern
 execute if score #lcgResult worldtool matches 8..15 run setblock ~ ~ ~ minecraft:fern
-execute if score #lcgResult worldtool matches 16.. run setblock ~ ~ ~ minecraft:grass
+execute if score #lcgResult worldtool matches 16.. run setblock ~ ~ ~ minecraft:short_grass

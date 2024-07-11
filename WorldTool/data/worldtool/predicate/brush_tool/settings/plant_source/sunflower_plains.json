@@ -3,9 +3,11 @@
 
     "entity": "this",
     "predicate": {
-        "equipment": {
-            "mainhand": {
-                "nbt": "{WorldTool:{BrushSettings:{PlantSource:\"sunflower_plains\"}}}"
+        "slots": {
+            "weapon.mainhand": {
+                "predicates": {
+                    "minecraft:custom_data": "{WorldTool:{BrushSettings:{PlantSource:\"sunflower_plains\"}}}"
+                }
             }
         }
     }
