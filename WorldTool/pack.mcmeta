@@ -1,30 +1,16 @@
 {
   "pack": {
-    "pack_format": 7,
+    "pack_format": 48,
     "description": "0.6-experimental",
 
     "supported_formats": {
-      "min_inclusive": 7,
-      "max_inclusive": 41
+      "min_inclusive": 48,
+      "max_inclusive": 48
     }
   },
 
   "overlays": {
     "entries": [
-      {
-        "formats": {
-          "min_inclusive": 26,
-          "max_inclusive": 999999
-        },
-        "directory": "v26"
-      },
-      {
-        "formats": {
-          "min_inclusive": 39,
-          "max_inclusive": 999999
-        },
-        "directory": "v39"
-      }
     ]
   }
 }
