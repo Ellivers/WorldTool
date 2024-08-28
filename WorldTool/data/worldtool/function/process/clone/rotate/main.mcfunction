@@ -1,6 +1,7 @@
 # Called by various functions
 # The process functionality for Clone without rotation
 
+execute if score #hasMoved worldtool matches 0 if score #hasMoved2 worldtool matches 1 unless score #tempDir worldtool matches 0 run function worldtool:process/clone/rotate/correct_pos.secondary
 function worldtool:process/clone/common
 
 scoreboard players operation #tempRotX worldtool = #rotationX worldtool

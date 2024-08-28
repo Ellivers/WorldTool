@@ -1,5 +1,4 @@
-scoreboard players operation #pos2x worldtool = #pos1x worldtool
-scoreboard players operation #pos1x worldtool = #processPosX worldtool
+scoreboard players operation #pos2x worldtool >< #pos1x worldtool
 
 scoreboard players operation #processPosZ worldtool += $templateSizeLimit worldtool
 

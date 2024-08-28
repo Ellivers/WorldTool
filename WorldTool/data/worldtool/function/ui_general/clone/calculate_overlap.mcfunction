@@ -18,7 +18,7 @@ scoreboard players operation #boxAPos2z worldtool = #pos2zt worldtool
 
 # Box B
 scoreboard players operation #ID_temp worldtool = @s wt.ID
-execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.reciever_marker] if score @s wt.ID = #ID_temp worldtool run data modify storage worldtool:storage Temp.Pos set from entity @s Pos
+execute if entity @s as @e[type=minecraft:marker,tag=worldtool,tag=wt.receiver_marker] if score @s wt.ID = #ID_temp worldtool run data modify storage worldtool:storage Temp.Pos set from entity @s Pos
 execute store result score #boxBPos1x worldtool run data get storage worldtool:storage Temp.Pos[0]
 execute store result score #boxBPos1y worldtool run data get storage worldtool:storage Temp.Pos[1]
 execute store result score #boxBPos1z worldtool run data get storage worldtool:storage Temp.Pos[2]

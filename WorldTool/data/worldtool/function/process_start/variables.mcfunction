@@ -18,6 +18,7 @@ scoreboard players set #processState worldtool 0
 execute store result score #blocksPerTick worldtool run data get storage worldtool:storage Processes[-1].BlocksPerTick
 execute unless score #blocksPerTick worldtool matches 2.. run scoreboard players set #blocksPerTick worldtool 2147483647
 
+scoreboard players set #hasMoved worldtool 1
 
 ## Process-specific variables ##
 data modify storage worldtool:storage Temp.Process set from storage worldtool:storage Processes[-1]
@@ -33,13 +34,17 @@ scoreboard players set #block1Placed worldtool 0
 scoreboard players set #block2Placed worldtool 0
 
 execute store result score #templatesToLoad worldtool if data storage worldtool:storage Processes[-1].Input.AreaList[].TemplateList[]
-execute store result score #placeBlock worldtool if data storage worldtool:storage Temp.Process{Tags:["wt.start_with_block"]}
+execute store result score #placeBlock worldtool if data storage worldtool:storage Temp.Process{Tags:["wt.process.checkered.start_with_block"]}
 
 execute store result score #plantRate worldtool run data get storage worldtool:storage Processes[-1].Input.Rate
 execute if score #plantRate worldtool matches ..-1 run scoreboard players set #plantRate worldtool 0
 scoreboard players remove #plantRate worldtool 1
 
 execute store result score #tileDropsEnabled worldtool run gamerule doTileDrops
+
+scoreboard players set #blockProcessed worldtool 0
+scoreboard players set #hasMoved worldtool 0
+scoreboard players set #hasMoved2 worldtool 0
 
 execute store result score #rotationX worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.X
 execute store result score #rotationY worldtool run data get storage worldtool:storage Processes[-1].Input.Rotation.Y

@@ -3,6 +3,10 @@
 
 scoreboard players add #blocksChecked worldtool 1
 
+execute if score #hasMoved worldtool matches 0 unless score #tempDir worldtool matches 0 run function worldtool:process/correct_pos
+execute store result score #hasMoved worldtool run scoreboard players set #tempDir worldtool 0
+scoreboard players operation #prevProcessPosX worldtool = #processPosX worldtool
+
 execute if entity @s[tag=wt.process.replace_brush.normal] unless block 27449 1 19 #worldtool:air unless block ~ ~ ~ #worldtool:air if blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary
 execute if entity @s[tag=wt.process.replace_brush.normal] if block 27449 1 19 #worldtool:air if blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary
 execute if entity @s[tag=wt.process.replace_brush.exclude] unless block ~ ~ ~ #worldtool:air unless blocks ~ ~ ~ ~ ~ ~ 27449 1 19 all unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary

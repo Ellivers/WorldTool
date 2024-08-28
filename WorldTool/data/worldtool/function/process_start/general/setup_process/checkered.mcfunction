@@ -9,7 +9,7 @@ data modify storage worldtool:storage Processes[0].BlocksPerTick set from storag
 execute if entity @s[tag=wt.two_block_query.normal] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.replace.normal"
 execute if entity @s[tag=wt.two_block_query.exclude] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.replace.exclude"
 
-execute if entity @s[tag=wt.checkered.start_with_block] run data modify storage worldtool:storage Processes[0].Tags append value "wt.start_with_block"
+execute if entity @s[tag=wt.checkered.start_with_block] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.start_with_block"
 
 execute if entity @s[tag=wt.checkered.alternate.x] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.alternate.x"
 execute if entity @s[tag=wt.checkered.alternate.y] run data modify storage worldtool:storage Processes[0].Tags append value "wt.process.checkered.alternate.y"

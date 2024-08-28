@@ -4,8 +4,8 @@
 execute unless data storage worldtool:storage BlocksPerTick run data modify storage worldtool:storage BlocksPerTick.Processes set value []
 execute unless data storage worldtool:storage BlocksPerTick.Preset run data modify storage worldtool:storage BlocksPerTick.Preset set value "high"
 
-execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:fill"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:fill",Value:1500}
-data modify storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:fill"}].Presets set value {Low:600,Medium:1000,High:1500}
+execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:fill"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:fill",Value:1800}
+data modify storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:fill"}].Presets set value {Low:600,Medium:1200,High:1800}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:replace"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:replace",Value:4000}
 data modify storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:replace"}].Presets set value {Low:600,Medium:2000,High:4000}
 execute unless data storage worldtool:storage BlocksPerTick.Processes[{ID:"worldtool:filter_measure"}] run data modify storage worldtool:storage BlocksPerTick.Processes append value {ID:"worldtool:filter_measure",Value:3500}

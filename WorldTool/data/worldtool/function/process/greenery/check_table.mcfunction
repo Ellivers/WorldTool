@@ -1,8 +1,6 @@
 # Called by worldtool:process/greenery/check_chance
 # Places a plant from the appropriate plant table
 
-scoreboard players add #blocksPlaced worldtool 1
-
 execute if entity @s[tag=wt.process.greenery.plant_table.plains] run function worldtool:process/greenery/plant_tables/plains
 execute if entity @s[tag=wt.process.greenery.plant_table.sunflower_plains] run function worldtool:process/greenery/plant_tables/sunflower_plains
 execute if entity @s[tag=wt.process.greenery.plant_table.flower_forest] run function worldtool:process/greenery/plant_tables/flower_forest
@@ -12,3 +10,6 @@ execute if entity @s[tag=wt.process.greenery.plant_table.ocean] run function wor
 execute if entity @s[tag=wt.process.greenery.plant_table.warm_ocean] run function worldtool:process/greenery/plant_tables/warm_ocean
 
 execute if score $greeneryPlugins worldtool matches 1.. run function #worldtool:hooks/process/greenery/plant_tables
+
+scoreboard players set #blockProcessed worldtool 1
+execute if score #blockProcessed2 worldtool matches 0 run scoreboard players add #blocksPlaced worldtool 1

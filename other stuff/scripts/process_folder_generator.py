@@ -28,16 +28,16 @@ capitalized_name = name.capitalize()
 
 contents = [
     a(
-        "scoreboard players set #tempXDir worldtool 1"
+        "scoreboard players set #tempDir worldtool 1"
         "\nscoreboard players add #processPosX worldtool 1"
-        "\nexecute store success score #varMoved worldtool run tp ~1 ~ ~"
+        "\nexecute store success score #hasMoved worldtool run tp ~1 ~ ~"
         "\nexecute positioned ~1 ~ ~ run function {path}/{name}/main"
         "\n"
     ),
     a(
-        "scoreboard players set #tempXDir worldtool -1"
+        "scoreboard players set #tempDir worldtool -1"
         "\nscoreboard players remove #processPosX worldtool 1"
-        "\nexecute store success score #varMoved worldtool run tp ~-1 ~ ~"
+        "\nexecute store success score #hasMoved worldtool run tp ~-1 ~ ~"
         "\nexecute positioned ~-1 ~ ~ run function {path}/{name}/main"
         "\n"
     ),
@@ -77,25 +77,27 @@ contents = [
     ),
     a(
         "# Called by various functions"
-        "\n# The process functionality for {capitalized_name}}"
+        "\n# The process functionality for {capitalized_name}"
         "\n"
         "\nscoreboard players add #blocksChecked worldtool 1"
         "\n"
-        "\nexecute if score #varMoved worldtool matches 0 unless score #tempXDir worldtool matches 0 run function worldtool:process/correct_pos"
-        "\nexecute store result score #varMoved worldtool run scoreboard players set #tempXDir worldtool 0"
+        "\nexecute if score #hasMoved worldtool matches 0 unless score #tempDir worldtool matches 0 run function worldtool:process/correct_pos"
+        "\nexecute store result score #hasMoved worldtool run scoreboard players set #tempDir worldtool 0"
+        "\nscoreboard players operation #prevProcessPosX worldtool = #processPosX worldtool"
         "\n"
         "\n# PROCESS-SPECIFIC COMMANDS HERE"
-        "\nexecute at @s unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary"
+        "\nexecute unless blocks ~ ~ ~ ~ ~ ~ 27451 1 19 all run function worldtool:process/place_block.primary"
+        "\n#"
         "\n"
         "\n# Move the process entity"
-        "\nexecute if score #processPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/x"
-        "\nexecute if score #processPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/-x"
+        "\nexecute if score #processPosX worldtool < #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/x"
+        "\nexecute if score #processPosX worldtool > #pos2x worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-x"
         "\n"
-        "\nexecute if score #processPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/z"
-        "\nexecute if score #processPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/-z"
+        "\nexecute if score #processPosZ worldtool < #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/z"
+        "\nexecute if score #processPosZ worldtool > #pos2z worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-z"
         "\n"
-        "\nexecute if score #processPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/y"
-        "\nexecute if score #processPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool at @s run function {path}/{name}/-y"
+        "\nexecute if score #processPosY worldtool < #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/y"
+        "\nexecute if score #processPosY worldtool > #pos2y worldtool unless score #blocksChecked worldtool >= #blocksPerTick worldtool run function {path}/{name}/-y"
         "\n"
     )
 ]

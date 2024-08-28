@@ -3,6 +3,11 @@
 
 scoreboard players add #blocksChecked worldtool 1
 
+execute if score #hasMoved worldtool matches 0 if score #hasMoved2 worldtool matches 1 unless score #tempDir worldtool matches 0 run function worldtool:process/repeat/correct_pos.secondary
+execute if score #hasMoved worldtool matches 0 unless score #tempDir worldtool matches 0 run function worldtool:process/repeat/correct_pos
+execute store result score #hasMoved worldtool store result score #hasMoved2 worldtool run scoreboard players set #tempDir worldtool 0
+scoreboard players operation #prevProcessPosX worldtool = #originPosX worldtool
+
 execute if score #originPosX worldtool = #pos2x worldtool if score #originPosY worldtool = #pos2y worldtool if score #originPosZ worldtool = #pos2z worldtool run function worldtool:process/repeat/next/main
 
 execute at @s run clone ~ ~ ~ ~ ~ ~ 27451 1 19

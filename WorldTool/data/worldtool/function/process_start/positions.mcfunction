@@ -14,6 +14,10 @@ scoreboard players operation #processPosX worldtool = #pos1x worldtool
 scoreboard players operation #processPosY worldtool = #pos1y worldtool
 scoreboard players operation #processPosZ worldtool = #pos1z worldtool
 
+scoreboard players operation #prevProcessPosX worldtool = #pos1x worldtool
+scoreboard players operation #prevProcessPosY worldtool = #pos1y worldtool
+scoreboard players operation #prevProcessPosZ worldtool = #pos1z worldtool
+
 scoreboard players operation #pos1xo worldtool = #pos1x worldtool
 scoreboard players operation #pos1yo worldtool = #pos1y worldtool
 scoreboard players operation #pos1zo worldtool = #pos1z worldtool
