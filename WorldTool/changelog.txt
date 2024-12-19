@@ -1,1 +1,3 @@
 - Greenery now counts removed blocks as affected blocks
+Technical changes:
+- Changed the name of the tag "wt.start_with_block" to "wt.checkered.start_with_block"
